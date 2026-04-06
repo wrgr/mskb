@@ -1,0 +1,11 @@
+requests>=2.31
+pandas>=2.1
+networkx>=3.2
+pyyaml>=6.0
+pyarrow>=14.0
+python-louvain>=0.16
+tqdm>=4.66
+rapidfuzz>=3.9
+anthropic>=0.39
+mkdocs>=1.6
+mkdocs-material>=9.5
