@@ -1,0 +1,8 @@
+seed_type,category,title,doi,rationale,role
+framing_review,pathogenesis_and_immunology,"Multiple sclerosis",10.1016/S0140-6736(08)61620-7,Compston & Coles Lancet 2008 - the canonical MS review,score_only
+framing_review,clinical_care_and_management,"Multiple Sclerosis",10.1056/NEJMra1401483,Reich et al NEJM 2018,score_only
+framing_review,clinical_care_and_management,"Multiple sclerosis",10.1038/s41572-018-0041-4,Filippi Nat Rev Dis Primers 2018,score_only
+framing_review,clinical_trials_and_therapeutics,"Progressive multiple sclerosis",10.1016/S0140-6736(16)31320-4,Thompson et al Lancet 2018 progressive MS,score_only
+framing_review,pathogenesis_and_immunology,"Pathophysiology of multiple sclerosis",10.1016/B978-0-444-52001-2.00028-1,Lassmann pathophysiology handbook,score_only
+framing_review,imaging_and_biomarkers,"MRI in multiple sclerosis",10.1007/978-3-319-47861-6,Defined MRI role in MS dx and monitoring,score_only
+framing_review,epidemiology_and_population_health,"The epidemiology of multiple sclerosis: insights to disease pathogenesis",10.1016/S1474-4422(15)00096-6,Koch-Henriksen Sorensen epidemiology,score_only

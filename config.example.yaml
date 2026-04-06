@@ -1,0 +1,71 @@
+email: "your-email@example.com"
+
+openalex_base_url: "https://api.openalex.org"
+
+output_dir: "outputs"
+
+retrieval:
+  per_page: 200
+  max_search_results_per_query: 500
+  max_pages_cited_by: 3
+  use_seed_channel: true
+  use_lexical_channel: true
+  use_dataset_channel: true
+
+queries:
+  lexical:
+    - "multiple sclerosis pathogenesis"
+    - "multiple sclerosis immunology"
+    - "demyelination autoimmune"
+    - "experimental autoimmune encephalomyelitis"
+    - "multiple sclerosis disease-modifying therapy"
+    - "multiple sclerosis MRI lesion"
+    - "multiple sclerosis epidemiology risk factors"
+    - "multiple sclerosis remyelination"
+    - "multiple sclerosis biomarker neurofilament"
+    - "oligodendrocyte precursor cell multiple sclerosis"
+    - "multiple sclerosis Epstein-Barr virus"
+    - "multiple sclerosis progressive neurodegeneration"
+    - "multiple sclerosis blood-brain barrier"
+    - "multiple sclerosis T cell B cell"
+  dataset:
+    - "UK Biobank multiple sclerosis"
+    - "MSBase registry multiple sclerosis"
+    - "IMSGC genome-wide association multiple sclerosis"
+    - "CLIMB cohort multiple sclerosis"
+    - "NARCOMS registry multiple sclerosis"
+
+dedup:
+  auto_merge_threshold: 0.85
+
+graphs:
+  min_cocitation_weight: 2
+  min_bibcoupling_weight: 2
+  min_coauthorship_weight: 1
+
+scoring:
+  include_if_min_signals: 1
+  include_if_score_at_least: 0.15
+  weights:
+    direct_seed_citation: 3.0
+    lexical_relevance: 2.0
+    dataset_method_alignment: 1.5
+    cocitation: 1.5
+    bibcoupling: 1.0
+    core_author_overlap: 0.5
+
+topics:
+  min_cluster_size: 5
+  # Categories aligned with ACTRIMS / CMSC / MSJ conference structure:
+  # - pathogenesis_and_immunology: basic science, EAE, immune mechanisms
+  # - imaging_and_biomarkers: MRI, OCT, NfL, CSF markers
+  # - clinical_trials_and_therapeutics: DMTs, trial design, efficacy
+  # - clinical_care_and_management: diagnosis, symptoms, rehabilitation
+  # - epidemiology_and_population_health: risk factors, GWAS, registries
+
+distillation:
+  provider: "anthropic"
+  model: "claude-haiku-4-5-20251001"
+  max_papers_per_run: 500
+  cache_dir: "outputs/distilled/llm_cache"
+  batch_size: 10

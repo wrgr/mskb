@@ -1,0 +1,41 @@
+seed_type,category,title,doi,rationale,role
+review,pathogenesis_and_immunology,"Multiple sclerosis",10.1016/S0140-6736(08)61620-7,Compston & Coles Lancet 2008 - canonical MS review,expand
+review,pathogenesis_and_immunology,"Multiple sclerosis: mechanisms and immunotherapy",10.1016/j.neuron.2018.01.021,Dendrou et al Neuron 2018 - comprehensive immunology,expand
+review,pathogenesis_and_immunology,"Progressive multiple sclerosis: prospects for disease therapy repair and restoration of function",10.1016/S0140-6736(16)31320-4,Mahad Trapp Lassmann Lancet 2015 - progressive MS pathogenesis,expand
+pathogenesis,pathogenesis_and_immunology,"Clonally expanded B cells in multiple sclerosis bind EBV EBNA1 and GlialCAM",10.1038/s41586-022-04432-7,Lanz et al Nature 2022 - EBV molecular mimicry,expand
+pathogenesis,pathogenesis_and_immunology,"Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis",10.1126/science.abj8222,Bjornevik et al Science 2022 - EBV causal link,expand
+pathogenesis,pathogenesis_and_immunology,"Effector T cells and the role of regulatory T cells in autoimmune demyelinating disease",10.1016/j.immuni.2018.03.024,Regulatory T cells in MS/EAE,expand
+pathogenesis,pathogenesis_and_immunology,"Remyelination in the CNS: from biology to therapy",10.1038/nrn.2017.14,Franklin ffrench-Constant remyelination review,expand
+pathogenesis,pathogenesis_and_immunology,"Myelin biology and disorders",10.1016/B978-0-12-439510-7.50073-0,Lazzarini myelin biology textbook,expand
+pathogenesis,pathogenesis_and_immunology,"Oligodendrocyte precursor cell transplantation as a model for the study of myelination",10.1523/JNEUROSCI.3122-18.2018,OPC transplant study,expand
+pathogenesis,pathogenesis_and_immunology,"The immunology of multiple sclerosis",10.1038/s41577-021-00550-z,Dobson et al Nat Rev Immunol 2022,expand
+pathogenesis,pathogenesis_and_immunology,"Meningeal B-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology",10.1093/brain/awm080,Magliozzi meningeal B cells,expand
+imaging,imaging_and_biomarkers,"MRI in multiple sclerosis: current status and future prospects",10.1016/S1474-4422(14)70256-6,Filippi et al MRI in MS Lancet Neurol,expand
+imaging,imaging_and_biomarkers,"Cortical lesions in multiple sclerosis",10.1038/nrneurol.2010.93,Calabrese et al cortical lesions,expand
+imaging,imaging_and_biomarkers,"Blood neurofilament light chain as a biomarker of MS disease activity and treatment response",10.1212/WNL.0000000000007032,Disanto et al neurofilament biomarker,expand
+imaging,imaging_and_biomarkers,"Heterogeneity of multiple sclerosis lesions: implications for the pathogenesis of demyelination",10.1002/ana.410470308,Lucchinetti et al lesion heterogeneity,expand
+imaging,imaging_and_biomarkers,"Evidence-based guidelines: MAGNIMS consensus guidelines on the use of MRI in multiple sclerosis",10.1038/nrneurol.2015.248,Wattjes MAGNIMS MRI guidelines,expand
+imaging,imaging_and_biomarkers,"Serum neurofilament light as a biomarker in multiple sclerosis",10.1212/WNL.0000000000008346,Barro et al serum NfL longitudinal,expand
+imaging,imaging_and_biomarkers,"Retinal nerve fibre layer thickness measured by optical coherence tomography as a biomarker for MS",10.1016/S1474-4422(10)70159-5,Petzold OCT meta-analysis,expand
+trial,clinical_trials_and_therapeutics,"Ocrelizumab versus interferon beta-1a in relapsing multiple sclerosis",10.1056/NEJMoa1601277,OPERA I/II trials ocrelizumab RRMS,expand
+trial,clinical_trials_and_therapeutics,"Ocrelizumab versus placebo in primary progressive multiple sclerosis",10.1056/NEJMoa1606468,ORATORIO trial PPMS,expand
+trial,clinical_trials_and_therapeutics,"Natalizumab for the treatment of relapsing multiple sclerosis",10.1056/NEJMoa033085,AFFIRM trial natalizumab,expand
+trial,clinical_trials_and_therapeutics,"A randomized placebo-controlled trial of natalizumab for relapsing multiple sclerosis",10.1056/NEJMoa044397,SENTINEL trial natalizumab,expand
+trial,clinical_trials_and_therapeutics,"Oral fingolimod or intramuscular interferon for relapsing multiple sclerosis",10.1056/NEJMoa0907839,TRANSFORMS trial fingolimod,expand
+trial,clinical_trials_and_therapeutics,"B cell depletion with rituximab in relapsing-remitting multiple sclerosis",10.1056/NEJMoa0706383,Hauser rituximab trial NEJM 2008,expand
+trial,clinical_trials_and_therapeutics,"Anti-CD20 and the treatment of multiple sclerosis",10.1002/ana.25532,Hauser Cree Bar-Or ocrelizumab mechanism,expand
+trial,clinical_trials_and_therapeutics,"Siponimod versus placebo in secondary progressive multiple sclerosis (EXPAND)",10.1016/S0140-6736(18)30475-6,EXPAND trial siponimod SPMS,expand
+trial,clinical_trials_and_therapeutics,"Tolebrutinib versus placebo in relapsing multiple sclerosis",10.1056/NEJMoa2301546,BTK inhibitor Phase 3,expand
+clinical,clinical_care_and_management,"The 2017 McDonald criteria for the diagnosis of multiple sclerosis",10.1016/S1474-4422(17)30470-2,Thompson et al McDonald criteria 2017,expand
+clinical,clinical_care_and_management,"Defining the clinical course of multiple sclerosis: the 2013 revisions",10.1212/WNL.0000000000000560,Lublin et al disease course definitions,expand
+clinical,clinical_care_and_management,"Multiple sclerosis",10.1038/s41572-018-0041-4,Filippi et al Nat Rev Dis Primers 2018,expand
+clinical,clinical_care_and_management,"Multiple Sclerosis",10.1056/NEJMra1401483,Reich et al NEJM 2018 review,expand
+clinical,clinical_care_and_management,"Cognitive impairment in multiple sclerosis",10.1016/S1474-4422(08)70259-X,Chiaravalloti DeLuca cognition review,expand
+clinical,clinical_care_and_management,"Practice guideline recommendations summary: Disease-modifying therapies for adults with multiple sclerosis",10.1212/WNL.0000000000005347,Rae-Grant AAN practice guideline DMTs,expand
+epidemiology,epidemiology_and_population_health,"Environmental risk factors for multiple sclerosis. Part I: the role of infection",10.1002/ana.21117,Ascherio Munger environmental risk,expand
+epidemiology,epidemiology_and_population_health,"Risk alleles for multiple sclerosis identified by a genomewide study",10.1056/NEJMoa073493,IMSGC GWAS NEJM 2007,expand
+epidemiology,epidemiology_and_population_health,"Multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility",10.1126/science.aav7188,IMSGC genomic map Science 2019,expand
+epidemiology,epidemiology_and_population_health,"Atlas of Multiple Sclerosis: a growing global problem with widespread inequity",10.1016/S1474-4422(20)30318-6,Wallin et al global atlas,expand
+epidemiology,epidemiology_and_population_health,"Vitamin D and the risk of multiple sclerosis: a Mendelian randomization study",10.1371/journal.pmed.1001866,Mokry et al vitamin D MR,expand
+epidemiology,epidemiology_and_population_health,"Racial and ethnic disparities in multiple sclerosis prevalence",10.1212/WNL.0000000000200162,Langer-Gould health disparities,expand
+epidemiology,epidemiology_and_population_health,"Pediatric multiple sclerosis",10.1002/ana.24283,Banwell pediatric MS review,expand
