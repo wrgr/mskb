@@ -14,8 +14,8 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   </div>
 </div>
 
-<details id="parameters" class="param-tray reveal" open>
-  <summary><strong>Parameters</strong> (expand/collapse)</summary>
+<details id="parameters" class="param-tray reveal">
+  <summary><strong>Parameters &amp; filters</strong> (click to expand)</summary>
   <div class="explorer-presets">
     <span class="preset-label">Preset views</span>
     <button id="preset-undergrad" type="button">Undergrad Starter</button>
@@ -39,11 +39,11 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
       <option value="4">1-4 Advanced language</option>
     </select>
     <label for="min-in-degree">Min in-degree</label>
-    <input id="min-in-degree" type="number" min="0" step="1" value="20" />
+    <input id="min-in-degree" type="number" min="0" step="1" value="5" />
     <label for="min-out-degree">Min out-degree</label>
-    <input id="min-out-degree" type="number" min="0" step="1" value="20" />
+    <input id="min-out-degree" type="number" min="0" step="1" value="5" />
     <label for="min-kcore">Min k-core</label>
-    <input id="min-kcore" type="number" min="0" step="1" value="25" />
+    <input id="min-kcore" type="number" min="0" step="1" value="10" />
     <label for="core-percentile">Percentile cutoff</label>
     <input id="core-percentile" type="range" min="0" max="95" step="5" value="40" />
     <span id="core-percentile-value">40%</span>
@@ -66,30 +66,46 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 
 <div id="paper-graph"></div>
 
-<div class="panel reveal">
-  <h3>Selected Paper</h3>
+<section class="paper-panel reveal">
+  <header class="paper-panel-head">
+    <h3>Selected paper</h3>
+    <span class="paper-panel-hint">Click any node in the graph to focus it.</span>
+  </header>
   <div id="paper-details">Select a node to view summary, source link, and relationship choices.</div>
-  <h3>Relationship Navigator</h3>
-  <div class="rel-section">
-    <h4>Parents (papers this one cites)</h4>
-    <div id="parent-links"></div>
+  <div class="rel-grid">
+    <div class="rel-section">
+      <h4>Parents <small>(papers this one cites)</small></h4>
+      <div id="parent-links"></div>
+    </div>
+    <div class="rel-section">
+      <h4>Children <small>(papers that cite this one)</small></h4>
+      <div id="child-links"></div>
+    </div>
+    <div class="rel-section">
+      <h4>Related <small>(nearby in citation neighborhood)</small></h4>
+      <div id="related-links"></div>
+    </div>
   </div>
-  <div class="rel-section">
-    <h4>Children (papers that cite this one)</h4>
-    <div id="child-links"></div>
-  </div>
-  <div class="rel-section">
-    <h4>Related (nearby in citation neighborhood)</h4>
-    <div id="related-links"></div>
-  </div>
-</div>
+</section>
 
 <div class="tools-panel reveal">
   <h3>Tools</h3>
+  <p class="tools-intro">Add papers to your <strong>working selection</strong> using the <em>Add</em> buttons in the graph, search results, or paper details. The selection is shared between the Learning Path and Community Reading List tools.</p>
   <div class="tool-grid">
     <section class="tool-card">
-      <h4>Direct Search</h4>
-      <p>Search directly by author, title, or abstract text.</p>
+      <h4>Learning path</h4>
+      <p>Stage your selection into <em>foundations &rarr; bridges &rarr; deep dives</em> for self-paced study.</p>
+      <div id="journey-selected"></div>
+      <div class="explorer-actions">
+        <button id="journey-generate" type="button">Generate Learning Path</button>
+        <button id="journey-clear" type="button">Clear Selection</button>
+      </div>
+      <div id="journey-results"></div>
+    </section>
+
+    <section class="tool-card">
+      <h4>Direct search</h4>
+      <p>Find papers by author, title, or abstract text.</p>
       <div class="explorer-search">
         <label for="direct-search-mode">Search in</label>
         <select id="direct-search-mode">
@@ -106,8 +122,8 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     </section>
 
     <section class="tool-card">
-      <h4>Find Research Like...</h4>
-      <p>Write a brief research idea and retrieve relevant papers in the current filtered corpus.</p>
+      <h4>Find research like&hellip;</h4>
+      <p>Describe a research idea and retrieve relevant papers from the current filtered corpus.</p>
       <textarea id="idea-input" placeholder="Example: EBV-linked immune mechanisms that connect to progression biomarkers in MS"></textarea>
       <div class="explorer-actions">
         <button id="idea-run" type="button">Find Relevant Papers</button>
@@ -116,14 +132,14 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     </section>
 
     <section class="tool-card">
-      <h4>Learning Journey Builder</h4>
-      <p>Add papers from the graph or tool results, then generate a staged learning journey.</p>
-      <div id="journey-selected"></div>
+      <h4>Community reading list</h4>
+      <p>Treat your selection as a community: compute graph stats, suggest companion papers, and export a markdown reading list (e.g. for a journal club).</p>
+      <div id="community-stats" class="community-stats"></div>
       <div class="explorer-actions">
-        <button id="journey-generate" type="button">Generate Learning Journey</button>
-        <button id="journey-clear" type="button">Clear Selection</button>
+        <button id="community-generate" type="button">Build Community Stats</button>
+        <button id="community-download" type="button" disabled>Download Reading List (.md)</button>
       </div>
-      <div id="journey-results"></div>
+      <div id="community-results"></div>
     </section>
   </div>
 </div>
@@ -192,6 +208,10 @@ window.__mskbDebug = function (msg) {
   const journeyResultsEl = document.getElementById("journey-results");
   const journeyGenerateEl = document.getElementById("journey-generate");
   const journeyClearEl = document.getElementById("journey-clear");
+  const communityStatsEl = document.getElementById("community-stats");
+  const communityResultsEl = document.getElementById("community-results");
+  const communityGenerateEl = document.getElementById("community-generate");
+  const communityDownloadEl = document.getElementById("community-download");
   const ideaRunEl = document.getElementById("idea-run");
   const relayoutEl = document.getElementById("graph-relayout");
   const nodeDragToggleEl = document.getElementById("node-drag-toggle");
@@ -263,8 +283,6 @@ window.__mskbDebug = function (msg) {
     cd20: ["b", "cell", "depletion", "ocrelizumab", "rituximab"],
   };
 
-  let renderer = null;
-  let sigmaGraph = null;
   let selectedNodeId = null;
   let rawNodes = [];
   let rawEdges = [];
@@ -858,8 +876,6 @@ window.__mskbDebug = function (msg) {
       try { cy.destroy(); } catch (_) {}
     }
     cy = null;
-    renderer = null;
-    sigmaGraph = null;
   }
 
   function refreshNodeDragToggleLabel() {
@@ -982,7 +998,7 @@ window.__mskbDebug = function (msg) {
     });
   }
 
-  function buildSigmaGraph(positionById) {
+  function buildCytoscapeGraph(positionById) {
     const CytoCtor = getCytoCtor();
     if (!CytoCtor) {
       const detail = `cytoscape=${typeof window.cytoscape}. Vendor script at /javascripts/vendor/cytoscape.min.js may have failed to load.`;
@@ -994,13 +1010,17 @@ window.__mskbDebug = function (msg) {
       killRenderer();
 
       const t0 = (performance && performance.now) ? performance.now() : 0;
-      const elements = new Array(visibleNodes.length + visibleEdges.length);
+      // Pre-aggregate cluster centroids and friendly names while building nodes.
+      const clusterAgg = new Map(); // key -> { name, count, sumX, sumY, minX, minY, maxX, maxY }
+      const elements = new Array(visibleNodes.length + visibleEdges.length + 16);
       let ei = 0;
       const nodeIds = new Set();
       for (let i = 0; i < visibleNodes.length; i += 1) {
         const n = visibleNodes[i];
         const style = buildBaseNodeStyle(n);
         const pos = positionById.get(n.id) || { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 };
+        const px = Number(pos.x) || 0;
+        const py = Number(pos.y) || 0;
         nodeIds.add(n.id);
         elements[ei++] = {
           group: "nodes",
@@ -1010,8 +1030,23 @@ window.__mskbDebug = function (msg) {
             baseColor: style.kcoreColor || style.color,
             baseSize: Math.max(4, (Number(style.size) || 2) * 1.6),
           },
-          position: { x: (Number(pos.x) || 0), y: (Number(pos.y) || 0) },
+          position: { x: px, y: py },
         };
+
+        const ck = communityKey(n);
+        let agg = clusterAgg.get(ck);
+        if (!agg) {
+          const niceName = (n.topic_label && String(n.topic_label).trim()) || ck.replace(/^topic:/, "Topic ").replace(/^label:/, "");
+          agg = { name: niceName, count: 0, sumX: 0, sumY: 0, minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity };
+          clusterAgg.set(ck, agg);
+        }
+        agg.count += 1;
+        agg.sumX += px;
+        agg.sumY += py;
+        if (px < agg.minX) agg.minX = px;
+        if (py < agg.minY) agg.minY = py;
+        if (px > agg.maxX) agg.maxX = px;
+        if (py > agg.maxY) agg.maxY = py;
       }
       for (let i = 0; i < visibleEdges.length; i += 1) {
         const e = visibleEdges[i];
@@ -1021,6 +1056,21 @@ window.__mskbDebug = function (msg) {
           data: { id: "e" + i, source: e.source, target: e.target },
         };
       }
+      // Cluster label "ghost" nodes — non-interactive, always visible.
+      // Skip clusters of 1 node and "(unlabeled)" buckets.
+      clusterAgg.forEach((agg, key) => {
+        if (agg.count < 2) return;
+        if (!agg.name || agg.name === "unassigned") return;
+        const cx = agg.sumX / agg.count;
+        const cy = (agg.minY) - 30;
+        elements[ei++] = {
+          group: "nodes",
+          data: { id: "__cl__" + key, label: agg.name, isCluster: 1 },
+          position: { x: cx, y: cy },
+          selectable: false,
+          grabbable: false,
+        };
+      });
       elements.length = ei;
 
       if (window.__mskbDebug) {
@@ -1061,24 +1111,45 @@ window.__mskbDebug = function (msg) {
               "arrow-scale": 0.7,
             },
           },
+          // Always-visible cluster label nodes
+          {
+            selector: "node[?isCluster]",
+            style: {
+              "background-opacity": 0,
+              "border-width": 0,
+              "label": "data(label)",
+              "font-size": 16,
+              "font-weight": "bold",
+              "color": "rgba(40,52,68,0.55)",
+              "text-outline-color": "#ffffff",
+              "text-outline-width": 3,
+              "text-valign": "center",
+              "text-halign": "center",
+              "text-wrap": "wrap",
+              "text-max-width": 220,
+              "events": "no",
+              "min-zoomed-font-size": 6,
+              "width": 1,
+              "height": 1,
+              "z-index": 1,
+            },
+          },
           // Selection-active styling
           { selector: "node.dim",   style: { "background-color": "rgba(150,160,170,0.18)" } },
           { selector: "edge.dim",   style: { "line-color": "rgba(154,166,178,0.06)", "target-arrow-color": "rgba(154,166,178,0.06)", "width": 0.6 } },
-          { selector: "node.in",    style: { "background-color": "#25a16d" } },
-          { selector: "node.out",   style: { "background-color": "#cf5b2f" } },
-          { selector: "node.both",  style: { "background-color": "#b97e1d" } },
-          { selector: "node.focus", style: { "background-color": "#0a3f5c", "label": "data(label)", "font-size": 13, "color": "#0a3f5c", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -6 } },
+          { selector: "node.in",    style: { "background-color": "#25a16d", "label": "data(label)", "font-size": 10, "color": "#1a5d40", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -4, "min-zoomed-font-size": 8, "z-index": 5 } },
+          { selector: "node.out",   style: { "background-color": "#cf5b2f", "label": "data(label)", "font-size": 10, "color": "#7f2c0f", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -4, "min-zoomed-font-size": 8, "z-index": 5 } },
+          { selector: "node.both",  style: { "background-color": "#b97e1d", "label": "data(label)", "font-size": 10, "color": "#6c4708", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -4, "min-zoomed-font-size": 8, "z-index": 5 } },
+          { selector: "node.focus", style: { "background-color": "#0a3f5c", "label": "data(label)", "font-size": 13, "color": "#0a3f5c", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -6, "z-index": 10 } },
           { selector: "edge.eIn",   style: { "line-color": "#25a16d", "target-arrow-color": "#25a16d", "width": 2.4 } },
           { selector: "edge.eOut",  style: { "line-color": "#cf5b2f", "target-arrow-color": "#cf5b2f", "width": 2.4 } },
           { selector: "edge.eBridge", style: { "line-color": "rgba(76,111,138,0.42)", "target-arrow-color": "rgba(76,111,138,0.42)", "width": 1.2 } },
         ],
       });
-      // Aliases so legacy `if (renderer)` checks still work.
-      renderer = cy;
-      sigmaGraph = cy;
-
       cy.on("tap", "node", (evt) => {
-        focusNode(evt.target.id());
+        const node = evt.target;
+        if (node.data("isCluster")) return;
+        focusNode(node.id());
       });
       cy.on("tap", (evt) => {
         if (evt.target === cy) {
@@ -1229,13 +1300,14 @@ window.__mskbDebug = function (msg) {
       if (!selectedNodeId) return;
       const focusEl = cy.getElementById(selectedNodeId);
       if (!focusEl || !focusEl.length) return;
-      // Bulk classify via cytoscape collections — much faster than per-edge forEach.
+      // Cluster label nodes are never dimmed/classified.
+      const paperNodes = cy.nodes("[!isCluster]");
       const incomingEdges = focusEl.incomers("edge");
       const outgoingEdges = focusEl.outgoers("edge");
       const incomingNodes = focusEl.incomers("node");
       const outgoingNodes = focusEl.outgoers("node");
       const bothNodes = incomingNodes.intersection(outgoingNodes);
-      cy.nodes().addClass("dim");
+      paperNodes.addClass("dim");
       cy.edges().addClass("dim");
       focusEl.removeClass("dim").addClass("focus");
       incomingNodes.removeClass("dim").addClass("in");
@@ -1327,7 +1399,7 @@ window.__mskbDebug = function (msg) {
     renderJourneySelection();
     const positionById = buildCommunityPositions(visibleNodes);
     kcoreThresholds = computeKcoreThresholds(visibleNodes);
-    const ready = buildSigmaGraph(positionById);
+    const ready = buildCytoscapeGraph(positionById);
     if (ready) {
       styleSelectedSubgraph(null);
       stabilizeThenSettle(0);
@@ -1510,6 +1582,7 @@ window.__mskbDebug = function (msg) {
     } else {
       journeySelection.push(id);
     }
+    invalidateCommunityCache();
     renderJourneySelection();
     if (selectedNodeId === id) {
       renderPaper(id);
@@ -1524,16 +1597,24 @@ window.__mskbDebug = function (msg) {
 
   function clearJourneySelection() {
     journeySelection = [];
+    invalidateCommunityCache();
     renderJourneySelection();
+  }
+
+  function invalidateCommunityCache() {
+    communityMarkdownCache = "";
+    if (communityDownloadEl) communityDownloadEl.disabled = true;
+    if (communityStatsEl) communityStatsEl.innerHTML = "";
+    if (communityResultsEl) communityResultsEl.innerHTML = "";
   }
 
   function renderJourneySelection() {
     if (!journeySelection.length) {
-      journeySelectedEl.innerHTML = "<p>No papers selected yet. Use Add buttons from graph results or tools.</p>";
+      journeySelectedEl.innerHTML = "<p>No papers in selection yet. Use the <em>Add</em> buttons in the graph, search results, or paper details.</p>";
       return;
     }
     journeySelectedEl.innerHTML = `
-      <p><strong>Selected papers (${journeySelection.length})</strong></p>
+      <p><strong>Working selection (${journeySelection.length})</strong></p>
       <ol>
         ${journeySelection.map((id) => {
           const node = nodeById.get(id);
@@ -1679,6 +1760,170 @@ window.__mskbDebug = function (msg) {
     `;
   }
 
+  let communityMarkdownCache = "";
+
+  function buildCommunityMarkdown(selected, reading, anchors, companions, topTopics, intraEdges, density) {
+    const lines = [];
+    const today = new Date().toISOString().slice(0, 10);
+    lines.push(`# Community Reading List`);
+    lines.push("");
+    lines.push(`*Generated ${today} from the MS Knowledge Base explorer.*`);
+    lines.push("");
+    lines.push(`## Stats`);
+    lines.push("");
+    lines.push(`- Papers in selection: **${selected.length}**`);
+    lines.push(`- Internal citations (intra-set edges): **${intraEdges}**`);
+    lines.push(`- Density: **${density.toFixed(3)}**`);
+    if (topTopics.length) {
+      lines.push(`- Dominant topics: ${topTopics.map(([t, c]) => `${t} (${c})`).join("; ")}`);
+    }
+    lines.push("");
+    if (anchors.length) {
+      lines.push(`## Anchor papers (most internally cited)`);
+      lines.push("");
+      anchors.forEach((n, i) => {
+        const yr = n.year ? ` (${n.year})` : "";
+        const author = n.first_author ? `${n.first_author}. ` : "";
+        const link = n.source_url ? ` <${n.source_url}>` : "";
+        lines.push(`${i + 1}. ${author}${n.title}${yr}.${link}`);
+      });
+      lines.push("");
+    }
+    lines.push(`## Reading order (chronological)`);
+    lines.push("");
+    reading.forEach((n, i) => {
+      const yr = n.year ? ` (${n.year})` : "";
+      const author = n.first_author ? `${n.first_author}. ` : "";
+      const link = n.source_url ? ` <${n.source_url}>` : "";
+      const cites = (n.citation_count || 0) > 0 ? ` [${n.citation_count} citations]` : "";
+      lines.push(`${i + 1}. ${author}${n.title}${yr}.${link}${cites}`);
+    });
+    lines.push("");
+    if (companions.length) {
+      lines.push(`## Suggested companion papers`);
+      lines.push("");
+      lines.push(`Papers in the current visible graph that connect to multiple papers in the selection:`);
+      lines.push("");
+      companions.forEach(({ node, count }, i) => {
+        const yr = node.year ? ` (${node.year})` : "";
+        const author = node.first_author ? `${node.first_author}. ` : "";
+        const link = node.source_url ? ` <${node.source_url}>` : "";
+        lines.push(`${i + 1}. ${author}${node.title}${yr}.${link} — ${count} link${count === 1 ? "" : "s"} into selection`);
+      });
+      lines.push("");
+    }
+    return lines.join("\n");
+  }
+
+  async function generateCommunityReadingList() {
+    const selected = journeySelection.map((id) => nodeById.get(id)).filter(Boolean);
+    if (selected.length < 2) {
+      communityStatsEl.innerHTML = "";
+      communityResultsEl.innerHTML = "<p>Add at least 2 papers to your selection (use the Add buttons in search results or paper details).</p>";
+      communityDownloadEl.disabled = true;
+      return;
+    }
+    if (!(detailsById instanceof Map) && !detailsLoadError) {
+      communityResultsEl.innerHTML = "<p>Loading text details...</p>";
+      await ensureDetailsLoaded();
+    }
+
+    const idSet = new Set(selected.map((n) => n.id));
+    let intraEdges = 0;
+    const inSubset = new Map();
+    selected.forEach((n) => inSubset.set(n.id, 0));
+    selected.forEach((n) => {
+      (outgoing.get(n.id) || new Set()).forEach((target) => {
+        if (idSet.has(target)) {
+          intraEdges += 1;
+          inSubset.set(target, (inSubset.get(target) || 0) + 1);
+        }
+      });
+    });
+    const possible = selected.length * (selected.length - 1);
+    const density = possible ? (intraEdges / possible) : 0;
+
+    const candidate = new Map();
+    selected.forEach((n) => {
+      const neighbors = new Set([
+        ...(incoming.get(n.id) || []),
+        ...(outgoing.get(n.id) || []),
+      ]);
+      neighbors.forEach((other) => {
+        if (idSet.has(other)) return;
+        candidate.set(other, (candidate.get(other) || 0) + 1);
+      });
+    });
+    const companions = Array.from(candidate.entries())
+      .filter(([, cnt]) => cnt >= 2)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([id, count]) => ({ node: nodeById.get(id), count }))
+      .filter((x) => x.node);
+
+    const topicCount = new Map();
+    selected.forEach((n) => {
+      const t = (n.topic_label || "").trim() || "(unlabeled)";
+      topicCount.set(t, (topicCount.get(t) || 0) + 1);
+    });
+    const topTopics = Array.from(topicCount.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5);
+
+    const anchors = [...selected]
+      .sort((a, b) => (inSubset.get(b.id) || 0) - (inSubset.get(a.id) || 0))
+      .slice(0, 5);
+
+    const reading = [...selected].sort((a, b) =>
+      (Number(a.year || 9999) - Number(b.year || 9999))
+      || ((b.citation_count || 0) - (a.citation_count || 0))
+    );
+
+    communityMarkdownCache = buildCommunityMarkdown(
+      selected, reading, anchors, companions, topTopics, intraEdges, density
+    );
+    communityDownloadEl.disabled = false;
+
+    communityStatsEl.innerHTML = `
+      <dl>
+        <dt>Papers</dt><dd>${selected.length}</dd>
+        <dt>Intra-set edges</dt><dd>${intraEdges}</dd>
+        <dt>Density</dt><dd>${density.toFixed(3)}</dd>
+        <dt>Top topics</dt><dd>${topTopics.map(([t, c]) => `${escapeHtml(t)} (${c})`).join(", ") || "—"}</dd>
+      </dl>
+    `;
+
+    const anchorHtml = anchors.length
+      ? `<h5>Anchor papers</h5><ol>${anchors.map((n) =>
+          `<li>${renderActionButtons(n)} ${escapeHtml(n.title || "Untitled")}<em> — ${inSubset.get(n.id) || 0} internal citations</em></li>`
+        ).join("")}</ol>`
+      : "";
+    const readingHtml = `<h5>Reading order (chronological)</h5><ol>${reading.map((n) => {
+      const yr = n.year ? ` <em>(${n.year})</em>` : "";
+      return `<li>${renderActionButtons(n)} ${escapeHtml(n.title || "Untitled")}${yr}</li>`;
+    }).join("")}</ol>`;
+    const companionHtml = companions.length
+      ? `<h5>Companion papers (≥2 links into selection)</h5><ol>${companions.map(({ node, count }) =>
+          `<li>${renderActionButtons(node)} ${escapeHtml(node.title || "Untitled")}<em> — ${count} link${count === 1 ? "" : "s"}</em></li>`
+        ).join("")}</ol>`
+      : "<p><em>No companion papers found in current visible graph. Try widening filters or loading the full corpus.</em></p>";
+
+    communityResultsEl.innerHTML = anchorHtml + readingHtml + companionHtml;
+  }
+
+  function downloadCommunityMarkdown() {
+    if (!communityMarkdownCache) return;
+    const blob = new Blob([communityMarkdownCache], { type: "text/markdown;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `mskb-reading-list-${new Date().toISOString().slice(0, 10)}.md`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 200);
+  }
+
   function stabilizeThenSettle(amplitude = 0) {
     if (!cy) return;
     const positionById = buildCommunityPositions(visibleNodes);
@@ -1789,6 +2034,8 @@ window.__mskbDebug = function (msg) {
 
   journeyGenerateEl.addEventListener("click", generateLearningJourney);
   journeyClearEl.addEventListener("click", clearJourneySelection);
+  communityGenerateEl.addEventListener("click", generateCommunityReadingList);
+  communityDownloadEl.addEventListener("click", downloadCommunityMarkdown);
 
   ideaRunEl.addEventListener("click", runIdeaMatch);
   coreApplyEl.addEventListener("click", applyCoreFilter);
