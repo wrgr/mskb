@@ -86,6 +86,24 @@ def _artifact_info(path: Path) -> dict:
     }
 
 
+def _safe_int(value, default=0) -> int:
+    try:
+        if pd.isna(value):
+            return default
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def _safe_float(value, default=0.0) -> float:
+    try:
+        if pd.isna(value):
+            return default
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def write_provenance_snapshot(root: Path, output_dir: str) -> None:
     outputs = root / output_dir
     raw = outputs / "raw"
@@ -105,6 +123,9 @@ def write_provenance_snapshot(root: Path, output_dir: str) -> None:
         graph / "paper_graph_metrics.csv",
         graph / "scored_papers.csv",
         graph / "author_metrics.csv",
+        graph / "learner_journey_papers.csv",
+        graph / "learner_journey_topics.csv",
+        graph / "learner_journey.json",
         explorer / "explorer_papers.parquet",
         explorer / "explorer_authors.parquet",
     ]
@@ -198,6 +219,18 @@ def run(config_path: str) -> None:
             tid = f"topic::{row['topic_id']}"
             edges.append({"source_id": source_pid, "target_id": tid, "edge_type": "BELONGS_TO_TOPIC"})
 
+    learner_membership_path = graph / "learner_topic_membership.csv"
+    if learner_membership_path.exists():
+        learner_membership = pd.read_csv(learner_membership_path)
+        for _, row in learner_membership.iterrows():
+            pid = str(row.get("paper_id", ""))
+            tid = str(row.get("topic_id", ""))
+            if not pid or not tid or pid not in selected_paper_ids:
+                continue
+            tlabel = str(row.get("topic_label", "") or tid)
+            nodes.append({"node_id": tid, "label": "Topic", "name": tlabel})
+            edges.append({"source_id": pid, "target_id": tid, "edge_type": "BELONGS_TO_TOPIC"})
+
     # Include explicit paper citation edges in the KG for graph traversal.
     cites_path = graph / "corpus_citation_edges.csv"
     if cites_path.exists():
@@ -207,6 +240,48 @@ def run(config_path: str) -> None:
             dst = str(row["target_paper_id"])
             if src in selected_paper_ids and dst in selected_paper_ids and src != dst:
                 edges.append({"source_id": src, "target_id": dst, "edge_type": "CITES"})
+
+    learner_papers_path = graph / "learner_journey_papers.csv"
+    if learner_papers_path.exists():
+        learner_papers = pd.read_csv(learner_papers_path)
+        for _, row in learner_papers.iterrows():
+            src = str(row.get("from_paper_id", ""))
+            dst = str(row.get("to_paper_id", ""))
+            if not src or not dst or src not in selected_paper_ids or dst not in selected_paper_ids or src == dst:
+                continue
+            edges.append(
+                {
+                    "source_id": src,
+                    "target_id": dst,
+                    "edge_type": "NEXT_PAPER_TO_LEARN",
+                    "journey_type": str(row.get("journey_type", "")),
+                    "journey_rank": _safe_int(row.get("rank", 0)),
+                    "journey_score": _safe_float(row.get("journey_score", 0.0)),
+                }
+            )
+
+    learner_topics_path = graph / "learner_journey_topics.csv"
+    if learner_topics_path.exists():
+        learner_topics = pd.read_csv(learner_topics_path)
+        for _, row in learner_topics.iterrows():
+            src = str(row.get("from_topic_id", ""))
+            dst = str(row.get("to_topic_id", ""))
+            if not src or not dst or src == dst:
+                continue
+            src_label = str(row.get("from_topic_label", "") or src)
+            dst_label = str(row.get("to_topic_label", "") or dst)
+            nodes.append({"node_id": src, "label": "Topic", "name": src_label})
+            nodes.append({"node_id": dst, "label": "Topic", "name": dst_label})
+            edges.append(
+                {
+                    "source_id": src,
+                    "target_id": dst,
+                    "edge_type": "NEXT_TOPIC_TO_LEARN",
+                    "journey_rank": _safe_int(row.get("rank", 0)),
+                    "journey_score": _safe_float(row.get("transition_score", 0.0)),
+                    "evidence_edges": _safe_int(row.get("evidence_edges", 0)),
+                }
+            )
 
     nodes_df = pd.DataFrame(nodes).drop_duplicates(subset=["node_id", "label"])
     edges_df = pd.DataFrame(edges).drop_duplicates()

@@ -566,12 +566,17 @@ body,
 }
 
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js-reveal .reveal {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 400ms ease, transform 400ms ease;
 }
 
-.reveal.in-view {
+.js-reveal .reveal.in-view {
   opacity: 1;
   transform: translateY(0);
 }

@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.classList.add("js-reveal");
+
   // Normalize any stale same-site .md links to pretty URL routes.
   document.querySelectorAll("a[href]").forEach((a) => {
     const raw = (a.getAttribute("href") || "").trim();
@@ -33,6 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!targets.length) return;
 
   targets.forEach((el) => el.classList.add("reveal"));
+
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("in-view"));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {

@@ -11,8 +11,9 @@ MSKB builds a curated, navigable knowledge base from the MS literature by:
 3. **Building graphs** -- citation, co-citation, bibliographic coupling, and co-authorship networks with PageRank, k-core, betweenness centrality, and Louvain community detection
 4. **Scoring** papers for MS relevance using multi-signal agreement
 5. **Discovering topics** algorithmically from citation communities and OpenAlex concepts
-6. **Distilling papers** into undergraduate-accessible summaries using the Claude API
-7. **Building a knowledge graph** with MS-specific entities (drugs, genes, pathology, biomarkers, animal models)
+6. **Building learner journey paths** that suggest the next paper or topic to study
+7. **Distilling papers** into undergraduate-accessible summaries using the Claude API
+8. **Building a knowledge graph** with MS-specific entities (drugs, genes, pathology, biomarkers, animal models) plus learner-journey edges
 
 The final output is a **static MkDocs site** where students can browse topics, read distilled paper summaries, follow structured reading paths, and explore the MS research landscape.
 
@@ -39,9 +40,10 @@ python run_pipeline.py --config config.yaml
 | 3 | `src/build_graphs.py` | Build bibliometric networks and compute graph metrics |
 | 4 | `src/compute_scores.py` | Score papers for MS relevance + age-normalized centrality + evidence strength |
 | 5 | `src/discover_topics.py` | Discover topic clusters from citation structure |
-| 6 | `src/distill_papers.py` | Generate accessible summaries with provenance/certainty + faithfulness QA sample |
-| 7 | `src/build_knowledge_graph.py` | Extract MS entities and build heterogeneous KG |
-| 8 | `src/audit_kb.py` | Run CI-like corpus audit gates (`ms_focus`, contamination, category bounds, missing data) |
+| 6 | `src/build_learner_journey.py` | Recommend next papers/topics from citation + topic structure |
+| 7 | `src/distill_papers.py` | Generate accessible summaries with provenance/certainty + faithfulness QA sample |
+| 8 | `src/build_knowledge_graph.py` | Extract MS entities and build heterogeneous KG |
+| 9 | `src/audit_kb.py` | Run CI-like corpus audit gates (`ms_focus`, contamination, category bounds, missing data) |
 
 Run individual stages:
 ```bash

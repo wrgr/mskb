@@ -5,6 +5,7 @@ from src.audit_kb import run as run_audit
 from src.backfill_abstracts import run as run_backfill_abstracts
 from src.build_graphs import run as run_graphs
 from src.build_knowledge_graph import run as run_kg
+from src.build_learner_journey import run as run_learner_journey
 from src.compute_scores import run as run_scores
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
@@ -35,13 +36,16 @@ def main(config_path: str) -> None:
     print("Stage 5/8: Discovering topics...")
     run_topics(config_path)
 
-    print("Stage 6/8: Distilling papers...")
+    print("Stage 6/9: Building learner journey...")
+    run_learner_journey(config_path)
+
+    print("Stage 7/9: Distilling papers...")
     run_distill(config_path)
 
-    print("Stage 7/8: Building knowledge graph...")
+    print("Stage 8/9: Building knowledge graph...")
     run_kg(config_path)
 
-    print("Stage 8/8: Running KB audit gates...")
+    print("Stage 9/9: Running KB audit gates...")
     run_audit(config_path)
 
     print("Pipeline complete.")

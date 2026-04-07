@@ -2,8 +2,8 @@
 
 Use this graph to inspect papers, follow citation paths, and turn a short research note into parent/child/related paper choices.
 
-<script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
+<script src="../javascripts/vendor/graphology.umd.min.js"></script>
+<script src="../javascripts/vendor/sigma.min.js"></script>
 
 <div class="top-idea reveal">
   <h3>Explore the MS Knowledge Graph</h3>
@@ -253,6 +253,34 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   let paperAgeRankMap = new Map();
   let authorStatsMap = new Map();
   let searchIndexCache = { signature: "", index: null };
+
+  function setGraphStatus(text, strong = false) {
+    if (!graphStatusEl) return;
+    const safe = escapeHtml(String(text || ""));
+    graphStatusEl.innerHTML = strong ? `<p><strong>${safe}</strong></p>` : `<p><em>${safe}</em></p>`;
+  }
+
+  async function fetchTextWithTimeout(url, timeoutMs = 20000) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(new Error("timeout")), timeoutMs);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      return response;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  window.addEventListener("error", (event) => {
+    const msg = event?.error?.message || event?.message || "Unknown script error";
+    setGraphStatus(`Explorer runtime error: ${msg}`, true);
+  });
+
+  window.addEventListener("unhandledrejection", (event) => {
+    const reason = event?.reason;
+    const msg = typeof reason === "string" ? reason : (reason?.message || String(reason || "Unknown promise rejection"));
+    setGraphStatus(`Explorer async error: ${msg}`, true);
+  });
 
   function escapeHtml(text) {
     return (text || "").replace(/[&<>"']/g, (ch) => ({
@@ -895,139 +923,148 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     const SigmaCtor = getSigmaCtor();
     const GraphCtor = getGraphCtor();
     if (!SigmaCtor || !GraphCtor) {
-      detailsEl.innerHTML = "Explorer renderer failed to initialize (Sigma/Graphology not loaded).";
+      const msg = "Explorer renderer failed to initialize (Sigma/Graphology not loaded).";
+      detailsEl.innerHTML = msg;
+      graphStatusEl.innerHTML = `<p><strong>${msg}</strong></p>`;
       return false;
     }
 
-    killRenderer();
-    sigmaGraph = (window.graphology && GraphCtor === window.graphology.Graph)
-      ? new GraphCtor({ type: "directed", multi: false })
-      : new GraphCtor();
+    try {
+      killRenderer();
+      sigmaGraph = (window.graphology && GraphCtor === window.graphology.Graph)
+        ? new GraphCtor({ type: "directed", multi: false })
+        : new GraphCtor();
 
-    visibleNodes.forEach((n) => {
-      const style = buildBaseNodeStyle(n);
-      const pos = positionById.get(n.id) || { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 };
-      sigmaGraph.addNode(n.id, {
-        label: style.label,
-        x: Number(pos.x) || 0,
-        y: Number(pos.y) || 0,
-        size: Math.max(1.5, Number(style.size) || 2),
-        color: style.color,
-        topicColor: style.topicColor,
-        kcoreColor: style.kcoreColor,
+      visibleNodes.forEach((n) => {
+        const style = buildBaseNodeStyle(n);
+        const pos = positionById.get(n.id) || { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 };
+        sigmaGraph.addNode(n.id, {
+          label: style.label,
+          x: Number(pos.x) || 0,
+          y: Number(pos.y) || 0,
+          size: Math.max(1.5, Number(style.size) || 2),
+          color: style.color,
+          topicColor: style.topicColor,
+          kcoreColor: style.kcoreColor,
+        });
       });
-    });
 
-    visibleEdges.forEach((e, idx) => {
-      if (!sigmaGraph.hasNode(e.source) || !sigmaGraph.hasNode(e.target)) return;
-      const key = `${e.source}->${e.target}-${idx}`;
-      if (sigmaGraph.hasEdge(key)) return;
-      sigmaGraph.addDirectedEdgeWithKey(key, e.source, e.target, {
-        color: "rgba(125,138,150,0.18)",
-        size: 1.0,
+      visibleEdges.forEach((e, idx) => {
+        if (!sigmaGraph.hasNode(e.source) || !sigmaGraph.hasNode(e.target)) return;
+        const key = `${e.source}->${e.target}-${idx}`;
+        if (sigmaGraph.hasEdge(key)) return;
+        sigmaGraph.addDirectedEdgeWithKey(key, e.source, e.target, {
+          color: "rgba(125,138,150,0.18)",
+          size: 1.0,
+        });
       });
-    });
 
-    renderer = new SigmaCtor(sigmaGraph, graphEl, {
-      renderLabels: true,
-      labelRenderedSizeThreshold: 14,
-      defaultEdgeType: "arrow",
-      allowInvalidContainer: true,
-    });
+      renderer = new SigmaCtor(sigmaGraph, graphEl, {
+        renderLabels: true,
+        labelRenderedSizeThreshold: 14,
+        defaultEdgeType: "arrow",
+        allowInvalidContainer: true,
+      });
 
-    renderer.setSetting("nodeReducer", (node, data) => {
-      const reduced = { ...data };
+      renderer.setSetting("nodeReducer", (node, data) => {
+        const reduced = { ...data };
 
-      if (!selectedNodeId) {
-        reduced.color = data.kcoreColor || data.color;
-        reduced.size = data.size;
-        return reduced;
-      }
-
-      if (node === selectedNodeId) {
-        reduced.color = "#0a3f5c";
-        reduced.size = (data.size || 3) * 1.4;
-        return reduced;
-      }
-      if (selectedIncoming.has(node) && selectedOutgoing.has(node)) {
-        reduced.color = "#b97e1d";
-        reduced.size = (data.size || 3) * 1.18;
-        return reduced;
-      }
-      if (selectedIncoming.has(node)) {
-        reduced.color = "#25a16d";
-        reduced.size = (data.size || 3) * 1.12;
-        return reduced;
-      }
-      if (selectedOutgoing.has(node)) {
-        reduced.color = "#cf5b2f";
-        reduced.size = (data.size || 3) * 1.12;
-        return reduced;
-      }
-      reduced.color = "rgba(150,160,170,0.18)";
-      reduced.label = "";
-      reduced.size = Math.max(1.2, (data.size || 2) * 0.8);
-      return reduced;
-    });
-
-    renderer.setSetting("edgeReducer", (edge, data) => {
-      const reduced = { ...data, color: "rgba(125,138,150,0.18)", size: 1.0 };
-      if (!selectedNodeId) return reduced;
-
-      const source = sigmaGraph.source(edge);
-      const target = sigmaGraph.target(edge);
-
-      if (source === selectedNodeId) return { ...reduced, color: "#cf5b2f", size: 2.4 };
-      if (target === selectedNodeId) return { ...reduced, color: "#25a16d", size: 2.4 };
-      if (selectedIncident.has(source) && selectedIncident.has(target)) return { ...reduced, color: "rgba(76,111,138,0.42)", size: 1.2 };
-      return { ...reduced, color: "rgba(154,166,178,0.06)", size: 0.6 };
-    });
-
-    renderer.on("clickNode", ({ node }) => {
-      if (draggingNode) return;
-      focusNode(node);
-    });
-    renderer.on("clickStage", () => {
-      selectedNodeId = null;
-      styleSelectedSubgraph(null);
-    });
-
-    const captor = renderer.getMouseCaptor && renderer.getMouseCaptor();
-    if (captor) {
-      renderer.on("downNode", ({ node, event }) => {
-        if (!dragEnabled || isMobileView) return;
-        draggingNode = node;
-        if (event && typeof event.preventSigmaDefault === "function") {
-          event.preventSigmaDefault();
+        if (!selectedNodeId) {
+          reduced.color = data.kcoreColor || data.color;
+          reduced.size = data.size;
+          return reduced;
         }
-        if (event && event.original && typeof event.original.preventDefault === "function") {
-          event.original.preventDefault();
+
+        if (node === selectedNodeId) {
+          reduced.color = "#0a3f5c";
+          reduced.size = (data.size || 3) * 1.4;
+          return reduced;
         }
+        if (selectedIncoming.has(node) && selectedOutgoing.has(node)) {
+          reduced.color = "#b97e1d";
+          reduced.size = (data.size || 3) * 1.18;
+          return reduced;
+        }
+        if (selectedIncoming.has(node)) {
+          reduced.color = "#25a16d";
+          reduced.size = (data.size || 3) * 1.12;
+          return reduced;
+        }
+        if (selectedOutgoing.has(node)) {
+          reduced.color = "#cf5b2f";
+          reduced.size = (data.size || 3) * 1.12;
+          return reduced;
+        }
+        reduced.color = "rgba(150,160,170,0.18)";
+        reduced.label = "";
+        reduced.size = Math.max(1.2, (data.size || 2) * 0.8);
+        return reduced;
       });
 
-      captor.on("mousemovebody", (e) => {
-        if (!dragEnabled || !draggingNode || !renderer || !sigmaGraph || !sigmaGraph.hasNode(draggingNode)) return;
-        const coords = renderer.viewportToGraph ? renderer.viewportToGraph({ x: e.x, y: e.y }) : null;
-        if (!coords) return;
-        sigmaGraph.setNodeAttribute(draggingNode, "x", coords.x);
-        sigmaGraph.setNodeAttribute(draggingNode, "y", coords.y);
-        renderer.refresh();
-        if (typeof e.preventSigmaDefault === "function") {
-          e.preventSigmaDefault();
-        }
+      renderer.setSetting("edgeReducer", (edge, data) => {
+        const reduced = { ...data, color: "rgba(125,138,150,0.18)", size: 1.0 };
+        if (!selectedNodeId) return reduced;
+
+        const source = sigmaGraph.source(edge);
+        const target = sigmaGraph.target(edge);
+
+        if (source === selectedNodeId) return { ...reduced, color: "#cf5b2f", size: 2.4 };
+        if (target === selectedNodeId) return { ...reduced, color: "#25a16d", size: 2.4 };
+        if (selectedIncident.has(source) && selectedIncident.has(target)) return { ...reduced, color: "rgba(76,111,138,0.42)", size: 1.2 };
+        return { ...reduced, color: "rgba(154,166,178,0.06)", size: 0.6 };
       });
 
-      const stopDrag = () => {
-        draggingNode = null;
-      };
-      captor.on("mouseup", stopDrag);
-      captor.on("mousedown", () => {
-        if (!dragEnabled) draggingNode = null;
+      renderer.on("clickNode", ({ node }) => {
+        if (draggingNode) return;
+        focusNode(node);
       });
-      captor.on("mouseleave", stopDrag);
+      renderer.on("clickStage", () => {
+        selectedNodeId = null;
+        styleSelectedSubgraph(null);
+      });
+
+      const captor = renderer.getMouseCaptor && renderer.getMouseCaptor();
+      if (captor) {
+        renderer.on("downNode", ({ node, event }) => {
+          if (!dragEnabled || isMobileView) return;
+          draggingNode = node;
+          if (event && typeof event.preventSigmaDefault === "function") {
+            event.preventSigmaDefault();
+          }
+          if (event && event.original && typeof event.original.preventDefault === "function") {
+            event.original.preventDefault();
+          }
+        });
+
+        captor.on("mousemovebody", (e) => {
+          if (!dragEnabled || !draggingNode || !renderer || !sigmaGraph || !sigmaGraph.hasNode(draggingNode)) return;
+          const coords = renderer.viewportToGraph ? renderer.viewportToGraph({ x: e.x, y: e.y }) : null;
+          if (!coords) return;
+          sigmaGraph.setNodeAttribute(draggingNode, "x", coords.x);
+          sigmaGraph.setNodeAttribute(draggingNode, "y", coords.y);
+          renderer.refresh();
+          if (typeof e.preventSigmaDefault === "function") {
+            e.preventSigmaDefault();
+          }
+        });
+
+        const stopDrag = () => {
+          draggingNode = null;
+        };
+        captor.on("mouseup", stopDrag);
+        captor.on("mousedown", () => {
+          if (!dragEnabled) draggingNode = null;
+        });
+        captor.on("mouseleave", stopDrag);
+      }
+
+      return true;
+    } catch (err) {
+      const msg = `Explorer renderer failed during graph construction: ${err}`;
+      detailsEl.innerHTML = msg;
+      graphStatusEl.innerHTML = `<p><strong>${escapeHtml(String(msg))}</strong></p>`;
+      return false;
     }
-
-    return true;
   }
 
   function journeyButtonLabel(id) {
@@ -1606,11 +1643,13 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     refreshFullCorpusButton();
     const candidateList = Array.isArray(candidates) ? candidates : [candidates];
     let lastErr = null;
+    const candidateErrors = [];
     try {
       for (const candidate of candidateList) {
         const loadStart = performance.now();
         try {
-          const r = await fetch(candidate.url);
+          setGraphStatus(`Loading ${candidate.label || candidate.mode || "payload"} payload...`);
+          const r = await fetchTextWithTimeout(candidate.url, 20000);
           if (!r.ok) throw new Error(`${candidate.label || candidate.mode || "payload"} request failed (${r.status})`);
           const text = await r.text();
           const parseStart = performance.now();
@@ -1639,10 +1678,13 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
           break;
         } catch (err) {
           lastErr = err;
+          candidateErrors.push(`${candidate.label || candidate.mode || "payload"}: ${err}`);
         }
       }
       if (lastErr) {
-        detailsEl.innerHTML = `Could not load explorer data: ${lastErr}`;
+        const msg = `Could not load explorer data: ${lastErr}`;
+        detailsEl.innerHTML = msg;
+        setGraphStatus(`Explorer load failed. Attempts: ${candidateErrors.join(" | ")}`, true);
       }
     } finally {
       isLoadingCorpus = false;
@@ -1650,6 +1692,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     }
   }
 
+  setGraphStatus("Loading explorer graph...");
   loadCorpusPayload(initialPayloadCandidates);
 
   [parentEl, childEl, relatedEl, directSearchResultsEl, ideaResultsEl, journeySelectedEl, journeyResultsEl, detailsEl].forEach(container => {
