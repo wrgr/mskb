@@ -65,7 +65,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   </div>
   </details>
 
-<div id="paper-graph" class="reveal"></div>
+<div id="paper-graph"></div>
 
 <div class="panel reveal">
   <h3>Selected Paper</h3>
@@ -1036,6 +1036,18 @@ window.__mskbDebug = function (msg) {
         defaultEdgeType: "arrow",
         allowInvalidContainer: true,
       });
+      try {
+        const cam = renderer.getCamera && renderer.getCamera();
+        if (cam && typeof cam.animatedReset === "function") {
+          cam.animatedReset({ duration: 0 });
+        } else if (cam && typeof cam.setState === "function") {
+          cam.setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+        }
+        if (renderer.refresh) renderer.refresh();
+      } catch (e) {
+        if (window.__mskbDebug) window.__mskbDebug("camera reset failed: " + e);
+      }
+      if (window.__mskbDebug) window.__mskbDebug("sigma ctor done, camera reset called");
 
       renderer.setSetting("nodeReducer", (node, data) => {
         const reduced = { ...data };
