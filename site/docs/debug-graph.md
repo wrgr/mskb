@@ -5,7 +5,7 @@ Minimal sigma + graphology smoke test. No filters, no JSON fetch, no theme integ
 <script src="../javascripts/vendor/graphology.umd.min.js"></script>
 <script src="../javascripts/vendor/sigma.min.js"></script>
 
-<div id="debug-graph" style="width:100%;height:60vh;border:1px solid #888;border-radius:8px;background:#fafafa;"></div>
+<div id="debug-graph-container" style="width:100%;height:60vh;border:1px solid #888;border-radius:8px;background:#fafafa;"></div>
 
 <script>
 (function () {
@@ -40,8 +40,8 @@ Minimal sigma + graphology smoke test. No filters, no JSON fetch, no theme integ
     try {
       dbg("boot: DOM ready");
       dbg("vendors: Sigma=" + (typeof window.Sigma) + " graphology=" + (typeof window.graphology));
-      var container = document.getElementById("debug-graph");
-      if (!container) { dbg("FATAL: #debug-graph missing"); return; }
+      var container = document.getElementById("debug-graph-container");
+      if (!container) { dbg("FATAL: #debug-graph-container missing"); return; }
       var rect = container.getBoundingClientRect();
       dbg("container rect: " + Math.round(rect.width) + "x" + Math.round(rect.height));
 
