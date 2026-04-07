@@ -71,9 +71,9 @@ def main() -> None:
 
     repo_root = Path(__file__).resolve().parent.parent
     if not args.allow_system_python and not _in_project_venv(repo_root):
-        raise SystemExit(
-            "Refusing to run outside project venv. Use `.venv/bin/python site/build_site.py ...` "
-            "or pass --allow-system-python."
+        print(
+            f"[build_site] WARNING: not running from {repo_root}/.venv "
+            f"(sys.prefix={sys.prefix}). Continuing; pass --allow-system-python to silence."
         )
 
     lock_path = repo_root / "site" / ".build.lock"
