@@ -1032,7 +1032,6 @@ window.__mskbDebug = function (msg) {
         container: graphEl,
         elements: elements,
         layout: { name: "preset", fit: true, padding: 30 },
-        wheelSensitivity: 0.2,
         pixelRatio: 1,
         textureOnViewport: true,
         hideEdgesOnViewport: true,
@@ -1048,13 +1047,6 @@ window.__mskbDebug = function (msg) {
               "background-color": "data(baseColor)",
               "width": "data(baseSize)",
               "height": "data(baseSize)",
-              "label": "data(label)",
-              "font-size": 10,
-              "color": "#222",
-              "text-outline-color": "#fff",
-              "text-outline-width": 1,
-              "text-opacity": 0,
-              "min-zoomed-font-size": 12,
               "border-width": 0,
             },
           },
@@ -1070,12 +1062,12 @@ window.__mskbDebug = function (msg) {
             },
           },
           // Selection-active styling
-          { selector: "node.dim",   style: { "background-color": "rgba(150,160,170,0.18)", "text-opacity": 0 } },
+          { selector: "node.dim",   style: { "background-color": "rgba(150,160,170,0.18)" } },
           { selector: "edge.dim",   style: { "line-color": "rgba(154,166,178,0.06)", "target-arrow-color": "rgba(154,166,178,0.06)", "width": 0.6 } },
-          { selector: "node.in",    style: { "background-color": "#25a16d", "width": "mapData(baseSize, 4, 60, 4.5, 67)", "height": "mapData(baseSize, 4, 60, 4.5, 67)" } },
-          { selector: "node.out",   style: { "background-color": "#cf5b2f", "width": "mapData(baseSize, 4, 60, 4.5, 67)", "height": "mapData(baseSize, 4, 60, 4.5, 67)" } },
+          { selector: "node.in",    style: { "background-color": "#25a16d" } },
+          { selector: "node.out",   style: { "background-color": "#cf5b2f" } },
           { selector: "node.both",  style: { "background-color": "#b97e1d" } },
-          { selector: "node.focus", style: { "background-color": "#0a3f5c", "width": "mapData(baseSize, 4, 60, 5.6, 84)", "height": "mapData(baseSize, 4, 60, 5.6, 84)", "text-opacity": 1, "font-size": 13 } },
+          { selector: "node.focus", style: { "background-color": "#0a3f5c", "label": "data(label)", "font-size": 13, "color": "#0a3f5c", "text-outline-color": "#fff", "text-outline-width": 2, "text-valign": "top", "text-margin-y": -6 } },
           { selector: "edge.eIn",   style: { "line-color": "#25a16d", "target-arrow-color": "#25a16d", "width": 2.4 } },
           { selector: "edge.eOut",  style: { "line-color": "#cf5b2f", "target-arrow-color": "#cf5b2f", "width": 2.4 } },
           { selector: "edge.eBridge", style: { "line-color": "rgba(76,111,138,0.42)", "target-arrow-color": "rgba(76,111,138,0.42)", "width": 1.2 } },
@@ -1235,32 +1227,22 @@ window.__mskbDebug = function (msg) {
     cy.batch(() => {
       cy.elements().removeClass("dim in out both focus eIn eOut eBridge");
       if (!selectedNodeId) return;
+      const focusEl = cy.getElementById(selectedNodeId);
+      if (!focusEl || !focusEl.length) return;
+      // Bulk classify via cytoscape collections — much faster than per-edge forEach.
+      const incomingEdges = focusEl.incomers("edge");
+      const outgoingEdges = focusEl.outgoers("edge");
+      const incomingNodes = focusEl.incomers("node");
+      const outgoingNodes = focusEl.outgoers("node");
+      const bothNodes = incomingNodes.intersection(outgoingNodes);
       cy.nodes().addClass("dim");
       cy.edges().addClass("dim");
-      const focusNodeRef = cy.getElementById(selectedNodeId);
-      if (focusNodeRef && focusNodeRef.length) {
-        focusNodeRef.removeClass("dim").addClass("focus");
-      }
-      selectedIncoming.forEach((nid) => {
-        const el = cy.getElementById(nid);
-        if (el && el.length) el.removeClass("dim").addClass("in");
-      });
-      selectedOutgoing.forEach((nid) => {
-        const el = cy.getElementById(nid);
-        if (el && el.length) {
-          if (selectedIncoming.has(nid)) el.removeClass("in").addClass("both");
-          else el.removeClass("dim").addClass("out");
-        }
-      });
-      cy.edges().forEach((edge) => {
-        const s = edge.data("source");
-        const t = edge.data("target");
-        if (s === selectedNodeId) { edge.removeClass("dim").addClass("eOut"); return; }
-        if (t === selectedNodeId) { edge.removeClass("dim").addClass("eIn"); return; }
-        if (selectedIncident.has(s) && selectedIncident.has(t)) {
-          edge.removeClass("dim").addClass("eBridge");
-        }
-      });
+      focusEl.removeClass("dim").addClass("focus");
+      incomingNodes.removeClass("dim").addClass("in");
+      outgoingNodes.removeClass("dim").addClass("out");
+      bothNodes.removeClass("in out").addClass("both");
+      incomingEdges.removeClass("dim").addClass("eIn");
+      outgoingEdges.removeClass("dim").addClass("eOut");
     });
   }
 
@@ -1439,6 +1421,8 @@ window.__mskbDebug = function (msg) {
         <div>Loading summary and abstract details...</div>
       `;
       ensureDetailsLoaded().then(() => {
+        // Bail if the user selected a different paper while details were loading.
+        if (selectedNodeId && selectedNodeId !== id) return;
         const latest = nodeById.get(id);
         if (latest) renderPaper(id);
       });
