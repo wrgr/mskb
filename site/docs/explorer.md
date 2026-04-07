@@ -40,11 +40,11 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
       <option value="4">1-4 Advanced language</option>
     </select>
     <label for="min-in-degree">Min in-degree</label>
-    <input id="min-in-degree" type="number" min="0" step="1" value="5" />
+    <input id="min-in-degree" type="number" min="0" step="1" value="20" />
     <label for="min-out-degree">Min out-degree</label>
-    <input id="min-out-degree" type="number" min="0" step="1" value="5" />
+    <input id="min-out-degree" type="number" min="0" step="1" value="20" />
     <label for="min-kcore">Min k-core</label>
-    <input id="min-kcore" type="number" min="0" step="1" value="10" />
+    <input id="min-kcore" type="number" min="0" step="1" value="25" />
     <label for="core-percentile">Percentile cutoff</label>
     <input id="core-percentile" type="range" min="0" max="95" step="5" value="40" />
     <span id="core-percentile-value">40%</span>
@@ -1363,8 +1363,11 @@ window.__mskbDebug = function (msg) {
     }
 
     if (visibleNodes.length) {
+      // Defer initial focus so the first paint lands before we start
+      // an async details fetch and camera animation. Avoids "page
+      // unresponsive" dialogs on the first load.
       const top = [...visibleNodes].sort((a, b) => (b.importance || 0) - (a.importance || 0))[0];
-      focusNode(top.id);
+      setTimeout(() => { try { focusNode(top.id); } catch (e) { if (window.__mskbDebug) window.__mskbDebug("initial focus failed: " + e); } }, 150);
     } else {
       detailsEl.innerHTML = "No papers match the current core/language filter.";
       parentEl.innerHTML = "";
