@@ -12,6 +12,7 @@ config.yaml
 
 # MkDocs build
 site/site/
+site/.build.lock
 
 # Distribution / packaging
 .Python

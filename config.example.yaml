@@ -46,8 +46,35 @@ graphs:
 scoring:
   include_if_min_signals: 1
   include_if_score_at_least: 0.15
+  ms_focus:
+    # Major upweight for papers with explicit MS lexical + concept linkage.
+    lexical_min_hits: 1
+    concept_min_hits: 1
+    minor_boost_multiplier: 1.2
+    boost_multiplier: 1.65
+  core_vs_context:
+    # core_only | core_plus_context
+    mode: "core_plus_context"
+    bridge:
+      min_seed_affinity: 2.0
+      min_in_degree: 3
+      min_kcore: 4
+  downweight:
+    # Downweight generic biology papers without an apparent MS link.
+    biology_hit_min: 2
+    biology_no_ms_multiplier: 0.35
+  topic_balance:
+    enabled: true
+    # Enforced on anchor-based categories during scoring.
+    target_ranges:
+      pathogenesis_and_immunology: {min_pct: 0.15, max_pct: 0.35}
+      imaging_and_biomarkers: {min_pct: 0.15, max_pct: 0.35}
+      clinical_trials_and_therapeutics: {min_pct: 0.10, max_pct: 0.30}
+      clinical_care_and_management: {min_pct: 0.05, max_pct: 0.20}
+      epidemiology_and_population_health: {min_pct: 0.10, max_pct: 0.30}
   weights:
     direct_seed_citation: 3.0
+    landmark_anchor: 0.5
     lexical_relevance: 2.0
     dataset_method_alignment: 1.5
     cocitation: 1.5
@@ -69,3 +96,61 @@ distillation:
   max_papers_per_run: 500
   cache_dir: "outputs/distilled/llm_cache"
   batch_size: 10
+  qa_sample_size: 25
+  qa_random_seed: 13
+
+abstract_backfill:
+  enabled: true
+  # Optional cap on API requests for missing abstracts. Set null for no cap.
+  max_openalex_queries:
+  sleep_seconds: 0.03
+  request_timeout_seconds: 12
+  max_consecutive_errors: 6
+
+site:
+  explorer:
+    # Optional top-N truncation metric; ignored when start_nodes = 0.
+    start_metric: "pagerank"
+    # Structural relevance gates applied before top-N cutoff.
+    # Set to 0/0/0 to export the full corpus into explorer payload.
+    min_in_degree: 0
+    min_out_degree: 0
+    min_kcore: 0
+    # 0 means no hard cap before explorer-side filtering.
+    start_nodes: 0
+    # Desktop initial load uses a lite payload for faster first render.
+    lite_start_nodes: 2500
+    # Mobile loads a lighter payload by default.
+    mobile_start_nodes: 2500
+
+governance:
+  seed_checklist:
+    enabled: true
+    fail_on_error: true
+    # If true, unresolved DOI metadata will fail seed checks.
+    fail_on_unresolved_metadata: false
+    # Strict acceptance checklist
+    category_quotas:
+      pathogenesis_and_immunology: {min: 8, max: 14}
+      imaging_and_biomarkers: {min: 8, max: 14}
+      clinical_trials_and_therapeutics: {min: 8, max: 14}
+      clinical_care_and_management: {min: 8, max: 14}
+      epidemiology_and_population_health: {min: 8, max: 14}
+    venue_cap: 12
+    author_cap: 8
+    ms_lexical_min_hits: 1
+    ms_concept_min_hits: 1
+    allow_bridge_justification: true
+  audit_gates:
+    fail_on_error: true
+    min_ms_focus_pct: 75.0
+    max_biology_no_ms_link: 0
+    max_missing_abstract_pct: 25.0
+    max_missing_source_link_pct: 5.0
+    enforce_category_bounds: true
+  landmark_anchors:
+    enabled: true
+    min_year: 1980
+    max_year: 2020
+    output_top_k: 25
+    per_decade_cap: 5

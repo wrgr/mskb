@@ -90,7 +90,10 @@ def _spectrum_score(texts: list[str]) -> dict[str, float]:
     combined = " ".join(texts).lower()
     scores = {}
     for category, anchors in SPECTRUM_ANCHORS.items():
-        scores[category] = sum(1 for a in anchors if a in combined)
+        # Normalize by anchor-list length to avoid systematic bias toward
+        # categories with more anchors.
+        matched = sum(1 for a in anchors if a in combined)
+        scores[category] = matched / max(1, len(anchors))
     total = sum(scores.values()) or 1
     return {k: v / total for k, v in scores.items()}
 
@@ -144,19 +147,17 @@ def run(config_path: str) -> None:
         spectrum = _spectrum_score(texts)
         difficulty = _estimate_difficulty(texts)
 
-        dominant_category = max(spectrum, key=spectrum.get)
-
-        cluster_rows.append({
+        cluster_row = {
             "topic_id": int(comm_id),
             "auto_label": label,
             "n_papers": int(len(comm_papers)),
             "difficulty": difficulty,
-            "spectrum_basic": round(spectrum["basic"], 3),
-            "spectrum_clinical": round(spectrum["clinical"], 3),
-            "spectrum_population": round(spectrum["population"], 3),
-            "dominant_category": dominant_category,
+            "dominant_category": "",
             "top_concepts": ";".join(top_concepts),
-        })
+        }
+        for category in SPECTRUM_ANCHORS:
+            cluster_row[f"spectrum_{category}"] = round(spectrum.get(category, 0.0), 3)
+        cluster_rows.append(cluster_row)
 
         for _, row in comm_papers.iterrows():
             topic_rows.append({
@@ -168,6 +169,25 @@ def run(config_path: str) -> None:
 
     paper_topics_df = pd.DataFrame(topic_rows)
     topic_clusters_df = pd.DataFrame(cluster_rows)
+
+    # Assign dominant category by over-indexing versus corpus-wide topic baseline.
+    # This avoids systematic collapse into one category when one anchor set is broader.
+    if not topic_clusters_df.empty:
+        spectrum_cols = [f"spectrum_{cat}" for cat in SPECTRUM_ANCHORS]
+        baselines = topic_clusters_df[spectrum_cols].mean().to_dict()
+
+        def _dominant_from_adjusted(row: pd.Series) -> str:
+            best_cat = None
+            best_val = None
+            for cat in SPECTRUM_ANCHORS:
+                col = f"spectrum_{cat}"
+                adjusted = float(row.get(col, 0.0)) - float(baselines.get(col, 0.0))
+                if best_val is None or adjusted > best_val:
+                    best_val = adjusted
+                    best_cat = cat
+            return best_cat or "pathogenesis_and_immunology"
+
+        topic_clusters_df["dominant_category"] = topic_clusters_df.apply(_dominant_from_adjusted, axis=1)
 
     paper_topics_df.to_csv(outdir / "paper_topics.csv", index=False)
     topic_clusters_df.to_csv(outdir / "topic_clusters.csv", index=False)

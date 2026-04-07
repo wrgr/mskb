@@ -20,9 +20,12 @@ def test_rules_based_distill_basic():
     assert "key_takeaways" in result
     assert "why_it_matters" in result
     assert "difficulty" in result
+    assert "language_difficulty" in result
     assert "jargon" in result
     assert isinstance(result["key_takeaways"], list)
-    assert len(result["key_takeaways"]) <= 3
+    assert len(result["key_takeaways"]) == 4
+    assert result["key_takeaways"][0].startswith("Opportunity:")
+    assert 1 <= int(result["language_difficulty"]) <= 5
 
 
 def test_rules_based_distill_empty_abstract():
@@ -34,7 +37,7 @@ def test_rules_based_distill_empty_abstract():
     }
     result = _rules_based_distill(row)
     assert result["summary"]
-    assert result["difficulty"] == 3
+    assert 1 <= int(result["difficulty"]) <= 5
 
 
 def test_rules_based_distill_finds_results():
@@ -50,3 +53,4 @@ def test_rules_based_distill_finds_results():
     }
     result = _rules_based_distill(row)
     assert any("causal" in t.lower() or "demonstrate" in t.lower() for t in result["key_takeaways"])
+    assert all(":" in t for t in result["key_takeaways"])

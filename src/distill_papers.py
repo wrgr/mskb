@@ -1,12 +1,17 @@
 
 import argparse
+import hashlib
 import json
+import os
+import random
+import re
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config
+from .utils import ensure_dir, load_config, save_json
 
 
 DISTILL_PROMPT = """You are helping undergraduate researchers understand a scientific paper about multiple sclerosis.
@@ -15,19 +20,28 @@ Paper title: {title}
 Year: {year}
 Venue: {venue}
 Topic cluster: {topic_label}
-Abstract: {abstract}
+Source text: {abstract}
 
 Please provide:
 1. A 2-3 sentence plain-English summary suitable for an undergraduate student with basic biology knowledge.
-2. Three key takeaways as bullet points.
+2. Four key takeaways in plain language, each prefixed with one label:
+   - Opportunity:
+   - Challenge:
+   - Action:
+   - Resolution:
 3. A one-sentence "why this matters" statement connecting this paper to the broader understanding of MS.
-4. A difficulty rating from 1 (introductory) to 5 (specialist), based on how much background knowledge is needed to understand this paper.
+4. A language difficulty rating from 1 (very plain language) to 5 (highly technical language), based on the wording and jargon in your summary/takeaways.
 5. A list of up to 5 technical terms from the abstract that an undergraduate might not know, each with a brief definition.
 
 Respond in JSON format:
 {{
   "summary": "...",
-  "key_takeaways": ["...", "...", "..."],
+  "key_takeaways": [
+    "Opportunity: ...",
+    "Challenge: ...",
+    "Action: ...",
+    "Resolution: ..."
+  ],
   "why_it_matters": "...",
   "difficulty": 3,
   "jargon": [{{"term": "...", "definition": "..."}}, ...]
@@ -49,6 +63,401 @@ Write a 2-3 paragraph overview of this topic cluster suitable for undergraduate 
 3. What the key findings and open questions are
 
 Keep the language accessible. Avoid jargon or define it when used."""
+
+
+def _clean_text(value: object) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, float) and pd.isna(value):
+        return ""
+    text = str(value).strip()
+    if not text or text.lower() == "nan":
+        return ""
+    return text
+
+
+def _parse_json_list(value: object) -> list[str]:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return []
+    if isinstance(value, list):
+        raw = value
+    elif isinstance(value, str):
+        text = value.strip()
+        if not text or text.lower() == "nan":
+            return []
+        try:
+            parsed = json.loads(text)
+            raw = parsed if isinstance(parsed, list) else [text]
+        except json.JSONDecodeError:
+            raw = [text]
+    else:
+        raw = [value]
+    out = []
+    for item in raw:
+        text = _clean_text(item)
+        if text:
+            out.append(text)
+    return out
+
+
+TAKEAWAY_LABELS = ["Opportunity", "Challenge", "Action", "Resolution"]
+
+LANGUAGE_COMPLEXITY_TERMS = {
+    "cytokine", "chemokine", "oligodendrocyte", "astrocyte", "microglia",
+    "immunopathology", "neuropathology", "transcriptome", "proteome",
+    "pharmacokinetics", "pharmacodynamics", "hazard ratio", "multivariate",
+    "gadolinium", "neurofilament", "oligoclonal", "encephalomyelitis",
+    "demyelination", "remyelination", "bayesian", "meta-analysis",
+}
+
+OVERLAP_STOPWORDS = {
+    "the", "and", "for", "with", "that", "this", "from", "into", "were", "was", "are", "is", "be",
+    "have", "has", "had", "its", "their", "there", "these", "those", "we", "our", "they", "you",
+    "can", "could", "should", "would", "may", "might", "than", "then", "about", "through", "using",
+    "study", "paper", "results", "methods", "background", "conclusion", "conclusions", "multiple",
+    "sclerosis",
+}
+
+
+def _split_sentences(text: str) -> list[str]:
+    text = _clean_text(text)
+    if not text:
+        return []
+    chunks = re.split(r"(?<=[.!?])\s+", text)
+    out = []
+    for chunk in chunks:
+        chunk = _clean_text(chunk).strip().strip('"')
+        if chunk:
+            out.append(chunk)
+    return out
+
+
+def _structured_takeaways(candidates: list[str], summary: str, abstract: str) -> list[str]:
+    cleaned = []
+    for value in candidates:
+        text = _clean_text(value)
+        if not text:
+            continue
+        text = re.sub(r"^(opportunity|challenge|action|resolution)\s*:\s*", "", text, flags=re.IGNORECASE).strip()
+        if text and text.lower() != "nan":
+            cleaned.append(text)
+
+    seeds = []
+    seen = set()
+    for text in cleaned + _split_sentences(summary) + _split_sentences(abstract):
+        key = text.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        seeds.append(text)
+
+    defaults = {
+        "Opportunity": "This paper highlights a concrete opportunity to improve MS understanding or care.",
+        "Challenge": "A central challenge is uncertainty about mechanism, measurement, or generalizability.",
+        "Action": "A practical next action is to test, replicate, or validate the findings in a focused cohort.",
+        "Resolution": "The paper offers partial resolution and defines what evidence should come next.",
+    }
+
+    output = []
+    for idx, label in enumerate(TAKEAWAY_LABELS):
+        sentence = seeds[idx] if idx < len(seeds) else defaults[label]
+        sentence = sentence.rstrip(".")
+        output.append(f"{label}: {sentence}.")
+    return output
+
+
+def _strip_takeaway_label(text: str) -> str:
+    return re.sub(
+        r"^(opportunity|challenge|action|resolution)\s*:\s*",
+        "",
+        _clean_text(text),
+        flags=re.IGNORECASE,
+    ).strip()
+
+
+def _estimate_language_difficulty(summary: str, takeaways: list[str] | None = None) -> int:
+    parts = [_clean_text(summary)]
+    for value in (takeaways or []):
+        plain = _strip_takeaway_label(value)
+        if plain:
+            parts.append(plain)
+    text = " ".join(parts).strip().lower()
+    if not text:
+        return 3
+
+    words = re.findall(r"[a-z]+", text)
+    if not words:
+        return 3
+    sentences = [s for s in re.split(r"[.!?]+", text) if s.strip()]
+    avg_sentence_len = len(words) / max(1, len(sentences))
+    long_ratio = sum(1 for w in words if len(w) >= 10) / len(words)
+    complexity_hits = sum(1 for term in LANGUAGE_COMPLEXITY_TERMS if term in text)
+
+    score = 1
+    if avg_sentence_len >= 14:
+        score += 1
+    if avg_sentence_len >= 20:
+        score += 1
+    if long_ratio >= 0.16:
+        score += 1
+    if long_ratio >= 0.24:
+        score += 1
+    if complexity_hits >= 3:
+        score += 1
+    if complexity_hits >= 6:
+        score += 1
+    return min(max(score, 1), 5)
+
+
+def _tokenize_for_overlap(text: str) -> set[str]:
+    text = _clean_text(text).lower()
+    tokens = re.findall(r"[a-z]{3,}", text)
+    return {tok for tok in tokens if tok not in OVERLAP_STOPWORDS}
+
+
+def _faithfulness_overlap(summary: str, takeaways: list[str], source_text: str) -> float:
+    summary_tokens = _tokenize_for_overlap(
+        f"{_clean_text(summary)} {' '.join(_strip_takeaway_label(t) for t in (takeaways or []))}"
+    )
+    source_tokens = _tokenize_for_overlap(source_text)
+    if not summary_tokens or not source_tokens:
+        return 0.0
+    overlap = len(summary_tokens & source_tokens) / max(1, len(summary_tokens))
+    return float(min(max(overlap, 0.0), 1.0))
+
+
+def _certainty_from_signals(
+    source_type: str,
+    source_chars: int,
+    method: str,
+    overlap: float,
+) -> tuple[float, str]:
+    base = 0.55
+    s_type = _clean_text(source_type).lower()
+    m = _clean_text(method).lower()
+    if "fulltext" in s_type or s_type.startswith("row_"):
+        base += 0.2
+    elif s_type == "abstract":
+        base += 0.1
+    elif s_type == "none":
+        base -= 0.15
+
+    if int(source_chars) >= 2000:
+        base += 0.08
+    elif int(source_chars) >= 800:
+        base += 0.04
+    elif int(source_chars) < 250:
+        base -= 0.08
+
+    if m == "rules_based":
+        base -= 0.08
+
+    base += (float(overlap) - 0.35) * 0.35
+    score = float(min(max(base, 0.05), 0.98))
+    if score >= 0.82:
+        label = "high"
+    elif score >= 0.62:
+        label = "medium"
+    else:
+        label = "low"
+    return score, label
+
+
+def _disclaimer_for_source(source_type: str, certainty_label: str) -> str:
+    s_type = _clean_text(source_type).lower()
+    if "fulltext" in s_type or s_type.startswith("row_"):
+        source_clause = "This summary is generated from available full text"
+    elif s_type == "abstract":
+        source_clause = "This summary is generated from abstract-level text"
+    else:
+        source_clause = "This summary is generated from limited source text"
+    return (
+        f"{source_clause} and may omit study details; certainty is {certainty_label}. "
+        "Verify critical claims against the original paper before reuse."
+    )
+
+
+def _serialize_json_cell(value: object) -> str:
+    if isinstance(value, (list, dict)):
+        return json.dumps(value)
+    return str(value) if value is not None else ""
+
+
+def _generate_faithfulness_qa_outputs(
+    summaries_df: pd.DataFrame,
+    outdir: Path,
+    sample_size: int,
+    random_seed: int = 13,
+) -> None:
+    if summaries_df.empty:
+        pd.DataFrame().to_csv(outdir / "faithfulness_qa_sample.csv", index=False)
+        save_json(
+            {
+                "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+                "n_summaries": 0,
+                "n_sampled": 0,
+                "automated_pass_rate_pct": 0.0,
+            },
+            outdir / "faithfulness_qa_report.json",
+        )
+        return
+
+    qa = summaries_df.copy()
+    for col in ["summary", "why_it_matters", "summary_source"]:
+        if col in qa.columns:
+            qa[col] = qa[col].apply(_clean_text)
+    for col in ["key_takeaways", "jargon"]:
+        if col in qa.columns:
+            qa[col] = qa[col].apply(_parse_json_list if col == "key_takeaways" else _parse_json_list)
+    qa["takeaway_count"] = qa["key_takeaways"].apply(lambda x: len(x) if isinstance(x, list) else 0)
+    qa["summary_has_nan"] = qa["summary"].str.contains(r"\bnan\b", case=False, na=False)
+    qa["overlap"] = pd.to_numeric(qa.get("faithfulness_overlap", 0.0), errors="coerce").fillna(0.0)
+    qa["certainty"] = pd.to_numeric(qa.get("summary_certainty_score", 0.0), errors="coerce").fillna(0.0)
+    qa["source_chars"] = pd.to_numeric(qa.get("source_text_chars", 0), errors="coerce").fillna(0).astype(int)
+    qa["summary_non_empty"] = qa["summary"].str.len().fillna(0) >= 40
+    qa["takeaways_ok"] = qa["takeaway_count"] == 4
+    qa["source_ok"] = qa["source_chars"] >= 200
+    qa["overlap_ok"] = qa["overlap"] >= 0.10
+    qa["certainty_ok"] = qa["certainty"] >= 0.45
+    qa["automated_pass"] = (
+        qa["summary_non_empty"]
+        & (~qa["summary_has_nan"])
+        & qa["takeaways_ok"]
+        & qa["source_ok"]
+        & qa["overlap_ok"]
+        & qa["certainty_ok"]
+    )
+    qa["automated_flags"] = qa.apply(
+        lambda r: ";".join(
+            [
+                flag
+                for flag, ok in [
+                    ("summary_too_short", bool(r["summary_non_empty"])),
+                    ("summary_contains_nan", not bool(r["summary_has_nan"])),
+                    ("takeaways_not_4", bool(r["takeaways_ok"])),
+                    ("source_text_too_short", bool(r["source_ok"])),
+                    ("low_source_overlap", bool(r["overlap_ok"])),
+                    ("low_certainty", bool(r["certainty_ok"])),
+                ]
+                if not ok
+            ]
+        )
+        or "none",
+        axis=1,
+    )
+
+    rnd = random.Random(int(random_seed))
+    sample_size = max(1, int(sample_size))
+    idx = list(qa.index)
+    rnd.shuffle(idx)
+    sampled = qa.loc[idx[: min(sample_size, len(idx))]].copy()
+    sampled["reviewer_status"] = ""
+    sampled["reviewer_notes"] = ""
+
+    keep_cols = [
+        "canonical_paper_id",
+        "title",
+        "year",
+        "doi",
+        "summary_source",
+        "source_text_hash",
+        "source_text_chars",
+        "summary_generated_at_utc",
+        "distill_method",
+        "summary_certainty_score",
+        "summary_certainty_label",
+        "faithfulness_overlap",
+        "automated_pass",
+        "automated_flags",
+        "summary",
+        "key_takeaways",
+        "why_it_matters",
+        "summary_disclaimer",
+        "reviewer_status",
+        "reviewer_notes",
+    ]
+    for col in keep_cols:
+        if col not in sampled.columns:
+            sampled[col] = ""
+    sampled = sampled[keep_cols]
+    sampled["key_takeaways"] = sampled["key_takeaways"].apply(_serialize_json_cell)
+    sampled.to_csv(outdir / "faithfulness_qa_sample.csv", index=False)
+
+    report = {
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "n_summaries": int(len(qa)),
+        "n_sampled": int(len(sampled)),
+        "automated_pass_rate_pct": round(float(qa["automated_pass"].mean() * 100.0), 2),
+        "automated_fail_count": int((~qa["automated_pass"]).sum()),
+        "sample_path": str(outdir / "faithfulness_qa_sample.csv"),
+    }
+    save_json(report, outdir / "faithfulness_qa_report.json")
+
+
+def _load_fulltext_maps(root: Path, output_dir: str) -> tuple[dict[str, str], dict[str, str]]:
+    fulltext_dir = root / output_dir / "fulltext"
+    if not fulltext_dir.exists():
+        return {}, {}
+
+    text_cols = ["full_text", "fulltext", "text", "content", "body_text"]
+    id_cols = ["canonical_paper_id", "paper_id", "id"]
+    source_cols = ["source", "text_source", "provider"]
+
+    text_by_id: dict[str, str] = {}
+    source_by_id: dict[str, str] = {}
+
+    for path in sorted(list(fulltext_dir.glob("*.csv")) + list(fulltext_dir.glob("*.parquet"))):
+        try:
+            if path.suffix.lower() == ".csv":
+                df = pd.read_csv(path)
+            else:
+                df = pd.read_parquet(path)
+        except Exception:
+            continue
+        if df.empty:
+            continue
+
+        id_col = next((c for c in id_cols if c in df.columns), None)
+        text_col = next((c for c in text_cols if c in df.columns), None)
+        source_col = next((c for c in source_cols if c in df.columns), None)
+        if not id_col or not text_col:
+            continue
+
+        for _, row in df.iterrows():
+            pid = _clean_text(row.get(id_col))
+            text = _clean_text(row.get(text_col))
+            if not pid or not text:
+                continue
+            # Keep the longest text we see for the same paper id.
+            if len(text) > len(text_by_id.get(pid, "")):
+                text_by_id[pid] = text
+                source_by_id[pid] = _clean_text(row.get(source_col)) if source_col else path.name
+
+    return text_by_id, source_by_id
+
+
+def _context_from_row(
+    row: dict,
+    fulltext_by_id: dict[str, str],
+    fulltext_source_by_id: dict[str, str],
+) -> tuple[str, str]:
+    pid = _clean_text(row.get("canonical_paper_id"))
+
+    row_fulltext = ""
+    for key in ["full_text", "fulltext", "body_text", "content"]:
+        row_fulltext = _clean_text(row.get(key))
+        if row_fulltext:
+            return row_fulltext, f"row_{key}"
+
+    if pid and pid in fulltext_by_id and _clean_text(fulltext_by_id[pid]):
+        source = _clean_text(fulltext_source_by_id.get(pid)) or "fulltext_file"
+        return fulltext_by_id[pid], source
+
+    abstract = _clean_text(row.get("abstract"))
+    if abstract:
+        return abstract, "abstract"
+
+    return "", "none"
 
 
 def _load_cache(cache_dir: Path, paper_id: str) -> dict | None:
@@ -86,8 +495,8 @@ def _distill_with_api(client, model: str, prompt: str) -> dict | None:
         return None
 
 
-def _rules_based_distill(row: dict) -> dict:
-    abstract = str(row.get("abstract", "") or "")
+def _rules_based_distill(row: dict, source_text: str = "") -> dict:
+    abstract = _clean_text(source_text) or _clean_text(row.get("abstract", ""))
     title = str(row.get("title", "") or "")
     sentences = [s.strip() for s in abstract.replace(". ", ".\n").split("\n") if s.strip()]
 
@@ -109,18 +518,145 @@ def _rules_based_distill(row: dict) -> dict:
         if len(takeaways) >= 3:
             break
     if not takeaways and sentences:
-        takeaways = sentences[:3]
+        takeaways = sentences[:4]
 
-    year = row.get("year", "")
+    year = _coerce_int(row.get("year"), default=None)
     venue = row.get("venue", "")
-    why = f"This {year} paper in {venue} contributes to our understanding of multiple sclerosis."
+    if takeaways:
+        why_seed = str(takeaways[0]).strip().rstrip(".")
+    elif key_sentence:
+        why_seed = str(key_sentence).strip().rstrip(".")
+    else:
+        why_seed = title.lower().rstrip(".")
+    why_seed = re.sub(r"^(this paper investigates|this study (shows|finds|reports)|we (found|show|report) that)\s+", "", why_seed, flags=re.IGNORECASE)
+    if why_seed:
+        if why_seed[0].isupper():
+            why_seed = why_seed[0].lower() + why_seed[1:]
+        why = f"This matters for MS because {why_seed}."
+    else:
+        venue_txt = str(venue or "").strip()
+        year_txt = str(year) if year is not None else ""
+        context = " ".join(x for x in [year_txt, venue_txt] if x).strip()
+        why = f"This matters for MS because it adds evidence about disease mechanisms and care{f' ({context})' if context else ''}."
+
+    structured_takeaways = _structured_takeaways(takeaways, summary=summary, abstract=abstract)
+    language_difficulty = _estimate_language_difficulty(summary, structured_takeaways)
+    return {
+        "summary": summary,
+        "key_takeaways": structured_takeaways,
+        "why_it_matters": why,
+        "difficulty": language_difficulty,
+        "language_difficulty": language_difficulty,
+        "jargon": [],
+    }
+
+
+def _coerce_int(value, default: int | None = None) -> int | None:
+    try:
+        if value is None or value == "":
+            return default
+        return int(float(value))
+    except (TypeError, ValueError):
+        return default
+
+
+def _safe_float(value, default: float = 0.0) -> float:
+    try:
+        if value is None or (isinstance(value, float) and pd.isna(value)):
+            return default
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def _sanitize_distill_result(result: dict | None) -> dict:
+    result = result or {}
+
+    key_takeaways = result.get("key_takeaways", [])
+    if not isinstance(key_takeaways, list):
+        key_takeaways = []
+    key_takeaways = _structured_takeaways(
+        [str(x).strip() for x in key_takeaways if str(x).strip() and str(x).lower() != "nan"],
+        summary=_clean_text(result.get("summary", "")),
+        abstract=_clean_text(result.get("abstract", "")),
+    )
+
+    jargon = result.get("jargon", [])
+    if not isinstance(jargon, list):
+        jargon = []
+    clean_jargon = []
+    for item in jargon:
+        if isinstance(item, dict):
+            term = str(item.get("term", "")).strip()
+            definition = str(item.get("definition", "")).strip()
+            if term and term.lower() != "nan":
+                clean_jargon.append({"term": term, "definition": definition})
+
+    summary = _clean_text(result.get("summary", ""))
+    why = _clean_text(result.get("why_it_matters", ""))
+    summary = re.sub(r"\bnan\b", "", summary, flags=re.IGNORECASE).strip()
+    summary = re.sub(r"\s{2,}", " ", summary).strip()
+    why = re.sub(r"\bnan\b", "", why, flags=re.IGNORECASE).strip()
+    why = re.sub(r"\s{2,}", " ", why).strip()
+    generic_why = (
+        "contributes to our understanding of multiple sclerosis" in why.lower()
+        or bool(
+            re.match(
+                r"^this\s+\d{4}(?:\.0)?\s+paper\s+in\s+.+?contributes\s+to\s+our\s+understanding\s+of\s+multiple\s+sclerosis\.?$",
+                why,
+                flags=re.IGNORECASE,
+            )
+        )
+    )
+    if not why or generic_why:
+        fallback = key_takeaways[0] if key_takeaways else summary
+        fallback = re.sub(
+            r"^(this paper investigates|this study (shows|finds|reports)|we (found|show|report) that)\s+",
+            "",
+            str(fallback).strip().rstrip("."),
+            flags=re.IGNORECASE,
+        )
+        if fallback:
+            if fallback[0].isupper():
+                fallback = fallback[0].lower() + fallback[1:]
+            why = f"This matters for MS because {fallback}."
+        else:
+            why = "This matters for MS because it adds actionable evidence for understanding or managing the disease."
+
+    # Drop low-information boilerplate summaries.
+    if re.match(r"^this paper investigates .+\.$", summary, flags=re.IGNORECASE):
+        if len(summary.split()) <= 8:
+            summary = ""
+
+    key_takeaways = _structured_takeaways(key_takeaways, summary=summary, abstract=_clean_text(result.get("abstract", "")))
+    language_difficulty = _estimate_language_difficulty(summary, key_takeaways)
+
+    summary_source = _clean_text(result.get("summary_source", ""))
+    source_text_hash = _clean_text(result.get("source_text_hash", ""))
+    source_text_chars = _coerce_int(result.get("source_text_chars"), default=0) or 0
+    summary_generated_at_utc = _clean_text(result.get("summary_generated_at_utc", "")) or datetime.now(timezone.utc).isoformat()
+    distill_method = _clean_text(result.get("distill_method", "")) or "rules_based"
+    summary_certainty_score = float(min(max(_safe_float(result.get("summary_certainty_score"), 0.0), 0.0), 1.0))
+    summary_certainty_label = _clean_text(result.get("summary_certainty_label", ""))
+    summary_disclaimer = _clean_text(result.get("summary_disclaimer", ""))
+    faithfulness_overlap = _safe_float(result.get("faithfulness_overlap", 0.0), 0.0)
 
     return {
         "summary": summary,
-        "key_takeaways": takeaways[:3],
+        "key_takeaways": key_takeaways,
         "why_it_matters": why,
-        "difficulty": 3,
-        "jargon": [],
+        "difficulty": language_difficulty,
+        "language_difficulty": language_difficulty,
+        "jargon": clean_jargon,
+        "summary_source": summary_source,
+        "source_text_hash": source_text_hash,
+        "source_text_chars": source_text_chars,
+        "summary_generated_at_utc": summary_generated_at_utc,
+        "distill_method": distill_method,
+        "summary_certainty_score": summary_certainty_score,
+        "summary_certainty_label": summary_certainty_label,
+        "summary_disclaimer": summary_disclaimer,
+        "faithfulness_overlap": faithfulness_overlap,
     }
 
 
@@ -138,9 +674,20 @@ def run(config_path: str) -> None:
     model = dist_cfg.get("model", "claude-haiku-4-5-20251001")
     max_papers = dist_cfg.get("max_papers_per_run", 500)
     batch_size = dist_cfg.get("batch_size", 10)
+    qa_sample_size = max(1, int(dist_cfg.get("qa_sample_size", 25)))
+    qa_random_seed = int(dist_cfg.get("qa_random_seed", 13))
+
+    fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
 
     scored = pd.read_csv(graph_dir / "scored_papers.csv")
     scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
+    scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
+    has_abstract = ~(
+        scored["abstract"].isna()
+        | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"])
+    )
+    has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))
+    scored = scored[has_abstract | has_fulltext].copy()
     scored = scored.sort_values("paper_importance_score", ascending=False).head(max_papers)
 
     topic_clusters = pd.DataFrame()
@@ -164,8 +711,12 @@ def run(config_path: str) -> None:
     if use_api:
         try:
             import anthropic
-            api_client = anthropic.Anthropic()
-            print("Using Claude API for paper distillation.")
+            has_api_key = bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"))
+            if not has_api_key:
+                print("Anthropic credentials not found. Falling back to rules-based distillation.")
+            else:
+                api_client = anthropic.Anthropic()
+                print("Using Claude API for paper distillation.")
         except Exception as e:
             print(f"Could not initialize Anthropic client ({e}). Falling back to rules-based distillation.")
             api_client = None
@@ -173,20 +724,48 @@ def run(config_path: str) -> None:
     summary_rows = []
     for idx, (_, row) in enumerate(scored.iterrows()):
         paper_id = row["canonical_paper_id"]
+        source_text, source_type = _context_from_row(row.to_dict(), fulltext_by_id, fulltext_source_by_id)
+        if not source_text:
+            continue
+        source_hash = hashlib.sha1(source_text.encode("utf-8")).hexdigest()
+        generated_at_utc = datetime.now(timezone.utc).isoformat()
 
         cached = _load_cache(cache_dir, paper_id)
         if cached:
-            summary_rows.append({
-                "canonical_paper_id": paper_id,
-                "title": row.get("title", ""),
-                "year": row.get("year"),
-                "doi": row.get("doi", ""),
-                **cached,
-            })
-            continue
+            cached = _sanitize_distill_result(cached)
+            if cached.get("source_text_hash") == source_hash:
+                cached["distill_method"] = _clean_text(cached.get("distill_method", "")) or "cache"
+                overlap = _faithfulness_overlap(
+                    _clean_text(cached.get("summary", "")),
+                    _parse_json_list(cached.get("key_takeaways", [])),
+                    source_text,
+                )
+                certainty_score, certainty_label = _certainty_from_signals(
+                    source_type=source_type,
+                    source_chars=len(source_text),
+                    method=str(cached.get("distill_method", "cache")),
+                    overlap=overlap,
+                )
+                cached["summary_source"] = source_type
+                cached["source_text_hash"] = source_hash
+                cached["source_text_chars"] = len(source_text)
+                cached["summary_generated_at_utc"] = _clean_text(cached.get("summary_generated_at_utc", "")) or generated_at_utc
+                cached["faithfulness_overlap"] = overlap
+                cached["summary_certainty_score"] = certainty_score
+                cached["summary_certainty_label"] = certainty_label
+                cached["summary_disclaimer"] = _disclaimer_for_source(source_type, certainty_label)
+                summary_rows.append({
+                    "canonical_paper_id": paper_id,
+                    "title": row.get("title", ""),
+                    "year": _coerce_int(row.get("year"), default=None),
+                    "doi": row.get("doi", ""),
+                    **cached,
+                })
+                continue
 
         topic_id = paper_topic_map.get(paper_id)
         topic_label = topic_labels.get(topic_id, "General MS")
+        distill_method = "rules_based"
 
         if api_client:
             prompt = DISTILL_PROMPT.format(
@@ -194,19 +773,43 @@ def run(config_path: str) -> None:
                 year=row.get("year", ""),
                 venue=row.get("venue", ""),
                 topic_label=topic_label,
-                abstract=str(row.get("abstract", "") or "")[:3000],
+                abstract=f"[{source_type}] {source_text[:3000]}",
             )
             result = _distill_with_api(api_client, model, prompt)
             if result is None:
-                result = _rules_based_distill(row)
+                result = _rules_based_distill(row, source_text=source_text)
+                distill_method = "rules_based"
+            else:
+                distill_method = "claude_api"
         else:
-            result = _rules_based_distill(row)
+            result = _rules_based_distill(row, source_text=source_text)
+            distill_method = "rules_based"
 
+        result = _sanitize_distill_result(result)
+        result["summary_source"] = source_type
+        result["source_text_hash"] = source_hash
+        result["source_text_chars"] = len(source_text)
+        result["summary_generated_at_utc"] = generated_at_utc
+        result["distill_method"] = distill_method
+        result["faithfulness_overlap"] = _faithfulness_overlap(
+            _clean_text(result.get("summary", "")),
+            _parse_json_list(result.get("key_takeaways", [])),
+            source_text,
+        )
+        certainty_score, certainty_label = _certainty_from_signals(
+            source_type=source_type,
+            source_chars=len(source_text),
+            method=distill_method,
+            overlap=float(result.get("faithfulness_overlap", 0.0)),
+        )
+        result["summary_certainty_score"] = certainty_score
+        result["summary_certainty_label"] = certainty_label
+        result["summary_disclaimer"] = _disclaimer_for_source(source_type, certainty_label)
         _save_cache(cache_dir, paper_id, result)
         summary_rows.append({
             "canonical_paper_id": paper_id,
             "title": row.get("title", ""),
-            "year": row.get("year"),
+            "year": _coerce_int(row.get("year"), default=None),
             "doi": row.get("doi", ""),
             **result,
         })
@@ -218,6 +821,12 @@ def run(config_path: str) -> None:
             print(f"  Distilled {idx + 1}/{len(scored)} papers")
 
     summaries_df = pd.DataFrame(summary_rows)
+    _generate_faithfulness_qa_outputs(
+        summaries_df=summaries_df,
+        outdir=outdir,
+        sample_size=qa_sample_size,
+        random_seed=qa_random_seed,
+    )
     # Serialize list/dict columns to JSON strings for CSV
     for col in ["key_takeaways", "jargon"]:
         if col in summaries_df.columns:

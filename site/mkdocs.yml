@@ -1,33 +1,52 @@
-site_name: "MSKB: Multiple Sclerosis Knowledge Base"
-site_description: "A navigable knowledge base for undergraduate MS researchers"
+site_name: 'MSKB: Multiple Sclerosis Knowledge Base'
+site_description: A navigable knowledge base for undergraduate MS researchers
 docs_dir: docs
-
+use_directory_urls: true
 theme:
   name: material
+  favicon: assets/favicon.svg
+  font: false
   palette:
-    - scheme: default
-      primary: blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  - scheme: default
+    primary: teal
+    accent: deep orange
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    primary: teal
+    accent: deep orange
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-
+  - navigation.tabs
+  - navigation.sections
+  - navigation.expand
+  - search.suggest
+  - search.highlight
+  - content.tabs.link
 plugins:
-  - search
-
+- search
+extra_css:
+- stylesheets/modern.css
+extra_javascript:
+- javascripts/modern.js
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Topics: topics/index.md
-  - Glossary: glossary.md
+- Home: index.md
+- Getting Started: getting-started.md
+- Topics:
+  - Overview: topics/index.md
+  - Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis: topics/medicine-multiple-sclerosis-research-studies-multiple-sclero-1.md
+  - Immunology / Multiple sclerosis / Medicine: topics/immunology-multiple-sclerosis-medicine-2.md
+  - Multiple sclerosis / Neuroscience / Biology: topics/multiple-sclerosis-neuroscience-biology-4.md
+  - Medicine / Immunology / Biology: topics/medicine-immunology-biology-5.md
+  - Medicine / SARS-CoV-2 and COVID-19 Research / Multiple Sclerosis Research Studies: topics/medicine-sarscov2-and-covid19-research-multiple-sclerosis-re-7.md
+  - Medicine / Immunology / Biology: topics/medicine-immunology-biology-8.md
+  - Medicine / Internal medicine / Disease: topics/medicine-internal-medicine-disease-9.md
+  - Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis: topics/medicine-multiple-sclerosis-research-studies-multiple-sclero-121.md
+  - Medicine / Multiple sclerosis / Internal medicine: topics/medicine-multiple-sclerosis-internal-medicine-125.md
+  - Biology / Gut microbiota and health / Medicine: topics/biology-gut-microbiota-and-health-medicine-139.md
+  - Osteoarthritis / Medicine / Osteoarthritis Treatment and Mechanisms: topics/osteoarthritis-medicine-osteoarthritis-treatment-and-mechani-185.md
+- Explorer: explorer.md
+- Glossary: glossary.md

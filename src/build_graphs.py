@@ -234,16 +234,20 @@ def run(config_path: str) -> None:
     cocit_rows = [{"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "CO_CITED"} for (a, b), w in cocit.items() if w >= cfg["graphs"]["min_cocitation_weight"]]
     pd.DataFrame(cocit_rows).to_csv(outdir / "co_citation_edges.csv", index=False)
 
+    # Compute bibliographic coupling by inverting references:
+    # for each referenced paper, connect all corpus papers that cite it.
+    # This avoids O(n^2) pairwise paper intersections on large corpora.
+    ref_to_papers = defaultdict(set)
+    for source_paper_id, ref_ids in outgoing.items():
+        for ref_id in ref_ids:
+            ref_to_papers[ref_id].add(source_paper_id)
+
     bib = Counter()
-    nodes = sorted(outgoing.keys())
-    for i in range(len(nodes)):
-        a = nodes[i]
-        refs_a = outgoing[a]
-        for j in range(i + 1, len(nodes)):
-            b = nodes[j]
-            w = len(refs_a & outgoing[b])
-            if w >= cfg["graphs"]["min_bibcoupling_weight"]:
-                bib[(a, b)] = w
+    for citing_papers in ref_to_papers.values():
+        citing_list = sorted(citing_papers)
+        for i in range(len(citing_list)):
+            for j in range(i + 1, len(citing_list)):
+                bib[(citing_list[i], citing_list[j])] += 1
     bib_rows = [{"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "BIBLIOGRAPHIC_COUPLING"} for (a, b), w in bib.items()]
     pd.DataFrame(bib_rows).to_csv(outdir / "bibliographic_coupling_edges.csv", index=False)
 

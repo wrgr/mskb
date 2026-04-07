@@ -1,18 +1,41 @@
 # Multiple Sclerosis Knowledge Base
 
-Welcome to MSKB, a curated knowledge base designed to help undergraduate researchers explore multiple sclerosis literature.
+<div class="landing-hero">
+  <p><strong>MSKB</strong> is a navigable research map for undergraduate teams working in multiple sclerosis.</p>
+  <p>Move from mechanisms to trials to population health using topic clusters, plain-English summaries, and guided reading paths.</p>
+  <div class="landing-kpis">
+    <a class="kpi-pill kpi-link" href="topics/">Citation-network topics</a>
+    <a class="kpi-pill kpi-link" href="topics/">Paper-level summaries</a>
+    <a class="kpi-pill kpi-link" href="explorer/">Graph explorer</a>
+    <a class="kpi-pill kpi-link" href="explorer/#parameters">Core KB filtering</a>
+  </div>
+</div>
 
-## What is this?
+## Start Here
 
-This knowledge base organizes MS research papers into navigable topic clusters spanning from basic biology to clinical science to population health. Each paper includes an accessible summary, key takeaways, and difficulty ratings to help you find the right starting point for your research.
+<div class="landing-grid">
+  <div class="landing-card">
+    <h3><a href="getting-started/">Orientation</a></h3>
+    <p>New to MS literature? Use the onboarding guide and pick a route by background.</p>
+  </div>
+  <div class="landing-card">
+    <h3><a href="topics/">Topic Atlas</a></h3>
+    <p>Browse discovered clusters with reading paths, summaries, and language-level cues.</p>
+  </div>
+  <div class="landing-card">
+    <h3><a href="explorer/">Interactive Explorer</a></h3>
+    <p>Navigate parent/child/related papers and map a short research note to relevant work.</p>
+  </div>
+</div>
 
-## How to navigate
+## What You’ll Find
 
-- **[Getting Started](getting-started.md)** -- Start here if you're new to MS research
-- **[Topics](topics/index.md)** -- Browse discovered topic clusters
-- **[Glossary](glossary.md)** -- Look up technical terms
+- Topic clusters derived from citation communities (Louvain + concept labeling)
+- Plain-English paper cards with abstracts, takeaways, citation links, and BibTeX
+- A dynamic “core knowledge” filter using PageRank, k-core, and in-degree
+- A glossary for key immunology, imaging, and clinical vocabulary
 
-## About
+## Method
 
 This knowledge base was built using a bibliometric pipeline that retrieves, scores, and organizes MS literature from [OpenAlex](https://openalex.org/). Papers are scored for relevance, clustered into topics using citation network analysis, and distilled into accessible summaries.
 

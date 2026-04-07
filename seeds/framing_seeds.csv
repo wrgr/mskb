@@ -1,8 +1,16 @@
 seed_type,category,title,doi,rationale,role
-framing_review,pathogenesis_and_immunology,"Multiple sclerosis",10.1016/S0140-6736(08)61620-7,Compston & Coles Lancet 2008 - the canonical MS review,score_only
-framing_review,clinical_care_and_management,"Multiple Sclerosis",10.1056/NEJMra1401483,Reich et al NEJM 2018,score_only
-framing_review,clinical_care_and_management,"Multiple sclerosis",10.1038/s41572-018-0041-4,Filippi Nat Rev Dis Primers 2018,score_only
-framing_review,clinical_trials_and_therapeutics,"Progressive multiple sclerosis",10.1016/S0140-6736(16)31320-4,Thompson et al Lancet 2018 progressive MS,score_only
-framing_review,pathogenesis_and_immunology,"Pathophysiology of multiple sclerosis",10.1016/B978-0-444-52001-2.00028-1,Lassmann pathophysiology handbook,score_only
-framing_review,imaging_and_biomarkers,"MRI in multiple sclerosis",10.1007/978-3-319-47861-6,Defined MRI role in MS dx and monitoring,score_only
-framing_review,epidemiology_and_population_health,"The epidemiology of multiple sclerosis: insights to disease pathogenesis",10.1016/S1474-4422(15)00096-6,Koch-Henriksen Sorensen epidemiology,score_only
+framing_review,clinical_care_and_management,2021 MAGNIMS–CMSC–NAIMS consensus recommendations on the use of MRI in patients with multiple sclerosis,10.1016/s1474-4422(21)00095-8,Modern framing seed (2021) from The Lancet Neurology,score_only
+framing_review,clinical_care_and_management,"Smouldering‐Associated Worsening in Multiple Sclerosis: An International Consensus Statement on Definition, Biology, Clinical Implications, and Future Directions",10.1002/ana.27034,Modern framing seed (2024) from Annals of Neurology,score_only
+framing_review,pathogenesis_and_immunology,Emerging therapies to target CNS pathophysiology in multiple sclerosis,10.1038/s41582-022-00675-0,Modern framing seed (2022) from Nature Reviews Neurology,score_only
+framing_review,clinical_care_and_management,Diagnosis of multiple sclerosis: 2024 revisions of the McDonald criteria,10.1016/s1474-4422(25)00270-4,Modern framing seed (2025) from The Lancet Neurology,score_only
+framing_review,clinical_care_and_management,Differential diagnosis of suspected multiple sclerosis: an updated consensus approach,10.1016/s1474-4422(23)00148-5,Modern framing seed (2023) from The Lancet Neurology,score_only
+framing_review,clinical_care_and_management,Using the Progression Independent of Relapse Activity Framework to Unveil the Pathobiological Foundations of Multiple Sclerosis,10.1212/wnl.0000000000209444,Modern framing seed (2024) from Neurology,score_only
+framing_review,clinical_care_and_management,"Paediatric multiple sclerosis and antibody-associated demyelination: clinical, imaging, and biological considerations for diagnosis and care",10.1016/s1474-4422(20)30432-4,Modern framing seed (2021) from The Lancet Neurology,score_only
+framing_review,clinical_care_and_management,Cerebrospinal fluid kappa free light chains for the diagnosis of multiple sclerosis: A systematic review and meta-analysis,10.1177/13524585221134213,Modern framing seed (2022) from Multiple Sclerosis Journal,score_only
+framing_review,clinical_care_and_management,Optic Nerve Topography in Multiple Sclerosis Diagnosis,10.1212/wnl.0000000000011339,Modern framing seed (2021) from Neurology,score_only
+framing_review,clinical_care_and_management,Global Barriers to the Diagnosis of Multiple Sclerosis,10.1212/wnl.0000000000207481,Modern framing seed (2023) from Neurology,score_only
+framing_review,pathogenesis_and_immunology,Multiple sclerosis progression: time for a new mechanism-driven framework,10.1016/s1474-4422(22)00289-7,Modern framing seed (2022) from The Lancet Neurology,score_only
+framing_review,epidemiology_and_population_health,The risk of infections for multiple sclerosis and neuromyelitis optica spectrum disorder disease-modifying treatments: Eighth European Committee for Treatment and Research in Multiple Sclerosis Focused Workshop Review. April 2021,10.1177/13524585211069068,Modern framing seed (2022) from Multiple Sclerosis Journal,score_only
+framing_review,clinical_care_and_management,Diagnosis and Treatment of Multiple Sclerosis,10.1001/jama.2020.26858,Modern framing seed (2021) from JAMA,score_only
+framing_review,clinical_care_and_management,Diagnostic Performance of Adding the Optic Nerve Region Assessed by Optical Coherence Tomography to the Diagnostic Criteria for Multiple Sclerosis,10.1212/wnl.0000000000207507,Modern framing seed (2023) from Neurology,score_only
+framing_review,clinical_care_and_management,Imaging chronic active lesions in multiple sclerosis: a consensus statement,10.1093/brain/awae013,Modern framing seed (2024) from Brain,score_only

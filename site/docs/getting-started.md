@@ -1,40 +1,53 @@
 # Getting Started
 
-## What is Multiple Sclerosis?
+<div class="landing-hero">
+  <p><strong>MSKB</strong> helps undergraduate teams move from basic mechanisms to patient-facing research without losing context.</p>
+  <div class="landing-kpis">
+    <span class="kpi-pill">Topic-first navigation</span>
+    <span class="kpi-pill">Language-level filtering</span>
+    <span class="kpi-pill">Graph exploration + idea mapping</span>
+  </div>
+</div>
 
-Multiple sclerosis (MS) is a chronic autoimmune disease of the central nervous system (brain and spinal cord). In MS, the immune system mistakenly attacks **myelin**, the protective insulating sheath around nerve fibers. This causes inflammation, demyelination, and eventually neurodegeneration, leading to a wide range of neurological symptoms.
+## Quick Routes
 
-## How to use this knowledge base
+<div class="route-grid">
+  <div class="route-card">
+    <h3>New to MS Biology</h3>
+    <p>Start in <a href="topics/">Topics</a>, use lower language levels in Explorer, and read in order from each reading path.</p>
+  </div>
+  <div class="route-card">
+    <h3>Preparing a Research Pitch</h3>
+    <p>Use the <a href="explorer/">Explorer</a>, enter a short idea, and branch to parent/child/related papers for fast literature scoping.</p>
+  </div>
+  <div class="route-card">
+    <h3>Building Vocabulary</h3>
+    <p>Keep <a href="glossary/">Glossary</a> open while reading to decode imaging, immunology, and trial terminology.</p>
+  </div>
+  <div class="route-card">
+    <h3>Finding Core Papers</h3>
+    <p>In Explorer, apply the core filter (composite/PageRank/k-core/in-degree) and require abstracts for cleaner high-signal subsets.</p>
+  </div>
+</div>
 
-### If you're new to MS research
+## Language Level Guide
 
-1. Start with the **Topics** page to see the major research areas
-2. Look for topics marked as "basic" difficulty -- these cover fundamental biology
-3. Follow the **reading paths** within each topic, which are ordered from foundational to advanced
+- **1-2**: Very plain wording in summaries and takeaways
+- **3**: Moderate technical vocabulary with some domain terms
+- **4-5**: Dense technical wording and specialist terminology
 
-### Understanding difficulty ratings
+## What’s In Each Paper Card
 
-Papers are rated 1-5 for difficulty:
+- Plain-English summary
+- Abstract
+- Key takeaways
+- Why-it-matters statement
+- Source link + plaintext citation + BibTeX
 
-- **1-2**: Accessible with introductory biology knowledge
-- **3**: Requires some background in immunology or neuroscience
-- **4-5**: Specialist-level, assumes familiarity with the field
+## Research Spectrum
 
-### Paper summaries
-
-Each paper includes:
-
-- A **plain-English summary** written for undergraduates
-- **Key takeaways** highlighting the most important findings
-- **Why it matters** connecting the paper to broader MS understanding
-- **Technical terms** with definitions
-
-## The MS research landscape
-
-This knowledge base organizes MS research into five categories aligned with how major MS organizations (ACTRIMS, CMSC, MSJ) structure their conferences and publications:
-
-- **Pathogenesis & Immunology** -- The basic science of MS: how the immune system attacks the nervous system, myelin biology, EBV, EAE models, remyelination
-- **Imaging & Biomarkers** -- MRI techniques, lesion characterization, blood and CSF biomarkers (neurofilament, oligoclonal bands), OCT
-- **Clinical Trials & Therapeutics** -- Disease-modifying therapies, landmark trials (OPERA, AFFIRM, TRANSFORMS), emerging treatments (BTK inhibitors)
-- **Clinical Care & Management** -- Diagnosis (McDonald criteria), disease course classification, symptom management, cognitive rehabilitation
-- **Epidemiology & Population Health** -- Genetic risk factors (HLA, GWAS), environmental triggers (EBV, vitamin D), global prevalence, health disparities, pediatric MS
+- **Pathogenesis & Immunology**: immune mechanisms, myelin biology, EBV, remyelination
+- **Imaging & Biomarkers**: MRI protocols, OCT, lesion heterogeneity, NfL/OCB markers
+- **Clinical Trials & Therapeutics**: DMT studies, efficacy/safety comparisons, emerging therapies
+- **Clinical Care & Management**: diagnosis criteria, disease course definitions, care pathways
+- **Epidemiology & Population Health**: GWAS, environmental risk, prevalence, disparities, pediatric MS

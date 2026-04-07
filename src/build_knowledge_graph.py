@@ -127,6 +127,8 @@ def run(config_path: str) -> None:
     ensure_dir(outex)
 
     papers = pd.read_csv(graph / "scored_papers.csv")
+    if "in_final_corpus" in papers.columns:
+        papers = papers[papers["in_final_corpus"] == 1].copy()
     author_metrics = pd.read_csv(graph / "author_metrics.csv") if (graph / "author_metrics.csv").exists() else pd.DataFrame()
     authors = pd.read_csv(norm / "canonical_authors.csv")
     paper_authors = pd.read_csv(norm / "paper_authors.csv")
@@ -140,6 +142,7 @@ def run(config_path: str) -> None:
 
     nodes = []
     edges = []
+    selected_paper_ids = set(papers["canonical_paper_id"].astype(str))
 
     for _, row in papers.iterrows():
         pid = row["canonical_paper_id"]
@@ -179,7 +182,9 @@ def run(config_path: str) -> None:
         aid = row["canonical_author_id"]
         nodes.append({"node_id": aid, "label": "Author", "name": row.get("display_name", "")})
     for _, row in paper_authors.iterrows():
-        edges.append({"source_id": row["canonical_paper_id"], "target_id": row["canonical_author_id"], "edge_type": "AUTHORED_BY"})
+        source_pid = str(row["canonical_paper_id"])
+        if source_pid in selected_paper_ids:
+            edges.append({"source_id": source_pid, "target_id": row["canonical_author_id"], "edge_type": "AUTHORED_BY"})
 
     if not topic_clusters.empty:
         for _, row in topic_clusters.iterrows():
@@ -187,8 +192,21 @@ def run(config_path: str) -> None:
             nodes.append({"node_id": tid, "label": "Topic", "name": row.get("auto_label", "")})
     if not paper_topics.empty:
         for _, row in paper_topics.iterrows():
+            source_pid = str(row["canonical_paper_id"])
+            if source_pid not in selected_paper_ids:
+                continue
             tid = f"topic::{row['topic_id']}"
-            edges.append({"source_id": row["canonical_paper_id"], "target_id": tid, "edge_type": "BELONGS_TO_TOPIC"})
+            edges.append({"source_id": source_pid, "target_id": tid, "edge_type": "BELONGS_TO_TOPIC"})
+
+    # Include explicit paper citation edges in the KG for graph traversal.
+    cites_path = graph / "corpus_citation_edges.csv"
+    if cites_path.exists():
+        cite_edges = pd.read_csv(cites_path, usecols=["source_paper_id", "target_paper_id"])
+        for _, row in cite_edges.iterrows():
+            src = str(row["source_paper_id"])
+            dst = str(row["target_paper_id"])
+            if src in selected_paper_ids and dst in selected_paper_ids and src != dst:
+                edges.append({"source_id": src, "target_id": dst, "edge_type": "CITES"})
 
     nodes_df = pd.DataFrame(nodes).drop_duplicates(subset=["node_id", "label"])
     edges_df = pd.DataFrame(edges).drop_duplicates()
