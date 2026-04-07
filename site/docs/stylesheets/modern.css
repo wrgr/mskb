@@ -581,7 +581,7 @@ body,
   transform: translateY(0);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .landing-grid,
   .route-grid,
   .topic-grid,
