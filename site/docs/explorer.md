@@ -130,6 +130,43 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 </div>
 
 <script>
+// ---- explorer boot diagnostics (must run before anything else) ----
+(function explorerBootDiagnostics() {
+  try {
+    var el = document.getElementById("paper-graph");
+    if (el) {
+      el.innerHTML = '<div style="padding:1rem;font-family:ui-monospace,monospace;color:#333;background:#fffbe6;border:2px dashed #d0a800;border-radius:12px;height:100%;overflow:auto;" id="explorer-boot-marker">' +
+        '<strong>Explorer boot marker:</strong> inline script reached.<br>' +
+        'window.Sigma=' + (typeof window.Sigma) + ', ' +
+        'window.sigma=' + (typeof window.sigma) + ', ' +
+        'window.graphology=' + (typeof window.graphology) + '<br>' +
+        'If this message stays visible, the main IIFE never ran or threw before replacing it. Open DevTools console.' +
+        '</div>';
+    }
+    window.addEventListener("error", function (event) {
+      var msg = (event && event.error && event.error.message) || (event && event.message) || "Unknown script error";
+      var stack = (event && event.error && event.error.stack) || "";
+      var node = document.getElementById("paper-graph");
+      if (node) {
+        node.innerHTML = '<div style="padding:1rem;font-family:ui-monospace,monospace;color:#7a1f1f;background:#fff5f5;border:2px solid #d33;border-radius:12px;height:100%;overflow:auto;white-space:pre-wrap;"><strong>Explorer boot error</strong><br>' +
+          String(msg).replace(/[<>&]/g, "_") + "\n" + String(stack).replace(/[<>&]/g, "_") + '</div>';
+      }
+      if (window.console && console.error) console.error("[explorer-boot]", msg, stack);
+    });
+    window.addEventListener("unhandledrejection", function (event) {
+      var reason = event && event.reason;
+      var msg = (reason && reason.message) || String(reason || "Unknown rejection");
+      var node = document.getElementById("paper-graph");
+      if (node) {
+        node.innerHTML = '<div style="padding:1rem;font-family:ui-monospace,monospace;color:#7a1f1f;background:#fff5f5;border:2px solid #d33;border-radius:12px;height:100%;overflow:auto;white-space:pre-wrap;"><strong>Explorer boot rejection</strong><br>' +
+          String(msg).replace(/[<>&]/g, "_") + '</div>';
+      }
+      if (window.console && console.error) console.error("[explorer-boot-rejection]", reason);
+    });
+  } catch (e) {
+    if (window.console && console.error) console.error("[explorer-boot-diag]", e);
+  }
+})();
 (() => {
   const graphEl = document.getElementById("paper-graph");
   const detailsEl = document.getElementById("paper-details");
