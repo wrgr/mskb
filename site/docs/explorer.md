@@ -2,8 +2,7 @@
 
 Use this graph to inspect papers, follow citation paths, and turn a short research note into parent/child/related paper choices.
 
-<script src="../javascripts/vendor/graphology.umd.min.js"></script>
-<script src="../javascripts/vendor/sigma.min.js"></script>
+<script src="../javascripts/vendor/cytoscape.min.js"></script>
 
 <div class="top-idea reveal">
   <h3>Explore the MS Knowledge Graph</h3>
@@ -40,11 +39,11 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
       <option value="4">1-4 Advanced language</option>
     </select>
     <label for="min-in-degree">Min in-degree</label>
-    <input id="min-in-degree" type="number" min="0" step="1" value="20" />
+    <input id="min-in-degree" type="number" min="0" step="1" value="5" />
     <label for="min-out-degree">Min out-degree</label>
-    <input id="min-out-degree" type="number" min="0" step="1" value="20" />
+    <input id="min-out-degree" type="number" min="0" step="1" value="5" />
     <label for="min-kcore">Min k-core</label>
-    <input id="min-kcore" type="number" min="0" step="1" value="25" />
+    <input id="min-kcore" type="number" min="0" step="1" value="10" />
     <label for="core-percentile">Percentile cutoff</label>
     <input id="core-percentile" type="range" min="0" max="95" step="5" value="40" />
     <span id="core-percentile-value">40%</span>
@@ -153,7 +152,7 @@ window.__mskbDebug = function (msg) {
 (function explorerBootDiagnostics() {
   try {
     window.__mskbDebug("boot: inline script reached");
-    window.__mskbDebug("vendors: Sigma=" + (typeof window.Sigma) + " graphology=" + (typeof window.graphology));
+    window.__mskbDebug("vendors: cytoscape=" + (typeof window.cytoscape));
     var dimsEl = document.getElementById("paper-graph");
     if (dimsEl) {
       var r = dimsEl.getBoundingClientRect();
@@ -849,20 +848,17 @@ window.__mskbDebug = function (msg) {
     };
   }
 
-  function getSigmaCtor() {
-    return window.Sigma || (window.sigma && (window.sigma.Sigma || window.sigma.default)) || null;
-  }
+  let cy = null;
 
-  function getGraphCtor() {
-    if (window.graphology && window.graphology.DirectedGraph) return window.graphology.DirectedGraph;
-    if (window.graphology && window.graphology.Graph) return window.graphology.Graph;
-    return null;
+  function getCytoCtor() {
+    return (typeof window.cytoscape === "function") ? window.cytoscape : null;
   }
 
   function killRenderer() {
-    if (renderer && typeof renderer.kill === "function") {
-      renderer.kill();
+    if (cy && typeof cy.destroy === "function") {
+      try { cy.destroy(); } catch (_) {}
     }
+    cy = null;
     renderer = null;
     sigmaGraph = null;
   }
@@ -988,157 +984,122 @@ window.__mskbDebug = function (msg) {
   }
 
   function buildSigmaGraph(positionById) {
-    const SigmaCtor = getSigmaCtor();
-    const GraphCtor = getGraphCtor();
-    if (!SigmaCtor || !GraphCtor) {
-      const detail = `Sigma=${typeof window.Sigma}, sigma=${typeof window.sigma}, graphology=${typeof window.graphology}. Vendor scripts at /javascripts/vendor/ may have failed to load.`;
+    const CytoCtor = getCytoCtor();
+    if (!CytoCtor) {
+      const detail = `cytoscape=${typeof window.cytoscape}. Vendor script at /javascripts/vendor/cytoscape.min.js may have failed to load.`;
       showFatalOverlay("Explorer renderer failed to initialize", detail);
       return false;
     }
 
     try {
       killRenderer();
-      sigmaGraph = (window.graphology && GraphCtor === window.graphology.Graph)
-        ? new GraphCtor({ type: "directed", multi: false })
-        : new GraphCtor();
 
-      visibleNodes.forEach((n) => {
+      const t0 = (performance && performance.now) ? performance.now() : 0;
+      const elements = new Array(visibleNodes.length + visibleEdges.length);
+      let ei = 0;
+      const nodeIds = new Set();
+      for (let i = 0; i < visibleNodes.length; i += 1) {
+        const n = visibleNodes[i];
         const style = buildBaseNodeStyle(n);
         const pos = positionById.get(n.id) || { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 };
-        sigmaGraph.addNode(n.id, {
-          label: style.label,
-          x: Number(pos.x) || 0,
-          y: Number(pos.y) || 0,
-          size: Math.max(1.5, Number(style.size) || 2),
-          color: style.color,
-          topicColor: style.topicColor,
-          kcoreColor: style.kcoreColor,
-        });
-      });
-
-      visibleEdges.forEach((e, idx) => {
-        if (!sigmaGraph.hasNode(e.source) || !sigmaGraph.hasNode(e.target)) return;
-        const key = `${e.source}->${e.target}-${idx}`;
-        if (sigmaGraph.hasEdge(key)) return;
-        sigmaGraph.addDirectedEdgeWithKey(key, e.source, e.target, {
-          color: "rgba(125,138,150,0.18)",
-          size: 1.0,
-        });
-      });
+        nodeIds.add(n.id);
+        elements[ei++] = {
+          group: "nodes",
+          data: {
+            id: n.id,
+            label: style.label,
+            baseColor: style.kcoreColor || style.color,
+            baseSize: Math.max(4, (Number(style.size) || 2) * 1.6),
+          },
+          position: { x: (Number(pos.x) || 0), y: (Number(pos.y) || 0) },
+        };
+      }
+      for (let i = 0; i < visibleEdges.length; i += 1) {
+        const e = visibleEdges[i];
+        if (!nodeIds.has(e.source) || !nodeIds.has(e.target)) continue;
+        elements[ei++] = {
+          group: "edges",
+          data: { id: "e" + i, source: e.source, target: e.target },
+        };
+      }
+      elements.length = ei;
 
       if (window.__mskbDebug) {
         var rr2 = graphEl.getBoundingClientRect();
-        window.__mskbDebug("buildSigmaGraph: ctor=" + (typeof SigmaCtor) + " nodes=" + sigmaGraph.order + " edges=" + sigmaGraph.size + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
+        window.__mskbDebug("buildCytoGraph: nodes=" + visibleNodes.length + " edges=" + visibleEdges.length + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
       }
-      renderer = new SigmaCtor(sigmaGraph, graphEl, {
-        renderLabels: true,
-        labelRenderedSizeThreshold: 14,
-        defaultEdgeType: "arrow",
-        allowInvalidContainer: true,
-      });
-      try {
-        const cam = renderer.getCamera && renderer.getCamera();
-        if (cam && typeof cam.animatedReset === "function") {
-          cam.animatedReset({ duration: 0 });
-        } else if (cam && typeof cam.setState === "function") {
-          cam.setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
-        }
-        if (renderer.refresh) renderer.refresh();
-      } catch (e) {
-        if (window.__mskbDebug) window.__mskbDebug("camera reset failed: " + e);
-      }
-      if (window.__mskbDebug) window.__mskbDebug("sigma ctor done, camera reset called");
 
-      renderer.setSetting("nodeReducer", (node, data) => {
-        const reduced = { ...data };
-
-        if (!selectedNodeId) {
-          reduced.color = data.kcoreColor || data.color;
-          reduced.size = data.size;
-          return reduced;
-        }
-
-        if (node === selectedNodeId) {
-          reduced.color = "#0a3f5c";
-          reduced.size = (data.size || 3) * 1.4;
-          return reduced;
-        }
-        if (selectedIncoming.has(node) && selectedOutgoing.has(node)) {
-          reduced.color = "#b97e1d";
-          reduced.size = (data.size || 3) * 1.18;
-          return reduced;
-        }
-        if (selectedIncoming.has(node)) {
-          reduced.color = "#25a16d";
-          reduced.size = (data.size || 3) * 1.12;
-          return reduced;
-        }
-        if (selectedOutgoing.has(node)) {
-          reduced.color = "#cf5b2f";
-          reduced.size = (data.size || 3) * 1.12;
-          return reduced;
-        }
-        reduced.color = "rgba(150,160,170,0.18)";
-        reduced.label = "";
-        reduced.size = Math.max(1.2, (data.size || 2) * 0.8);
-        return reduced;
-      });
-
-      renderer.setSetting("edgeReducer", (edge, data) => {
-        const reduced = { ...data, color: "rgba(125,138,150,0.18)", size: 1.0 };
-        if (!selectedNodeId) return reduced;
-
-        const source = sigmaGraph.source(edge);
-        const target = sigmaGraph.target(edge);
-
-        if (source === selectedNodeId) return { ...reduced, color: "#cf5b2f", size: 2.4 };
-        if (target === selectedNodeId) return { ...reduced, color: "#25a16d", size: 2.4 };
-        if (selectedIncident.has(source) && selectedIncident.has(target)) return { ...reduced, color: "rgba(76,111,138,0.42)", size: 1.2 };
-        return { ...reduced, color: "rgba(154,166,178,0.06)", size: 0.6 };
+      cy = CytoCtor({
+        container: graphEl,
+        elements: elements,
+        layout: { name: "preset", fit: true, padding: 30 },
+        wheelSensitivity: 0.2,
+        pixelRatio: 1,
+        textureOnViewport: true,
+        hideEdgesOnViewport: true,
+        motionBlur: false,
+        autoungrabify: !dragEnabled || isMobileView,
+        autounselectify: false,
+        minZoom: 0.05,
+        maxZoom: 4,
+        style: [
+          {
+            selector: "node",
+            style: {
+              "background-color": "data(baseColor)",
+              "width": "data(baseSize)",
+              "height": "data(baseSize)",
+              "label": "data(label)",
+              "font-size": 10,
+              "color": "#222",
+              "text-outline-color": "#fff",
+              "text-outline-width": 1,
+              "text-opacity": 0,
+              "min-zoomed-font-size": 12,
+              "border-width": 0,
+            },
+          },
+          {
+            selector: "edge",
+            style: {
+              "width": 1,
+              "line-color": "rgba(125,138,150,0.18)",
+              "curve-style": "straight",
+              "target-arrow-shape": "triangle",
+              "target-arrow-color": "rgba(125,138,150,0.32)",
+              "arrow-scale": 0.7,
+            },
+          },
+          // Selection-active styling
+          { selector: "node.dim",   style: { "background-color": "rgba(150,160,170,0.18)", "text-opacity": 0 } },
+          { selector: "edge.dim",   style: { "line-color": "rgba(154,166,178,0.06)", "target-arrow-color": "rgba(154,166,178,0.06)", "width": 0.6 } },
+          { selector: "node.in",    style: { "background-color": "#25a16d", "width": "mapData(baseSize, 4, 60, 4.5, 67)", "height": "mapData(baseSize, 4, 60, 4.5, 67)" } },
+          { selector: "node.out",   style: { "background-color": "#cf5b2f", "width": "mapData(baseSize, 4, 60, 4.5, 67)", "height": "mapData(baseSize, 4, 60, 4.5, 67)" } },
+          { selector: "node.both",  style: { "background-color": "#b97e1d" } },
+          { selector: "node.focus", style: { "background-color": "#0a3f5c", "width": "mapData(baseSize, 4, 60, 5.6, 84)", "height": "mapData(baseSize, 4, 60, 5.6, 84)", "text-opacity": 1, "font-size": 13 } },
+          { selector: "edge.eIn",   style: { "line-color": "#25a16d", "target-arrow-color": "#25a16d", "width": 2.4 } },
+          { selector: "edge.eOut",  style: { "line-color": "#cf5b2f", "target-arrow-color": "#cf5b2f", "width": 2.4 } },
+          { selector: "edge.eBridge", style: { "line-color": "rgba(76,111,138,0.42)", "target-arrow-color": "rgba(76,111,138,0.42)", "width": 1.2 } },
+        ],
       });
 
-      renderer.on("clickNode", ({ node }) => {
-        if (draggingNode) return;
-        focusNode(node);
+      // Aliases so legacy `if (renderer)` checks still work.
+      renderer = cy;
+      sigmaGraph = cy;
+
+      cy.on("tap", "node", (evt) => {
+        focusNode(evt.target.id());
       });
-      renderer.on("clickStage", () => {
-        selectedNodeId = null;
-        styleSelectedSubgraph(null);
+      cy.on("tap", (evt) => {
+        if (evt.target === cy) {
+          selectedNodeId = null;
+          styleSelectedSubgraph(null);
+        }
       });
 
-      const captor = renderer.getMouseCaptor && renderer.getMouseCaptor();
-      if (captor) {
-        renderer.on("downNode", ({ node, event }) => {
-          if (!dragEnabled || isMobileView) return;
-          draggingNode = node;
-          if (event && typeof event.preventSigmaDefault === "function") {
-            event.preventSigmaDefault();
-          }
-          if (event && event.original && typeof event.original.preventDefault === "function") {
-            event.original.preventDefault();
-          }
-        });
-
-        captor.on("mousemovebody", (e) => {
-          if (!dragEnabled || !draggingNode || !renderer || !sigmaGraph || !sigmaGraph.hasNode(draggingNode)) return;
-          const coords = renderer.viewportToGraph ? renderer.viewportToGraph({ x: e.x, y: e.y }) : null;
-          if (!coords) return;
-          sigmaGraph.setNodeAttribute(draggingNode, "x", coords.x);
-          sigmaGraph.setNodeAttribute(draggingNode, "y", coords.y);
-          renderer.refresh();
-          if (typeof e.preventSigmaDefault === "function") {
-            e.preventSigmaDefault();
-          }
-        });
-
-        const stopDrag = () => {
-          draggingNode = null;
-        };
-        captor.on("mouseup", stopDrag);
-        captor.on("mousedown", () => {
-          if (!dragEnabled) draggingNode = null;
-        });
-        captor.on("mouseleave", stopDrag);
+      if (window.__mskbDebug) {
+        const t1 = (performance && performance.now) ? performance.now() : 0;
+        window.__mskbDebug("cytoscape ready in " + Math.round(t1 - t0) + " ms");
       }
 
       return true;
@@ -1272,7 +1233,37 @@ window.__mskbDebug = function (msg) {
     selectedIncoming = new Set(selectedNodeId ? Array.from(incoming.get(selectedNodeId) || []) : []);
     selectedOutgoing = new Set(selectedNodeId ? Array.from(outgoing.get(selectedNodeId) || []) : []);
     selectedIncident = new Set(selectedNodeId ? [selectedNodeId, ...selectedIncoming, ...selectedOutgoing] : []);
-    if (renderer) renderer.refresh();
+    if (!cy) return;
+    cy.batch(() => {
+      cy.elements().removeClass("dim in out both focus eIn eOut eBridge");
+      if (!selectedNodeId) return;
+      cy.nodes().addClass("dim");
+      cy.edges().addClass("dim");
+      const focusNodeRef = cy.getElementById(selectedNodeId);
+      if (focusNodeRef && focusNodeRef.length) {
+        focusNodeRef.removeClass("dim").addClass("focus");
+      }
+      selectedIncoming.forEach((nid) => {
+        const el = cy.getElementById(nid);
+        if (el && el.length) el.removeClass("dim").addClass("in");
+      });
+      selectedOutgoing.forEach((nid) => {
+        const el = cy.getElementById(nid);
+        if (el && el.length) {
+          if (selectedIncoming.has(nid)) el.removeClass("in").addClass("both");
+          else el.removeClass("dim").addClass("out");
+        }
+      });
+      cy.edges().forEach((edge) => {
+        const s = edge.data("source");
+        const t = edge.data("target");
+        if (s === selectedNodeId) { edge.removeClass("dim").addClass("eOut"); return; }
+        if (t === selectedNodeId) { edge.removeClass("dim").addClass("eIn"); return; }
+        if (selectedIncident.has(s) && selectedIncident.has(t)) {
+          edge.removeClass("dim").addClass("eBridge");
+        }
+      });
+    });
   }
 
   function setPreset(mode) {
@@ -1519,15 +1510,13 @@ window.__mskbDebug = function (msg) {
   }
 
   function focusNode(id) {
-    if (!nodeById.has(id) || !renderer || !sigmaGraph) return;
+    if (!nodeById.has(id) || !cy) return;
     styleSelectedSubgraph(id);
-    if (sigmaGraph.hasNode(id)) {
-      const x = sigmaGraph.getNodeAttribute(id, "x");
-      const y = sigmaGraph.getNodeAttribute(id, "y");
-      const camera = renderer.getCamera && renderer.getCamera();
-      if (camera && Number.isFinite(x) && Number.isFinite(y)) {
-        camera.animate({ x, y, ratio: 0.22 }, { duration: 280 });
-      }
+    const el = cy.getElementById(id);
+    if (el && el.length) {
+      try {
+        cy.animate({ center: { eles: el }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: 280 });
+      } catch (_) {}
     }
     renderPaper(id);
   }
@@ -1709,16 +1698,20 @@ window.__mskbDebug = function (msg) {
   }
 
   function stabilizeThenSettle(amplitude = 0) {
-    if (!renderer || !sigmaGraph) return;
+    if (!cy) return;
     const positionById = buildCommunityPositions(visibleNodes);
     const jitter = Math.max(0, Number(amplitude) || 0);
-    visibleNodes.forEach((node) => {
-      if (!sigmaGraph.hasNode(node.id)) return;
-      const base = positionById.get(node.id) || { x: 0, y: 0 };
-      sigmaGraph.setNodeAttribute(node.id, "x", (Number(base.x) || 0) + (Math.random() - 0.5) * jitter);
-      sigmaGraph.setNodeAttribute(node.id, "y", (Number(base.y) || 0) + (Math.random() - 0.5) * jitter);
+    cy.batch(() => {
+      visibleNodes.forEach((node) => {
+        const el = cy.getElementById(node.id);
+        if (!el || !el.length) return;
+        const base = positionById.get(node.id) || { x: 0, y: 0 };
+        el.position({
+          x: (Number(base.x) || 0) + (Math.random() - 0.5) * jitter,
+          y: (Number(base.y) || 0) + (Math.random() - 0.5) * jitter,
+        });
+      });
     });
-    renderer.refresh();
   }
 
   async function loadCorpusPayload(candidates) {
@@ -1779,7 +1772,7 @@ window.__mskbDebug = function (msg) {
   loadCorpusPayload(initialPayloadCandidates).then(function () {
     if (window.__mskbDebug) {
       window.__mskbDebug("after load: rawNodes=" + rawNodes.length + " rawEdges=" + rawEdges.length + " visibleNodes=" + visibleNodes.length + " visibleEdges=" + visibleEdges.length);
-      window.__mskbDebug("after load: renderer=" + (renderer ? "yes" : "no") + " sigmaGraph=" + (sigmaGraph ? sigmaGraph.order + "n/" + sigmaGraph.size + "e" : "null"));
+      window.__mskbDebug("after load: cy=" + (cy ? "yes" : "no") + (cy ? " " + cy.nodes().length + "n/" + cy.edges().length + "e" : ""));
       var pg = document.getElementById("paper-graph");
       if (pg) {
         var rr = pg.getBoundingClientRect();
@@ -1841,6 +1834,7 @@ window.__mskbDebug = function (msg) {
     if (isMobileView) return;
     dragEnabled = !dragEnabled;
     draggingNode = null;
+    if (cy) cy.autoungrabify(!dragEnabled);
     refreshNodeDragToggleLabel();
   });
   if (isMobileView) {
