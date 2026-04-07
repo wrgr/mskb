@@ -271,15 +271,36 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     }
   }
 
+  function showFatalOverlay(label, detail) {
+    try {
+      const safeLabel = escapeHtml(String(label || "Explorer error"));
+      const safeDetail = escapeHtml(String(detail || ""));
+      if (graphEl) {
+        graphEl.innerHTML = `
+          <div style="padding:1.25rem 1.5rem;font-family:ui-monospace,Menlo,Consolas,monospace;color:#7a1f1f;background:#fff5f5;border:2px solid #d33;border-radius:12px;height:100%;overflow:auto;white-space:pre-wrap;">
+            <strong style="font-size:1.05rem;display:block;margin-bottom:0.4rem;">${safeLabel}</strong>
+            <div>${safeDetail}</div>
+            <div style="margin-top:0.6rem;color:#555;font-size:0.85rem;">See browser DevTools console for the full stack trace.</div>
+          </div>`;
+      }
+      setGraphStatus(`${label}: ${detail}`, true);
+      if (typeof console !== "undefined" && console.error) {
+        console.error("[explorer]", label, detail);
+      }
+    } catch (_) { /* swallow */ }
+  }
+
   window.addEventListener("error", (event) => {
     const msg = event?.error?.message || event?.message || "Unknown script error";
-    setGraphStatus(`Explorer runtime error: ${msg}`, true);
+    const stack = event?.error?.stack || "";
+    showFatalOverlay("Explorer runtime error", `${msg}\n${stack}`);
   });
 
   window.addEventListener("unhandledrejection", (event) => {
     const reason = event?.reason;
     const msg = typeof reason === "string" ? reason : (reason?.message || String(reason || "Unknown promise rejection"));
-    setGraphStatus(`Explorer async error: ${msg}`, true);
+    const stack = reason && reason.stack ? `\n${reason.stack}` : "";
+    showFatalOverlay("Explorer async error", `${msg}${stack}`);
   });
 
   function escapeHtml(text) {
@@ -923,9 +944,8 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     const SigmaCtor = getSigmaCtor();
     const GraphCtor = getGraphCtor();
     if (!SigmaCtor || !GraphCtor) {
-      const msg = "Explorer renderer failed to initialize (Sigma/Graphology not loaded).";
-      detailsEl.innerHTML = msg;
-      graphStatusEl.innerHTML = `<p><strong>${msg}</strong></p>`;
+      const detail = `Sigma=${typeof window.Sigma}, sigma=${typeof window.sigma}, graphology=${typeof window.graphology}. Vendor scripts at /javascripts/vendor/ may have failed to load.`;
+      showFatalOverlay("Explorer renderer failed to initialize", detail);
       return false;
     }
 
@@ -1060,9 +1080,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 
       return true;
     } catch (err) {
-      const msg = `Explorer renderer failed during graph construction: ${err}`;
-      detailsEl.innerHTML = msg;
-      graphStatusEl.innerHTML = `<p><strong>${escapeHtml(String(msg))}</strong></p>`;
+      showFatalOverlay("Explorer renderer crashed during graph construction", `${err && err.message ? err.message : err}\n${err && err.stack ? err.stack : ""}`);
       return false;
     }
   }
@@ -1682,9 +1700,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
         }
       }
       if (lastErr) {
-        const msg = `Could not load explorer data: ${lastErr}`;
-        detailsEl.innerHTML = msg;
-        setGraphStatus(`Explorer load failed. Attempts: ${candidateErrors.join(" | ")}`, true);
+        showFatalOverlay("Explorer data load failed", candidateErrors.join("\n"));
       }
     } finally {
       isLoadingCorpus = false;
