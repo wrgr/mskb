@@ -535,29 +535,28 @@ window.__mskbDebug = function (msg) {
 
   function mergeNodeDetails(detailMap) {
     detailsById = detailMap instanceof Map ? detailMap : new Map();
-    rawNodes = rawNodes.map((node) => {
+    // Mutate existing node objects in place so other references
+    // (nodeById, visibleNodes, cytoscape data) see _detailsLoaded=true
+    // and don't infinite-loop in renderPaper.
+    for (const node of rawNodes) {
       const details = detailsById.get(node.id);
-      if (!details) {
-        return { ...node, _detailsLoaded: true };
+      if (details) {
+        node.abstract = String(details.abstract || "");
+        node.summary = String(details.summary || "");
+        node.summary_source = String(details.summary_source || "");
+        node.why_it_matters = String(details.why_it_matters || "");
+        node.key_takeaways = Array.isArray(details.key_takeaways) ? details.key_takeaways : [];
+        node.summary_generated_at_utc = String(details.summary_generated_at_utc || "");
+        node.distill_method = String(details.distill_method || "");
+        node.summary_certainty_score = Number(details.summary_certainty_score || 0);
+        node.summary_certainty_label = String(details.summary_certainty_label || "");
+        node.summary_disclaimer = String(details.summary_disclaimer || "");
+        node.faithfulness_overlap = Number(details.faithfulness_overlap || 0);
+        node.source_text_hash = String(details.source_text_hash || "");
+        node.source_text_chars = Number(details.source_text_chars || 0);
       }
-      return {
-        ...node,
-        abstract: String(details.abstract || ""),
-        summary: String(details.summary || ""),
-        summary_source: String(details.summary_source || ""),
-        why_it_matters: String(details.why_it_matters || ""),
-        key_takeaways: Array.isArray(details.key_takeaways) ? details.key_takeaways : [],
-        summary_generated_at_utc: String(details.summary_generated_at_utc || ""),
-        distill_method: String(details.distill_method || ""),
-        summary_certainty_score: Number(details.summary_certainty_score || 0),
-        summary_certainty_label: String(details.summary_certainty_label || ""),
-        summary_disclaimer: String(details.summary_disclaimer || ""),
-        faithfulness_overlap: Number(details.faithfulness_overlap || 0),
-        source_text_hash: String(details.source_text_hash || ""),
-        source_text_chars: Number(details.source_text_chars || 0),
-        _detailsLoaded: true,
-      };
-    });
+      node._detailsLoaded = true;
+    }
     searchIndexCache = { signature: "", index: null };
   }
 
@@ -1082,19 +1081,6 @@ window.__mskbDebug = function (msg) {
           { selector: "edge.eBridge", style: { "line-color": "rgba(76,111,138,0.42)", "target-arrow-color": "rgba(76,111,138,0.42)", "width": 1.2 } },
         ],
       });
-      try {
-        const cam = renderer.getCamera && renderer.getCamera();
-        if (cam && typeof cam.animatedReset === "function") {
-          cam.animatedReset({ duration: 0 });
-        } else if (cam && typeof cam.setState === "function") {
-          cam.setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
-        }
-        if (renderer.refresh) renderer.refresh();
-      } catch (e) {
-        if (window.__mskbDebug) window.__mskbDebug("camera reset failed: " + e);
-      }
-      if (window.__mskbDebug) window.__mskbDebug("sigma ctor done, camera reset called");
-
       // Aliases so legacy `if (renderer)` checks still work.
       renderer = cy;
       sigmaGraph = cy;
