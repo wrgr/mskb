@@ -1,0 +1,15 @@
+# Astro / Starlight
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Environment
+.env
+.env.production
+
+# Build lock
+.build.lock
+
+# Legacy MkDocs build output (kept out of git just in case)
+site/

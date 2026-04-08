@@ -1,0 +1,77 @@
+---
+title: Getting Started
+description: How to read MSKB, and what to expect on concept, topic, and explorer pages.
+sidebar:
+  order: 1
+---
+
+import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+MSKB helps undergraduate and early-graduate researchers move from basic mechanisms to patient-facing studies without losing context. The site has three entry points.
+
+## Pick an entry point
+
+<CardGrid>
+  <LinkCard
+    title="I want a learning path"
+    href="/mskb/pathways/"
+    description="Choose one of three prebuilt pathways (clinical, mechanistic, or emerging topics). Each pathway lists concepts in the right order."
+  />
+  <LinkCard
+    title="I already know what concept I want"
+    href="/mskb/concepts/"
+    description="Go straight to the concept map, pick a concept, and follow its prerequisites and curated resources."
+  />
+  <LinkCard
+    title="I have a paper or topic in mind"
+    href="/mskb/explorer/"
+    description="Open the citation explorer to navigate parents, children, and related papers in the graph."
+  />
+</CardGrid>
+
+## What every concept page shows you
+
+- **Difficulty**: 1 (introductory) to 5 (specialist).
+- **Learning objectives**: Tagged with Bloom's level — Remember, Understand, Apply, Analyze. What you should be able to do after working through the concept.
+- **Prerequisites**: Concepts you should understand first.
+- **Specializes into / related**: Where to go next.
+- **Key questions**: Self-check questions to test your understanding.
+- **Papers**: 3–7 foundational references from the citation graph.
+- **Resources**: Videos, tools, and datasets curated with a quality rubric (accuracy, clarity, utility, accessibility).
+
+## Topic pages vs. concept pages
+
+- **Concept** pages live under [`/concepts/`](/mskb/concepts/). They're written for learners, one concept at a time, with prerequisites and curated resources.
+- **Topic** pages live under [`/topics/`](/mskb/topics/). They're *derived from the citation graph* — each topic is a cluster of papers that cite each other heavily. Topic pages are longer and denser, useful when you want to scan the full reading list for a research cluster.
+
+If you are new to MS, start on a concept or a pathway. Use topic pages as reference.
+
+## Language levels on paper cards
+
+- **1–2** — plain wording in the plain-English summary.
+- **3** — moderate technical vocabulary.
+- **4–5** — specialist terminology density.
+
+Filter by language level in the explorer or use the difficulty field on the concept hub.
+
+## Corpus gaps & audit notes
+
+MSKB is an in-progress map of the MS literature, not a canonical index. We track known gaps publicly.
+
+<Aside type="caution" title="Known seed-level gaps">
+The current corpus is biased toward recent work (2018+) because expansion seeds dominate the current intake. Known under-represented sources include:
+
+- **UCSF MS Center** — Stephen Hauser, Bruce Cree, Jorge Oksenberg, Roland Martin's group. Foundational B-cell and anti-CD20 work, genetic risk studies.
+- **Johns Hopkins** — Peter Calabresi, **Ellen Mowry**. Vitamin D, PIRA, pediatric MS, real-world outcomes.
+- **Pre-2010 landmarks** generally — Lassmann (pathology), Trapp (axonal damage), McDonald criteria lineage.
+
+These are being addressed via the landmark seed curation process documented in [`EDUCATOR_INTEGRATION_GUIDE.md`](https://github.com/wrgr/mskb/blob/main/EDUCATOR_INTEGRATION_GUIDE.md) and [`SEED_INTAKE_GOVERNANCE.md`](https://github.com/wrgr/mskb/blob/main/SEED_INTAKE_GOVERNANCE.md). If you spot another gap, open an issue or PR on [wrgr/mskb](https://github.com/wrgr/mskb).
+</Aside>
+
+## Research spectrum
+
+- **Pathogenesis & Immunology** — immune mechanisms, myelin biology, EBV, remyelination.
+- **Imaging & Biomarkers** — MRI protocols, OCT, lesion heterogeneity, NfL / GFAP markers.
+- **Clinical Trials & Therapeutics** — DMT studies, efficacy / safety comparisons, emerging therapies.
+- **Clinical Care & Management** — diagnosis criteria, phenotypes, care pathways.
+- **Epidemiology & Population Health** — GWAS, environmental risk, prevalence, disparities, pediatric MS.

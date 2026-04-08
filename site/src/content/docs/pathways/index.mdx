@@ -1,0 +1,33 @@
+---
+title: Learning pathways
+description: Three prebuilt pathways through the concept map — clinical, mechanistic, and emerging topics.
+sidebar:
+  label: Overview
+  order: 0
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+A **pathway** is an opinionated sequence through the concept map. Each pathway starts with foundations and ends with the most advanced concepts in that direction. You can of course jump around — pathways are scaffolding, not rails.
+
+<CardGrid>
+  <LinkCard
+    title="Clinical pathway"
+    href="/mskb/pathways/clinical/"
+    description="Symptom → diagnosis → classification → treatment. For learners whose starting question is 'what does MS look like in the clinic?'"
+  />
+  <LinkCard
+    title="Mechanistic pathway"
+    href="/mskb/pathways/mechanistic/"
+    description="Immune basics → inflammation → demyelination → drug targets. For learners whose starting question is 'why does MS happen?'"
+  />
+  <LinkCard
+    title="Emerging topics"
+    href="/mskb/pathways/emerging/"
+    description="PIRA, smoldering MS, paramagnetic rim lesions, BTK inhibitors. For learners who already have the basics and want the research frontier."
+  />
+</CardGrid>
+
+## How pathways use the concept graph
+
+Each pathway is a curated list of concept references. When you open a pathway, you see the sequence; each step links to its concept page, which in turn links to its prerequisites, papers, and resources. A pathway is the "spine"; concept pages are the "ribs".

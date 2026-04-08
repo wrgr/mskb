@@ -1,4 +1,4 @@
-name: Deploy MkDocs to gh-pages
+name: Deploy Starlight site to gh-pages
 
 on:
   push:
@@ -29,27 +29,43 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install npm dependencies
+        working-directory: site
+        run: npm ci --no-audit --no-fund
+
+      - name: Refresh topic pages and explorer assets from pipeline outputs
+        run: python site/gen_site.py --config config.yaml
+
       - name: Preflight explorer assets
         run: |
-          test -f site/docs/explorer.md
-          test -f site/docs/assets/explorer_graph_lite.json
-          test -f site/docs/assets/explorer_details_lite.json
-          test -f site/docs/assets/explorer_graph.json
-          test -f site/docs/assets/explorer_details.json
+          test -f site/src/content/docs/explorer.mdx
+          test -f site/public/javascripts/explorer.js
+          test -f site/public/assets/explorer_graph.json
+          test -f site/public/assets/explorer_details.json
+          test -f site/public/assets/explorer_graph_lite.json
+          test -f site/public/assets/explorer_details_lite.json
 
-      - name: Build static site
-        run: python -m mkdocs build -f site/mkdocs.yml --strict
+      - name: Build Starlight site
+        working-directory: site
+        run: npm run build
 
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: site/site
+          publish_dir: site/dist
           force_orphan: true
           enable_jekyll: false

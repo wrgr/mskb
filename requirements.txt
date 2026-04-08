@@ -7,5 +7,4 @@ python-louvain>=0.16
 tqdm>=4.66
 rapidfuzz>=3.9
 anthropic>=0.39
-mkdocs>=1.6
-mkdocs-material>=9.5
+

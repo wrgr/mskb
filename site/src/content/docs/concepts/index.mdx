@@ -1,0 +1,58 @@
+---
+title: Concept map
+description: Layer A — the learner-centered MS concept hierarchy with prerequisites, learning objectives, and curated resources.
+sidebar:
+  label: Concept map
+  order: 0
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+This is the **Layer A** learner map for MSKB. Each concept is a standalone page with learning objectives, prerequisites, recommended papers from the citation graph, and curated non-paper resources (videos, tools, datasets).
+
+The concept hierarchy is taken from [`LEARNING_CONCEPT_ONTOLOGY.md`](https://github.com/wrgr/mskb/blob/main/LEARNING_CONCEPT_ONTOLOGY.md) and is grounded in Bloom's taxonomy + cognitive load theory. Concept pages marked with detail are fully written; the rest are stubs seeded from the ontology and being filled in over time.
+
+## Start with a category
+
+<CardGrid>
+  <LinkCard
+    title="Foundations"
+    href="/mskb/concepts/foundations/what-is-ms/"
+    description="What is MS, immune-system basics, the four phenotypes. Entry points for anyone new to the literature."
+  />
+  <LinkCard
+    title="Mechanisms"
+    href="/mskb/concepts/mechanisms/demyelination-remyelination/"
+    description="Demyelination, remyelination, BBB dysfunction, genetic susceptibility, environmental risk factors."
+  />
+  <LinkCard
+    title="Diagnosis & imaging"
+    href="/mskb/concepts/diagnosis/mcdonald-criteria/"
+    description="McDonald criteria, MRI patterns, CSF biomarkers, phenotype classification."
+  />
+  <LinkCard
+    title="Therapeutics"
+    href="/mskb/concepts/therapeutics/dmt-overview/"
+    description="DMT classes, B cell–targeted therapies, BTK inhibitors, monitoring and switches."
+  />
+  <LinkCard
+    title="Clinical & populations"
+    href="/mskb/concepts/clinical/disease-course/"
+    description="Relapses, PIRA, smoldering MS, cognition, pregnancy, pediatric and older-adult MS."
+  />
+</CardGrid>
+
+## Three learner pathways
+
+If you're not sure which concept to open first, follow a prebuilt pathway:
+
+- **[Clinical pathway](/mskb/pathways/clinical/)** — symptom → diagnosis → classification → treatment.
+- **[Mechanistic pathway](/mskb/pathways/mechanistic/)** — immune basics → inflammation → demyelination → drug targets.
+- **[Emerging topics](/mskb/pathways/emerging/)** — PIRA, smoldering MS, paramagnetic rim lesions, BTK inhibitors.
+
+## How concept pages relate to topic pages
+
+- A **concept** is a learner-centered unit. It has prerequisites, learning objectives, and curated resources.
+- A **[citation topic](/mskb/topics/)** is a cluster of papers grouped by Louvain community detection on the citation graph.
+
+A concept may pull papers from several citation topics, and a topic may contribute to several concepts. The two layers are complementary — concepts answer *"what should I learn?"*, topics answer *"what does the research landscape look like?"*.
