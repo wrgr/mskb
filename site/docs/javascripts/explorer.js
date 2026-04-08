@@ -388,6 +388,30 @@
     return { nodes, edges };
   }
 
+  function normalizeJargon(raw) {
+    if (!raw) return [];
+    let items = raw;
+    if (typeof raw === "string") {
+      const trimmed = raw.trim();
+      if (!trimmed) return [];
+      try {
+        items = JSON.parse(trimmed);
+      } catch (err) {
+        return [];
+      }
+    }
+    if (!Array.isArray(items)) return [];
+    const out = [];
+    items.forEach((entry) => {
+      if (!entry || typeof entry !== "object") return;
+      const term = String(entry.term || "").trim();
+      if (!term) return;
+      const definition = String(entry.definition || "").trim();
+      out.push({ term, definition });
+    });
+    return out;
+  }
+
   function decodeDetailsPayload(payload) {
     const map = new Map();
     if (payload && Array.isArray(payload.fields) && Array.isArray(payload.rows)) {
@@ -412,6 +436,7 @@
           why_it_matters_advanced: String(obj.why_it_matters_advanced || ""),
           key_takeaways_basic: Array.isArray(obj.key_takeaways_basic) ? obj.key_takeaways_basic : [],
           key_takeaways_advanced: Array.isArray(obj.key_takeaways_advanced) ? obj.key_takeaways_advanced : [],
+          jargon: normalizeJargon(obj.jargon),
           summary_generated_at_utc: String(obj.summary_generated_at_utc || ""),
           distill_method: String(obj.distill_method || ""),
           summary_certainty_score: Number(obj.summary_certainty_score || 0),
@@ -439,6 +464,7 @@
         why_it_matters_advanced: String(obj?.why_it_matters_advanced || ""),
         key_takeaways_basic: Array.isArray(obj?.key_takeaways_basic) ? obj.key_takeaways_basic : [],
         key_takeaways_advanced: Array.isArray(obj?.key_takeaways_advanced) ? obj.key_takeaways_advanced : [],
+        jargon: normalizeJargon(obj?.jargon),
         summary_generated_at_utc: String(obj?.summary_generated_at_utc || ""),
         distill_method: String(obj?.distill_method || ""),
         summary_certainty_score: Number(obj?.summary_certainty_score || 0),
@@ -471,6 +497,7 @@
         node.why_it_matters_advanced = String(details.why_it_matters_advanced || "");
         node.key_takeaways_basic = Array.isArray(details.key_takeaways_basic) ? details.key_takeaways_basic : [];
         node.key_takeaways_advanced = Array.isArray(details.key_takeaways_advanced) ? details.key_takeaways_advanced : [];
+        node.jargon = Array.isArray(details.jargon) ? details.jargon : [];
         node.summary_generated_at_utc = String(details.summary_generated_at_utc || "");
         node.distill_method = String(details.distill_method || "");
         node.summary_certainty_score = Number(details.summary_certainty_score || 0);
@@ -1686,6 +1713,86 @@
     return `<ol>${nodes.map((node) => `<li>${renderActionButtons(node)} ${escapeHtml(node.title || "Untitled")}</li>`).join("")}</ol>`;
   }
 
+  // Generic-sounding terms that leak in from structured takeaways and offer
+  // no real learning signal for students planning a study path.
+  const JOURNEY_SKILL_STOPWORDS = new Set([
+    "multiple sclerosis",
+    "ms",
+    "patient",
+    "patients",
+    "study",
+    "studies",
+    "result",
+    "results",
+    "method",
+    "methods",
+    "conclusion",
+    "background",
+    "data",
+    "analysis",
+  ]);
+
+  function collectConcepts(nodes) {
+    const counts = new Map();
+    const definitions = new Map();
+    const display = new Map();
+    nodes.forEach((node) => {
+      const jargon = Array.isArray(node && node.jargon) ? node.jargon : [];
+      jargon.forEach((entry) => {
+        if (!entry || typeof entry !== "object") return;
+        const term = String(entry.term || "").trim();
+        if (!term) return;
+        const key = term.toLowerCase();
+        if (JOURNEY_SKILL_STOPWORDS.has(key)) return;
+        counts.set(key, (counts.get(key) || 0) + 1);
+        if (!display.has(key)) display.set(key, term);
+        if (!definitions.has(key) || !definitions.get(key)) {
+          definitions.set(key, String(entry.definition || "").trim());
+        }
+      });
+    });
+    return Array.from(counts.keys())
+      .sort((a, b) => (counts.get(b) - counts.get(a)) || a.localeCompare(b))
+      .map((key) => ({
+        term: display.get(key) || key,
+        definition: definitions.get(key) || "",
+        count: counts.get(key) || 0,
+      }));
+  }
+
+  function renderSkillsBlock(nodes, limit) {
+    const concepts = collectConcepts(nodes).slice(0, limit || 10);
+    if (!concepts.length) {
+      return `
+        <div class="journey-skills">
+          <strong>Concepts &amp; skills to master</strong>
+          <p><em>No concept tags available for these papers yet. Generate a journey after text details finish loading, or pick papers with distilled summaries.</em></p>
+        </div>`;
+    }
+    const items = concepts.map((c) => {
+      const safeTerm = escapeHtml(c.term);
+      if (c.definition) {
+        return `<li class="journey-skill--concept"><details><summary>${safeTerm}</summary><p>${escapeHtml(c.definition)}</p></details></li>`;
+      }
+      return `<li class="journey-skill--concept">${safeTerm}</li>`;
+    }).join("");
+    return `
+      <div class="journey-skills">
+        <strong>Concepts &amp; skills to master</strong>
+        <ul>${items}</ul>
+      </div>`;
+  }
+
+  function renderJourneyPhase({ title, description, nodes, emptyText, skillLimit }) {
+    return `
+      <section class="journey-phase">
+        <h5>${title}</h5>
+        <p>${description}</p>
+        ${renderJourneyList(nodes, emptyText)}
+        ${renderSkillsBlock(nodes, skillLimit)}
+      </section>`;
+  }
+
   async function generateLearningJourney() {
     const selected = journeySelection.map((id) => nodeById.get(id)).filter(Boolean);
     if (!selected.length) {
@@ -1731,14 +1838,39 @@
     const bridges = candidates.filter((x) => x.overlap > 0).slice(0, 5).map((x) => x.node);
     const deepDives = candidates.slice(0, 8).map((x) => x.node);
 
+    const topicSet = new Set();
+    [...foundations, ...bridges, ...deepDives].forEach((node) => {
+      const label = (node && node.topic_label) ? String(node.topic_label).trim() : "";
+      if (label) topicSet.add(label);
+    });
+    const topicSummary = topicSet.size
+      ? `<p><em>Research themes touched:</em> ${Array.from(topicSet).map((t) => `<span class="pill">${escapeHtml(t)}</span>`).join(" ")}</p>`
+      : "";
+
     journeyResultsEl.innerHTML = `
-      <p><strong>Generated learning journey</strong></p>
-      <h5>1. Foundations (start here)</h5>
-      ${renderJourneyList(foundations, "No foundation papers found.")}
-      <h5>2. Bridges (connect mechanisms to applications)</h5>
-      ${renderJourneyList(bridges, "No bridge papers found from selected set.")}
-      <h5>3. Deep Dives (advanced extensions)</h5>
-      ${renderJourneyList(deepDives, "No deep-dive recommendations found.")}
+      <p><strong>Generated learning journey</strong> — each phase pairs papers with the concepts and skills they teach.</p>
+      ${topicSummary}
+      ${renderJourneyPhase({
+        title: "1. Foundations (start here)",
+        description: "Core papers you already selected, ordered from the most accessible language to the most technical.",
+        nodes: foundations,
+        emptyText: "No foundation papers found.",
+        skillLimit: 10,
+      })}
+      ${renderJourneyPhase({
+        title: "2. Bridges (connect mechanisms to applications)",
+        description: "Neighboring papers that link your selection to adjacent work — read these to fill gaps between ideas.",
+        nodes: bridges,
+        emptyText: "No bridge papers found from selected set.",
+        skillLimit: 10,
+      })}
+      ${renderJourneyPhase({
+        title: "3. Deep Dives (advanced extensions)",
+        description: "Higher-signal follow-up reading for when the foundations feel comfortable.",
+        nodes: deepDives,
+        emptyText: "No deep-dive recommendations found.",
+        skillLimit: 12,
+      })}
     `;
   }
 

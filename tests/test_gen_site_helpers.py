@@ -111,6 +111,70 @@ def test_parse_json_list_falls_back_to_raw_string() -> None:
 
 
 # ---------------------------------------------------------------------------
+# _parse_jargon_structured
+# ---------------------------------------------------------------------------
+
+def test_parse_jargon_structured_from_json_string() -> None:
+    raw = '[{"term": "EBV", "definition": "Epstein-Barr virus"}, {"term": "NfL", "definition": "Neurofilament light"}]'
+    assert gen_site._parse_jargon_structured(raw) == [
+        {"term": "EBV", "definition": "Epstein-Barr virus"},
+        {"term": "NfL", "definition": "Neurofilament light"},
+    ]
+
+
+def test_parse_jargon_structured_from_list() -> None:
+    raw = [
+        {"term": "OCB", "definition": "Oligoclonal bands"},
+        {"term": "", "definition": "missing term"},
+        {"no_term": True},
+    ]
+    assert gen_site._parse_jargon_structured(raw) == [
+        {"term": "OCB", "definition": "Oligoclonal bands"},
+    ]
+
+
+def test_parse_jargon_structured_handles_empty_inputs() -> None:
+    assert gen_site._parse_jargon_structured(None) == []
+    assert gen_site._parse_jargon_structured("") == []
+    assert gen_site._parse_jargon_structured("nan") == []
+    assert gen_site._parse_jargon_structured("not-json") == []
+    assert gen_site._parse_jargon_structured({"term": "X"}) == []
+
+
+# ---------------------------------------------------------------------------
+# _topic_concepts_block
+# ---------------------------------------------------------------------------
+
+def test_topic_concepts_block_aggregates_and_sorts_by_frequency() -> None:
+    papers = [
+        {"jargon": [
+            {"term": "EBV", "definition": "Epstein-Barr virus"},
+            {"term": "NfL", "definition": "Neurofilament light"},
+        ]},
+        {"jargon": [
+            {"term": "ebv", "definition": ""},
+            {"term": "OCB", "definition": "Oligoclonal bands"},
+        ]},
+    ]
+    block = gen_site._topic_concepts_block(papers, limit=10)
+    assert "Concepts" in block
+    # EBV appears twice, so it should be first; its definition should be kept.
+    ebv_pos = block.find("EBV")
+    nfl_pos = block.find("NfL")
+    ocb_pos = block.find("OCB")
+    assert ebv_pos != -1 and nfl_pos != -1 and ocb_pos != -1
+    assert ebv_pos < nfl_pos
+    assert ebv_pos < ocb_pos
+    assert "Epstein-Barr virus" in block
+    assert "Oligoclonal bands" in block
+
+
+def test_topic_concepts_block_empty_when_no_jargon() -> None:
+    assert gen_site._topic_concepts_block([]) == ""
+    assert gen_site._topic_concepts_block([{"jargon": []}]) == ""
+
+
+# ---------------------------------------------------------------------------
 # _clean_text
 # ---------------------------------------------------------------------------
 

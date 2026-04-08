@@ -78,6 +78,38 @@ def _parse_json_list(value) -> list[str]:
     return cleaned
 
 
+def _parse_jargon_structured(value) -> list[dict]:
+    """Parse a jargon field into a list of ``{term, definition}`` dicts.
+
+    The distill pipeline stores jargon as a JSON-encoded list of objects.
+    This helper preserves that structure (unlike ``_parse_json_list``), so
+    downstream consumers can surface the term + definition pair.
+    """
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return []
+    if isinstance(value, list):
+        raw = value
+    elif isinstance(value, str):
+        text = value.strip()
+        if not text or text.lower() == "nan":
+            return []
+        try:
+            parsed = json.loads(text)
+            raw = parsed if isinstance(parsed, list) else []
+        except json.JSONDecodeError:
+            return []
+    else:
+        return []
+    out: list[dict] = []
+    for item in raw:
+        if isinstance(item, dict):
+            term = _clean_text(item.get("term"))
+            definition = _clean_text(item.get("definition"))
+            if term:
+                out.append({"term": term, "definition": definition})
+    return out
+
+
 def _clean_text(value) -> str:
     if value is None:
         return ""
@@ -254,6 +286,75 @@ def _estimate_summary_language_difficulty(summary: str, takeaways: list[str] | N
     score += sum(1 for marker in specialist_markers if marker in text) // 3
 
     return min(max(score, 1), 5)
+
+
+def _extract_jargon_from_row(row: dict) -> list[dict]:
+    raw = row.get("jargon", [])
+    if isinstance(raw, list):
+        return [item for item in raw if isinstance(item, dict) and _clean_text(item.get("term"))]
+    return _parse_jargon_structured(raw)
+
+
+def _topic_concepts_block(paper_rows: list[dict], limit: int = 14) -> str:
+    """Build a "Concepts & skills you'll learn" block for a topic page.
+
+    Aggregates the jargon terms (term + definition) across the papers in a topic's
+    reading path, ordered by how often they appear so the most common concepts
+    surface first. Returns an empty string if nothing useful can be emitted.
+    """
+    if not paper_rows:
+        return ""
+    counts: dict[str, int] = {}
+    definitions: dict[str, str] = {}
+    order: list[str] = []
+    for row in paper_rows:
+        for entry in _extract_jargon_from_row(row):
+            term = _clean_text(entry.get("term"))
+            if not term:
+                continue
+            key = term.lower()
+            if key not in counts:
+                counts[key] = 0
+                order.append(key)
+            counts[key] += 1
+            if not definitions.get(key):
+                definitions[key] = _clean_text(entry.get("definition"))
+    if not counts:
+        return ""
+    display_terms = {}
+    for row in paper_rows:
+        for entry in _extract_jargon_from_row(row):
+            term = _clean_text(entry.get("term"))
+            if term and term.lower() not in display_terms:
+                display_terms[term.lower()] = term
+    ranked = sorted(order, key=lambda k: (-counts[k], k))[:limit]
+    if not ranked:
+        return ""
+    lines = [
+        '<div class="info-panel reveal">',
+        "<p>Working through this reading path builds fluency in the core vocabulary and techniques of the topic. "
+        "Tap a concept to see its plain-English definition.</p>",
+        '<div class="journey-skills">',
+        "<strong>Concepts &amp; skills</strong>",
+        "<ul>",
+    ]
+    for key in ranked:
+        label = display_terms.get(key, key)
+        definition = definitions.get(key, "")
+        term_html = html.escape(label)
+        if definition:
+            lines.append(
+                f'<li class="journey-skill--concept"><details>'
+                f"<summary>{term_html}</summary>"
+                f"<p>{html.escape(definition)}</p>"
+                "</details></li>"
+            )
+        else:
+            lines.append(f'<li class="journey-skill--concept">{term_html}</li>')
+    lines.append("</ul>")
+    lines.append("</div>")
+    lines.append("</div>")
+    return "\n".join(lines)
 
 
 def _paper_card(row: dict) -> str:
@@ -584,7 +685,7 @@ def _build_explorer_assets(
                 "summary_source": summary_source,
                 "key_takeaways": key_takeaways,
                 "why_it_matters": why,
-                "jargon": _parse_json_list(summary_row.get("jargon", [])),
+                "jargon": _parse_jargon_structured(summary_row.get("jargon", [])),
                 "summary_basic": summary_basic,
                 "summary_advanced": summary_advanced,
                 "why_it_matters_basic": why_basic,
@@ -887,22 +988,6 @@ def generate(config_path: str) -> None:
         for _, row in topic_overviews.iterrows():
             overview_map[row["topic_id"]] = row.to_dict()
 
-    # Generate topics index
-    index_lines = ["# Topics\n"]
-    index_lines.append('<div class="landing-hero">')
-    index_lines.append("<p>Browse the citation-derived topic atlas and jump directly into guided reading paths.</p>")
-    index_lines.append('<div class="landing-kpis">')
-    index_lines.append(f'<span class="kpi-pill">{len(topic_clusters)} discovered clusters</span>')
-    index_lines.append('<span class="kpi-pill">Algorithmic taxonomy</span>')
-    index_lines.append('<span class="kpi-pill">Language-level paper filters</span>')
-    index_lines.append("</div>")
-    index_lines.append("</div>")
-
-    category_groups = {}
-    for _, cluster in topic_clusters.iterrows():
-        cat = cluster.get("dominant_category", "pathogenesis_and_immunology")
-        category_groups.setdefault(cat, []).append(cluster)
-
     # Categories aligned with ACTRIMS / CMSC / MSJ conference structure
     category_labels = {
         "pathogenesis_and_immunology": "Pathogenesis & Immunology",
@@ -911,30 +996,68 @@ def generate(config_path: str) -> None:
         "clinical_care_and_management": "Clinical Care & Management",
         "epidemiology_and_population_health": "Epidemiology & Population Health",
     }
-
-    for cat in [
+    category_descriptions = {
+        "pathogenesis_and_immunology": "Mechanisms of demyelination, immune activation, and the cells and cytokines driving MS.",
+        "imaging_and_biomarkers": "MRI, optical coherence tomography, and fluid biomarkers that track lesion burden and disease activity.",
+        "clinical_trials_and_therapeutics": "Disease-modifying therapies, trial design, and emerging treatment targets.",
+        "clinical_care_and_management": "Symptom management, rehabilitation, and the day-to-day care of people with MS.",
+        "epidemiology_and_population_health": "Incidence, prevalence, environmental and genetic risk factors, and population-level outcomes.",
+    }
+    category_order = [
         "pathogenesis_and_immunology",
         "imaging_and_biomarkers",
         "clinical_trials_and_therapeutics",
         "clinical_care_and_management",
         "epidemiology_and_population_health",
-    ]:
+    ]
+
+    category_groups = {}
+    for _, cluster in topic_clusters.iterrows():
+        cat = cluster.get("dominant_category", "pathogenesis_and_immunology")
+        category_groups.setdefault(cat, []).append(cluster)
+
+    # Generate topics index — lead with the topic labels so readers can zoom in quickly.
+    index_lines = ["# Browse by Research Theme\n"]
+    index_lines.append('<div class="topic-landing-hero">')
+    index_lines.append('<h2>Pick a topic, then zoom in.</h2>')
+    index_lines.append(
+        "<p>Each card below is a citation-derived research theme with a curated reading path, "
+        "plain-English paper summaries, and the concepts you'll pick up along the way.</p>"
+    )
+    index_lines.append('<div class="topic-jump">')
+    for cat in category_order:
+        if not category_groups.get(cat):
+            continue
+        label = category_labels.get(cat, cat)
+        anchor = _slug(label)
+        index_lines.append(f'<a href="#{anchor}">{html.escape(label)}</a>')
+    index_lines.append("</div>")
+    index_lines.append("</div>")
+
+    for cat in category_order:
         clusters = category_groups.get(cat, [])
         if not clusters:
             continue
-        index_lines.append(f"\n## {category_labels.get(cat, cat)}\n")
+        label = category_labels.get(cat, cat)
+        description = category_descriptions.get(cat, "")
+        anchor = _slug(label)
+        index_lines.append(f'\n<div class="topic-category" id="{anchor}">')
+        index_lines.append(f"\n## {label}\n")
+        if description:
+            index_lines.append(f"<p>{html.escape(description)}</p>")
+        index_lines.append("</div>")
         index_lines.append('<div class="topic-grid">')
         for cluster in clusters:
             if isinstance(cluster, pd.Series):
                 cluster = cluster.to_dict()
             tid = cluster["topic_id"]
-            label = cluster["auto_label"]
+            topic_label = cluster["auto_label"]
             n = cluster["n_papers"]
             diff = cluster.get("difficulty", 3)
-            slug = _topic_slug(label, tid)
+            slug = _topic_slug(topic_label, tid)
             index_lines.append(
                 f'<a class="topic-card" href="{slug}/">'
-                f"<strong>{html.escape(label)}</strong>"
+                f"<strong>{html.escape(topic_label)}</strong>"
                 f"<span>{_safe_int(n)} papers</span>"
                 f"<span>Difficulty {_safe_int(diff, 3)}/5</span>"
                 "</a>"
@@ -967,19 +1090,29 @@ def generate(config_path: str) -> None:
             lines.append(f'<div class="info-panel reveal"><p>{html.escape(_clean_text(overview["overview"]))}</p></div>')
             lines.append("")
 
-        # Reading path
+        # Reading path — render papers, and aggregate concepts/skills from their jargon.
+        topic_paper_data: list[dict] = []
         if not reading_paths.empty:
             topic_reading = reading_paths[reading_paths["topic_id"] == tid].sort_values("position")
-            if not topic_reading.empty:
-                lines.append("## Reading Path\n")
-                lines.append("Papers ordered by importance and pedagogic progression.\n")
-                for _, rp in topic_reading.iterrows():
-                    pid = str(rp["canonical_paper_id"])
-                    paper_data = metadata_map.get(pid, {}).copy()
-                    paper_data.update(summaries_map.get(pid, {}))
-                    if not paper_data:
-                        paper_data = {"title": rp.get("title", "Untitled")}
-                    lines.append(_paper_card(paper_data))
+            for _, rp in topic_reading.iterrows():
+                pid = str(rp["canonical_paper_id"])
+                paper_data = metadata_map.get(pid, {}).copy()
+                paper_data.update(summaries_map.get(pid, {}))
+                if not paper_data:
+                    paper_data = {"title": rp.get("title", "Untitled")}
+                topic_paper_data.append(paper_data)
+
+        concept_block = _topic_concepts_block(topic_paper_data)
+        if concept_block:
+            lines.append("## Concepts &amp; Skills You'll Learn\n")
+            lines.append(concept_block)
+            lines.append("")
+
+        if topic_paper_data:
+            lines.append("## Reading Path\n")
+            lines.append("Papers ordered by importance and pedagogic progression.\n")
+            for paper_data in topic_paper_data:
+                lines.append(_paper_card(paper_data))
 
         (topics_out / f"{slug}.md").write_text("\n".join(lines), encoding="utf-8")
 
