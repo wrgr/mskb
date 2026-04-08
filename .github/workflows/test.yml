@@ -41,9 +41,9 @@ jobs:
 
       - name: Preflight test inputs
         run: |
-          test -f site/docs/explorer.md
-          test -f site/docs/javascripts/explorer.js
-          test -f site/docs/javascripts/vendor/cytoscape.min.js
+          test -f site/src/content/docs/explorer.mdx
+          test -f site/public/javascripts/explorer.js
+          test -f site/public/javascripts/vendor/cytoscape.min.js
 
       - name: Run pytest
         run: python -m pytest tests/ -v
