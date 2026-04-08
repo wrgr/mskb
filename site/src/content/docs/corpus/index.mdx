@@ -1,0 +1,127 @@
+---
+title: Corpus Overview
+description: How the MSKB corpus is built — target size, tiers, seeds, expansion, and quality gates.
+sidebar:
+  order: 1
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components';
+
+MSKB is built from a curated corpus of approximately **500 peer-reviewed documents** spanning 18 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
+
+The corpus specification lives in [`data/ms_corpus_specification_v1.xlsx`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_specification_v1.xlsx) and the full audit trail in [`data/ms_corpus_design_decisions.md`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_design_decisions.md).
+
+---
+
+## Target and scope
+
+| Parameter | Value |
+|-----------|-------|
+| Target corpus size | ~500 documents |
+| Topics | 18 + Topic 1b (Natural History) |
+| T1 seeds | 36 (2 per topic) |
+| Review anchors | 6 (R1–R6, expansion only) |
+| Total expansion sources | 41 |
+| Expected raw candidates | 5,000–15,000 before filtering |
+
+The 500-document target balances coverage depth (~15–35 documents per topic) against review feasibility (~40 hours at 5 min/document) and RAG retrieval signal-to-noise.
+
+---
+
+## Four-tier architecture
+
+Documents are selected through four distinct mechanisms, each appropriate for a different purpose.
+
+### Tier 1 — Seeds
+**36 hand-curated anchor papers**, 2 per topic. Seeds are the conceptual entry points into each research area. They are chosen for document-type diversity (not only reviews), citation neighborhood size, and geographic/institutional spread. All 36 seeds have status `APPROVED` in the Corpus Registry.
+
+See [Seeds](/mskb/corpus/seeds/) for the full list with metadata and rationale.
+
+### Tier 2 — Cross-seed connected
+**Target ~250–280 documents.** Papers that appear in the one-hop neighborhood (forward citations + backward citations) of **≥ 2 of the 36 seeds**. The cross-seed connectivity score is computed against seeds only — not the review anchors. A paper connected to multiple seeds has demonstrated structural importance in the field's citation network independent of institutional prestige.
+
+Additional signal recorded (but not used as a filter): papers whose connected seeds span ≥ 2 topic codes are flagged as **multi-topic bridges** — these are often the highest-value papers for cross-topic queries.
+
+### Tier 3 — Velocity / emerging
+**Target ~100–120 documents.** Papers published 2022–2026 with `velocity_percentile ≥ 80th` within their assigned topic, plus `cross_seed_score ≥ 1`. The relaxed connectivity floor (1 rather than 2) accommodates genuinely important recent work from non-dominant labs that has not yet accumulated citation mass. A manual check is required — velocity alone is insufficient.
+
+### Tier 4 — Expert signal
+**Target ~50–60 documents.** Selected by explicit expert endorsement only: ECTRIMS/ACTRIMS/AAN best paper awards, NMSS-funded research outputs, Cures Roadmap reference lists, and explicitly non-Western cohort studies. Every T4 document must have its source documented with specific award, year, or rationale. `cross_seed_score = 0` is acceptable for T4 if the expert signal is documented.
+
+---
+
+## Expansion sources
+
+One-hop expansion runs from all 41 sources (36 seeds + 6 review anchors). Cross-seed scoring uses only the 36 seeds — review anchors expand the candidate pool but are not quality anchors.
+
+The 6 review anchors (R1–R6) were selected to correct for known structural gaps in the seed citation network:
+
+| ID | Paper | Role |
+|----|-------|------|
+| R1 | Reich et al. 2018 *NEJM* | 7 years of forward citation mass not yet in R2 neighborhood |
+| R2 | Jakimovski et al. 2024 *Lancet* | Current field-wide overview; primary expansion anchor |
+| R3 | Kuhlmann et al. 2023 *Lancet Neurol* | Geographic diversity via International Advisory Committee authorship |
+| R4 | Lancet Neurol 2025 biomarkers | Bridge for 2022–2025 biomarker acceleration |
+| R5 | Amezcua et al. 2021 *JAMA Neurol* | Dedicated equity expansion (structurally isolated subfield) |
+| R6 | Montalban et al. 2025 *Lancet Neurol* | Global diagnostic criteria with geographically diverse authorship |
+
+<Aside type="note" title="Why keep R1 alongside R2?">
+The 2018 Reich et al. *NEJM* review has accumulated 7 years of forward citations that Jakimovski 2024 has not yet generated. Papers published 2018–2024 will have cited Reich as background. Together they bracket the citation mass of an important period — 2024 captures what's current; 2018 captures what accumulated in between.
+</Aside>
+
+<Aside type="caution" title="Why a dedicated equity anchor (R5)?">
+Equity papers are structurally disconnected from the basic science and clinical trial citation network. The cross-seed filter systematically misses equity literature because these papers are not cited by DMT trials or pathophysiology papers — and vice versa. R5 is the principled correction for a known algorithmic limitation, not a workaround.
+</Aside>
+
+---
+
+## Quality gates
+
+### Cross-seed score
+- T2: `cross_seed_score ≥ 2` (hard floor)
+- T3: `cross_seed_score ≥ 1` (relaxed for recency)
+- T4: `cross_seed_score = 0` acceptable with documented expert signal
+
+### Subdomain score
+`subdomain_score = max(citation_percentile, velocity_percentile)` computed **within each assigned topic**, not cross-field.
+
+Rationale for `max()` over average: a classic paper with high historical citations but low velocity is still valuable (foundational but superseded); a new paper with high velocity but modest total citations is also valuable (emerging and important). The max captures both without requiring both simultaneously.
+
+Rationale for within-subdomain normalization: citation volume varies systematically between subfields. Equity papers generate far fewer citations than landmark trials — not because they matter less but because citation practices differ. Within-subdomain percentiles correct for this: equity papers compete against equity papers.
+
+### QA overlap check
+After pipeline completion, for each review anchor R1–R6 compute:
+
+```
+overlap_pct = papers_in_anchor_references_also_in_final_corpus / total_anchor_references
+```
+
+- **> 70%** — seeds well-chosen ✓
+- **60–70%** — acceptable, monitor
+- **< 60%** for a specific topic — seeds thin → flag in Gap Tracker, augment seeds, or add T4 documents
+
+---
+
+## Topic organization
+
+19 topics (18 + T1b Natural History) organized in three layers:
+
+- **Foundation** (T00–T04) — biological vocabulary and disease framing
+- **Clinical** (T05–T11) — diagnosis, treatment, management
+- **Context/Future** (T12–T16) — equity, pediatrics, AI, frontiers
+
+The layering reflects epistemological dependencies, not value judgments. Equity research (T13) is in the Context/Future layer because its critical function — interrogating assumptions embedded in the clinical literature — is most meaningful after the Clinical baseline has been established.
+
+See [Topic Map](/mskb/corpus/topics/) for all 19 topics with seed assignments and document targets.
+
+---
+
+## Known gaps
+
+10 tracked gaps are documented in the [Gap Tracker](/mskb/corpus/gaps/), covering Global South representation, Hispanic/Asian MS cohort coverage, qualitative and lived-experience research, digital biomarkers, and non-English literature. Gaps are tracked publicly rather than papered over.
+
+---
+
+## Full design decisions
+
+The complete audit trail — covering 14 decision areas with explicit rationale and bibliometric references — is in [Design Decisions](/mskb/corpus/design-decisions/).

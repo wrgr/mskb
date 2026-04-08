@@ -1,0 +1,158 @@
+---
+title: Gap Tracker
+description: Known coverage gaps in the MSKB corpus by topic — severity, recommended actions, and current status.
+sidebar:
+  order: 5
+---
+
+import { Aside, Badge } from '@astrojs/starlight/components';
+
+Known gaps are tracked here and updated as the corpus grows. Documentation requirements are not relaxed because of gaps — we document what we have and flag what is missing.
+
+10 gaps tracked as of version 1.0 (April 2026).
+
+---
+
+<Aside type="caution">
+Gaps are a feature of honest corpus documentation, not a failure of the pipeline. If you identify a gap not listed here, open an issue at [wrgr/mskb](https://github.com/wrgr/mskb/issues).
+</Aside>
+
+---
+
+## G-001 — Global South epidemiology <Badge text="High severity" variant="danger" /> {#g-001}
+
+**Topics:** T00, T13
+
+**Gap:** Global South MS epidemiology severely underrepresented. Africa has data for only 56% of population in the Atlas. Latin America, South/Southeast Asia, Middle East, and sub-Saharan Africa have thin primary literature.
+
+**Why this matters:** The Atlas of MS (seed MS-T1-035) documents coverage gaps explicitly. Prevalence estimates for Africa, South/Southeast Asia, and the Middle East are based on very limited primary studies. This produces systematic underestimation of disease burden in these regions and limits the generalizability of clinical guidance developed primarily from European and North American cohorts.
+
+**Recommended action:** Manually identify cohort studies from these regions for Tier 4 inclusion. Monitor regional neurology society publications (Pan-Arab, EAN, Latin American Federation of Neurology). Do not wait for cross-seed connectivity to surface these papers — they are structurally disconnected from the main citation network.
+
+**Status:** Open
+
+---
+
+## G-002 — Hispanic and Asian MS populations <Badge text="High severity" variant="danger" /> {#g-002}
+
+**Topics:** T13
+
+**Gap:** Hispanic and Asian MS populations covered primarily through US-based Amezcua and Langer-Gould work. Limited coverage of MS in Asian populations globally or Hispanic populations outside Southern California.
+
+**Why this matters:** Prevalence in Black and Hispanic populations in the US has been systematically underestimated (see seed MS-T1-028). The analogous underestimation for Asian populations globally and for Hispanic populations outside US research centers has received even less attention.
+
+**Recommended action:** Add Amezcua & McCauley *MSJ* 2020 and Hittle et al. *JAMA Neurol* 2023 as Tier 4 documents. Conduct targeted search for Japanese, Korean, and South American MS cohort studies in PubMed (these may not surface via OpenAlex one-hop expansion from current seeds).
+
+**Status:** Open
+
+---
+
+## G-003 — Qualitative and lived experience research <Badge text="Medium severity" variant="caution" /> {#g-003}
+
+**Topics:** T09, T10
+
+**Gap:** Qualitative and lived experience research entirely absent. Patient voice outside the Cures Roadmap not represented.
+
+**Why this matters:** The corpus is research-oriented and the peer-reviewed medical literature has a known publication bias toward quantitative methods. Fatigue, cognitive difficulties, and social impact of MS — domains rated most important by patients — are covered primarily through PRO instruments designed for clinical trials rather than through patient-led or qualitative research.
+
+**Recommended action:** Add 2–3 qualitative studies as Tier 4 documents. Candidate: Joanna Smith (Leeds) on progressive MS experience. Add NMSS and MS Society (UK) patient resources to source diversity documentation. The Cures Roadmap (seeds MS-T1-033, MS-T1-034) remains the closest bridge in the current corpus — it explicitly incorporated input from 300+ people living with MS.
+
+**Status:** Open
+
+---
+
+## G-004 — Digital biomarkers and wearable monitoring <Badge text="Medium severity" variant="caution" /> {#g-004}
+
+**Topics:** T09
+
+**Gap:** Digital biomarkers and wearable monitoring (smartphone gait, passive sensing) not covered. Field accelerating rapidly but too nascent for stable seeds.
+
+**Why this matters:** Wearable and passive sensing technologies have potential to provide continuous, ecologically valid monitoring of MS symptoms and disease activity between clinical visits. The field is accelerating rapidly and will likely produce important literature over the next 2–4 years.
+
+**Recommended action:** Monitor via Tier 3 velocity filter. Flag any digital phenotyping papers reaching the Tier 3 velocity threshold. Do not add premature seeds from a field where the methods are still being established — wait for at least one independent replication.
+
+**Status:** Open — monitor pipeline
+
+---
+
+## G-005 — EBV vaccine prevention trials <Badge text="Low severity" variant="note" /> {#g-005}
+
+**Topics:** T15
+
+**Gap:** EBV vaccine prevention trials not yet available as seeds. Phase 2 programs exist but no efficacy data published.
+
+**Why this matters:** If the causal EBV-MS relationship established by Bjornevik 2022 (seed MS-T1-009) holds, EBV vaccination represents the first plausible MS prevention strategy. Phase 2/3 trials are underway. Efficacy data will be among the highest-impact MS papers published in the next 5–10 years.
+
+**Recommended action:** No action until Phase 2/3 efficacy results are published. Monitor *NEJM* and *Lancet*. Add as Tier 3 when available — velocity threshold will be easily met.
+
+**Status:** Open — future
+
+---
+
+## G-006 — DMT seeds are aging (2017) <Badge text="Medium severity" variant="caution" /> {#g-006}
+
+**Topics:** T07
+
+**Gap:** Both DMT seeds (OPERA, ORATORIO) are 2017. The escalation vs. early high-efficacy debate, tolebrutinib/BTK inhibitor trials, and ofatumumab data are not represented in seeds.
+
+**Why this matters:** The B-cell depletion paradigm established by the 2017 OPERA/ORATORIO trials remains current, but the treatment landscape has evolved substantially. The question of when to start high-efficacy therapy vs. escalating from platform therapies, the emergence of BTK inhibitors targeting smoldering disease, and newer agents like ofatumumab and ublituximab require coverage.
+
+**Recommended action:** The T2/T3 pipeline should surface post-2017 DMT literature through forward citation expansion from OPERA/ORATORIO. Manually verify that tolebrutinib and BTK inhibitor papers reach the Tier 3 velocity threshold. If not, add as Tier 4 with conference award documentation.
+
+**Status:** Open — monitor pipeline
+
+---
+
+## G-007 — Cures Roadmap reference lists not extracted <Badge text="Medium severity" variant="caution" /> {#g-007}
+
+**Topics:** T16
+
+**Gap:** Cures Roadmap reference lists not yet systematically extracted. Papers the field's own strategic document treats as foundational may be missed by the pipeline.
+
+**Why this matters:** The NMSS Pathways to Cures Roadmap (seeds MS-T1-033, MS-T1-034) cites papers it treats as foundational across all topic areas. These papers represent the community's own assessment of what is important — a Tier 4 selection signal of the highest quality. If these papers don't appear in seed neighborhoods, the pipeline will miss them.
+
+**Recommended action:** Manually extract reference lists from Roadmap 2022 and Roadmap 2024. Cross-reference against the Tier 2 candidate pool. Add any papers not in the candidate pool to Tier 4, with selection_source documented as "Cures Roadmap ref list [year]".
+
+**Status:** Open
+
+---
+
+## G-008 — Non-English language MS literature <Badge text="Low severity" variant="note" /> {#g-008}
+
+**Topics:** All
+
+**Gap:** Non-English language MS literature (French, Spanish, Italian, German) systematically absent. Some important cohort studies published in regional journals not fully indexed in OpenAlex.
+
+**Why this matters:** MS has active research communities in France (OFSEP cohort), Germany (DMSKW registry), Italy (PROSIMUS registry), and Latin America. Some methodologically important papers in these cohorts are published in regional journals that have partial or no OpenAlex coverage.
+
+**Recommended action:** Acknowledge in source diversity notes. Consider targeted search of *Revue Neurologique* and *Neurologia* for high-impact MS papers not surfaced by the pipeline. This is low priority because the highest-impact papers from these cohorts are typically published in English-language journals.
+
+**Status:** Open — low priority
+
+---
+
+## G-009 — Pregnancy MS in non-European settings <Badge text="Medium severity" variant="caution" /> {#g-009}
+
+**Topics:** T11
+
+**Gap:** Pregnancy/MS literature in low-income and middle-income settings almost entirely absent. German DMSKW registry dominates the international pregnancy data.
+
+**Why this matters:** Pregnancy management in MS involves DMT decisions with teratogenicity implications. Guidance developed primarily from European registry data may not transfer to settings where different DMTs are available, where breastfeeding practices differ, or where access to specialist monitoring is limited.
+
+**Recommended action:** Manual search for pregnancy registry data from non-European settings. Note limitation explicitly in corpus documentation for Topic T11. This gap is difficult to close algorithmically because the literature is sparse — acknowledge rather than paper over.
+
+**Status:** Open
+
+---
+
+## G-010 — MS registry methodology papers <Badge text="Low severity" variant="note" /> {#g-010}
+
+**Topics:** T14
+
+**Gap:** MS registry infrastructure papers (MSBase, NARCOMS, Swedish MS Registry) not represented as standalone documents. Registries are used throughout the corpus literature but their methodology papers are not seeded.
+
+**Why this matters:** Large observational registries are the primary source of real-world effectiveness and safety data on DMTs. Understanding the registries' design, bias profile, and linkage capabilities is necessary for critically evaluating their outputs. The methods papers are frequently cited across the DMT and progressive MS literature.
+
+**Recommended action:** Consider adding 1–2 registry methodology papers to Tier 4. Candidate: MSBase methodology paper (Butzkueven et al.). Low priority because the registry literature is well-connected to the existing seeds through the DMT and progressive MS citation networks and should surface through T2 expansion.
+
+**Status:** Open — low priority
