@@ -24,16 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -44,9 +34,6 @@ jobs:
       - name: Install npm dependencies
         working-directory: site
         run: npm ci --no-audit --no-fund
-
-      - name: Refresh topic pages and explorer assets from pipeline outputs
-        run: python site/gen_site.py --config config.yaml
 
       - name: Preflight explorer assets
         run: |
