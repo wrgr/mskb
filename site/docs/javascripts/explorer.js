@@ -1,51 +1,38 @@
-// ---- explorer boot diagnostics (must run before anything else) ----
-window.__mskbDebug = function (msg) {
-  try {
-    var panel = document.getElementById("mskb-debug-panel");
-    if (!panel) {
-      panel = document.createElement("div");
-      panel.id = "mskb-debug-panel";
-      panel.style.cssText = "position:fixed;left:8px;bottom:8px;z-index:999999;max-width:46vw;max-height:40vh;overflow:auto;background:#111;color:#0f0;font:11px/1.35 ui-monospace,Menlo,Consolas,monospace;padding:8px 10px;border:1px solid #0f0;border-radius:6px;white-space:pre-wrap;box-shadow:0 4px 12px rgba(0,0,0,0.4);";
-      panel.innerHTML = '<strong style="color:#fff;">mskb debug</strong> <a href="#" id="mskb-debug-close" style="color:#0ff;float:right;">close</a><br>';
-      (document.body || document.documentElement).appendChild(panel);
-      var closer = document.getElementById("mskb-debug-close");
-      if (closer) closer.addEventListener("click", function (e) { e.preventDefault(); panel.style.display = "none"; });
-    }
-    var line = document.createElement("div");
-    var t = new Date().toISOString().slice(11, 23);
-    line.textContent = "[" + t + "] " + String(msg);
-    panel.appendChild(line);
-    if (window.console && console.log) console.log("[mskb]", msg);
-  } catch (_) { /* swallow */ }
-};
-(function explorerBootDiagnostics() {
-  try {
-    window.__mskbDebug("boot: inline script reached");
-    window.__mskbDebug("vendors: cytoscape=" + (typeof window.cytoscape));
-    var dimsEl = document.getElementById("paper-graph");
-    if (dimsEl) {
-      var r = dimsEl.getBoundingClientRect();
-      window.__mskbDebug("paper-graph rect: " + Math.round(r.width) + "x" + Math.round(r.height) + " at " + Math.round(r.top));
-    } else {
-      window.__mskbDebug("paper-graph: NOT FOUND in DOM");
-    }
-    window.addEventListener("error", function (event) {
-      var msg = (event && event.error && event.error.message) || (event && event.message) || "Unknown script error";
-      var stack = (event && event.error && event.error.stack) || "";
-      window.__mskbDebug("ERROR: " + String(msg) + "\n" + String(stack));
-      if (window.console && console.error) console.error("[explorer-boot]", msg, stack);
-    });
-    window.addEventListener("unhandledrejection", function (event) {
-      var reason = event && event.reason;
-      var msg = (reason && reason.message) || String(reason || "Unknown rejection");
-      window.__mskbDebug("REJECTION: " + String(msg));
-      if (window.console && console.error) console.error("[explorer-boot-rejection]", reason);
-    });
-  } catch (e) {
-    if (window.console && console.error) console.error("[explorer-boot-diag]", e);
-  }
-})();
+// Main explorer IIFE. Pure helpers + constants live in explorer/utils.js
+// (loaded first as a classic <script> so `window.MSKBExplorerUtils` is
+// available here) and the boot-time debug panel lives in explorer/debug.js
+// (also loaded first). This file only contains explorer state, DOM glue,
+// and the cytoscape integration.
 (() => {
+  const {
+    categoryColors,
+    stopWords,
+    FIELD_WEIGHTS,
+    QUERY_EXPANSIONS,
+    escapeHtml,
+    cleanNarrativeText,
+    formatMB,
+    normalizeNode,
+    cleanDoi,
+    citationPlaintextForNode,
+    citationBibtexForNode,
+    normalizeText,
+    stemToken,
+    tokenize,
+    tokenCounts,
+    nodeSetSignature,
+    bm25,
+    colorFor,
+    nodeSizeFromCitations,
+    quantile,
+    computeKcoreThresholds,
+  } = (window.MSKBExplorerUtils || {});
+  if (!escapeHtml) {
+    const msg = "MSKBExplorerUtils not loaded; explorer/utils.js must load before explorer.js";
+    if (window.console && console.error) console.error("[explorer]", msg);
+    if (typeof window.__mskbDebug === "function") window.__mskbDebug("FATAL: " + msg);
+    return;
+  }
   const graphEl = document.getElementById("paper-graph");
   const detailsEl = document.getElementById("paper-details");
   const parentEl = document.getElementById("parent-links");
@@ -95,47 +82,6 @@ window.__mskbDebug = function (msg) {
         { url: "../assets/explorer_graph_mobile.json", detailsUrl: "../assets/explorer_details_mobile.json", mode: "mobile", label: "mobile" },
         { url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" },
       ];
-  const categoryColors = {
-    pathogenesis_and_immunology: "#1f77b4",
-    imaging_and_biomarkers: "#17a2b8",
-    clinical_trials_and_therapeutics: "#d62728",
-    clinical_care_and_management: "#2ca02c",
-    epidemiology_and_population_health: "#9467bd",
-  };
-  const stopWords = new Set([
-    "a","an","the","and","or","but","for","with","from","that","this","into","about","using","through","between",
-    "their","they","are","was","were","how","what","when","where","which","who","our","your","you","can","could",
-    "should","would","will","may","might","have","has","had","been","being","its","it's","it","as","at","by","to",
-    "in","on","of","if","than","then","also","we","i","he","she","them","these","those","there","here","do","does",
-    "did","done","not","no","yes","up","down","over","under","new","study","paper"
-  ]);
-  const FIELD_WEIGHTS = {
-    title: 3.4,
-    abstract: 2.2,
-    summary: 1.6,
-    topic: 1.3,
-    why: 1.0,
-  };
-  const QUERY_EXPANSIONS = {
-    ms: ["multiple", "sclerosis", "demyelination", "neuroinflammation"],
-    rrms: ["relapsing", "remitting", "multiple", "sclerosis"],
-    spms: ["secondary", "progressive", "multiple", "sclerosis"],
-    ppms: ["primary", "progressive", "multiple", "sclerosis"],
-    dmt: ["disease", "modifying", "therapy", "therapeutic"],
-    dmts: ["disease", "modifying", "therapy", "therapeutic"],
-    nfl: ["neurofilament", "biomarker"],
-    ocb: ["oligoclonal", "bands", "csf"],
-    ocbcsf: ["oligoclonal", "bands", "csf"],
-    mri: ["magnetic", "resonance", "imaging", "lesion"],
-    oct: ["optical", "coherence", "tomography", "retinal"],
-    btk: ["brutons", "tyrosine", "kinase", "inhibitor"],
-    eae: ["experimental", "autoimmune", "encephalomyelitis", "model"],
-    ebv: ["epstein", "barr", "virus"],
-    bbb: ["blood", "brain", "barrier"],
-    gwas: ["genome", "wide", "association", "genetic"],
-    cd20: ["b", "cell", "depletion", "ocrelizumab", "rituximab"],
-  };
-
   let selectedNodeId = null;
   let rawNodes = [];
   let rawEdges = [];
@@ -220,79 +166,41 @@ window.__mskbDebug = function (msg) {
     showFatalOverlay("Explorer async error", `${msg}${stack}`);
   });
 
-  function escapeHtml(text) {
-    return (text || "").replace(/[&<>"']/g, (ch) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;",
-    }[ch]));
+  // Resize handling. On iOS Safari, rotating the device, showing/hiding
+  // the URL bar, or toggling the parameters <details> all change the
+  // container's size *after* cytoscape has initialized. Without an
+  // explicit cy.resize() call the canvas stays at the old dimensions and
+  // users see a cropped or blank graph. We listen on three surfaces so
+  // every real resize eventually triggers a refit:
+  //   - window resize / orientationchange (catches rotation and URL bar)
+  //   - ResizeObserver on #paper-graph (catches layout-only changes
+  //     like the parameters tray collapsing)
+  // Both paths debounce into a single resize+fit call.
+  let resizeTimer = null;
+  let lastRect = { w: 0, h: 0 };
+  function scheduleGraphResize() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resizeTimer = null;
+      if (!cy || typeof cy.resize !== "function") return;
+      const rect = graphEl ? graphEl.getBoundingClientRect() : { width: 0, height: 0 };
+      if (!(rect.width > 0 && rect.height > 0)) return;
+      if (Math.abs(rect.width - lastRect.w) < 1 && Math.abs(rect.height - lastRect.h) < 1) {
+        return;
+      }
+      lastRect = { w: rect.width, h: rect.height };
+      try {
+        cy.resize();
+        cy.fit(undefined, 30);
+      } catch (_) { /* never let a resize tear down the page */ }
+    }, 150);
   }
-
-  function cleanNarrativeText(text) {
-    let t = String(text || "").trim();
-    if (!t) return "";
-    t = t.replace(/\bnan\b/gi, "").replace(/\s{2,}/g, " ").trim();
-    const genericPatterns = [
-      /^this\s+\d{4}(?:\.0)?\s+paper\s+in\s+.+?contributes\s+to\s+our\s+understanding\s+of\s+multiple\s+sclerosis\.?$/i,
-      /^this\s+paper\s+in\s+.+?contributes\s+to\s+our\s+understanding\s+of\s+multiple\s+sclerosis\.?$/i,
-    ];
-    if (genericPatterns.some((rx) => rx.test(t))) {
-      return "";
-    }
-    return t;
-  }
-
-  function formatMB(bytes) {
-    if (!Number.isFinite(bytes) || bytes <= 0) return "n/a";
-    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-  }
-
-  function normalizeNode(node) {
-    const n = { ...(node || {}) };
-    n.id = String(n.id || "");
-    n.title = String(n.title || "Untitled");
-    n.year = Number.isFinite(Number(n.year)) ? Math.trunc(Number(n.year)) : null;
-    n.source_url = String(n.source_url || "").trim();
-    n.doi = String(n.doi || "").trim();
-    n.first_author = String(n.first_author || "").trim();
-    n.venue = String(n.venue || "").trim();
-    n.topic_label = String(n.topic_label || "").trim();
-    n.importance = Number(n.importance || 0);
-    n.age_normalized_importance = Number(n.age_normalized_importance || 0);
-    n.rank_age_normalized_importance = Number(n.rank_age_normalized_importance || 0);
-    n.citations_per_year = Number(n.citations_per_year || 0);
-    n.paper_age_years = Number(n.paper_age_years || 0);
-    n.citation_count = Math.max(0, Math.trunc(Number(n.citation_count || 0)));
-    n.pagerank = Number(n.pagerank || 0);
-    n.kcore = Math.max(0, Math.trunc(Number(n.kcore || 0)));
-    n.in_degree = Math.max(0, Math.trunc(Number(n.in_degree || 0)));
-    n.out_degree = Math.max(0, Math.trunc(Number(n.out_degree || 0)));
-    n.rank_pagerank = Number(n.rank_pagerank || 0);
-    n.rank_kcore = Number(n.rank_kcore || 0);
-    n.rank_in_degree = Number(n.rank_in_degree || 0);
-    n.core_score = Number(n.core_score || 0);
-    n.difficulty = Math.max(1, Math.min(5, Math.trunc(Number(n.difficulty || 3))));
-    n.has_abstract = Boolean(n.has_abstract);
-    n.tier = String(n.tier || "");
-    n.evidence_type = String(n.evidence_type || "other");
-    n.evidence_strength = Math.max(1, Math.min(5, Math.trunc(Number(n.evidence_strength || 2))));
-    n.abstract = String(n.abstract || "");
-    n.summary = String(n.summary || "");
-    n.summary_source = String(n.summary_source || "");
-    n.why_it_matters = String(n.why_it_matters || "");
-    n.key_takeaways = Array.isArray(n.key_takeaways) ? n.key_takeaways : [];
-    n.summary_generated_at_utc = String(n.summary_generated_at_utc || "");
-    n.distill_method = String(n.distill_method || "");
-    n.summary_certainty_score = Number(n.summary_certainty_score || 0);
-    n.summary_certainty_label = String(n.summary_certainty_label || "");
-    n.summary_disclaimer = String(n.summary_disclaimer || "");
-    n.faithfulness_overlap = Number(n.faithfulness_overlap || 0);
-    n.source_text_hash = String(n.source_text_hash || "");
-    n.source_text_chars = Math.max(0, Math.trunc(Number(n.source_text_chars || 0)));
-    n._detailsLoaded = Boolean(n._detailsLoaded);
-    return n;
+  window.addEventListener("resize", scheduleGraphResize);
+  window.addEventListener("orientationchange", scheduleGraphResize);
+  if (typeof ResizeObserver === "function" && graphEl) {
+    try {
+      new ResizeObserver(scheduleGraphResize).observe(graphEl);
+    } catch (_) { /* older Safari: fall back to window resize only */ }
   }
 
   function decodeGraphPayload(payload) {
@@ -459,86 +367,6 @@ window.__mskbDebug = function (msg) {
     return detailsLoadPromise;
   }
 
-  function cleanDoi(doi) {
-    const value = String(doi || "").trim();
-    if (!value) return "";
-    return value.replace(/^https?:\/\/doi\.org\//i, "");
-  }
-
-  function citationPlaintextForNode(node) {
-    const author = String(node?.first_author || "").trim() || "Unknown author";
-    const year = Number.isFinite(Number(node?.year)) ? Math.trunc(Number(node.year)) : "n.d.";
-    const title = String(node?.title || "Untitled").trim();
-    const venue = String(node?.venue || "").trim();
-    const source = String(node?.source_url || "").trim();
-    const pieces = [`${author}. (${year}). ${title}.`];
-    if (venue) pieces.push(`${venue}.`);
-    if (source) pieces.push(source);
-    return pieces.join(" ").trim();
-  }
-
-  function citationBibtexForNode(node) {
-    const id = String(node?.id || "paper").replace(/[^a-zA-Z0-9]/g, "").slice(0, 12);
-    const year = Number.isFinite(Number(node?.year)) ? String(Math.trunc(Number(node.year))) : "0000";
-    const key = `mskb_${id}_${year}`;
-    const esc = (s) => String(s || "").replace(/\\/g, "\\\\").replace(/\{/g, "\\{").replace(/\}/g, "\\}");
-    const lines = [
-      `@article{${key},`,
-      `  title = {${esc(node?.title || "Untitled")}},`,
-      `  author = {${esc(node?.first_author || "Unknown")}},`,
-      `  year = {${year}},`,
-    ];
-    if (node?.venue) lines.push(`  journal = {${esc(node.venue)}},`);
-    const doi = cleanDoi(node?.doi || "");
-    if (doi) lines.push(`  doi = {${esc(doi)}},`);
-    if (node?.source_url) lines.push(`  url = {${esc(node.source_url)}},`);
-    lines.push("}");
-    return lines.join("\n");
-  }
-
-  function normalizeText(text) {
-    return (text || "")
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function stemToken(token) {
-    let t = token;
-    if (t.length > 6 && t.endsWith("ation")) t = t.slice(0, -5);
-    else if (t.length > 5 && t.endsWith("ing")) t = t.slice(0, -3);
-    else if (t.length > 4 && t.endsWith("ed")) t = t.slice(0, -2);
-    else if (t.length > 4 && t.endsWith("ly")) t = t.slice(0, -2);
-    else if (t.length > 5 && t.endsWith("ment")) t = t.slice(0, -4);
-    else if (t.length > 4 && t.endsWith("ies")) t = `${t.slice(0, -3)}y`;
-    else if (t.length > 4 && t.endsWith("s")) t = t.slice(0, -1);
-    return t;
-  }
-
-  function tokenize(text) {
-    return normalizeText(text)
-      .split(/\s+/)
-      .filter(t => t && t.length > 1 && !stopWords.has(t))
-      .map(stemToken)
-      .filter(t => t.length > 1 && !stopWords.has(t));
-  }
-
-  function tokenCounts(tokens) {
-    const m = new Map();
-    for (const t of tokens) {
-      m.set(t, (m.get(t) || 0) + 1);
-    }
-    return m;
-  }
-
-  function nodeSetSignature(nodes) {
-    if (!nodes || !nodes.length) return "0";
-    const first = nodes[0]?.id || "";
-    const last = nodes[nodes.length - 1]?.id || "";
-    return `${nodes.length}:${first}:${last}`;
-  }
-
   function prepareSearchIndex(nodes) {
     const signature = nodeSetSignature(nodes);
     if (searchIndexCache.signature === signature && searchIndexCache.index) {
@@ -646,49 +474,6 @@ window.__mskbDebug = function (msg) {
       bigrams.push(`${rawTokens[i]} ${rawTokens[i + 1]}`);
     }
     return { queryNorm, rawTokens, terms, idf, bigrams };
-  }
-
-  function bm25(tf, len, avgLen, idf, k1 = 1.35, b = 0.72) {
-    if (!tf) return 0;
-    const denom = tf + k1 * (1 - b + b * (len / Math.max(1e-9, avgLen)));
-    return idf * ((tf * (k1 + 1)) / denom);
-  }
-
-  function colorFor(node) {
-    if (!node || !node.topic_label) return "#4c78a8";
-    const key = (node.topic_label || "").toLowerCase();
-    for (const [cat, color] of Object.entries(categoryColors)) {
-      if (key.includes(cat.replaceAll("_", " ").split(" ")[0])) return color;
-    }
-    return "#4c78a8";
-  }
-
-  function nodeSizeFromCitations(node) {
-    const cites = Math.max(0, Number(node?.citation_count || 0));
-    return Math.max(4, Math.log1p(cites) * 3.2);
-  }
-
-  function quantile(sorted, q) {
-    if (!sorted.length) return 0;
-    const pos = (sorted.length - 1) * q;
-    const base = Math.floor(pos);
-    const rest = pos - base;
-    if (sorted[base + 1] !== undefined) {
-      return sorted[base] + rest * (sorted[base + 1] - sorted[base]);
-    }
-    return sorted[base];
-  }
-
-  function computeKcoreThresholds(nodes) {
-    const values = nodes
-      .map((n) => Number(n.kcore || 0))
-      .filter((v) => Number.isFinite(v))
-      .sort((a, b) => a - b);
-    if (!values.length) return { lowMax: 0, midMax: 0 };
-    return {
-      lowMax: quantile(values, 0.33),
-      midMax: quantile(values, 0.66),
-    };
   }
 
   function kcoreTier(node) {
@@ -859,6 +644,39 @@ window.__mskbDebug = function (msg) {
       return false;
     }
 
+    // Cytoscape crashes internally (inside its renderer's event emitter —
+    // "undefined is not an object evaluating 'ee.emit'") if we hand it a
+    // container with 0x0 dimensions or zero nodes. Guard both cases.
+    if (!graphEl) {
+      showFatalOverlay("Explorer renderer failed to initialize", "#paper-graph is missing from the DOM.");
+      return false;
+    }
+    if (!visibleNodes.length) {
+      killRenderer();
+      graphEl.innerHTML = '<div style="padding:1rem 1.2rem;color:#555;font-family:ui-monospace,Menlo,Consolas,monospace;">No nodes match the current filters. Loosen the Core filter, lower Min in/out-degree, or uncheck &quot;Require abstract&quot; to see papers.</div>';
+      setGraphStatus("No nodes visible with current filters.", true);
+      return false;
+    }
+    {
+      const rect = graphEl.getBoundingClientRect();
+      if (!(rect.width > 0 && rect.height > 0)) {
+        // iOS Safari occasionally measures 0x0 the first tick (URL-bar
+        // layout thrash, reveal animations, details/summary collapse).
+        // Defer one rAF and retry; if it's still 0 just render anyway and
+        // let the resize observer fix it once layout settles.
+        if (window.__mskbDebug) window.__mskbDebug("buildCytoGraph: container=" + Math.round(rect.width) + "x" + Math.round(rect.height) + " (deferring 1 rAF)");
+        if (!buildCytoscapeGraph._retried) {
+          buildCytoscapeGraph._retried = true;
+          requestAnimationFrame(() => {
+            buildCytoscapeGraph._retried = false;
+            buildCytoscapeGraph(positionById);
+          });
+          return false;
+        }
+        buildCytoscapeGraph._retried = false;
+      }
+    }
+
     try {
       killRenderer();
 
@@ -931,13 +749,16 @@ window.__mskbDebug = function (msg) {
         window.__mskbDebug("buildCytoGraph: nodes=" + visibleNodes.length + " edges=" + visibleEdges.length + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
       }
 
+      // NOTE: textureOnViewport and hideEdgesOnViewport used to be on for
+      // perceived pan/zoom performance, but both trigger an internal
+      // renderer emitter path on iOS Safari that crashes on small graphs
+      // with "undefined is not an object (evaluating 'ee.emit')". We drop
+      // them here; the fix is cheap on desktop too.
       cy = CytoCtor({
         container: graphEl,
         elements: elements,
         layout: { name: "preset", fit: true, padding: 30 },
         pixelRatio: 1,
-        textureOnViewport: true,
-        hideEdgesOnViewport: true,
         motionBlur: false,
         autoungrabify: !dragEnabled || isMobileView,
         autounselectify: false,

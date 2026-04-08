@@ -79,12 +79,7 @@ To enable hosting:
 
 After that, every push to `main` that touches `site/**` (or manual run via **Actions -> Deploy MkDocs to gh-pages**) updates the live site.
 
-Manual publish (recommended when iterating locally):
-```bash
-./site/publish_gh_pages.sh
-```
-
-This builds with the project venv, validates required explorer assets, and force-pushes the rendered site to `gh-pages`.
+To preview locally without publishing, use the guarded build above (`site/build_site.py --serve`). The deploy itself is owned by the workflow — do not push to `gh-pages` from a local checkout.
 
 ## Project Structure
 
