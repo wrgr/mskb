@@ -1,3 +1,4 @@
+"""Orchestrate all pipeline stages in sequence from seed governance to KB audit."""
 
 import argparse
 
@@ -15,6 +16,7 @@ from src.seed_governance import run as run_seed_governance
 
 
 def main(config_path: str) -> None:
+    """Run all pipeline stages in sequence for the given config file."""
     print("Stage 0/8: Seed governance checks...")
     run_seed_governance(config_path)
 

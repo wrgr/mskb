@@ -1,3 +1,5 @@
+"""HTTP client for the Semantic Scholar Graph API with caching and retry logic."""
+
 import hashlib
 import json
 import os

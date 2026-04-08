@@ -35,6 +35,10 @@ MAX_CANDIDATES_PER_CONCEPT = 60
 MAX_PER_TOPIC = 8
 DEFAULT_FOUNDATIONAL_COUNT = 8
 DEFAULT_ADVANCED_COUNT = 8
+# Maximum tokens to request from the LLM per concept-linking call.
+LLM_MAX_TOKENS = 1200
+# Maximum characters of abstract included in the concept-linking payload.
+ABSTRACT_SNIPPET_CHARS = 400
 
 # Compact stopword list for lexical overlap scoring.
 STOPWORDS = {
@@ -517,7 +521,7 @@ def _shortlist_payload(shortlist: list[tuple[PaperDoc, float]]) -> list[dict[str
                 "topic_label": paper.topic_label,
                 "importance": round(paper.importance, 6),
                 "score": round(score, 6),
-                "abstract_snippet": _clean_text(paper.abstract)[:400],
+                "abstract_snippet": _clean_text(paper.abstract)[:ABSTRACT_SNIPPET_CHARS],
             }
         )
     return payload
@@ -687,7 +691,7 @@ def _anthropic_select(model: str, prompt: str, timeout_seconds: int = 90) -> dic
     msg = client.messages.create(
         model=model,
         temperature=0,
-        max_tokens=1200,
+        max_tokens=LLM_MAX_TOKENS,
         messages=[{"role": "user", "content": prompt}],
     )
     chunks = []
@@ -950,6 +954,7 @@ def _validate_existing_cache(cache_path: Path, concepts: list[ConceptDoc], paper
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
+    """Build and return the CLI argument parser for the concept-to-paper linking tool."""
     parser = argparse.ArgumentParser(description="Link concepts to papers and maintain data/concept_papers.json cache.")
     parser.add_argument("--config", default="config.yaml", help="Config path (used only for resolving repo root).")
     parser.add_argument("--cache", default=str(DEFAULT_CACHE_PATH), help="Cache output path.")
@@ -971,6 +976,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Validate or refresh the concept-paper cache; return an exit code."""
     parser = build_arg_parser()
     args = parser.parse_args(argv)
 

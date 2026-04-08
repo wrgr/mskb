@@ -1,3 +1,4 @@
+"""HTTP client for the OpenAlex REST API with cursor-based pagination, caching, and retry logic."""
 
 import hashlib
 import json
