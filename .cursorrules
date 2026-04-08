@@ -1,0 +1,100 @@
+# Vibecoding guardrails
+
+Before writing, modifying, or committing any code, check these guardrails.
+Flag me if you are about to violate any of them — do not silently proceed.
+
+---
+
+## 🔒 Security & secrets
+
+- [ ] No hardcoded API keys, tokens, or credentials — even in comments or test files
+- [ ] No eval(), exec(), or dynamic code execution on user-controlled input
+- [ ] No raw string interpolation into SQL, shell commands, or file paths (use parameterized queries)
+- [ ] CORS policies explicitly configured — no wildcard '*' on authenticated endpoints
+- [ ] Authentication and authorization checks present on every protected route or function
+- [ ] Sensitive data (PII, passwords) never logged or written to disk unencrypted
+- [ ] Input validation and sanitization applied at all entry points (forms, API args, file uploads)
+- [ ] Environment variables used for config, not hardcoded — .env not committed to repo
+- [ ] HTTPS enforced; no mixed content; no HTTP redirects from HTTPS origins
+- [ ] File upload handling restricts type, size, and storage location
+
+## 🤖 AI-generation artifacts
+
+- [ ] No silent error swallowing — empty catch blocks, bare `except: pass`, or Promise.catch(()=>{})
+- [ ] No placeholder logic left in non-draft code: TODO, FIXME, NotImplementedError, raise Exception('todo')
+- [ ] All imported packages actually exist and are spelled correctly (check hallucinated imports)
+- [ ] No copy-pasted boilerplate that doesn't match the actual use case (mismatched variable names, wrong schema)
+- [ ] No large commented-out code blocks left in — either delete or document why kept
+- [ ] Generated function/variable names are semantically meaningful, not generic (data, result, temp, foo)
+- [ ] No "assume X is already done" comments without verification that X is actually done
+- [ ] Logic matches the stated spec — re-read the requirement, not just the code
+- [ ] Edge cases explicitly handled: empty input, null/None, zero, negative values, max values
+- [ ] No infinite loops or unbounded recursion without a clear exit condition
+
+## 🧭 Scope creep detection
+
+- [ ] No new files added beyond what the spec requested — each new file justified
+- [ ] No DB schema changes, migrations, or new tables not in the original plan
+- [ ] No new environment variables introduced without explicit acknowledgment
+- [ ] No new third-party packages added without review (check diff vs baseline)
+- [ ] No new API endpoints or routes not in the spec
+- [ ] No new configuration files or settings that change system behavior
+- [ ] Changes are scoped to the files/modules specified — no unrelated refactors
+
+## 📦 Dependency hygiene
+
+- [ ] All dependencies pinned to exact versions or a lockfile is present and committed
+- [ ] No deprecated packages or packages with known critical vulnerabilities (npm audit / pip check / safety)
+- [ ] No wildcard imports: `from module import *`
+- [ ] No unused imports left in files
+- [ ] License compatibility checked for any newly added packages — no GPL contamination of proprietary code
+- [ ] Package added to the right dependency group (dev vs prod vs optional)
+
+## 🧱 Code quality & maintainability
+
+- [ ] No functions exceeding ~60 lines without documented reason for complexity
+- [ ] No nesting depth > 4 levels (arrow anti-pattern in JS, deeply nested conditionals)
+- [ ] Magic numbers and strings extracted to named constants
+- [ ] Consistent naming convention enforced — no mixed camelCase/snake_case within a module
+- [ ] No copy-paste duplication — repeated logic extracted to a shared function
+- [ ] Type hints/annotations present on public function signatures (Python/TS)
+- [ ] Return types and error conditions are explicit — no implicit None returns on error paths
+- [ ] Async/await used consistently — no mixing of promise chains and await in same codebase
+- [ ] No global mutable state without explicit justification and thread-safety consideration
+- [ ] Logging uses structured format and appropriate levels (debug/info/warn/error) — not just print()
+
+## 🧪 Testability & test coverage
+
+- [ ] Every new public function has at least one test (even a stub/smoke test)
+- [ ] Error paths tested — not just the happy path
+- [ ] No untested branching logic in critical code (payment, auth, data mutation)
+- [ ] Mocks and stubs don't shadow or misrepresent real behavior
+- [ ] Tests are deterministic — no random seeds, clock dependencies, or network calls without mocking
+- [ ] Test file naming matches source file — tests are findable
+
+## 📝 Documentation minimum bar
+
+- [ ] Every new module or file has a one-line docstring explaining its purpose
+- [ ] Non-obvious logic has an inline comment — code that required thought to write requires thought to explain
+- [ ] README updated if new setup steps, env vars, or dependencies were added
+- [ ] Public API changes documented (changelog, docstring, or API spec)
+- [ ] Any known limitations or gotchas explicitly noted in code or docs
+
+## 🏗️ Infrastructure & deployment safety
+
+- [ ] No destructive operations (DROP TABLE, rm -rf, truncate) without explicit confirmation logic
+- [ ] Resource cleanup ensured — file handles, DB connections, threads properly closed/joined
+- [ ] Timeouts set on all external calls (HTTP, DB, queue) — no indefinite blocking
+- [ ] Retry logic has exponential backoff and a max retry limit — no tight infinite retry loops
+- [ ] Rate limiting and pagination handled for any API client code
+- [ ] No hardcoded URLs, ports, or hostnames — use config/env
+- [ ] Graceful shutdown handled — no data loss on SIGTERM/SIGINT
+
+## ✨ AI/LLM-specific (if the code uses AI)
+
+- [ ] Prompt templates not exposed to raw user input that could enable prompt injection
+- [ ] LLM output treated as untrusted — validated/sanitized before use in logic or display
+- [ ] Token limits and cost guardrails set — no unbounded context window growth
+- [ ] Fallback behavior defined if model call fails or returns malformed output
+- [ ] PII not sent to external model APIs without consent and data processing agreement
+- [ ] Model and version pinned — not blindly using 'latest'
