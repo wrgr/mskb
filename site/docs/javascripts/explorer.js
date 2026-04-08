@@ -719,6 +719,7 @@ window.__mskbDebug = function (msg) {
   }
 
   let cy = null;
+  let cyBuildGen = 0;
 
   function getCytoCtor() {
     return (typeof window.cytoscape === "function") ? window.cytoscape : null;
@@ -729,6 +730,16 @@ window.__mskbDebug = function (msg) {
       try { cy.destroy(); } catch (_) {}
     }
     cy = null;
+    // Bump generation so any in-flight chunked-add loop bails out.
+    cyBuildGen += 1;
+  }
+
+  function scheduleIdle(fn) {
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(fn, { timeout: 80 });
+    } else {
+      setTimeout(fn, 0);
+    }
   }
 
   function refreshNodeDragToggleLabel() {
@@ -851,7 +862,7 @@ window.__mskbDebug = function (msg) {
     });
   }
 
-  function buildCytoscapeGraph(positionById) {
+  function buildCytoscapeGraph(positionById, onReady) {
     const CytoCtor = getCytoCtor();
     if (!CytoCtor) {
       const detail = `cytoscape=${typeof window.cytoscape}. Vendor script at /javascripts/vendor/cytoscape.min.js may have failed to load.`;
@@ -861,6 +872,7 @@ window.__mskbDebug = function (msg) {
 
     try {
       killRenderer();
+      const myGen = cyBuildGen;
 
       const t0 = (performance && performance.now) ? performance.now() : 0;
       // Pre-aggregate cluster centroids and friendly names while building nodes.
@@ -931,10 +943,12 @@ window.__mskbDebug = function (msg) {
         window.__mskbDebug("buildCytoGraph: nodes=" + visibleNodes.length + " edges=" + visibleEdges.length + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
       }
 
+      // Construct cytoscape with NO elements first; we add them in idle-callback
+      // chunks below to keep the main thread responsive on large payloads.
       cy = CytoCtor({
         container: graphEl,
-        elements: elements,
-        layout: { name: "preset", fit: true, padding: 30 },
+        elements: [],
+        layout: { name: "preset", fit: false, padding: 30 },
         pixelRatio: 1,
         textureOnViewport: true,
         hideEdgesOnViewport: true,
@@ -1011,10 +1025,38 @@ window.__mskbDebug = function (msg) {
         }
       });
 
-      if (window.__mskbDebug) {
-        const t1 = (performance && performance.now) ? performance.now() : 0;
-        window.__mskbDebug("cytoscape ready in " + Math.round(t1 - t0) + " ms");
+      // Drain the elements array into cytoscape in idle-callback chunks so the
+      // main thread stays responsive (avoids "page unresponsive" dialogs on the
+      // initial load with the lite payload).
+      const localCy = cy;
+      const CHUNK = 1500;
+      let drainIdx = 0;
+      function pumpElements() {
+        if (myGen !== cyBuildGen || cy !== localCy) return;
+        const slice = elements.slice(drainIdx, drainIdx + CHUNK);
+        if (slice.length) {
+          try {
+            cy.startBatch();
+            cy.add(slice);
+          } finally {
+            cy.endBatch();
+          }
+        }
+        drainIdx += CHUNK;
+        if (drainIdx < elements.length) {
+          scheduleIdle(pumpElements);
+        } else {
+          try { cy.fit(undefined, 30); } catch (_) {}
+          if (window.__mskbDebug) {
+            const t1 = (performance && performance.now) ? performance.now() : 0;
+            window.__mskbDebug("cytoscape chunked-ready in " + Math.round(t1 - t0) + " ms (" + elements.length + " elements)");
+          }
+          if (typeof onReady === "function") {
+            try { onReady(); } catch (e) { if (window.__mskbDebug) window.__mskbDebug("cy onReady failed: " + e); }
+          }
+        }
       }
+      scheduleIdle(pumpElements);
 
       return true;
     } catch (err) {
@@ -1250,20 +1292,20 @@ window.__mskbDebug = function (msg) {
     rebuildAdjacency(visibleNodes, visibleEdges);
     journeySelection = journeySelection.filter((id) => nodeById.has(id));
     renderJourneySelection();
-    const positionById = buildCommunityPositions(visibleNodes);
     kcoreThresholds = computeKcoreThresholds(visibleNodes);
-    const ready = buildCytoscapeGraph(positionById);
-    if (ready) {
-      styleSelectedSubgraph(null);
-      stabilizeThenSettle(0);
-    }
-
     if (visibleNodes.length) {
-      // Defer initial focus so the first paint lands before we start
-      // an async details fetch and camera animation. Avoids "page
-      // unresponsive" dialogs on the first load.
-      const top = [...visibleNodes].sort((a, b) => (b.importance || 0) - (a.importance || 0))[0];
-      setTimeout(() => { try { focusNode(top.id); } catch (e) { if (window.__mskbDebug) window.__mskbDebug("initial focus failed: " + e); } }, 150);
+      const positionById = buildCommunityPositions(visibleNodes);
+      // Capture the initial-focus target up-front; it'll be invoked from the
+      // chunked-build onReady callback below, after all elements are added.
+      const initialFocusTarget =
+        [...visibleNodes].sort((a, b) => (b.importance || 0) - (a.importance || 0))[0];
+      buildCytoscapeGraph(positionById, () => {
+        styleSelectedSubgraph(null);
+        if (initialFocusTarget) {
+          try { focusNode(initialFocusTarget.id); }
+          catch (e) { if (window.__mskbDebug) window.__mskbDebug("initial focus failed: " + e); }
+        }
+      });
     } else {
       detailsEl.innerHTML = "No papers match the current core/language filter.";
       parentEl.innerHTML = "";

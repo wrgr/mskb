@@ -684,8 +684,8 @@ def _build_explorer_assets(
         encoding="utf-8",
     )
     explorer_cfg = (cfg.get("site", {}) or {}).get("explorer", {}) or {}
-    lite_start_nodes = max(0, _safe_int(explorer_cfg.get("lite_start_nodes", 2500), 2500))
-    mobile_start_nodes = max(0, _safe_int(explorer_cfg.get("mobile_start_nodes", 2500), 2500))
+    lite_start_nodes = max(0, _safe_int(explorer_cfg.get("lite_start_nodes", 1500), 1500))
+    mobile_start_nodes = max(0, _safe_int(explorer_cfg.get("mobile_start_nodes", 1500), 1500))
     lite_payload = payload
     lite_details_payload = details_payload
     if lite_start_nodes > 0 and len(nodes) > lite_start_nodes:
