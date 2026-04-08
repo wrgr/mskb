@@ -1,3 +1,5 @@
+"""Compute relevance scores for all candidate papers and select the final corpus."""
+
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
@@ -286,23 +288,27 @@ def _rebalance_by_category(
     return out
 
 
-def run(config_path: str) -> None:
-    cfg = load_config(config_path)
-    root = Path(config_path).resolve().parent
+def _load_scoring_inputs(
+    cfg: dict,
+    root: Path,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Load and merge canonical papers with graph metrics and supporting tables."""
     norm = root / cfg["output_dir"] / "normalized"
     graph = root / cfg["output_dir"] / "graph"
-
     papers = pd.read_csv(norm / "canonical_papers.csv")
     metrics = pd.read_csv(graph / "paper_graph_metrics.csv") if (graph / "paper_graph_metrics.csv").exists() else pd.DataFrame()
     paper_authors = pd.read_csv(norm / "paper_authors.csv") if (norm / "paper_authors.csv").exists() else pd.DataFrame()
     canonical_authors = pd.read_csv(norm / "canonical_authors.csv") if (norm / "canonical_authors.csv").exists() else pd.DataFrame()
     cocitation_edges = pd.read_csv(graph / "co_citation_edges.csv") if (graph / "co_citation_edges.csv").exists() else pd.DataFrame()
     bibcoupling_edges = pd.read_csv(graph / "bibliographic_coupling_edges.csv") if (graph / "bibliographic_coupling_edges.csv").exists() else pd.DataFrame()
-
     papers = papers.merge(metrics, on="canonical_paper_id", how="left")
     papers["canonical_paper_id"] = papers["canonical_paper_id"].astype(str)
+    return papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges
 
-    anchor_dois = set()
+
+def _collect_anchor_dois(cfg: dict, root: Path) -> set[str]:
+    """Return the set of normalised DOIs for landmark anchor papers from seed files."""
+    anchor_dois: set[str] = set()
     anchor_paths = [
         root / "seeds" / "landmark_anchor_seeds.csv",
         root / cfg["output_dir"] / "audit" / "landmark_anchor_candidates.csv",
@@ -316,14 +322,24 @@ def run(config_path: str) -> None:
                 anchor_dois.update({d for d in anchor_df["doi"].apply(_normalize_doi).tolist() if d})
         except Exception:
             continue
+    return anchor_dois
 
+
+def _add_signal_columns(
+    papers: pd.DataFrame,
+    anchor_dois: set[str],
+    cocitation_edges: pd.DataFrame,
+    bibcoupling_edges: pd.DataFrame,
+    paper_authors: pd.DataFrame,
+) -> None:
+    """Add signal and raw-affinity columns to papers in-place."""
     seed_paper_ids = set(
         papers.loc[papers["all_channels"].fillna("").str.contains("seed_resolution"), "canonical_paper_id"].astype(str)
     )
     cocitation_affinity = _seed_affinity(cocitation_edges, seed_paper_ids)
     bibcoupling_affinity = _seed_affinity(bibcoupling_edges, seed_paper_ids)
 
-    seed_author_ids = set()
+    seed_author_ids: set[str] = set()
     if not paper_authors.empty:
         seed_author_ids = set(
             paper_authors.loc[
@@ -335,7 +351,6 @@ def run(config_path: str) -> None:
     papers["signal_landmark_anchor"] = papers.get("doi", pd.Series("", index=papers.index)).apply(_normalize_doi).isin(anchor_dois).astype(int)
     papers["signal_lexical"] = papers["all_channels"].fillna("").str.contains("lexical").astype(int)
     papers["signal_dataset"] = papers["all_channels"].fillna("").str.contains("dataset").astype(int)
-
     papers["lexical_score_raw"] = papers.apply(
         lambda r: _lexical_score(str(r.get("title", "")), str(r.get("abstract", ""))), axis=1
     )
@@ -354,12 +369,9 @@ def run(config_path: str) -> None:
     else:
         papers["score_core_author_overlap"] = 0.0
 
-    scoring_cfg = cfg.get("scoring", {})
-    ms_focus_cfg = scoring_cfg.get("ms_focus", {})
-    core_context_cfg = scoring_cfg.get("core_vs_context", {})
-    downweight_cfg = scoring_cfg.get("downweight", {})
-    topic_balance_cfg = scoring_cfg.get("topic_balance", {})
 
+def _add_feature_scores(papers: pd.DataFrame, scoring_cfg: dict) -> None:
+    """Compute normalised feature score columns and add them to papers in-place."""
     papers["score_lexical_relevance"] = _normalize_log1p(papers["lexical_score_raw"])
     papers["score_direct_seed_citation"] = papers["signal_seed"].astype(float)
     papers["score_landmark_anchor"] = papers["signal_landmark_anchor"].astype(float)
@@ -374,7 +386,6 @@ def run(config_path: str) -> None:
         0.7 * _normalize_log1p(papers["lineage_score_raw"]) +
         0.3 * _normalize_log1p(papers["seed_reachability_count"])
     )
-
     w = scoring_cfg.get("weights", {})
     papers["score_field_membership_base"] = (
         w["direct_seed_citation"] * papers["score_direct_seed_citation"] +
@@ -386,13 +397,17 @@ def run(config_path: str) -> None:
         w["core_author_overlap"] * papers["score_core_author_overlap"]
     )
 
+
+def _add_ms_focus_labels(
+    papers: pd.DataFrame,
+    ms_focus_cfg: dict,
+    downweight_cfg: dict,
+) -> None:
+    """Compute MS-focus flags, anchor category, evidence type, and score adjustments in-place."""
     ms_focus_text = (
-        papers["title"].fillna("").astype(str)
-        + " "
-        + papers["abstract"].fillna("").astype(str)
-        + " "
-        + papers.get("concepts", pd.Series("", index=papers.index)).fillna("").astype(str)
-        + " "
+        papers["title"].fillna("").astype(str) + " "
+        + papers["abstract"].fillna("").astype(str) + " "
+        + papers.get("concepts", pd.Series("", index=papers.index)).fillna("").astype(str) + " "
         + papers.get("topics", pd.Series("", index=papers.index)).fillna("").astype(str)
     )
     papers["ms_lexical_hits"] = ms_focus_text.apply(lambda t: _count_term_hits(t, MS_FOCUS_TERMS))
@@ -400,8 +415,7 @@ def run(config_path: str) -> None:
     papers["biology_generic_hits"] = ms_focus_text.apply(lambda t: _count_term_hits(t, BIOLOGY_GENERIC_TERMS))
     papers["anchor_category"] = ms_focus_text.apply(_anchor_category_from_text)
     papers["evidence_type"] = papers.apply(
-        lambda r: _evidence_type_from_text(str(r.get("title", "")), str(r.get("abstract", ""))),
-        axis=1,
+        lambda r: _evidence_type_from_text(str(r.get("title", "")), str(r.get("abstract", ""))), axis=1
     )
     papers["evidence_strength"] = papers["evidence_type"].map(EVIDENCE_STRENGTH_MAP).fillna(2).astype(int)
 
@@ -412,45 +426,35 @@ def run(config_path: str) -> None:
     biology_downweight = min(1.0, max(0.0, _safe_float(downweight_cfg.get("biology_no_ms_multiplier", 0.35), 0.35)))
     biology_hit_min = max(1, int(downweight_cfg.get("biology_hit_min", 2)))
 
-    papers["has_ms_focus"] = (
-        (papers["ms_lexical_hits"] >= ms_lexical_min)
-        | (papers["ms_concept_hits"] >= ms_concept_min)
-    )
-    papers["has_strong_ms_focus"] = (
-        (papers["ms_lexical_hits"] >= ms_lexical_min)
-        & (papers["ms_concept_hits"] >= ms_concept_min)
-    )
-    papers["seed_affinity_raw_total"] = (
-        papers["cocitation_seed_affinity_raw"] + papers["bibcoupling_seed_affinity_raw"]
-    )
+    papers["has_ms_focus"] = (papers["ms_lexical_hits"] >= ms_lexical_min) | (papers["ms_concept_hits"] >= ms_concept_min)
+    papers["has_strong_ms_focus"] = (papers["ms_lexical_hits"] >= ms_lexical_min) & (papers["ms_concept_hits"] >= ms_concept_min)
+    papers["seed_affinity_raw_total"] = papers["cocitation_seed_affinity_raw"] + papers["bibcoupling_seed_affinity_raw"]
     papers["biology_no_ms_link"] = (
         (papers["biology_generic_hits"] >= biology_hit_min)
         & (~papers["has_ms_focus"])
         & (papers["seed_affinity_raw_total"] < 3.0)
         & (papers["signal_seed"] == 0)
     )
-
     papers["score_focus_adjustment"] = 1.0
     papers.loc[papers["has_ms_focus"], "score_focus_adjustment"] *= ms_focus_minor_boost
     papers.loc[papers["has_strong_ms_focus"], "score_focus_adjustment"] *= ms_focus_boost
     papers.loc[papers["biology_no_ms_link"], "score_focus_adjustment"] *= biology_downweight
     papers["score_field_membership"] = papers["score_field_membership_base"] * papers["score_focus_adjustment"]
 
+
+def _add_age_normalized_importance(papers: pd.DataFrame) -> None:
+    """Add impact score, age-normalised importance, and citation-rate columns in-place."""
     papers["score_impact"] = (
-        2.0 * papers["score_corpus_citations"] +
-        2.0 * papers["score_pagerank"] +
-        1.5 * papers["score_global_citations"] +
-        1.0 * papers["score_kcore"]
+        2.0 * papers["score_corpus_citations"] + 2.0 * papers["score_pagerank"]
+        + 1.5 * papers["score_global_citations"] + 1.0 * papers["score_kcore"]
     )
     current_year = datetime.now(timezone.utc).year
     papers["year_int"] = pd.to_numeric(papers.get("year"), errors="coerce")
     papers["paper_age_years"] = (current_year - papers["year_int"].fillna(current_year) + 1).clip(lower=1)
     papers["citations_per_year_raw"] = (
-        pd.to_numeric(papers.get("merged_cited_by_count"), errors="coerce").fillna(0.0)
-        / papers["paper_age_years"]
+        pd.to_numeric(papers.get("merged_cited_by_count"), errors="coerce").fillna(0.0) / papers["paper_age_years"]
     )
     papers["score_citations_per_year"] = _normalize_log1p(papers["citations_per_year_raw"])
-
     year_groups = papers["year_int"].fillna(-1).astype(int)
     papers["rank_pagerank_year"] = _rank_within_group(papers["pagerank"], year_groups)
     papers["rank_in_degree_year"] = _rank_within_group(papers["in_degree"], year_groups)
@@ -461,10 +465,17 @@ def run(config_path: str) -> None:
         + 0.20 * papers["rank_in_degree_year"]
     )
     papers["rank_age_normalized_importance"] = _normalize_rank(papers["age_normalized_importance_score"])
-
     papers["paper_importance_score"] = papers["score_impact"]
     papers["score_total"] = papers["score_field_membership"]
 
+
+def _select_final_corpus(
+    papers: pd.DataFrame,
+    scoring_cfg: dict,
+    core_context_cfg: dict,
+    topic_balance_cfg: dict,
+) -> None:
+    """Apply inclusion logic and set in_core_corpus, in_context_corpus, in_final_corpus in-place."""
     papers["n_independent_signals"] = papers[
         ["signal_seed", "signal_landmark_anchor", "signal_lexical", "signal_dataset"]
     ].sum(axis=1)
@@ -480,27 +491,16 @@ def run(config_path: str) -> None:
     bridge_min_kcore = max(0, int(bridge_cfg.get("min_kcore", 4)))
     bridge_signal = (
         (papers["seed_affinity_raw_total"] >= bridge_min_seed_affinity)
-        | (
-            (papers["in_degree"].fillna(0) >= bridge_min_in_degree)
-            & (papers["kcore"].fillna(0) >= bridge_min_kcore)
-        )
+        | ((papers["in_degree"].fillna(0) >= bridge_min_in_degree) & (papers["kcore"].fillna(0) >= bridge_min_kcore))
         | (papers["signal_seed"] == 1)
     )
     papers["in_context_corpus"] = (
-        base_inclusion
-        & (~papers["in_core_corpus"])
-        & bridge_signal
-        & (~papers["biology_no_ms_link"])
+        base_inclusion & (~papers["in_core_corpus"]) & bridge_signal & (~papers["biology_no_ms_link"])
     )
-
     mode = str(core_context_cfg.get("mode", "core_plus_context")).strip().lower()
-    if mode == "core_only":
-        papers["in_final_corpus"] = papers["in_core_corpus"]
-    else:
-        papers["in_final_corpus"] = papers["in_core_corpus"] | papers["in_context_corpus"]
+    papers["in_final_corpus"] = papers["in_core_corpus"] if mode == "core_only" else papers["in_core_corpus"] | papers["in_context_corpus"]
 
     if bool(topic_balance_cfg.get("enabled", False)):
-        target_ranges = topic_balance_cfg.get("target_ranges", {})
         eligible_for_promotion = base_inclusion & (~papers["biology_no_ms_link"])
         papers["in_final_corpus"] = _rebalance_by_category(
             papers=papers,
@@ -508,7 +508,7 @@ def run(config_path: str) -> None:
             eligible_mask=eligible_for_promotion,
             score_col="score_total",
             category_col="anchor_category",
-            target_ranges=target_ranges,
+            target_ranges=topic_balance_cfg.get("target_ranges", {}),
         )
         papers["in_core_corpus"] = papers["in_final_corpus"] & papers["has_ms_focus"]
         papers["in_context_corpus"] = papers["in_final_corpus"] & (~papers["in_core_corpus"])
@@ -521,33 +521,28 @@ def run(config_path: str) -> None:
     papers.loc[papers["in_final_corpus"], "tier"] = "included"
     papers.loc[papers["version_count"].fillna(1).astype(int) > 1, "merge_flag"] = "merged_versions"
     papers["merge_flag"] = papers["merge_flag"].fillna("single_version")
-    papers.to_csv(graph / "scored_papers.csv", index=False)
 
+
+def _write_author_metrics(
+    papers: pd.DataFrame,
+    paper_authors: pd.DataFrame,
+    canonical_authors: pd.DataFrame,
+    graph: Path,
+) -> None:
+    """Compute per-author metrics from paper scores and write author_metrics.csv."""
     if paper_authors.empty:
         canonical_authors.to_csv(graph / "author_metrics.csv", index=False)
         return
 
     author_papers = paper_authors.merge(
-        papers[
-            [
-                "canonical_paper_id",
-                "tier",
-                "score_total",
-                "score_field_membership",
-                "score_impact",
-                "score_lineage",
-                "paper_importance_score",
-                "merged_cited_by_count",
-                "in_degree",
-                "out_degree",
-                "pagerank",
-                "community_id",
-            ]
-        ],
+        papers[[
+            "canonical_paper_id", "tier", "score_total", "score_field_membership",
+            "score_impact", "score_lineage", "paper_importance_score",
+            "merged_cited_by_count", "in_degree", "out_degree", "pagerank", "community_id",
+        ]],
         on="canonical_paper_id",
         how="left",
     )
-
     author_metrics = (
         author_papers.groupby("canonical_author_id", as_index=False)
         .agg(
@@ -567,47 +562,36 @@ def run(config_path: str) -> None:
             dominant_community_id=("community_id", lambda s: s.mode().iloc[0] if not s.mode().empty else -1),
         )
     )
-
-    top3_field = (
-        author_papers.groupby("canonical_author_id")["score_field_membership"]
-        .apply(_top_k_sum)
-        .rename("top3_field_membership_score")
-        .reset_index()
-    )
-    top3_impact = (
-        author_papers.groupby("canonical_author_id")["paper_importance_score"]
-        .apply(_top_k_sum)
-        .rename("top3_paper_importance_score")
-        .reset_index()
-    )
-    top3_lineage = (
-        author_papers.groupby("canonical_author_id")["score_lineage"]
-        .apply(_top_k_sum)
-        .rename("top3_lineage_score")
-        .reset_index()
-    )
-    author_metrics = author_metrics.merge(top3_field, on="canonical_author_id", how="left")
-    author_metrics = author_metrics.merge(top3_impact, on="canonical_author_id", how="left")
-    author_metrics = author_metrics.merge(top3_lineage, on="canonical_author_id", how="left")
+    for col_name, src_col in [
+        ("top3_field_membership_score", "score_field_membership"),
+        ("top3_paper_importance_score", "paper_importance_score"),
+        ("top3_lineage_score", "score_lineage"),
+    ]:
+        top3 = (
+            author_papers.groupby("canonical_author_id")[src_col]
+            .apply(_top_k_sum)
+            .rename(col_name)
+            .reset_index()
+        )
+        author_metrics = author_metrics.merge(top3, on="canonical_author_id", how="left")
 
     author_metrics["author_field_membership_score"] = (
-        2.0 * _normalize_log1p(author_metrics["top3_field_membership_score"]) +
-        1.5 * _normalize_log1p(author_metrics["n_included_papers"]) +
-        0.5 * _normalize_log1p(author_metrics["n_papers"])
+        2.0 * _normalize_log1p(author_metrics["top3_field_membership_score"])
+        + 1.5 * _normalize_log1p(author_metrics["n_included_papers"])
+        + 0.5 * _normalize_log1p(author_metrics["n_papers"])
     )
     author_metrics["author_lineage_score"] = (
-        2.0 * _normalize_log1p(author_metrics["top3_lineage_score"]) +
-        1.0 * _normalize_log1p(author_metrics["n_included_papers"]) +
-        0.5 * _normalize_log1p(author_metrics["n_papers"])
+        2.0 * _normalize_log1p(author_metrics["top3_lineage_score"])
+        + 1.0 * _normalize_log1p(author_metrics["n_included_papers"])
+        + 0.5 * _normalize_log1p(author_metrics["n_papers"])
     )
     author_metrics["author_importance_score"] = (
-        2.0 * _normalize_log1p(author_metrics["top3_paper_importance_score"]) +
-        1.5 * _normalize_log1p(author_metrics["corpus_citations_received"]) +
-        1.0 * _normalize_log1p(author_metrics["total_citations"]) +
-        0.5 * _normalize_log1p(author_metrics["n_included_papers"]) +
-        0.5 * _normalize_rank(author_metrics["total_pagerank"])
+        2.0 * _normalize_log1p(author_metrics["top3_paper_importance_score"])
+        + 1.5 * _normalize_log1p(author_metrics["corpus_citations_received"])
+        + 1.0 * _normalize_log1p(author_metrics["total_citations"])
+        + 0.5 * _normalize_log1p(author_metrics["n_included_papers"])
+        + 0.5 * _normalize_rank(author_metrics["total_pagerank"])
     )
-
     author_metrics = author_metrics.merge(canonical_authors, on="canonical_author_id", how="left")
     author_metrics["display_name"] = (
         author_metrics["display_name"].fillna(author_metrics["norm_name"]).fillna(author_metrics["canonical_author_id"])
@@ -617,6 +601,31 @@ def run(config_path: str) -> None:
         ascending=[False, False, False, False],
     )
     author_metrics.to_csv(graph / "author_metrics.csv", index=False)
+
+
+def run(config_path: str) -> None:
+    """Compute relevance scores, select the final corpus, and write scored_papers.csv and author_metrics.csv."""
+    cfg = load_config(config_path)
+    root = Path(config_path).resolve().parent
+    graph = root / cfg["output_dir"] / "graph"
+
+    papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges = _load_scoring_inputs(cfg, root)
+    anchor_dois = _collect_anchor_dois(cfg, root)
+
+    _add_signal_columns(papers, anchor_dois, cocitation_edges, bibcoupling_edges, paper_authors)
+
+    scoring_cfg = cfg.get("scoring", {})
+    _add_feature_scores(papers, scoring_cfg)
+    _add_ms_focus_labels(papers, scoring_cfg.get("ms_focus", {}), scoring_cfg.get("downweight", {}))
+    _add_age_normalized_importance(papers)
+    _select_final_corpus(
+        papers, scoring_cfg,
+        scoring_cfg.get("core_vs_context", {}),
+        scoring_cfg.get("topic_balance", {}),
+    )
+
+    papers.to_csv(graph / "scored_papers.csv", index=False)
+    _write_author_metrics(papers, paper_authors, canonical_authors, graph)
 
 
 if __name__ == "__main__":

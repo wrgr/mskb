@@ -1,3 +1,5 @@
+"""Retrieve paper candidates from OpenAlex via seed, seed-reference, lexical, and dataset channels."""
+
 import argparse
 import os
 import re
@@ -411,7 +413,80 @@ def _enrich_seed_references(
     return added_rows, added_edges, stats
 
 
+def _empty_enrichment_totals() -> dict:
+    """Return a zeroed enrichment statistics dict."""
+    return {
+        "n_crossref_refs_raw": 0, "n_semantic_scholar_refs_raw": 0,
+        "n_reference_candidates": 0, "n_candidates_with_doi": 0,
+        "n_resolved_via_doi": 0, "n_resolved_via_search": 0,
+        "n_already_in_openalex_refs": 0, "n_unresolved": 0, "n_title_queries_used": 0,
+    }
+
+
+def _run_seed_channel(
+    core_seeds: pd.DataFrame,
+    client: OpenAlexClient,
+    retrieval_cfg: dict,
+    enrichment_enabled: bool,
+    enrichment_cfg: dict,
+    crossref_client: Optional[CrossrefClient],
+    semantic_scholar_client: Optional[SemanticScholarClient],
+) -> tuple[list[dict], list[dict], dict]:
+    """Retrieve papers and citation edges for all core seeds; return rows, edges, enrichment totals."""
+    rows: list[dict] = []
+    citation_edges: list[dict] = []
+    enrichment_totals = _empty_enrichment_totals()
+
+    for _, seed in core_seeds.iterrows():
+        doi = str(seed["doi"]) if pd.notna(seed["doi"]) else ""
+        title = seed["title"]
+        if not doi:
+            continue
+        work = client.get_work_by_doi(doi)
+        if not work:
+            continue
+        existing_reference_ids: set[str] = set()
+        rows.append(_paper_row(work, "seed_resolution", seed_doi=doi, seed_title=title))
+        refs = [r.split("/")[-1] for r in work.get("referenced_works", []) if r]
+        for ref in client.get_multiple_works(refs):
+            rows.append(_paper_row(ref, "seed_reference", seed_doi=doi, seed_title=title))
+            ref_id = str(ref.get("id", "") or "").strip()
+            if ref_id:
+                existing_reference_ids.add(ref_id)
+                citation_edges.append({"source_openalex_id": work.get("id", ""), "target_openalex_id": ref_id, "edge_type": "CITES"})
+        if enrichment_enabled:
+            enriched_rows, enriched_edges, enrich_stats = _enrich_seed_references(
+                seed_doi=doi, seed_title=title, seed_work=work, openalex_client=client,
+                existing_reference_ids=existing_reference_ids, crossref_client=crossref_client,
+                semantic_scholar_client=semantic_scholar_client, enrichment_cfg=enrichment_cfg,
+            )
+            rows.extend(enriched_rows)
+            citation_edges.extend(enriched_edges)
+            for key, value in enrich_stats.items():
+                enrichment_totals[key] += int(value)
+        for citing in client.get_citing_works(work.get("id", ""), max_pages=retrieval_cfg["max_pages_cited_by"]):
+            rows.append(_paper_row(citing, "seed_cited_by", seed_doi=doi, seed_title=title))
+            citing_id = str(citing.get("id", "") or "").strip()
+            work_id = str(work.get("id", "") or "").strip()
+            if citing_id and work_id:
+                citation_edges.append({"source_openalex_id": citing_id, "target_openalex_id": work_id, "edge_type": "CITES"})
+
+    return rows, citation_edges, enrichment_totals
+
+
+def _run_query_channel(
+    client: OpenAlexClient, queries: list[str], channel: str, max_results: int
+) -> list[dict]:
+    """Retrieve papers for a list of search queries under a named channel."""
+    rows: list[dict] = []
+    for query in queries:
+        for work in client.search_works(query, max_results=max_results):
+            rows.append(_paper_row(work, channel, query=query))
+    return rows
+
+
 def run(config_path: str) -> None:
+    """Retrieve paper candidates via seed, lexical, and dataset channels and write candidate_papers.csv."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     outdir = root / cfg["output_dir"] / "raw"
@@ -419,113 +494,56 @@ def run(config_path: str) -> None:
     retrieval_cfg = cfg.get("retrieval", {})
 
     client = OpenAlexClient(
-        base_url=cfg["openalex_base_url"],
-        email=cfg["email"],
-        per_page=retrieval_cfg["per_page"],
-        cache_dir=outdir / "openalex_cache",
+        base_url=cfg["openalex_base_url"], email=cfg["email"],
+        per_page=retrieval_cfg["per_page"], cache_dir=outdir / "openalex_cache",
     )
     enrichment_cfg = retrieval_cfg.get("seed_reference_enrichment", {})
     enrichment_enabled = bool(enrichment_cfg.get("enabled", True))
     enrichment_timeout = int(enrichment_cfg.get("request_timeout_seconds", 30))
 
-    crossref_client = None
+    crossref_client: Optional[CrossrefClient] = None
     if enrichment_enabled and bool(enrichment_cfg.get("use_crossref", True)):
-        crossref_client = CrossrefClient(
-            email=cfg.get("email", ""),
-            timeout=enrichment_timeout,
-            cache_dir=outdir / "crossref_cache",
-        )
+        crossref_client = CrossrefClient(email=cfg.get("email", ""), timeout=enrichment_timeout, cache_dir=outdir / "crossref_cache")
 
-    semantic_scholar_client = None
+    semantic_scholar_client: Optional[SemanticScholarClient] = None
     if enrichment_enabled and bool(enrichment_cfg.get("use_semantic_scholar", True)):
         api_key_env = str(enrichment_cfg.get("semantic_scholar_api_key_env", "SEMANTIC_SCHOLAR_API_KEY"))
         semantic_scholar_client = SemanticScholarClient(
-            api_key=os.environ.get(api_key_env, ""),
-            timeout=enrichment_timeout,
+            api_key=os.environ.get(api_key_env, ""), timeout=enrichment_timeout,
             cache_dir=outdir / "semantic_scholar_cache",
         )
 
-    rows = []
-    citation_edges = []
-    enrichment_totals = {
-        "n_crossref_refs_raw": 0,
-        "n_semantic_scholar_refs_raw": 0,
-        "n_reference_candidates": 0,
-        "n_candidates_with_doi": 0,
-        "n_resolved_via_doi": 0,
-        "n_resolved_via_search": 0,
-        "n_already_in_openalex_refs": 0,
-        "n_unresolved": 0,
-        "n_title_queries_used": 0,
-    }
-
     core_seeds = pd.read_csv(root / "seeds" / "core_seeds.csv")
     framing_seeds = pd.read_csv(root / "seeds" / "framing_seeds.csv")
+    max_per_query = retrieval_cfg["max_search_results_per_query"]
+
+    rows: list[dict] = []
+    citation_edges: list[dict] = []
+    enrichment_totals = _empty_enrichment_totals()
 
     if retrieval_cfg["use_seed_channel"]:
-        for _, seed in core_seeds.iterrows():
-            doi = str(seed["doi"]) if pd.notna(seed["doi"]) else ""
-            title = seed["title"]
-            if not doi:
-                continue
-            work = client.get_work_by_doi(doi)
-            if not work:
-                continue
-
-            existing_reference_ids = set()
-            rows.append(_paper_row(work, "seed_resolution", seed_doi=doi, seed_title=title))
-            refs = [r.split("/")[-1] for r in work.get("referenced_works", []) if r]
-            for ref in client.get_multiple_works(refs):
-                rows.append(_paper_row(ref, "seed_reference", seed_doi=doi, seed_title=title))
-                ref_id = str(ref.get("id", "") or "").strip()
-                if ref_id:
-                    existing_reference_ids.add(ref_id)
-                    citation_edges.append({"source_openalex_id": work.get("id", ""), "target_openalex_id": ref_id, "edge_type": "CITES"})
-
-            if enrichment_enabled:
-                enriched_rows, enriched_edges, enrich_stats = _enrich_seed_references(
-                    seed_doi=doi,
-                    seed_title=title,
-                    seed_work=work,
-                    openalex_client=client,
-                    existing_reference_ids=existing_reference_ids,
-                    crossref_client=crossref_client,
-                    semantic_scholar_client=semantic_scholar_client,
-                    enrichment_cfg=enrichment_cfg,
-                )
-                rows.extend(enriched_rows)
-                citation_edges.extend(enriched_edges)
-                for key, value in enrich_stats.items():
-                    enrichment_totals[key] += int(value)
-
-            for citing in client.get_citing_works(work.get("id", ""), max_pages=retrieval_cfg["max_pages_cited_by"]):
-                rows.append(_paper_row(citing, "seed_cited_by", seed_doi=doi, seed_title=title))
-                citing_id = str(citing.get("id", "") or "").strip()
-                work_id = str(work.get("id", "") or "").strip()
-                if citing_id and work_id:
-                    citation_edges.append({"source_openalex_id": citing_id, "target_openalex_id": work_id, "edge_type": "CITES"})
+        seed_rows, seed_edges, seed_totals = _run_seed_channel(
+            core_seeds, client, retrieval_cfg, enrichment_enabled, enrichment_cfg,
+            crossref_client, semantic_scholar_client,
+        )
+        rows.extend(seed_rows)
+        citation_edges.extend(seed_edges)
+        for key, value in seed_totals.items():
+            enrichment_totals[key] += value
 
     if retrieval_cfg["use_lexical_channel"]:
-        for query in cfg["queries"]["lexical"]:
-            for work in client.search_works(query, max_results=retrieval_cfg["max_search_results_per_query"]):
-                rows.append(_paper_row(work, "lexical", query=query))
-
+        rows.extend(_run_query_channel(client, cfg["queries"]["lexical"], "lexical", max_per_query))
     if retrieval_cfg["use_dataset_channel"]:
-        for query in cfg["queries"]["dataset"]:
-            for work in client.search_works(query, max_results=retrieval_cfg["max_search_results_per_query"]):
-                rows.append(_paper_row(work, "dataset", query=query))
+        rows.extend(_run_query_channel(client, cfg["queries"]["dataset"], "dataset", max_per_query))
 
     candidates = pd.DataFrame(rows).drop_duplicates(subset=["openalex_id", "doi", "title", "channel"])
     candidates.to_csv(outdir / "candidate_papers.csv", index=False)
-
     citation_edges_df = pd.DataFrame(citation_edges).drop_duplicates()
     citation_edges_df.to_csv(outdir / "seed_citation_edges.csv", index=False)
 
     stats_payload = {
-        "n_candidates": int(len(candidates)),
-        "n_seed_edges": int(len(citation_edges_df)),
-        "n_core_seeds": int(len(core_seeds)),
-        "n_framing_seeds": int(len(framing_seeds)),
+        "n_candidates": int(len(candidates)), "n_seed_edges": int(len(citation_edges_df)),
+        "n_core_seeds": int(len(core_seeds)), "n_framing_seeds": int(len(framing_seeds)),
         "seed_reference_enrichment_enabled": enrichment_enabled,
     }
     stats_payload.update({f"enrichment_{k}": int(v) for k, v in enrichment_totals.items()})

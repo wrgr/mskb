@@ -1,3 +1,5 @@
+"""Tests for src/retrieve_corpora: DOI normalisation, candidate deduplication, and OpenAlex matching."""
+
 from src import retrieve_corpora
 
 

@@ -1,3 +1,4 @@
+"""Shared utility functions used across all pipeline stages."""
 
 import hashlib
 import json
@@ -17,21 +18,25 @@ def _coerce_text(value: Any) -> str:
 
 
 def load_config(path: str) -> Dict[str, Any]:
+    """Load a YAML config file and return its contents as a dict."""
     with open(path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
 def ensure_dir(path: Path) -> None:
+    """Create directory (and all parents) if it does not already exist."""
     path.mkdir(parents=True, exist_ok=True)
 
 
 def save_json(obj: Any, path: Path) -> None:
+    """Serialize obj to indented JSON and write to path, creating parents as needed."""
     ensure_dir(path.parent)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=2)
 
 
 def normalize_title(text: str) -> str:
+    """Normalize a title string for fuzzy deduplication by stripping noise and lowercasing."""
     text = _coerce_text(text)
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -44,6 +49,7 @@ def normalize_title(text: str) -> str:
 
 
 def normalize_name(text: str) -> str:
+    """Normalize an author name string for fuzzy comparison."""
     text = _coerce_text(text)
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -54,11 +60,13 @@ def normalize_name(text: str) -> str:
 
 
 def stable_hash(*parts: str) -> str:
+    """Return a stable MD5 hex digest of all parts joined with a separator."""
     joined = "||".join(_coerce_text(part) for part in parts)
     return hashlib.md5(joined.encode("utf-8")).hexdigest()
 
 
 def sha256_file(path: Path) -> str:
+    """Return the SHA-256 hex digest of a file, reading in 1 MB chunks."""
     digest = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
@@ -67,6 +75,7 @@ def sha256_file(path: Path) -> str:
 
 
 def invert_abstract_index(inv_idx: Dict[str, list]) -> str:
+    """Reconstruct abstract text from an OpenAlex inverted index mapping tokens to positions."""
     if not inv_idx:
         return ""
     terms = []
@@ -77,6 +86,7 @@ def invert_abstract_index(inv_idx: Dict[str, list]) -> str:
 
 
 def write_df(df: pd.DataFrame, path: Path) -> None:
+    """Write a DataFrame to Parquet or CSV depending on the path suffix."""
     ensure_dir(path.parent)
     if path.suffix == ".parquet":
         df.to_parquet(path, index=False)

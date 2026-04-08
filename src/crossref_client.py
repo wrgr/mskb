@@ -1,3 +1,5 @@
+"""HTTP client for the Crossref REST API with caching and retry logic."""
+
 import hashlib
 import json
 import os

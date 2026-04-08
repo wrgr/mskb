@@ -1,3 +1,5 @@
+"""Backfill missing abstracts in the canonical corpus from local data and OpenAlex."""
+
 import argparse
 import json
 import os
@@ -49,6 +51,7 @@ def _first_nonempty(values: list[str]) -> str:
 
 
 def run(config_path: str) -> None:
+    """Backfill missing abstracts from local candidate versions then OpenAlex, updating canonical CSVs."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     output_dir = root / cfg["output_dir"]

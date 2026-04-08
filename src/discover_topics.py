@@ -1,3 +1,4 @@
+"""Discover and label research topic clusters from Louvain community assignments in the citation graph."""
 
 import argparse
 import re
@@ -114,6 +115,7 @@ def _estimate_difficulty(texts: list[str]) -> int:
 
 
 def run(config_path: str) -> None:
+    """Discover topic clusters from community assignments and write paper_topics.csv and topic_clusters.csv."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     graph_dir = root / cfg["output_dir"] / "graph"

@@ -1,3 +1,5 @@
+"""Run quality audit gates against the scored paper corpus and emit a report."""
+
 import argparse
 import math
 from datetime import datetime, timezone
@@ -116,6 +118,7 @@ def _build_markdown_report(report: dict) -> str:
 
 
 def run(config_path: str) -> None:
+    """Run KB quality audit gates and write a JSON and Markdown report to the audit directory."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     outdir = root / cfg["output_dir"] / "audit"

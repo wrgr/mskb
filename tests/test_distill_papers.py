@@ -1,3 +1,5 @@
+"""Tests for src/distill_papers: rules-based distillation of paper abstracts."""
+
 import pytest
 
 from src.distill_papers import _rules_based_distill

@@ -1,3 +1,5 @@
+"""Tests for src/discover_topics: topic labelling, spectrum scoring, and difficulty estimation."""
+
 import pandas as pd
 import pytest
 

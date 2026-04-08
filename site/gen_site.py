@@ -31,6 +31,13 @@ CATEGORY_DESCRIPTIONS = {
     "epidemiology_and_population_health": "Incidence, prevalence, environmental and genetic risk factors, and population-level outcomes.",
 }
 
+# Maximum length of a URL slug (characters).
+SLUG_MAX_CHARS = 60
+# Maximum paper IDs stored per concept node in the explorer JSON.
+CONCEPT_PAPER_IDS_LIMIT = 18
+# Maximum characters for a sidebar navigation label.
+SIDEBAR_LABEL_MAX_CHARS = 40
+
 CLUSTER_LABEL_STOPWORDS = {
     "medicine",
     "biology",
@@ -49,7 +56,7 @@ CLUSTER_LABEL_STOPWORDS = {
 
 def _slug(text: str) -> str:
     text = re.sub(r"[^a-z0-9\s]", "", text.lower())
-    return re.sub(r"\s+", "-", text.strip())[:60]
+    return re.sub(r"\s+", "-", text.strip())[:SLUG_MAX_CHARS]
 
 
 def _topic_slug(label: str, topic_id: int) -> str:
@@ -1213,7 +1220,7 @@ def _build_learning_spine(
                 "group": "Concept",
                 "summary": _clean_text(concept_meta.get("description")),
                 "href": f"/mskb/concepts/{_clean_text(concept_meta.get('path'))}/",
-                "paper_ids": paper_ids[:18],
+                "paper_ids": paper_ids[:CONCEPT_PAPER_IDS_LIMIT],
                 "x": round(float(c.get("x", 0.0)), 4),
                 "y": round(float(c.get("y", 0.0)), 4),
                 "layer": int(c.get("layer", 2)),
@@ -1363,7 +1370,7 @@ def _build_research_map(
                 "group": "Concept",
                 "summary": _clean_text(concept.get("description")),
                 "href": f"/mskb/concepts/{_clean_text(concept.get('path'))}/",
-                "paper_ids": paper_ids[:18],
+                "paper_ids": paper_ids[:CONCEPT_PAPER_IDS_LIMIT],
                 "x": round(float(c.get("x", 0.0)), 4),
                 "y": round(float(c.get("y", 0.0)), 4),
                 "layer": int(c.get("layer", 2)),
@@ -1503,6 +1510,7 @@ def _legacy_topic_grid_lines(
 
 
 def generate(config_path: str) -> None:
+    """Generate all MkDocs site content from pipeline outputs under the configured output directory."""
     root = Path(config_path).resolve().parent
     with open(config_path, "r") as f:
         cfg = yaml.safe_load(f)
@@ -1728,7 +1736,7 @@ def generate(config_path: str) -> None:
 
         category_display = CATEGORY_LABELS.get(category, category.replace("_", " ").title())
         page_description = f"{category_display} · {paper_count} papers"
-        sidebar_label = label_display[:40]
+        sidebar_label = label_display[:SIDEBAR_LABEL_MAX_CHARS]
         lines = [
             "---",
             "title: " + _yaml_escape(label_display),

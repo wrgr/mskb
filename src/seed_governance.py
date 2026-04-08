@@ -1,3 +1,5 @@
+"""Validate seed papers against MS-focus criteria and write a governance checklist report."""
+
 import argparse
 import math
 from datetime import datetime, timezone
@@ -260,6 +262,7 @@ def _build_landmark_candidates(root: Path, cfg: dict, outdir: Path) -> dict:
 
 
 def run(config_path: str) -> None:
+    """Run seed governance checks and write the seed checklist report to the audit directory."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     outdir = root / cfg["output_dir"] / "audit"

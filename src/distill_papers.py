@@ -1,3 +1,4 @@
+"""Distill included papers into structured plain-language summaries using rules or an LLM."""
 
 import argparse
 import hashlib
@@ -16,6 +17,13 @@ from .utils import ensure_dir, load_config, save_json
 
 READING_LEVELS = ("basic", "advanced")
 DEFAULT_READING_LEVEL = "basic"
+
+# Maximum tokens to request from the LLM per distillation call.
+LLM_MAX_TOKENS = 1024
+# Maximum characters of source text sent to the LLM in the distillation prompt.
+PROMPT_SOURCE_TEXT_MAX_CHARS = 3000
+# Maximum abstract characters included per paper in topic-overview prompts.
+TOPIC_ABSTRACT_PREVIEW_CHARS = 500
 
 READING_LEVEL_GUIDE = {
     "basic": (
@@ -524,7 +532,7 @@ def _distill_with_api(client, model: str, prompt: str) -> dict | None:
     try:
         message = client.messages.create(
             model=model,
-            max_tokens=1024,
+            max_tokens=LLM_MAX_TOKENS,
             messages=[{"role": "user", "content": prompt}],
         )
         text = message.content[0].text
@@ -539,50 +547,64 @@ def _distill_with_api(client, model: str, prompt: str) -> dict | None:
         return None
 
 
-def _rules_based_distill(row: dict, source_text: str = "", reading_level: str = DEFAULT_READING_LEVEL) -> dict:
-    abstract = _clean_text(source_text) or _clean_text(row.get("abstract", ""))
-    title = str(row.get("title", "") or "")
-    sentences = [s.strip() for s in abstract.replace(". ", ".\n").split("\n") if s.strip()]
+_RESULT_INDICATORS = [
+    "we found", "we show", "results demonstrate", "our findings",
+    "we demonstrate", "we report", "we identified", "our results",
+    "these data", "this study", "we observed",
+]
 
-    result_indicators = ["we found", "we show", "results demonstrate", "our findings",
-                         "we demonstrate", "we report", "we identified", "our results",
-                         "these data", "this study", "we observed"]
+_WHY_PREFIX_RE = re.compile(
+    r"^(this paper investigates|this study (shows|finds|reports)|we (found|show|report) that)\s+",
+    flags=re.IGNORECASE,
+)
+
+
+def _extract_key_sentence_and_takeaways(sentences: list[str]) -> tuple[str, list[str]]:
+    """Return the most result-bearing sentence and up to 3 result takeaways from abstract sentences."""
     key_sentence = sentences[-1] if sentences else ""
     for s in sentences:
-        if any(ind in s.lower() for ind in result_indicators):
+        if any(ind in s.lower() for ind in _RESULT_INDICATORS):
             key_sentence = s
             break
-
-    summary = f"This paper investigates {title.lower().rstrip('.')}. {key_sentence}"
-
-    takeaways = []
+    takeaways: list[str] = []
     for s in sentences:
-        if any(ind in s.lower() for ind in result_indicators):
+        if any(ind in s.lower() for ind in _RESULT_INDICATORS):
             takeaways.append(s)
         if len(takeaways) >= 3:
             break
     if not takeaways and sentences:
         takeaways = sentences[:4]
+    return key_sentence, takeaways
 
-    year = _coerce_int(row.get("year"), default=None)
-    venue = row.get("venue", "")
+
+def _build_why_it_matters(takeaways: list[str], key_sentence: str, title: str, row: dict) -> str:
+    """Compose the 'why it matters for MS' sentence from available signals."""
     if takeaways:
         why_seed = str(takeaways[0]).strip().rstrip(".")
     elif key_sentence:
         why_seed = str(key_sentence).strip().rstrip(".")
     else:
         why_seed = title.lower().rstrip(".")
-    why_seed = re.sub(r"^(this paper investigates|this study (shows|finds|reports)|we (found|show|report) that)\s+", "", why_seed, flags=re.IGNORECASE)
+    why_seed = _WHY_PREFIX_RE.sub("", why_seed)
     if why_seed:
         if why_seed[0].isupper():
             why_seed = why_seed[0].lower() + why_seed[1:]
-        why = f"This matters for MS because {why_seed}."
-    else:
-        venue_txt = str(venue or "").strip()
-        year_txt = str(year) if year is not None else ""
-        context = " ".join(x for x in [year_txt, venue_txt] if x).strip()
-        why = f"This matters for MS because it adds evidence about disease mechanisms and care{f' ({context})' if context else ''}."
+        return f"This matters for MS because {why_seed}."
+    year = _coerce_int(row.get("year"), default=None)
+    venue_txt = str(row.get("venue", "") or "").strip()
+    year_txt = str(year) if year is not None else ""
+    context = " ".join(x for x in [year_txt, venue_txt] if x).strip()
+    return f"This matters for MS because it adds evidence about disease mechanisms and care{f' ({context})' if context else ''}."
 
+
+def _rules_based_distill(row: dict, source_text: str = "", reading_level: str = DEFAULT_READING_LEVEL) -> dict:
+    """Build a structured distillation result using heuristic sentence extraction (no LLM)."""
+    abstract = _clean_text(source_text) or _clean_text(row.get("abstract", ""))
+    title = str(row.get("title", "") or "")
+    sentences = [s.strip() for s in abstract.replace(". ", ".\n").split("\n") if s.strip()]
+    key_sentence, takeaways = _extract_key_sentence_and_takeaways(sentences)
+    summary = f"This paper investigates {title.lower().rstrip('.')}. {key_sentence}"
+    why = _build_why_it_matters(takeaways, key_sentence, title, row)
     structured_takeaways = _structured_takeaways(takeaways, summary=summary, abstract=abstract)
     # Rules-based distillation can't actually rewrite at a target reading
     # level; it extracts sentences verbatim from the source. Stamp the
@@ -621,86 +643,74 @@ def _safe_float(value, default: float = 0.0) -> float:
         return default
 
 
-def _sanitize_distill_result(result: dict | None, reading_level: str | None = None) -> dict:
-    result = result or {}
+_GENERIC_WHY_RE = re.compile(
+    r"^this\s+\d{4}(?:\.0)?\s+paper\s+in\s+.+?contributes\s+to\s+our\s+understanding\s+of\s+multiple\s+sclerosis\.?$",
+    flags=re.IGNORECASE,
+)
 
-    key_takeaways = result.get("key_takeaways", [])
-    if not isinstance(key_takeaways, list):
-        key_takeaways = []
-    key_takeaways = _structured_takeaways(
-        [str(x).strip() for x in key_takeaways if str(x).strip() and str(x).lower() != "nan"],
-        summary=_clean_text(result.get("summary", "")),
-        abstract=_clean_text(result.get("abstract", "")),
+
+def _repair_why_it_matters(why: str, key_takeaways: list[str], summary: str) -> str:
+    """Replace generic or empty 'why it matters' text with a more informative fallback."""
+    generic = (
+        "contributes to our understanding of multiple sclerosis" in why.lower()
+        or bool(_GENERIC_WHY_RE.match(why))
     )
+    if why and not generic:
+        return why
+    fallback = key_takeaways[0] if key_takeaways else summary
+    fallback = _WHY_PREFIX_RE.sub("", str(fallback).strip().rstrip("."))
+    if fallback:
+        if fallback[0].isupper():
+            fallback = fallback[0].lower() + fallback[1:]
+        return f"This matters for MS because {fallback}."
+    return "This matters for MS because it adds actionable evidence for understanding or managing the disease."
 
-    jargon = result.get("jargon", [])
-    if not isinstance(jargon, list):
-        jargon = []
-    clean_jargon = []
-    for item in jargon:
+
+def _clean_jargon_list(raw: list) -> list[dict]:
+    """Return a cleaned list of {term, definition} dicts, dropping blank or NaN terms."""
+    clean: list[dict] = []
+    for item in raw:
         if isinstance(item, dict):
             term = str(item.get("term", "")).strip()
             definition = str(item.get("definition", "")).strip()
             if term and term.lower() != "nan":
-                clean_jargon.append({"term": term, "definition": definition})
+                clean.append({"term": term, "definition": definition})
+    return clean
 
-    summary = _clean_text(result.get("summary", ""))
-    why = _clean_text(result.get("why_it_matters", ""))
-    summary = re.sub(r"\bnan\b", "", summary, flags=re.IGNORECASE).strip()
-    summary = re.sub(r"\s{2,}", " ", summary).strip()
-    why = re.sub(r"\bnan\b", "", why, flags=re.IGNORECASE).strip()
-    why = re.sub(r"\s{2,}", " ", why).strip()
-    generic_why = (
-        "contributes to our understanding of multiple sclerosis" in why.lower()
-        or bool(
-            re.match(
-                r"^this\s+\d{4}(?:\.0)?\s+paper\s+in\s+.+?contributes\s+to\s+our\s+understanding\s+of\s+multiple\s+sclerosis\.?$",
-                why,
-                flags=re.IGNORECASE,
-            )
-        )
+
+def _resolve_reading_level(result: dict, reading_level: str | None) -> str:
+    """Determine the authoritative target reading level for a sanitised result."""
+    if reading_level is not None:
+        return _normalize_reading_level(reading_level)
+    return _normalize_reading_level(result.get("reading_level_target"), default=DEFAULT_READING_LEVEL)
+
+
+def _sanitize_distill_result(result: dict | None, reading_level: str | None = None) -> dict:
+    """Sanitise and normalise a raw distillation result dict, filling in missing fields."""
+    result = result or {}
+
+    raw_takeaways = result.get("key_takeaways", [])
+    if not isinstance(raw_takeaways, list):
+        raw_takeaways = []
+    key_takeaways = _structured_takeaways(
+        [str(x).strip() for x in raw_takeaways if str(x).strip() and str(x).lower() != "nan"],
+        summary=_clean_text(result.get("summary", "")),
+        abstract=_clean_text(result.get("abstract", "")),
     )
-    if not why or generic_why:
-        fallback = key_takeaways[0] if key_takeaways else summary
-        fallback = re.sub(
-            r"^(this paper investigates|this study (shows|finds|reports)|we (found|show|report) that)\s+",
-            "",
-            str(fallback).strip().rstrip("."),
-            flags=re.IGNORECASE,
-        )
-        if fallback:
-            if fallback[0].isupper():
-                fallback = fallback[0].lower() + fallback[1:]
-            why = f"This matters for MS because {fallback}."
-        else:
-            why = "This matters for MS because it adds actionable evidence for understanding or managing the disease."
+    clean_jargon = _clean_jargon_list(result.get("jargon", []) if isinstance(result.get("jargon", []), list) else [])
+
+    summary = re.sub(r"\s{2,}", " ", re.sub(r"\bnan\b", "", _clean_text(result.get("summary", "")), flags=re.IGNORECASE)).strip()
+    why = re.sub(r"\s{2,}", " ", re.sub(r"\bnan\b", "", _clean_text(result.get("why_it_matters", "")), flags=re.IGNORECASE)).strip()
+    why = _repair_why_it_matters(why, key_takeaways, summary)
 
     # Drop low-information boilerplate summaries.
-    if re.match(r"^this paper investigates .+\.$", summary, flags=re.IGNORECASE):
-        if len(summary.split()) <= 8:
-            summary = ""
+    if re.match(r"^this paper investigates .+\.$", summary, flags=re.IGNORECASE) and len(summary.split()) <= 8:
+        summary = ""
 
     key_takeaways = _structured_takeaways(key_takeaways, summary=summary, abstract=_clean_text(result.get("abstract", "")))
     estimated_level = _estimate_language_difficulty(summary, key_takeaways)
-    # If a target reading level is configured, it is authoritative: the
-    # summary was generated to serve that level. Fall back to any previously
-    # stored target, then to the default.
-    if reading_level is not None:
-        target_level = _normalize_reading_level(reading_level)
-    else:
-        prev_target = result.get("reading_level_target")
-        target_level = _normalize_reading_level(prev_target, default=DEFAULT_READING_LEVEL)
+    target_level = _resolve_reading_level(result, reading_level)
     language_difficulty = _reading_level_numeric(target_level)
-
-    summary_source = _clean_text(result.get("summary_source", ""))
-    source_text_hash = _clean_text(result.get("source_text_hash", ""))
-    source_text_chars = _coerce_int(result.get("source_text_chars"), default=0) or 0
-    summary_generated_at_utc = _clean_text(result.get("summary_generated_at_utc", "")) or datetime.now(timezone.utc).isoformat()
-    distill_method = _clean_text(result.get("distill_method", "")) or "rules_based"
-    summary_certainty_score = float(min(max(_safe_float(result.get("summary_certainty_score"), 0.0), 0.0), 1.0))
-    summary_certainty_label = _clean_text(result.get("summary_certainty_label", ""))
-    summary_disclaimer = _clean_text(result.get("summary_disclaimer", ""))
-    faithfulness_overlap = _safe_float(result.get("faithfulness_overlap", 0.0), 0.0)
 
     return {
         "summary": summary,
@@ -711,19 +721,152 @@ def _sanitize_distill_result(result: dict | None, reading_level: str | None = No
         "reading_level_target": target_level,
         "reading_level_estimated": int(estimated_level),
         "jargon": clean_jargon,
-        "summary_source": summary_source,
-        "source_text_hash": source_text_hash,
-        "source_text_chars": source_text_chars,
-        "summary_generated_at_utc": summary_generated_at_utc,
-        "distill_method": distill_method,
-        "summary_certainty_score": summary_certainty_score,
-        "summary_certainty_label": summary_certainty_label,
-        "summary_disclaimer": summary_disclaimer,
-        "faithfulness_overlap": faithfulness_overlap,
+        "summary_source": _clean_text(result.get("summary_source", "")),
+        "source_text_hash": _clean_text(result.get("source_text_hash", "")),
+        "source_text_chars": _coerce_int(result.get("source_text_chars"), default=0) or 0,
+        "summary_generated_at_utc": _clean_text(result.get("summary_generated_at_utc", "")) or datetime.now(timezone.utc).isoformat(),
+        "distill_method": _clean_text(result.get("distill_method", "")) or "rules_based",
+        "summary_certainty_score": float(min(max(_safe_float(result.get("summary_certainty_score"), 0.0), 0.0), 1.0)),
+        "summary_certainty_label": _clean_text(result.get("summary_certainty_label", "")),
+        "summary_disclaimer": _clean_text(result.get("summary_disclaimer", "")),
+        "faithfulness_overlap": _safe_float(result.get("faithfulness_overlap", 0.0), 0.0),
     }
 
 
+def _init_api_client(dist_cfg: dict) -> object | None:
+    """Return an initialised Anthropic client if configured and credentials are available, else None."""
+    if dist_cfg.get("provider") != "anthropic":
+        return None
+    try:
+        import anthropic
+        if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
+            print("Anthropic credentials not found. Falling back to rules-based distillation.")
+            return None
+        print("Using Claude API for paper distillation.")
+        return anthropic.Anthropic()
+    except Exception as exc:
+        print(f"Could not initialize Anthropic client ({exc}). Falling back to rules-based distillation.")
+        return None
+
+
+def _load_distill_corpus(
+    graph_dir: Path, max_papers: int, fulltext_by_id: dict
+) -> pd.DataFrame:
+    """Load scored papers, filter to those with usable text, and return the top max_papers by importance."""
+    scored = pd.read_csv(graph_dir / "scored_papers.csv")
+    scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
+    scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
+    has_abstract = ~(scored["abstract"].isna() | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"]))
+    has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))
+    scored = scored[has_abstract | has_fulltext].copy()
+    return scored.sort_values("paper_importance_score", ascending=False).head(max_papers)
+
+
+def _load_topic_lookups(topics_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, dict, dict]:
+    """Load topic clusters and paper-topic mappings; return DataFrames and lookup dicts."""
+    topic_clusters = pd.read_csv(topics_dir / "topic_clusters.csv") if (topics_dir / "topic_clusters.csv").exists() else pd.DataFrame()
+    paper_topics = pd.read_csv(topics_dir / "paper_topics.csv") if (topics_dir / "paper_topics.csv").exists() else pd.DataFrame()
+    topic_labels = dict(zip(topic_clusters["topic_id"], topic_clusters["auto_label"])) if not topic_clusters.empty else {}
+    paper_topic_map = dict(zip(paper_topics["canonical_paper_id"], paper_topics["topic_id"])) if not paper_topics.empty else {}
+    return topic_clusters, paper_topics, topic_labels, paper_topic_map
+
+
+def _configure_reading_levels(dist_cfg: dict) -> tuple[str, list[str]]:
+    """Return (default_level, active_levels) from distillation config."""
+    default_level = _normalize_reading_level(dist_cfg.get("default_reading_level", DEFAULT_READING_LEVEL))
+    configured = dist_cfg.get("reading_levels") or list(READING_LEVELS)
+    if isinstance(configured, str):
+        configured = [configured]
+    active_levels: list[str] = []
+    for lvl in configured:
+        n = _normalize_reading_level(lvl)
+        if n not in active_levels:
+            active_levels.append(n)
+    if not active_levels:
+        active_levels = list(READING_LEVELS)
+    if default_level not in active_levels:
+        default_level = active_levels[0]
+    return default_level, active_levels
+
+
+def _write_summaries_csv(
+    summary_rows: list[dict], active_levels: list[str], outdir: Path,
+    qa_sample_size: int, qa_random_seed: int,
+) -> None:
+    """Serialize summary rows to CSV, encoding list columns as JSON strings."""
+    summaries_df = pd.DataFrame(summary_rows)
+    _generate_faithfulness_qa_outputs(summaries_df=summaries_df, outdir=outdir, sample_size=qa_sample_size, random_seed=qa_random_seed)
+    list_cols = ["key_takeaways", "jargon"] + [f"key_takeaways_{lvl}" for lvl in active_levels] + [f"jargon_{lvl}" for lvl in active_levels]
+    for col in list_cols:
+        if col in summaries_df.columns:
+            summaries_df[col] = summaries_df[col].apply(lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x)
+    summaries_df.to_csv(outdir / "paper_summaries.csv", index=False)
+
+
+def _generate_topic_overviews(
+    topic_clusters: pd.DataFrame,
+    scored: pd.DataFrame,
+    paper_topics: pd.DataFrame,
+    api_client: object | None,
+    model: str,
+    outdir: Path,
+) -> None:
+    """Generate a plain-language overview for each topic cluster and write topic_overviews.csv."""
+    if topic_clusters.empty:
+        return
+    overview_rows = []
+    for _, cluster in topic_clusters.iterrows():
+        tid = cluster["topic_id"]
+        cluster_papers = scored[scored["canonical_paper_id"].isin(
+            paper_topics[paper_topics["topic_id"] == tid]["canonical_paper_id"]
+        )].head(5)
+        if api_client and not cluster_papers.empty:
+            paper_summaries_text = "".join(
+                f"Title: {p.get('title', '')}\nAbstract: {str(p.get('abstract', '') or '')[:TOPIC_ABSTRACT_PREVIEW_CHARS]}\n\n"
+                for _, p in cluster_papers.iterrows()
+            )
+            prompt = TOPIC_OVERVIEW_PROMPT.format(
+                topic_label=cluster["auto_label"],
+                dominant_category=cluster.get("dominant_category", ""),
+                n_papers=cluster["n_papers"],
+                paper_summaries=paper_summaries_text,
+            )
+            try:
+                message = api_client.messages.create(model=model, max_tokens=LLM_MAX_TOKENS, messages=[{"role": "user", "content": prompt}])
+                overview_text = message.content[0].text
+            except Exception:
+                overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
+        else:
+            overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
+        overview_rows.append({
+            "topic_id": tid, "auto_label": cluster["auto_label"], "overview": overview_text,
+            "n_papers": cluster["n_papers"], "difficulty": cluster.get("difficulty", 3),
+            "dominant_category": cluster.get("dominant_category", ""),
+        })
+    pd.DataFrame(overview_rows).to_csv(outdir / "topic_overviews.csv", index=False)
+
+
+def _generate_reading_paths(paper_topics: pd.DataFrame, scored: pd.DataFrame, outdir: Path) -> None:
+    """Build ordered reading paths per topic and write reading_paths.csv."""
+    if paper_topics.empty:
+        return
+    reading_rows = []
+    for tid in paper_topics["topic_id"].unique():
+        topic_paper_ids = set(paper_topics[paper_topics["topic_id"] == tid]["canonical_paper_id"])
+        topic_papers = scored[scored["canonical_paper_id"].isin(topic_paper_ids)].copy()
+        topic_papers = topic_papers.sort_values("paper_importance_score", ascending=False)
+        for pos, (_, p) in enumerate(topic_papers.iterrows()):
+            reading_rows.append({
+                "topic_id": int(tid), "position": pos + 1,
+                "canonical_paper_id": p["canonical_paper_id"],
+                "title": p.get("title", ""), "paper_importance_score": p.get("paper_importance_score", 0.0),
+            })
+    if reading_rows:
+        pd.DataFrame(reading_rows).to_csv(outdir / "reading_paths.csv", index=False)
+
+
 def run(config_path: str) -> None:
+    """Distill included papers into plain-language summaries and write paper_summaries.csv."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     graph_dir = root / cfg["output_dir"] / "graph"
@@ -735,68 +878,15 @@ def run(config_path: str) -> None:
     cache_dir = root / dist_cfg.get("cache_dir", "outputs/distilled/llm_cache")
     ensure_dir(cache_dir)
     model = dist_cfg.get("model", "claude-haiku-4-5-20251001")
-    max_papers = dist_cfg.get("max_papers_per_run", 500)
     batch_size = dist_cfg.get("batch_size", 10)
     qa_sample_size = max(1, int(dist_cfg.get("qa_sample_size", 25)))
     qa_random_seed = int(dist_cfg.get("qa_random_seed", 13))
 
     fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
-
-    scored = pd.read_csv(graph_dir / "scored_papers.csv")
-    scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
-    scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
-    has_abstract = ~(
-        scored["abstract"].isna()
-        | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"])
-    )
-    has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))
-    scored = scored[has_abstract | has_fulltext].copy()
-    scored = scored.sort_values("paper_importance_score", ascending=False).head(max_papers)
-
-    topic_clusters = pd.DataFrame()
-    paper_topics = pd.DataFrame()
-    if (topics_dir / "topic_clusters.csv").exists():
-        topic_clusters = pd.read_csv(topics_dir / "topic_clusters.csv")
-    if (topics_dir / "paper_topics.csv").exists():
-        paper_topics = pd.read_csv(topics_dir / "paper_topics.csv")
-
-    topic_labels = {}
-    if not topic_clusters.empty:
-        topic_labels = dict(zip(topic_clusters["topic_id"], topic_clusters["auto_label"]))
-
-    paper_topic_map = {}
-    if not paper_topics.empty:
-        paper_topic_map = dict(zip(paper_topics["canonical_paper_id"], paper_topics["topic_id"]))
-
-    # Try to initialize Anthropic client
-    api_client = None
-    use_api = dist_cfg.get("provider") == "anthropic"
-    if use_api:
-        try:
-            import anthropic
-            has_api_key = bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"))
-            if not has_api_key:
-                print("Anthropic credentials not found. Falling back to rules-based distillation.")
-            else:
-                api_client = anthropic.Anthropic()
-                print("Using Claude API for paper distillation.")
-        except Exception as e:
-            print(f"Could not initialize Anthropic client ({e}). Falling back to rules-based distillation.")
-            api_client = None
-
-    default_level = _normalize_reading_level(dist_cfg.get("default_reading_level", DEFAULT_READING_LEVEL))
-    configured_levels = dist_cfg.get("reading_levels") or list(READING_LEVELS)
-    if isinstance(configured_levels, str):
-        configured_levels = [configured_levels]
-    active_levels: list[str] = []
-    for lvl in configured_levels:
-        n = _normalize_reading_level(lvl)
-        if n not in active_levels:
-            active_levels.append(n)
-    if not active_levels:
-        active_levels = list(READING_LEVELS)
-    if default_level not in active_levels:
-        default_level = active_levels[0]
+    scored = _load_distill_corpus(graph_dir, dist_cfg.get("max_papers_per_run", 500), fulltext_by_id)
+    topic_clusters, paper_topics, topic_labels, paper_topic_map = _load_topic_lookups(topics_dir)
+    api_client = _init_api_client(dist_cfg)
+    default_level, active_levels = _configure_reading_levels(dist_cfg)
 
     def _distill_one_level(
         paper_row: dict,
@@ -848,7 +938,7 @@ def run(config_path: str) -> None:
                 year=paper_row.get("year", ""),
                 venue=paper_row.get("venue", ""),
                 topic_label=topic_label,
-                abstract=f"[{source_type}] {source_text[:3000]}",
+                abstract=f"[{source_type}] {source_text[:PROMPT_SOURCE_TEXT_MAX_CHARS]}",
             )
             api_result = _distill_with_api(api_client, model, prompt)
             if api_result is None:
@@ -894,21 +984,15 @@ def run(config_path: str) -> None:
         source_hash = hashlib.sha1(source_text.encode("utf-8")).hexdigest()
         generated_at_utc = datetime.now(timezone.utc).isoformat()
 
-        topic_id = paper_topic_map.get(paper_id)
-        topic_label = topic_labels.get(topic_id, "General MS")
+        topic_label = topic_labels.get(paper_topic_map.get(paper_id), "General MS")
         paper_row_dict = row.to_dict()
 
         variants: dict[str, dict] = {}
         for level in active_levels:
             variants[level] = _distill_one_level(
-                paper_row=paper_row_dict,
-                paper_id=paper_id,
-                topic_label=topic_label,
-                source_text=source_text,
-                source_type=source_type,
-                source_hash=source_hash,
-                generated_at_utc=generated_at_utc,
-                level=level,
+                paper_row=paper_row_dict, paper_id=paper_id, topic_label=topic_label,
+                source_text=source_text, source_type=source_type, source_hash=source_hash,
+                generated_at_utc=generated_at_utc, level=level,
             )
             if api_client and variants[level].get("distill_method") == "claude_api":
                 api_call_counter += 1
@@ -917,10 +1001,8 @@ def run(config_path: str) -> None:
 
         default_variant = variants.get(default_level) or next(iter(variants.values()))
         combined: dict = {
-            "canonical_paper_id": paper_id,
-            "title": row.get("title", ""),
-            "year": _coerce_int(row.get("year"), default=None),
-            "doi": row.get("doi", ""),
+            "canonical_paper_id": paper_id, "title": row.get("title", ""),
+            "year": _coerce_int(row.get("year"), default=None), "doi": row.get("doi", ""),
             **default_variant,
             "reading_level_target": default_level,
             "language_difficulty": _reading_level_numeric(default_level),
@@ -938,85 +1020,9 @@ def run(config_path: str) -> None:
         if (idx + 1) % 50 == 0:
             print(f"  Distilled {idx + 1}/{len(scored)} papers (levels: {', '.join(active_levels)})")
 
-    summaries_df = pd.DataFrame(summary_rows)
-    _generate_faithfulness_qa_outputs(
-        summaries_df=summaries_df,
-        outdir=outdir,
-        sample_size=qa_sample_size,
-        random_seed=qa_random_seed,
-    )
-    # Serialize list/dict columns to JSON strings for CSV
-    list_cols = ["key_takeaways", "jargon"]
-    for level in active_levels:
-        list_cols.append(f"key_takeaways_{level}")
-        list_cols.append(f"jargon_{level}")
-    for col in list_cols:
-        if col in summaries_df.columns:
-            summaries_df[col] = summaries_df[col].apply(lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x)
-    summaries_df.to_csv(outdir / "paper_summaries.csv", index=False)
-
-    # Generate topic overviews
-    if not topic_clusters.empty:
-        overview_rows = []
-        for _, cluster in topic_clusters.iterrows():
-            tid = cluster["topic_id"]
-            cluster_papers = scored[scored["canonical_paper_id"].isin(
-                paper_topics[paper_topics["topic_id"] == tid]["canonical_paper_id"]
-            )].head(5)
-
-            if api_client and not cluster_papers.empty:
-                paper_summaries_text = ""
-                for _, p in cluster_papers.iterrows():
-                    paper_summaries_text += f"Title: {p.get('title', '')}\nAbstract: {str(p.get('abstract', '') or '')[:500]}\n\n"
-
-                prompt = TOPIC_OVERVIEW_PROMPT.format(
-                    topic_label=cluster["auto_label"],
-                    dominant_category=cluster.get("dominant_category", ""),
-                    n_papers=cluster["n_papers"],
-                    paper_summaries=paper_summaries_text,
-                )
-                try:
-                    message = api_client.messages.create(
-                        model=model,
-                        max_tokens=1024,
-                        messages=[{"role": "user", "content": prompt}],
-                    )
-                    overview_text = message.content[0].text
-                except Exception as e:
-                    overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
-            else:
-                overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
-
-            overview_rows.append({
-                "topic_id": tid,
-                "auto_label": cluster["auto_label"],
-                "overview": overview_text,
-                "n_papers": cluster["n_papers"],
-                "difficulty": cluster.get("difficulty", 3),
-                "dominant_category": cluster.get("dominant_category", ""),
-            })
-
-        pd.DataFrame(overview_rows).to_csv(outdir / "topic_overviews.csv", index=False)
-
-    # Generate reading paths
-    reading_rows = []
-    if not paper_topics.empty:
-        for tid in paper_topics["topic_id"].unique():
-            topic_paper_ids = set(paper_topics[paper_topics["topic_id"] == tid]["canonical_paper_id"])
-            topic_papers = scored[scored["canonical_paper_id"].isin(topic_paper_ids)].copy()
-            topic_papers = topic_papers.sort_values("paper_importance_score", ascending=False)
-            for pos, (_, p) in enumerate(topic_papers.iterrows()):
-                reading_rows.append({
-                    "topic_id": int(tid),
-                    "position": pos + 1,
-                    "canonical_paper_id": p["canonical_paper_id"],
-                    "title": p.get("title", ""),
-                    "paper_importance_score": p.get("paper_importance_score", 0.0),
-                })
-
-    if reading_rows:
-        pd.DataFrame(reading_rows).to_csv(outdir / "reading_paths.csv", index=False)
-
+    _write_summaries_csv(summary_rows, active_levels, outdir, qa_sample_size, qa_random_seed)
+    _generate_topic_overviews(topic_clusters, scored, paper_topics, api_client, model, outdir)
+    _generate_reading_paths(paper_topics, scored, outdir)
     print(f"Distilled {len(summary_rows)} papers. Outputs in {outdir}")
 
 

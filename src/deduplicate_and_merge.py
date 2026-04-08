@@ -1,3 +1,4 @@
+"""Deduplicate candidate papers by DOI and fuzzy title match, then merge into a canonical corpus."""
 
 import argparse
 from collections import defaultdict
@@ -34,6 +35,7 @@ def _clean_author_name(value: object) -> str:
 
 
 def run(config_path: str) -> None:
+    """Deduplicate and merge candidate papers into canonical_papers.csv and supporting tables."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     raw = root / cfg["output_dir"] / "raw"
