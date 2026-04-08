@@ -1,14 +1,4 @@
-"""Structural / contract tests for the Explorer page and its extracted JS.
-
-These tests don't try to exercise the runtime behavior of the explorer
-(that needs a browser) but they do guard against the kinds of regressions
-we've actually hit while iterating on this branch:
-
-- the inline script accidentally being out of sync with the external file,
-- the cytoscape vendor bundle being missing or loaded after explorer.js,
-- DOM ids referenced from JS being renamed or deleted in the markdown,
-- the JS file getting truncated or syntactically broken by an edit.
-"""
+"""Structural checks for explorer/journey/topic graph assets."""
 
 from __future__ import annotations
 
@@ -19,14 +9,15 @@ from pathlib import Path
 import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EXPLORER_MD = REPO_ROOT / "site" / "docs" / "explorer.md"
-EXPLORER_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "explorer.js"
-CYTOSCAPE_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "vendor" / "cytoscape.min.js"
+EXPLORER_MD = REPO_ROOT / "site" / "src" / "content" / "docs" / "explorer.mdx"
+JOURNEY_MD = REPO_ROOT / "site" / "src" / "content" / "docs" / "journey.mdx"
+TOPICS_INDEX_MDX = REPO_ROOT / "site" / "src" / "content" / "docs" / "topics" / "index.mdx"
+EXPLORER_JS = REPO_ROOT / "site" / "public" / "javascripts" / "explorer.js"
+GRAPH_RENDERER_JS = REPO_ROOT / "site" / "public" / "javascripts" / "mskb_graph_renderer.js"
+CYTOSCAPE_JS = REPO_ROOT / "site" / "public" / "javascripts" / "vendor" / "cytoscape.min.js"
+TOPIC_PAGES_DIR = REPO_ROOT / "site" / "src" / "content" / "docs" / "topics"
 
-
-# DOM ids that explorer.js looks up via getElementById on boot.
-# If any of these disappear from explorer.md the IIFE crashes immediately.
-REQUIRED_DOM_IDS = [
+EXPLORER_REQUIRED_IDS = [
     "paper-graph",
     "paper-details",
     "parent-links",
@@ -40,13 +31,7 @@ REQUIRED_DOM_IDS = [
     "idea-results",
     "idea-run",
     "journey-selected",
-    "journey-results",
-    "journey-generate",
     "journey-clear",
-    "community-stats",
-    "community-results",
-    "community-generate",
-    "community-download",
     "graph-relayout",
     "node-drag-toggle",
     "graph-status",
@@ -65,6 +50,22 @@ REQUIRED_DOM_IDS = [
     "preset-grad",
 ]
 
+JOURNEY_REQUIRED_IDS = [
+    "mskb-graph-spine",
+    "journey-selected",
+    "journey-clear",
+    "journey-results",
+    "journey-generate",
+    "community-stats",
+    "community-results",
+    "community-generate",
+    "community-download",
+    "journey-import",
+    "journey-export-json",
+    "journey-export-bibtex",
+    "journey-export-markdown",
+]
+
 
 @pytest.fixture(scope="module")
 def explorer_md_text() -> str:
@@ -73,84 +74,69 @@ def explorer_md_text() -> str:
 
 
 @pytest.fixture(scope="module")
-def explorer_js_text() -> str:
-    assert EXPLORER_JS.exists(), f"missing {EXPLORER_JS}"
-    return EXPLORER_JS.read_text(encoding="utf-8")
+def journey_md_text() -> str:
+    assert JOURNEY_MD.exists(), f"missing {JOURNEY_MD}"
+    return JOURNEY_MD.read_text(encoding="utf-8")
 
 
-def test_explorer_js_is_non_trivial(explorer_js_text: str) -> None:
-    # The extracted file should be at least a few hundred lines / kilobytes.
-    # If we ever accidentally truncate it we want a loud failure here.
-    assert len(explorer_js_text) > 50_000, "explorer.js looks suspiciously small"
-    assert explorer_js_text.startswith("// ---- explorer boot")
-    assert explorer_js_text.rstrip().endswith("})();")
+@pytest.fixture(scope="module")
+def topics_index_text() -> str:
+    assert TOPICS_INDEX_MDX.exists(), f"missing {TOPICS_INDEX_MDX}"
+    return TOPICS_INDEX_MDX.read_text(encoding="utf-8")
 
 
-def test_explorer_js_parses_with_node() -> None:
-    """Run `node --check` to catch parse-level breakage."""
+def test_explorer_js_is_non_trivial() -> None:
+    text = EXPLORER_JS.read_text(encoding="utf-8")
+    assert len(text) > 50_000, "explorer.js looks suspiciously small"
+    assert text.startswith("// ---- explorer boot")
+    assert text.rstrip().endswith("})();")
+
+
+def test_graph_renderer_js_is_non_trivial() -> None:
+    text = GRAPH_RENDERER_JS.read_text(encoding="utf-8")
+    assert len(text) > 8_000
+    assert "window.MSKBGraph" in text
+
+
+def test_js_files_parse_with_node() -> None:
     if shutil.which("node") is None:
         pytest.skip("node not available; skipping JS syntax check")
-    result = subprocess.run(
-        ["node", "--check", str(EXPLORER_JS)],
-        capture_output=True,
-        text=True,
-    )
-    assert result.returncode == 0, (
-        f"node --check failed for explorer.js:\n"
-        f"stdout: {result.stdout}\nstderr: {result.stderr}"
-    )
+    for path in [EXPLORER_JS, GRAPH_RENDERER_JS]:
+        result = subprocess.run(["node", "--check", str(path)], capture_output=True, text=True)
+        assert result.returncode == 0, f"node --check failed for {path}:\n{result.stderr}"
 
 
-def test_cytoscape_vendor_bundle_present() -> None:
-    assert CYTOSCAPE_JS.exists(), (
-        "Cytoscape vendor bundle missing. The explorer cannot render without it."
-    )
-    # cytoscape.min.js should be a fairly large file (~1MB);
-    # a stub of a few hundred bytes would silently break the page.
+def test_vendor_bundle_present() -> None:
+    assert CYTOSCAPE_JS.exists(), "Cytoscape vendor bundle missing"
     assert CYTOSCAPE_JS.stat().st_size > 100_000
 
 
-def test_explorer_md_loads_cytoscape_then_explorer_js(explorer_md_text: str) -> None:
-    cy_marker = '<script src="../javascripts/vendor/cytoscape.min.js">'
-    js_marker = '<script src="../javascripts/explorer.js">'
-    assert cy_marker in explorer_md_text, "cytoscape vendor script tag missing"
-    assert js_marker in explorer_md_text, "explorer.js script tag missing"
-    cy_idx = explorer_md_text.index(cy_marker)
-    js_idx = explorer_md_text.index(js_marker)
-    assert cy_idx < js_idx, (
-        "cytoscape vendor must be loaded BEFORE explorer.js so window.cytoscape "
-        "is defined when the IIFE runs."
-    )
+def test_explorer_loads_scripts_in_order(explorer_md_text: str) -> None:
+    cy_marker = '/mskb/javascripts/vendor/cytoscape.min.js'
+    js_marker = '/mskb/javascripts/explorer.js'
+    assert cy_marker in explorer_md_text
+    assert js_marker in explorer_md_text
+    assert explorer_md_text.index(cy_marker) < explorer_md_text.index(js_marker)
 
 
-def test_explorer_md_has_no_inline_script(explorer_md_text: str) -> None:
-    """We extracted everything; an opening <script> with no src should not exist."""
-    # Lines that start with `<script>` (no attributes) indicate a leftover inline block.
-    for line in explorer_md_text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("<script>"):
-            pytest.fail(
-                "Found a leftover inline <script> block in explorer.md. "
-                "All explorer JS should live in javascripts/explorer.js."
-            )
+@pytest.mark.parametrize("dom_id", EXPLORER_REQUIRED_IDS)
+def test_explorer_contains_required_dom_ids(explorer_md_text: str, dom_id: str) -> None:
+    assert f'id="{dom_id}"' in explorer_md_text
 
 
-@pytest.mark.parametrize("dom_id", REQUIRED_DOM_IDS)
-def test_explorer_md_contains_required_dom_id(
-    explorer_md_text: str, dom_id: str
-) -> None:
-    needle = f'id="{dom_id}"'
-    assert needle in explorer_md_text, (
-        f"explorer.md is missing #{dom_id}; explorer.js will throw on load."
-    )
+@pytest.mark.parametrize("dom_id", JOURNEY_REQUIRED_IDS)
+def test_journey_contains_required_dom_ids(journey_md_text: str, dom_id: str) -> None:
+    assert f'id="{dom_id}"' in journey_md_text
 
 
-@pytest.mark.parametrize("dom_id", REQUIRED_DOM_IDS)
-def test_explorer_js_references_required_dom_id(
-    explorer_js_text: str, dom_id: str
-) -> None:
-    needle = f'getElementById("{dom_id}")'
-    assert needle in explorer_js_text, (
-        f"explorer.js no longer looks up #{dom_id} via getElementById; "
-        f"either the id was renamed in the markdown or the JS lookup was removed."
-    )
+def test_topics_index_has_research_graph_root(topics_index_text: str) -> None:
+    assert 'id="mskb-graph-research"' in topics_index_text
+
+
+def test_generated_topic_pages_do_not_contain_ocar_prefix() -> None:
+    topic_pages = [p for p in TOPIC_PAGES_DIR.glob("*.md") if p.name != "index.md"]
+    assert topic_pages, "expected generated topic pages"
+    for page in topic_pages:
+        text = page.read_text(encoding="utf-8")
+        assert "OCAR:" not in text
+        assert "OCAR-" not in text

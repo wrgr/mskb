@@ -1,0 +1,106 @@
+import hashlib
+import json
+import os
+import threading
+import time
+from pathlib import Path
+from typing import Dict, List, Optional
+
+import requests
+
+
+class CrossrefClient:
+    def __init__(
+        self,
+        base_url: str = "https://api.crossref.org",
+        email: str = "",
+        timeout: int = 30,
+        cache_dir: Optional[Path] = None,
+        max_retries: int = 3,
+        max_retry_sleep_s: float = 20.0,
+    ):
+        self.base_url = base_url.rstrip("/")
+        self.email = email.strip()
+        self.timeout = max(1, int(timeout))
+        self.max_retries = max(1, int(max_retries))
+        self.max_retry_sleep_s = max(1.0, float(max_retry_sleep_s))
+        self.cache_dir = Path(cache_dir) if cache_dir else None
+        if self.cache_dir:
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.session = requests.Session()
+        ua_email = self.email or "unknown"
+        self.session.headers.update({"User-Agent": f"mskb/0.1 ({ua_email})"})
+
+    def _cache_path(self, path: str, params: Dict) -> Optional[Path]:
+        if not self.cache_dir:
+            return None
+        key = json.dumps({"path": path, "params": params}, sort_keys=True, separators=(",", ":"))
+        return self.cache_dir / f"{hashlib.sha256(key.encode('utf-8')).hexdigest()}.json"
+
+    @staticmethod
+    def _tmp_cache_path(cache_path: Path) -> Path:
+        token = f".{os.getpid()}.{threading.get_ident()}.{time.time_ns()}"
+        return cache_path.with_name(f"{cache_path.name}{token}.tmp")
+
+    def _get(self, path: str, params: Optional[Dict] = None) -> Dict:
+        params = params or {}
+        if self.email:
+            params.setdefault("mailto", self.email)
+        cache_path = self._cache_path(path, params)
+        if cache_path and cache_path.exists():
+            try:
+                with open(cache_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except (OSError, json.JSONDecodeError):
+                cache_path.unlink(missing_ok=True)
+
+        url = f"{self.base_url}{path}"
+        payload: Dict = {}
+        for attempt in range(self.max_retries):
+            r = self.session.get(url, params=params, timeout=self.timeout)
+            if r.status_code == 404:
+                payload = {"_not_found": True}
+                break
+            if r.status_code == 429 or r.status_code >= 500:
+                if attempt + 1 >= self.max_retries:
+                    r.raise_for_status()
+                retry_after = (r.headers.get("retry-after") or "").strip()
+                sleep_s = 1.5 * (attempt + 1)
+                if retry_after.isdigit():
+                    sleep_s = float(retry_after)
+                time.sleep(min(sleep_s, self.max_retry_sleep_s))
+                continue
+            r.raise_for_status()
+            payload = r.json()
+            break
+
+        if cache_path:
+            tmp_path = self._tmp_cache_path(cache_path)
+            try:
+                with open(tmp_path, "w", encoding="utf-8") as f:
+                    json.dump(payload, f)
+                tmp_path.replace(cache_path)
+            except OSError:
+                tmp_path.unlink(missing_ok=True)
+        return payload
+
+    def get_work_by_doi(self, doi: str) -> Optional[Dict]:
+        doi = str(doi or "").strip()
+        if not doi:
+            return None
+        try:
+            payload = self._get(f"/works/{doi}")
+            if payload.get("_not_found"):
+                return None
+            return payload.get("message") or {}
+        except requests.RequestException:
+            return None
+
+    def get_references_by_doi(self, doi: str, max_refs: Optional[int] = None) -> List[Dict]:
+        work = self.get_work_by_doi(doi)
+        if not work:
+            return []
+        refs = list(work.get("reference", []) or [])
+        if max_refs is not None:
+            refs = refs[: max(0, int(max_refs))]
+        return refs

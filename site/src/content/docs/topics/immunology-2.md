@@ -1,26 +1,44 @@
 ---
-title: Immunology / Multiple sclerosis / Medicine
-description: Imaging And Biomarkers · 2140 papers · Difficulty 5/5
+title: Immunology
+description: "Pathogenesis & Immunology · 2140 papers"
 sidebar:
   label: Immunology
+topic_taxonomy:
+  category: pathogenesis_and_immunology
+  category_source: concept
+  category_concept_id: mechanisms_autoimmunity_mechanisms
 ---
 
 ## Overview
 
 This topic cluster covers Immunology / Multiple sclerosis / Medicine and contains 2140 papers.
 
+<p><em>Raw cluster label:</em> Immunology / Multiple sclerosis / Medicine</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_autoimmunity_mechanisms">Autoimmunity mechanisms</a> (7 linked papers) · <a href="/mskb/concepts/mechanisms/autoimmunity-mechanisms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=immune_system_basics">Immune-system basics for MS</a> (6 linked papers) · <a href="/mskb/concepts/foundations/immune-system-basics/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_antigen_presentation_hla">Antigen presentation and HLA</a> (6 linked papers) · <a href="/mskb/concepts/mechanisms/antigen-presentation-hla/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_b_cell_biology">B cell biology</a> (6 linked papers) · <a href="/mskb/concepts/mechanisms/b-cell-biology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_bbb_dysfunction">Blood–brain barrier dysfunction</a> (6 linked papers) · <a href="/mskb/concepts/mechanisms/bbb-dysfunction/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=b_cell_targeted_therapies">B cell–targeted therapies</a> (5 linked papers) · <a href="/mskb/concepts/therapeutics/b-cell-targeted-therapies/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_t_cell_biology">T cell biology</a> (5 linked papers) · <a href="/mskb/concepts/mechanisms/t-cell-biology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_white_matter_lesion_formation">White matter lesion formation</a> (5 linked papers) · <a href="/mskb/concepts/mechanisms/white-matter-lesion-formation/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_relapse_and_remission">Relapses and remission</a> (4 linked papers) · <a href="/mskb/concepts/clinical/relapse-and-remission/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=demyelination_remyelination">Demyelination and remyelination</a> (4 linked papers) · <a href="/mskb/concepts/mechanisms/demyelination-remyelination/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>nlme : Linear and nonlinear mixed effects models</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates nlme : linear and nonlinear mixed effects models. This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</li>
-<li>Challenge: This paper investigates nlme : linear and nonlinear mixed effects models.</li>
-<li>Action: Two prior double-blind, placebo-controlled, randomized trials demonstrated that glatiramer acetate (GA) reduces relapse rates in patients with relapsing remitting multiple sclerosis (RRMS).</li>
-<li>Resolution: Two hundred thirty-nine eligible patients were randomized to receive either 20 mg GA (n = 119) or placebo (n = 120) by daily subcutaneous injection.</li>
+<li>This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</li>
+<li>This paper investigates nlme : linear and nonlinear mixed effects models.</li>
+<li>Two prior double-blind, placebo-controlled, randomized trials demonstrated that glatiramer acetate (GA) reduces relapse rates in patients with relapsing remitting multiple sclerosis (RRMS).</li>
+<li>Two hundred thirty-nine eligible patients were randomized to receive either 20 mg GA (n = 119) or placebo (n = 120) by daily subcutaneous injection.</li>
 </ul>
 <p><strong><a href="https://openalex.org/W3086315876" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Saikat DebRoy. (2006). nlme : Linear and nonlinear mixed effects models. Medical Entomology and Zoology. https://openalex.org/W3086315876</p>
@@ -54,7 +72,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Heterogeneity of multiple sclerosis lesions: Implications for the pathogenesis of demyelination</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -64,10 +81,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates heterogeneity of multiple sclerosis lesions: implications for the pathogenesis of demyelination. This pathogenetic heterogeneity of plaques from different MS patients may have fundamental implications for the diagnosis and therapy of this disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</li>
-<li>Challenge: These features are supported by experimental evidence, which demonstrates that fundamentally different processes, such as autoimmunity or virus infection, may induce MS-like inflammatory demyelinating plaques and suggest that MS may be a disease with heterogeneous pathogenetic mechanisms.</li>
-<li>Action: From a large pathology sample of MS, collected in three international centers, we selected 51 biopsies and 32 autopsies that contained actively demyelinating lesions defined by stringent criteria.</li>
-<li>Resolution: This paper investigates heterogeneity of multiple sclerosis lesions: implications for the pathogenesis of demyelination.</li>
+<li>Multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</li>
+<li>These features are supported by experimental evidence, which demonstrates that fundamentally different processes, such as autoimmunity or virus infection, may induce MS-like inflammatory demyelinating plaques and suggest that MS may be a disease with heterogeneous pathogenetic mechanisms.</li>
+<li>From a large pathology sample of MS, collected in three international centers, we selected 51 biopsies and 32 autopsies that contained actively demyelinating lesions defined by stringent criteria.</li>
+<li>This paper investigates heterogeneity of multiple sclerosis lesions: implications for the pathogenesis of demyelination.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/1531-8249(200006)47:6&lt;707::aid-ana3&gt;3.0.co;2-q" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claudia F. Lucchinetti. (2000). Heterogeneity of multiple sclerosis lesions: Implications for the pathogenesis of demyelination. Annals of Neurology. https://doi.org/10.1002/1531-8249(200006)47:6&lt;707::aid-ana3&gt;3.0.co;2-q</p>
@@ -89,7 +106,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B-Cell Depletion with Rituximab in Relapsing–Remitting Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -99,10 +115,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b-cell depletion with rituximab in relapsing–remitting multiple sclerosis. (ClinicalTrials.gov number, NCT00097188 [ClinicalTrials.gov].).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A single course of rituximab reduced inflammatory brain lesions and clinical relapses for 48 weeks.</li>
-<li>Challenge: This trial was not designed to assess long-term safety or to detect uncommon adverse events.</li>
-<li>Action: The data provide evidence of B-cell involvement in the pathophysiology of relapsing-remitting multiple sclerosis.</li>
-<li>Resolution: This paper investigates b-cell depletion with rituximab in relapsing–remitting multiple sclerosis.</li>
+<li>A single course of rituximab reduced inflammatory brain lesions and clinical relapses for 48 weeks.</li>
+<li>This trial was not designed to assess long-term safety or to detect uncommon adverse events.</li>
+<li>The data provide evidence of B-cell involvement in the pathophysiology of relapsing-remitting multiple sclerosis.</li>
+<li>This paper investigates b-cell depletion with rituximab in relapsing–remitting multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa0706383" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephen L. Hauser. (2008). B-Cell Depletion with Rituximab in Relapsing–Remitting Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa0706383</p>
@@ -124,7 +140,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -132,10 +147,10 @@ Papers ordered by importance and pedagogic progression.
 <p>More than 100 years has passed since Charcot, Carswell, Cruveilhier, and others described the clinical and pathological characteristics of multiple sclerosis.1 This enigmatic, relapsing, and often eventually progressive disorder of the white matter of the central nervous system continues to challenge investigators trying to understand the pathogenesis of the disease and prevent its progression.2 There are 250,000 to 350,000 patients with multiple sclerosis in the United States.3 Multiple sclerosis typically begins in early adulthood and has a variable prognosis. Fifty percent of patients will need help walking within 15 years after the onset of disease.4 Advanced magnetic resonance imaging (MRI) . . .</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: More than 100 years has passed since Charcot, Carswell, Cruveilhier, and others described the clinical and pathological characteristics of multiple sclerosis.1 This enigmatic, relapsing, and often eventually progressive disorder of the white matter of the central nervous system continues to challenge investigators trying to understand the pathogenesis of the disease and prevent its progression.2 There are 250,000 to 350,000 patients with multiple sclerosis in the United States.3 Multiple sclerosis typically begins in early adulthood and has a variable prognosis.</li>
-<li>Challenge: Fifty percent of patients will need help walking within 15 years after the onset of disease.4 Advanced magnetic resonance imaging (MRI) .</li>
-<li>Action: .</li>
-<li>Resolution: This paper investigates multiple sclerosis.</li>
+<li>More than 100 years has passed since Charcot, Carswell, Cruveilhier, and others described the clinical and pathological characteristics of multiple sclerosis.1 This enigmatic, relapsing, and often eventually progressive disorder of the white matter of the central nervous system continues to challenge investigators trying to understand the pathogenesis of the disease and prevent its progression.2 There are 250,000 to 350,000 patients with multiple sclerosis in the United States.3 Multiple sclerosis typically begins in early adulthood and has a variable prognosis.</li>
+<li>Fifty percent of patients will need help walking within 15 years after the onset of disease.4 Advanced magnetic resonance imaging (MRI) .</li>
+<li>.</li>
+<li>This paper investigates multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejm200009283431307" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John H. Noseworthy. (2000). Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejm200009283431307</p>
@@ -157,7 +172,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>IMMUNOLOGY OF MULTIPLE SCLEROSIS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -167,10 +181,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates immunology of multiple sclerosis. It is now clear that MS is not just a disease of the immune system, but that factors contributed by the central nervous system are equally important and must be considered in the future.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) develops in young adults with a complex predisposing genetic trait and probably requires an inciting environmental insult such as a viral infection to trigger the disease.</li>
-<li>Challenge: The activation of CD4+ autoreactive T cells and their differentiation into a Th1 phenotype are a crucial events in the initial steps, and these cells are probably also important players in the long-term evolution of the disease.</li>
-<li>Action: Damage of the target tissue, the central nervous system, is, however, most likely mediated by other components of the immune system, such as antibodies, complement, CD8+ T cells, and factors produced by innate immune cells.</li>
-<li>Resolution: This paper investigates immunology of multiple sclerosis.</li>
+<li>Multiple sclerosis (MS) develops in young adults with a complex predisposing genetic trait and probably requires an inciting environmental insult such as a viral infection to trigger the disease.</li>
+<li>The activation of CD4+ autoreactive T cells and their differentiation into a Th1 phenotype are a crucial events in the initial steps, and these cells are probably also important players in the long-term evolution of the disease.</li>
+<li>Damage of the target tissue, the central nervous system, is, however, most likely mediated by other components of the immune system, such as antibodies, complement, CD8+ T cells, and factors produced by innate immune cells.</li>
+<li>This paper investigates immunology of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1146/annurev.immunol.23.021704.115707" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mireia Sospedra. (2005). IMMUNOLOGY OF MULTIPLE SCLEROSIS. Annual Review of Immunology. https://doi.org/10.1146/annurev.immunol.23.021704.115707</p>
@@ -192,7 +206,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Detection of Ectopic B‐cell Follicles with Germinal Centers in the Meninges of Patients with Secondary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -202,10 +215,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates detection of ectopic b‐cell follicles with germinal centers in the meninges of patients with secondary progressive multiple sclerosis. The formation of ectopic lymphoid follicies in the meninges of patients with MS could represent a critical step in maintaining humoral autoimmunity and in disease exacerbation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is characterized by synthesis of oligoclonal immunoglobulins and the presence of B-cell clonal expansions in the central nervous system (CNS).</li>
-<li>Challenge: Because ectopic lymphoid tissue generated at sites of chronic inflammation is thought to be important in sustaining immunopathological processes, we have investigated whether structures resembling lymphoid follicles could be identified in the CNS of MS patients.</li>
-<li>Action: Sections from post-mortem MS brains and spinal cords were screened using immunohistochemistry for the presence of CD20+ B-cells, CD3+ T-cells, CD138+ plasma cells and CD21+, CD35+ follicular dendritic cells, and for the expression of lymphoid chemokines (CXCL 13, CCL21) and peripheral node addressin (PNAd).</li>
-<li>Resolution: This paper investigates detection of ectopic b‐cell follicles with germinal centers in the meninges of patients with secondary progressive multiple sclerosis.</li>
+<li>Multiple sclerosis (MS) is characterized by synthesis of oligoclonal immunoglobulins and the presence of B-cell clonal expansions in the central nervous system (CNS).</li>
+<li>Because ectopic lymphoid tissue generated at sites of chronic inflammation is thought to be important in sustaining immunopathological processes, we have investigated whether structures resembling lymphoid follicles could be identified in the CNS of MS patients.</li>
+<li>Sections from post-mortem MS brains and spinal cords were screened using immunohistochemistry for the presence of CD20+ B-cells, CD3+ T-cells, CD138+ plasma cells and CD21+, CD35+ follicular dendritic cells, and for the expression of lymphoid chemokines (CXCL 13, CCL21) and peripheral node addressin (PNAd).</li>
+<li>This paper investigates detection of ectopic b‐cell follicles with germinal centers in the meninges of patients with secondary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.2004.tb00049.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Barbara Serafini. (2004). Detection of Ectopic B‐cell Follicles with Germinal Centers in the Meninges of Patients with Secondary Progressive Multiple Sclerosis. Brain Pathology. https://doi.org/10.1111/j.1750-3639.2004.tb00049.x</p>
@@ -227,7 +240,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Update on the Autoimmune Pathology of Multiple Sclerosis: B-Cells as Disease-Drivers and Therapeutic Targets</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -237,10 +249,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates update on the autoimmune pathology of multiple sclerosis: b-cells as disease-drivers and therapeutic targets. Intense research efforts focusing on the immunopathological relevance of B-cells has gained significant momentum and given rise to a constellation of promising therapeutic agents for this complex B-cell-driven disease, including novel anti-CD20 antibodies, as well as agents targeting CD19 and BAFF-R.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In 2008, data from the first CD20-targeting B-cell depleting therapeutic trials using rituximab in MS were published.</li>
-<li>Challenge: Since then, there has been a large body of evidence demonstrating the effectiveness of B-cell depletion mediated via anti-CD20 antibodies.</li>
-<li>Action: Intense research efforts focusing on the immunopathological relevance of B-cells has gained significant momentum and given rise to a constellation of promising therapeutic agents for this complex B-cell-driven disease, including novel anti-CD20 antibodies, as well as agents targeting CD19 and BAFF-R.</li>
-<li>Resolution: This paper investigates update on the autoimmune pathology of multiple sclerosis: b-cells as disease-drivers and therapeutic targets.</li>
+<li>In 2008, data from the first CD20-targeting B-cell depleting therapeutic trials using rituximab in MS were published.</li>
+<li>Since then, there has been a large body of evidence demonstrating the effectiveness of B-cell depletion mediated via anti-CD20 antibodies.</li>
+<li>Intense research efforts focusing on the immunopathological relevance of B-cells has gained significant momentum and given rise to a constellation of promising therapeutic agents for this complex B-cell-driven disease, including novel anti-CD20 antibodies, as well as agents targeting CD19 and BAFF-R.</li>
+<li>This paper investigates update on the autoimmune pathology of multiple sclerosis: b-cells as disease-drivers and therapeutic targets.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1159/000377675" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> H.‐Christian von Büdingen. (2015). Update on the Autoimmune Pathology of Multiple Sclerosis: B-Cells as Disease-Drivers and Therapeutic Targets. European Neurology. https://doi.org/10.1159/000377675</p>
@@ -262,7 +274,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis — The Plaque and Its Pathogenesis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -272,10 +283,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis — the plaque and its pathogenesis. This review focuses on the current knowledge of the pathogenesis of the inflammatory and neurodegenerative elements of the multiple sclerosis plaque.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Substantial advances have elucidated some of the central mechanisms underlying the inflammation, demyelination, and neurodegeneration that occur in multiple sclerosis.</li>
-<li>Challenge: Correspondingly, the clinical strategies available for the management of the disease have widened.</li>
-<li>Action: This review focuses on the current knowledge of the pathogenesis of the inflammatory and neurodegenerative elements of the multiple sclerosis plaque.</li>
-<li>Resolution: This paper investigates multiple sclerosis — the plaque and its pathogenesis.</li>
+<li>Substantial advances have elucidated some of the central mechanisms underlying the inflammation, demyelination, and neurodegeneration that occur in multiple sclerosis.</li>
+<li>Correspondingly, the clinical strategies available for the management of the disease have widened.</li>
+<li>This review focuses on the current knowledge of the pathogenesis of the inflammatory and neurodegenerative elements of the multiple sclerosis plaque.</li>
+<li>This paper investigates multiple sclerosis — the plaque and its pathogenesis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmra052130" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Elliot M. Frohman. (2006). Multiple Sclerosis — The Plaque and Its Pathogenesis. New England Journal of Medicine. https://doi.org/10.1056/nejmra052130</p>
@@ -297,7 +308,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -307,10 +317,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a controlled trial of natalizumab for relapsing multiple sclerosis. In a placebo-controlled trial, treatment with natalizumab led to fewer inflammatory brain lesions and fewer relapses over a six-month period in patients with relapsing multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In a placebo-controlled trial, treatment with natalizumab led to fewer inflammatory brain lesions and fewer relapses over a six-month period in patients with relapsing multiple sclerosis.</li>
-<li>Challenge: This paper investigates a controlled trial of natalizumab for relapsing multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In a placebo-controlled trial, treatment with natalizumab led to fewer inflammatory brain lesions and fewer relapses over a six-month period in patients with relapsing multiple sclerosis.</li>
+<li>This paper investigates a controlled trial of natalizumab for relapsing multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa020696" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David H. Miller. (2003). A Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa020696</p>
@@ -332,7 +342,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rituximab in relapsing‐remitting multiple sclerosis: A 72‐week, open‐label, phase I trial</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -342,10 +351,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rituximab in relapsing‐remitting multiple sclerosis: a 72‐week, open‐label, phase i trial. An apparent reduction in relapses was also observed over the 72 weeks compared with the year before therapy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We evaluated the safety, tolerability, pharmacodynamics, and activity of B-cell depletion with rituximab in patients with relapsing-remitting multiple sclerosis, receiving two courses of rituximab 6 months apart, and followed for a total of 72 weeks.</li>
-<li>Challenge: No serious adverse events were noted; events were limited to mild-to-moderate infusion-associated events, which tended to decrease with subsequent infusions.</li>
-<li>Action: Infections were also mild or moderate, and none led to withdrawal.</li>
-<li>Resolution: This paper investigates rituximab in relapsing‐remitting multiple sclerosis: a 72‐week, open‐label, phase i trial.</li>
+<li>We evaluated the safety, tolerability, pharmacodynamics, and activity of B-cell depletion with rituximab in patients with relapsing-remitting multiple sclerosis, receiving two courses of rituximab 6 months apart, and followed for a total of 72 weeks.</li>
+<li>No serious adverse events were noted; events were limited to mild-to-moderate infusion-associated events, which tended to decrease with subsequent infusions.</li>
+<li>Infections were also mild or moderate, and none led to withdrawal.</li>
+<li>This paper investigates rituximab in relapsing‐remitting multiple sclerosis: a 72‐week, open‐label, phase i trial.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21363" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Amit Bar‐Or. (2008). Rituximab in relapsing‐remitting multiple sclerosis: A 72‐week, open‐label, phase I trial. Annals of Neurology. https://doi.org/10.1002/ana.21363</p>
@@ -367,7 +376,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Distinct Effector Cytokine Profiles of Memory and Naive Human B Cell Subsets and Implication in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -377,10 +385,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates distinct effector cytokine profiles of memory and naive human b cell subsets and implication in multiple sclerosis. In this study, we first confirm that effector cytokine production by normal human B cells is context dependent and demonstrate that this involves the reciprocal regulation of proinflammatory and anti-inflammatory cytokines.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we first confirm that effector cytokine production by normal human B cells is context dependent and demonstrate that this involves the reciprocal regulation of proinflammatory and anti-inflammatory cytokines.</li>
-<li>Challenge: Our findings are of particular relevance at a time when B cell directed therapies are being applied to clinical trials of several autoimmune diseases.</li>
-<li>Action: This paper investigates distinct effector cytokine profiles of memory and naive human b cell subsets and implication in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we first confirm that effector cytokine production by normal human B cells is context dependent and demonstrate that this involves the reciprocal regulation of proinflammatory and anti-inflammatory cytokines.</li>
+<li>Our findings are of particular relevance at a time when B cell directed therapies are being applied to clinical trials of several autoimmune diseases.</li>
+<li>This paper investigates distinct effector cytokine profiles of memory and naive human b cell subsets and implication in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.178.10.6092" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martin Duddy. (2007). Distinct Effector Cytokine Profiles of Memory and Naive Human B Cell Subsets and Implication in Multiple Sclerosis. The Journal of Immunology. https://doi.org/10.4049/jimmunol.178.10.6092</p>
@@ -402,7 +410,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Abnormal B‐cell cytokine responses a trigger of T‐cell–mediated disease in MS?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -412,10 +419,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates abnormal b‐cell cytokine responses a trigger of t‐cell–mediated disease in ms?. Our findings point to a plausible mechanism for the long-recognized association between infections and new MS relapses, and provide novel insights into B-cell roles in both health and disease, and into mechanisms contributing to therapeutic effects of B-cell depletion in human autoimmune diseases, including MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings point to a plausible mechanism for the long-recognized association between infections and new MS relapses, and provide novel insights into B-cell roles in both health and disease, and into mechanisms contributing to therapeutic effects of B-cell depletion in human autoimmune diseases, including MS.</li>
-<li>Challenge: This paper investigates abnormal b‐cell cytokine responses a trigger of t‐cell–mediated disease in ms?.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our findings point to a plausible mechanism for the long-recognized association between infections and new MS relapses, and provide novel insights into B-cell roles in both health and disease, and into mechanisms contributing to therapeutic effects of B-cell depletion in human autoimmune diseases, including MS.</li>
+<li>This paper investigates abnormal b‐cell cytokine responses a trigger of t‐cell–mediated disease in ms?.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21939" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Amit Bar‐Or. (2009). Abnormal B‐cell cytokine responses a trigger of T‐cell–mediated disease in MS?. Annals of Neurology. https://doi.org/10.1002/ana.21939</p>
@@ -437,7 +444,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Distinct Patterns of Multiple Sclerosis Pathology Indicates Heterogeneity in Pathogenesis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -447,10 +453,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates distinct patterns of multiple sclerosis pathology indicates heterogeneity in pathogenesis. Our data indicate, that the demyelinated plaques of multiple sclerosis may reflect a common pathological end point of a variety of different immunological mechanisms of myelin destruction in this disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is an inflammatory demyelinating disease of the central nervous system.</li>
-<li>Challenge: The hallmark of its pathology is the demyelinated plaque with reactive glial scar formation.</li>
-<li>Action: However, a detailed analysis of the patterns of demyelination, oligodendroglia cell pathology and the reaction of other tissue components suggests that the pathogenesis of myelin destruction in this disease may be heterogeneous.</li>
-<li>Resolution: This paper investigates distinct patterns of multiple sclerosis pathology indicates heterogeneity in pathogenesis.</li>
+<li>Multiple sclerosis is an inflammatory demyelinating disease of the central nervous system.</li>
+<li>The hallmark of its pathology is the demyelinated plaque with reactive glial scar formation.</li>
+<li>However, a detailed analysis of the patterns of demyelination, oligodendroglia cell pathology and the reaction of other tissue components suggests that the pathogenesis of myelin destruction in this disease may be heterogeneous.</li>
+<li>This paper investigates distinct patterns of multiple sclerosis pathology indicates heterogeneity in pathogenesis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.1996.tb00854.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claudia F. Lucchinetti. (1996). Distinct Patterns of Multiple Sclerosis Pathology Indicates Heterogeneity in Pathogenesis. Brain Pathology. https://doi.org/10.1111/j.1750-3639.1996.tb00854.x</p>
@@ -472,7 +478,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The compartmentalized inflammatory response in the multiple sclerosis brain is composed of tissue-resident CD8+ T lymphocytes and B cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -482,10 +487,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the compartmentalized inflammatory response in the multiple sclerosis brain is composed of tissue-resident cd8+ t lymphocytes and b cells. In this study, we performed an in-depth phenotypic characterization of T and B cell infiltrates in a large set of multiple sclerosis cases with different disease and lesion stages and compared the findings with those seen in inflammatory, non-inflammatory and normal human controls.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we performed an in-depth phenotypic characterization of T and B cell infiltrates in a large set of multiple sclerosis cases with different disease and lesion stages and compared the findings with those seen in inflammatory, non-inflammatory and normal human controls.</li>
-<li>Challenge: In multiple sclerosis lesions, we found a dominance of CD8+ T cells and a prominent contribution of CD20+ B cells in all disease courses and lesion stages, including acute multiple sclerosis cases with very short disease duration, while CD4+ T cells were sparse.</li>
-<li>Action: This paper investigates the compartmentalized inflammatory response in the multiple sclerosis brain is composed of tissue-resident cd8+ t lymphocytes and b cells.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we performed an in-depth phenotypic characterization of T and B cell infiltrates in a large set of multiple sclerosis cases with different disease and lesion stages and compared the findings with those seen in inflammatory, non-inflammatory and normal human controls.</li>
+<li>In multiple sclerosis lesions, we found a dominance of CD8+ T cells and a prominent contribution of CD20+ B cells in all disease courses and lesion stages, including acute multiple sclerosis cases with very short disease duration, while CD4+ T cells were sparse.</li>
+<li>This paper investigates the compartmentalized inflammatory response in the multiple sclerosis brain is composed of tissue-resident cd8+ t lymphocytes and b cells.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy151" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Joana Machado‐Santos. (2018). The compartmentalized inflammatory response in the multiple sclerosis brain is composed of tissue-resident CD8+ T lymphocytes and B cells. Brain. https://doi.org/10.1093/brain/awy151</p>
@@ -507,7 +512,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Understanding pathogenesis and therapy of multiple sclerosis via animal models: 70 years of merits and culprits in experimental autoimmune encephalomyelitis research</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -517,10 +521,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates understanding pathogenesis and therapy of multiple sclerosis via animal models: 70 years of merits and culprits in experimental autoimmune encephalomyelitis research. Seventy years after the first description of EAE and the publication of &gt;7000 articles, we are aware of the obvious limitations of EAE as a model of multiple sclerosis, but feel strongly that when used appropriately it will continue to provide a crucial tool for improving our understanding and treatment of this devastating disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In view of disease heterogeneity of multiple sclerosis and limited access to ex vivo specimens, different approaches must be undertaken to better understand disease pathogenesis and new therapeutic challenges.</li>
-<li>Challenge: Here, we critically discuss models of experimental autoimmune encephalomyelitis (EAE) that reproduce specific features of the histopathology and neurobiology of multiple sclerosis and their shortcomings as tools to investigate emerging therapeutic approaches.</li>
-<li>Action: By using EAE models we have understood mechanisms of T-cell mediated immune damage of the CNS, and the associated effector cascade of innate immunity.</li>
-<li>Resolution: This paper investigates understanding pathogenesis and therapy of multiple sclerosis via animal models: 70 years of merits and culprits in experimental autoimmune encephalomyelitis research.</li>
+<li>In view of disease heterogeneity of multiple sclerosis and limited access to ex vivo specimens, different approaches must be undertaken to better understand disease pathogenesis and new therapeutic challenges.</li>
+<li>Here, we critically discuss models of experimental autoimmune encephalomyelitis (EAE) that reproduce specific features of the histopathology and neurobiology of multiple sclerosis and their shortcomings as tools to investigate emerging therapeutic approaches.</li>
+<li>By using EAE models we have understood mechanisms of T-cell mediated immune damage of the CNS, and the associated effector cascade of innate immunity.</li>
+<li>This paper investigates understanding pathogenesis and therapy of multiple sclerosis via animal models: 70 years of merits and culprits in experimental autoimmune encephalomyelitis research.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awl075" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ralf Gold. (2006). Understanding pathogenesis and therapy of multiple sclerosis via animal models: 70 years of merits and culprits in experimental autoimmune encephalomyelitis research. Brain. https://doi.org/10.1093/brain/awl075</p>
@@ -542,7 +546,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Experimental autoimmune encephalomyelitis (EAE) as a model for multiple sclerosis (MS)</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -552,10 +555,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates experimental autoimmune encephalomyelitis (eae) as a model for multiple sclerosis (ms). This allows the eventual development and preclinical testing of a wide range of potential therapeutic interventions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Experimental autoimmune encephalomyelitis (EAE) is the most commonly used experimental model for the human inflammatory demyelinating disease, multiple sclerosis (MS).</li>
-<li>Challenge: EAE is a complex condition in which the interaction between a variety of immunopathological and neuropathological mechanisms leads to an approximation of the key pathological features of MS: inflammation, demyelination, axonal loss and gliosis.</li>
-<li>Action: The counter-regulatory mechanisms of resolution of inflammation and remyelination also occur in EAE, which, therefore can also serve as a model for these processes.</li>
-<li>Resolution: This paper investigates experimental autoimmune encephalomyelitis (eae) as a model for multiple sclerosis (ms).</li>
+<li>Experimental autoimmune encephalomyelitis (EAE) is the most commonly used experimental model for the human inflammatory demyelinating disease, multiple sclerosis (MS).</li>
+<li>EAE is a complex condition in which the interaction between a variety of immunopathological and neuropathological mechanisms leads to an approximation of the key pathological features of MS: inflammation, demyelination, axonal loss and gliosis.</li>
+<li>The counter-regulatory mechanisms of resolution of inflammation and remyelination also occur in EAE, which, therefore can also serve as a model for these processes.</li>
+<li>This paper investigates experimental autoimmune encephalomyelitis (eae) as a model for multiple sclerosis (ms).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1476-5381.2011.01302.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Cris S. Constantinescu. (2011). Experimental autoimmune encephalomyelitis (EAE) as a model for multiple sclerosis (MS). British Journal of Pharmacology. https://doi.org/10.1111/j.1476-5381.2011.01302.x</p>
@@ -577,7 +580,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B cell depletion therapy ameliorates autoimmune disease through ablation of IL-6–producing B cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -587,10 +589,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b cell depletion therapy ameliorates autoimmune disease through ablation of il-6–producing b cells. We demonstrate that BCDT alleviates central nervous system autoimmunity through ablation of IL-6-secreting pathogenic B cells.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We demonstrate that BCDT alleviates central nervous system autoimmunity through ablation of IL-6-secreting pathogenic B cells.</li>
-<li>Challenge: Taking these data together, we conclude that IL-6 secretion is a major mechanism of B cell-driven pathogenesis in T cell-mediated autoimmune disease such as EAE and MS.</li>
-<li>Action: This paper investigates b cell depletion therapy ameliorates autoimmune disease through ablation of il-6–producing b cells.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We demonstrate that BCDT alleviates central nervous system autoimmunity through ablation of IL-6-secreting pathogenic B cells.</li>
+<li>Taking these data together, we conclude that IL-6 secretion is a major mechanism of B cell-driven pathogenesis in T cell-mediated autoimmune disease such as EAE and MS.</li>
+<li>This paper investigates b cell depletion therapy ameliorates autoimmune disease through ablation of il-6–producing b cells.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20111675" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tom A. Barr. (2012). B cell depletion therapy ameliorates autoimmune disease through ablation of IL-6–producing B cells. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20111675</p>
@@ -612,7 +614,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Chemokines in multiple sclerosis: CXCL12 and CXCL13 up-regulation is differentially linked to CNS immune cell recruitment</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -622,10 +623,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates chemokines in multiple sclerosis: cxcl12 and cxcl13 up-regulation is differentially linked to cns immune cell recruitment. This study focused on the chemokines CXCL12 (SDF-1) and CXCL13 (BCA-1), both of which regulate B cell migration in lymphoid tissues.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study focused on the chemokines CXCL12 (SDF-1) and CXCL13 (BCA-1), both of which regulate B cell migration in lymphoid tissues.</li>
-<li>Challenge: We report that immunohistologically CXCL12 was constitutively expressed in CNS parenchyma on blood vessel walls.</li>
-<li>Action: This paper investigates chemokines in multiple sclerosis: cxcl12 and cxcl13 up-regulation is differentially linked to cns immune cell recruitment.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study focused on the chemokines CXCL12 (SDF-1) and CXCL13 (BCA-1), both of which regulate B cell migration in lymphoid tissues.</li>
+<li>We report that immunohistologically CXCL12 was constitutively expressed in CNS parenchyma on blood vessel walls.</li>
+<li>This paper investigates chemokines in multiple sclerosis: cxcl12 and cxcl13 up-regulation is differentially linked to cns immune cell recruitment.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awh680" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Markus Krumbholz. (2005). Chemokines in multiple sclerosis: CXCL12 and CXCL13 up-regulation is differentially linked to CNS immune cell recruitment. Brain. https://doi.org/10.1093/brain/awh680</p>
@@ -647,7 +648,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Proinflammatory GM-CSF–producing B cells in multiple sclerosis and B cell depletion therapy</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -657,10 +657,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates proinflammatory gm-csf–producing b cells in multiple sclerosis and b cell depletion therapy. These data implicate a proinflammatory B cell/myeloid cell axis in disease and underscore the rationale for selective targeting of distinct B cell populations in MS and other human autoimmune diseases.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data implicate a proinflammatory B cell/myeloid cell axis in disease and underscore the rationale for selective targeting of distinct B cell populations in MS and other human autoimmune diseases.</li>
-<li>Challenge: This paper investigates proinflammatory gm-csf–producing b cells in multiple sclerosis and b cell depletion therapy.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data implicate a proinflammatory B cell/myeloid cell axis in disease and underscore the rationale for selective targeting of distinct B cell populations in MS and other human autoimmune diseases.</li>
+<li>This paper investigates proinflammatory gm-csf–producing b cells in multiple sclerosis and b cell depletion therapy.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1126/scitranslmed.aab4176" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Rui Li. (2015). Proinflammatory GM-CSF–producing B cells in multiple sclerosis and B cell depletion therapy. Science Translational Medicine. https://doi.org/10.1126/scitranslmed.aab4176</p>
@@ -682,7 +682,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>BREAKDOWN OF THE BLOOD-BRAIN BARRIER PRECEDES SYMPTOMS AND OTHER MRI SIGNS OF NEW LESIONS IN MULTIPLE SCLEROSIS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1990</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -692,10 +691,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates breakdown of the blood-brain barrier precedes symptoms and other mri signs of new lesions in multiple sclerosis. The mechanisms contributing to this disparity are discussed, and it is concluded that far from being surprising it is to be expected.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: From an extensive serial magnetic resonance imaging (MRI) study in multiple sclerosis (MS) we have identified 4 cases in which disruption of the blood-brain barrier, as detected by gadolinium-DTPA enhancement, preceded other MRI abnormalities and in 1 case clinical evidence of the new lesion.</li>
-<li>Challenge: This supports the view that a defect in the blood-brain barrier, and therefore inflammation, is an early and possibly crucial event in the pathogenesis of the new lesion in MS.</li>
-<li>Action: These cases showed a marked discrepancy between MRI abnormality and symptoms.</li>
-<li>Resolution: This paper investigates breakdown of the blood-brain barrier precedes symptoms and other mri signs of new lesions in multiple sclerosis.</li>
+<li>From an extensive serial magnetic resonance imaging (MRI) study in multiple sclerosis (MS) we have identified 4 cases in which disruption of the blood-brain barrier, as detected by gadolinium-DTPA enhancement, preceded other MRI abnormalities and in 1 case clinical evidence of the new lesion.</li>
+<li>This supports the view that a defect in the blood-brain barrier, and therefore inflammation, is an early and possibly crucial event in the pathogenesis of the new lesion in MS.</li>
+<li>These cases showed a marked discrepancy between MRI abnormality and symptoms.</li>
+<li>This paper investigates breakdown of the blood-brain barrier precedes symptoms and other mri signs of new lesions in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/113.5.1477" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Allan G. Kermode. (1990). BREAKDOWN OF THE BLOOD-BRAIN BARRIER PRECEDES SYMPTOMS AND OTHER MRI SIGNS OF NEW LESIONS IN MULTIPLE SCLEROSIS. Brain. https://doi.org/10.1093/brain/113.5.1477</p>
@@ -717,7 +716,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis: In situ evidence for antibody‐ and complement‐mediated demyelination</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -727,10 +725,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: in situ evidence for antibody‐ and complement‐mediated demyelination. Destruction of myelin sheaths was associated with incomplete loss of oligodendrocytes in the active areas and reappearance of oligodendrocytes with remyelination in the inactive plaque center.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We describe a case of multiple sclerosis characterized by deposition of immunoglobulin and complement in the areas of active demyelination.</li>
-<li>Challenge: This was particularly evident for the C9neo antigen, which is a marker for the activated lytic complement complex and was exclusively deposited in the areas of active myelin destruction.</li>
-<li>Action: In addition, macrophages in the lesions contained degradation products that were immunoreactive for myelin antigens, immunoglobulins, and C9neo antigen.</li>
-<li>Resolution: This paper investigates multiple sclerosis: in situ evidence for antibody‐ and complement‐mediated demyelination.</li>
+<li>We describe a case of multiple sclerosis characterized by deposition of immunoglobulin and complement in the areas of active demyelination.</li>
+<li>This was particularly evident for the C9neo antigen, which is a marker for the activated lytic complement complex and was exclusively deposited in the areas of active myelin destruction.</li>
+<li>In addition, macrophages in the lesions contained degradation products that were immunoreactive for myelin antigens, immunoglobulins, and C9neo antigen.</li>
+<li>This paper investigates multiple sclerosis: in situ evidence for antibody‐ and complement‐mediated demyelination.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410430409" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Maria K. Storch. (1998). Multiple sclerosis: In situ evidence for antibody‐ and complement‐mediated demyelination. Annals of Neurology. https://doi.org/10.1002/ana.410430409</p>
@@ -752,7 +750,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Pathogenic Role for Myelin-Specific Cd8+ T Cells in a Model for Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -762,10 +759,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a pathogenic role for myelin-specific cd8+ t cells in a model for multiple sclerosis. Here, we demonstrate that myelin-specific CD8(+) T cells induce severe CNS autoimmunity in mice.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here, we demonstrate that myelin-specific CD8(+) T cells induce severe CNS autoimmunity in mice.</li>
-<li>Challenge: These data suggest that myelin-specific CD8(+) T cells could function as effector cells in the pathogenesis of MS.</li>
-<li>Action: This paper investigates a pathogenic role for myelin-specific cd8+ t cells in a model for multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Here, we demonstrate that myelin-specific CD8(+) T cells induce severe CNS autoimmunity in mice.</li>
+<li>These data suggest that myelin-specific CD8(+) T cells could function as effector cells in the pathogenesis of MS.</li>
+<li>This paper investigates a pathogenic role for myelin-specific cd8+ t cells in a model for multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.194.5.669" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Eric S. Huseby. (2001). A Pathogenic Role for Myelin-Specific Cd8+ T Cells in a Model for Multiple Sclerosis. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.194.5.669</p>
@@ -787,7 +784,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Regulatory B cells inhibit EAE initiation in mice while other B cells promote disease progression</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -797,10 +793,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates regulatory b cells inhibit eae initiation in mice while other b cells promote disease progression. In this study, we have shown that EAE disease initiation and progression are differentially influenced by the depletion of B cells from mice with otherwise intact immune systems.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we have shown that EAE disease initiation and progression are differentially influenced by the depletion of B cells from mice with otherwise intact immune systems.</li>
-<li>Challenge: These results demonstrate reciprocal regulatory roles for B cells during EAE immunopathogenesis.</li>
-<li>Action: This paper investigates regulatory b cells inhibit eae initiation in mice while other b cells promote disease progression.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we have shown that EAE disease initiation and progression are differentially influenced by the depletion of B cells from mice with otherwise intact immune systems.</li>
+<li>These results demonstrate reciprocal regulatory roles for B cells during EAE immunopathogenesis.</li>
+<li>This paper investigates regulatory b cells inhibit eae initiation in mice while other b cells promote disease progression.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci36030" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Takashi Matsushita. (2008). Regulatory B cells inhibit EAE initiation in mice while other B cells promote disease progression. Journal of Clinical Investigation. https://doi.org/10.1172/jci36030</p>
@@ -822,7 +818,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Autoimmunity to Myelin Oligodendrocyte Glycoprotein in Rats Mimics the Spectrum of Multiple Sclerosis Pathology</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -832,10 +827,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates autoimmunity to myelin oligodendrocyte glycoprotein in rats mimics the spectrum of multiple sclerosis pathology. Furthermore we demonstrate, that by using the proper strain/sensitization regime, subforms of MS such as for instance neuromyelitis optica can be reproducibly induced.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Furthermore we demonstrate, that by using the proper strain/sensitization regime, subforms of MS such as for instance neuromyelitis optica can be reproducibly induced.</li>
-<li>Challenge: This paper investigates autoimmunity to myelin oligodendrocyte glycoprotein in rats mimics the spectrum of multiple sclerosis pathology.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Furthermore we demonstrate, that by using the proper strain/sensitization regime, subforms of MS such as for instance neuromyelitis optica can be reproducibly induced.</li>
+<li>This paper investigates autoimmunity to myelin oligodendrocyte glycoprotein in rats mimics the spectrum of multiple sclerosis pathology.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.1998.tb00194.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Maria K. Storch. (1998). Autoimmunity to Myelin Oligodendrocyte Glycoprotein in Rats Mimics the Spectrum of Multiple Sclerosis Pathology. Brain Pathology. https://doi.org/10.1111/j.1750-3639.1998.tb00194.x</p>
@@ -857,7 +852,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -867,10 +861,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis. In this review we examine new paradigms for understanding the immunopathology of MS, present recent data defining the common genetic variants underlying disease susceptibility, and explore how improved understanding of immune pathway disruption can inform MS prognosis and treatment decisions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a multifocal demyelinating disease with progressive neurodegeneration caused by an autoimmune response to self-antigens in a genetically susceptible individual.</li>
-<li>Challenge: While the formation and persistence of meningeal lymphoid follicles suggest persistence of antigens to drive the continuing inflammatory and humoral response, the identity of an antigen or infectious agent leading to the oligoclonal expansion of B and T cells is unknown.</li>
-<li>Action: In this review we examine new paradigms for understanding the immunopathology of MS, present recent data defining the common genetic variants underlying disease susceptibility, and explore how improved understanding of immune pathway disruption can inform MS prognosis and treatment decisions.</li>
-<li>Resolution: This paper investigates multiple sclerosis.</li>
+<li>Multiple sclerosis (MS) is a multifocal demyelinating disease with progressive neurodegeneration caused by an autoimmune response to self-antigens in a genetically susceptible individual.</li>
+<li>While the formation and persistence of meningeal lymphoid follicles suggest persistence of antigens to drive the continuing inflammatory and humoral response, the identity of an antigen or infectious agent leading to the oligoclonal expansion of B and T cells is unknown.</li>
+<li>In this review we examine new paradigms for understanding the immunopathology of MS, present recent data defining the common genetic variants underlying disease susceptibility, and explore how improved understanding of immune pathway disruption can inform MS prognosis and treatment decisions.</li>
+<li>This paper investigates multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci58649" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alyssa Nylander. (2012). Multiple sclerosis. Journal of Clinical Investigation. https://doi.org/10.1172/jci58649</p>
@@ -892,7 +886,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Clonal expansion and somatic hypermutation of V(H) genes of B cells from cerebrospinal fluid in multiple sclerosis.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -902,10 +895,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates clonal expansion and somatic hypermutation of v(h) genes of b cells from cerebrospinal fluid in multiple sclerosis. Our results demonstrate that in MS CSF, there is a high frequency of clonally expanded B cells that have properties of postgerminal center memory or antibody-forming lymphocytes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results demonstrate that in MS CSF, there is a high frequency of clonally expanded B cells that have properties of postgerminal center memory or antibody-forming lymphocytes.</li>
-<li>Challenge: This paper investigates clonal expansion and somatic hypermutation of v(h) genes of b cells from cerebrospinal fluid in multiple sclerosis.</li>
-<li>Action: The cerebrospinal fluid (CSF) of multiple sclerosis (MS) patients is characterized by increased concentrations of immunoglobulin (Ig), which on electrophoretic analysis shows restricted heterogeneity (oligoclonal bands).</li>
-<li>Resolution: CSF Ig is composed of both serum and intrathecally produced components.</li>
+<li>Our results demonstrate that in MS CSF, there is a high frequency of clonally expanded B cells that have properties of postgerminal center memory or antibody-forming lymphocytes.</li>
+<li>This paper investigates clonal expansion and somatic hypermutation of v(h) genes of b cells from cerebrospinal fluid in multiple sclerosis.</li>
+<li>The cerebrospinal fluid (CSF) of multiple sclerosis (MS) patients is characterized by increased concentrations of immunoglobulin (Ig), which on electrophoretic analysis shows restricted heterogeneity (oligoclonal bands).</li>
+<li>CSF Ig is composed of both serum and intrathecally produced components.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci3568" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Y Qin. (1998). Clonal expansion and somatic hypermutation of V(H) genes of B cells from cerebrospinal fluid in multiple sclerosis.. Journal of Clinical Investigation. https://doi.org/10.1172/jci3568</p>
@@ -927,7 +920,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B Cell Repertoire Diversity and Clonal Expansion in Multiple Sclerosis Brain Lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -937,10 +929,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b cell repertoire diversity and clonal expansion in multiple sclerosis brain lesions. The presence of restricted patterns of rearranged Ig mRNA within the plaque lesion suggests that Ab production in the demyelinating plaque is a local phenomenon and supports the idea that in MS an Ag-driven immune response might be responsible for demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) lesions in the CNS are characterized by disseminated demyelination with perivascular infiltrates of macrophages, T cells, and B cells.</li>
-<li>Challenge: To investigate the origin and characteristics of the B cell population found in MS plaque tissue, we performed molecular studies in 10 MS patients and 4 non-MS control samples.</li>
-<li>Action: Ig transcripts from the perivascular infiltrated brain lesions were analyzed by complementary-determining region 3 spectratyping to ascertain the B cell heavy chain gene rearrangement repertoire expressed in MS brains.</li>
-<li>Resolution: This paper investigates b cell repertoire diversity and clonal expansion in multiple sclerosis brain lesions.</li>
+<li>Multiple sclerosis (MS) lesions in the CNS are characterized by disseminated demyelination with perivascular infiltrates of macrophages, T cells, and B cells.</li>
+<li>To investigate the origin and characteristics of the B cell population found in MS plaque tissue, we performed molecular studies in 10 MS patients and 4 non-MS control samples.</li>
+<li>Ig transcripts from the perivascular infiltrated brain lesions were analyzed by complementary-determining region 3 spectratyping to ascertain the B cell heavy chain gene rearrangement repertoire expressed in MS brains.</li>
+<li>This paper investigates b cell repertoire diversity and clonal expansion in multiple sclerosis brain lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.163.9.5133" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sergio E. Baranzini. (1999). B Cell Repertoire Diversity and Clonal Expansion in Multiple Sclerosis Brain Lesions. The Journal of Immunology. https://doi.org/10.4049/jimmunol.163.9.5133</p>
@@ -962,7 +954,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>IL-17 Plays an Important Role in the Development of Experimental Autoimmune Encephalomyelitis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -972,10 +963,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates il-17 plays an important role in the development of experimental autoimmune encephalomyelitis. We found that the development of experimental autoimmune encephalomyelitis (EAE), the rodent model of multiple sclerosis, was significantly suppressed in IL-17(-/-) mice; these animals exhibited delayed onset, reduced maximum severity scores, ameliorated histological changes, and early recovery.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found that the development of experimental autoimmune encephalomyelitis (EAE), the rodent model of multiple sclerosis, was significantly suppressed in IL-17(-/-) mice; these animals exhibited delayed onset, reduced maximum severity scores, ameliorated histological changes, and early recovery.</li>
-<li>Challenge: This paper investigates il-17 plays an important role in the development of experimental autoimmune encephalomyelitis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found that the development of experimental autoimmune encephalomyelitis (EAE), the rodent model of multiple sclerosis, was significantly suppressed in IL-17(-/-) mice; these animals exhibited delayed onset, reduced maximum severity scores, ameliorated histological changes, and early recovery.</li>
+<li>This paper investigates il-17 plays an important role in the development of experimental autoimmune encephalomyelitis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.177.1.566" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Yutaka Komiyama. (2006). IL-17 Plays an Important Role in the Development of Experimental Autoimmune Encephalomyelitis. The Journal of Immunology. https://doi.org/10.4049/jimmunol.177.1.566</p>
@@ -997,7 +988,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Role of B Cells in Multiple Sclerosis and Related Disorders</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -1007,10 +997,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates role of b cells in multiple sclerosis and related disorders. ANN NEUROL 2021;89:13-23.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The success of clinical trials of selective B-cell depletion in patients with relapsing multiple sclerosis (MS) and primary progressive MS has led to a conceptual shift in the understanding of MS pathogenesis, away from the classical model in which T cells were the sole central actors and toward a more complex paradigm with B cells having an essential role in both the inflammatory and neurodegenerative components of the disease process.</li>
-<li>Challenge: The role of B cells in MS was selected as the topic of the 27th Annual Meeting of the European Charcot Foundation.</li>
-<li>Action: Results of the meeting are presented in this concise review, which recaps current concepts underlying the biology and therapeutic rationale behind B-cell-directed therapeutics in MS, and proposes strategies to optimize the use of existing anti-B-cell treatments and provide future directions for research in this area.</li>
-<li>Resolution: This paper investigates role of b cells in multiple sclerosis and related disorders.</li>
+<li>The success of clinical trials of selective B-cell depletion in patients with relapsing multiple sclerosis (MS) and primary progressive MS has led to a conceptual shift in the understanding of MS pathogenesis, away from the classical model in which T cells were the sole central actors and toward a more complex paradigm with B cells having an essential role in both the inflammatory and neurodegenerative components of the disease process.</li>
+<li>The role of B cells in MS was selected as the topic of the 27th Annual Meeting of the European Charcot Foundation.</li>
+<li>Results of the meeting are presented in this concise review, which recaps current concepts underlying the biology and therapeutic rationale behind B-cell-directed therapeutics in MS, and proposes strategies to optimize the use of existing anti-B-cell treatments and provide future directions for research in this area.</li>
+<li>This paper investigates role of b cells in multiple sclerosis and related disorders.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25927" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gıancarlo Comı. (2020). Role of B Cells in Multiple Sclerosis and Related Disorders. Annals of Neurology. https://doi.org/10.1002/ana.25927</p>
@@ -1032,7 +1022,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A myelin oligodendrocyte glycoprotein peptide induces typical chronic experimental autoimmune encephalomyelitis in H‐2&lt;sup&gt;b&lt;/sup&gt; mice: Fine specificity and T cell receptor Vβ expression of encephalitogenic T cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1995</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (84%)</span>
 </div>
@@ -1042,10 +1031,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a myelin oligodendrocyte glycoprotein peptide induces typical chronic experimental autoimmune encephalomyelitis in h‐2&lt;sup&gt;b&lt;/sup&gt; mice: fine specificity and t cell receptor vβ expression of encephalitogenic t cells. The highly reproducible encephalitogenic activity of pMOG 35-55 strongly suggests a pathogenic role for T cell reactivity to MOG in MS and supports the possibility that MOG may also be a primary target antigen in the disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A predominant response to myelin oligodendrocyte glycoprotein (MOG) was recently observed in patients with multiple sclerosis (MS).</li>
-<li>Challenge: To study the possible pathogenic role of T cell response to MOG in MS, we have investigated the encephalitogenic potential of MOG.</li>
-<li>Action: Synthetic MOG peptides, pMOG 1-21, 35-55, 67-87, 104-117 and 202-218, representing predicted T cell epitopes, were injected into C57BL/6J and C3H.SW (H-2b) mice.</li>
-<li>Resolution: This paper investigates a myelin oligodendrocyte glycoprotein peptide induces typical chronic experimental autoimmune encephalomyelitis in h‐2&lt;sup&gt;b&lt;/sup&gt; mice: fine specificity and t cell receptor vβ expression of encephalitogenic t cells.</li>
+<li>A predominant response to myelin oligodendrocyte glycoprotein (MOG) was recently observed in patients with multiple sclerosis (MS).</li>
+<li>To study the possible pathogenic role of T cell response to MOG in MS, we have investigated the encephalitogenic potential of MOG.</li>
+<li>Synthetic MOG peptides, pMOG 1-21, 35-55, 67-87, 104-117 and 202-218, representing predicted T cell epitopes, were injected into C57BL/6J and C3H.SW (H-2b) mice.</li>
+<li>This paper investigates a myelin oligodendrocyte glycoprotein peptide induces typical chronic experimental autoimmune encephalomyelitis in h‐2&lt;sup&gt;b&lt;/sup&gt; mice: fine specificity and t cell receptor vβ expression of encephalitogenic t cells.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/eji.1830250723" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Itzhack Mendel. (1995). A myelin oligodendrocyte glycoprotein peptide induces typical chronic experimental autoimmune encephalomyelitis in H‐2&lt;sup&gt;b&lt;/sup&gt; mice: Fine specificity and T cell receptor Vβ expression of encephalitogenic T cells. European Journal of Immunology. https://doi.org/10.1002/eji.1830250723</p>
@@ -1067,7 +1056,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B cells populating the multiple sclerosis brain mature in the draining cervical lymph nodes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1077,10 +1065,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b cells populating the multiple sclerosis brain mature in the draining cervical lymph nodes. These data provide new evidence that B cells traffic freely across the tissue barrier, with the majority of B cell maturation occurring outside of the CNS in the secondary lymphoid tissue.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data provide new evidence that B cells traffic freely across the tissue barrier, with the majority of B cell maturation occurring outside of the CNS in the secondary lymphoid tissue.</li>
-<li>Challenge: This paper investigates b cells populating the multiple sclerosis brain mature in the draining cervical lymph nodes.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data provide new evidence that B cells traffic freely across the tissue barrier, with the majority of B cell maturation occurring outside of the CNS in the secondary lymphoid tissue.</li>
+<li>This paper investigates b cells populating the multiple sclerosis brain mature in the draining cervical lymph nodes.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1126/scitranslmed.3008879" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Joel N. H. Stern. (2014). B cells populating the multiple sclerosis brain mature in the draining cervical lymph nodes. Science Translational Medicine. https://doi.org/10.1126/scitranslmed.3008879</p>
@@ -1102,7 +1090,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rituximab Efficiently Depletes Increased CD20-Expressing T Cells in Multiple Sclerosis Patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -1112,10 +1099,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rituximab efficiently depletes increased cd20-expressing t cells in multiple sclerosis patients. We show that in MS patients, increased levels of CD3(+)CD20(dim) T cells are effectively depleted by RTX.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We show that in MS patients, increased levels of CD3(+)CD20(dim) T cells are effectively depleted by RTX.</li>
-<li>Challenge: This paper investigates rituximab efficiently depletes increased cd20-expressing t cells in multiple sclerosis patients.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We show that in MS patients, increased levels of CD3(+)CD20(dim) T cells are effectively depleted by RTX.</li>
+<li>This paper investigates rituximab efficiently depletes increased cd20-expressing t cells in multiple sclerosis patients.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.1400118" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arumugam Palanichamy. (2014). Rituximab Efficiently Depletes Increased CD20-Expressing T Cells in Multiple Sclerosis Patients. The Journal of Immunology. https://doi.org/10.4049/jimmunol.1400118</p>
@@ -1137,7 +1124,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MHC class II–dependent B cell APC function is required for induction of CNS autoimmunity independent of myelin-specific antibodies</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1147,10 +1133,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mhc class ii–dependent b cell apc function is required for induction of cns autoimmunity independent of myelin-specific antibodies. Thus, B cells provide a critical cellular function in pathogenesis of central nervous system autoimmunity independent of their humoral involvement, findings which may be relevant to B cell-targeted therapies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Whether B cells serve as antigen-presenting cells (APCs) for activation of pathogenic T cells in the multiple sclerosis model experimental autoimmune encephalomyelitis (EAE) is unclear.</li>
-<li>Challenge: To evaluate their role as APCs, we engineered mice selectively deficient in MHC II on B cells (B-MHC II(-/-)), and to distinguish this function from antibody production, we created transgenic (Tg) mice that express the myelin oligodendrocyte glycoprotein (MOG)-specific B cell receptor (BCR; IgH(MOG-mem)) but cannot secrete antibodies.</li>
-<li>Action: B-MHC II(-/-) mice were resistant to EAE induced by recombinant human MOG (rhMOG), a T cell- and B cell-dependent autoantigen, and exhibited diminished Th1 and Th17 responses, suggesting a role for B cell APC function.</li>
-<li>Resolution: This paper investigates mhc class ii–dependent b cell apc function is required for induction of cns autoimmunity independent of myelin-specific antibodies.</li>
+<li>Whether B cells serve as antigen-presenting cells (APCs) for activation of pathogenic T cells in the multiple sclerosis model experimental autoimmune encephalomyelitis (EAE) is unclear.</li>
+<li>To evaluate their role as APCs, we engineered mice selectively deficient in MHC II on B cells (B-MHC II(-/-)), and to distinguish this function from antibody production, we created transgenic (Tg) mice that express the myelin oligodendrocyte glycoprotein (MOG)-specific B cell receptor (BCR; IgH(MOG-mem)) but cannot secrete antibodies.</li>
+<li>B-MHC II(-/-) mice were resistant to EAE induced by recombinant human MOG (rhMOG), a T cell- and B cell-dependent autoantigen, and exhibited diminished Th1 and Th17 responses, suggesting a role for B cell APC function.</li>
+<li>This paper investigates mhc class ii–dependent b cell apc function is required for induction of cns autoimmunity independent of myelin-specific antibodies.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20130699" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nicolas Molnarfi. (2013). MHC class II–dependent B cell APC function is required for induction of CNS autoimmunity independent of myelin-specific antibodies. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20130699</p>
@@ -1172,7 +1158,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A monoclonal antibody against a myelin oligodendrocyte glycoprotein induces relapses and demyelination in central nervous system autoimmune disease.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1987</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1182,10 +1167,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a monoclonal antibody against a myelin oligodendrocyte glycoprotein induces relapses and demyelination in central nervous system autoimmune disease. Furthermore, these findings support the immunopathogenic potential of antibody to myelin components in inflammatory CNS disease processes and, specifically, in causing demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The factors contributing to chronic relapsing inflammatory disease processes of the central nervous system (CNS) and demyelination are poorly understood.</li>
-<li>Challenge: In addition to cellular immune reactions, humoral factors such as antibodies might quantitatively or qualitatively influence the disease process.</li>
-<li>Action: We therefore investigated the effects of administration of a monoclonal antibody specific for a CNS autoantigen on both acute and chronic experimental autoimmune encephalomyelitis (EAE) in mice and rats.</li>
-<li>Resolution: This paper investigates a monoclonal antibody against a myelin oligodendrocyte glycoprotein induces relapses and demyelination in central nervous system autoimmune disease.</li>
+<li>The factors contributing to chronic relapsing inflammatory disease processes of the central nervous system (CNS) and demyelination are poorly understood.</li>
+<li>In addition to cellular immune reactions, humoral factors such as antibodies might quantitatively or qualitatively influence the disease process.</li>
+<li>We therefore investigated the effects of administration of a monoclonal antibody specific for a CNS autoantigen on both acute and chronic experimental autoimmune encephalomyelitis (EAE) in mice and rats.</li>
+<li>This paper investigates a monoclonal antibody against a myelin oligodendrocyte glycoprotein induces relapses and demyelination in central nervous system autoimmune disease.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.139.12.4016" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hermann J. Schluesener. (1987). A monoclonal antibody against a myelin oligodendrocyte glycoprotein induces relapses and demyelination in central nervous system autoimmune disease.. The Journal of Immunology. https://doi.org/10.4049/jimmunol.139.12.4016</p>
@@ -1207,7 +1192,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>T cells in multiple sclerosis and experimental autoimmune encephalomyelitis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1217,10 +1201,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates t cells in multiple sclerosis and experimental autoimmune encephalomyelitis. In this paper, we review the contribution of Th1, Th17, γδ, CD8(+) and regulatory T cells as well as the possible development of new therapeutic approaches for MS based on manipulating these T cell subtypes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a demyelinating inflammatory disorder of the central nervous system (CNS), which involves autoimmune responses to myelin antigens.</li>
-<li>Challenge: Studies in experimental autoimmune encephalomyelitis (EAE), an animal model for MS, have provided convincing evidence that T cells specific for self-antigens mediate pathology in these diseases.</li>
-<li>Action: Until recently, T helper type 1 (Th1) cells were thought to be the main effector T cells responsible for the autoimmune inflammation.</li>
-<li>Resolution: This paper investigates t cells in multiple sclerosis and experimental autoimmune encephalomyelitis.</li>
+<li>Multiple sclerosis (MS) is a demyelinating inflammatory disorder of the central nervous system (CNS), which involves autoimmune responses to myelin antigens.</li>
+<li>Studies in experimental autoimmune encephalomyelitis (EAE), an animal model for MS, have provided convincing evidence that T cells specific for self-antigens mediate pathology in these diseases.</li>
+<li>Until recently, T helper type 1 (Th1) cells were thought to be the main effector T cells responsible for the autoimmune inflammation.</li>
+<li>This paper investigates t cells in multiple sclerosis and experimental autoimmune encephalomyelitis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1365-2249.2010.04143.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jean M. Fletcher. (2010). T cells in multiple sclerosis and experimental autoimmune encephalomyelitis. Clinical &amp; Experimental Immunology. https://doi.org/10.1111/j.1365-2249.2010.04143.x</p>
@@ -1242,7 +1226,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>CCR5&lt;sup&gt;+&lt;/sup&gt;and CXCR3&lt;sup&gt;+&lt;/sup&gt;T cells are increased in multiple sclerosis and their ligands MIP-1α and IP-10 are expressed in demyelinating brain lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -1252,10 +1235,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ccr5&lt;sup&gt;+&lt;/sup&gt;and cxcr3&lt;sup&gt;+&lt;/sup&gt;t cells are increased in multiple sclerosis and their ligands mip-1α and ip-10 are expressed in demyelinating brain lesions. We found CXCR3(+) T cells increased in blood of relapsing-remitting MS, and both CCR5(+) and CXCR3(+) T cells increased in progressive MS compared with controls.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found CXCR3(+) T cells increased in blood of relapsing-remitting MS, and both CCR5(+) and CXCR3(+) T cells increased in progressive MS compared with controls.</li>
-<li>Challenge: This paper investigates ccr5&lt;sup&gt;+&lt;/sup&gt;and cxcr3&lt;sup&gt;+&lt;/sup&gt;t cells are increased in multiple sclerosis and their ligands mip-1α and ip-10 are expressed in demyelinating brain lesions.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found CXCR3(+) T cells increased in blood of relapsing-remitting MS, and both CCR5(+) and CXCR3(+) T cells increased in progressive MS compared with controls.</li>
+<li>This paper investigates ccr5&lt;sup&gt;+&lt;/sup&gt;and cxcr3&lt;sup&gt;+&lt;/sup&gt;t cells are increased in multiple sclerosis and their ligands mip-1α and ip-10 are expressed in demyelinating brain lesions.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1073/pnas.96.12.6873" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Konstantin Balashov. (1999). CCR5&lt;sup&gt;+&lt;/sup&gt;and CXCR3&lt;sup&gt;+&lt;/sup&gt;T cells are increased in multiple sclerosis and their ligands MIP-1α and IP-10 are expressed in demyelinating brain lesions. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.96.12.6873</p>
@@ -1277,7 +1260,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Increased MRI activity and immune activation in two multiple sclerosis patients treated with the monoclonal anti-tumor necrosis factor antibody cA2</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1287,10 +1269,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates increased mri activity and immune activation in two multiple sclerosis patients treated with the monoclonal anti-tumor necrosis factor antibody ca2. These results suggest that further use of cA2 in MS is not warranted and that studies of other agents that antagonize TNF alpha should be carried out with frequent monitoring of gadolinium-enhanced MRIs.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: There is evidence that treatment with an antibody to tumor necrosis factor alpha (TNF alpha) improves an animal model of multiple sclerosis (MS) and is beneficial in two systemic inflammatory disease in humans, but there are no reports about anti-TNF treatment of MS.</li>
-<li>Challenge: Therefore, we treated two rapidly progressive MS patients with intravenous infusions of a humanized mouse monoclonal anti-TNF antibody (cA2) in an open-label phase I safety trial and monitored their clinical status, gadolinium-enhanced brain magnetic resonance imaging (MRI), and peripheral blood and cerebrospinal fluid (CSF) immunologic status.</li>
-<li>Action: We did not notice any clinically significant neurologic changes in either patient.</li>
-<li>Resolution: This paper investigates increased mri activity and immune activation in two multiple sclerosis patients treated with the monoclonal anti-tumor necrosis factor antibody ca2.</li>
+<li>There is evidence that treatment with an antibody to tumor necrosis factor alpha (TNF alpha) improves an animal model of multiple sclerosis (MS) and is beneficial in two systemic inflammatory disease in humans, but there are no reports about anti-TNF treatment of MS.</li>
+<li>Therefore, we treated two rapidly progressive MS patients with intravenous infusions of a humanized mouse monoclonal anti-TNF antibody (cA2) in an open-label phase I safety trial and monitored their clinical status, gadolinium-enhanced brain magnetic resonance imaging (MRI), and peripheral blood and cerebrospinal fluid (CSF) immunologic status.</li>
+<li>We did not notice any clinically significant neurologic changes in either patient.</li>
+<li>This paper investigates increased mri activity and immune activation in two multiple sclerosis patients treated with the monoclonal anti-tumor necrosis factor antibody ca2.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.47.6.1531" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bob W. van Oosten. (1996). Increased MRI activity and immune activation in two multiple sclerosis patients treated with the monoclonal anti-tumor necrosis factor antibody cA2. Neurology. https://doi.org/10.1212/wnl.47.6.1531</p>
@@ -1312,7 +1294,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>How to successfully apply animal studies in experimental allergic encephalomyelitis to research on multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1322,10 +1303,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates how to successfully apply animal studies in experimental allergic encephalomyelitis to research on multiple sclerosis. Nevertheless, over the past 73 years, the EAE model has proved itself remarkably useful for aiding research on MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In their Point of View entitled &quot;Experimental Allergic Encephalomyelitis: A Misleading Model of Multiple Sclerosis,&quot; Sriram and Steiner(1) wrote, &quot;The most disappointing aspect of EAE [experimental allergic encephalomyelitis] as a potential model for MS is its almost total inability to point toward a meaningful therapy or therapeutic approach for MS.&quot; Actually, EAE has led directly to the development of three therapies approved for use in multiple sclerosis (MS): glatiramer acetate, mitoxantrone, and natalizumab.</li>
-<li>Challenge: Several new approaches to MS are in clinical trials based on positive indications in preclinical work relying on EAE.</li>
-<li>Action: New clues to the pathogenesis of MS and new potential surrogate markers for MS are shown from research involving EAE when it is critically coupled with actual findings in MS.</li>
-<li>Resolution: This paper investigates how to successfully apply animal studies in experimental allergic encephalomyelitis to research on multiple sclerosis.</li>
+<li>In their Point of View entitled &quot;Experimental Allergic Encephalomyelitis: A Misleading Model of Multiple Sclerosis,&quot; Sriram and Steiner(1) wrote, &quot;The most disappointing aspect of EAE [experimental allergic encephalomyelitis] as a potential model for MS is its almost total inability to point toward a meaningful therapy or therapeutic approach for MS.&quot; Actually, EAE has led directly to the development of three therapies approved for use in multiple sclerosis (MS): glatiramer acetate, mitoxantrone, and natalizumab.</li>
+<li>Several new approaches to MS are in clinical trials based on positive indications in preclinical work relying on EAE.</li>
+<li>New clues to the pathogenesis of MS and new potential surrogate markers for MS are shown from research involving EAE when it is critically coupled with actual findings in MS.</li>
+<li>This paper investigates how to successfully apply animal studies in experimental allergic encephalomyelitis to research on multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.20913" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lawrence Steinman. (2006). How to successfully apply animal studies in experimental allergic encephalomyelitis to research on multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.20913</p>
@@ -1347,7 +1328,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B cell exchange across the blood-brain barrier in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -1357,10 +1337,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b cell exchange across the blood-brain barrier in multiple sclerosis. For the first time to our knowledge, we found that a restricted pool of clonally related B cells participated in robust bidirectional exchange across the BBB.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: For the first time to our knowledge, we found that a restricted pool of clonally related B cells participated in robust bidirectional exchange across the BBB.</li>
-<li>Challenge: These data also provide a powerful approach to identify and monitor B cells in the PB that correspond to clonally amplified populations in the CNS in MS and other inflammatory states.</li>
-<li>Action: This paper investigates b cell exchange across the blood-brain barrier in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>For the first time to our knowledge, we found that a restricted pool of clonally related B cells participated in robust bidirectional exchange across the BBB.</li>
+<li>These data also provide a powerful approach to identify and monitor B cells in the PB that correspond to clonally amplified populations in the CNS in MS and other inflammatory states.</li>
+<li>This paper investigates b cell exchange across the blood-brain barrier in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci63842" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> H.‐Christian von Büdingen. (2012). B cell exchange across the blood-brain barrier in multiple sclerosis. Journal of Clinical Investigation. https://doi.org/10.1172/jci63842</p>
@@ -1382,7 +1362,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Accumulation of Clonally Related B Lymphocytes in the Cerebrospinal Fluid of Multiple Sclerosis Patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1392,10 +1371,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates accumulation of clonally related b lymphocytes in the cerebrospinal fluid of multiple sclerosis patients. Collectively, the data suggest that in MS there is a compartmentalized clonal expansion.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The accumulation of B lymphocyte clones in the cerebrospinal fluid (CSF) of patients with multiple sclerosis (MS) and patients with other neurological disorders was investigated using PCR technologies.</li>
-<li>Challenge: Oligoclonal B cell accumulations were detected in 10 of 10 MS patients, but only in 3 of 10 of the patients with other neurological disorders.</li>
-<li>Action: Analyses of the Ig V(D)J sequences on the CSF from MS patients disclosed that VH3 and VH4 genes were extensively mutated compared with germline sequences.</li>
-<li>Resolution: This paper investigates accumulation of clonally related b lymphocytes in the cerebrospinal fluid of multiple sclerosis patients.</li>
+<li>The accumulation of B lymphocyte clones in the cerebrospinal fluid (CSF) of patients with multiple sclerosis (MS) and patients with other neurological disorders was investigated using PCR technologies.</li>
+<li>Oligoclonal B cell accumulations were detected in 10 of 10 MS patients, but only in 3 of 10 of the patients with other neurological disorders.</li>
+<li>Analyses of the Ig V(D)J sequences on the CSF from MS patients disclosed that VH3 and VH4 genes were extensively mutated compared with germline sequences.</li>
+<li>This paper investigates accumulation of clonally related b lymphocytes in the cerebrospinal fluid of multiple sclerosis patients.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.164.5.2782" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Monica Colombo. (2000). Accumulation of Clonally Related B Lymphocytes in the Cerebrospinal Fluid of Multiple Sclerosis Patients. The Journal of Immunology. https://doi.org/10.4049/jimmunol.164.5.2782</p>
@@ -1417,7 +1396,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Changes in B- and T-Lymphocyte and Chemokine Levels With Rituximab Treatment in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -1427,10 +1405,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates changes in b- and t-lymphocyte and chemokine levels with rituximab treatment in multiple sclerosis. In subjects with multiple sclerosis, B cells are critical for T-cell trafficking into the central nervous system and may alter the process by influencing chemokine production within the central nervous system.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In subjects with multiple sclerosis, B cells are critical for T-cell trafficking into the central nervous system and may alter the process by influencing chemokine production within the central nervous system.</li>
-<li>Challenge: This paper investigates changes in b- and t-lymphocyte and chemokine levels with rituximab treatment in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In subjects with multiple sclerosis, B cells are critical for T-cell trafficking into the central nervous system and may alter the process by influencing chemokine production within the central nervous system.</li>
+<li>This paper investigates changes in b- and t-lymphocyte and chemokine levels with rituximab treatment in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneurol.2010.99" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Laura Piccio. (2010). Changes in B- and T-Lymphocyte and Chemokine Levels With Rituximab Treatment in Multiple Sclerosis. Archives of Neurology. https://doi.org/10.1001/archneurol.2010.99</p>
@@ -1452,7 +1430,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Related B cell clones populate the meninges and parenchyma of patients with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1462,10 +1439,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates related b cell clones populate the meninges and parenchyma of patients with multiple sclerosis. This study establishes a relationship between extraparenchymal lymphoid tissue and parenchymal infiltrates and defines the arrangement of B cell clones that populate the central nervous system of patients with multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study establishes a relationship between extraparenchymal lymphoid tissue and parenchymal infiltrates and defines the arrangement of B cell clones that populate the central nervous system of patients with multiple sclerosis.</li>
-<li>Challenge: This paper investigates related b cell clones populate the meninges and parenchyma of patients with multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study establishes a relationship between extraparenchymal lymphoid tissue and parenchymal infiltrates and defines the arrangement of B cell clones that populate the central nervous system of patients with multiple sclerosis.</li>
+<li>This paper investigates related b cell clones populate the meninges and parenchyma of patients with multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awq350" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Laura Lovato. (2011). Related B cell clones populate the meninges and parenchyma of patients with multiple sclerosis. Brain. https://doi.org/10.1093/brain/awq350</p>
@@ -1487,7 +1464,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Tight junctional abnormality in multiple sclerosis white matter affects all calibres of vessel and is associated with blood–brain barrier leakage and active demyelination</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -1497,10 +1473,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates tight junctional abnormality in multiple sclerosis white matter affects all calibres of vessel and is associated with blood–brain barrier leakage and active demyelination. This study quantifies the uneven distribution of TJ pathology and its association with BBB leakage.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study quantifies the uneven distribution of TJ pathology and its association with BBB leakage.</li>
-<li>Challenge: This paper investigates tight junctional abnormality in multiple sclerosis white matter affects all calibres of vessel and is associated with blood–brain barrier leakage and active demyelination.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study quantifies the uneven distribution of TJ pathology and its association with BBB leakage.</li>
+<li>This paper investigates tight junctional abnormality in multiple sclerosis white matter affects all calibres of vessel and is associated with blood–brain barrier leakage and active demyelination.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/path.1434" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John M. Kirk. (2003). Tight junctional abnormality in multiple sclerosis white matter affects all calibres of vessel and is associated with blood–brain barrier leakage and active demyelination. The Journal of Pathology. https://doi.org/10.1002/path.1434</p>
@@ -1522,7 +1498,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Preferential recruitment of interferon‐γ–expressing T&lt;sub&gt;H&lt;/sub&gt;17 cells in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -1532,10 +1507,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates preferential recruitment of interferon‐γ–expressing t&lt;sub&gt;h&lt;/sub&gt;17 cells in multiple sclerosis. Our data underscore the involvement of IFN-gamma(+) T(H)17 lymphocytes in the pathology of MS and EAE and their preferential recruitment into the CNS during inflammatory events.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our data underscore the involvement of IFN-gamma(+) T(H)17 lymphocytes in the pathology of MS and EAE and their preferential recruitment into the CNS during inflammatory events.</li>
-<li>Challenge: This paper investigates preferential recruitment of interferon‐γ–expressing t&lt;sub&gt;h&lt;/sub&gt;17 cells in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our data underscore the involvement of IFN-gamma(+) T(H)17 lymphocytes in the pathology of MS and EAE and their preferential recruitment into the CNS during inflammatory events.</li>
+<li>This paper investigates preferential recruitment of interferon‐γ–expressing t&lt;sub&gt;h&lt;/sub&gt;17 cells in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21748" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hania Kébir. (2009). Preferential recruitment of interferon‐γ–expressing T&lt;sub&gt;H&lt;/sub&gt;17 cells in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.21748</p>
@@ -1557,7 +1532,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -1567,10 +1541,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis. This review discusses new methods to define the molecular pathology of human disease with high-throughput examination of germline DNA haplotypes, RNA expression, and protein structures that will allow the generation of a new series of hypotheses that can be tested to develop better understanding of and therapies for this disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a complex genetic disease associated with inflammation in the CNS white matter thought to be mediated by autoreactive T cells.</li>
-<li>Challenge: Clonal expansion of B cells, their antibody products, and T cells, hallmarks of inflammation in the CNS, are found in MS.</li>
-<li>Action: This review discusses new methods to define the molecular pathology of human disease with high-throughput examination of germline DNA haplotypes, RNA expression, and protein structures that will allow the generation of a new series of hypotheses that can be tested to develop better understanding of and therapies for this disease.</li>
-<li>Resolution: This paper investigates multiple sclerosis.</li>
+<li>Multiple sclerosis is a complex genetic disease associated with inflammation in the CNS white matter thought to be mediated by autoreactive T cells.</li>
+<li>Clonal expansion of B cells, their antibody products, and T cells, hallmarks of inflammation in the CNS, are found in MS.</li>
+<li>This review discusses new methods to define the molecular pathology of human disease with high-throughput examination of germline DNA haplotypes, RNA expression, and protein structures that will allow the generation of a new series of hypotheses that can be tested to develop better understanding of and therapies for this disease.</li>
+<li>This paper investigates multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci21357" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David A. Hafler. (2004). Multiple sclerosis. Journal of Clinical Investigation. https://doi.org/10.1172/jci21357</p>
@@ -1592,7 +1566,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Immunoglobulin class-switched B cells form an active immune axis between CNS and periphery in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1602,10 +1575,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates immunoglobulin class-switched b cells form an active immune axis between cns and periphery in multiple sclerosis. In six of eight patients, we identified peripheral CD27(+)IgD(-) memory B cells, CD27(hi)CD38(hi) plasma cells/plasmablasts, or CD27(-)IgD(-) B cells that had an immune connection to the CNS compartment.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In six of eight patients, we identified peripheral CD27(+)IgD(-) memory B cells, CD27(hi)CD38(hi) plasma cells/plasmablasts, or CD27(-)IgD(-) B cells that had an immune connection to the CNS compartment.</li>
-<li>Challenge: This paper investigates immunoglobulin class-switched b cells form an active immune axis between cns and periphery in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In six of eight patients, we identified peripheral CD27(+)IgD(-) memory B cells, CD27(hi)CD38(hi) plasma cells/plasmablasts, or CD27(-)IgD(-) B cells that had an immune connection to the CNS compartment.</li>
+<li>This paper investigates immunoglobulin class-switched b cells form an active immune axis between cns and periphery in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1126/scitranslmed.3008930" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arumugam Palanichamy. (2014). Immunoglobulin class-switched B cells form an active immune axis between CNS and periphery in multiple sclerosis. Science Translational Medicine. https://doi.org/10.1126/scitranslmed.3008930</p>
@@ -1627,7 +1600,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofascin as a novel target for autoantibody-mediated axonal injury</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -1637,10 +1609,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofascin as a novel target for autoantibody-mediated axonal injury. Starting with a proteomics-based approach, we identified neurofascin-specific autoantibodies in patients with MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Starting with a proteomics-based approach, we identified neurofascin-specific autoantibodies in patients with MS.</li>
-<li>Challenge: This paper investigates neurofascin as a novel target for autoantibody-mediated axonal injury.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Starting with a proteomics-based approach, we identified neurofascin-specific autoantibodies in patients with MS.</li>
+<li>This paper investigates neurofascin as a novel target for autoantibody-mediated axonal injury.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20071053" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Emily K. Mathey. (2007). Neurofascin as a novel target for autoantibody-mediated axonal injury. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20071053</p>
@@ -1662,7 +1634,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Intrinsic blood–brain barrier dysfunction contributes to multiple sclerosis pathogenesis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1672,10 +1643,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates intrinsic blood–brain barrier dysfunction contributes to multiple sclerosis pathogenesis. Human iPSC-derived BMEC-like cells are thus suitable to explore the molecular underpinnings of BBB dysfunction in MS and will assist in the identification of potential novel therapeutic targets for BBB stabilization.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Blood-brain barrier (BBB) breakdown and immune cell infiltration into the CNS are early hallmarks of multiple sclerosis (MS).</li>
-<li>Challenge: The mechanisms leading to BBB dysfunction are incompletely understood and generally thought to be a consequence of neuroinflammation.</li>
-<li>Action: Here, we have challenged this view and asked if intrinsic alterations in the BBB of MS patients contribute to MS pathogenesis.</li>
-<li>Resolution: To this end, we made use of human induced pluripotent stem cells derived from healthy controls and MS patients and differentiated them into brain microvascular endothelial cell (BMEC)-like cells as in vitro model of the BBB.</li>
+<li>Blood-brain barrier (BBB) breakdown and immune cell infiltration into the CNS are early hallmarks of multiple sclerosis (MS).</li>
+<li>The mechanisms leading to BBB dysfunction are incompletely understood and generally thought to be a consequence of neuroinflammation.</li>
+<li>Here, we have challenged this view and asked if intrinsic alterations in the BBB of MS patients contribute to MS pathogenesis.</li>
+<li>To this end, we made use of human induced pluripotent stem cells derived from healthy controls and MS patients and differentiated them into brain microvascular endothelial cell (BMEC)-like cells as in vitro model of the BBB.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awac019" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hideaki Nishihara. (2022). Intrinsic blood–brain barrier dysfunction contributes to multiple sclerosis pathogenesis. Brain. https://doi.org/10.1093/brain/awac019</p>
@@ -1697,7 +1668,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B lineage cells in the inflammatory central nervous system environment: Migration, maintenance, local antibody production, and therapeutic modulation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -1707,10 +1677,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b lineage cells in the inflammatory central nervous system environment: migration, maintenance, local antibody production, and therapeutic modulation. Finally, we outline the possibly double-edged effects of B cells and immunoglobulin in the CNS and discuss various therapeutic strategies for targeting the B-cell response.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: B cells have long played an enigmatic role in the scenario of multiple sclerosis pathogenesis.</li>
-<li>Challenge: This review summarizes recent progress in our understanding of B-cell trafficking, survival, and differentiation in the central nervous system (CNS).</li>
-<li>Action: We propose four possible routes of intrathecal immunoglobulin-producing cells.</li>
-<li>Resolution: This paper investigates b lineage cells in the inflammatory central nervous system environment: migration, maintenance, local antibody production, and therapeutic modulation.</li>
+<li>B cells have long played an enigmatic role in the scenario of multiple sclerosis pathogenesis.</li>
+<li>This review summarizes recent progress in our understanding of B-cell trafficking, survival, and differentiation in the central nervous system (CNS).</li>
+<li>We propose four possible routes of intrathecal immunoglobulin-producing cells.</li>
+<li>This paper investigates b lineage cells in the inflammatory central nervous system environment: migration, maintenance, local antibody production, and therapeutic modulation.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.20890" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Edgar Meinl. (2006). B lineage cells in the inflammatory central nervous system environment: Migration, maintenance, local antibody production, and therapeutic modulation. Annals of Neurology. https://doi.org/10.1002/ana.20890</p>
@@ -1732,7 +1702,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>SERIAL GADOLINIUM ENHANCED MAGNETIC RESONANCE IMAGING IN MULTIPLE SCLEROSIS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1988</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1742,10 +1711,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serial gadolinium enhanced magnetic resonance imaging in multiple sclerosis. Gd-DTPA is a useful marker of new and biologically active lesions and should prove of value in monitoring therapeutic trials in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Serial gadolinium-DTPA (Gd-DTPA) enhanced magnetic resonance imaging (MRI) was performed in 9 patients with multiple sclerosis (MS).</li>
-<li>Challenge: On the first scan enhancing lesions were seen in 7 patients, all of whom were in acute relapse.</li>
-<li>Action: Most enhancing lesions were asymptomatic.</li>
-<li>Resolution: This paper investigates serial gadolinium enhanced magnetic resonance imaging in multiple sclerosis.</li>
+<li>Serial gadolinium-DTPA (Gd-DTPA) enhanced magnetic resonance imaging (MRI) was performed in 9 patients with multiple sclerosis (MS).</li>
+<li>On the first scan enhancing lesions were seen in 7 patients, all of whom were in acute relapse.</li>
+<li>Most enhancing lesions were asymptomatic.</li>
+<li>This paper investigates serial gadolinium enhanced magnetic resonance imaging in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/111.4.927" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> D. H. Miller. (1988). SERIAL GADOLINIUM ENHANCED MAGNETIC RESONANCE IMAGING IN MULTIPLE SCLEROSIS. Brain. https://doi.org/10.1093/brain/111.4.927</p>
@@ -1767,7 +1736,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B‐cell activation influences T‐cell polarization and outcome of anti‐CD20 B‐cell depletion in central nervous system autoimmunity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (74%)</span>
 </div>
@@ -1777,10 +1745,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b‐cell activation influences t‐cell polarization and outcome of anti‐cd20 b‐cell depletion in central nervous system autoimmunity. Differences in immune responses to MOG protein and peptide may be important considerations when choosing an EAE model for testing novel B cell-targeting agents for MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our study highlights distinct roles for B cells in CNS autoimmunity.</li>
-<li>Challenge: Clinical benefit from anti-CD20 treatment may relate to inhibition of proinflammatory B cell APC function.</li>
-<li>Action: In certain clinical settings, however, elimination of unactivated B cells, which participate in regulation of T cells and other APC, may be undesirable.</li>
-<li>Resolution: This paper investigates b‐cell activation influences t‐cell polarization and outcome of anti‐cd20 b‐cell depletion in central nervous system autoimmunity.</li>
+<li>Our study highlights distinct roles for B cells in CNS autoimmunity.</li>
+<li>Clinical benefit from anti-CD20 treatment may relate to inhibition of proinflammatory B cell APC function.</li>
+<li>In certain clinical settings, however, elimination of unactivated B cells, which participate in regulation of T cells and other APC, may be undesirable.</li>
+<li>This paper investigates b‐cell activation influences t‐cell polarization and outcome of anti‐cd20 b‐cell depletion in central nervous system autoimmunity.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22081" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martin S. Weber. (2010). B‐cell activation influences T‐cell polarization and outcome of anti‐CD20 B‐cell depletion in central nervous system autoimmunity. Annals of Neurology. https://doi.org/10.1002/ana.22081</p>
@@ -1802,7 +1770,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>B and T Cells Driving Multiple Sclerosis: Identity, Mechanisms and Potential Triggers</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -1812,10 +1779,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates b and t cells driving multiple sclerosis: identity, mechanisms and potential triggers. Furthermore, the potential impact of genetic variants and viral triggers on candidate subsets will be debated in the context of MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Historically, multiple sclerosis (MS) has been viewed as being primarily driven by T cells.</li>
-<li>Challenge: However, the effective use of anti-CD20 treatment now also reveals an important role for B cells in MS patients.</li>
-<li>Action: The results from this treatment put forward T-cell activation rather than antibody production by B cells as a driving force behind MS.</li>
-<li>Resolution: The main question of how their interaction provokes both B and T cells to infiltrate the CNS and cause local pathology remains to be answered.</li>
+<li>Historically, multiple sclerosis (MS) has been viewed as being primarily driven by T cells.</li>
+<li>However, the effective use of anti-CD20 treatment now also reveals an important role for B cells in MS patients.</li>
+<li>The results from this treatment put forward T-cell activation rather than antibody production by B cells as a driving force behind MS.</li>
+<li>The main question of how their interaction provokes both B and T cells to infiltrate the CNS and cause local pathology remains to be answered.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3389/fimmu.2020.00760" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jamie van Langelaar. (2020). B and T Cells Driving Multiple Sclerosis: Identity, Mechanisms and Potential Triggers. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2020.00760</p>
@@ -1837,7 +1804,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The challenge of multiple sclerosis: How do we cure a chronic heterogeneous disease?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1847,10 +1813,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the challenge of multiple sclerosis: how do we cure a chronic heterogeneous disease?. Although the pathways to each of these cures are linked, each requires a unique strategy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is (MS) a T-cell autoimmune disease characterized by a relapsing-remitting followed by a progressive phase.</li>
-<li>Challenge: Relapses are driven by the adaptive immune system and involve waves of T helper cell 1 (Th1), Th17, and CD8 cells that infiltrate the nervous system and provoke a attack.</li>
-<li>Action: These cells are modulated by regulatory T and B cells.</li>
-<li>Resolution: This paper investigates the challenge of multiple sclerosis: how do we cure a chronic heterogeneous disease?.</li>
+<li>Multiple sclerosis is (MS) a T-cell autoimmune disease characterized by a relapsing-remitting followed by a progressive phase.</li>
+<li>Relapses are driven by the adaptive immune system and involve waves of T helper cell 1 (Th1), Th17, and CD8 cells that infiltrate the nervous system and provoke a attack.</li>
+<li>These cells are modulated by regulatory T and B cells.</li>
+<li>This paper investigates the challenge of multiple sclerosis: how do we cure a chronic heterogeneous disease?.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21640" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Howard L. Weiner. (2009). The challenge of multiple sclerosis: How do we cure a chronic heterogeneous disease?. Annals of Neurology. https://doi.org/10.1002/ana.21640</p>
@@ -1872,7 +1838,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Increased cerebrospinal fluid concentrations of the chemokine CXCL13 in active MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -1882,10 +1847,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates increased cerebrospinal fluid concentrations of the chemokine cxcl13 in active ms. Furthermore, CXCL13 or its receptor CXCR5 should be considered as therapeutic targets in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The chemokine CXCL13 may play a major role in recruitment of B cells and T-cell subsets expressing the chemokine receptor CXCR5 to the CNS in multiple sclerosis (MS), and may be a useful biomarker for treatment effects in MS.</li>
-<li>Challenge: Furthermore, CXCL13 or its receptor CXCR5 should be considered as therapeutic targets in MS.</li>
-<li>Action: This paper investigates increased cerebrospinal fluid concentrations of the chemokine cxcl13 in active ms.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The chemokine CXCL13 may play a major role in recruitment of B cells and T-cell subsets expressing the chemokine receptor CXCR5 to the CNS in multiple sclerosis (MS), and may be a useful biomarker for treatment effects in MS.</li>
+<li>Furthermore, CXCL13 or its receptor CXCR5 should be considered as therapeutic targets in MS.</li>
+<li>This paper investigates increased cerebrospinal fluid concentrations of the chemokine cxcl13 in active ms.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181c5b457" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Finn Sellebjerg. (2009). Increased cerebrospinal fluid concentrations of the chemokine CXCL13 in active MS. Neurology. https://doi.org/10.1212/wnl.0b013e3181c5b457</p>
@@ -1907,7 +1872,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Teriflunomide and Its Mechanism of Action in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -1917,10 +1881,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates teriflunomide and its mechanism of action in multiple sclerosis. Taken together, these data demonstrate how teriflunomide acts as a selective immune therapy for patients with MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Taken together, these data demonstrate how teriflunomide acts as a selective immune therapy for patients with MS.</li>
-<li>Challenge: This paper investigates teriflunomide and its mechanism of action in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Taken together, these data demonstrate how teriflunomide acts as a selective immune therapy for patients with MS.</li>
+<li>This paper investigates teriflunomide and its mechanism of action in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s40265-014-0212-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Amit Bar‐Or. (2014). Teriflunomide and Its Mechanism of Action in Multiple Sclerosis. Drugs. https://doi.org/10.1007/s40265-014-0212-x</p>
@@ -1942,7 +1906,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Regulatory CD56 &lt;sup&gt;bright&lt;/sup&gt; natural killer cells mediate immunomodulatory effects of IL-2Rα-targeted therapy (daclizumab) in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -1952,10 +1915,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates regulatory cd56 &lt;sup&gt;bright&lt;/sup&gt; natural killer cells mediate immunomodulatory effects of il-2rα-targeted therapy (daclizumab) in multiple sclerosis. Here we show that daclizumab treatment leads to only a mild functional blockade of CD4(+) T cells, the major candidate in multiple sclerosis pathogenesis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here we show that daclizumab treatment leads to only a mild functional blockade of CD4(+) T cells, the major candidate in multiple sclerosis pathogenesis.</li>
-<li>Challenge: This paper investigates regulatory cd56 &lt;sup&gt;bright&lt;/sup&gt; natural killer cells mediate immunomodulatory effects of il-2rα-targeted therapy (daclizumab) in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Here we show that daclizumab treatment leads to only a mild functional blockade of CD4(+) T cells, the major candidate in multiple sclerosis pathogenesis.</li>
+<li>This paper investigates regulatory cd56 &lt;sup&gt;bright&lt;/sup&gt; natural killer cells mediate immunomodulatory effects of il-2rα-targeted therapy (daclizumab) in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1073/pnas.0601335103" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bibiana Bielekova. (2006). Regulatory CD56 &lt;sup&gt;bright&lt;/sup&gt; natural killer cells mediate immunomodulatory effects of IL-2Rα-targeted therapy (daclizumab) in multiple sclerosis. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.0601335103</p>
@@ -1977,7 +1940,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Antibody facilitation of multiple sclerosis-like lesions in a nonhuman primate.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1995</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -1987,10 +1949,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates antibody facilitation of multiple sclerosis-like lesions in a nonhuman primate. Here we show that the MS-like lesion can be reproduced by immunization against the extracellular domain of a single myelin protein, myelin/oligodendrocyte glycoprotein (MOG).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here we show that the MS-like lesion can be reproduced by immunization against the extracellular domain of a single myelin protein, myelin/oligodendrocyte glycoprotein (MOG).</li>
-<li>Challenge: This paper investigates antibody facilitation of multiple sclerosis-like lesions in a nonhuman primate.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Here we show that the MS-like lesion can be reproduced by immunization against the extracellular domain of a single myelin protein, myelin/oligodendrocyte glycoprotein (MOG).</li>
+<li>This paper investigates antibody facilitation of multiple sclerosis-like lesions in a nonhuman primate.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci118368" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claude P. Genain. (1995). Antibody facilitation of multiple sclerosis-like lesions in a nonhuman primate.. Journal of Clinical Investigation. https://doi.org/10.1172/jci118368</p>
@@ -2012,7 +1974,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Functional evidence for epitope spreading in the relapsing pathology of experimental autoimmune encephalomyelitis.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1995</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -2022,10 +1983,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates functional evidence for epitope spreading in the relapsing pathology of experimental autoimmune encephalomyelitis. Using peripherally induced immunologic tolerance as a probe to analyze the neuropathologic T cell repertoire, we show that the majority of the immunopathologic reactivity during the acute phase of R-EAE in SJL/J mice induced by active immunization with the intact proteolipid (PLP) molecule is directed at the PLP139-151 epitope and that responses to secondary encephalitogenic PLP epitopes may contribute to the later relapsing phases of disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Using peripherally induced immunologic tolerance as a probe to analyze the neuropathologic T cell repertoire, we show that the majority of the immunopathologic reactivity during the acute phase of R-EAE in SJL/J mice induced by active immunization with the intact proteolipid (PLP) molecule is directed at the PLP139-151 epitope and that responses to secondary encephalitogenic PLP epitopes may contribute to the later relapsing phases of disease.</li>
-<li>Challenge: Most importantly, we show that the PLP178-191-specific responses are capable of mediating R-EAE upon adoptive secondary transfer to naive recipient mice.</li>
-<li>Action: This paper investigates functional evidence for epitope spreading in the relapsing pathology of experimental autoimmune encephalomyelitis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Using peripherally induced immunologic tolerance as a probe to analyze the neuropathologic T cell repertoire, we show that the majority of the immunopathologic reactivity during the acute phase of R-EAE in SJL/J mice induced by active immunization with the intact proteolipid (PLP) molecule is directed at the PLP139-151 epitope and that responses to secondary encephalitogenic PLP epitopes may contribute to the later relapsing phases of disease.</li>
+<li>Most importantly, we show that the PLP178-191-specific responses are capable of mediating R-EAE upon adoptive secondary transfer to naive recipient mice.</li>
+<li>This paper investigates functional evidence for epitope spreading in the relapsing pathology of experimental autoimmune encephalomyelitis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.182.1.75" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bradford L. McRae. (1995). Functional evidence for epitope spreading in the relapsing pathology of experimental autoimmune encephalomyelitis.. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.182.1.75</p>
@@ -2047,7 +2008,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -2057,10 +2017,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis. Immune mechanisms in MS are thus highly compartmentalized and indicate ongoing local T/B cell interaction.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Cerebrospinal fluid (CSF) protects the central nervous system (CNS) and analyzing CSF aids the diagnosis of CNS diseases, but our understanding of CSF leukocytes remains superficial.</li>
-<li>Challenge: Here, using single cell transcriptomics, we identify a specific location-associated composition and transcriptome of CSF leukocytes.</li>
-<li>Action: Multiple sclerosis (MS) - an autoimmune disease of the CNS - increases transcriptional diversity in blood, but increases cell type diversity in CSF including a higher abundance of cytotoxic phenotype T helper cells.</li>
-<li>Resolution: This paper investigates integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis.</li>
+<li>Cerebrospinal fluid (CSF) protects the central nervous system (CNS) and analyzing CSF aids the diagnosis of CNS diseases, but our understanding of CSF leukocytes remains superficial.</li>
+<li>Here, using single cell transcriptomics, we identify a specific location-associated composition and transcriptome of CSF leukocytes.</li>
+<li>Multiple sclerosis (MS) - an autoimmune disease of the CNS - increases transcriptional diversity in blood, but increases cell type diversity in CSF including a higher abundance of cytotoxic phenotype T helper cells.</li>
+<li>This paper investigates integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41467-019-14118-w" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David Schafflick. (2020). Integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis. Nature Communications. https://doi.org/10.1038/s41467-019-14118-w</p>
@@ -2082,7 +2042,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Potassium Channel KIR4.1 as an Immune Target in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (55%)</span>
 </div>
@@ -2092,10 +2051,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates potassium channel kir4.1 as an immune target in multiple sclerosis. (Funded by the German Ministry for Education and Research and Deutsche Forschungsgemeinschaft.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: KIR4.1 is a target of the autoantibody response in a subgroup of persons with multiple sclerosis.</li>
-<li>Challenge: (Funded by the German Ministry for Education and Research and Deutsche Forschungsgemeinschaft.).</li>
-<li>Action: This paper investigates potassium channel kir4.1 as an immune target in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>KIR4.1 is a target of the autoantibody response in a subgroup of persons with multiple sclerosis.</li>
+<li>(Funded by the German Ministry for Education and Research and Deutsche Forschungsgemeinschaft.).</li>
+<li>This paper investigates potassium channel kir4.1 as an immune target in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1110740" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Rakesh K. Srivastava. (2012). Potassium Channel KIR4.1 as an Immune Target in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1110740</p>
@@ -2117,7 +2076,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis: Distribution of T Cell Subsets Within Active Chronic Lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1983</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2127,10 +2085,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: distribution of t cell subsets within active chronic lesions. These results indicate that T4+ cells are actively involved in lesion extension and Ia+ cells, in demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The distribution of T cells and T cell subsets was examined within the human central nervous system in active lesions from seven patients with chronic multiple sclerosis.</li>
-<li>Challenge: The monoclonal antibodies anti-T11, anti-T4, and anti-T8 were used to detect total (whole) T cells, helper T cells, and suppressor-cytotoxic T cells, respectively, and a monoclonal antibody against human Ia was used for macrophages and B cells.</li>
-<li>Action: Lesion progression was associated with large numbers of T4+ cells at the lesion margin and these extended great distances into the adjacent normal-appearing white matter.</li>
-<li>Resolution: This paper investigates multiple sclerosis: distribution of t cell subsets within active chronic lesions.</li>
+<li>The distribution of T cells and T cell subsets was examined within the human central nervous system in active lesions from seven patients with chronic multiple sclerosis.</li>
+<li>The monoclonal antibodies anti-T11, anti-T4, and anti-T8 were used to detect total (whole) T cells, helper T cells, and suppressor-cytotoxic T cells, respectively, and a monoclonal antibody against human Ia was used for macrophages and B cells.</li>
+<li>Lesion progression was associated with large numbers of T4+ cells at the lesion margin and these extended great distances into the adjacent normal-appearing white matter.</li>
+<li>This paper investigates multiple sclerosis: distribution of t cell subsets within active chronic lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1126/science.6217550" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ute Traugott. (1983). Multiple Sclerosis: Distribution of T Cell Subsets Within Active Chronic Lesions. Science. https://doi.org/10.1126/science.6217550</p>
@@ -2152,7 +2110,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Immunology of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2162,10 +2119,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates immunology of multiple sclerosis. A simplified model of MS immune pathophysiology is presented to illustrate the basic principles by which peripheral immune activation, as well as compartmentalized immune responses within the CNS, is likely to impact the disease process and to identify the putative sites of action of current and future MS treatments.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Recent years have witnessed a remarkable growth in literature related to the biology and treatment of multiple sclerosis (MS).</li>
-<li>Challenge: The focus of this article is on aspects of the human immune response that have been implicated in the MS disease process and, as a corollary, represent rational targets for the development of safe and effective therapies.</li>
-<li>Action: Much of the thinking about immune pathophysiology in patients with MS has been shaped by studies in animal models of central nervous system (CNS) inflammation.</li>
-<li>Resolution: Translation to the human disease has continued to pose challenges.</li>
+<li>Recent years have witnessed a remarkable growth in literature related to the biology and treatment of multiple sclerosis (MS).</li>
+<li>The focus of this article is on aspects of the human immune response that have been implicated in the MS disease process and, as a corollary, represent rational targets for the development of safe and effective therapies.</li>
+<li>Much of the thinking about immune pathophysiology in patients with MS has been shaped by studies in animal models of central nervous system (CNS) inflammation.</li>
+<li>Translation to the human disease has continued to pose challenges.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ncl.2004.11.001" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Amit Bar‐Or. (2005). Immunology of multiple sclerosis. Neurologic Clinics. https://doi.org/10.1016/j.ncl.2004.11.001</p>
@@ -2187,7 +2144,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Myelin oligodendrocyte glycoprotein–specific T and B cells cooperate to induce a Devic-like disease in mice</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -2197,10 +2153,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates myelin oligodendrocyte glycoprotein–specific t and b cells cooperate to induce a devic-like disease in mice. Thus, CNS antigen-specific T and B cells cooperate to induce a distinct clinicopathologic EAE pattern that closely replicates human Devic disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a clinically and pathologically heterogeneous inflammatory/demyelinating disease of the CNS.</li>
-<li>Challenge: In the MS variant Devic disease, lesions are predominantly found in the optic nerves and spinal cord but not the brain.</li>
-<li>Action: The immunological bases of the different forms of MS are unknown.</li>
-<li>Resolution: This paper investigates myelin oligodendrocyte glycoprotein–specific t and b cells cooperate to induce a devic-like disease in mice.</li>
+<li>Multiple sclerosis (MS) is a clinically and pathologically heterogeneous inflammatory/demyelinating disease of the CNS.</li>
+<li>In the MS variant Devic disease, lesions are predominantly found in the optic nerves and spinal cord but not the brain.</li>
+<li>The immunological bases of the different forms of MS are unknown.</li>
+<li>This paper investigates myelin oligodendrocyte glycoprotein–specific t and b cells cooperate to induce a devic-like disease in mice.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci28334" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Estelle Bettelli. (2006). Myelin oligodendrocyte glycoprotein–specific T and B cells cooperate to induce a Devic-like disease in mice. Journal of Clinical Investigation. https://doi.org/10.1172/jci28334</p>
@@ -2222,7 +2178,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Dysferlin Is a New Marker for Leaky Brain Blood Vessels in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -2232,10 +2187,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates dysferlin is a new marker for leaky brain blood vessels in multiple sclerosis. Hence, dysferlin is not only a marker for leaky brain vessels, but also reveals dissociation of perivascular inflammatory infiltrates and blood-brain barrier disturbance in multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Dysferlin is a muscle protein involved in cell membrane repair and its deficiency is associated with muscular dystrophy.</li>
-<li>Challenge: We describe that dysferlin is also expressed in leaky endothelial cells.</li>
-<li>Action: In the normal central nervous system (CNS), dysferlin is only present in endothelial cells of circumventricular organs.</li>
-<li>Resolution: In the inflamed CNS of patients with multiple sclerosis (MS) or in animals with experimental autoimmune encephalomyelitis, dysferlin reactivity is induced in endothelial cells and the expression is associated with vascular leakage of serum proteins.</li>
+<li>Dysferlin is a muscle protein involved in cell membrane repair and its deficiency is associated with muscular dystrophy.</li>
+<li>We describe that dysferlin is also expressed in leaky endothelial cells.</li>
+<li>In the normal central nervous system (CNS), dysferlin is only present in endothelial cells of circumventricular organs.</li>
+<li>In the inflamed CNS of patients with multiple sclerosis (MS) or in animals with experimental autoimmune encephalomyelitis, dysferlin reactivity is induced in endothelial cells and the expression is associated with vascular leakage of serum proteins.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/01.jnen.0000235119.52311.16" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sonja Hochmeister. (2006). Dysferlin Is a New Marker for Leaky Brain Blood Vessels in Multiple Sclerosis. Journal of Neuropathology &amp; Experimental Neurology. https://doi.org/10.1097/01.jnen.0000235119.52311.16</p>
@@ -2257,7 +2212,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Demyelination in primate autoimmune encephalomyelitis and acute multiple sclerosis lesions: A case for antigen-specific antibody mediation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -2267,10 +2221,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates demyelination in primate autoimmune encephalomyelitis and acute multiple sclerosis lesions: a case for antigen-specific antibody mediation. Thus, vesicular disruption of myelin was a constant feature in these evolving, highly active lesions in primate EAE and MS and appeared causally related to the deposition of antigen-specific autoantibodies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neuropathological and ultrastructural features of central nervous system demyelination were compared in marmoset experimental autoimmune encephalomyelitis (EAE) induced with myelin/oligodendrocyte glycoprotein (MOG), and in 3 cases of multiple sclerosis (MS) displaying recent lesions.</li>
-<li>Challenge: At the edges of EAE and MS lesions, a zone of myelin vacuolation was common, whereas in the lesion proper, myelin sheaths were consistently transformed into vesiculated membranous networks.</li>
-<li>Action: These networks became dissociated from axons by cell processes from macrophages.</li>
-<li>Resolution: Oligodendrocytes were remarkably spared and evidence of myelin repair was present but not prominent.</li>
+<li>Neuropathological and ultrastructural features of central nervous system demyelination were compared in marmoset experimental autoimmune encephalomyelitis (EAE) induced with myelin/oligodendrocyte glycoprotein (MOG), and in 3 cases of multiple sclerosis (MS) displaying recent lesions.</li>
+<li>At the edges of EAE and MS lesions, a zone of myelin vacuolation was common, whereas in the lesion proper, myelin sheaths were consistently transformed into vesiculated membranous networks.</li>
+<li>These networks became dissociated from axons by cell processes from macrophages.</li>
+<li>Oligodendrocytes were remarkably spared and evidence of myelin repair was present but not prominent.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/1531-8249(199908)46:2&lt;144::aid-ana3&gt;3.0.co;2-k" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Cedric S. Raine. (1999). Demyelination in primate autoimmune encephalomyelitis and acute multiple sclerosis lesions: A case for antigen-specific antibody mediation. Annals of Neurology. https://doi.org/10.1002/1531-8249(199908)46:2&lt;144::aid-ana3&gt;3.0.co;2-k</p>
@@ -2292,7 +2246,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Spontaneous relapsing-remitting EAE in the SJL/J mouse: MOG-reactive transgenic T cells recruit endogenous MOG-specific B cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -2302,10 +2255,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates spontaneous relapsing-remitting eae in the sjl/j mouse: mog-reactive transgenic t cells recruit endogenous mog-specific b cells. RR mice constitute the first spontaneous animal model for the most common form of multiple sclerosis (MS), RR MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We describe new T cell receptor (TCR) transgenic mice (relapsing-remitting [RR] mice) carrying a TCR specific for myelin oligodendrocyte glycoprotein (MOG) peptide 92-106 in the context of I-A(s).</li>
-<li>Challenge: Backcrossed to the SJL/J background, most RR mice spontaneously develop RR experimental autoimmune encephalomyelitis (EAE) with episodes often altering between different central nervous system tissues like the cerebellum, optic nerve, and spinal cord.</li>
-<li>Action: Development of spontaneous EAE depends on the presence of an intact B cell compartment and on the expression of MOG autoantigen.</li>
-<li>Resolution: This paper investigates spontaneous relapsing-remitting eae in the sjl/j mouse: mog-reactive transgenic t cells recruit endogenous mog-specific b cells.</li>
+<li>We describe new T cell receptor (TCR) transgenic mice (relapsing-remitting [RR] mice) carrying a TCR specific for myelin oligodendrocyte glycoprotein (MOG) peptide 92-106 in the context of I-A(s).</li>
+<li>Backcrossed to the SJL/J background, most RR mice spontaneously develop RR experimental autoimmune encephalomyelitis (EAE) with episodes often altering between different central nervous system tissues like the cerebellum, optic nerve, and spinal cord.</li>
+<li>Development of spontaneous EAE depends on the presence of an intact B cell compartment and on the expression of MOG autoantigen.</li>
+<li>This paper investigates spontaneous relapsing-remitting eae in the sjl/j mouse: mog-reactive transgenic t cells recruit endogenous mog-specific b cells.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20090299" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bernadette Pöllinger. (2009). Spontaneous relapsing-remitting EAE in the SJL/J mouse: MOG-reactive transgenic T cells recruit endogenous MOG-specific B cells. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20090299</p>
@@ -2327,7 +2280,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Spontaneous opticospinal encephalomyelitis in a double-transgenic mouse model of autoimmune T cell/B cell cooperation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -2337,10 +2289,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates spontaneous opticospinal encephalomyelitis in a double-transgenic mouse model of autoimmune t cell/b cell cooperation. In addition, in OSE mice, but not in single-transgenic parental mice, anti-MOG antibodies were switched from IgM to IgG1.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We describe a double-transgenic mouse strain (opticospinal EAE [OSE] mouse) that spontaneously develops an EAE-like neurological syndrome closely resembling a human variant of multiple sclerosis, Devic disease (also called neuromyelitis optica).</li>
-<li>Challenge: Like in Devic disease, the inflammatory, demyelinating lesions were located in the optic nerve and spinal cord, sparing brain and cerebellum, and the murine lesions showed histological similarity with their human correlates.</li>
-<li>Action: OSE mice have recombination-competent immune cells expressing a TCR-alphabeta specific for myelin oligodendrocyte glycoprotein (MOG) aa 35-55 peptide in the context of I-Ab along with an Ig J region replaced by the recombined heavy chain of a monoclonal antibody binding to a conformational epitope on MOG.</li>
-<li>Resolution: This paper investigates spontaneous opticospinal encephalomyelitis in a double-transgenic mouse model of autoimmune t cell/b cell cooperation.</li>
+<li>We describe a double-transgenic mouse strain (opticospinal EAE [OSE] mouse) that spontaneously develops an EAE-like neurological syndrome closely resembling a human variant of multiple sclerosis, Devic disease (also called neuromyelitis optica).</li>
+<li>Like in Devic disease, the inflammatory, demyelinating lesions were located in the optic nerve and spinal cord, sparing brain and cerebellum, and the murine lesions showed histological similarity with their human correlates.</li>
+<li>OSE mice have recombination-competent immune cells expressing a TCR-alphabeta specific for myelin oligodendrocyte glycoprotein (MOG) aa 35-55 peptide in the context of I-Ab along with an Ig J region replaced by the recombined heavy chain of a monoclonal antibody binding to a conformational epitope on MOG.</li>
+<li>This paper investigates spontaneous opticospinal encephalomyelitis in a double-transgenic mouse model of autoimmune t cell/b cell cooperation.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci28330" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gurumoorthy Krishnamoorthy. (2006). Spontaneous opticospinal encephalomyelitis in a double-transgenic mouse model of autoimmune T cell/B cell cooperation. Journal of Clinical Investigation. https://doi.org/10.1172/jci28330</p>
@@ -2362,7 +2314,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Fine specificity and HLA restriction of myelin basic protein-specific cytotoxic T cell lines from multiple sclerosis patients and healthy individuals.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1990</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2372,10 +2323,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates fine specificity and hla restriction of myelin basic protein-specific cytotoxic t cell lines from multiple sclerosis patients and healthy individuals. Together, these findings suggest that the MBP-specific cytotoxic T cell response, although not sufficient for disease, may be important for the pathogenesis of MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Myelin basic protein (MBP) is a candidate Ag for the autoimmune process believed to be involved in the pathogenesis of multiple sclerosis (MS).</li>
-<li>Challenge: To investigate the fine specificity and HLA restriction of human MBP-specific CTL, long term T cell lines (TCL) were established from 22 MS patients and 16 healthy individuals by repeated antigenic restimulation.</li>
-<li>Action: By using this approach, MBP-specific cytotoxic TCL were generated from 81% of the lines from MS patients and 69% of those from controls.</li>
-<li>Resolution: TCL from both groups expressed the CD3+, CD4+, CD8- phenotype and secreted substantial amounts of IFN-gamma.</li>
+<li>Myelin basic protein (MBP) is a candidate Ag for the autoimmune process believed to be involved in the pathogenesis of multiple sclerosis (MS).</li>
+<li>To investigate the fine specificity and HLA restriction of human MBP-specific CTL, long term T cell lines (TCL) were established from 22 MS patients and 16 healthy individuals by repeated antigenic restimulation.</li>
+<li>By using this approach, MBP-specific cytotoxic TCL were generated from 81% of the lines from MS patients and 69% of those from controls.</li>
+<li>TCL from both groups expressed the CD3+, CD4+, CD8- phenotype and secreted substantial amounts of IFN-gamma.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.145.2.540" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Roland Martinꝉ. (1990). Fine specificity and HLA restriction of myelin basic protein-specific cytotoxic T cell lines from multiple sclerosis patients and healthy individuals.. The Journal of Immunology. https://doi.org/10.4049/jimmunol.145.2.540</p>
@@ -2397,7 +2348,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Abnormal Endothelial Tight Junctions in Active Lesions and Normal‐appearing White Matter in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2407,10 +2357,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates abnormal endothelial tight junctions in active lesions and normal‐appearing white matter in multiple sclerosis. BBB disruption due to tight junctional pathology should be regarded as a significant form of tissue injury in MS, alongside demyelination and axonopathy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Blood-brain barrier (BBB) breakdown, demonstrable in vivo by enhanced MRI is characteristic of new and expanding inflammatory lesions in relapsing-remitting and chronic progressive multiple sclerosis (MS).</li>
-<li>Challenge: Subtle leakage may also occur in primary progressive MS.</li>
-<li>Action: However, the anatomical route(s) of BBB leakage have not been demonstrated.</li>
-<li>Resolution: We investigated the possible involvement of interendothelial tight junctions (TJ) by examining the expression of TJ proteins (occludin and ZO-1 ) in blood vessels in active MS lesions from 8 cases of MS and in normal-appearing white (NAWM) matter from 6 cases.</li>
+<li>Blood-brain barrier (BBB) breakdown, demonstrable in vivo by enhanced MRI is characteristic of new and expanding inflammatory lesions in relapsing-remitting and chronic progressive multiple sclerosis (MS).</li>
+<li>Subtle leakage may also occur in primary progressive MS.</li>
+<li>However, the anatomical route(s) of BBB leakage have not been demonstrated.</li>
+<li>We investigated the possible involvement of interendothelial tight junctions (TJ) by examining the expression of TJ proteins (occludin and ZO-1 ) in blood vessels in active MS lesions from 8 cases of MS and in normal-appearing white (NAWM) matter from 6 cases.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.2002.tb00430.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jonathan Plumb. (2002). Abnormal Endothelial Tight Junctions in Active Lesions and Normal‐appearing White Matter in Multiple Sclerosis. Brain Pathology. https://doi.org/10.1111/j.1750-3639.2002.tb00430.x</p>
@@ -2432,7 +2382,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Evolution of the blood–brain barrier in newly forming multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -2442,10 +2391,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates evolution of the blood–brain barrier in newly forming multiple sclerosis lesions. We propose a model of new lesion growth that unites our imaging observations with existing pathology data.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The rapid change of enhancement dynamics from centrifugal to centripetal reflects the outward growth of MS lesions around their central vein and suggests that factors mediating lesion growth and tissue repair derive from different locations at different times.</li>
-<li>Challenge: We propose a model of new lesion growth that unites our imaging observations with existing pathology data.</li>
-<li>Action: This paper investigates evolution of the blood–brain barrier in newly forming multiple sclerosis lesions.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The rapid change of enhancement dynamics from centrifugal to centripetal reflects the outward growth of MS lesions around their central vein and suggests that factors mediating lesion growth and tissue repair derive from different locations at different times.</li>
+<li>We propose a model of new lesion growth that unites our imaging observations with existing pathology data.</li>
+<li>This paper investigates evolution of the blood–brain barrier in newly forming multiple sclerosis lesions.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22472" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> María I. Gaitán. (2011). Evolution of the blood–brain barrier in newly forming multiple sclerosis lesions. Annals of Neurology. https://doi.org/10.1002/ana.22472</p>
@@ -2467,7 +2416,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cutting Edge: CD4+CD25+ Regulatory T Cells Suppress Antigen-Specific Autoreactive Immune Responses and Central Nervous System Inflammation During Active Experimental Autoimmune Encephalomyelitis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -2477,10 +2425,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cutting edge: cd4+cd25+ regulatory t cells suppress antigen-specific autoreactive immune responses and central nervous system inflammation during active experimental autoimmune encephalomyelitis. Collectively, these findings suggest that T(R) cells contribute notably to the endogenous mechanisms that regulate actively induced autoimmune disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Autoreactive CD4(+) T cells exist in normal individuals and retain the capacity to initiate autoimmune disease.</li>
-<li>Challenge: The current study investigates the role of CD4(+)CD25(+) T-regulatory (T(R)) cells during autoimmune disease using the CD4(+) T cell-dependent myelin oligodendrocyte glycoprotein (MOG)-specific experimental autoimmune encephalomyelitis model of multiple sclerosis.</li>
-<li>Action: In vitro, T(R) cells effectively inhibited both the proliferation of and cytokine production by MOG(35-55)-specific Th1 cells.</li>
-<li>Resolution: This paper investigates cutting edge: cd4+cd25+ regulatory t cells suppress antigen-specific autoreactive immune responses and central nervous system inflammation during active experimental autoimmune encephalomyelitis.</li>
+<li>Autoreactive CD4(+) T cells exist in normal individuals and retain the capacity to initiate autoimmune disease.</li>
+<li>The current study investigates the role of CD4(+)CD25(+) T-regulatory (T(R)) cells during autoimmune disease using the CD4(+) T cell-dependent myelin oligodendrocyte glycoprotein (MOG)-specific experimental autoimmune encephalomyelitis model of multiple sclerosis.</li>
+<li>In vitro, T(R) cells effectively inhibited both the proliferation of and cytokine production by MOG(35-55)-specific Th1 cells.</li>
+<li>This paper investigates cutting edge: cd4+cd25+ regulatory t cells suppress antigen-specific autoreactive immune responses and central nervous system inflammation during active experimental autoimmune encephalomyelitis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4049/jimmunol.169.9.4712" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Adam P. Kohm. (2002). Cutting Edge: CD4+CD25+ Regulatory T Cells Suppress Antigen-Specific Autoreactive Immune Responses and Central Nervous System Inflammation During Active Experimental Autoimmune Encephalomyelitis. The Journal of Immunology. https://doi.org/10.4049/jimmunol.169.9.4712</p>
@@ -2502,7 +2450,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Intrathecal synthesis of oligoclonal IgM against myelin lipids predicts an aggressive disease course in MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -2512,10 +2459,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates intrathecal synthesis of oligoclonal igm against myelin lipids predicts an aggressive disease course in ms. The presence of intrathecal anti-myelin lipid IgM antibodies is therefore a very accurate predictor of aggressive evolution in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Oligoclonal IgM bands restricted to cerebrospinal fluid are an unfavorable prognostic marker in MS, the most common demyelinating disease of the CNS.</li>
-<li>Challenge: We have attempted to identify the B cell subpopulation responsible for oligoclonal IgM secretion and the specificity of these bands.</li>
-<li>Action: In addition, we explored the relationship between specificity and disease evolution.</li>
-<li>Resolution: Intrathecal B cell subpopulations present in 29 MS patients with oligoclonal IgM bands and 52 without them were analyzed.</li>
+<li>Oligoclonal IgM bands restricted to cerebrospinal fluid are an unfavorable prognostic marker in MS, the most common demyelinating disease of the CNS.</li>
+<li>We have attempted to identify the B cell subpopulation responsible for oligoclonal IgM secretion and the specificity of these bands.</li>
+<li>In addition, we explored the relationship between specificity and disease evolution.</li>
+<li>Intrathecal B cell subpopulations present in 29 MS patients with oligoclonal IgM bands and 52 without them were analyzed.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci22833" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Luisa María Villar. (2005). Intrathecal synthesis of oligoclonal IgM against myelin lipids predicts an aggressive disease course in MS. Journal of Clinical Investigation. https://doi.org/10.1172/jci22833</p>
@@ -2534,3 +2481,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=2"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_autoimmunity_mechanisms">Autoimmunity mechanisms</a></li>
+<li><a href="/mskb/journey/?concept=immune_system_basics">Immune-system basics for MS</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_antigen_presentation_hla">Antigen presentation and HLA</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_b_cell_biology">B cell biology</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_bbb_dysfunction">Blood–brain barrier dysfunction</a></li>
+<li><a href="/mskb/journey/?concept=b_cell_targeted_therapies">B cell–targeted therapies</a></li>
+</ul>

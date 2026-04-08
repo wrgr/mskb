@@ -11,6 +11,20 @@ retrieval:
   use_seed_channel: true
   use_lexical_channel: true
   use_dataset_channel: true
+  seed_reference_enrichment:
+    enabled: true
+    use_crossref: true
+    use_semantic_scholar: true
+    use_openalex_title_search: true
+    max_crossref_refs_per_seed: 250
+    max_semantic_scholar_refs_per_seed: 250
+    max_search_results_per_reference: 8
+    max_title_queries_per_seed: 40
+    min_title_similarity: 88.0
+    max_year_delta: 3
+    request_timeout_seconds: 30
+    search_sleep_seconds: 0.03
+    semantic_scholar_api_key_env: "SEMANTIC_SCHOLAR_API_KEY"
 
 queries:
   lexical:

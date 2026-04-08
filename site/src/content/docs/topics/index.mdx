@@ -1,0 +1,77 @@
+---
+title: Citation topics
+description: Research themes derived from the citation graph with concept links and journey seeding.
+template: splash
+sidebar:
+  label: All topics
+  order: 0
+---
+
+import '../../../styles/custom.css';
+
+<div class="topic-landing-hero">
+<h2>Research map by topic, concept, and domain.</h2>
+<p>Use the graph to jump between citation topics and the learning concepts they support. If JavaScript is disabled, expand the fallback list below.</p>
+<div class="topic-jump">
+<a href="#pathogenesis-immunology">Pathogenesis &amp; Immunology</a>
+<a href="#clinical-trials-therapeutics">Clinical Trials &amp; Therapeutics</a>
+<a href="#clinical-care-management">Clinical Care &amp; Management</a>
+<a href="#epidemiology-population-health">Epidemiology &amp; Population Health</a>
+</div>
+</div>
+
+<div id="mskb-graph-research" class="mskb-graph-root"></div>
+
+<details>
+<summary><strong>Fallback topic list (non-JS)</strong></summary>
+<div class="topic-category" id="pathogenesis-immunology">
+
+## Pathogenesis & Immunology
+
+<p>Mechanisms of demyelination, immune activation, and the cells and cytokines driving MS.</p>
+</div>
+<div class="topic-grid">
+<a class="topic-card" href="immunology-2/"><strong>Immunology</strong><span>2140 papers</span></a>
+<a class="topic-card" href="neuroscience-4/"><strong>Neuroscience</strong><span>1847 papers</span></a>
+<a class="topic-card" href="immunology-5/"><strong>Immunology</strong><span>2315 papers</span></a>
+<a class="topic-card" href="gut-microbiota-and-health-139/"><strong>Gut microbiota and health</strong><span>305 papers</span></a>
+</div>
+
+<div class="topic-category" id="clinical-trials-therapeutics">
+
+## Clinical Trials & Therapeutics
+
+<p>Disease-modifying therapies, trial design, and emerging treatment targets.</p>
+</div>
+<div class="topic-grid">
+<a class="topic-card" href="sarscov2-and-covid19-research-7/"><strong>SARS-CoV-2 and COVID-19 Research</strong><span>553 papers</span></a>
+<a class="topic-card" href="immunology-8/"><strong>Immunology</strong><span>446 papers</span></a>
+</div>
+
+<div class="topic-category" id="clinical-care-management">
+
+## Clinical Care & Management
+
+<p>Symptom management, rehabilitation, and the day-to-day care of people with MS.</p>
+</div>
+<div class="topic-grid">
+<a class="topic-card" href="multiple-sclerosis-research-studies-1/"><strong>Multiple Sclerosis Research Studies</strong><span>2570 papers</span></a>
+<a class="topic-card" href="multiple-sclerosis-research-studies-121/"><strong>Multiple Sclerosis Research Studies</strong><span>2729 papers</span></a>
+<a class="topic-card" href="multiple-sclerosis-125/"><strong>Multiple sclerosis</strong><span>1181 papers</span></a>
+<a class="topic-card" href="osteoarthritis-185/"><strong>Osteoarthritis</strong><span>8 papers</span></a>
+</div>
+
+<div class="topic-category" id="epidemiology-population-health">
+
+## Epidemiology & Population Health
+
+<p>Incidence, prevalence, environmental and genetic risk factors, and population-level outcomes.</p>
+</div>
+<div class="topic-grid">
+<a class="topic-card" href="internal-medicine-9/"><strong>Internal medicine</strong><span>120 papers</span></a>
+</div>
+
+</details>
+
+<script is:inline src="/mskb/javascripts/mskb_graph_renderer.js"></script>
+<script is:inline src="/mskb/javascripts/explorer.js"></script>

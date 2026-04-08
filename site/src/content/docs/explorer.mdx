@@ -14,6 +14,7 @@ import '../../styles/custom.css';
 <div class="explorer-shell">
 
 <p>Use this view to inspect citation structure, read paper summaries, and plan literature exploration from core papers out to related work. Papers are grouped by <strong>research themes</strong> derived from citation communities.</p>
+<p><strong>Planning a multi-step study sequence?</strong> <a href="/mskb/journey/">Open in Learning Journey →</a></p>
 
 <div class="explorer-guide">
   <div class="guide-card"><strong>Undergrad flow</strong> — pick a lower target reading level for plain-language summaries, then branch through related papers.</div>
@@ -122,15 +123,6 @@ import '../../styles/custom.css';
   <p class="tools-intro">Each tool below operates on the <strong>Relevant papers</strong> list above (or, where applicable, on the visible graph corpus).</p>
   <div class="tool-grid">
     <section class="tool-card">
-      <h4>Learning path</h4>
-      <p>Stage your relevant papers into <em>foundations &rarr; bridges &rarr; deep dives</em> for self-paced study.</p>
-      <div class="explorer-actions">
-        <button id="journey-generate" type="button">Generate Learning Path</button>
-      </div>
-      <div id="journey-results"></div>
-    </section>
-
-    <section class="tool-card">
       <h4>Direct search</h4>
       <p>Find papers by author, title, or abstract text.</p>
       <div class="explorer-search">
@@ -156,17 +148,6 @@ import '../../styles/custom.css';
         <button id="idea-run" type="button">Find Relevant Papers</button>
       </div>
       <div id="idea-results"></div>
-    </section>
-
-    <section class="tool-card">
-      <h4>Community reading list</h4>
-      <p>Treat your relevant papers as a community: compute graph stats, suggest companion papers, and export a markdown reading list (e.g. for a journal club).</p>
-      <div id="community-stats" class="community-stats"></div>
-      <div class="explorer-actions">
-        <button id="community-generate" type="button">Build Community Stats</button>
-        <button id="community-download" type="button" disabled>Download Reading List (.md)</button>
-      </div>
-      <div id="community-results"></div>
     </section>
   </div>
 </div>

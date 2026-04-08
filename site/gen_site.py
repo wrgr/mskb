@@ -2,15 +2,49 @@
 """Generate MkDocs site content from pipeline outputs."""
 
 import argparse
+import copy
 import html
 import json
 import re
-import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
 import yaml
+
+import gen_site_taxonomy as taxonomy
+
+CATEGORY_LABELS = {
+    "pathogenesis_and_immunology": "Pathogenesis & Immunology",
+    "imaging_and_biomarkers": "Imaging & Biomarkers",
+    "clinical_trials_and_therapeutics": "Clinical Trials & Therapeutics",
+    "clinical_care_and_management": "Clinical Care & Management",
+    "epidemiology_and_population_health": "Epidemiology & Population Health",
+}
+
+CATEGORY_DESCRIPTIONS = {
+    "pathogenesis_and_immunology": "Mechanisms of demyelination, immune activation, and the cells and cytokines driving MS.",
+    "imaging_and_biomarkers": "MRI, optical coherence tomography, and fluid biomarkers that track lesion burden and disease activity.",
+    "clinical_trials_and_therapeutics": "Disease-modifying therapies, trial design, and emerging treatment targets.",
+    "clinical_care_and_management": "Symptom management, rehabilitation, and the day-to-day care of people with MS.",
+    "epidemiology_and_population_health": "Incidence, prevalence, environmental and genetic risk factors, and population-level outcomes.",
+}
+
+CLUSTER_LABEL_STOPWORDS = {
+    "medicine",
+    "biology",
+    "internal medicine",
+    "disease",
+    "multiple sclerosis",
+    "ms",
+    "research",
+    "studies",
+    "multiple sclerosis research studies",
+    "research studies",
+    "general",
+    "other",
+}
 
 
 def _slug(text: str) -> str:
@@ -21,6 +55,36 @@ def _slug(text: str) -> str:
 def _topic_slug(label: str, topic_id: int) -> str:
     base = _slug(label) or "topic"
     return f"{base}-{int(topic_id)}"
+
+
+def _prettify_topic_label(raw: str, fallback: str = "Research theme") -> str:
+    text = _clean_text(raw)
+    if not text:
+        return fallback
+    parts = [part.strip() for part in re.split(r"\s*[\/|]\s*", text) if _clean_text(part)]
+    distinctive: list[str] = []
+    seen_norm: set[str] = set()
+    for part in parts:
+        norm = re.sub(r"\s+", " ", part.lower()).strip()
+        if norm in CLUSTER_LABEL_STOPWORDS or norm in seen_norm:
+            continue
+        duplicate = False
+        for kept in distinctive:
+            kept_norm = kept.lower()
+            if kept_norm in norm or norm in kept_norm:
+                duplicate = True
+                break
+        if duplicate:
+            continue
+        distinctive.append(part)
+        seen_norm.add(norm)
+    if not distinctive:
+        chosen = sorted(parts, key=len, reverse=True)[0] if parts else text
+    elif len(distinctive) == 1:
+        chosen = distinctive[0]
+    else:
+        chosen = " · ".join(distinctive[:2])
+    return chosen[:1].upper() + chosen[1:]
 
 
 def _coerce_year(value) -> int | None:
@@ -181,11 +245,6 @@ def _citation_bibtex(row: dict) -> str:
         lines.append(f"  url = {{{_bibtex_escape(source_url)}}},")
     lines.append("}")
     return "\n".join(lines)
-
-
-def _difficulty_badge(level: int) -> str:
-    labels = {1: "Introductory", 2: "Beginner", 3: "Intermediate", 4: "Advanced", 5: "Specialist"}
-    return f"**Difficulty: {labels.get(level, 'Unknown')} ({level}/5)**"
 
 
 DIFFICULTY_JARGON_HINTS = {
@@ -354,6 +413,109 @@ def _topic_concepts_block(paper_rows: list[dict], limit: int = 14) -> str:
     return "\n".join(lines)
 
 
+def _load_concept_papers(
+    root: Path,
+    concept_index: dict[str, dict],
+    valid_paper_ids: set[str],
+) -> dict[str, dict]:
+    """Load and validate committed concept->paper cache.
+
+    Failure mode is non-fatal by design: on cache mismatches, return an empty
+    mapping per concept and let site generation continue.
+    """
+    cache_path = root / "data" / "concept_papers.json"
+    default_payload = {"foundational": [], "advanced": [], "rationales": {}}
+    empty = {concept_id: default_payload.copy() for concept_id in concept_index.keys()}
+
+    if not cache_path.exists():
+        print(f"[warn] Concept paper cache missing: {cache_path} (falling back to empty links)")
+        return empty
+
+    try:
+        data = json.loads(cache_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"[warn] Invalid concept cache JSON ({exc}); falling back to empty links")
+        return empty
+
+    raw_concepts = data.get("concepts")
+    if not isinstance(raw_concepts, dict):
+        print("[warn] Concept cache missing object field 'concepts'; falling back to empty links")
+        return empty
+
+    concept_ids = set(concept_index.keys())
+    cache_ids = set(raw_concepts.keys())
+    missing = sorted(concept_ids - cache_ids)
+    extra = sorted(cache_ids - concept_ids)
+    if missing or extra:
+        print(
+            "[warn] Concept cache concept-set mismatch "
+            f"(missing={len(missing)}, extra={len(extra)}); falling back to empty links"
+        )
+        return empty
+
+    out: dict[str, dict] = {}
+    for concept_id in sorted(concept_ids):
+        payload = raw_concepts.get(concept_id)
+        if not isinstance(payload, dict):
+            print(f"[warn] Concept cache payload for {concept_id} is not an object; using empty links")
+            out[concept_id] = default_payload.copy()
+            continue
+
+        valid = True
+        selected: list[str] = []
+        cleaned_lists: dict[str, list[str]] = {}
+        for group_name in ("foundational", "advanced"):
+            values = payload.get(group_name)
+            if not isinstance(values, list):
+                valid = False
+                break
+            deduped: list[str] = []
+            seen_group: set[str] = set()
+            for item in values:
+                paper_id = _clean_text(item)
+                if not paper_id or paper_id in seen_group:
+                    continue
+                if paper_id not in valid_paper_ids:
+                    valid = False
+                    break
+                seen_group.add(paper_id)
+                deduped.append(paper_id)
+            if not valid:
+                break
+            cleaned_lists[group_name] = deduped
+            selected.extend(deduped)
+
+        if not valid:
+            print(f"[warn] Concept cache contains unknown/invalid paper ids for {concept_id}; using empty links")
+            out[concept_id] = default_payload.copy()
+            continue
+
+        if len(set(selected)) != len(selected):
+            print(f"[warn] Concept cache has duplicate paper ids across lists for {concept_id}; using empty links")
+            out[concept_id] = default_payload.copy()
+            continue
+
+        raw_rationales = payload.get("rationales")
+        rationales: dict[str, str] = {}
+        if isinstance(raw_rationales, dict):
+            for pid, rationale in raw_rationales.items():
+                pid_clean = _clean_text(pid)
+                rationale_clean = _clean_text(rationale)
+                if pid_clean in selected and rationale_clean:
+                    rationales[pid_clean] = rationale_clean
+        for pid in selected:
+            if pid not in rationales:
+                rationales[pid] = "Selected for concept relevance."
+
+        out[concept_id] = {
+            "foundational": cleaned_lists.get("foundational", []),
+            "advanced": cleaned_lists.get("advanced", []),
+            "rationales": rationales,
+        }
+
+    return out
+
+
 def _paper_card(row: dict) -> str:
     lines = []
     title = _clean_text(row.get("title", "Untitled")) or "Untitled"
@@ -377,20 +539,12 @@ def _paper_card(row: dict) -> str:
         summary=summary,
         abstract=abstract,
     )
-    difficulty = row.get("language_difficulty", None)
-    try:
-        difficulty_int = int(difficulty) if difficulty is not None and not pd.isna(difficulty) else None
-    except (TypeError, ValueError):
-        difficulty_int = None
-    if difficulty_int is None:
-        difficulty_int = _estimate_summary_language_difficulty(summary, takeaways)
 
     lines.append('<article class="paper-card">')
     lines.append(f"<h3>{html.escape(title)}</h3>")
     lines.append('<div class="paper-meta">')
     if year is not None:
         lines.append(f'<span class="kpi-pill">{year}</span>')
-    lines.append(f'<span class="kpi-pill">Language level {difficulty_int}/5</span>')
     lines.append(f'<span class="kpi-pill">Evidence {html.escape(evidence_type)} ({evidence_strength}/5)</span>')
     lines.append(
         f'<span class="kpi-pill">Summary certainty {html.escape(summary_certainty_label or "unknown")} ({int(round(summary_certainty_score*100))}%)</span>'
@@ -909,6 +1063,445 @@ def _build_explorer_assets(
     )
 
 
+def _center_layered_coords(
+    coords: dict[str, dict[str, float | int]],
+    layers: list[list[str]],
+    y_gap: float,
+) -> dict[str, dict[str, float | int]]:
+    if not coords or not layers:
+        return coords
+    max_len = max((len(layer) for layer in layers), default=1)
+    out = copy.deepcopy(coords)
+    for layer_idx, layer_nodes in enumerate(layers):
+        if not layer_nodes:
+            continue
+        offset = (max_len - len(layer_nodes)) * y_gap / 2.0
+        for node_id in layer_nodes:
+            if node_id not in out:
+                continue
+            out[node_id]["y"] = round(float(out[node_id]["y"]) + offset, 4)
+            out[node_id]["layer"] = layer_idx
+    return out
+
+
+def _topic_seed_papers(
+    reading_paths: pd.DataFrame,
+    paper_topics: pd.DataFrame,
+    *,
+    max_per_topic: int = 14,
+) -> dict[str, list[str]]:
+    out: dict[str, list[str]] = {}
+    if not reading_paths.empty:
+        ordered = reading_paths.sort_values(["topic_id", "position"], ascending=[True, True])
+        for _, row in ordered.iterrows():
+            topic_key = taxonomy.normalize_topic_id(row.get("topic_id"))
+            paper_id = _clean_text(row.get("canonical_paper_id"))
+            if not topic_key or not paper_id:
+                continue
+            bucket = out.setdefault(topic_key, [])
+            if paper_id not in bucket and len(bucket) < max_per_topic:
+                bucket.append(paper_id)
+    if not paper_topics.empty:
+        for _, row in paper_topics.iterrows():
+            topic_key = taxonomy.normalize_topic_id(row.get("topic_id"))
+            paper_id = _clean_text(row.get("canonical_paper_id"))
+            if not topic_key or not paper_id:
+                continue
+            bucket = out.setdefault(topic_key, [])
+            if paper_id not in bucket and len(bucket) < max_per_topic:
+                bucket.append(paper_id)
+    return out
+
+
+def _build_learning_spine(
+    *,
+    assets_dir: Path,
+    concept_index: dict[str, dict],
+    pathway_steps: dict[str, list[str]],
+    concept_papers: dict[str, dict],
+) -> None:
+    pathway_order = ["clinical", "mechanistic", "emerging"]
+    ordered_pathways = [pid for pid in pathway_order if pid in pathway_steps] + [
+        pid for pid in sorted(pathway_steps.keys()) if pid not in pathway_order
+    ]
+    pathway_nodes = [f"pathway:{pid}" for pid in ordered_pathways]
+    category_nodes = [f"category:{cat}" for cat in taxonomy.CATEGORY_ORDER]
+
+    concepts = [
+        (concept_id, meta)
+        for concept_id, meta in concept_index.items()
+        if not concept_id.startswith("__")
+    ]
+    concepts_sorted = sorted(concepts, key=lambda item: (_clean_text(item[1].get("title")), item[0]))
+    concept_nodes = [f"concept:{concept_id}" for concept_id, _meta in concepts_sorted]
+
+    edges: set[tuple[str, str]] = set()
+    for pathway_id in ordered_pathways:
+        seen_categories: set[str] = set()
+        for concept_id in pathway_steps.get(pathway_id, []):
+            concept_meta = concept_index.get(concept_id) or {}
+            category = taxonomy.canonicalize_category(concept_meta.get("category"), taxonomy.CATEGORY_ORDER[0])
+            if category:
+                seen_categories.add(category)
+        for category in seen_categories:
+            edges.add((f"pathway:{pathway_id}", f"category:{category}"))
+
+    for concept_id, concept_meta in concepts:
+        category = taxonomy.canonicalize_category(concept_meta.get("category"), taxonomy.CATEGORY_ORDER[0])
+        edges.add((f"category:{category}", f"concept:{concept_id}"))
+
+    layers = [pathway_nodes, category_nodes, concept_nodes]
+    coords = taxonomy.layout_layered(layers=layers, edges=sorted(edges), sweeps=6, x_gap=380.0, y_gap=86.0)
+    coords = _center_layered_coords(coords, layers, y_gap=86.0)
+
+    nodes: list[dict] = []
+    for pathway_id in ordered_pathways:
+        node_id = f"pathway:{pathway_id}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 0})
+        steps = pathway_steps.get(pathway_id, [])
+        label_map = {
+            "clinical": "Clinical pathway",
+            "mechanistic": "Mechanistic pathway",
+            "emerging": "Emerging topics pathway",
+        }
+        label = label_map.get(pathway_id, pathway_id.replace("_", " ").title())
+        nodes.append(
+            {
+                "id": node_id,
+                "label": label,
+                "group": "Pathway",
+                "summary": f"{len(steps)} concept steps in this pathway.",
+                "href": f"/mskb/pathways/{pathway_id}/",
+                "paper_ids": [],
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 0)),
+            }
+        )
+
+    for category in taxonomy.CATEGORY_ORDER:
+        node_id = f"category:{category}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 1})
+        nodes.append(
+            {
+                "id": node_id,
+                "label": CATEGORY_LABELS.get(category, category.replace("_", " ").title()),
+                "group": "Category",
+                "summary": CATEGORY_DESCRIPTIONS.get(category, ""),
+                "href": f"/mskb/topics/#{_slug(CATEGORY_LABELS.get(category, category))}",
+                "paper_ids": [],
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 1)),
+            }
+        )
+
+    for concept_id, concept_meta in concepts_sorted:
+        node_id = f"concept:{concept_id}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 2})
+        concept_links = concept_papers.get(concept_id, {})
+        paper_ids: list[str] = []
+        for group in ("foundational", "advanced"):
+            for paper_id in (concept_links.get(group) or []):
+                pid = _clean_text(paper_id)
+                if pid and pid not in paper_ids:
+                    paper_ids.append(pid)
+        nodes.append(
+            {
+                "id": node_id,
+                "label": _clean_text(concept_meta.get("title")) or concept_id.replace("_", " ").title(),
+                "group": "Concept",
+                "summary": _clean_text(concept_meta.get("description")),
+                "href": f"/mskb/concepts/{_clean_text(concept_meta.get('path'))}/",
+                "paper_ids": paper_ids[:18],
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 2)),
+            }
+        )
+
+    edge_rows = [{"source": src, "target": dst} for src, dst in sorted(edges)]
+    payload = {
+        "version": 1,
+        "graph_type": "learning_spine",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "layers": [
+            {"id": "pathways", "label": "Pathways", "order": 0},
+            {"id": "categories", "label": "Domains", "order": 1},
+            {"id": "concepts", "label": "Concepts", "order": 2},
+        ],
+        "nodes": nodes,
+        "edges": edge_rows,
+    }
+    (assets_dir / "learning_spine_graph.json").write_text(
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+
+
+def _build_research_map(
+    *,
+    assets_dir: Path,
+    topic_clusters: pd.DataFrame,
+    topic_to_concepts: dict[str, dict[str, int]],
+    concept_index: dict[str, dict],
+    concept_papers: dict[str, dict],
+    topic_slug_by_id: dict[str, str],
+    topic_seed_papers: dict[str, list[str]],
+) -> None:
+    topic_rows = []
+    for _, row in topic_clusters.iterrows():
+        topic_id = taxonomy.normalize_topic_id(row.get("topic_id"))
+        if not topic_id:
+            continue
+        topic_rows.append(
+            {
+                "topic_id": topic_id,
+                "label_raw": _clean_text(row.get("auto_label")),
+                "label_display": _prettify_topic_label(_clean_text(row.get("auto_label"))),
+                "n_papers": _safe_int(row.get("n_papers"), 0),
+                "category": taxonomy.canonicalize_category(row.get("topic_category"), taxonomy.CATEGORY_ORDER[0]),
+            }
+        )
+
+    category_topics: dict[str, list[dict]] = defaultdict(list)
+    for row in topic_rows:
+        category_topics[row["category"]].append(row)
+
+    categories = [cat for cat in taxonomy.CATEGORY_ORDER if category_topics.get(cat)]
+    layers_category = [f"category:{cat}" for cat in categories]
+
+    topic_rows_sorted = sorted(
+        topic_rows,
+        key=lambda row: (
+            taxonomy.CATEGORY_ORDER.index(row["category"]) if row["category"] in taxonomy.CATEGORY_ORDER else 999,
+            -row["n_papers"],
+            row["topic_id"],
+        ),
+    )
+    layers_topic = [f"topic:{row['topic_id']}" for row in topic_rows_sorted]
+
+    concept_ids = sorted(
+        {
+            concept_id
+            for overlap in topic_to_concepts.values()
+            for concept_id, count in overlap.items()
+            if int(count) > 0 and concept_id in concept_index
+        },
+        key=lambda concept_id: (_clean_text(concept_index.get(concept_id, {}).get("title")), concept_id),
+    )
+    layers_concept = [f"concept:{concept_id}" for concept_id in concept_ids]
+
+    edges: set[tuple[str, str]] = set()
+    for row in topic_rows_sorted:
+        edges.add((f"category:{row['category']}", f"topic:{row['topic_id']}"))
+        overlap = topic_to_concepts.get(row["topic_id"], {})
+        for concept_id, _count in sorted(overlap.items(), key=lambda item: (-int(item[1]), item[0]))[:10]:
+            if concept_id in concept_index:
+                edges.add((f"topic:{row['topic_id']}", f"concept:{concept_id}"))
+
+    layers = [layers_category, layers_topic, layers_concept]
+    coords = taxonomy.layout_layered(layers=layers, edges=sorted(edges), sweeps=6, x_gap=360.0, y_gap=82.0)
+    coords = _center_layered_coords(coords, layers, y_gap=82.0)
+
+    nodes: list[dict] = []
+    for category in categories:
+        node_id = f"category:{category}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 0})
+        nodes.append(
+            {
+                "id": node_id,
+                "label": CATEGORY_LABELS.get(category, category.replace("_", " ").title()),
+                "group": "Category",
+                "summary": CATEGORY_DESCRIPTIONS.get(category, ""),
+                "href": f"/mskb/topics/#{_slug(CATEGORY_LABELS.get(category, category))}",
+                "paper_ids": [],
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 0)),
+            }
+        )
+
+    for row in topic_rows_sorted:
+        topic_id = row["topic_id"]
+        node_id = f"topic:{topic_id}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 1})
+        topic_slug = topic_slug_by_id.get(topic_id, "")
+        category = row["category"]
+        nodes.append(
+            {
+                "id": node_id,
+                "label": row["label_display"],
+                "group": CATEGORY_LABELS.get(category, category.replace("_", " ").title()),
+                "summary": (
+                    f"{row['n_papers']} papers · "
+                    f"Raw topic: {row['label_raw']}"
+                ),
+                "href": f"/mskb/topics/{topic_slug}/" if topic_slug else "/mskb/topics/",
+                "paper_ids": topic_seed_papers.get(topic_id, []),
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 1)),
+            }
+        )
+
+    for concept_id in concept_ids:
+        node_id = f"concept:{concept_id}"
+        c = coords.get(node_id, {"x": 0.0, "y": 0.0, "layer": 2})
+        concept = concept_index.get(concept_id) or {}
+        paper_ids: list[str] = []
+        concept_links = concept_papers.get(concept_id, {})
+        for group in ("foundational", "advanced"):
+            for pid in concept_links.get(group, []) or []:
+                paper_id = _clean_text(pid)
+                if paper_id and paper_id not in paper_ids:
+                    paper_ids.append(paper_id)
+        nodes.append(
+            {
+                "id": node_id,
+                "label": _clean_text(concept.get("title")) or concept_id.replace("_", " ").title(),
+                "group": "Concept",
+                "summary": _clean_text(concept.get("description")),
+                "href": f"/mskb/concepts/{_clean_text(concept.get('path'))}/",
+                "paper_ids": paper_ids[:18],
+                "x": round(float(c.get("x", 0.0)), 4),
+                "y": round(float(c.get("y", 0.0)), 4),
+                "layer": int(c.get("layer", 2)),
+            }
+        )
+
+    concept_topics: dict[str, list[str]] = {}
+    for topic_id, overlaps in topic_to_concepts.items():
+        for concept_id, count in overlaps.items():
+            if int(count) <= 0:
+                continue
+            concept_topics.setdefault(concept_id, [])
+            if topic_id not in concept_topics[concept_id]:
+                concept_topics[concept_id].append(topic_id)
+    for concept_id in list(concept_topics.keys()):
+        concept_topics[concept_id] = sorted(concept_topics[concept_id], key=lambda value: int(value) if value.isdigit() else value)
+
+    edge_rows = [{"source": src, "target": dst} for src, dst in sorted(edges)]
+    payload = {
+        "version": 1,
+        "graph_type": "research_map",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "layers": [
+            {"id": "categories", "label": "Domains", "order": 0},
+            {"id": "topics", "label": "Citation Topics", "order": 1},
+            {"id": "concepts", "label": "Supported Concepts", "order": 2},
+        ],
+        "nodes": nodes,
+        "edges": edge_rows,
+        "seed_topic_papers": topic_seed_papers,
+        "concept_topics": concept_topics,
+    }
+    (assets_dir / "research_map_graph.json").write_text(
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+
+
+def _rewrite_concept_topic_crosslinks(
+    *,
+    concepts_root: Path,
+    concept_index: dict[str, dict],
+    concept_to_topics: dict[str, dict[str, int]],
+    topic_meta_by_id: dict[str, dict],
+) -> None:
+    legacy_start_marker = "<!-- mskb:topic-links:start -->"
+    legacy_end_marker = "<!-- mskb:topic-links:end -->"
+    # Use markdown reference-comment syntax so markers are safe in both .md and .mdx
+    start_marker = "[//]: # (mskb:topic-links:start)"
+    end_marker = "[//]: # (mskb:topic-links:end)"
+    section_re = re.compile(
+        rf"{re.escape(start_marker)}.*?{re.escape(end_marker)}",
+        flags=re.DOTALL,
+    )
+    legacy_section_re = re.compile(
+        rf"{re.escape(legacy_start_marker)}.*?{re.escape(legacy_end_marker)}",
+        flags=re.DOTALL,
+    )
+
+    for concept_id, concept in concept_index.items():
+        if concept_id.startswith("__"):
+            continue
+        source_path = Path(_clean_text(concept.get("source_path")))
+        if not source_path.exists():
+            continue
+        overlaps = concept_to_topics.get(concept_id, {})
+        ranked = sorted(overlaps.items(), key=lambda item: (-int(item[1]), item[0]))[:10]
+
+        block_lines = [start_marker, "", "## Citation topics that feed this concept", ""]
+        if ranked:
+            block_lines.append(
+                f'<p><a href="/mskb/topics/?concept={concept_id}"><strong>Open this concept in the research map →</strong></a></p>'
+            )
+            block_lines.append("<ul>")
+            for topic_id, overlap in ranked:
+                topic_meta = topic_meta_by_id.get(topic_id) or {}
+                topic_label = _clean_text(topic_meta.get("display_label")) or f"Topic {topic_id}"
+                topic_slug = _clean_text(topic_meta.get("slug"))
+                topic_url = f"/mskb/topics/{topic_slug}/" if topic_slug else "/mskb/topics/"
+                block_lines.append(
+                    f'<li><a href="{topic_url}">{html.escape(topic_label)}</a> · '
+                    f'<a href="/mskb/journey/?seed={topic_id}">Start journey from this topic</a> '
+                    f"({int(overlap)} linked paper{'s' if int(overlap) != 1 else ''}).</li>"
+                )
+            block_lines.append("</ul>")
+        else:
+            block_lines.append(
+                '<p><em>No topic overlap links available yet for this concept. '
+                'Regenerate the taxonomy after refreshing concept-paper links.</em></p>'
+            )
+        block_lines.extend(["", end_marker, ""])
+        block = "\n".join(block_lines)
+
+        text = source_path.read_text(encoding="utf-8")
+        # Remove any prior managed block (both current and legacy marker styles),
+        # then append exactly one canonical managed block.
+        stripped = section_re.sub("", text)
+        stripped = legacy_section_re.sub("", stripped)
+        updated = stripped.rstrip() + "\n\n" + block
+        source_path.write_text(updated, encoding="utf-8")
+
+
+def _legacy_topic_grid_lines(
+    *,
+    category_order: list[str],
+    category_groups: dict[str, list[dict]],
+) -> list[str]:
+    lines: list[str] = []
+    for category in category_order:
+        clusters = category_groups.get(category, [])
+        if not clusters:
+            continue
+        label = CATEGORY_LABELS.get(category, category)
+        description = CATEGORY_DESCRIPTIONS.get(category, "")
+        anchor = _slug(label)
+        lines.append(f'<div class="topic-category" id="{anchor}">')
+        lines.append("")
+        lines.append(f"## {label}")
+        lines.append("")
+        if description:
+            lines.append(f"<p>{html.escape(description)}</p>")
+        lines.append("</div>")
+        lines.append('<div class="topic-grid">')
+        for cluster in clusters:
+            topic_label = _clean_text(cluster["display_label"] or cluster["auto_label"])
+            n = _safe_int(cluster.get("n_papers"), 0)
+            slug = _clean_text(cluster.get("slug"))
+            lines.append(
+                f'<a class="topic-card" href="{slug}/">'
+                f"<strong>{html.escape(topic_label)}</strong>"
+                f"<span>{n} papers</span>"
+                "</a>"
+            )
+        lines.append("</div>")
+        lines.append("")
+    return lines
+
+
 def generate(config_path: str) -> None:
     root = Path(config_path).resolve().parent
     with open(config_path, "r") as f:
@@ -925,8 +1518,9 @@ def generate(config_path: str) -> None:
 
     topics_out = site_docs / "topics"
     topics_out.mkdir(parents=True, exist_ok=True)
-    for existing in topics_out.glob("*.md"):
-        existing.unlink(missing_ok=True)
+    for pattern in ("*.md", "*.mdx"):
+        for existing in topics_out.glob(pattern):
+            existing.unlink(missing_ok=True)
 
     topic_clusters = pd.DataFrame()
     paper_topics = pd.DataFrame()
@@ -965,6 +1559,64 @@ def generate(config_path: str) -> None:
         print("No topic clusters found. Run the pipeline first.")
         return
 
+    concepts_root = site_docs / "concepts"
+    pathways_root = site_docs / "pathways"
+    concept_index_with_routes = taxonomy.load_concept_index(concepts_root)
+    route_map = concept_index_with_routes.pop("__route_map__", {})
+    concept_index = concept_index_with_routes
+    pathway_steps = taxonomy.build_pathway_steps(
+        pathways_root,
+        {**concept_index, "__route_map__": route_map},
+    )
+    valid_paper_ids: set[str] = set()
+    if not scored_meta.empty and "canonical_paper_id" in scored_meta.columns:
+        valid_paper_ids = {
+            str(pid).strip()
+            for pid in scored_meta["canonical_paper_id"].astype(str).tolist()
+            if str(pid).strip()
+        }
+    concept_papers = _load_concept_papers(
+        root=root,
+        concept_index=concept_index,
+        valid_paper_ids=valid_paper_ids,
+    )
+    paper_topic_rows = paper_topics.to_dict(orient="records") if not paper_topics.empty else []
+    concept_to_topics, topic_to_concepts = taxonomy.build_concept_topic_links(
+        concept_papers=concept_papers,
+        paper_topics_rows=paper_topic_rows,
+    )
+    topic_category_map = taxonomy.derive_topic_categories(
+        topic_clusters_rows=topic_clusters.to_dict(orient="records"),
+        concept_index=concept_index,
+        topic_to_concepts=topic_to_concepts,
+    )
+
+    topic_categories: list[str] = []
+    topic_category_sources: list[str] = []
+    topic_category_concepts: list[str] = []
+    topic_category_overlaps: list[int] = []
+    for _, cluster in topic_clusters.iterrows():
+        topic_key = taxonomy.normalize_topic_id(cluster.get("topic_id"))
+        fallback = taxonomy.canonicalize_category(
+            cluster.get("dominant_category", ""),
+            taxonomy.CATEGORY_ORDER[0],
+        ) or taxonomy.CATEGORY_ORDER[0]
+        info = topic_category_map.get(topic_key) or {
+            "topic_category": fallback,
+            "category_source": "fallback",
+            "top_concept_id": "",
+            "overlap_count": 0,
+        }
+        topic_categories.append(taxonomy.canonicalize_category(info.get("topic_category"), fallback) or fallback)
+        topic_category_sources.append(_clean_text(info.get("category_source")) or "fallback")
+        topic_category_concepts.append(_clean_text(info.get("top_concept_id")))
+        topic_category_overlaps.append(_safe_int(info.get("overlap_count"), 0))
+    topic_clusters = topic_clusters.copy()
+    topic_clusters["topic_category"] = topic_categories
+    topic_clusters["category_source"] = topic_category_sources
+    topic_clusters["category_concept_id"] = topic_category_concepts
+    topic_clusters["category_overlap_count"] = topic_category_overlaps
+
     # Build summaries lookup
     summaries_map = {}
     metadata_map = {}
@@ -985,153 +1637,218 @@ def generate(config_path: str) -> None:
         for _, row in topic_overviews.iterrows():
             overview_map[row["topic_id"]] = row.to_dict()
 
-    # Categories aligned with ACTRIMS / CMSC / MSJ conference structure
-    category_labels = {
-        "pathogenesis_and_immunology": "Pathogenesis & Immunology",
-        "imaging_and_biomarkers": "Imaging & Biomarkers",
-        "clinical_trials_and_therapeutics": "Clinical Trials & Therapeutics",
-        "clinical_care_and_management": "Clinical Care & Management",
-        "epidemiology_and_population_health": "Epidemiology & Population Health",
+    topic_seed_papers = _topic_seed_papers(reading_paths, paper_topics)
+    topic_clusters = topic_clusters.copy()
+    topic_clusters["topic_key"] = topic_clusters["topic_id"].apply(taxonomy.normalize_topic_id)
+    topic_clusters["display_label"] = topic_clusters["auto_label"].apply(_prettify_topic_label)
+    topic_clusters["slug"] = topic_clusters.apply(
+        lambda row: _topic_slug(_clean_text(row.get("display_label")) or _clean_text(row.get("auto_label")), row["topic_id"]),
+        axis=1,
+    )
+    topic_slug_by_id = {
+        taxonomy.normalize_topic_id(row["topic_id"]): _clean_text(row["slug"])
+        for _, row in topic_clusters.iterrows()
     }
-    category_descriptions = {
-        "pathogenesis_and_immunology": "Mechanisms of demyelination, immune activation, and the cells and cytokines driving MS.",
-        "imaging_and_biomarkers": "MRI, optical coherence tomography, and fluid biomarkers that track lesion burden and disease activity.",
-        "clinical_trials_and_therapeutics": "Disease-modifying therapies, trial design, and emerging treatment targets.",
-        "clinical_care_and_management": "Symptom management, rehabilitation, and the day-to-day care of people with MS.",
-        "epidemiology_and_population_health": "Incidence, prevalence, environmental and genetic risk factors, and population-level outcomes.",
+    topic_meta_by_id = {
+        taxonomy.normalize_topic_id(row["topic_id"]): {
+            "topic_id": taxonomy.normalize_topic_id(row["topic_id"]),
+            "raw_label": _clean_text(row.get("auto_label")),
+            "display_label": _clean_text(row.get("display_label")),
+            "slug": _clean_text(row.get("slug")),
+            "category": taxonomy.canonicalize_category(row.get("topic_category"), taxonomy.CATEGORY_ORDER[0]),
+            "n_papers": _safe_int(row.get("n_papers"), 0),
+            "difficulty": _safe_int(row.get("difficulty"), 3),
+        }
+        for _, row in topic_clusters.iterrows()
     }
-    category_order = [
-        "pathogenesis_and_immunology",
-        "imaging_and_biomarkers",
-        "clinical_trials_and_therapeutics",
-        "clinical_care_and_management",
-        "epidemiology_and_population_health",
-    ]
 
-    category_groups = {}
+    category_order = list(taxonomy.CATEGORY_ORDER)
+    category_groups: dict[str, list[dict]] = defaultdict(list)
     for _, cluster in topic_clusters.iterrows():
-        cat = cluster.get("dominant_category", "pathogenesis_and_immunology")
-        category_groups.setdefault(cat, []).append(cluster)
+        category = taxonomy.canonicalize_category(cluster.get("topic_category"), taxonomy.CATEGORY_ORDER[0])
+        category_groups[category].append(cluster.to_dict())
 
-    # Generate topics index — lead with the topic labels so readers can zoom in quickly.
     index_lines = [
         "---",
         "title: Citation topics",
         "description: " + _yaml_escape(
-            "Research themes derived from the citation graph — each theme is a curated reading path with plain-English paper summaries."
+            "Research themes derived from the citation graph with concept links and journey seeding."
         ),
+        "template: splash",
         "sidebar:",
         "  label: All topics",
         "  order: 0",
         "---",
         "",
+        "import '../../../styles/custom.css';",
+        "",
+        '<div class="topic-landing-hero">',
+        "<h2>Research map by topic, concept, and domain.</h2>",
+        "<p>Use the graph to jump between citation topics and the learning concepts they support. "
+        "If JavaScript is disabled, expand the fallback list below.</p>",
+        '<div class="topic-jump">',
     ]
-    index_lines.append('<div class="topic-landing-hero">')
-    index_lines.append('<h2>Pick a topic, then zoom in.</h2>')
-    index_lines.append(
-        "<p>Each card below is a citation-derived research theme with a curated reading path, "
-        "plain-English paper summaries, and the concepts you'll pick up along the way.</p>"
+    for category in category_order:
+        if not category_groups.get(category):
+            continue
+        label = CATEGORY_LABELS.get(category, category.replace("_", " ").title())
+        index_lines.append(f'<a href="#{_slug(label)}">{html.escape(label)}</a>')
+    index_lines.extend(
+        [
+            "</div>",
+            "</div>",
+            "",
+            '<div id="mskb-graph-research" class="mskb-graph-root"></div>',
+            "",
+            "<details>",
+            "<summary><strong>Fallback topic list (non-JS)</strong></summary>",
+        ]
     )
-    index_lines.append('<div class="topic-jump">')
-    for cat in category_order:
-        if not category_groups.get(cat):
-            continue
-        label = category_labels.get(cat, cat)
-        anchor = _slug(label)
-        index_lines.append(f'<a href="#{anchor}">{html.escape(label)}</a>')
-    index_lines.append("</div>")
-    index_lines.append("</div>")
+    index_lines.extend(_legacy_topic_grid_lines(category_order=category_order, category_groups=category_groups))
+    index_lines.extend(
+        [
+            "</details>",
+            "",
+            '<script is:inline src="/mskb/javascripts/mskb_graph_renderer.js"></script>',
+            '<script is:inline src="/mskb/javascripts/explorer.js"></script>',
+        ]
+    )
+    (topics_out / "index.mdx").write_text("\n".join(index_lines), encoding="utf-8")
 
-    for cat in category_order:
-        clusters = category_groups.get(cat, [])
-        if not clusters:
-            continue
-        label = category_labels.get(cat, cat)
-        description = category_descriptions.get(cat, "")
-        anchor = _slug(label)
-        index_lines.append(f'\n<div class="topic-category" id="{anchor}">')
-        index_lines.append(f"\n## {label}\n")
-        if description:
-            index_lines.append(f"<p>{html.escape(description)}</p>")
-        index_lines.append("</div>")
-        index_lines.append('<div class="topic-grid">')
-        for cluster in clusters:
-            if isinstance(cluster, pd.Series):
-                cluster = cluster.to_dict()
-            tid = cluster["topic_id"]
-            topic_label = cluster["auto_label"]
-            n = cluster["n_papers"]
-            diff = cluster.get("difficulty", 3)
-            slug = _topic_slug(topic_label, tid)
-            index_lines.append(
-                f'<a class="topic-card" href="{slug}/">'
-                f"<strong>{html.escape(topic_label)}</strong>"
-                f"<span>{_safe_int(n)} papers</span>"
-                f"<span>Difficulty {_safe_int(diff, 3)}/5</span>"
-                "</a>"
-            )
-        index_lines.append("</div>")
-
-    (topics_out / "index.md").write_text("\n".join(index_lines), encoding="utf-8")
-
-    # Generate individual topic pages
     for _, cluster in topic_clusters.iterrows():
-        tid = cluster["topic_id"]
-        label = cluster["auto_label"]
-        slug = _topic_slug(label, tid)
-        diff = cluster.get("difficulty", 3)
-        n = cluster["n_papers"]
-        cat = cluster.get("dominant_category", "")
+        topic_id = cluster["topic_id"]
+        topic_key = taxonomy.normalize_topic_id(topic_id)
+        label_raw = _clean_text(cluster.get("auto_label"))
+        label_display = _clean_text(cluster.get("display_label")) or label_raw
+        slug = _clean_text(cluster.get("slug"))
+        paper_count = _safe_int(cluster.get("n_papers"), 0)
+        category = taxonomy.canonicalize_category(cluster.get("topic_category"), taxonomy.CATEGORY_ORDER[0])
+        category_source = _clean_text(cluster.get("category_source", "fallback"))
+        category_concept_id = _clean_text(cluster.get("category_concept_id", ""))
 
-        cat_display = str(cat).replace("_", " ").title()
-        description = (
-            f"{cat_display} · {_safe_int(n)} papers · Difficulty {_safe_int(diff, 3)}/5"
-        )
-        sidebar_label = label.split(" / ")[0][:40]
+        category_display = CATEGORY_LABELS.get(category, category.replace("_", " ").title())
+        page_description = f"{category_display} · {paper_count} papers"
+        sidebar_label = label_display[:40]
         lines = [
             "---",
-            "title: " + _yaml_escape(label),
-            "description: " + _yaml_escape(description),
+            "title: " + _yaml_escape(label_display),
+            "description: " + _yaml_escape(page_description),
             "sidebar:",
             f"  label: {_yaml_escape(sidebar_label)}",
+            "topic_taxonomy:",
+            f"  category: {_yaml_escape(category)}",
+            f"  category_source: {_yaml_escape(category_source)}",
+            f"  category_concept_id: {_yaml_escape(category_concept_id)}",
             "---",
             "",
         ]
 
-        overview = overview_map.get(tid, {})
+        overview = overview_map.get(topic_id, {})
         if overview.get("overview"):
-            lines.append("## Overview\n")
+            lines.append("## Overview")
+            lines.append("")
             lines.append(html.escape(_clean_text(overview["overview"])))
             lines.append("")
+        if label_display and label_display != label_raw:
+            lines.append(f"<p><em>Raw cluster label:</em> {html.escape(label_raw)}</p>")
+            lines.append("")
 
-        # Reading path — render papers, and aggregate concepts/skills from their jargon.
+        related_concepts = sorted(
+            (topic_to_concepts.get(topic_key) or {}).items(),
+            key=lambda item: (-int(item[1]), item[0]),
+        )[:10]
+        lines.append("## Concepts this topic supports")
+        lines.append("")
+        if related_concepts:
+            lines.append("<ul>")
+            for concept_id, overlap in related_concepts:
+                concept_meta = concept_index.get(concept_id) or {}
+                concept_title = _clean_text(concept_meta.get("title")) or concept_id.replace("_", " ").title()
+                concept_href = f"/mskb/concepts/{_clean_text(concept_meta.get('path'))}/"
+                lines.append(
+                    "<li>"
+                    f'<a href="/mskb/journey/?concept={concept_id}">{html.escape(concept_title)}</a> '
+                    f"({int(overlap)} linked paper{'s' if int(overlap) != 1 else ''}) · "
+                    f'<a href="{concept_href}">open concept page</a>'
+                    "</li>"
+                )
+            lines.append("</ul>")
+        else:
+            lines.append("<p><em>No linked concepts available yet for this topic.</em></p>")
+        lines.append("")
+
         topic_paper_data: list[dict] = []
         if not reading_paths.empty:
-            topic_reading = reading_paths[reading_paths["topic_id"] == tid].sort_values("position")
+            topic_reading = reading_paths[reading_paths["topic_id"] == topic_id].sort_values("position")
             for _, rp in topic_reading.iterrows():
-                pid = str(rp["canonical_paper_id"])
-                paper_data = metadata_map.get(pid, {}).copy()
-                paper_data.update(summaries_map.get(pid, {}))
+                paper_id = str(rp["canonical_paper_id"])
+                paper_data = metadata_map.get(paper_id, {}).copy()
+                paper_data.update(summaries_map.get(paper_id, {}))
                 if not paper_data:
                     paper_data = {"title": rp.get("title", "Untitled")}
                 topic_paper_data.append(paper_data)
 
         concept_block = _topic_concepts_block(topic_paper_data)
         if concept_block:
-            lines.append("## Concepts &amp; Skills You'll Learn\n")
+            lines.append("## Concepts &amp; Skills You'll Learn")
+            lines.append("")
             lines.append(concept_block)
             lines.append("")
 
         if topic_paper_data:
-            lines.append("## Reading Path\n")
-            lines.append("Papers ordered by importance and pedagogic progression.\n")
+            lines.append("## Reading Path")
+            lines.append("")
+            lines.append("Papers ordered by importance and pedagogic progression.")
+            lines.append("")
             lines.append('<div class="paper-stream">')
             for paper_data in topic_paper_data:
                 lines.append(_paper_card(paper_data))
             lines.append("</div>")
+            lines.append("")
+
+        lines.append("## Turn this topic into a learning journey")
+        lines.append("")
+        lines.append(
+            f'<p><a href="/mskb/journey/?seed={topic_key}"><strong>Turn this topic into a learning journey →</strong></a></p>'
+        )
+        lines.append("")
+
+        if related_concepts:
+            lines.append("## Related concepts")
+            lines.append("")
+            lines.append("<ul>")
+            for concept_id, _overlap in related_concepts[:6]:
+                concept_meta = concept_index.get(concept_id) or {}
+                concept_title = _clean_text(concept_meta.get("title")) or concept_id.replace("_", " ").title()
+                lines.append(f'<li><a href="/mskb/journey/?concept={concept_id}">{html.escape(concept_title)}</a></li>')
+            lines.append("</ul>")
+            lines.append("")
 
         (topics_out / f"{slug}.md").write_text("\n".join(lines), encoding="utf-8")
 
+    assets_dir = public_dir / "assets"
+    assets_dir.mkdir(parents=True, exist_ok=True)
+    _build_learning_spine(
+        assets_dir=assets_dir,
+        concept_index=concept_index,
+        pathway_steps=pathway_steps,
+        concept_papers=concept_papers,
+    )
+    _build_research_map(
+        assets_dir=assets_dir,
+        topic_clusters=topic_clusters,
+        topic_to_concepts=topic_to_concepts,
+        concept_index=concept_index,
+        concept_papers=concept_papers,
+        topic_slug_by_id=topic_slug_by_id,
+        topic_seed_papers=topic_seed_papers,
+    )
+    _rewrite_concept_topic_crosslinks(
+        concepts_root=concepts_root,
+        concept_index=concept_index,
+        concept_to_topics=concept_to_topics,
+        topic_meta_by_id=topic_meta_by_id,
+    )
     _build_explorer_assets(root, cfg, public_dir, paper_summaries, paper_topics, topic_clusters)
     # site/src/content/docs/explorer.mdx is hand-maintained; the vendor JS and
     # explorer.js live in site/public/javascripts/. The pipeline only refreshes
@@ -1140,7 +1857,15 @@ def generate(config_path: str) -> None:
     # Starlight auto-generates the sidebar from directory contents (configured
     # in astro.config.mjs), so there is no nav file to rewrite.
 
+    pathway_step_count = sum(len(steps) for steps in pathway_steps.values())
+    concept_topic_links = sum(len(topics) for topics in concept_to_topics.values())
+    print(
+        f"Taxonomy derivation: {len(concept_index)} concepts, {pathway_step_count} pathway steps, "
+        f"{concept_topic_links} concept-topic links"
+    )
     print(f"Generated {len(topic_clusters)} topic pages in {topics_out}")
+    print(f"Learning spine asset: {assets_dir / 'learning_spine_graph.json'}")
+    print(f"Research map asset: {assets_dir / 'research_map_graph.json'}")
 
 
 if __name__ == "__main__":

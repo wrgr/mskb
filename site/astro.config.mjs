@@ -24,15 +24,6 @@ export default defineConfig({
         { label: 'Home', link: '/' },
         { label: 'Getting Started', link: '/getting-started/' },
         {
-          label: 'Learning Pathways',
-          items: [
-            { label: 'Overview', link: '/pathways/' },
-            { label: 'Clinical pathway', link: '/pathways/clinical/' },
-            { label: 'Mechanistic pathway', link: '/pathways/mechanistic/' },
-            { label: 'Emerging topics', link: '/pathways/emerging/' },
-          ],
-        },
-        {
           label: 'Concepts',
           items: [
             { label: 'Concept map', link: '/concepts/' },
@@ -64,7 +55,17 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Citation topics',
+          label: 'Learning Pathways',
+          items: [
+            { label: 'Overview', link: '/pathways/' },
+            { label: 'Clinical pathway', link: '/pathways/clinical/' },
+            { label: 'Mechanistic pathway', link: '/pathways/mechanistic/' },
+            { label: 'Emerging topics', link: '/pathways/emerging/' },
+          ],
+        },
+        { label: 'Learning Journey', link: '/journey/' },
+        {
+          label: 'Topics',
           collapsed: true,
           autogenerate: { directory: 'topics' },
         },

@@ -1,26 +1,44 @@
 ---
-title: Multiple sclerosis / Neuroscience / Biology
-description: Imaging And Biomarkers · 1847 papers · Difficulty 5/5
+title: Neuroscience
+description: "Pathogenesis & Immunology · 1847 papers"
 sidebar:
-  label: Multiple sclerosis
+  label: Neuroscience
+topic_taxonomy:
+  category: pathogenesis_and_immunology
+  category_source: concept
+  category_concept_id: mechanisms_oligodendrocyte_biology
 ---
 
 ## Overview
 
 This topic cluster covers Multiple sclerosis / Neuroscience / Biology and contains 1847 papers.
 
+<p><em>Raw cluster label:</em> Multiple sclerosis / Neuroscience / Biology</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_oligodendrocyte_biology">Oligodendrocyte biology</a> (8 linked papers) · <a href="/mskb/concepts/mechanisms/oligodendrocyte-biology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_remyelination_therapies">Remyelination therapies</a> (8 linked papers) · <a href="/mskb/concepts/therapeutics/remyelination-therapies/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_axonal_pathology">Axonal pathology and neurodegeneration</a> (6 linked papers) · <a href="/mskb/concepts/mechanisms/axonal-pathology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=demyelination_remyelination">Demyelination and remyelination</a> (5 linked papers) · <a href="/mskb/concepts/mechanisms/demyelination-remyelination/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_white_matter_lesion_formation">White matter lesion formation</a> (5 linked papers) · <a href="/mskb/concepts/mechanisms/white-matter-lesion-formation/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_antigen_presentation_hla">Antigen presentation and HLA</a> (4 linked papers) · <a href="/mskb/concepts/mechanisms/antigen-presentation-hla/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_neuroinflammation">Neuroinflammation pathways</a> (4 linked papers) · <a href="/mskb/concepts/mechanisms/neuroinflammation/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_cognitive_impairment">Cognitive impairment</a> (3 linked papers) · <a href="/mskb/concepts/clinical/cognitive-impairment/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_sex_and_gender">Sex and gender differences</a> (3 linked papers) · <a href="/mskb/concepts/clinical/sex-and-gender/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_smoldering_ms">Smoldering MS</a> (3 linked papers) · <a href="/mskb/concepts/clinical/smoldering-ms/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Axonal Transection in the Lesions of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal transection in the lesions of multiple sclerosis. Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</li>
-<li>Challenge: This paper investigates axonal transection in the lesions of multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</li>
+<li>This paper investigates axonal transection in the lesions of multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejm199801293380502" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce D. Trapp. (1998). Axonal Transection in the Lesions of Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejm199801293380502</p>
@@ -55,7 +73,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The relation between inflammation and neurodegeneration in multiple sclerosis brains</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -65,10 +82,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the relation between inflammation and neurodegeneration in multiple sclerosis brains. We found that pronounced inflammation in the brain is not only present in acute and relapsing multiple sclerosis but also in the secondary and primary progressive disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found that pronounced inflammation in the brain is not only present in acute and relapsing multiple sclerosis but also in the secondary and primary progressive disease.</li>
-<li>Challenge: This paper investigates the relation between inflammation and neurodegeneration in multiple sclerosis brains.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found that pronounced inflammation in the brain is not only present in acute and relapsing multiple sclerosis but also in the secondary and primary progressive disease.</li>
+<li>This paper investigates the relation between inflammation and neurodegeneration in multiple sclerosis brains.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awp070" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Josa M. Frischer. (2009). The relation between inflammation and neurodegeneration in multiple sclerosis brains. Brain. https://doi.org/10.1093/brain/awp070</p>
@@ -90,7 +107,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Axonal damage in acute multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1997</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -100,10 +116,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal damage in acute multiple sclerosis lesions. In this study, we have used an antibody against amyloid precursor protein, known to be a sensitive marker of axonal damage in a number of other contexts, in immunocytochemical experiments on paraffin embedded multiple sclerosis lesions of varying ages in order to see at which stage of the disease axonal damage, in addition to demyelination, occurs and may thus contribute to the development of disability in patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we have used an antibody against amyloid precursor protein, known to be a sensitive marker of axonal damage in a number of other contexts, in immunocytochemical experiments on paraffin embedded multiple sclerosis lesions of varying ages in order to see at which stage of the disease axonal damage, in addition to demyelination, occurs and may thus contribute to the development of disability in patients.</li>
-<li>Challenge: This paper investigates axonal damage in acute multiple sclerosis lesions.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we have used an antibody against amyloid precursor protein, known to be a sensitive marker of axonal damage in a number of other contexts, in immunocytochemical experiments on paraffin embedded multiple sclerosis lesions of varying ages in order to see at which stage of the disease axonal damage, in addition to demyelination, occurs and may thus contribute to the development of disability in patients.</li>
+<li>This paper investigates axonal damage in acute multiple sclerosis lesions.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/120.3.393" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Betsy Ferguson. (1997). Axonal damage in acute multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/120.3.393</p>
@@ -125,7 +141,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis: An Immune or Neurodegenerative Disorder?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -135,10 +150,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: an immune or neurodegenerative disorder?. We question whether inflammatory demyelination is primary or secondary in the disease process and discuss the challenges of elucidating the cause of MS and developing therapies that will delay or prevent the irreversible and progressive neurological decline that most MS patients endure.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</li>
-<li>Challenge: The clinical disease course is variable, usually starts with reversible episodes of neurological disability in the third or fourth decade of life, and transforms into a disease of continuous and irreversible neurological decline by the sixth or seventh decade.</li>
-<li>Action: We review data that support neurodegeneration as the major cause of irreversible neurological disability in MS patients.</li>
-<li>Resolution: This paper investigates multiple sclerosis: an immune or neurodegenerative disorder?.</li>
+<li>Multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</li>
+<li>The clinical disease course is variable, usually starts with reversible episodes of neurological disability in the third or fourth decade of life, and transforms into a disease of continuous and irreversible neurological decline by the sixth or seventh decade.</li>
+<li>We review data that support neurodegeneration as the major cause of irreversible neurological disability in MS patients.</li>
+<li>This paper investigates multiple sclerosis: an immune or neurodegenerative disorder?.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1146/annurev.neuro.30.051606.094313" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce D. Trapp. (2008). Multiple Sclerosis: An Immune or Neurodegenerative Disorder?. Annual Review of Neuroscience. https://doi.org/10.1146/annurev.neuro.30.051606.094313</p>
@@ -160,7 +175,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Premyelinating Oligodendrocytes in Chronic Lesions of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -170,10 +184,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates premyelinating oligodendrocytes in chronic lesions of multiple sclerosis. Our findings suggest that in the chronic lesions of multiple sclerosis, the axons are not receptive for remyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings suggest that in the chronic lesions of multiple sclerosis, the axons are not receptive for remyelination.</li>
-<li>Challenge: This paper investigates premyelinating oligodendrocytes in chronic lesions of multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our findings suggest that in the chronic lesions of multiple sclerosis, the axons are not receptive for remyelination.</li>
+<li>This paper investigates premyelinating oligodendrocytes in chronic lesions of multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa010994" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ansi Chang. (2002). Premyelinating Oligodendrocytes in Chronic Lesions of Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa010994</p>
@@ -195,7 +209,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination is extensive in a subset of multiple sclerosis patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -205,10 +218,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination is extensive in a subset of multiple sclerosis patients. These results suggest that the variable and patient-dependent extent of remyelination must be considered in the design of future clinical trials aimed at promoting CNS repair.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although spontaneous remyelination does occur in multiple sclerosis lesions, its extent within the global population with this disease is presently unknown.</li>
-<li>Challenge: We have systematically analysed the incidence and distribution of completely remyelinated lesions (so-called shadow plaques) or partially remyelinated lesions (shadow plaque areas) in 51 autopsies of patients with different clinical courses and disease durations.</li>
-<li>Action: The extent of remyelination was variable between cases.</li>
-<li>Resolution: This paper investigates remyelination is extensive in a subset of multiple sclerosis patients.</li>
+<li>Although spontaneous remyelination does occur in multiple sclerosis lesions, its extent within the global population with this disease is presently unknown.</li>
+<li>We have systematically analysed the incidence and distribution of completely remyelinated lesions (so-called shadow plaques) or partially remyelinated lesions (shadow plaque areas) in 51 autopsies of patients with different clinical courses and disease durations.</li>
+<li>The extent of remyelination was variable between cases.</li>
+<li>This paper investigates remyelination is extensive in a subset of multiple sclerosis patients.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awl217" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Peter Patrikios. (2006). Remyelination is extensive in a subset of multiple sclerosis patients. Brain. https://doi.org/10.1093/brain/awl217</p>
@@ -230,7 +243,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Relapsing and remitting multiple sclerosis: Pathology of the newly forming lesion</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -240,10 +252,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates relapsing and remitting multiple sclerosis: pathology of the newly forming lesion. No current laboratory model of multiple sclerosis, in particular, experimental allergic encephalomyelitis, is known with these features, which raises the possibility of some novel process underlying new lesion formation in multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The study describes the clinical and pathological findings in 12 patients with relapsing and remitting multiple sclerosis, who died during or shortly after the onset of a relapse.</li>
-<li>Challenge: Pathological changes not previously associated with the formation of new symptomatic lesions were observed in seven cases, namely, extensive oligodendrocyte apoptosis and microglial activation in myelinated tissue containing few or no lymphocytes or myelin phagocytes.</li>
-<li>Action: No current laboratory model of multiple sclerosis, in particular, experimental allergic encephalomyelitis, is known with these features, which raises the possibility of some novel process underlying new lesion formation in multiple sclerosis.</li>
-<li>Resolution: This paper investigates relapsing and remitting multiple sclerosis: pathology of the newly forming lesion.</li>
+<li>The study describes the clinical and pathological findings in 12 patients with relapsing and remitting multiple sclerosis, who died during or shortly after the onset of a relapse.</li>
+<li>Pathological changes not previously associated with the formation of new symptomatic lesions were observed in seven cases, namely, extensive oligodendrocyte apoptosis and microglial activation in myelinated tissue containing few or no lymphocytes or myelin phagocytes.</li>
+<li>No current laboratory model of multiple sclerosis, in particular, experimental allergic encephalomyelitis, is known with these features, which raises the possibility of some novel process underlying new lesion formation in multiple sclerosis.</li>
+<li>This paper investigates relapsing and remitting multiple sclerosis: pathology of the newly forming lesion.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.20016" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Michael Barnett. (2004). Relapsing and remitting multiple sclerosis: Pathology of the newly forming lesion. Annals of Neurology. https://doi.org/10.1002/ana.20016</p>
@@ -265,7 +277,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Differentiation block of oligodendroglial progenitor cells as a cause for remyelination failure in chronic multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -275,10 +286,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates differentiation block of oligodendroglial progenitor cells as a cause for remyelination failure in chronic multiple sclerosis. In early multiple sclerosis lesions, we found Olig2-positive progenitor cells throughout all lesion stages and in periplaque white matter (PPWM).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In early multiple sclerosis lesions, we found Olig2-positive progenitor cells throughout all lesion stages and in periplaque white matter (PPWM).</li>
-<li>Challenge: This paper investigates differentiation block of oligodendroglial progenitor cells as a cause for remyelination failure in chronic multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In early multiple sclerosis lesions, we found Olig2-positive progenitor cells throughout all lesion stages and in periplaque white matter (PPWM).</li>
+<li>This paper investigates differentiation block of oligodendroglial progenitor cells as a cause for remyelination failure in chronic multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awn096" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tanja Kuhlmann. (2008). Differentiation block of oligodendroglial progenitor cells as a cause for remyelination failure in chronic multiple sclerosis. Brain. https://doi.org/10.1093/brain/awn096</p>
@@ -300,7 +311,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Acute axonal damage in multiple sclerosis is most extensive in early disease stages and decreases over time</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -310,10 +320,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates acute axonal damage in multiple sclerosis is most extensive in early disease stages and decreases over time. Our results indicate that a putative axon-protective treatment should start as early as possible and include strategies preventing T cell/macrophage-mediated axon destruction and leading to remyelination of axons.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results indicate that a putative axon-protective treatment should start as early as possible and include strategies preventing T cell/macrophage-mediated axon destruction and leading to remyelination of axons.</li>
-<li>Challenge: This paper investigates acute axonal damage in multiple sclerosis is most extensive in early disease stages and decreases over time.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results indicate that a putative axon-protective treatment should start as early as possible and include strategies preventing T cell/macrophage-mediated axon destruction and leading to remyelination of axons.</li>
+<li>This paper investigates acute axonal damage in multiple sclerosis is most extensive in early disease stages and decreases over time.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf235" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tanja Kuhlmann. (2002). Acute axonal damage in multiple sclerosis is most extensive in early disease stages and decreases over time. Brain. https://doi.org/10.1093/brain/awf235</p>
@@ -335,7 +345,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Acute axonal injury in multiple sclerosis: Correlation with demyelination and inflammation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -345,10 +354,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates acute axonal injury in multiple sclerosis: correlation with demyelination and inflammation. This has major implications for therapeutic strategies, which aim at preventing both demyelination and axonal loss.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Damage to axons is taken as a key factor of disability in multiple sclerosis, but its pathogenesis is largely unknown.</li>
-<li>Challenge: Axonal injury is believed to occur as a consequence of demyelination and was recently shown to be a feature even of the early disease stages.</li>
-<li>Action: The present study was aimed at characterizing the association of axonal injury and histopathological hallmarks of multiple sclerosis such as demyelination, cellular infiltration and expression of inflammatory mediators.</li>
-<li>Resolution: This paper investigates acute axonal injury in multiple sclerosis: correlation with demyelination and inflammation.</li>
+<li>Damage to axons is taken as a key factor of disability in multiple sclerosis, but its pathogenesis is largely unknown.</li>
+<li>Axonal injury is believed to occur as a consequence of demyelination and was recently shown to be a feature even of the early disease stages.</li>
+<li>The present study was aimed at characterizing the association of axonal injury and histopathological hallmarks of multiple sclerosis such as demyelination, cellular infiltration and expression of inflammatory mediators.</li>
+<li>This paper investigates acute axonal injury in multiple sclerosis: correlation with demyelination and inflammation.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/123.6.1174" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Andreas Bitsch. (2000). Acute axonal injury in multiple sclerosis: Correlation with demyelination and inflammation. Brain. https://doi.org/10.1093/brain/123.6.1174</p>
@@ -370,7 +379,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mitochondrial dysfunction as a cause of axonal degeneration in multiple sclerosis patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -380,10 +388,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mitochondrial dysfunction as a cause of axonal degeneration in multiple sclerosis patients. Our data supports a mechanism whereby reduced ATP production in demyelinated segments of upper motor neuron axons impacts ion homeostasis, induces Ca2+-mediated axonal degeneration, and contributes to progressive neurological disability in MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our data supports a mechanism whereby reduced ATP production in demyelinated segments of upper motor neuron axons impacts ion homeostasis, induces Ca2+-mediated axonal degeneration, and contributes to progressive neurological disability in MS patients.</li>
-<li>Challenge: This paper investigates mitochondrial dysfunction as a cause of axonal degeneration in multiple sclerosis patients.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our data supports a mechanism whereby reduced ATP production in demyelinated segments of upper motor neuron axons impacts ion homeostasis, induces Ca2+-mediated axonal degeneration, and contributes to progressive neurological disability in MS patients.</li>
+<li>This paper investigates mitochondrial dysfunction as a cause of axonal degeneration in multiple sclerosis patients.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.20736" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ranjan Dutta. (2006). Mitochondrial dysfunction as a cause of axonal degeneration in multiple sclerosis patients. Annals of Neurology. https://doi.org/10.1002/ana.20736</p>
@@ -405,7 +413,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis: Remyelination of nascent lesions: Remyelination of nascent lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1993</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -415,10 +422,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: remyelination of nascent lesions: remyelination of nascent lesions. The findings suggest that new lesions normally remyelinate unless interrupted by recurrent activity and that remyelinated shadow plaques are the outcome of a single previous episode of focal demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The relationship between plaque pathology and disease duration was examined in 15 patients with multiple sclerosis who died early in the course of their illness.</li>
-<li>Challenge: Myelin-stained sections revealed that most plaques examined in patients who died during the first month of their illness showed evidence of ongoing myelin destruction accompanied by a loss of oligodendrocytes.</li>
-<li>Action: Plaques containing large numbers of oligodendrocytes were not observed in these patients, but were relatively common in patients who died more than 1 month after clinical onset.</li>
-<li>Resolution: This paper investigates multiple sclerosis: remyelination of nascent lesions: remyelination of nascent lesions.</li>
+<li>The relationship between plaque pathology and disease duration was examined in 15 patients with multiple sclerosis who died early in the course of their illness.</li>
+<li>Myelin-stained sections revealed that most plaques examined in patients who died during the first month of their illness showed evidence of ongoing myelin destruction accompanied by a loss of oligodendrocytes.</li>
+<li>Plaques containing large numbers of oligodendrocytes were not observed in these patients, but were relatively common in patients who died more than 1 month after clinical onset.</li>
+<li>This paper investigates multiple sclerosis: remyelination of nascent lesions: remyelination of nascent lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410330203" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John W. Prineas. (1993). Multiple sclerosis: Remyelination of nascent lesions: Remyelination of nascent lesions. Annals of Neurology. https://doi.org/10.1002/ana.410330203</p>
@@ -440,7 +447,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Chronic Stage Multiple Sclerosis Lesions Contain a Relatively Quiescent Population of Oligodendrocyte Precursor Cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -450,10 +456,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates chronic stage multiple sclerosis lesions contain a relatively quiescent population of oligodendrocyte precursor cells. The identification of ways of stimulating the endogenous oligodendrocyte precursor population to expand and generate remyelinating cells may represent an alternative to transplantation of oligodendrocyte lineage cells to promote myelin repair in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In the past decade, considerable progress has been made in the understanding of the biology of rodent oligodendrocyte precursor cells and their role in the generation of oligodendrocytes in the developing and adult rodent CNS.</li>
-<li>Challenge: Much less is known about human oligodendrocyte lineage cells and about the reasons for the failure of the regeneration of the oligodendrocyte population during chronic stages of multiple sclerosis (MS).</li>
-<li>Action: In particular, the fate of the oligodendrocyte precursor population in MS has remained elusive.</li>
-<li>Resolution: This paper investigates chronic stage multiple sclerosis lesions contain a relatively quiescent population of oligodendrocyte precursor cells.</li>
+<li>In the past decade, considerable progress has been made in the understanding of the biology of rodent oligodendrocyte precursor cells and their role in the generation of oligodendrocytes in the developing and adult rodent CNS.</li>
+<li>Much less is known about human oligodendrocyte lineage cells and about the reasons for the failure of the regeneration of the oligodendrocyte population during chronic stages of multiple sclerosis (MS).</li>
+<li>In particular, the fate of the oligodendrocyte precursor population in MS has remained elusive.</li>
+<li>This paper investigates chronic stage multiple sclerosis lesions contain a relatively quiescent population of oligodendrocyte precursor cells.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1523/jneurosci.18-02-00601.1998" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Guus Wolswijk. (1998). Chronic Stage Multiple Sclerosis Lesions Contain a Relatively Quiescent Population of Oligodendrocyte Precursor Cells. Journal of Neuroscience. https://doi.org/10.1523/jneurosci.18-02-00601.1998</p>
@@ -475,7 +481,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>NG2-Positive Oligodendrocyte Progenitor Cells in Adult Human Brain and Multiple Sclerosis Lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -485,10 +490,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ng2-positive oligodendrocyte progenitor cells in adult human brain and multiple sclerosis lesions. Endogenous oligodendrocyte progenitor cells may represent a viable target for future therapies intended to enhance remyelination in MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is characterized by multifocal loss of myelin, oligodendrocytes, and axons.</li>
-<li>Challenge: Potential MS therapies include enhancement of remyelination by transplantation or manipulation of endogenous oligodendrocyte progenitor cells.</li>
-<li>Action: Characteristics of endogenous oligodendrocyte progenitors in normal human brain and in MS lesions have not been studied extensively.</li>
-<li>Resolution: This paper investigates ng2-positive oligodendrocyte progenitor cells in adult human brain and multiple sclerosis lesions.</li>
+<li>Multiple sclerosis (MS) is characterized by multifocal loss of myelin, oligodendrocytes, and axons.</li>
+<li>Potential MS therapies include enhancement of remyelination by transplantation or manipulation of endogenous oligodendrocyte progenitor cells.</li>
+<li>Characteristics of endogenous oligodendrocyte progenitors in normal human brain and in MS lesions have not been studied extensively.</li>
+<li>This paper investigates ng2-positive oligodendrocyte progenitor cells in adult human brain and multiple sclerosis lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1523/jneurosci.20-17-06404.2000" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ansi Chang. (2000). NG2-Positive Oligodendrocyte Progenitor Cells in Adult Human Brain and Multiple Sclerosis Lesions. Journal of Neuroscience. https://doi.org/10.1523/jneurosci.20-17-06404.2000</p>
@@ -510,7 +515,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis Pathology</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -520,10 +524,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis pathology. Demyelination and neurodegeneration is finally accomplished by oxidative injury and mitochondrial damage leading to a state of &quot;virtual hypoxia.&quot;</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</li>
-<li>Challenge: In this review, the spectrum of MS lesions and their relation to the inflammatory process is described.</li>
-<li>Action: Pathology suggests that inflammation drives tissue injury at all stages of the disease.</li>
-<li>Resolution: This paper investigates multiple sclerosis pathology.</li>
+<li>Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</li>
+<li>In this review, the spectrum of MS lesions and their relation to the inflammatory process is described.</li>
+<li>Pathology suggests that inflammation drives tissue injury at all stages of the disease.</li>
+<li>This paper investigates multiple sclerosis pathology.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1101/cshperspect.a028936" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hans Lassmann. (2018). Multiple Sclerosis Pathology. Cold Spring Harbor Perspectives in Medicine. https://doi.org/10.1101/cshperspect.a028936</p>
@@ -545,7 +549,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The Age-Related Decrease in CNS Remyelination Efficiency Is Attributable to an Impairment of Both Oligodendrocyte Progenitor Recruitment and Differentiation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -555,10 +558,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the age-related decrease in cns remyelination efficiency is attributable to an impairment of both oligodendrocyte progenitor recruitment and differentiation. We found that the expression patterns for the two OP markers are very similar and reveal a delay in the colonization of the demyelinated focus with OPs in the old animals compared with the young animals.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found that the expression patterns for the two OP markers are very similar and reveal a delay in the colonization of the demyelinated focus with OPs in the old animals compared with the young animals.</li>
-<li>Challenge: By comparing the mRNA expression pattern of MyT1 with that of the myelin proteins myelin basic protein and Gtx, we found that in the old animals there is also a delay in OP differentiation that increases with longer survival times.</li>
-<li>Action: This paper investigates the age-related decrease in cns remyelination efficiency is attributable to an impairment of both oligodendrocyte progenitor recruitment and differentiation.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found that the expression patterns for the two OP markers are very similar and reveal a delay in the colonization of the demyelinated focus with OPs in the old animals compared with the young animals.</li>
+<li>By comparing the mRNA expression pattern of MyT1 with that of the myelin proteins myelin basic protein and Gtx, we found that in the old animals there is also a delay in OP differentiation that increases with longer survival times.</li>
+<li>This paper investigates the age-related decrease in cns remyelination efficiency is attributable to an impairment of both oligodendrocyte progenitor recruitment and differentiation.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1523/jneurosci.22-07-02451.2002" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fraser J. Sim. (2002). The Age-Related Decrease in CNS Remyelination Efficiency Is Attributable to an Impairment of Both Oligodendrocyte Progenitor Recruitment and Differentiation. Journal of Neuroscience. https://doi.org/10.1523/jneurosci.22-07-02451.2002</p>
@@ -580,7 +583,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A quantitative analysis of oligodendrocytes in multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -590,10 +592,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a quantitative analysis of oligodendrocytes in multiple sclerosis lesions. The profound heterogeneity in extent and topography of OG destruction in active demyelinating lesions suggests that in subsets of multiple sclerosis patients, myelin, mature OGs and possibly OG progenitors are differentially affected.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We studied quantitatively the fate of oligodendrocytes (OGs) during lesion formation in 395 lesion areas from biopsy and autopsy tissue of 113 multiple sclerosis cases.</li>
-<li>Challenge: The density of OGs in multiple sclerosis lesions was variable at all stages of demyelinating activity, ranging from nearly complete loss to values exceeding those in the periplaque white matter (range 0-970 OGs/mm2) determine whether there were distinct patterns of OG pathology in different patients, we restricted our analysis to the 56 cases in which the longitudinal extent of the lesion extended from periplaque white matter into the active demyelinating edge and inactive plaque centre.</li>
-<li>Action: Two major groups of OG pathology were defined by the presence or absence of increased OGs within the lesion.</li>
-<li>Resolution: This paper investigates a quantitative analysis of oligodendrocytes in multiple sclerosis lesions.</li>
+<li>We studied quantitatively the fate of oligodendrocytes (OGs) during lesion formation in 395 lesion areas from biopsy and autopsy tissue of 113 multiple sclerosis cases.</li>
+<li>The density of OGs in multiple sclerosis lesions was variable at all stages of demyelinating activity, ranging from nearly complete loss to values exceeding those in the periplaque white matter (range 0-970 OGs/mm2) determine whether there were distinct patterns of OG pathology in different patients, we restricted our analysis to the 56 cases in which the longitudinal extent of the lesion extended from periplaque white matter into the active demyelinating edge and inactive plaque centre.</li>
+<li>Two major groups of OG pathology were defined by the presence or absence of increased OGs within the lesion.</li>
+<li>This paper investigates a quantitative analysis of oligodendrocytes in multiple sclerosis lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/122.12.2279" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claudia F. Lucchinetti. (1999). A quantitative analysis of oligodendrocytes in multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/122.12.2279</p>
@@ -615,7 +617,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Progressive multiple sclerosis: from pathogenic mechanisms to treatment</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -625,10 +626,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates progressive multiple sclerosis: from pathogenic mechanisms to treatment. This review discusses mechanisms involved in progressive multiple sclerosis, correlations between histopathology and magnetic resonance imaging studies, along with possible new therapeutic approaches.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: During the past decades, better understanding of relapsing-remitting multiple sclerosis disease mechanisms have led to the development of several disease-modifying therapies, reducing relapse rates and severity, through immune system modulation or suppression.</li>
-<li>Challenge: In contrast, current therapeutic options for progressive multiple sclerosis remain comparatively disappointing and challenging.</li>
-<li>Action: One possible explanation is a lack of understanding of pathogenic mechanisms driving progressive multiple sclerosis.</li>
-<li>Resolution: This paper investigates progressive multiple sclerosis: from pathogenic mechanisms to treatment.</li>
+<li>During the past decades, better understanding of relapsing-remitting multiple sclerosis disease mechanisms have led to the development of several disease-modifying therapies, reducing relapse rates and severity, through immune system modulation or suppression.</li>
+<li>In contrast, current therapeutic options for progressive multiple sclerosis remain comparatively disappointing and challenging.</li>
+<li>One possible explanation is a lack of understanding of pathogenic mechanisms driving progressive multiple sclerosis.</li>
+<li>This paper investigates progressive multiple sclerosis: from pathogenic mechanisms to treatment.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/aww258" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jorge Correale. (2016). Progressive multiple sclerosis: from pathogenic mechanisms to treatment. Brain. https://doi.org/10.1093/brain/aww258</p>
@@ -650,7 +651,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination capacity of the MS brain decreases with disease chronicity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -660,10 +660,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination capacity of the ms brain decreases with disease chronicity. Furthermore, the anatomic localization of a lesion might influence the extent of remyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In summary, our data demonstrate that remyelination is a frequent event in early multiple sclerosis lesions.</li>
-<li>Challenge: Furthermore, the anatomic localization of a lesion might influence the extent of remyelination.</li>
-<li>Action: This paper investigates remyelination capacity of the ms brain decreases with disease chronicity.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In summary, our data demonstrate that remyelination is a frequent event in early multiple sclerosis lesions.</li>
+<li>Furthermore, the anatomic localization of a lesion might influence the extent of remyelination.</li>
+<li>This paper investigates remyelination capacity of the ms brain decreases with disease chronicity.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181a8260a" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Thomas Goldschmidt. (2009). Remyelination capacity of the MS brain decreases with disease chronicity. Neurology. https://doi.org/10.1212/wnl.0b013e3181a8260a</p>
@@ -685,7 +685,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oxidative damage in multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -695,10 +694,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oxidative damage in multiple sclerosis lesions. Our data suggest profound oxidative injury of oligodendrocytes and neurons to be associated with active demyelination and axonal or neuronal injury in multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a chronic inflammatory disease of the central nervous system, associated with demyelination and neurodegeneration.</li>
-<li>Challenge: The mechanisms of tissue injury are currently poorly understood, but recent data suggest that mitochondrial injury may play an important role in this process.</li>
-<li>Action: Since mitochondrial injury can be triggered by reactive oxygen and nitric oxide species, we analysed by immunocytochemistry the presence and cellular location of oxidized lipids and oxidized DNA in lesions and in normal-appearing white matter of 30 patients with multiple sclerosis and 24 control patients without neurological disease or brain lesions.</li>
-<li>Resolution: This paper investigates oxidative damage in multiple sclerosis lesions.</li>
+<li>Multiple sclerosis is a chronic inflammatory disease of the central nervous system, associated with demyelination and neurodegeneration.</li>
+<li>The mechanisms of tissue injury are currently poorly understood, but recent data suggest that mitochondrial injury may play an important role in this process.</li>
+<li>Since mitochondrial injury can be triggered by reactive oxygen and nitric oxide species, we analysed by immunocytochemistry the presence and cellular location of oxidized lipids and oxidized DNA in lesions and in normal-appearing white matter of 30 patients with multiple sclerosis and 24 control patients without neurological disease or brain lesions.</li>
+<li>This paper investigates oxidative damage in multiple sclerosis lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awr128" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lukas Haider. (2011). Oxidative damage in multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/awr128</p>
@@ -720,7 +719,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Loss of ‘homeostatic’ microglia and patterns of their activation in active multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -730,10 +728,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates loss of ‘homeostatic’ microglia and patterns of their activation in active multiple sclerosis. We found microglia activation in normal white matter of controls and that the degree of activation increased with age.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found microglia activation in normal white matter of controls and that the degree of activation increased with age.</li>
-<li>Challenge: This paper investigates loss of ‘homeostatic’ microglia and patterns of their activation in active multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found microglia activation in normal white matter of controls and that the degree of activation increased with age.</li>
+<li>This paper investigates loss of ‘homeostatic’ microglia and patterns of their activation in active multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awx113" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tobias Zrzavy. (2017). Loss of ‘homeostatic’ microglia and patterns of their activation in active multiple sclerosis. Brain. https://doi.org/10.1093/brain/awx113</p>
@@ -755,7 +753,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1979</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -765,10 +762,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination in multiple sclerosis. The finding of internodes of the last type at the edges of many plaques indicates that remyelination by oligodendrocytes can occur in the adult human CNS and that it is common in some cases of MS, although limited in its extent.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Abstract Chronic plaques in central nervous system tissue fixed by in situe perfusion for electron microscopy were examined for evidence of remyelination in 2 patients with multiple sclerosis (MS).</li>
-<li>Challenge: Fibers with abnormal central myelin sheaths of several types were found at the margins of most of the plaques studied.</li>
-<li>Action: The most common of these were: (1) the presence of bare stretches of axon between contiguous internodes, (2) the presence of thin paranodes, (3) internodes which changed markedly in thickness along their length due to premature termination of superficial or deep myelin lamellae that ended as hypertrophic lateral loops, and (4) abnormally thin internodes which were of uniform thickness along their length, which were shorter than normal, and which terminated in the form of normal nodal complexes.</li>
-<li>Resolution: This paper investigates remyelination in multiple sclerosis.</li>
+<li>Abstract Chronic plaques in central nervous system tissue fixed by in situe perfusion for electron microscopy were examined for evidence of remyelination in 2 patients with multiple sclerosis (MS).</li>
+<li>Fibers with abnormal central myelin sheaths of several types were found at the margins of most of the plaques studied.</li>
+<li>The most common of these were: (1) the presence of bare stretches of axon between contiguous internodes, (2) the presence of thin paranodes, (3) internodes which changed markedly in thickness along their length due to premature termination of superficial or deep myelin lamellae that ended as hypertrophic lateral loops, and (4) abnormally thin internodes which were of uniform thickness along their length, which were shorter than normal, and which terminated in the form of normal nodal complexes.</li>
+<li>This paper investigates remyelination in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410050105" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> J. W. Prineas. (1979). Remyelination in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.410050105</p>
@@ -790,7 +787,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Effect of high-dose simvastatin on brain atrophy and disability in secondary progressive multiple sclerosis (MS-STAT): a randomised, placebo-controlled, phase 2 trial</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -800,10 +796,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates effect of high-dose simvastatin on brain atrophy and disability in secondary progressive multiple sclerosis (ms-stat): a randomised, placebo-controlled, phase 2 trial. The Moulton Foundation [charity number 1109891], Berkeley Foundation [268369], the Multiple Sclerosis Trials Collaboration [1113598], the Rosetrees Trust [298582] and a personal contribution from A Pidgley, UK National Institute of Health Research (NIHR) University College London Hospitals/UCL Biomedical Research Centres funding scheme.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The Moulton Foundation [charity number 1109891], Berkeley Foundation [268369], the Multiple Sclerosis Trials Collaboration [1113598], the Rosetrees Trust [298582] and a personal contribution from A Pidgley, UK National Institute of Health Research (NIHR) University College London Hospitals/UCL Biomedical Research Centres funding scheme.</li>
-<li>Challenge: This paper investigates effect of high-dose simvastatin on brain atrophy and disability in secondary progressive multiple sclerosis (ms-stat): a randomised, placebo-controlled, phase 2 trial.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The Moulton Foundation [charity number 1109891], Berkeley Foundation [268369], the Multiple Sclerosis Trials Collaboration [1113598], the Rosetrees Trust [298582] and a personal contribution from A Pidgley, UK National Institute of Health Research (NIHR) University College London Hospitals/UCL Biomedical Research Centres funding scheme.</li>
+<li>This paper investigates effect of high-dose simvastatin on brain atrophy and disability in secondary progressive multiple sclerosis (ms-stat): a randomised, placebo-controlled, phase 2 trial.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/s0140-6736(13)62242-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jeremy Chataway. (2014). Effect of high-dose simvastatin on brain atrophy and disability in secondary progressive multiple sclerosis (MS-STAT): a randomised, placebo-controlled, phase 2 trial. The Lancet. https://doi.org/10.1016/s0140-6736(13)62242-4</p>
@@ -825,7 +821,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Amyloid Oligomers Exacerbate Tau Pathology in a Mouse Model of Tauopathy</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (59%)</span>
 </div>
@@ -835,10 +830,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates amyloid oligomers exacerbate tau pathology in a mouse model of tauopathy. These data suggest that even brief elevations in Aβ production, may have enduring impact on the risk for tauopathy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data suggest that even brief elevations in Aβ production, may have enduring impact on the risk for tauopathy.</li>
-<li>Challenge: This paper investigates amyloid oligomers exacerbate tau pathology in a mouse model of tauopathy.</li>
-<li>Action: Soluble Aβ(1-42) oligomers have long-lasting effects on tau phosphorylation in the rTg4510 model, possibly due to elevations in GSK3.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data suggest that even brief elevations in Aβ production, may have enduring impact on the risk for tauopathy.</li>
+<li>This paper investigates amyloid oligomers exacerbate tau pathology in a mouse model of tauopathy.</li>
+<li>Soluble Aβ(1-42) oligomers have long-lasting effects on tau phosphorylation in the rTg4510 model, possibly due to elevations in GSK3.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1159/000337230" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Maj-Linda B. Selenica. (2012). Amyloid Oligomers Exacerbate Tau Pathology in a Mouse Model of Tauopathy. Neurodegenerative Diseases. https://doi.org/10.1159/000337230</p>
@@ -860,7 +855,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination can be extensive in multiple sclerosis despite a long disease course</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (62%)</span>
 </div>
@@ -870,10 +864,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination can be extensive in multiple sclerosis despite a long disease course. Results from this study of two patients with long standing disease suggest that remyelination in MS may be more extensive than previously thought.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Results from this study of two patients with long standing disease suggest that remyelination in MS may be more extensive than previously thought.</li>
-<li>Challenge: This paper investigates remyelination can be extensive in multiple sclerosis despite a long disease course.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Results from this study of two patients with long standing disease suggest that remyelination in MS may be more extensive than previously thought.</li>
+<li>This paper investigates remyelination can be extensive in multiple sclerosis despite a long disease course.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1365-2990.2007.00805.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Rickie Patani. (2007). Remyelination can be extensive in multiple sclerosis despite a long disease course. Neuropathology and Applied Neurobiology. https://doi.org/10.1111/j.1365-2990.2007.00805.x</p>
@@ -895,7 +889,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>NADPH oxidase expression in active multiple sclerosis lesions in relation to oxidative tissue damage and mitochondrial injury</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -905,10 +898,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates nadph oxidase expression in active multiple sclerosis lesions in relation to oxidative tissue damage and mitochondrial injury. In this study, we identified potential sources of reactive oxygen and nitrogen species through gene expression in carefully staged and dissected lesion areas and by immunohistochemical analysis of protein expression.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we identified potential sources of reactive oxygen and nitrogen species through gene expression in carefully staged and dissected lesion areas and by immunohistochemical analysis of protein expression.</li>
-<li>Challenge: In addition, we found differences in the gene expression levels of various nicotinamide adenine dinucleotide phosphate oxidase subunits between initial multiple sclerosis lesions and control white matter.</li>
-<li>Action: This paper investigates nadph oxidase expression in active multiple sclerosis lesions in relation to oxidative tissue damage and mitochondrial injury.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we identified potential sources of reactive oxygen and nitrogen species through gene expression in carefully staged and dissected lesion areas and by immunohistochemical analysis of protein expression.</li>
+<li>In addition, we found differences in the gene expression levels of various nicotinamide adenine dinucleotide phosphate oxidase subunits between initial multiple sclerosis lesions and control white matter.</li>
+<li>This paper investigates nadph oxidase expression in active multiple sclerosis lesions in relation to oxidative tissue damage and mitochondrial injury.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/aws012" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> M Fischer. (2012). NADPH oxidase expression in active multiple sclerosis lesions in relation to oxidative tissue damage and mitochondrial injury. Brain. https://doi.org/10.1093/brain/aws012</p>
@@ -930,7 +923,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mitochondrial defects in acute multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -940,10 +932,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mitochondrial defects in acute multiple sclerosis lesions. The findings suggest that hypoxia-like tissue injury in Pattern III multiple sclerosis lesions may be due to mitochondrial impairment.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a chronic inflammatory disease, which leads to focal plaques of demyelination and tissue injury in the CNS.</li>
-<li>Challenge: The structural and immunopathological patterns of demyelination suggest that different immune mechanisms may be involved in tissue damage.</li>
-<li>Action: In a subtype of lesions, which are mainly found in patients with acute fulminant multiple sclerosis with Balo&#x27;s type concentric sclerosis and in a subset of early relapsing remitting multiple sclerosis, the initial myelin changes closely resemble those seen in white matter stroke (WMS), suggesting a hypoxia-like tissue injury.</li>
-<li>Resolution: This paper investigates mitochondrial defects in acute multiple sclerosis lesions.</li>
+<li>Multiple sclerosis is a chronic inflammatory disease, which leads to focal plaques of demyelination and tissue injury in the CNS.</li>
+<li>The structural and immunopathological patterns of demyelination suggest that different immune mechanisms may be involved in tissue damage.</li>
+<li>In a subtype of lesions, which are mainly found in patients with acute fulminant multiple sclerosis with Balo&#x27;s type concentric sclerosis and in a subset of early relapsing remitting multiple sclerosis, the initial myelin changes closely resemble those seen in white matter stroke (WMS), suggesting a hypoxia-like tissue injury.</li>
+<li>This paper investigates mitochondrial defects in acute multiple sclerosis lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awn105" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Don Mahad. (2008). Mitochondrial defects in acute multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/awn105</p>
@@ -965,7 +957,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Dysregulation of the Wnt pathway inhibits timely myelination and remyelination in the mammalian CNS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -975,10 +966,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates dysregulation of the wnt pathway inhibits timely myelination and remyelination in the mammalian cns. We report that approximately 50 transcription factor-encoding genes show dynamic expression during repair and that expression of the Wnt pathway mediator Tcf4 (aka Tcf7l2) within OLPs is specific to lesioned-but not normal-adult white matter.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We report that approximately 50 transcription factor-encoding genes show dynamic expression during repair and that expression of the Wnt pathway mediator Tcf4 (aka Tcf7l2) within OLPs is specific to lesioned-but not normal-adult white matter.</li>
-<li>Challenge: We report that beta-catenin signaling is active during oligodendrocyte development and remyelination in vivo.</li>
-<li>Action: Moreover, we observed similar regulation of Tcf4 in the developing human CNS and lesions of MS.</li>
-<li>Resolution: This paper investigates dysregulation of the wnt pathway inhibits timely myelination and remyelination in the mammalian cns.</li>
+<li>We report that approximately 50 transcription factor-encoding genes show dynamic expression during repair and that expression of the Wnt pathway mediator Tcf4 (aka Tcf7l2) within OLPs is specific to lesioned-but not normal-adult white matter.</li>
+<li>We report that beta-catenin signaling is active during oligodendrocyte development and remyelination in vivo.</li>
+<li>Moreover, we observed similar regulation of Tcf4 in the developing human CNS and lesions of MS.</li>
+<li>This paper investigates dysregulation of the wnt pathway inhibits timely myelination and remyelination in the mammalian cns.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1101/gad.1806309" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephen P.J. Fancy. (2009). Dysregulation of the Wnt pathway inhibits timely myelination and remyelination in the mammalian CNS. Genes &amp; Development. https://doi.org/10.1101/gad.1806309</p>
@@ -1000,7 +991,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Disease-specific molecular events in cortical multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -1010,10 +1000,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates disease-specific molecular events in cortical multiple sclerosis lesions. In our study, we showed that the combination of inflammation, plaque-like primary demyelination and neurodegeneration in the cortex is specific for multiple sclerosis and is not seen in other chronic inflammatory diseases mediated by CD8-positive T cells (Rasmussen&#x27;s encephalitis), B cells (B cell lymphoma) or complex chronic inflammation (tuberculous meningitis, luetic meningitis or chronic purulent meningitis).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In our study, we showed that the combination of inflammation, plaque-like primary demyelination and neurodegeneration in the cortex is specific for multiple sclerosis and is not seen in other chronic inflammatory diseases mediated by CD8-positive T cells (Rasmussen&#x27;s encephalitis), B cells (B cell lymphoma) or complex chronic inflammation (tuberculous meningitis, luetic meningitis or chronic purulent meningitis).</li>
-<li>Challenge: This paper investigates disease-specific molecular events in cortical multiple sclerosis lesions.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In our study, we showed that the combination of inflammation, plaque-like primary demyelination and neurodegeneration in the cortex is specific for multiple sclerosis and is not seen in other chronic inflammatory diseases mediated by CD8-positive T cells (Rasmussen&#x27;s encephalitis), B cells (B cell lymphoma) or complex chronic inflammation (tuberculous meningitis, luetic meningitis or chronic purulent meningitis).</li>
+<li>This paper investigates disease-specific molecular events in cortical multiple sclerosis lesions.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awt110" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> M Fischer. (2013). Disease-specific molecular events in cortical multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/awt110</p>
@@ -1035,7 +1025,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mitochondrial changes within axons in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1045,10 +1034,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mitochondrial changes within axons in multiple sclerosis. Our findings have important implications for both axonal degeneration and dysfunction during the progressive stage of multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings have important implications for both axonal degeneration and dysfunction during the progressive stage of multiple sclerosis.</li>
-<li>Challenge: This paper investigates mitochondrial changes within axons in multiple sclerosis.</li>
-<li>Action: Multiple sclerosis is the most common cause of non-traumatic neurological impairment in young adults.</li>
-<li>Resolution: An energy deficient state has been implicated in the degeneration of axons, the pathological correlate of disease progression, in multiple sclerosis.</li>
+<li>Our findings have important implications for both axonal degeneration and dysfunction during the progressive stage of multiple sclerosis.</li>
+<li>This paper investigates mitochondrial changes within axons in multiple sclerosis.</li>
+<li>Multiple sclerosis is the most common cause of non-traumatic neurological impairment in young adults.</li>
+<li>An energy deficient state has been implicated in the degeneration of axons, the pathological correlate of disease progression, in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awp046" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> DJ Mahad. (2009). Mitochondrial changes within axons in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awp046</p>
@@ -1070,7 +1059,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Extensive Cortical Remyelination in Patients with Chronic Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1080,10 +1068,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates extensive cortical remyelination in patients with chronic multiple sclerosis. Our data confirm the high prevalence of cortical demyelination in chronic MS and imply that the propensity to remyelinate is high in cortical MS lesions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Recent studies revealed prominent cortical demyelination in patients with chronic multiple sclerosis (MS).</li>
-<li>Challenge: Demyelination in white matter lesions is frequently accompanied by remyelination.</li>
-<li>Action: This repair process, however, often remains incomplete and restricted to the lesion border.</li>
-<li>Resolution: This paper investigates extensive cortical remyelination in patients with chronic multiple sclerosis.</li>
+<li>Recent studies revealed prominent cortical demyelination in patients with chronic multiple sclerosis (MS).</li>
+<li>Demyelination in white matter lesions is frequently accompanied by remyelination.</li>
+<li>This repair process, however, often remains incomplete and restricted to the lesion border.</li>
+<li>This paper investigates extensive cortical remyelination in patients with chronic multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.2006.00043.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Monika Albert. (2007). Extensive Cortical Remyelination in Patients with Chronic Multiple Sclerosis. Brain Pathology. https://doi.org/10.1111/j.1750-3639.2006.00043.x</p>
@@ -1105,7 +1093,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination protects axons from demyelination-associated axon degeneration</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (73%)</span>
 </div>
@@ -1115,10 +1102,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination protects axons from demyelination-associated axon degeneration. The goal of this study was to test the hypothesis that failure of prompt remyelination contributes to axonal degeneration following demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The goal of this study was to test the hypothesis that failure of prompt remyelination contributes to axonal degeneration following demyelination.</li>
-<li>Challenge: Our results support the concept that prompt remyelination protects axons from demyelination-associated axonal loss and that remyelination failure contributes to the axon loss that occurs in multiple sclerosis.</li>
-<li>Action: This paper investigates remyelination protects axons from demyelination-associated axon degeneration.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The goal of this study was to test the hypothesis that failure of prompt remyelination contributes to axonal degeneration following demyelination.</li>
+<li>Our results support the concept that prompt remyelination protects axons from demyelination-associated axonal loss and that remyelination failure contributes to the axon loss that occurs in multiple sclerosis.</li>
+<li>This paper investigates remyelination protects axons from demyelination-associated axon degeneration.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awn080" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Karen‐Amanda Irvine. (2008). Remyelination protects axons from demyelination-associated axon degeneration. Brain. https://doi.org/10.1093/brain/awn080</p>
@@ -1140,7 +1127,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Monoclonal antibody treatment exposes three mechanisms underlying the clinical course of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -1150,10 +1136,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates monoclonal antibody treatment exposes three mechanisms underlying the clinical course of multiple sclerosis. These data support the formulation that inflammation and demyelination are responsible for relapses of multiple sclerosis; that inflammatory mediators, but not tumor necrosis factor-alpha, cause symptomatic reactivation of previously demyelinated lesions; and that axonal degeneration, conditioned by prior inflammation but proceeding despite its suppression, contributes to the progressive phase of disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data support the formulation that inflammation and demyelination are responsible for relapses of multiple sclerosis; that inflammatory mediators, but not tumor necrosis factor-alpha, cause symptomatic reactivation of previously demyelinated lesions; and that axonal degeneration, conditioned by prior inflammation but proceeding despite its suppression, contributes to the progressive phase of disability.</li>
-<li>Challenge: This paper investigates monoclonal antibody treatment exposes three mechanisms underlying the clinical course of multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data support the formulation that inflammation and demyelination are responsible for relapses of multiple sclerosis; that inflammatory mediators, but not tumor necrosis factor-alpha, cause symptomatic reactivation of previously demyelinated lesions; and that axonal degeneration, conditioned by prior inflammation but proceeding despite its suppression, contributes to the progressive phase of disability.</li>
+<li>This paper investigates monoclonal antibody treatment exposes three mechanisms underlying the clinical course of multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/1531-8249(199909)46:3&lt;296::aid-ana4&gt;3.0.co;2-#" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alasdair Coles. (1999). Monoclonal antibody treatment exposes three mechanisms underlying the clinical course of multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/1531-8249(199909)46:3&lt;296::aid-ana4&gt;3.0.co;2-#</p>
@@ -1175,7 +1161,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Demyelination versus remyelination in progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -1185,10 +1170,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates demyelination versus remyelination in progressive multiple sclerosis. In patients with secondary progressive multiple sclerosis, we found larger brain plaques, more demyelination in total and higher brain loads of active demyelination compared with patients with primary progressive disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In patients with secondary progressive multiple sclerosis, we found larger brain plaques, more demyelination in total and higher brain loads of active demyelination compared with patients with primary progressive disease.</li>
-<li>Challenge: This paper investigates demyelination versus remyelination in progressive multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In patients with secondary progressive multiple sclerosis, we found larger brain plaques, more demyelination in total and higher brain loads of active demyelination compared with patients with primary progressive disease.</li>
+<li>This paper investigates demyelination versus remyelination in progressive multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awq250" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephan Bramow. (2010). Demyelination versus remyelination in progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/awq250</p>
@@ -1210,7 +1195,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Axonal damage correlates with disability in patients with relapsing- remitting multiple sclerosis. Results of a longitudinal magnetic resonance spectroscopy study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (74%)</span>
 </div>
@@ -1220,10 +1204,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal damage correlates with disability in patients with relapsing- remitting multiple sclerosis. results of a longitudinal magnetic resonance spectroscopy study. Here we report a 30-month longitudinal study of 29 patients with multiple sclerosis who had either a relapsing or a secondary progressive clinical course.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here we report a 30-month longitudinal study of 29 patients with multiple sclerosis who had either a relapsing or a secondary progressive clinical course.</li>
-<li>Challenge: This paper investigates axonal damage correlates with disability in patients with relapsing- remitting multiple sclerosis.</li>
-<li>Action: results of a longitudinal magnetic resonance spectroscopy study.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Here we report a 30-month longitudinal study of 29 patients with multiple sclerosis who had either a relapsing or a secondary progressive clinical course.</li>
+<li>This paper investigates axonal damage correlates with disability in patients with relapsing- remitting multiple sclerosis.</li>
+<li>results of a longitudinal magnetic resonance spectroscopy study.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.8.1469" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nicola De Stefano. (1998). Axonal damage correlates with disability in patients with relapsing- remitting multiple sclerosis. Results of a longitudinal magnetic resonance spectroscopy study. Brain. https://doi.org/10.1093/brain/121.8.1469</p>
@@ -1245,7 +1229,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mitochondrial DNA deletions and neurodegeneration in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1255,10 +1238,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mitochondrial dna deletions and neurodegeneration in multiple sclerosis. We propose induced multiple deletions of mtDNA as an important contributor to neurodegeneration in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These findings provide evidence that neurons in MS are respiratory-deficient due to mtDNA deletions, which are extensive in GM and may be induced by inflammation.</li>
-<li>Challenge: We propose induced multiple deletions of mtDNA as an important contributor to neurodegeneration in MS.</li>
-<li>Action: This paper investigates mitochondrial dna deletions and neurodegeneration in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These findings provide evidence that neurons in MS are respiratory-deficient due to mtDNA deletions, which are extensive in GM and may be induced by inflammation.</li>
+<li>We propose induced multiple deletions of mtDNA as an important contributor to neurodegeneration in MS.</li>
+<li>This paper investigates mitochondrial dna deletions and neurodegeneration in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22109" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> G. Campbell. (2010). Mitochondrial DNA deletions and neurodegeneration in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.22109</p>
@@ -1280,7 +1263,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>An RNA-Sequencing Transcriptome and Splicing Database of Glia, Neurons, and Vascular Cells of the Cerebral Cortex</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -1290,10 +1272,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates an rna-sequencing transcriptome and splicing database of glia, neurons, and vascular cells of the cerebral cortex. To ensure the widespread distribution of these datasets, we have created a user-friendly website (http://web.stanford.edu/group/barres_lab/brain_rnaseq.html) that provides a platform for analyzing and comparing transciption and alternative splicing profiles for various cell classes in the brain.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: To ensure the widespread distribution of these datasets, we have created a user-friendly website (http://web.stanford.edu/group/barres_lab/brain_rnaseq.html) that provides a platform for analyzing and comparing transciption and alternative splicing profiles for various cell classes in the brain.</li>
-<li>Challenge: This paper investigates an rna-sequencing transcriptome and splicing database of glia, neurons, and vascular cells of the cerebral cortex.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>To ensure the widespread distribution of these datasets, we have created a user-friendly website (http://web.stanford.edu/group/barres_lab/brain_rnaseq.html) that provides a platform for analyzing and comparing transciption and alternative splicing profiles for various cell classes in the brain.</li>
+<li>This paper investigates an rna-sequencing transcriptome and splicing database of glia, neurons, and vascular cells of the cerebral cortex.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1523/jneurosci.1860-14.2014" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ye Zhang. (2014). An RNA-Sequencing Transcriptome and Splicing Database of Glia, Neurons, and Vascular Cells of the Cerebral Cortex. Journal of Neuroscience. https://doi.org/10.1523/jneurosci.1860-14.2014</p>
@@ -1315,7 +1297,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Pathogenesis of axonal and neuronal damage in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1325,10 +1306,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates pathogenesis of axonal and neuronal damage in multiple sclerosis. Therapeutic interventions directed toward each of these mechanisms need to be tested for their efficacy in enhancing axon survival and, ultimately, their ability to delay progression of neurologic disability in patients with MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the CNS.</li>
-<li>Challenge: Approximately 2 million people worldwide have MS, with females outnumbering males 2:1.</li>
-<li>Action: Because of its high prevalence, MS is the leading cause of nontraumatic neurologic disability in young adults in the United States and Europe.</li>
-<li>Resolution: This paper investigates pathogenesis of axonal and neuronal damage in multiple sclerosis.</li>
+<li>Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the CNS.</li>
+<li>Approximately 2 million people worldwide have MS, with females outnumbering males 2:1.</li>
+<li>Because of its high prevalence, MS is the leading cause of nontraumatic neurologic disability in young adults in the United States and Europe.</li>
+<li>This paper investigates pathogenesis of axonal and neuronal damage in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000275229.13012.32" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ranjan Dutta. (2007). Pathogenesis of axonal and neuronal damage in multiple sclerosis. Neurology. https://doi.org/10.1212/01.wnl.0000275229.13012.32</p>
@@ -1350,7 +1331,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Differential roles of microglia and monocytes in the inflamed central nervous system</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -1360,10 +1340,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates differential roles of microglia and monocytes in the inflamed central nervous system. Using serial block-face scanning electron microscopy (SBF-SEM), we show that monocyte-derived macrophages associate with nodes of Ranvier and initiate demyelination, whereas microglia appear to clear debris.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Using serial block-face scanning electron microscopy (SBF-SEM), we show that monocyte-derived macrophages associate with nodes of Ranvier and initiate demyelination, whereas microglia appear to clear debris.</li>
-<li>Challenge: This paper investigates differential roles of microglia and monocytes in the inflamed central nervous system.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Using serial block-face scanning electron microscopy (SBF-SEM), we show that monocyte-derived macrophages associate with nodes of Ranvier and initiate demyelination, whereas microglia appear to clear debris.</li>
+<li>This paper investigates differential roles of microglia and monocytes in the inflamed central nervous system.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20132477" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ryo Yamasaki. (2014). Differential roles of microglia and monocytes in the inflamed central nervous system. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20132477</p>
@@ -1385,7 +1365,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Lesion genesis in a subset of patients with multiple sclerosis: a role for innate immunity?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -1395,10 +1374,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates lesion genesis in a subset of patients with multiple sclerosis: a role for innate immunity?. The findings indicate that mechanisms associated with innate immunity may play a role in the formation of hypoxia-like demyelinating lesions in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Lesions obtained early in the course of multiple sclerosis (MS) have been studied immunocytochemically, and compared with the early stages of the experimental lesion induced in rats by the intraspinal injection of lipopolysaccharide.</li>
-<li>Challenge: Large hemispheric or double hemispheric sections were examined from patients who had died in the course of acute or early relapsing multiple sclerosis.</li>
-<li>Action: In MS patients exhibiting hypoxia-like lesions [Pattern III; Lucchinetti et al.</li>
-<li>Resolution: Ann Neurol (2000) 47: 707-17], focal areas in the white matter showed mild oedema, microglial activation and mild axonal injury in the absence of overt demyelination.</li>
+<li>Lesions obtained early in the course of multiple sclerosis (MS) have been studied immunocytochemically, and compared with the early stages of the experimental lesion induced in rats by the intraspinal injection of lipopolysaccharide.</li>
+<li>Large hemispheric or double hemispheric sections were examined from patients who had died in the course of acute or early relapsing multiple sclerosis.</li>
+<li>In MS patients exhibiting hypoxia-like lesions [Pattern III; Lucchinetti et al.</li>
+<li>Ann Neurol (2000) 47: 707-17], focal areas in the white matter showed mild oedema, microglial activation and mild axonal injury in the absence of overt demyelination.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awm236" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> C. Marik. (2007). Lesion genesis in a subset of patients with multiple sclerosis: a role for innate immunity?. Brain. https://doi.org/10.1093/brain/awm236</p>
@@ -1420,7 +1399,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Axonal and neuronal degeneration in multiple sclerosis: mechanisms and functional consequences</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1430,10 +1408,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal and neuronal degeneration in multiple sclerosis: mechanisms and functional consequences. The view that MS can also be considered an inflammatory neurodegenerative disease has important clinical implications for therapeutic approaches, monitoring of patients, and future treatment strategies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Renewed interest in axonal injury in multiple sclerosis has significantly shifted the focus of research into this disease toward neurodegeneration.</li>
-<li>Challenge: During the past year magnetic resonance and morphologic studies have continued to confirm and extend the concept that axonal transection begins at disease onset, and that cumulative axonal loss provides the pathologic substrate for the progressive disability that most long-term MS patients experience.</li>
-<li>Action: Although inflammation and chronic demyelination are probable causes of axonal transection, little is known about the molecular mechanisms that are involved.</li>
-<li>Resolution: This paper investigates axonal and neuronal degeneration in multiple sclerosis: mechanisms and functional consequences.</li>
+<li>Renewed interest in axonal injury in multiple sclerosis has significantly shifted the focus of research into this disease toward neurodegeneration.</li>
+<li>During the past year magnetic resonance and morphologic studies have continued to confirm and extend the concept that axonal transection begins at disease onset, and that cumulative axonal loss provides the pathologic substrate for the progressive disability that most long-term MS patients experience.</li>
+<li>Although inflammation and chronic demyelination are probable causes of axonal transection, little is known about the molecular mechanisms that are involved.</li>
+<li>This paper investigates axonal and neuronal degeneration in multiple sclerosis: mechanisms and functional consequences.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/00019052-200106000-00003" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Carl Bjartmar. (2001). Axonal and neuronal degeneration in multiple sclerosis: mechanisms and functional consequences. Current Opinion in Neurology. https://doi.org/10.1097/00019052-200106000-00003</p>
@@ -1455,7 +1433,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis: experimental models and reality</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -1465,10 +1442,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: experimental models and reality. For all these reasons, it is important to select the right experimental model to answer specific questions in MS research.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: One of the most frequent statements, provided in different variations in the introduction of experimental studies on multiple sclerosis (MS), is that &quot;Multiple sclerosis is a demyelinating autoimmune disease and experimental autoimmune encephalomyelitis (EAE) is a suitable model to study its pathogenesis&quot;.</li>
-<li>Challenge: However, so far, no single experimental model covers the entire spectrum of the clinical, pathological, or immunological features of the disease.</li>
-<li>Action: Many different models are available, which proved to be highly useful for studying different aspects of inflammation, demyelination, remyelination, and neurodegeneration in the central nervous system.</li>
-<li>Resolution: This paper investigates multiple sclerosis: experimental models and reality.</li>
+<li>One of the most frequent statements, provided in different variations in the introduction of experimental studies on multiple sclerosis (MS), is that &quot;Multiple sclerosis is a demyelinating autoimmune disease and experimental autoimmune encephalomyelitis (EAE) is a suitable model to study its pathogenesis&quot;.</li>
+<li>However, so far, no single experimental model covers the entire spectrum of the clinical, pathological, or immunological features of the disease.</li>
+<li>Many different models are available, which proved to be highly useful for studying different aspects of inflammation, demyelination, remyelination, and neurodegeneration in the central nervous system.</li>
+<li>This paper investigates multiple sclerosis: experimental models and reality.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00401-016-1631-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hans Lassmann. (2016). Multiple sclerosis: experimental models and reality. Acta Neuropathologica. https://doi.org/10.1007/s00401-016-1631-4</p>
@@ -1490,7 +1467,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Post-mortem MRI-guided sampling of multiple sclerosis brain lesions: Increased yield of active demyelinating and (p)reactive lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1500,10 +1476,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates post-mortem mri-guided sampling of multiple sclerosis brain lesions: increased yield of active demyelinating and (p)reactive lesions. We conclude that MRI-guided sampling of brain tissue increases the yield of active multiple sclerosis lesions, including active demyelinating and (p)reactive lesions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Macroscopic sampling of multiple sclerosis lesions in the brain tends to find chronic lesions.</li>
-<li>Challenge: For a better understanding of the dynamics of the multiple sclerosis disease process, research into new and developing lesions is of great interest.</li>
-<li>Action: As MRI in vivo effectively demonstrates lesions in multiple sclerosis patients, we have applied it to unfixed post-mortem brain slices to identify abnormalities, in order to obtain a higher yield of active lesions.</li>
-<li>Resolution: This paper investigates post-mortem mri-guided sampling of multiple sclerosis brain lesions: increased yield of active demyelinating and (p)reactive lesions.</li>
+<li>Macroscopic sampling of multiple sclerosis lesions in the brain tends to find chronic lesions.</li>
+<li>For a better understanding of the dynamics of the multiple sclerosis disease process, research into new and developing lesions is of great interest.</li>
+<li>As MRI in vivo effectively demonstrates lesions in multiple sclerosis patients, we have applied it to unfixed post-mortem brain slices to identify abnormalities, in order to obtain a higher yield of active lesions.</li>
+<li>This paper investigates post-mortem mri-guided sampling of multiple sclerosis brain lesions: increased yield of active demyelinating and (p)reactive lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/124.8.1635" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> C. Groot. (2001). Post-mortem MRI-guided sampling of multiple sclerosis brain lesions: Increased yield of active demyelinating and (p)reactive lesions. Brain. https://doi.org/10.1093/brain/124.8.1635</p>
@@ -1525,7 +1501,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Pathology of Demyelinating Diseases</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1535,10 +1510,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates pathology of demyelinating diseases. Herein, we review the pathological features of these central nervous system inflammatory demyelinating disorders and discuss neuropathological studies that have yielded novel insights into potential mechanisms involved in the formation of the demyelinated lesion.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: There has been significant progress in our understanding of the pathology and pathogenesis of central nervous system inflammatory demyelinating diseases.</li>
-<li>Challenge: Neuropathological studies have provided fundamental new insights into the pathogenesis of these disorders and have led to major advances in our understanding of multiple sclerosis (MS) heterogeneity, the substrate of irreversible progressive disability in MS, the relationship between inflammation and neurodegeneration in MS, the neuroimaging correlates of MS lesions, and the pathogenesis of other central nervous system inflammatory disorders, including neuromyelitis optica, acute disseminated encephalomyelitis, and Balo&#x27;s concentric sclerosis.</li>
-<li>Action: Herein, we review the pathological features of these central nervous system inflammatory demyelinating disorders and discuss neuropathological studies that have yielded novel insights into potential mechanisms involved in the formation of the demyelinated lesion.</li>
-<li>Resolution: This paper investigates pathology of demyelinating diseases.</li>
+<li>There has been significant progress in our understanding of the pathology and pathogenesis of central nervous system inflammatory demyelinating diseases.</li>
+<li>Neuropathological studies have provided fundamental new insights into the pathogenesis of these disorders and have led to major advances in our understanding of multiple sclerosis (MS) heterogeneity, the substrate of irreversible progressive disability in MS, the relationship between inflammation and neurodegeneration in MS, the neuroimaging correlates of MS lesions, and the pathogenesis of other central nervous system inflammatory disorders, including neuromyelitis optica, acute disseminated encephalomyelitis, and Balo&#x27;s concentric sclerosis.</li>
+<li>Herein, we review the pathological features of these central nervous system inflammatory demyelinating disorders and discuss neuropathological studies that have yielded novel insights into potential mechanisms involved in the formation of the demyelinated lesion.</li>
+<li>This paper investigates pathology of demyelinating diseases.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1146/annurev-pathol-011811-132443" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bogdan F. Gh. Popescu. (2011). Pathology of Demyelinating Diseases. Annual Review of Pathology Mechanisms of Disease. https://doi.org/10.1146/annurev-pathol-011811-132443</p>
@@ -1560,7 +1535,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Evidence for widespread axonal damage at the earliest clinical stage of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1570,10 +1544,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates evidence for widespread axonal damage at the earliest clinical stage of multiple sclerosis. This finding lessens the validity of the current concept that the axonal pathology of multiple sclerosis is the end-stage result of repeated inflammatory events, and argues strongly in favour of early neuroprotective intervention.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although axonal pathology is recognized as one of the major pathological features of multiple sclerosis, it is less clear how early in its course it occurs and how it correlates with MRI-visible lesion loads.</li>
-<li>Challenge: To assess this early axonal pathology, we quantified the concentration of whole-brain N-acetylaspartate (WBNAA) in a group of patients at the earliest clinical stage of the disease and compared the results with those from healthy controls.</li>
-<li>Action: Conventional brain MRI and WBNAA using unlocalized proton magnetic resonance spectroscopy were obtained from 31 patients at presentation with clinically isolated syndromes suggestive of multiple sclerosis and paraclinical evidence of dissemination in space, and from 16 matched controls.</li>
-<li>Resolution: This paper investigates evidence for widespread axonal damage at the earliest clinical stage of multiple sclerosis.</li>
+<li>Although axonal pathology is recognized as one of the major pathological features of multiple sclerosis, it is less clear how early in its course it occurs and how it correlates with MRI-visible lesion loads.</li>
+<li>To assess this early axonal pathology, we quantified the concentration of whole-brain N-acetylaspartate (WBNAA) in a group of patients at the earliest clinical stage of the disease and compared the results with those from healthy controls.</li>
+<li>Conventional brain MRI and WBNAA using unlocalized proton magnetic resonance spectroscopy were obtained from 31 patients at presentation with clinically isolated syndromes suggestive of multiple sclerosis and paraclinical evidence of dissemination in space, and from 16 matched controls.</li>
+<li>This paper investigates evidence for widespread axonal damage at the earliest clinical stage of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awg038" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimo Filippi. (2003). Evidence for widespread axonal damage at the earliest clinical stage of multiple sclerosis. Brain. https://doi.org/10.1093/brain/awg038</p>
@@ -1595,7 +1569,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Microglial Physiology: Unique Stimuli, Specialized Responses</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -1605,10 +1578,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates microglial physiology: unique stimuli, specialized responses. Manipulating the effector functions of microglia has the potential to modify the outcome of diverse neurological diseases.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Microglia, the macrophages of the central nervous system parenchyma, have in the normal healthy brain a distinct phenotype induced by molecules expressed on or secreted by adjacent neurons and astrocytes, and this phenotype is maintained in part by virtue of the blood-brain barrier&#x27;s exclusion of serum components.</li>
-<li>Challenge: Microglia are continually active, their processes palpating and surveying their local microenvironment.</li>
-<li>Action: The microglia rapidly change their phenotype in response to any disturbance of nervous system homeostasis and are commonly referred to as activated on the basis of the changes in their morphology or expression of cell surface antigens.</li>
-<li>Resolution: A wealth of data now demonstrate that the microglia have very diverse effector functions, in line with macrophage populations in other organs.</li>
+<li>Microglia, the macrophages of the central nervous system parenchyma, have in the normal healthy brain a distinct phenotype induced by molecules expressed on or secreted by adjacent neurons and astrocytes, and this phenotype is maintained in part by virtue of the blood-brain barrier&#x27;s exclusion of serum components.</li>
+<li>Microglia are continually active, their processes palpating and surveying their local microenvironment.</li>
+<li>The microglia rapidly change their phenotype in response to any disturbance of nervous system homeostasis and are commonly referred to as activated on the basis of the changes in their morphology or expression of cell surface antigens.</li>
+<li>A wealth of data now demonstrate that the microglia have very diverse effector functions, in line with macrophage populations in other organs.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1146/annurev.immunol.021908.132528" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Richard M. Ransohoff. (2009). Microglial Physiology: Unique Stimuli, Specialized Responses. Annual Review of Immunology. https://doi.org/10.1146/annurev.immunol.021908.132528</p>
@@ -1630,7 +1603,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oligodendrocyte precursor cells in the demyelinated multiple sclerosis spinal cord</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1640,10 +1612,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oligodendrocyte precursor cells in the demyelinated multiple sclerosis spinal cord. Hence, strategies intended to promote endogenous remyelination in multiple sclerosis patients should focus on both enhancing the long-term survival of oligodendrocyte precursor cells and on stimulating these cells to proliferate and differentiate into remyelinating oligodendrocytes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Lesions appearing in the CNS of patients in the chronic phase of the inflammatory, demyelinating disease multiple sclerosis often fail to repair, resulting in neurological dysfunction.</li>
-<li>Challenge: This failure of remyelination appears, in many cases, to be due not to the destruction of the local oligodendrocyte precursor population, a source for new myelin-forming cells, but to the failure of the precursor cells to proliferate and differentiate, at least in brain lesions.</li>
-<li>Action: The spinal cord is also a prominent site for lesions in multiple sclerosis, but nothing is known about the fate of the oligodendrocyte precursor population in this area.</li>
-<li>Resolution: This paper investigates oligodendrocyte precursor cells in the demyelinated multiple sclerosis spinal cord.</li>
+<li>Lesions appearing in the CNS of patients in the chronic phase of the inflammatory, demyelinating disease multiple sclerosis often fail to repair, resulting in neurological dysfunction.</li>
+<li>This failure of remyelination appears, in many cases, to be due not to the destruction of the local oligodendrocyte precursor population, a source for new myelin-forming cells, but to the failure of the precursor cells to proliferate and differentiate, at least in brain lesions.</li>
+<li>The spinal cord is also a prominent site for lesions in multiple sclerosis, but nothing is known about the fate of the oligodendrocyte precursor population in this area.</li>
+<li>This paper investigates oligodendrocyte precursor cells in the demyelinated multiple sclerosis spinal cord.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf031" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Guus Wolswijk. (2002). Oligodendrocyte precursor cells in the demyelinated multiple sclerosis spinal cord. Brain. https://doi.org/10.1093/brain/awf031</p>
@@ -1665,7 +1637,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Axonal pathology in multiple sclerosis: relationship to neurologic disability</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1675,10 +1646,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal pathology in multiple sclerosis: relationship to neurologic disability. Finally, studies of the time course of axonal loss, and its mechanisms are critical for effective therapeutic intervention.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this review, data is summarized supporting the hypothesis that axonal loss is a major pathologic process responsible for irreversible neurologic disability in patients with multiple sclerosis.</li>
-<li>Challenge: Pathologic studies implicate inflammatory demyelination as a principal cause of axonal transection and subsequent axonal degeneration.</li>
-<li>Action: Axonal degeneration caused by chronic demyelination in the absence of active inflammation may also contribute to progressive disability in the later stages of the disease.</li>
-<li>Resolution: This paper investigates axonal pathology in multiple sclerosis: relationship to neurologic disability.</li>
+<li>In this review, data is summarized supporting the hypothesis that axonal loss is a major pathologic process responsible for irreversible neurologic disability in patients with multiple sclerosis.</li>
+<li>Pathologic studies implicate inflammatory demyelination as a principal cause of axonal transection and subsequent axonal degeneration.</li>
+<li>Axonal degeneration caused by chronic demyelination in the absence of active inflammation may also contribute to progressive disability in the later stages of the disease.</li>
+<li>This paper investigates axonal pathology in multiple sclerosis: relationship to neurologic disability.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/00019052-199906000-00008" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce D. Trapp. (1999). Axonal pathology in multiple sclerosis: relationship to neurologic disability. Current Opinion in Neurology. https://doi.org/10.1097/00019052-199906000-00008</p>
@@ -1700,7 +1671,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oligodendrocyte progenitors are present in the normal adult human CNS and in the lesions of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -1710,10 +1680,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oligodendrocyte progenitors are present in the normal adult human cns and in the lesions of multiple sclerosis. Understanding the biology of the remyelinating cell, and in particular the reason for its apparent failure to repopulate demyelinated lesions, is important for the development of remyelination treatments.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In multiple sclerosis, partial remyelination is conspicuous in many lesions, but widespread and lasting myelin repair ultimately fails as disability and handicap accumulate.</li>
-<li>Challenge: Thus far, the precise identity of the cell responsible for limited spontaneous myelin repair has remained obscure.</li>
-<li>Action: In the rodent, the proliferative oligodendrocyte progenitor is the most efficient remyelinating cell; this has now been identified in cultures prepared from normal human brain, but has proved difficult to demonstrate in situ.</li>
-<li>Resolution: This paper investigates oligodendrocyte progenitors are present in the normal adult human cns and in the lesions of multiple sclerosis.</li>
+<li>In multiple sclerosis, partial remyelination is conspicuous in many lesions, but widespread and lasting myelin repair ultimately fails as disability and handicap accumulate.</li>
+<li>Thus far, the precise identity of the cell responsible for limited spontaneous myelin repair has remained obscure.</li>
+<li>In the rodent, the proliferative oligodendrocyte progenitor is the most efficient remyelinating cell; this has now been identified in cultures prepared from normal human brain, but has proved difficult to demonstrate in situ.</li>
+<li>This paper investigates oligodendrocyte progenitors are present in the normal adult human cns and in the lesions of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.12.2221" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Neil Scolding. (1998). Oligodendrocyte progenitors are present in the normal adult human CNS and in the lesions of multiple sclerosis. Brain. https://doi.org/10.1093/brain/121.12.2221</p>
@@ -1735,7 +1705,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Phase 2 Trial of Ibudilast in Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -1745,10 +1714,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates phase 2 trial of ibudilast in progressive multiple sclerosis. (Funded by the National Institute of Neurological Disorders and Stroke and others; NN102/SPRINT-MS ClinicalTrials.gov number, NCT01982942 .).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In a phase 2 trial involving patients with progressive multiple sclerosis, ibudilast was associated with slower progression of brain atrophy than placebo but was associated with higher rates of gastrointestinal side effects, headache, and depression.</li>
-<li>Challenge: (Funded by the National Institute of Neurological Disorders and Stroke and others; NN102/SPRINT-MS ClinicalTrials.gov number, NCT01982942 .).</li>
-<li>Action: This paper investigates phase 2 trial of ibudilast in progressive multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In a phase 2 trial involving patients with progressive multiple sclerosis, ibudilast was associated with slower progression of brain atrophy than placebo but was associated with higher rates of gastrointestinal side effects, headache, and depression.</li>
+<li>(Funded by the National Institute of Neurological Disorders and Stroke and others; NN102/SPRINT-MS ClinicalTrials.gov number, NCT01982942 .).</li>
+<li>This paper investigates phase 2 trial of ibudilast in progressive multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1803583" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Robert J. Fox. (2018). Phase 2 Trial of Ibudilast in Progressive Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1803583</p>
@@ -1770,7 +1739,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Re-expression of PSA-NCAM by demyelinated axons: an inhibitor of remyelination in multiple sclerosis?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -1780,10 +1748,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates re-expression of psa-ncam by demyelinated axons: an inhibitor of remyelination in multiple sclerosis?. We showed that PSA-NCAM, normally absent from adult brain, is re-expressed on demyelinated axons in the plaques.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We showed that PSA-NCAM, normally absent from adult brain, is re-expressed on demyelinated axons in the plaques.</li>
-<li>Challenge: This paper investigates re-expression of psa-ncam by demyelinated axons: an inhibitor of remyelination in multiple sclerosis?.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We showed that PSA-NCAM, normally absent from adult brain, is re-expressed on demyelinated axons in the plaques.</li>
+<li>This paper investigates re-expression of psa-ncam by demyelinated axons: an inhibitor of remyelination in multiple sclerosis?.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf216" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Perrine Charles. (2002). Re-expression of PSA-NCAM by demyelinated axons: an inhibitor of remyelination in multiple sclerosis?. Brain. https://doi.org/10.1093/brain/awf216</p>
@@ -1805,7 +1773,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Inefficient clearance of myelin debris by microglia impairs remyelinating processes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -1815,10 +1782,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates inefficient clearance of myelin debris by microglia impairs remyelinating processes. We demonstrate that after cuprizone intoxication, CCR2-dependent infiltration of mouse bone marrow-derived cells is abundant in demyelinating areas, but that these cells do not impact demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We demonstrate that after cuprizone intoxication, CCR2-dependent infiltration of mouse bone marrow-derived cells is abundant in demyelinating areas, but that these cells do not impact demyelination.</li>
-<li>Challenge: This paper investigates inefficient clearance of myelin debris by microglia impairs remyelinating processes.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We demonstrate that after cuprizone intoxication, CCR2-dependent infiltration of mouse bone marrow-derived cells is abundant in demyelinating areas, but that these cells do not impact demyelination.</li>
+<li>This paper investigates inefficient clearance of myelin debris by microglia impairs remyelinating processes.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20141656" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Antoine Lampron. (2015). Inefficient clearance of myelin debris by microglia impairs remyelinating processes. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20141656</p>
@@ -1840,7 +1807,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oligodendrocyte survival, loss and birth in lesions of chronic-stage multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1850,10 +1816,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oligodendrocyte survival, loss and birth in lesions of chronic-stage multiple sclerosis. Gaining further insight into these processes may prove crucial for the development of remyelination promoting strategies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: One of the hallmarks of the human demyelinating disease multiple sclerosis is the inability to compensate adequately for the loss of myelin and of oligodendrocytes, the myelin-forming cells of the CNS.</li>
-<li>Challenge: Oligodendrocyte precursor cells, a potential source of oligodendrocytes, have been identified in lesions of chronic multiple sclerosis, but it is not known whether they develop into new, fully differentiated oligodendrocytes, capable of remyelination.</li>
-<li>Action: Sections of post-mortem multiple sclerosis tissue were therefore immunolabelled with antibodies to galactocerebroside (GalC), the first oligodendrocyte-specific molecule to be expressed by differentiating oligodendrocyte precursor cells, and myelin oligodendrocyte glycoprotein (MOG), a marker for mature oligodendrocytes.</li>
-<li>Resolution: In total, 23 lesions from 15 subjects with chronic progressive multiple sclerosis were analysed.</li>
+<li>One of the hallmarks of the human demyelinating disease multiple sclerosis is the inability to compensate adequately for the loss of myelin and of oligodendrocytes, the myelin-forming cells of the CNS.</li>
+<li>Oligodendrocyte precursor cells, a potential source of oligodendrocytes, have been identified in lesions of chronic multiple sclerosis, but it is not known whether they develop into new, fully differentiated oligodendrocytes, capable of remyelination.</li>
+<li>Sections of post-mortem multiple sclerosis tissue were therefore immunolabelled with antibodies to galactocerebroside (GalC), the first oligodendrocyte-specific molecule to be expressed by differentiating oligodendrocyte precursor cells, and myelin oligodendrocyte glycoprotein (MOG), a marker for mature oligodendrocytes.</li>
+<li>In total, 23 lesions from 15 subjects with chronic progressive multiple sclerosis were analysed.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/123.1.105" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Guus Wolswijk. (2000). Oligodendrocyte survival, loss and birth in lesions of chronic-stage multiple sclerosis. Brain. https://doi.org/10.1093/brain/123.1.105</p>
@@ -1875,7 +1841,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical remyelination: A new target for repair therapies in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1885,10 +1850,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical remyelination: a new target for repair therapies in multiple sclerosis. Cortical remyelination should be considered as a primary outcome measure in future clinical trials testing remyelination therapies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Endogenous remyelination of the cerebral cortex occurs in individuals with MS regardless of disease duration or chronological age of the patient.</li>
-<li>Challenge: Cortical remyelination should be considered as a primary outcome measure in future clinical trials testing remyelination therapies.</li>
-<li>Action: This paper investigates cortical remyelination: a new target for repair therapies in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Endogenous remyelination of the cerebral cortex occurs in individuals with MS regardless of disease duration or chronological age of the patient.</li>
+<li>Cortical remyelination should be considered as a primary outcome measure in future clinical trials testing remyelination therapies.</li>
+<li>This paper investigates cortical remyelination: a new target for repair therapies in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.23693" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ansi Chang. (2012). Cortical remyelination: A new target for repair therapies in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.23693</p>
@@ -1910,7 +1875,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis: Pathogenesis, Symptoms, Diagnoses and Cell-Based Therapy.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1920,10 +1884,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: pathogenesis, symptoms, diagnoses and cell-based therapy. Thus, this issue has been discussed according to recent available information.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory disease characterized by central nervous system (CNS) lesions that can lead to severe physical or cognitive disability as well as neurological defects.</li>
-<li>Challenge: Although the etiology and pathogenesis of MS remains unclear, the present documents illustrate that the cause of MS is multifactorial and include genetic predisposition together with environmental factors such as exposure to infectious agents, vitamin deficiencies, and smoking.</li>
-<li>Action: These agents are able to trigger a cascade of events in the immune system which lead to neuronal cell death accompanied by nerve demyelination and neuronal dysfunction.</li>
-<li>Resolution: This paper investigates multiple sclerosis: pathogenesis, symptoms, diagnoses and cell-based therapy.</li>
+<li>Multiple sclerosis (MS) is a chronic inflammatory disease characterized by central nervous system (CNS) lesions that can lead to severe physical or cognitive disability as well as neurological defects.</li>
+<li>Although the etiology and pathogenesis of MS remains unclear, the present documents illustrate that the cause of MS is multifactorial and include genetic predisposition together with environmental factors such as exposure to infectious agents, vitamin deficiencies, and smoking.</li>
+<li>These agents are able to trigger a cascade of events in the immune system which lead to neuronal cell death accompanied by nerve demyelination and neuronal dysfunction.</li>
+<li>This paper investigates multiple sclerosis: pathogenesis, symptoms, diagnoses and cell-based therapy.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.22074/cellj.2016.4867" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nazem Ghasemi. (2016). Multiple Sclerosis: Pathogenesis, Symptoms, Diagnoses and Cell-Based Therapy.. PubMed. https://doi.org/10.22074/cellj.2016.4867</p>
@@ -1945,7 +1909,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Tissue-resident memory T cells invade the brain parenchyma in multiple sclerosis white matter lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1955,10 +1918,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates tissue-resident memory t cells invade the brain parenchyma in multiple sclerosis white matter lesions. These data show that in chronic progressive multiple sclerosis cases, inflammatory lesion activity and demyelinated lesion load is associated with an increased number of T cells clustering in the perivascular space.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data show that in chronic progressive multiple sclerosis cases, inflammatory lesion activity and demyelinated lesion load is associated with an increased number of T cells clustering in the perivascular space.</li>
-<li>Challenge: This paper investigates tissue-resident memory t cells invade the brain parenchyma in multiple sclerosis white matter lesions.</li>
-<li>Action: Multiple sclerosis is a chronic inflammatory, demyelinating disease, although it has been suggested that in the progressive late phase, inflammatory lesion activity declines.</li>
-<li>Resolution: We recently showed in the Netherlands Brain Bank multiple sclerosis-autopsy cohort considerable ongoing inflammatory lesion activity also at the end stage of the disease, based on microglia/macrophage activity.</li>
+<li>These data show that in chronic progressive multiple sclerosis cases, inflammatory lesion activity and demyelinated lesion load is associated with an increased number of T cells clustering in the perivascular space.</li>
+<li>This paper investigates tissue-resident memory t cells invade the brain parenchyma in multiple sclerosis white matter lesions.</li>
+<li>Multiple sclerosis is a chronic inflammatory, demyelinating disease, although it has been suggested that in the progressive late phase, inflammatory lesion activity declines.</li>
+<li>We recently showed in the Netherlands Brain Bank multiple sclerosis-autopsy cohort considerable ongoing inflammatory lesion activity also at the end stage of the disease, based on microglia/macrophage activity.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awaa117" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nina L. Fransen. (2020). Tissue-resident memory T cells invade the brain parenchyma in multiple sclerosis white matter lesions. Brain. https://doi.org/10.1093/brain/awaa117</p>
@@ -1980,7 +1943,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oligodendrocyte precursor cells present antigen and are cytotoxic targets in inflammatory demyelination</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1990,10 +1952,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oligodendrocyte precursor cells present antigen and are cytotoxic targets in inflammatory demyelination. Here we report that OPC differentiation is inhibited by both effector T cells and IFNγ overexpression by astrocytes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here we report that OPC differentiation is inhibited by both effector T cells and IFNγ overexpression by astrocytes.</li>
-<li>Challenge: This paper investigates oligodendrocyte precursor cells present antigen and are cytotoxic targets in inflammatory demyelination.</li>
-<li>Action: Oligodendrocyte precursor cells (OPCs) are abundant in the adult central nervous system, and have the capacity to regenerate oligodendrocytes and myelin.</li>
-<li>Resolution: However, in inflammatory diseases such as multiple sclerosis (MS) remyelination is often incomplete.</li>
+<li>Here we report that OPC differentiation is inhibited by both effector T cells and IFNγ overexpression by astrocytes.</li>
+<li>This paper investigates oligodendrocyte precursor cells present antigen and are cytotoxic targets in inflammatory demyelination.</li>
+<li>Oligodendrocyte precursor cells (OPCs) are abundant in the adult central nervous system, and have the capacity to regenerate oligodendrocytes and myelin.</li>
+<li>However, in inflammatory diseases such as multiple sclerosis (MS) remyelination is often incomplete.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41467-019-11638-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Leslie A. Kirby. (2019). Oligodendrocyte precursor cells present antigen and are cytotoxic targets in inflammatory demyelination. Nature Communications. https://doi.org/10.1038/s41467-019-11638-3</p>
@@ -2015,7 +1977,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Remyelination in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1997</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2025,10 +1986,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates remyelination in multiple sclerosis. In addition, very little remyelination is found in cases of primary progressive MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Stimulation of remyelination in multiple sclerosis lesions may be one possible therapeutic approach.</li>
-<li>Challenge: However, since the pathology and pathogenesis of multiple sclerosis may be heterogeneous, it is important to analyze in what patients and at what stages of the disease such a therapy can be reasonable and feasible.</li>
-<li>Action: Spontaneous remyelination is pronounced in some MS patients.</li>
-<li>Resolution: The extent of remyelination correlates well with the presence of oligodendrocytes in the lesions.</li>
+<li>Stimulation of remyelination in multiple sclerosis lesions may be one possible therapeutic approach.</li>
+<li>However, since the pathology and pathogenesis of multiple sclerosis may be heterogeneous, it is important to analyze in what patients and at what stages of the disease such a therapy can be reasonable and feasible.</li>
+<li>Spontaneous remyelination is pronounced in some MS patients.</li>
+<li>The extent of remyelination correlates well with the presence of oligodendrocytes in the lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/135245859700300213" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hans Lassmann. (1997). Remyelination in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/135245859700300213</p>
@@ -2050,7 +2011,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Semaphorin 3A and 3F: key players in myelin repair in multiple sclerosis?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -2060,10 +2020,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates semaphorin 3a and 3f: key players in myelin repair in multiple sclerosis?. Here, in MS tissue and an experimental model of demyelination, we demonstrate a local source of these molecules around active demyelinating lesions, but not chronic plaques.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here, in MS tissue and an experimental model of demyelination, we demonstrate a local source of these molecules around active demyelinating lesions, but not chronic plaques.</li>
-<li>Challenge: This paper investigates semaphorin 3a and 3f: key players in myelin repair in multiple sclerosis?.</li>
-<li>Action: The presence of demyelinated plaques in the central nervous system is the hallmark of multiple sclerosis (MS).</li>
-<li>Resolution: Some plaques remyelinate but others do not, leaving permanent damage.</li>
+<li>Here, in MS tissue and an experimental model of demyelination, we demonstrate a local source of these molecules around active demyelinating lesions, but not chronic plaques.</li>
+<li>This paper investigates semaphorin 3a and 3f: key players in myelin repair in multiple sclerosis?.</li>
+<li>The presence of demyelinated plaques in the central nervous system is the hallmark of multiple sclerosis (MS).</li>
+<li>Some plaques remyelinate but others do not, leaving permanent damage.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awm202" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Anna Williams. (2007). Semaphorin 3A and 3F: key players in myelin repair in multiple sclerosis?. Brain. https://doi.org/10.1093/brain/awm202</p>
@@ -2085,7 +2045,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The Role of Astrocytes in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -2095,10 +2054,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the role of astrocytes in multiple sclerosis. Here, we review the role of astrocytes in the formation and evolution of MS lesions, including the recently described functional polarization of astrocytes, discuss prototypical pathways for astrocyte activation, and summarize mechanisms by which MS treatments affect astrocyte function.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The role traditionally assigned to astrocytes in the pathogenesis of multiple sclerosis (MS) lesions has been the formation of the glial scar once inflammation has subsided.</li>
-<li>Challenge: Astrocytes are now recognized to be early and highly active players during lesion formation and key for providing peripheral immune cells access to the central nervous system.</li>
-<li>Action: Here, we review the role of astrocytes in the formation and evolution of MS lesions, including the recently described functional polarization of astrocytes, discuss prototypical pathways for astrocyte activation, and summarize mechanisms by which MS treatments affect astrocyte function.</li>
-<li>Resolution: This paper investigates the role of astrocytes in multiple sclerosis.</li>
+<li>The role traditionally assigned to astrocytes in the pathogenesis of multiple sclerosis (MS) lesions has been the formation of the glial scar once inflammation has subsided.</li>
+<li>Astrocytes are now recognized to be early and highly active players during lesion formation and key for providing peripheral immune cells access to the central nervous system.</li>
+<li>Here, we review the role of astrocytes in the formation and evolution of MS lesions, including the recently described functional polarization of astrocytes, discuss prototypical pathways for astrocyte activation, and summarize mechanisms by which MS treatments affect astrocyte function.</li>
+<li>This paper investigates the role of astrocytes in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3389/fimmu.2018.00217" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gerald Ponath. (2018). The Role of Astrocytes in Multiple Sclerosis. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2018.00217</p>
@@ -2117,3 +2076,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=4"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_oligodendrocyte_biology">Oligodendrocyte biology</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_remyelination_therapies">Remyelination therapies</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_axonal_pathology">Axonal pathology and neurodegeneration</a></li>
+<li><a href="/mskb/journey/?concept=demyelination_remyelination">Demyelination and remyelination</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_white_matter_lesion_formation">White matter lesion formation</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_antigen_presentation_hla">Antigen presentation and HLA</a></li>
+</ul>

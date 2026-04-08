@@ -84,13 +84,16 @@ class OpenAlexClient:
                 tmp_path.unlink(missing_ok=True)
         return payload
 
-    def search_works(self, query: str, max_results: int = 500) -> List[Dict]:
+    def search_works(self, query: str, max_results: int = 500, filter_expr: str = "") -> List[Dict]:
         results = []
         cursor = "*"
         while len(results) < max_results:
+            params = {"search": query, "per-page": min(self.per_page, max_results - len(results)), "cursor": cursor}
+            if filter_expr:
+                params["filter"] = filter_expr
             payload = self._get(
                 "/works",
-                {"search": query, "per-page": min(self.per_page, max_results - len(results)), "cursor": cursor},
+                params,
             )
             page_results = payload.get("results", [])
             results.extend(page_results)

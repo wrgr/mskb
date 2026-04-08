@@ -1,26 +1,44 @@
 ---
-title: Medicine / Multiple sclerosis / Internal medicine
-description: Imaging And Biomarkers · 1181 papers · Difficulty 5/5
+title: Multiple sclerosis
+description: "Clinical Care & Management · 1181 papers"
 sidebar:
-  label: Medicine
+  label: Multiple sclerosis
+topic_taxonomy:
+  category: clinical_care_and_management
+  category_source: concept
+  category_concept_id: diagnosis_csf_biomarkers
 ---
 
 ## Overview
 
 This topic cluster covers Medicine / Multiple sclerosis / Internal medicine and contains 1181 papers.
 
+<p><em>Raw cluster label:</em> Medicine / Multiple sclerosis / Internal medicine</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=diagnosis_csf_biomarkers">CSF and blood biomarkers</a> (5 linked papers) · <a href="/mskb/concepts/diagnosis/csf-biomarkers/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_relapse_treatment">Acute relapse treatment</a> (4 linked papers) · <a href="/mskb/concepts/therapeutics/relapse-treatment/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_cognitive_impairment">Cognitive impairment</a> (3 linked papers) · <a href="/mskb/concepts/clinical/cognitive-impairment/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_older_adult_ms">MS in older adults</a> (3 linked papers) · <a href="/mskb/concepts/clinical/older-adult-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_relapse_and_remission">Relapses and remission</a> (3 linked papers) · <a href="/mskb/concepts/clinical/relapse-and-remission/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=diagnosis_oct_imaging">Optical coherence tomography (OCT)</a> (3 linked papers) · <a href="/mskb/concepts/diagnosis/oct-imaging/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_treatment_monitoring">Treatment monitoring and switches</a> (3 linked papers) · <a href="/mskb/concepts/therapeutics/treatment-monitoring/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prognostic_markers">Prognostic markers</a> (2 linked papers) · <a href="/mskb/concepts/clinical/prognostic-markers/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_smoldering_ms">Smoldering MS</a> (2 linked papers) · <a href="/mskb/concepts/clinical/smoldering-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=demyelination_remyelination">Demyelination and remyelination</a> (2 linked papers) · <a href="/mskb/concepts/mechanisms/demyelination-remyelination/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Serum Neurofilament light: A biomarker of neuronal damage in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (56%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light: a biomarker of neuronal damage in multiple sclerosis. Ann Neurol 2017;81:857-870.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</li>
-<li>Challenge: Ann Neurol 2017;81:857-870.</li>
-<li>Action: This paper investigates serum neurofilament light: a biomarker of neuronal damage in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</li>
+<li>Ann Neurol 2017;81:857-870.</li>
+<li>This paper investigates serum neurofilament light: a biomarker of neuronal damage in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24954" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Giulio Disanto. (2017). Serum Neurofilament light: A biomarker of neuronal damage in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.24954</p>
@@ -55,7 +73,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -65,10 +82,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study. FUNDING Swiss National Science Foundation, Progressive Multiple Sclerosis Alliance, Biogen, Celgene, Novartis, Roche.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: BACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</li>
-<li>Challenge: The absence of representative reference values to correct for physiological age-dependent increases in sNfL has limited the diagnostic use of this biomarker at an individual level.</li>
-<li>Action: We aimed to assess the applicability of sNfL for identification of people at risk for future disease activity by establishing a reference database to derive reference values corrected for age and body-mass index (BMI).</li>
-<li>Resolution: This paper investigates serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study.</li>
+<li>BACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</li>
+<li>The absence of representative reference values to correct for physiological age-dependent increases in sNfL has limited the diagnostic use of this biomarker at an individual level.</li>
+<li>We aimed to assess the applicability of sNfL for identification of people at risk for future disease activity by establishing a reference database to derive reference values corrected for age and body-mass index (BMI).</li>
+<li>This paper investigates serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.48350/165754" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Benkert, Pascal. (2022). Serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study.. UCL Discovery (University College London). https://doi.org/10.48350/165754</p>
@@ -90,7 +107,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament as a predictor of disease worsening and brain and spinal cord atrophy in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -100,10 +116,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament as a predictor of disease worsening and brain and spinal cord atrophy in multiple sclerosis. Neurofilament light chain levels are a real-time, easy to measure marker of neuro-axonal injury that is conceptually more comprehensive than brain MRI.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neuro-axonal injury is a key factor in the development of permanent disability in multiple sclerosis.</li>
-<li>Challenge: Neurofilament light chain in peripheral blood has recently emerged as a biofluid marker reflecting neuro-axonal damage in this disease.</li>
-<li>Action: We aimed at comparing serum neurofilament light chain levels in multiple sclerosis and healthy controls, to determine their association with measures of disease activity and their ability to predict future clinical worsening as well as brain and spinal cord volume loss.</li>
-<li>Resolution: This paper investigates serum neurofilament as a predictor of disease worsening and brain and spinal cord atrophy in multiple sclerosis.</li>
+<li>Neuro-axonal injury is a key factor in the development of permanent disability in multiple sclerosis.</li>
+<li>Neurofilament light chain in peripheral blood has recently emerged as a biofluid marker reflecting neuro-axonal damage in this disease.</li>
+<li>We aimed at comparing serum neurofilament light chain levels in multiple sclerosis and healthy controls, to determine their association with measures of disease activity and their ability to predict future clinical worsening as well as brain and spinal cord volume loss.</li>
+<li>This paper investigates serum neurofilament as a predictor of disease worsening and brain and spinal cord atrophy in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy154" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Barro. (2018). Serum neurofilament as a predictor of disease worsening and brain and spinal cord atrophy in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awy154</p>
@@ -125,7 +141,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Blood neurofilament light chain as a biomarker of MS disease activity and treatment response</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -135,10 +150,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates blood neurofilament light chain as a biomarker of ms disease activity and treatment response. Our results support the utility of blood NfL as an easily accessible biomarker of disease evolution and treatment response.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results support the utility of blood NfL as an easily accessible biomarker of disease evolution and treatment response.</li>
-<li>Challenge: This paper investigates blood neurofilament light chain as a biomarker of ms disease activity and treatment response.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results support the utility of blood NfL as an easily accessible biomarker of disease evolution and treatment response.</li>
+<li>This paper investigates blood neurofilament light chain as a biomarker of ms disease activity and treatment response.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000007032" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2019). Blood neurofilament light chain as a biomarker of MS disease activity and treatment response. Neurology. https://doi.org/10.1212/wnl.0000000000007032</p>
@@ -160,7 +175,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Monitoring disease activity in multiple sclerosis using serum neurofilament light protein</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -170,10 +184,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates monitoring disease activity in multiple sclerosis using serum neurofilament light protein. Repeated NFL determinations in peripheral blood for detecting axonal damage may represent new possibilities in MS monitoring.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Serum and CSF NFL levels were highly correlated, indicating that blood sampling can replace CSF taps for this particular marker.</li>
-<li>Challenge: Disease activity and DMT had similar effects on serum and CSF NFL concentrations.</li>
-<li>Action: Repeated NFL determinations in peripheral blood for detecting axonal damage may represent new possibilities in MS monitoring.</li>
-<li>Resolution: This paper investigates monitoring disease activity in multiple sclerosis using serum neurofilament light protein.</li>
+<li>Serum and CSF NFL levels were highly correlated, indicating that blood sampling can replace CSF taps for this particular marker.</li>
+<li>Disease activity and DMT had similar effects on serum and CSF NFL concentrations.</li>
+<li>Repeated NFL determinations in peripheral blood for detecting axonal damage may represent new possibilities in MS monitoring.</li>
+<li>This paper investigates monitoring disease activity in multiple sclerosis using serum neurofilament light protein.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000004683" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lenka Novakova. (2017). Monitoring disease activity in multiple sclerosis using serum neurofilament light protein. Neurology. https://doi.org/10.1212/wnl.0000000000004683</p>
@@ -195,7 +209,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Comparison of three analytical platforms for quantification of the neurofilament light chain in blood samples: ELISA, electrochemiluminescence immunoassay and Simoa</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -205,10 +218,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates comparison of three analytical platforms for quantification of the neurofilament light chain in blood samples: elisa, electrochemiluminescence immunoassay and simoa. We found Simoa to be more sensitive than ELISA or the ECL assay.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found Simoa to be more sensitive than ELISA or the ECL assay.</li>
-<li>Challenge: Our results support the feasibility of quantifying NfL in serum; the results correlate with the more-established CSF NfL test.</li>
-<li>Action: This paper investigates comparison of three analytical platforms for quantification of the neurofilament light chain in blood samples: elisa, electrochemiluminescence immunoassay and simoa.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found Simoa to be more sensitive than ELISA or the ECL assay.</li>
+<li>Our results support the feasibility of quantifying NfL in serum; the results correlate with the more-established CSF NfL test.</li>
+<li>This paper investigates comparison of three analytical platforms for quantification of the neurofilament light chain in blood samples: elisa, electrochemiluminescence immunoassay and simoa.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1515/cclm-2015-1195" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2016). Comparison of three analytical platforms for quantification of the neurofilament light chain in blood samples: ELISA, electrochemiluminescence immunoassay and Simoa. Clinical Chemistry and Laboratory Medicine (CCLM). https://doi.org/10.1515/cclm-2015-1195</p>
@@ -230,7 +243,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum Glial Fibrillary Acidic Protein Compared With Neurofilament Light Chain as a Biomarker for Disease Progression in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2023</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -240,10 +252,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum glial fibrillary acidic protein compared with neurofilament light chain as a biomarker for disease progression in multiple sclerosis. sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</li>
-<li>Challenge: sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</li>
-<li>Action: This paper investigates serum glial fibrillary acidic protein compared with neurofilament light chain as a biomarker for disease progression in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</li>
+<li>sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</li>
+<li>This paper investigates serum glial fibrillary acidic protein compared with neurofilament light chain as a biomarker for disease progression in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2022.5250" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stéphanie Meier. (2023). Serum Glial Fibrillary Acidic Protein Compared With Neurofilament Light Chain as a Biomarker for Disease Progression in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2022.5250</p>
@@ -265,7 +277,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A consensus protocol for the standardization of cerebrospinal fluid collection and biobanking</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -275,10 +286,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a consensus protocol for the standardization of cerebrospinal fluid collection and biobanking. The biobanking protocols are applicable for CSF biobanks for research targeting any neurologic disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: There is a long history of research into body fluid biomarkers in neurodegenerative and neuroinflammatory diseases.</li>
-<li>Challenge: However, only a few biomarkers in CSF are being used in clinical practice.</li>
-<li>Action: One of the most critical factors in CSF biomarker research is the inadequate powering of studies because of the lack of sufficient samples that can be obtained in single-center studies.</li>
-<li>Resolution: This paper investigates a consensus protocol for the standardization of cerebrospinal fluid collection and biobanking.</li>
+<li>There is a long history of research into body fluid biomarkers in neurodegenerative and neuroinflammatory diseases.</li>
+<li>However, only a few biomarkers in CSF are being used in clinical practice.</li>
+<li>One of the most critical factors in CSF biomarker research is the inadequate powering of studies because of the lack of sufficient samples that can be obtained in single-center studies.</li>
+<li>This paper investigates a consensus protocol for the standardization of cerebrospinal fluid collection and biobanking.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181c47cc2" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Charlotte E. Teunissen. (2009). A consensus protocol for the standardization of cerebrospinal fluid collection and biobanking. Neurology. https://doi.org/10.1212/wnl.0b013e3181c47cc2</p>
@@ -300,7 +311,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament light chain as a biomarker in neurological disorders</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -310,10 +320,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament light chain as a biomarker in neurological disorders. Here we review the most important results on CSF and blood NfL and we discuss its potential applications and future directions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In the management of neurological diseases, the identification and quantification of axonal damage could allow for the improvement of diagnostic accuracy and prognostic assessment.</li>
-<li>Challenge: Neurofilament light chain (NfL) is a neuronal cytoplasmic protein highly expressed in large calibre myelinated axons.</li>
-<li>Action: Its levels increase in cerebrospinal fluid (CSF) and blood proportionally to the degree of axonal damage in a variety of neurological disorders, including inflammatory, neurodegenerative, traumatic and cerebrovascular diseases.</li>
-<li>Resolution: This paper investigates neurofilament light chain as a biomarker in neurological disorders.</li>
+<li>In the management of neurological diseases, the identification and quantification of axonal damage could allow for the improvement of diagnostic accuracy and prognostic assessment.</li>
+<li>Neurofilament light chain (NfL) is a neuronal cytoplasmic protein highly expressed in large calibre myelinated axons.</li>
+<li>Its levels increase in cerebrospinal fluid (CSF) and blood proportionally to the degree of axonal damage in a variety of neurological disorders, including inflammatory, neurodegenerative, traumatic and cerebrovascular diseases.</li>
+<li>This paper investigates neurofilament light chain as a biomarker in neurological disorders.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2018-320106" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lorenzo Gaetani. (2019). Neurofilament light chain as a biomarker in neurological disorders. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2018-320106</p>
@@ -335,7 +345,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light levels in normal aging and their association with morphologic brain changes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -345,10 +354,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light levels in normal aging and their association with morphologic brain changes. We show that rising and more variable sNfL in individuals &gt;60 years indicate an acceleration of neuronal injury at higher age, which may be driven by subclinical comorbid pathologies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We show that rising and more variable sNfL in individuals &gt;60 years indicate an acceleration of neuronal injury at higher age, which may be driven by subclinical comorbid pathologies.</li>
-<li>Challenge: This paper investigates serum neurofilament light levels in normal aging and their association with morphologic brain changes.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We show that rising and more variable sNfL in individuals &gt;60 years indicate an acceleration of neuronal injury at higher age, which may be driven by subclinical comorbid pathologies.</li>
+<li>This paper investigates serum neurofilament light levels in normal aging and their association with morphologic brain changes.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41467-020-14612-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Michael Khalil. (2020). Serum neurofilament light levels in normal aging and their association with morphologic brain changes. Nature Communications. https://doi.org/10.1038/s41467-020-14612-6</p>
@@ -370,7 +379,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Diagnostic Value of Cerebrospinal Fluid Neurofilament Light Protein in Neurology</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (59%)</span>
 </div>
@@ -380,10 +388,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates diagnostic value of cerebrospinal fluid neurofilament light protein in neurology. These data support the use of cNfL as a biomarker of neuroaxonal damage and indicate that age-specific and sex-specific (and in some cases disease-specific) reference values may be needed.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data support the use of cNfL as a biomarker of neuroaxonal damage and indicate that age-specific and sex-specific (and in some cases disease-specific) reference values may be needed.</li>
-<li>Challenge: This paper investigates diagnostic value of cerebrospinal fluid neurofilament light protein in neurology.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data support the use of cNfL as a biomarker of neuroaxonal damage and indicate that age-specific and sex-specific (and in some cases disease-specific) reference values may be needed.</li>
+<li>This paper investigates diagnostic value of cerebrospinal fluid neurofilament light protein in neurology.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.1534" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claire Bridel. (2019). Diagnostic Value of Cerebrospinal Fluid Neurofilament Light Protein in Neurology. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.1534</p>
@@ -405,7 +413,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum GFAP as a biomarker for disease severity in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (62%)</span>
 </div>
@@ -415,10 +422,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum gfap as a biomarker for disease severity in multiple sclerosis. in summary, we report elevated levels of GFAP in the serum of MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: in summary, we report elevated levels of GFAP in the serum of MS patients.</li>
-<li>Challenge: This paper investigates serum gfap as a biomarker for disease severity in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>in summary, we report elevated levels of GFAP in the serum of MS patients.</li>
+<li>This paper investigates serum gfap as a biomarker for disease severity in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41598-018-33158-8" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ahmed Abdelhak. (2018). Serum GFAP as a biomarker for disease severity in multiple sclerosis. Scientific Reports. https://doi.org/10.1038/s41598-018-33158-8</p>
@@ -440,7 +447,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light chain in early relapsing remitting MS is increased and correlates with CSF levels and with MRI measures of disease severity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (62%)</span>
 </div>
@@ -450,10 +456,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain in early relapsing remitting ms is increased and correlates with csf levels and with mri measures of disease severity. Our findings further support longitudinal studies of serum NfL as a potential biomarker of on-going disease progression and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings further support longitudinal studies of serum NfL as a potential biomarker of on-going disease progression and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</li>
-<li>Challenge: This paper investigates serum neurofilament light chain in early relapsing remitting ms is increased and correlates with csf levels and with mri measures of disease severity.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our findings further support longitudinal studies of serum NfL as a potential biomarker of on-going disease progression and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</li>
+<li>This paper investigates serum neurofilament light chain in early relapsing remitting ms is increased and correlates with csf levels and with mri measures of disease severity.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458515623365" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2016). Serum neurofilament light chain in early relapsing remitting MS is increased and correlates with CSF levels and with MRI measures of disease severity. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458515623365</p>
@@ -475,7 +481,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum Neurofilament Light Chain Levels in Patients With Presymptomatic Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (52%)</span>
 </div>
@@ -485,10 +490,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain levels in patients with presymptomatic multiple sclerosis. The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</li>
-<li>Challenge: This paper investigates serum neurofilament light chain levels in patients with presymptomatic multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</li>
+<li>This paper investigates serum neurofilament light chain levels in patients with presymptomatic multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.3238" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Kjetil Bjørnevik. (2019). Serum Neurofilament Light Chain Levels in Patients With Presymptomatic Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.3238</p>
@@ -510,7 +515,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Increased Neurofilament Light Chain Blood Levels in Neurodegenerative Neurological Diseases</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -520,10 +524,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates increased neurofilament light chain blood levels in neurodegenerative neurological diseases. Our data supports further longitudinal studies of serum NfL in neurodegenerative diseases as a potential biomarker of on-going disease progression, and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We developed and validated a novel ECL based sandwich immunoassay for the NfL protein in serum (NfL(Umea47:3)); levels in ALS were more than 20-fold higher than in controls.</li>
-<li>Challenge: Our data supports further longitudinal studies of serum NfL in neurodegenerative diseases as a potential biomarker of on-going disease progression, and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</li>
-<li>Action: This paper investigates increased neurofilament light chain blood levels in neurodegenerative neurological diseases.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We developed and validated a novel ECL based sandwich immunoassay for the NfL protein in serum (NfL(Umea47:3)); levels in ALS were more than 20-fold higher than in controls.</li>
+<li>Our data supports further longitudinal studies of serum NfL in neurodegenerative diseases as a potential biomarker of on-going disease progression, and as a potential surrogate to quantify effects of neuroprotective drugs in clinical trials.</li>
+<li>This paper investigates increased neurofilament light chain blood levels in neurodegenerative neurological diseases.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1371/journal.pone.0075091" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Johanna Gaiottino. (2013). Increased Neurofilament Light Chain Blood Levels in Neurodegenerative Neurological Diseases. PLoS ONE. https://doi.org/10.1371/journal.pone.0075091</p>
@@ -545,7 +549,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament is associated with progression of brain atrophy and disability in early MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (38%)</span>
 </div>
@@ -555,10 +558,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament is associated with progression of brain atrophy and disability in early ms. NCT00501943.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: NCT00501943.</li>
-<li>Challenge: This paper investigates serum neurofilament is associated with progression of brain atrophy and disability in early ms.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>NCT00501943.</li>
+<li>This paper investigates serum neurofilament is associated with progression of brain atrophy and disability in early ms.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000003653" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2017). Serum neurofilament is associated with progression of brain atrophy and disability in early MS. Neurology. https://doi.org/10.1212/wnl.0000000000003653</p>
@@ -580,7 +583,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament and glial fibrillary acidic protein in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -590,10 +592,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament and glial fibrillary acidic protein in multiple sclerosis. CSF levels of neurofilament light and glial fibrillary acidic protein may have prognostic value in multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: CSF levels of neurofilament light and glial fibrillary acidic protein may have prognostic value in multiple sclerosis.</li>
-<li>Challenge: This paper investigates neurofilament and glial fibrillary acidic protein in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>CSF levels of neurofilament light and glial fibrillary acidic protein may have prognostic value in multiple sclerosis.</li>
+<li>This paper investigates neurofilament and glial fibrillary acidic protein in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000142988.49341.d1" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Niklas Norgren. (2004). Neurofilament and glial fibrillary acidic protein in multiple sclerosis. Neurology. https://doi.org/10.1212/01.wnl.0000142988.49341.d1</p>
@@ -615,7 +617,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association Between Serum Neurofilament Light Chain Levels and Long-term Disease Course Among Patients With Multiple Sclerosis Followed up for 12 Years</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -625,10 +626,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association between serum neurofilament light chain levels and long-term disease course among patients with multiple sclerosis followed up for 12 years. This study found that statistically significant associations of sNFL with relevant clinical and neuroimaging outcomes in MS were confirmed and extended, supporting the potential of sNFL as an objective surrogate of ongoing MS disease activity.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study found that statistically significant associations of sNFL with relevant clinical and neuroimaging outcomes in MS were confirmed and extended, supporting the potential of sNFL as an objective surrogate of ongoing MS disease activity.</li>
-<li>Challenge: This paper investigates association between serum neurofilament light chain levels and long-term disease course among patients with multiple sclerosis followed up for 12 years.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study found that statistically significant associations of sNFL with relevant clinical and neuroimaging outcomes in MS were confirmed and extended, supporting the potential of sNFL as an objective surrogate of ongoing MS disease activity.</li>
+<li>This paper investigates association between serum neurofilament light chain levels and long-term disease course among patients with multiple sclerosis followed up for 12 years.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.2137" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ester Cantó. (2019). Association Between Serum Neurofilament Light Chain Levels and Long-term Disease Course Among Patients With Multiple Sclerosis Followed up for 12 Years. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.2137</p>
@@ -650,7 +651,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilaments as biomarkers in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -660,10 +660,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilaments as biomarkers in multiple sclerosis. Future studies should be aimed at the optimisation, standardisation and interlaboratory implementation of the assays and address the predictive value of these biomarkers.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neurodegeneration is the correlate of disease progression in multiple sclerosis (MS) and thus biological biomarkers that sensitively reflect this process are much needed.</li>
-<li>Challenge: Neurofilament protein subunits are potential cerebrospinal fluid (CSF) biomarkers for disease progression in MS.</li>
-<li>Action: We argue that the neurofilament light subunit can reflect acute axonal damage mediated by inflammatory mechanisms and can imply prognostic value for conversion from clinically isolated syndrome (CIS) to definite MS.</li>
-<li>Resolution: This paper investigates neurofilaments as biomarkers in multiple sclerosis.</li>
+<li>Neurodegeneration is the correlate of disease progression in multiple sclerosis (MS) and thus biological biomarkers that sensitively reflect this process are much needed.</li>
+<li>Neurofilament protein subunits are potential cerebrospinal fluid (CSF) biomarkers for disease progression in MS.</li>
+<li>We argue that the neurofilament light subunit can reflect acute axonal damage mediated by inflammatory mechanisms and can imply prognostic value for conversion from clinically isolated syndrome (CIS) to definite MS.</li>
+<li>This paper investigates neurofilaments as biomarkers in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458512443092" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Charlotte E. Teunissen. (2012). Neurofilaments as biomarkers in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458512443092</p>
@@ -685,7 +685,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament light chain serum levels correlate with 10‐year &lt;scp&gt;MRI&lt;/scp&gt; outcomes in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (52%)</span>
 </div>
@@ -695,10 +694,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament light chain serum levels correlate with 10‐year &lt;scp&gt;mri&lt;/scp&gt; outcomes in multiple sclerosis. Serum NfL measured during the first few years after the clinical onset of MS contributed to the prediction of 10-year MRI brain lesion load and atrophy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Serum NfL measured during the first few years after the clinical onset of MS contributed to the prediction of 10-year MRI brain lesion load and atrophy.</li>
-<li>Challenge: This paper investigates neurofilament light chain serum levels correlate with 10‐year &lt;scp&gt;mri&lt;/scp&gt; outcomes in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Serum NfL measured during the first few years after the clinical onset of MS contributed to the prediction of 10-year MRI brain lesion load and atrophy.</li>
+<li>This paper investigates neurofilament light chain serum levels correlate with 10‐year &lt;scp&gt;mri&lt;/scp&gt; outcomes in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/acn3.638" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tanuja Chitnis. (2018). Neurofilament light chain serum levels correlate with 10‐year &lt;scp&gt;MRI&lt;/scp&gt; outcomes in multiple sclerosis. Annals of Clinical and Translational Neurology. https://doi.org/10.1002/acn3.638</p>
@@ -720,7 +719,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The potential of serum neurofilament as biomarker for multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -730,10 +728,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the potential of serum neurofilament as biomarker for multiple sclerosis. Here, we propose specific clinical scenarios where implementing sNfL measures may be of utility, including, among others: initial diagnosis, first treatment choice, surveillance of subclinical disease activity and guidance of therapy selection.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</li>
-<li>Challenge: Blood-based serum neurofilament light chain (sNfL) is currently under close investigation as an easily accessible biomarker of prognosis and treatment response in patients with multiple sclerosis.</li>
-<li>Action: There is abundant evidence that sNfL levels reflect ongoing inflammatory-driven neuroaxonal damage (e.g.</li>
-<li>Resolution: relapses or MRI disease activity) and that sNfL levels predict disease activity over the next few years.</li>
+<li>Multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</li>
+<li>Blood-based serum neurofilament light chain (sNfL) is currently under close investigation as an easily accessible biomarker of prognosis and treatment response in patients with multiple sclerosis.</li>
+<li>There is abundant evidence that sNfL levels reflect ongoing inflammatory-driven neuroaxonal damage (e.g.</li>
+<li>relapses or MRI disease activity) and that sNfL levels predict disease activity over the next few years.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awab241" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stefan Bittner. (2021). The potential of serum neurofilament as biomarker for multiple sclerosis. Brain. https://doi.org/10.1093/brain/awab241</p>
@@ -755,7 +753,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Confounding effect of blood volume and body mass index on blood neurofilament light chain levels</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -765,10 +762,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates confounding effect of blood volume and body mass index on blood neurofilament light chain levels. We found a significant negative correlation between plasma NfL, BMI/BV in both groups.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found a significant negative correlation between plasma NfL, BMI/BV in both groups.</li>
-<li>Challenge: Our results highlight the potential confounding effect of BMI/BV on associations between blood NfL and disease outcomes.</li>
-<li>Action: This paper investigates confounding effect of blood volume and body mass index on blood neurofilament light chain levels.</li>
-<li>Resolution: Blood Neurofilament light chain (NfL) has been suggested as a promising biomarker in several neurological conditions.</li>
+<li>We found a significant negative correlation between plasma NfL, BMI/BV in both groups.</li>
+<li>Our results highlight the potential confounding effect of BMI/BV on associations between blood NfL and disease outcomes.</li>
+<li>This paper investigates confounding effect of blood volume and body mass index on blood neurofilament light chain levels.</li>
+<li>Blood Neurofilament light chain (NfL) has been suggested as a promising biomarker in several neurological conditions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/acn3.50972" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ali Manouchehrinia. (2020). Confounding effect of blood volume and body mass index on blood neurofilament light chain levels. Annals of Clinical and Translational Neurology. https://doi.org/10.1002/acn3.50972</p>
@@ -790,7 +787,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light chain is a biomarker of acute and chronic neuronal damage in early multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -800,10 +796,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain is a biomarker of acute and chronic neuronal damage in early multiple sclerosis. It is a promising biomarker for neuro-axonal damage in early multiple sclerosis (MS) patients, since higher baseline sNfL levels predicted future brain atrophy within 2 years.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: sNfL indicates acute inflammation as demonstrated by correlation with Gd+ lesions.</li>
-<li>Challenge: It is a promising biomarker for neuro-axonal damage in early multiple sclerosis (MS) patients, since higher baseline sNfL levels predicted future brain atrophy within 2 years.</li>
-<li>Action: This paper investigates serum neurofilament light chain is a biomarker of acute and chronic neuronal damage in early multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>sNfL indicates acute inflammation as demonstrated by correlation with Gd+ lesions.</li>
+<li>It is a promising biomarker for neuro-axonal damage in early multiple sclerosis (MS) patients, since higher baseline sNfL levels predicted future brain atrophy within 2 years.</li>
+<li>This paper investigates serum neurofilament light chain is a biomarker of acute and chronic neuronal damage in early multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458518765666" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nelly Siller. (2018). Serum neurofilament light chain is a biomarker of acute and chronic neuronal damage in early multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458518765666</p>
@@ -825,7 +821,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum GFAP and NfL Levels Differentiate Subsequent Progression and Disease Activity in Patients With Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -835,10 +830,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum gfap and nfl levels differentiate subsequent progression and disease activity in patients with progressive multiple sclerosis. Thus, sGFAP and sNfL levels may be used to stratify patients with progressive MS for clinical research studies and clinical trials and may inform clinical care.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Higher levels of sGFAP correlated with subsequent progression, particularly in nonactive patients, whereas sNfL reflected acute disease activity in patients with MS at high risk of underlying progressive pathology.</li>
-<li>Challenge: Thus, sGFAP and sNfL levels may be used to stratify patients with progressive MS for clinical research studies and clinical trials and may inform clinical care.</li>
-<li>Action: This paper investigates serum gfap and nfl levels differentiate subsequent progression and disease activity in patients with progressive multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Higher levels of sGFAP correlated with subsequent progression, particularly in nonactive patients, whereas sNfL reflected acute disease activity in patients with MS at high risk of underlying progressive pathology.</li>
+<li>Thus, sGFAP and sNfL levels may be used to stratify patients with progressive MS for clinical research studies and clinical trials and may inform clinical care.</li>
+<li>This paper investigates serum gfap and nfl levels differentiate subsequent progression and disease activity in patients with progressive multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000200052" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Barro. (2022). Serum GFAP and NfL Levels Differentiate Subsequent Progression and Disease Activity in Patients With Progressive Multiple Sclerosis. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000200052</p>
@@ -860,7 +855,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Conversion from clinically isolated syndrome to multiple sclerosis: A large multicentre study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -870,10 +864,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates conversion from clinically isolated syndrome to multiple sclerosis: a large multicentre study. A role for vitamin D is suggested but requires further investigation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We validated MRI lesion load, OCB and age at CIS as the strongest independent predictors of conversion to CDMS in this multicentre setting.</li>
-<li>Challenge: A role for vitamin D is suggested but requires further investigation.</li>
-<li>Action: This paper investigates conversion from clinically isolated syndrome to multiple sclerosis: a large multicentre study.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We validated MRI lesion load, OCB and age at CIS as the strongest independent predictors of conversion to CDMS in this multicentre setting.</li>
+<li>A role for vitamin D is suggested but requires further investigation.</li>
+<li>This paper investigates conversion from clinically isolated syndrome to multiple sclerosis: a large multicentre study.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458514568827" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2015). Conversion from clinically isolated syndrome to multiple sclerosis: A large multicentre study. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458514568827</p>
@@ -895,7 +889,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament light chain predicts disease activity in relapsing-remitting MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (38%)</span>
 </div>
@@ -905,10 +898,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament light chain predicts disease activity in relapsing-remitting ms. NCT00360906.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: NCT00360906.</li>
-<li>Challenge: This paper investigates neurofilament light chain predicts disease activity in relapsing-remitting ms.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>NCT00360906.</li>
+<li>This paper investigates neurofilament light chain predicts disease activity in relapsing-remitting ms.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000000422" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Kristin N. Varhaug. (2017). Neurofilament light chain predicts disease activity in relapsing-remitting MS. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000000422</p>
@@ -930,7 +923,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Plasma neurofilament light chain levels in patients with MS switching from injectable therapies to fingolimod</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (55%)</span>
 </div>
@@ -940,10 +932,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates plasma neurofilament light chain levels in patients with ms switching from injectable therapies to fingolimod. Blood NFL measurement can be considered as a biomarker for MS therapy response.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: NFL in serum and CSF are highly correlated and plasma NFL levels decrease after switching to highly effective MS therapy.</li>
-<li>Challenge: Blood NFL measurement can be considered as a biomarker for MS therapy response.</li>
-<li>Action: This paper investigates plasma neurofilament light chain levels in patients with ms switching from injectable therapies to fingolimod.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>NFL in serum and CSF are highly correlated and plasma NFL levels decrease after switching to highly effective MS therapy.</li>
+<li>Blood NFL measurement can be considered as a biomarker for MS therapy response.</li>
+<li>This paper investigates plasma neurofilament light chain levels in patients with ms switching from injectable therapies to fingolimod.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517715132" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fredrik Piehl. (2017). Plasma neurofilament light chain levels in patients with MS switching from injectable therapies to fingolimod. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517715132</p>
@@ -965,7 +957,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light chain predicts long term clinical outcomes in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -975,10 +966,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain predicts long term clinical outcomes in multiple sclerosis. In this prospective cohort study, we identified patients with serum collected within 5 years of first MS symptom onset (baseline) with more than 15 years of routine clinical follow-up.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this prospective cohort study, we identified patients with serum collected within 5 years of first MS symptom onset (baseline) with more than 15 years of routine clinical follow-up.</li>
-<li>Challenge: This study demonstrates that baseline sNfL is associated with long term clinical disease progression.</li>
-<li>Action: This paper investigates serum neurofilament light chain predicts long term clinical outcomes in multiple sclerosis.</li>
-<li>Resolution: Serum neurofilament light chain (NfL) is emerging as an important biomarker in multiple sclerosis (MS).</li>
+<li>In this prospective cohort study, we identified patients with serum collected within 5 years of first MS symptom onset (baseline) with more than 15 years of routine clinical follow-up.</li>
+<li>This study demonstrates that baseline sNfL is associated with long term clinical disease progression.</li>
+<li>This paper investigates serum neurofilament light chain predicts long term clinical outcomes in multiple sclerosis.</li>
+<li>Serum neurofilament light chain (NfL) is emerging as an important biomarker in multiple sclerosis (MS).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41598-020-67504-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Simon Thebault. (2020). Serum neurofilament light chain predicts long term clinical outcomes in multiple sclerosis. Scientific Reports. https://doi.org/10.1038/s41598-020-67504-6</p>
@@ -1000,7 +991,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Glial and neuronal markers in cerebrospinal fluid predict progression in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (55%)</span>
 </div>
@@ -1010,10 +1000,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates glial and neuronal markers in cerebrospinal fluid predict progression in multiple sclerosis. Whereas, CSF levels of YKL-40 and GFAP are independent prognostic markers for disability progression in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: CSF levels of NFL in CIS patients are an independent prognostic marker for conversion to CDMS.</li>
-<li>Challenge: Whereas, CSF levels of YKL-40 and GFAP are independent prognostic markers for disability progression in MS.</li>
-<li>Action: This paper investigates glial and neuronal markers in cerebrospinal fluid predict progression in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>CSF levels of NFL in CIS patients are an independent prognostic marker for conversion to CDMS.</li>
+<li>Whereas, CSF levels of YKL-40 and GFAP are independent prognostic markers for disability progression in MS.</li>
+<li>This paper investigates glial and neuronal markers in cerebrospinal fluid predict progression in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458514549397" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> M. Alba Mañé-Martínez. (2015). Glial and neuronal markers in cerebrospinal fluid predict progression in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458514549397</p>
@@ -1035,7 +1025,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Plasma Concentration of the Neurofilament Light Protein (NFL) is a Biomarker of CNS Injury in HIV Infection: A Cross-Sectional Study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1045,10 +1034,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates plasma concentration of the neurofilament light protein (nfl) is a biomarker of cns injury in hiv infection: a cross-sectional study. Because CSF NFL is also elevated in a variety of other CNS disorders, sensitive measures of plasma NFL may similarly prove useful in other settings.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These results show that plasma NFL may prove a valuable tool to evaluate ongoing CNS injury in HIV infection that may be applied in the clinic and in research settings to assess the presence if active CNS injury.</li>
-<li>Challenge: Because CSF NFL is also elevated in a variety of other CNS disorders, sensitive measures of plasma NFL may similarly prove useful in other settings.</li>
-<li>Action: This paper investigates plasma concentration of the neurofilament light protein (nfl) is a biomarker of cns injury in hiv infection: a cross-sectional study.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These results show that plasma NFL may prove a valuable tool to evaluate ongoing CNS injury in HIV infection that may be applied in the clinic and in research settings to assess the presence if active CNS injury.</li>
+<li>Because CSF NFL is also elevated in a variety of other CNS disorders, sensitive measures of plasma NFL may similarly prove useful in other settings.</li>
+<li>This paper investigates plasma concentration of the neurofilament light protein (nfl) is a biomarker of cns injury in hiv infection: a cross-sectional study.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ebiom.2015.11.036" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Magnus Gisslén. (2015). Plasma Concentration of the Neurofilament Light Protein (NFL) is a Biomarker of CNS Injury in HIV Infection: A Cross-Sectional Study. EBioMedicine. https://doi.org/10.1016/j.ebiom.2015.11.036</p>
@@ -1070,7 +1059,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum glial fibrillary acidic protein correlates with multiple sclerosis disease severity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1080,10 +1068,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum glial fibrillary acidic protein correlates with multiple sclerosis disease severity. Our work suggests that GFAP serum level associates with disease progression in MS and could potentially serve as an easily measurable biomarker of central nervous system (CNS) pathology related to disease progression in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Earlier studies have demonstrated that GFAP, unlike NfL, is not increased in association with acute focal inflammation-related nervous system damage.</li>
-<li>Challenge: Our work suggests that GFAP serum level associates with disease progression in MS and could potentially serve as an easily measurable biomarker of central nervous system (CNS) pathology related to disease progression in MS.</li>
-<li>Action: This paper investigates serum glial fibrillary acidic protein correlates with multiple sclerosis disease severity.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Earlier studies have demonstrated that GFAP, unlike NfL, is not increased in association with acute focal inflammation-related nervous system damage.</li>
+<li>Our work suggests that GFAP serum level associates with disease progression in MS and could potentially serve as an easily measurable biomarker of central nervous system (CNS) pathology related to disease progression in MS.</li>
+<li>This paper investigates serum glial fibrillary acidic protein correlates with multiple sclerosis disease severity.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458518819380" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Heidi Högel. (2018). Serum glial fibrillary acidic protein correlates with multiple sclerosis disease severity. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458518819380</p>
@@ -1105,7 +1093,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light chain levels are increased in patients with a clinically isolated syndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -1115,10 +1102,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light chain levels are increased in patients with a clinically isolated syndrome. If replicated in future studies, serum NfL may represent a reliable and easily accessible biomarker of early axonal damage in CIS and MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: If replicated in future studies, serum NfL may represent a reliable and easily accessible biomarker of early axonal damage in CIS and MS.</li>
-<li>Challenge: This paper investigates serum neurofilament light chain levels are increased in patients with a clinically isolated syndrome.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>If replicated in future studies, serum NfL may represent a reliable and easily accessible biomarker of early axonal damage in CIS and MS.</li>
+<li>This paper investigates serum neurofilament light chain levels are increased in patients with a clinically isolated syndrome.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2014-309690" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Giulio Disanto. (2015). Serum neurofilament light chain levels are increased in patients with a clinically isolated syndrome. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2014-309690</p>
@@ -1140,7 +1127,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Clinical implications of serum neurofilament in newly diagnosed MS patients: A longitudinal multicentre cohort study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (46%)</span>
 </div>
@@ -1150,10 +1136,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates clinical implications of serum neurofilament in newly diagnosed ms patients: a longitudinal multicentre cohort study. Supported the German Federal Ministry for Education and Research, the German Research Council, and Hertie-Stiftung.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Supported the German Federal Ministry for Education and Research, the German Research Council, and Hertie-Stiftung.</li>
-<li>Challenge: This paper investigates clinical implications of serum neurofilament in newly diagnosed ms patients: a longitudinal multicentre cohort study.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Supported the German Federal Ministry for Education and Research, the German Research Council, and Hertie-Stiftung.</li>
+<li>This paper investigates clinical implications of serum neurofilament in newly diagnosed ms patients: a longitudinal multicentre cohort study.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ebiom.2020.102807" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stefan Bittner. (2020). Clinical implications of serum neurofilament in newly diagnosed MS patients: A longitudinal multicentre cohort study. EBioMedicine. https://doi.org/10.1016/j.ebiom.2020.102807</p>
@@ -1175,7 +1161,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Molecular biomarkers in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1185,10 +1170,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates molecular biomarkers in multiple sclerosis. In addition, clinically relevant and promising biomarkers from the blood and cerebrospinal fluid are presented which are useful for MS diagnosis and prognosis as well as for the assessment of therapy response and side effects.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is an inflammatory-neurodegenerative disease of the central nervous system presenting with significant inter- and intraindividual heterogeneity.</li>
-<li>Challenge: However, the application of clinical and imaging biomarkers is currently not able to allow individual characterization and prediction.</li>
-<li>Action: Complementary, molecular biomarkers which are easily quantifiable come from the areas of immunology and neurobiology due to the causal pathomechanisms and can excellently complement other disease characteristics.</li>
-<li>Resolution: Only a few molecular biomarkers have so far been routinely used in clinical practice as their validation and transfer take a long time.</li>
+<li>Multiple sclerosis (MS) is an inflammatory-neurodegenerative disease of the central nervous system presenting with significant inter- and intraindividual heterogeneity.</li>
+<li>However, the application of clinical and imaging biomarkers is currently not able to allow individual characterization and prediction.</li>
+<li>Complementary, molecular biomarkers which are easily quantifiable come from the areas of immunology and neurobiology due to the causal pathomechanisms and can excellently complement other disease characteristics.</li>
+<li>Only a few molecular biomarkers have so far been routinely used in clinical practice as their validation and transfer take a long time.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/s12974-019-1674-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tjalf Ziemssen. (2019). Molecular biomarkers in multiple sclerosis. Journal of Neuroinflammation. https://doi.org/10.1186/s12974-019-1674-2</p>
@@ -1210,7 +1195,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament light chain and oligoclonal bands are prognostic biomarkers in radiologically isolated syndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1220,10 +1204,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament light chain and oligoclonal bands are prognostic biomarkers in radiologically isolated syndrome. The association with a faster development of multiple sclerosis reinforces the importance of cerebrospinal fluid analysis in patients with radiologically isolated syndrome.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The prognostic role of cerebrospinal fluid molecular biomarkers determined in early pathogenic stages of multiple sclerosis has yet to be defined.</li>
-<li>Challenge: In the present study, we aimed to investigate the prognostic value of chitinase 3 like 1 (CHI3L1), neurofilament light chain, and oligoclonal bands for conversion to clinically isolated syndrome and to multiple sclerosis in 75 patients with radiologically isolated syndrome.</li>
-<li>Action: Cerebrospinal fluid levels of CHI3L1 and neurofilament light chain were measured by enzyme-linked immunosorbent assay.</li>
-<li>Resolution: Uni- and multivariable Cox regression models including as covariates age at diagnosis of radiologically isolated syndrome, number of brain lesions, sex and treatment were used to investigate associations between cerebrospinal fluid CHI3L1 and neurofilament light chain levels and time to conversion to clinically isolated syndrome and multiple sclerosis.</li>
+<li>The prognostic role of cerebrospinal fluid molecular biomarkers determined in early pathogenic stages of multiple sclerosis has yet to be defined.</li>
+<li>In the present study, we aimed to investigate the prognostic value of chitinase 3 like 1 (CHI3L1), neurofilament light chain, and oligoclonal bands for conversion to clinically isolated syndrome and to multiple sclerosis in 75 patients with radiologically isolated syndrome.</li>
+<li>Cerebrospinal fluid levels of CHI3L1 and neurofilament light chain were measured by enzyme-linked immunosorbent assay.</li>
+<li>Uni- and multivariable Cox regression models including as covariates age at diagnosis of radiologically isolated syndrome, number of brain lesions, sex and treatment were used to investigate associations between cerebrospinal fluid CHI3L1 and neurofilament light chain levels and time to conversion to clinically isolated syndrome and multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy021" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Clara Matute‐Blanch. (2018). Neurofilament light chain and oligoclonal bands are prognostic biomarkers in radiologically isolated syndrome. Brain. https://doi.org/10.1093/brain/awy021</p>
@@ -1245,7 +1229,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A comparative study of CSF neurofilament light and heavy chain protein in MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -1255,10 +1238,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a comparative study of csf neurofilament light and heavy chain protein in ms. Our results further support the role of neurofilaments as a potential surrogate measure for neuroprotective treatment in MS studies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results further support the role of neurofilaments as a potential surrogate measure for neuroprotective treatment in MS studies.</li>
-<li>Challenge: This paper investigates a comparative study of csf neurofilament light and heavy chain protein in ms.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results further support the role of neurofilaments as a potential surrogate measure for neuroprotective treatment in MS studies.</li>
+<li>This paper investigates a comparative study of csf neurofilament light and heavy chain protein in ms.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458513482374" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2013). A comparative study of CSF neurofilament light and heavy chain protein in MS. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458513482374</p>
@@ -1280,7 +1263,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Markers for different glial cell responses in multiple sclerosis: clinical and pathological correlations</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (85%)</span>
 </div>
@@ -1290,10 +1272,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates markers for different glial cell responses in multiple sclerosis: clinical and pathological correlations. This study aimed to investigate the relationship between biomarkers of different glial cell responses: (i) to disease dynamics and the clinical subtypes of multiple sclerosis; (ii) to disability; and (iii) to cross-validate these findings in a post-mortem study.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study aimed to investigate the relationship between biomarkers of different glial cell responses: (i) to disease dynamics and the clinical subtypes of multiple sclerosis; (ii) to disability; and (iii) to cross-validate these findings in a post-mortem study.</li>
-<li>Challenge: We found that S100B is a good marker for the relapsing phase of the disease (confirmed by post-mortem observation) as opposed to ferritin, which is elevated throughout the entire course.</li>
-<li>Action: The results of this study have broad implications for finding new and sensitive outcome measures for treatment trials that aim to delay the development of disability.</li>
-<li>Resolution: This paper investigates markers for different glial cell responses in multiple sclerosis: clinical and pathological correlations.</li>
+<li>This study aimed to investigate the relationship between biomarkers of different glial cell responses: (i) to disease dynamics and the clinical subtypes of multiple sclerosis; (ii) to disability; and (iii) to cross-validate these findings in a post-mortem study.</li>
+<li>We found that S100B is a good marker for the relapsing phase of the disease (confirmed by post-mortem observation) as opposed to ferritin, which is elevated throughout the entire course.</li>
+<li>The results of this study have broad implications for finding new and sensitive outcome measures for treatment trials that aim to delay the development of disability.</li>
+<li>This paper investigates markers for different glial cell responses in multiple sclerosis: clinical and pathological correlations.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf165" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Axel Petzold. (2002). Markers for different glial cell responses in multiple sclerosis: clinical and pathological correlations. Brain. https://doi.org/10.1093/brain/awf165</p>
@@ -1315,7 +1297,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilaments and Neurofilament Proteins in Health and Disease</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1325,10 +1306,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilaments and neurofilament proteins in health and disease. New evidence that subunits of NFs exist within postsynaptic terminal boutons and influence neurotransmission suggests how NF proteins might contribute to normal synaptic function and neuropsychiatric disease states.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: SUMMARYNeurofilaments (NFs) are unique among tissue-specific classes of intermediate filaments (IFs) in being heteropolymers composed of four subunits (NF-L [neurofilament light]; NF-M [neurofilament middle]; NF-H [neurofilament heavy]; and α-internexin or peripherin), each having different domain structures and functions.</li>
-<li>Challenge: Here, we review how NFs provide structural support for the highly asymmetric geometries of neurons and, especially, for the marked radial expansion of myelinated axons crucial for effective nerve conduction velocity.</li>
-<li>Action: NFs in axons extensively cross-bridge and interconnect with other non-IF components of the cytoskeleton, including microtubules, actin filaments, and other fibrous cytoskeletal elements, to establish a regionally specialized network that undergoes exceptionally slow local turnover and serves as a docking platform to organize other organelles and proteins.</li>
-<li>Resolution: We also discuss how a small pool of oligomeric and short filamentous precursors in the slow phase of axonal transport maintains this network.</li>
+<li>SUMMARYNeurofilaments (NFs) are unique among tissue-specific classes of intermediate filaments (IFs) in being heteropolymers composed of four subunits (NF-L [neurofilament light]; NF-M [neurofilament middle]; NF-H [neurofilament heavy]; and α-internexin or peripherin), each having different domain structures and functions.</li>
+<li>Here, we review how NFs provide structural support for the highly asymmetric geometries of neurons and, especially, for the marked radial expansion of myelinated axons crucial for effective nerve conduction velocity.</li>
+<li>NFs in axons extensively cross-bridge and interconnect with other non-IF components of the cytoskeleton, including microtubules, actin filaments, and other fibrous cytoskeletal elements, to establish a regionally specialized network that undergoes exceptionally slow local turnover and serves as a docking platform to organize other organelles and proteins.</li>
+<li>We also discuss how a small pool of oligomeric and short filamentous precursors in the slow phase of axonal transport maintains this network.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1101/cshperspect.a018309" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Aidong Yuan. (2017). Neurofilaments and Neurofilament Proteins in Health and Disease. Cold Spring Harbor Perspectives in Biology. https://doi.org/10.1101/cshperspect.a018309</p>
@@ -1350,7 +1331,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum neurofilament light as a biomarker in progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1360,10 +1340,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum neurofilament light as a biomarker in progressive multiple sclerosis. Here, we report the initial conclusions of the panel and its recommendations for further research.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here, we report the initial conclusions of the panel and its recommendations for further research.</li>
-<li>Challenge: This paper investigates serum neurofilament light as a biomarker in progressive multiple sclerosis.</li>
-<li>Action: There is an unmet need in multiple sclerosis (MS) therapy for treatments to stop progressive disability.</li>
-<li>Resolution: The development of treatments may be accelerated if novel biomarkers are developed to overcome the limitations of traditional imaging outcomes revealed in early phase trials.</li>
+<li>Here, we report the initial conclusions of the panel and its recommendations for further research.</li>
+<li>This paper investigates serum neurofilament light as a biomarker in progressive multiple sclerosis.</li>
+<li>There is an unmet need in multiple sclerosis (MS) therapy for treatments to stop progressive disability.</li>
+<li>The development of treatments may be accelerated if novel biomarkers are developed to overcome the limitations of traditional imaging outcomes revealed in early phase trials.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000010346" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Raju Kapoor. (2020). Serum neurofilament light as a biomarker in progressive multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000010346</p>
@@ -1385,7 +1365,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Blood neurofilament light levels segregate treatment effects in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -1395,10 +1374,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates blood neurofilament light levels segregate treatment effects in multiple sclerosis. Choice of DMT in RRMS is significantly associated with degree of reduction in pNfL, which supports a role for pNfL as a drug response marker.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Choice of DMT in RRMS is significantly associated with degree of reduction in pNfL, which supports a role for pNfL as a drug response marker.</li>
-<li>Challenge: This paper investigates blood neurofilament light levels segregate treatment effects in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Choice of DMT in RRMS is significantly associated with degree of reduction in pNfL, which supports a role for pNfL as a drug response marker.</li>
+<li>This paper investigates blood neurofilament light levels segregate treatment effects in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000009097" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bénédicte Delcoigne. (2020). Blood neurofilament light levels segregate treatment effects in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000009097</p>
@@ -1420,7 +1399,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serum GFAP in multiple sclerosis: correlation with disease type and MRI markers of disease severity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -1430,10 +1408,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serum gfap in multiple sclerosis: correlation with disease type and mri markers of disease severity. We showed that these 2 biomarkers were significantly correlated with each other (R = 0.72, p &lt; 0.001).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We showed that these 2 biomarkers were significantly correlated with each other (R = 0.72, p &lt; 0.001).</li>
-<li>Challenge: Our results seem to confirm the added value of s-GFAP in the context of multiple sclerosis.</li>
-<li>Action: This paper investigates serum gfap in multiple sclerosis: correlation with disease type and mri markers of disease severity.</li>
-<li>Resolution: Neurofilament light chain (NfL) has been demonstrated to correlate with multiple sclerosis disease severity as well as treatment response.</li>
+<li>We showed that these 2 biomarkers were significantly correlated with each other (R = 0.72, p &lt; 0.001).</li>
+<li>Our results seem to confirm the added value of s-GFAP in the context of multiple sclerosis.</li>
+<li>This paper investigates serum gfap in multiple sclerosis: correlation with disease type and mri markers of disease severity.</li>
+<li>Neurofilament light chain (NfL) has been demonstrated to correlate with multiple sclerosis disease severity as well as treatment response.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41598-020-67934-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Xavier Ayrignac. (2020). Serum GFAP in multiple sclerosis: correlation with disease type and MRI markers of disease severity. Scientific Reports. https://doi.org/10.1038/s41598-020-67934-2</p>
@@ -1455,7 +1433,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament heavy chain in CSF correlates with relapses and disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1465,10 +1442,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament heavy chain in csf correlates with relapses and disability in multiple sclerosis. Furthermore, the dissociation of NfH&lt;sup&gt;SMI35&lt;/sup&gt; levels with biomarkers of inflammation suggests that the mechanisms responsible for their production are at least partly independent.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: &lt;h3&gt;Objective:&lt;/h3&gt; Neurodegeneration is now accepted as a pathologic hallmark of multiple sclerosis (MS).</li>
-<li>Challenge: We sought to discover whether CSF levels of neurofilament heavy chain protein (NfH&lt;sup&gt;SMI35&lt;/sup&gt;) correlate with disability, disease activity, or specific stages of MS.</li>
-<li>Action: &lt;h3&gt;Methods:&lt;/h3&gt; An electrochemiluminescence immunoassay was used to retrospectively measure NfH&lt;sup&gt;SMI35&lt;/sup&gt; in CSF of patients with clinically isolated syndrome (CIS) (n = 63), relapsing-remitting multiple sclerosis (RRMS) (n = 39), secondary progressive multiple sclerosis (SPMS) (n = 25), primary progressive multiple sclerosis (PPMS) (n = 23), or controls (n = 73).</li>
-<li>Resolution: Cell count and CSF levels of immunoglobulin and albumin were also measured.</li>
+<li>&lt;h3&gt;Objective:&lt;/h3&gt; Neurodegeneration is now accepted as a pathologic hallmark of multiple sclerosis (MS).</li>
+<li>We sought to discover whether CSF levels of neurofilament heavy chain protein (NfH&lt;sup&gt;SMI35&lt;/sup&gt;) correlate with disability, disease activity, or specific stages of MS.</li>
+<li>&lt;h3&gt;Methods:&lt;/h3&gt; An electrochemiluminescence immunoassay was used to retrospectively measure NfH&lt;sup&gt;SMI35&lt;/sup&gt; in CSF of patients with clinically isolated syndrome (CIS) (n = 63), relapsing-remitting multiple sclerosis (RRMS) (n = 39), secondary progressive multiple sclerosis (SPMS) (n = 25), primary progressive multiple sclerosis (PPMS) (n = 23), or controls (n = 73).</li>
+<li>Cell count and CSF levels of immunoglobulin and albumin were also measured.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31821432ff" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jens Kühle. (2011). Neurofilament heavy chain in CSF correlates with relapses and disability in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0b013e31821432ff</p>
@@ -1490,7 +1467,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Emerging Cerebrospinal Fluid Biomarkers of Disease Activity and Progression in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2024</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1500,10 +1476,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates emerging cerebrospinal fluid biomarkers of disease activity and progression in multiple sclerosis. In this study, activated glial markers (in particular GFAP) and neurofilament heavy chain were associated specifically with nonrelapsing progressive disease outcomes (independent of acute inflammatory activity).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, activated glial markers (in particular GFAP) and neurofilament heavy chain were associated specifically with nonrelapsing progressive disease outcomes (independent of acute inflammatory activity).</li>
-<li>Challenge: This paper investigates emerging cerebrospinal fluid biomarkers of disease activity and progression in multiple sclerosis.</li>
-<li>Action: Elevated CSF GFAP was associated with long-term MS disease progression.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, activated glial markers (in particular GFAP) and neurofilament heavy chain were associated specifically with nonrelapsing progressive disease outcomes (independent of acute inflammatory activity).</li>
+<li>This paper investigates emerging cerebrospinal fluid biomarkers of disease activity and progression in multiple sclerosis.</li>
+<li>Elevated CSF GFAP was associated with long-term MS disease progression.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2024.0017" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Anne H. Cross. (2024). Emerging Cerebrospinal Fluid Biomarkers of Disease Activity and Progression in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2024.0017</p>
@@ -1525,7 +1501,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cerebrospinal fluid biomarkers as a measure of disease activity and treatment efficacy in relapsing‐remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1535,10 +1510,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cerebrospinal fluid biomarkers as a measure of disease activity and treatment efficacy in relapsing‐remitting multiple sclerosis. This study investigated the influence of first-line (interferon beta) and second-line (natalizumab) therapies on seven CSF biomarkers in RRMS and their correlation with clinical and radiological outcomes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study investigated the influence of first-line (interferon beta) and second-line (natalizumab) therapies on seven CSF biomarkers in RRMS and their correlation with clinical and radiological outcomes.</li>
-<li>Challenge: Furthermore, we found an association between inflammatory and degenerative biomarkers.</li>
-<li>Action: This paper investigates cerebrospinal fluid biomarkers as a measure of disease activity and treatment efficacy in relapsing‐remitting multiple sclerosis.</li>
-<li>Resolution: Cerebrospinal fluid (CSF) biomarkers can reflect different aspects of the pathophysiology of relapsing-remitting multiple sclerosis (RRMS).</li>
+<li>This study investigated the influence of first-line (interferon beta) and second-line (natalizumab) therapies on seven CSF biomarkers in RRMS and their correlation with clinical and radiological outcomes.</li>
+<li>Furthermore, we found an association between inflammatory and degenerative biomarkers.</li>
+<li>This paper investigates cerebrospinal fluid biomarkers as a measure of disease activity and treatment efficacy in relapsing‐remitting multiple sclerosis.</li>
+<li>Cerebrospinal fluid (CSF) biomarkers can reflect different aspects of the pathophysiology of relapsing-remitting multiple sclerosis (RRMS).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/jnc.13881" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lenka Novakova. (2016). Cerebrospinal fluid biomarkers as a measure of disease activity and treatment efficacy in relapsing‐remitting multiple sclerosis. Journal of Neurochemistry. https://doi.org/10.1111/jnc.13881</p>
@@ -1560,7 +1535,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Guidance for use of neurofilament light chain as a cerebrospinal fluid and blood biomarker in multiple sclerosis management</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2024</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1570,10 +1544,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates guidance for use of neurofilament light chain as a cerebrospinal fluid and blood biomarker in multiple sclerosis management. Further work is needed to resolve issues around comparisons across testing platforms (absolute values) and normalisation (reference ranges) in order to guide interpretation of the results.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neurofilament light chain (NfL) is a long-awaited blood biomarker that can provide clinically useful information about prognosis and therapeutic efficacy in multiple sclerosis (MS).</li>
-<li>Challenge: There is now substantial evidence for this biomarker to be used alongside magnetic resonance imaging (MRI) and clinical measures of disease progression as a decision-making tool for the management of patients with MS.</li>
-<li>Action: Serum NfL (sNfL) has certain advantages over traditional measures of MS disease progression such as MRI because it is relatively noninvasive, inexpensive, and can be repeated frequently to monitor activity and treatment efficacy.</li>
-<li>Resolution: sNfL levels can be monitored regularly in patients with MS to determine change from baseline and predict subclinical disease activity, relapse risk, and the development of gadolinium-enhancing (Gd+) lesions.</li>
+<li>Neurofilament light chain (NfL) is a long-awaited blood biomarker that can provide clinically useful information about prognosis and therapeutic efficacy in multiple sclerosis (MS).</li>
+<li>There is now substantial evidence for this biomarker to be used alongside magnetic resonance imaging (MRI) and clinical measures of disease progression as a decision-making tool for the management of patients with MS.</li>
+<li>Serum NfL (sNfL) has certain advantages over traditional measures of MS disease progression such as MRI because it is relatively noninvasive, inexpensive, and can be repeated frequently to monitor activity and treatment efficacy.</li>
+<li>sNfL levels can be monitored regularly in patients with MS to determine change from baseline and predict subclinical disease activity, relapse risk, and the development of gadolinium-enhancing (Gd+) lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ebiom.2024.104970" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mark S. Freedman. (2024). Guidance for use of neurofilament light chain as a cerebrospinal fluid and blood biomarker in multiple sclerosis management. EBioMedicine. https://doi.org/10.1016/j.ebiom.2024.104970</p>
@@ -1595,7 +1569,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Blood neurofilament light: a critical review of its application to neurologic disease</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1605,10 +1578,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates blood neurofilament light: a critical review of its application to neurologic disease. In this review, we examine the use of blood NfL as a biologic test for neurologic disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neuronal injury is a universal event that occurs in disease processes that affect both the central and peripheral nervous systems.</li>
-<li>Challenge: A blood biomarker linked to neuronal injury would provide a critical measure to understand and treat neurologic diseases.</li>
-<li>Action: Neurofilament light chain (NfL), a cytoskeletal protein expressed only in neurons, has emerged as such a biomarker.</li>
-<li>Resolution: With the ability to quantify neuronal damage in blood, NfL is being applied to a wide range of neurologic conditions to investigate and monitor disease including assessment of treatment efficacy.</li>
+<li>Neuronal injury is a universal event that occurs in disease processes that affect both the central and peripheral nervous systems.</li>
+<li>A blood biomarker linked to neuronal injury would provide a critical measure to understand and treat neurologic diseases.</li>
+<li>Neurofilament light chain (NfL), a cytoskeletal protein expressed only in neurons, has emerged as such a biomarker.</li>
+<li>With the ability to quantify neuronal damage in blood, NfL is being applied to a wide range of neurologic conditions to investigate and monitor disease including assessment of treatment efficacy.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/acn3.51234" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Barro. (2020). Blood neurofilament light: a critical review of its application to neurologic disease. Annals of Clinical and Translational Neurology. https://doi.org/10.1002/acn3.51234</p>
@@ -1630,7 +1603,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament levels, disease activity and brain volume during follow-up in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -1640,10 +1612,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament levels, disease activity and brain volume during follow-up in multiple sclerosis. Our findings further add to the accumulating evidence that CSF-NFL is a clinically useful biomarker in CIS and RRMS and should be considered in the expanding NEDA concept.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings further add to the accumulating evidence that CSF-NFL is a clinically useful biomarker in CIS and RRMS and should be considered in the expanding NEDA concept.</li>
-<li>Challenge: This paper investigates neurofilament levels, disease activity and brain volume during follow-up in multiple sclerosis.</li>
-<li>Action: Serum and CSF levels of NFL correlate, but CSF-NFL predicts and reflects disease activity better than S-NFL.</li>
-<li>Resolution: CSF-NFL levels are associated with both new T2 lesions and brain volume loss.</li>
+<li>Our findings further add to the accumulating evidence that CSF-NFL is a clinically useful biomarker in CIS and RRMS and should be considered in the expanding NEDA concept.</li>
+<li>This paper investigates neurofilament levels, disease activity and brain volume during follow-up in multiple sclerosis.</li>
+<li>Serum and CSF levels of NFL correlate, but CSF-NFL predicts and reflects disease activity better than S-NFL.</li>
+<li>CSF-NFL levels are associated with both new T2 lesions and brain volume loss.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/s12974-018-1249-7" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Irene Håkansson. (2018). Neurofilament levels, disease activity and brain volume during follow-up in multiple sclerosis. Journal of Neuroinflammation. https://doi.org/10.1186/s12974-018-1249-7</p>
@@ -1665,7 +1637,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Profiling individual clinical responses by high-frequency serum neurofilament assessment in MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -1675,10 +1646,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates profiling individual clinical responses by high-frequency serum neurofilament assessment in ms. This study applied a long-term high-frequency sNfL assessment in an ATZ-treated cohort, allowing a holistic profiling on the individual level and highlighted that sNfL can eminently complement the individual clinical and MRI monitoring in clinical practice.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study applied a long-term high-frequency sNfL assessment in an ATZ-treated cohort, allowing a holistic profiling on the individual level and highlighted that sNfL can eminently complement the individual clinical and MRI monitoring in clinical practice.</li>
-<li>Challenge: This paper investigates profiling individual clinical responses by high-frequency serum neurofilament assessment in ms.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study applied a long-term high-frequency sNfL assessment in an ATZ-treated cohort, allowing a holistic profiling on the individual level and highlighted that sNfL can eminently complement the individual clinical and MRI monitoring in clinical practice.</li>
+<li>This paper investigates profiling individual clinical responses by high-frequency serum neurofilament assessment in ms.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000000555" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Katja Akgün. (2019). Profiling individual clinical responses by high-frequency serum neurofilament assessment in MS. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000000555</p>
@@ -1700,7 +1671,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilaments: neurobiological foundations for biomarker applications</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1710,10 +1680,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilaments: neurobiological foundations for biomarker applications. Finally, we will reflect on major challenges for studies of the neurobiology of intermediate filaments with specific attention to identifying what needs to be learned for more precise use and confident interpretation of neurofilament measures as biomarkers of neurodegeneration.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Interest in neurofilaments has risen sharply in recent years with recognition of their potential as biomarkers of brain injury or neurodegeneration in CSF and blood.</li>
-<li>Challenge: This is in the context of a growing appreciation for the complexity of the neurobiology of neurofilaments, new recognition of specialized roles for neurofilaments in synapses and a developing understanding of mechanisms responsible for their turnover.</li>
-<li>Action: Here we will review the neurobiology of neurofilament proteins, describing current understanding of their structure and function, including recently discovered evidence for their roles in synapses.</li>
-<li>Resolution: We will explore emerging understanding of the mechanisms of neurofilament degradation and clearance and review new methods for future elucidation of the kinetics of their turnover in humans.</li>
+<li>Interest in neurofilaments has risen sharply in recent years with recognition of their potential as biomarkers of brain injury or neurodegeneration in CSF and blood.</li>
+<li>This is in the context of a growing appreciation for the complexity of the neurobiology of neurofilaments, new recognition of specialized roles for neurofilaments in synapses and a developing understanding of mechanisms responsible for their turnover.</li>
+<li>Here we will review the neurobiology of neurofilament proteins, describing current understanding of their structure and function, including recently discovered evidence for their roles in synapses.</li>
+<li>We will explore emerging understanding of the mechanisms of neurofilament degradation and clearance and review new methods for future elucidation of the kinetics of their turnover in humans.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awaa098" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arie Gafson. (2020). Neurofilaments: neurobiological foundations for biomarker applications. Brain. https://doi.org/10.1093/brain/awaa098</p>
@@ -1735,7 +1705,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Fitting Linear Mixed-Effects Models Using &lt;b&gt;lme4&lt;/b&gt;</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1745,10 +1714,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates fitting linear mixed-effects models using &lt;b&gt;lme4&lt;/b&gt;. Sufficient detail is included to allow specialization of these structures by users who wish to write functions to fit specialized linear mixed models, such as models incorporating pedigrees or smoothing splines, that are not easily expressible in the formula language used by lmer.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Maximum likelihood or restricted maximum likelihood (REML) estimates of the parameters in linear mixed-effects models can be determined using the lmer function in the lme4 package for R.</li>
-<li>Challenge: As for most model-fitting functions in R, the model is described in an lmer call by a formula, in this case including both fixed- and random-effects terms.</li>
-<li>Action: The formula and data together determine a numerical representation of the model from which the profiled deviance or the profiled REML criterion can be evaluated as a function of some of the model parameters.</li>
-<li>Resolution: The appropriate criterion is optimized, using one of the constrained optimization functions in R, to provide the parameter estimates.</li>
+<li>Maximum likelihood or restricted maximum likelihood (REML) estimates of the parameters in linear mixed-effects models can be determined using the lmer function in the lme4 package for R.</li>
+<li>As for most model-fitting functions in R, the model is described in an lmer call by a formula, in this case including both fixed- and random-effects terms.</li>
+<li>The formula and data together determine a numerical representation of the model from which the profiled deviance or the profiled REML criterion can be evaluated as a function of some of the model parameters.</li>
+<li>The appropriate criterion is optimized, using one of the constrained optimization functions in R, to provide the parameter estimates.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.18637/jss.v067.i01" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Douglas M. Bates. (2015). Fitting Linear Mixed-Effects Models Using &lt;b&gt;lme4&lt;/b&gt;. Journal of Statistical Software. https://doi.org/10.18637/jss.v067.i01</p>
@@ -1770,7 +1739,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neurofilament Light Chain Elevation and Disability Progression in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2023</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -1780,10 +1748,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neurofilament light chain elevation and disability progression in multiple sclerosis. This cohort study documents the occurrence of NfL elevation in advance of clinical worsening and may hint to a potential window of ongoing dynamic central nervous system pathology that precedes the diagnosis of CDW.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This cohort study documents the occurrence of NfL elevation in advance of clinical worsening and may hint to a potential window of ongoing dynamic central nervous system pathology that precedes the diagnosis of CDW.</li>
-<li>Challenge: This paper investigates neurofilament light chain elevation and disability progression in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This cohort study documents the occurrence of NfL elevation in advance of clinical worsening and may hint to a potential window of ongoing dynamic central nervous system pathology that precedes the diagnosis of CDW.</li>
+<li>This paper investigates neurofilament light chain elevation and disability progression in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2023.3997" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ahmed Abdelhak. (2023). Neurofilament Light Chain Elevation and Disability Progression in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2023.3997</p>
@@ -1805,7 +1773,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Glial Activation Markers in CSF and Serum From Patients With Primary Progressive Multiple Sclerosis: Potential of Serum GFAP as Disease Severity Marker?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1815,10 +1782,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates glial activation markers in csf and serum from patients with primary progressive multiple sclerosis: potential of serum gfap as disease severity marker?. Moreover, we found a correlation between NfL&lt;sub&gt;CSF&lt;/sub&gt; and GFAP&lt;sub&gt;CSF&lt;/sub&gt;, sTREM2 and CHI3L1 (ρ = 0.4 for GFAP&lt;sub&gt;CSF&lt;/sub&gt; and sTREM2, ρ = 0.3 for CHI3L1, &lt;i&gt;p&lt;/i&gt; &lt; 0.01 for sTREM2 and CHI3L1 and &lt;0.001 for GFAP&lt;sub&gt;CSF&lt;/sub&gt;).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Moreover, we found a correlation between NfL&lt;sub&gt;CSF&lt;/sub&gt; and GFAP&lt;sub&gt;CSF&lt;/sub&gt;, sTREM2 and CHI3L1 (ρ = 0.4 for GFAP&lt;sub&gt;CSF&lt;/sub&gt; and sTREM2, ρ = 0.3 for CHI3L1, &lt;i&gt;p&lt;/i&gt; &lt; 0.01 for sTREM2 and CHI3L1 and &lt;0.001 for GFAP&lt;sub&gt;CSF&lt;/sub&gt;).</li>
-<li>Challenge: This paper investigates glial activation markers in csf and serum from patients with primary progressive multiple sclerosis: potential of serum gfap as disease severity marker?.</li>
-<li>Action: &lt;b&gt;Background:&lt;/b&gt; In progressive multiple sclerosis (MS), glial activation is thought to be a relevant mechanism of disability progression.</li>
-<li>Resolution: Therefore, &lt;i&gt;in vivo&lt;/i&gt; assessment of the glial cell activity is, in the emerging treatment era of primary progressive MS (PPMS), more important than ever.</li>
+<li>Moreover, we found a correlation between NfL&lt;sub&gt;CSF&lt;/sub&gt; and GFAP&lt;sub&gt;CSF&lt;/sub&gt;, sTREM2 and CHI3L1 (ρ = 0.4 for GFAP&lt;sub&gt;CSF&lt;/sub&gt; and sTREM2, ρ = 0.3 for CHI3L1, &lt;i&gt;p&lt;/i&gt; &lt; 0.01 for sTREM2 and CHI3L1 and &lt;0.001 for GFAP&lt;sub&gt;CSF&lt;/sub&gt;).</li>
+<li>This paper investigates glial activation markers in csf and serum from patients with primary progressive multiple sclerosis: potential of serum gfap as disease severity marker?.</li>
+<li>&lt;b&gt;Background:&lt;/b&gt; In progressive multiple sclerosis (MS), glial activation is thought to be a relevant mechanism of disability progression.</li>
+<li>Therefore, &lt;i&gt;in vivo&lt;/i&gt; assessment of the glial cell activity is, in the emerging treatment era of primary progressive MS (PPMS), more important than ever.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3389/fneur.2019.00280" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ahmed Abdelhak. (2019). Glial Activation Markers in CSF and Serum From Patients With Primary Progressive Multiple Sclerosis: Potential of Serum GFAP as Disease Severity Marker?. Frontiers in Neurology. https://doi.org/10.3389/fneur.2019.00280</p>
@@ -1840,7 +1807,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Plasma neurofilament light levels are associated with risk of disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -1850,10 +1816,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates plasma neurofilament light levels are associated with risk of disability in multiple sclerosis. Hence, pNfL may serve as a prognostic tool to assess the risk of developing permanent disability in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Elevated pNfL levels at early stages of MS are associated with an increased risk of reaching sustained disability worsening.</li>
-<li>Challenge: Hence, pNfL may serve as a prognostic tool to assess the risk of developing permanent disability in MS.</li>
-<li>Action: This paper investigates plasma neurofilament light levels are associated with risk of disability in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Elevated pNfL levels at early stages of MS are associated with an increased risk of reaching sustained disability worsening.</li>
+<li>Hence, pNfL may serve as a prognostic tool to assess the risk of developing permanent disability in MS.</li>
+<li>This paper investigates plasma neurofilament light levels are associated with risk of disability in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000009571" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ali Manouchehrinia. (2020). Plasma neurofilament light levels are associated with risk of disability in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000009571</p>
@@ -1872,3 +1838,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=125"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=diagnosis_csf_biomarkers">CSF and blood biomarkers</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_relapse_treatment">Acute relapse treatment</a></li>
+<li><a href="/mskb/journey/?concept=clinical_cognitive_impairment">Cognitive impairment</a></li>
+<li><a href="/mskb/journey/?concept=clinical_older_adult_ms">MS in older adults</a></li>
+<li><a href="/mskb/journey/?concept=clinical_relapse_and_remission">Relapses and remission</a></li>
+<li><a href="/mskb/journey/?concept=diagnosis_oct_imaging">Optical coherence tomography (OCT)</a></li>
+</ul>

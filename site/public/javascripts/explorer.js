@@ -1,7 +1,7 @@
 // ---- explorer boot ----
 // IIFE that wires the Cytoscape-based Explorer page. DOM ids referenced here
 // are asserted in tests/test_explorer_assets.py so they stay in sync with
-// the markdown shell in site/docs/explorer.md.
+// the markdown shell in site/src/content/docs/explorer.mdx.
 (() => {
   const graphEl = document.getElementById("paper-graph");
   const detailsEl = document.getElementById("paper-details");
@@ -41,6 +41,16 @@
   const presetUndergradEl = document.getElementById("preset-undergrad");
   const presetBalancedEl = document.getElementById("preset-balanced");
   const presetGradEl = document.getElementById("preset-grad");
+  const journeyImportEl = document.getElementById("journey-import");
+  const journeyExportJsonEl = document.getElementById("journey-export-json");
+  const journeyExportBibtexEl = document.getElementById("journey-export-bibtex");
+  const journeyExportMarkdownEl = document.getElementById("journey-export-markdown");
+  const journeyIoStatusEl = document.getElementById("journey-io-status");
+  const spineGraphEl = document.getElementById("mskb-graph-spine");
+  const researchGraphEl = document.getElementById("mskb-graph-research");
+  const hasExplorerGraph = Boolean(
+    graphEl && detailsEl && parentEl && childEl && relatedEl
+  );
   const isMobileView = window.matchMedia("(max-width: 768px), (pointer: coarse)").matches;
   const fullDataUrl = "../assets/explorer_graph.json";
   const fullDetailsUrl = "../assets/explorer_details.json";
@@ -191,7 +201,7 @@
     const before = journeySelection.length;
     journeySelection = journeySelection.filter((id) => nodeById.has(id));
     if (journeySelection.length !== before) {
-      persistSelection();
+      applySelectionMutation(true);
     }
   }
 
@@ -1279,19 +1289,108 @@
     });
   }
 
-  // Pub/sub hook for cross-page journey sync. The full window.mskbJourney
-  // facade is added in §6 alongside journey.mdx; this stub keeps callers
-  // safe until then.
+  // Cross-page pub/sub + facade for the shared journey paper selection.
   const journeyEventTarget = typeof EventTarget === "function" ? new EventTarget() : null;
+  function normalizeIds(value) {
+    const raw = Array.isArray(value) ? value : [value];
+    const seen = new Set();
+    const out = [];
+    raw.forEach((entry) => {
+      const id = String(entry || "").trim();
+      if (!id || seen.has(id)) return;
+      seen.add(id);
+      out.push(id);
+    });
+    return out;
+  }
   function notifyJourneyChange() {
     try {
       if (journeyEventTarget) {
-        journeyEventTarget.dispatchEvent(new Event("change"));
+        const evt = typeof CustomEvent === "function"
+          ? new CustomEvent("change", { detail: { ids: [...journeySelection] } })
+          : new Event("change");
+        journeyEventTarget.dispatchEvent(evt);
       }
     } catch (_err) {
       // no-op: event dispatch must never break UI flows
     }
   }
+
+  function applySelectionMutation(didChange) {
+    if (!didChange) return;
+    persistSelection();
+    invalidateCommunityCache();
+    renderJourneySelection();
+    refreshJourneyButtons();
+    notifyJourneyChange();
+    if (selectedNodeId) renderPaper(selectedNodeId);
+  }
+
+  function addJourneyIds(ids) {
+    const normalized = normalizeIds(ids);
+    let added = 0;
+    normalized.forEach((id) => {
+      if (journeySelection.includes(id)) return;
+      journeySelection.push(id);
+      added += 1;
+    });
+    applySelectionMutation(added > 0);
+    return added;
+  }
+
+  function removeJourneyIds(ids) {
+    const normalized = new Set(normalizeIds(ids));
+    if (!normalized.size) return 0;
+    const before = journeySelection.length;
+    journeySelection = journeySelection.filter((id) => !normalized.has(id));
+    const removed = before - journeySelection.length;
+    applySelectionMutation(removed > 0);
+    return removed;
+  }
+
+  function installJourneyFacade() {
+    window.mskbJourney = {
+      addIds(ids) {
+        return addJourneyIds(ids);
+      },
+      removeIds(ids) {
+        return removeJourneyIds(ids);
+      },
+      has(id) {
+        const key = String(id || "").trim();
+        return key ? journeySelection.includes(key) : false;
+      },
+      getIds() {
+        return [...journeySelection];
+      },
+      clear() {
+        const count = journeySelection.length;
+        journeySelection = [];
+        applySelectionMutation(count > 0);
+        return count;
+      },
+      subscribe(callback) {
+        if (typeof callback !== "function" || !journeyEventTarget) {
+          return () => {};
+        }
+        const handler = (event) => {
+          const ids = event && event.detail && Array.isArray(event.detail.ids)
+            ? event.detail.ids
+            : [...journeySelection];
+          callback(ids);
+        };
+        journeyEventTarget.addEventListener("change", handler);
+        return () => {
+          try {
+            journeyEventTarget.removeEventListener("change", handler);
+          } catch (_err) {
+            // no-op
+          }
+        };
+      },
+    };
+  }
+  installJourneyFacade();
 
   function renderActionButtons(node) {
     return `<button data-focus="${node.id}">Focus</button> ${renderJourneyButton(node.id)}`;
@@ -1470,13 +1569,15 @@
   }
 
   function applyCoreFilter() {
-    const metric = coreMetricEl.value || "composite";
-    const minInDegree = Math.max(0, Number(minInDegreeEl.value || 0));
-    const minOutDegree = Math.max(0, Number(minOutDegreeEl.value || 0));
-    const minKcore = Math.max(0, Number(minKcoreEl.value || 0));
-    const cutoff = Number(corePctEl.value || 0) / 100;
-    const requireAbstract = !!requireAbstractEl.checked;
-    corePctValueEl.textContent = `${Math.round(cutoff * 100)}%`;
+    const metric = coreMetricEl ? (coreMetricEl.value || "composite") : "composite";
+    const minInDegree = Math.max(0, Number(minInDegreeEl ? (minInDegreeEl.value || 0) : 0));
+    const minOutDegree = Math.max(0, Number(minOutDegreeEl ? (minOutDegreeEl.value || 0) : 0));
+    const minKcore = Math.max(0, Number(minKcoreEl ? (minKcoreEl.value || 0) : 0));
+    const cutoff = Number(corePctEl ? (corePctEl.value || 0) : 0) / 100;
+    const requireAbstract = requireAbstractEl ? !!requireAbstractEl.checked : false;
+    if (corePctValueEl) {
+      corePctValueEl.textContent = `${Math.round(cutoff * 100)}%`;
+    }
 
     const matchedNodes = rawNodes
         .filter(n => !requireAbstract || !!n.has_abstract)
@@ -1520,6 +1621,13 @@
     journeySelection = journeySelection.filter((id) => nodeById.has(id));
     renderJourneySelection();
     kcoreThresholds = computeKcoreThresholds(visibleNodes);
+    if (!hasExplorerGraph) {
+      selectedNodeId = null;
+      selectedIncoming = new Set();
+      selectedOutgoing = new Set();
+      selectedIncident = new Set();
+      return;
+    }
     if (visibleNodes.length) {
       const positionById = buildCommunityPositions(visibleNodes);
       // Capture the initial-focus target up-front; it'll be invoked from the
@@ -1716,19 +1824,12 @@
   }
 
   function toggleJourneySelection(id) {
-    const idx = journeySelection.indexOf(id);
-    if (idx >= 0) {
-      journeySelection.splice(idx, 1);
+    const key = String(id || "").trim();
+    if (!key) return;
+    if (journeySelection.includes(key)) {
+      removeJourneyIds([key]);
     } else {
-      journeySelection.push(id);
-    }
-    persistSelection();
-    invalidateCommunityCache();
-    renderJourneySelection();
-    refreshJourneyButtons();
-    notifyJourneyChange();
-    if (selectedNodeId === id) {
-      renderPaper(id);
+      addJourneyIds([key]);
     }
     if (directSearchInputEl && (directSearchInputEl.value || "").trim()) {
       runDirectSearch();
@@ -1743,15 +1844,7 @@
     if (typeof window.confirm === "function" && !window.confirm("Clear all relevant papers from your working list?")) {
       return;
     }
-    journeySelection = [];
-    persistSelection();
-    invalidateCommunityCache();
-    renderJourneySelection();
-    refreshJourneyButtons();
-    notifyJourneyChange();
-    if (selectedNodeId) {
-      renderPaper(selectedNodeId);
-    }
+    removeJourneyIds([...journeySelection]);
   }
 
   function invalidateCommunityCache() {
@@ -2201,6 +2294,186 @@
     setTimeout(() => URL.revokeObjectURL(url), 200);
   }
 
+  function downloadTextFile(filename, text, mimeType) {
+    const blob = new Blob([text], { type: `${mimeType || "text/plain"};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+    setTimeout(() => URL.revokeObjectURL(url), 200);
+  }
+
+  function setJourneyIoStatus(message, isError = false) {
+    if (!journeyIoStatusEl) return;
+    const safe = escapeHtml(String(message || ""));
+    journeyIoStatusEl.innerHTML = isError ? `<p><strong>${safe}</strong></p>` : `<p><em>${safe}</em></p>`;
+  }
+
+  function exportJourneyJSON() {
+    const papers = journeySelection.map((id) => nodeById.get(id)).filter(Boolean).map((node) => ({
+      id: node.id,
+      title: node.title || "Untitled",
+      year: node.year || null,
+      doi: node.doi || "",
+      source_url: node.source_url || "",
+      citation: citationPlaintextForNode(node),
+    }));
+    const payload = {
+      version: 1,
+      exported_at_utc: new Date().toISOString(),
+      paper_ids: [...journeySelection],
+      papers,
+    };
+    downloadTextFile(
+      `mskb-journey-${new Date().toISOString().slice(0, 10)}.json`,
+      `${JSON.stringify(payload, null, 2)}\n`,
+      "application/json"
+    );
+    setJourneyIoStatus(`Exported ${journeySelection.length} paper ids to JSON.`);
+  }
+
+  function exportJourneyBibtex() {
+    const rows = journeySelection.map((id) => nodeById.get(id)).filter(Boolean);
+    if (!rows.length) {
+      setJourneyIoStatus("No selected papers with citation metadata available for BibTeX export.", true);
+      return;
+    }
+    const text = rows.map((node) => citationBibtexForNode(node)).join("\n\n");
+    downloadTextFile(
+      `mskb-journey-${new Date().toISOString().slice(0, 10)}.bib`,
+      `${text}\n`,
+      "application/x-bibtex"
+    );
+    setJourneyIoStatus(`Exported ${rows.length} papers to BibTeX.`);
+  }
+
+  function exportJourneyMarkdown() {
+    const rows = journeySelection.map((id) => nodeById.get(id)).filter(Boolean);
+    const lines = [
+      "# MSKB Journey Export",
+      "",
+      `Generated: ${new Date().toISOString()}`,
+      "",
+      "## Selected papers",
+      "",
+    ];
+    if (!rows.length) {
+      lines.push("_No known papers from current corpus. IDs only:_");
+      lines.push("");
+      journeySelection.forEach((id, idx) => lines.push(`${idx + 1}. ${id}`));
+    } else {
+      rows.forEach((node, idx) => {
+        const line = `${idx + 1}. ${citationPlaintextForNode(node)}`;
+        lines.push(line);
+      });
+    }
+    downloadTextFile(
+      `mskb-journey-${new Date().toISOString().slice(0, 10)}.md`,
+      `${lines.join("\n")}\n`,
+      "text/markdown"
+    );
+    setJourneyIoStatus(`Exported ${journeySelection.length} paper ids to Markdown.`);
+  }
+
+  async function importJourneyFile(file) {
+    if (!file) return;
+    let parsed = null;
+    try {
+      const text = await file.text();
+      parsed = JSON.parse(text);
+    } catch (err) {
+      setJourneyIoStatus(`Import failed: invalid JSON (${err && err.message ? err.message : err}).`, true);
+      return;
+    }
+    const ids = Array.isArray(parsed)
+      ? parsed
+      : (Array.isArray(parsed.paper_ids) ? parsed.paper_ids : (Array.isArray(parsed.ids) ? parsed.ids : []));
+    const normalized = normalizeIds(ids);
+    if (!normalized.length) {
+      setJourneyIoStatus("Import failed: no paper ids found (expected array or {paper_ids:[...]}).", true);
+      return;
+    }
+    const added = addJourneyIds(normalized);
+    setJourneyIoStatus(`Imported ${normalized.length} ids (${added} new).`);
+    if (journeyImportEl) journeyImportEl.value = "";
+  }
+
+  function normalizeTopicParam(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    if (text.startsWith("topic:")) return text.slice("topic:".length);
+    if (text.startsWith("topic::")) return text.slice("topic::".length);
+    return text;
+  }
+
+  let researchMapSeedPromise = null;
+  async function preloadSeedTopicPapers(topicSeedId) {
+    const topicId = normalizeTopicParam(topicSeedId);
+    if (!topicId) return;
+    if (!researchMapSeedPromise) {
+      researchMapSeedPromise = fetch("/mskb/assets/research_map_graph.json")
+        .then((res) => {
+          if (!res.ok) throw new Error(`research_map_graph.json request failed (${res.status})`);
+          return res.json();
+        })
+        .catch((_err) => null);
+    }
+    const payload = await researchMapSeedPromise;
+    if (!payload || !payload.seed_topic_papers) return;
+    const seed = payload.seed_topic_papers[String(topicId)] || payload.seed_topic_papers[normalizeTopicParam(topicId)];
+    if (!Array.isArray(seed) || !seed.length) return;
+    addJourneyIds(seed);
+    setJourneyIoStatus(`Seeded ${seed.length} papers from topic ${topicId}.`);
+  }
+
+  function wireJourneyIO() {
+    if (journeyExportJsonEl) {
+      journeyExportJsonEl.addEventListener("click", exportJourneyJSON);
+    }
+    if (journeyExportBibtexEl) {
+      journeyExportBibtexEl.addEventListener("click", exportJourneyBibtex);
+    }
+    if (journeyExportMarkdownEl) {
+      journeyExportMarkdownEl.addEventListener("click", exportJourneyMarkdown);
+    }
+    if (journeyImportEl) {
+      journeyImportEl.addEventListener("change", () => {
+        const file = journeyImportEl.files && journeyImportEl.files[0];
+        if (file) importJourneyFile(file);
+      });
+    }
+
+    const params = new URLSearchParams(window.location.search || "");
+    const seedParam = normalizeTopicParam(params.get("seed"));
+    const topicParam = normalizeTopicParam(params.get("topic"));
+    const conceptParam = String(params.get("concept") || "").trim();
+
+    if (spineGraphEl && window.MSKBGraph && typeof window.MSKBGraph.render === "function") {
+      const initial = conceptParam
+        ? `concept:${conceptParam}`
+        : (topicParam ? `topic:${topicParam}` : (seedParam ? `topic:${seedParam}` : ""));
+      window.MSKBGraph.render(spineGraphEl, {
+        dataUrl: "/mskb/assets/learning_spine_graph.json",
+        initialId: initial || undefined,
+      });
+    }
+    if (researchGraphEl && window.MSKBGraph && typeof window.MSKBGraph.render === "function") {
+      const initial = topicParam
+        ? `topic:${topicParam}`
+        : (conceptParam ? `concept:${conceptParam}` : "");
+      window.MSKBGraph.render(researchGraphEl, {
+        dataUrl: "/mskb/assets/research_map_graph.json",
+        initialId: initial || undefined,
+      });
+    }
+    if (seedParam) {
+      preloadSeedTopicPapers(seedParam);
+    }
+  }
+
   function stabilizeThenSettle(amplitude = 0) {
     if (!cy) return;
     const positionById = buildCommunityPositions(visibleNodes);
@@ -2250,11 +2523,18 @@
           rawNodes = (decoded.nodes || []).map((node) => ({ ...normalizeNode(node), _detailsLoaded: false }));
           rawEdges = decoded.edges || [];
           buildRankIndexes(rawNodes);
-          visibleNodes = [];
-          visibleEdges = [];
-          rebuildAdjacency(visibleNodes, visibleEdges);
-          corePctValueEl.textContent = `${corePctEl.value}%`;
-          applyCoreFilter();
+          if (hasExplorerGraph) {
+            visibleNodes = [];
+            visibleEdges = [];
+            rebuildAdjacency(visibleNodes, visibleEdges);
+            if (corePctValueEl && corePctEl) corePctValueEl.textContent = `${corePctEl.value}%`;
+            applyCoreFilter();
+          } else {
+            visibleNodes = rawNodes.slice();
+            visibleEdges = rawEdges.slice();
+            rebuildAdjacency(visibleNodes, visibleEdges);
+            renderJourneySelection();
+          }
           lastErr = null;
           break;
         } catch (err) {
@@ -2271,53 +2551,72 @@
     }
   }
 
-  setGraphStatus("Loading explorer graph...");
-  loadCorpusPayload(initialPayloadCandidates).then(function () {
-    pruneSelectionToCorpus();
+  const shouldLoadCorpus = Boolean(
+    hasExplorerGraph
+    || journeyGenerateEl
+    || communityGenerateEl
+    || journeyExportBibtexEl
+    || journeyExportMarkdownEl
+  );
+  if (shouldLoadCorpus) {
+    setGraphStatus("Loading explorer graph...");
+    loadCorpusPayload(initialPayloadCandidates).then(function () {
+      pruneSelectionToCorpus();
+      renderJourneySelection();
+    });
+  } else {
     renderJourneySelection();
-  });
+  }
 
-  [parentEl, childEl, relatedEl, directSearchResultsEl, ideaResultsEl, journeySelectedEl, journeyResultsEl, detailsEl].forEach(container => {
-    container.addEventListener("click", (ev) => {
-      const focusBtn = ev.target.closest("button[data-focus]");
-      if (focusBtn) {
-        focusNode(focusBtn.dataset.focus);
-        return;
-      }
-      const toggleBtn = ev.target.closest("button[data-journey-toggle]");
-      if (toggleBtn) {
-        toggleJourneySelection(toggleBtn.dataset.journeyToggle);
+  [parentEl, childEl, relatedEl, directSearchResultsEl, ideaResultsEl, journeySelectedEl, journeyResultsEl, detailsEl]
+    .filter(Boolean)
+    .forEach((container) => {
+      container.addEventListener("click", (ev) => {
+        const focusBtn = ev.target.closest("button[data-focus]");
+        if (focusBtn) {
+          focusNode(focusBtn.dataset.focus);
+          return;
+        }
+        const toggleBtn = ev.target.closest("button[data-journey-toggle]");
+        if (toggleBtn) {
+          toggleJourneySelection(toggleBtn.dataset.journeyToggle);
+        }
+      });
+    });
+
+  if (directSearchRunEl) directSearchRunEl.addEventListener("click", runDirectSearch);
+  if (directSearchInputEl) {
+    directSearchInputEl.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        runDirectSearch();
       }
     });
-  });
+  }
 
-  directSearchRunEl.addEventListener("click", runDirectSearch);
-  directSearchInputEl.addEventListener("keydown", (ev) => {
-    if (ev.key === "Enter") {
-      ev.preventDefault();
-      runDirectSearch();
-    }
-  });
+  if (journeyGenerateEl) journeyGenerateEl.addEventListener("click", generateLearningJourney);
+  if (journeyClearEl) journeyClearEl.addEventListener("click", clearJourneySelection);
+  if (communityGenerateEl) communityGenerateEl.addEventListener("click", generateCommunityReadingList);
+  if (communityDownloadEl) communityDownloadEl.addEventListener("click", downloadCommunityMarkdown);
 
-  journeyGenerateEl.addEventListener("click", generateLearningJourney);
-  journeyClearEl.addEventListener("click", clearJourneySelection);
-  communityGenerateEl.addEventListener("click", generateCommunityReadingList);
-  communityDownloadEl.addEventListener("click", downloadCommunityMarkdown);
-
-  ideaRunEl.addEventListener("click", runIdeaMatch);
-  coreApplyEl.addEventListener("click", applyCoreFilter);
-  presetUndergradEl.addEventListener("click", () => setPreset("undergrad"));
-  presetBalancedEl.addEventListener("click", () => setPreset("balanced"));
-  presetGradEl.addEventListener("click", () => setPreset("grad"));
-  ideaInputEl.addEventListener("keydown", (ev) => {
-    if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) {
-      ev.preventDefault();
-      runIdeaMatch();
-    }
-  });
-  corePctEl.addEventListener("input", () => {
-    corePctValueEl.textContent = `${corePctEl.value}%`;
-  });
+  if (ideaRunEl) ideaRunEl.addEventListener("click", runIdeaMatch);
+  if (coreApplyEl) coreApplyEl.addEventListener("click", applyCoreFilter);
+  if (presetUndergradEl) presetUndergradEl.addEventListener("click", () => setPreset("undergrad"));
+  if (presetBalancedEl) presetBalancedEl.addEventListener("click", () => setPreset("balanced"));
+  if (presetGradEl) presetGradEl.addEventListener("click", () => setPreset("grad"));
+  if (ideaInputEl) {
+    ideaInputEl.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) {
+        ev.preventDefault();
+        runIdeaMatch();
+      }
+    });
+  }
+  if (corePctEl && corePctValueEl) {
+    corePctEl.addEventListener("input", () => {
+      corePctValueEl.textContent = `${corePctEl.value}%`;
+    });
+  }
   if (readingLevelEl) {
     const storedLevel = loadStoredReadingLevel();
     if (storedLevel) readingLevelEl.value = storedLevel;
@@ -2347,29 +2646,36 @@
       });
     });
   }
-  loadFullCorpusEl.addEventListener("click", () => {
-    if (isMobileView || payloadMode === "full") return;
-    loadCorpusPayload([{ url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" }]).then(() => {
-      pruneSelectionToCorpus();
-      renderJourneySelection();
+  if (loadFullCorpusEl) {
+    loadFullCorpusEl.addEventListener("click", () => {
+      if (isMobileView || payloadMode === "full") return;
+      loadCorpusPayload([{ url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" }]).then(() => {
+        pruneSelectionToCorpus();
+        renderJourneySelection();
+      });
     });
-  });
-  relayoutEl.addEventListener("click", () => {
-    if (isMobileView) return;
-    stabilizeThenSettle(18);
-  });
-  nodeDragToggleEl.addEventListener("click", () => {
-    if (isMobileView) return;
-    dragEnabled = !dragEnabled;
-    draggingNode = null;
-    if (cy) cy.autoungrabify(!dragEnabled);
-    refreshNodeDragToggleLabel();
-  });
-  if (isMobileView) {
+  }
+  if (relayoutEl) {
+    relayoutEl.addEventListener("click", () => {
+      if (isMobileView) return;
+      stabilizeThenSettle(18);
+    });
+  }
+  if (nodeDragToggleEl) {
+    nodeDragToggleEl.addEventListener("click", () => {
+      if (isMobileView) return;
+      dragEnabled = !dragEnabled;
+      draggingNode = null;
+      if (cy) cy.autoungrabify(!dragEnabled);
+      refreshNodeDragToggleLabel();
+    });
+  }
+  if (isMobileView && relayoutEl) {
     relayoutEl.disabled = true;
     relayoutEl.title = "Re-layout disabled on mobile";
   }
   refreshFullCorpusButton();
   refreshNodeDragToggleLabel();
+  wireJourneyIO();
   renderJourneySelection();
 })();

@@ -1,26 +1,44 @@
 ---
-title: Biology / Gut microbiota and health / Medicine
-description: Pathogenesis And Immunology · 305 papers · Difficulty 5/5
+title: Gut microbiota and health
+description: "Pathogenesis & Immunology · 305 papers"
 sidebar:
-  label: Biology
+  label: Gut microbiota and health
+topic_taxonomy:
+  category: pathogenesis_and_immunology
+  category_source: concept
+  category_concept_id: mechanisms_gut_microbiome_ms
 ---
 
 ## Overview
 
 This topic cluster covers Biology / Gut microbiota and health / Medicine and contains 305 papers.
 
+<p><em>Raw cluster label:</em> Biology / Gut microbiota and health / Medicine</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_gut_microbiome_ms">Gut microbiome and MS</a> (7 linked papers) · <a href="/mskb/concepts/mechanisms/gut-microbiome-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_environmental_risk_factors">Environmental risk factors</a> (3 linked papers) · <a href="/mskb/concepts/mechanisms/environmental-risk-factors/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_genetic_susceptibility">Genetic susceptibility</a> (3 linked papers) · <a href="/mskb/concepts/mechanisms/genetic-susceptibility/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prevalence_by_geography">Prevalence by geography</a> (2 linked papers) · <a href="/mskb/concepts/clinical/prevalence-by-geography/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pediatric_ms">Pediatric MS</a> (1 linked paper) · <a href="/mskb/concepts/clinical/pediatric-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_autoimmunity_mechanisms">Autoimmunity mechanisms</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/autoimmunity-mechanisms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_bbb_dysfunction">Blood–brain barrier dysfunction</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/bbb-dysfunction/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_neuroinflammation">Neuroinflammation pathways</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/neuroinflammation/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_oligodendrocyte_biology">Oligodendrocyte biology</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/oligodendrocyte-biology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_t_cell_biology">T cell biology</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/t-cell-biology/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Alterations of the human gut microbiome in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates alterations of the human gut microbiome in multiple sclerosis. Further study is required to assess whether the observed alterations in the gut microbiome play a role in, or are a consequence of, MS pathogenesis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The gut microbiome plays an important role in immune function and has been implicated in several autoimmune disorders.</li>
-<li>Challenge: Here we use 16S rRNA sequencing to investigate the gut microbiome in subjects with multiple sclerosis (MS, n=60) and healthy controls (n=43).</li>
-<li>Action: Microbiome alterations in MS include increases in Methanobrevibacter and Akkermansia and decreases in Butyricimonas, and correlate with variations in the expression of genes involved in dendritic cell maturation, interferon signalling and NF-kB signalling pathways in circulating T cells and monocytes.</li>
-<li>Resolution: This paper investigates alterations of the human gut microbiome in multiple sclerosis.</li>
+<li>The gut microbiome plays an important role in immune function and has been implicated in several autoimmune disorders.</li>
+<li>Here we use 16S rRNA sequencing to investigate the gut microbiome in subjects with multiple sclerosis (MS, n=60) and healthy controls (n=43).</li>
+<li>Microbiome alterations in MS include increases in Methanobrevibacter and Akkermansia and decreases in Butyricimonas, and correlate with variations in the expression of genes involved in dendritic cell maturation, interferon signalling and NF-kB signalling pathways in circulating T cells and monocytes.</li>
+<li>This paper investigates alterations of the human gut microbiome in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/ncomms12015" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sushrut Jangi. (2016). Alterations of the human gut microbiome in multiple sclerosis. Nature Communications. https://doi.org/10.1038/ncomms12015</p>
@@ -55,7 +73,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Gut microbiota from multiple sclerosis patients enables spontaneous autoimmune encephalomyelitis in mice</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -65,10 +82,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates gut microbiota from multiple sclerosis patients enables spontaneous autoimmune encephalomyelitis in mice. While there were no major differences in the overall microbial profiles, we found a significant increase in some taxa such as &lt;i&gt;Akkermansia&lt;/i&gt; in untreated MS twins.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: While there were no major differences in the overall microbial profiles, we found a significant increase in some taxa such as &lt;i&gt;Akkermansia&lt;/i&gt; in untreated MS twins.</li>
-<li>Challenge: This paper investigates gut microbiota from multiple sclerosis patients enables spontaneous autoimmune encephalomyelitis in mice.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>While there were no major differences in the overall microbial profiles, we found a significant increase in some taxa such as &lt;i&gt;Akkermansia&lt;/i&gt; in untreated MS twins.</li>
+<li>This paper investigates gut microbiota from multiple sclerosis patients enables spontaneous autoimmune encephalomyelitis in mice.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1073/pnas.1711233114" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Kerstin Berer. (2017). Gut microbiota from multiple sclerosis patients enables spontaneous autoimmune encephalomyelitis in mice. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1711233114</p>
@@ -90,7 +107,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Gut bacteria from multiple sclerosis patients modulate human T cells and exacerbate symptoms in mouse models</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (73%)</span>
 </div>
@@ -100,10 +116,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates gut bacteria from multiple sclerosis patients modulate human t cells and exacerbate symptoms in mouse models. Although no major shifts in microbial community structure were found, we identified specific bacterial taxa that were significantly associated with MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although no major shifts in microbial community structure were found, we identified specific bacterial taxa that were significantly associated with MS.</li>
-<li>Challenge: This study identifies specific human gut bacteria that regulate adaptive autoimmune responses, suggesting therapeutic targeting of the microbiota as a treatment for MS.</li>
-<li>Action: This paper investigates gut bacteria from multiple sclerosis patients modulate human t cells and exacerbate symptoms in mouse models.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Although no major shifts in microbial community structure were found, we identified specific bacterial taxa that were significantly associated with MS.</li>
+<li>This study identifies specific human gut bacteria that regulate adaptive autoimmune responses, suggesting therapeutic targeting of the microbiota as a treatment for MS.</li>
+<li>This paper investigates gut bacteria from multiple sclerosis patients modulate human t cells and exacerbate symptoms in mouse models.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1073/pnas.1711235114" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Egle Cekanaviciute. (2017). Gut bacteria from multiple sclerosis patients modulate human T cells and exacerbate symptoms in mouse models. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1711235114</p>
@@ -125,7 +141,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis patients have a distinct gut microbiota compared to healthy controls</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -135,10 +150,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis patients have a distinct gut microbiota compared to healthy controls. Therefore, this study was designed to investigate whether gut microbiota are altered in MS by comparing the fecal microbiota in relapsing remitting MS (RRMS) (n = 31) patients to that of age- and gender-matched healthy controls (n = 36).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Therefore, this study was designed to investigate whether gut microbiota are altered in MS by comparing the fecal microbiota in relapsing remitting MS (RRMS) (n = 31) patients to that of age- and gender-matched healthy controls (n = 36).</li>
-<li>Challenge: We observed an increased abundance of Psuedomonas, Mycoplana, Haemophilus, Blautia, and Dorea genera in MS patients, whereas control group showed increased abundance of Parabacteroides, Adlercreutzia and Prevotella genera.</li>
-<li>Action: This paper investigates multiple sclerosis patients have a distinct gut microbiota compared to healthy controls.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Therefore, this study was designed to investigate whether gut microbiota are altered in MS by comparing the fecal microbiota in relapsing remitting MS (RRMS) (n = 31) patients to that of age- and gender-matched healthy controls (n = 36).</li>
+<li>We observed an increased abundance of Psuedomonas, Mycoplana, Haemophilus, Blautia, and Dorea genera in MS patients, whereas control group showed increased abundance of Parabacteroides, Adlercreutzia and Prevotella genera.</li>
+<li>This paper investigates multiple sclerosis patients have a distinct gut microbiota compared to healthy controls.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/srep28484" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jun Chen. (2016). Multiple sclerosis patients have a distinct gut microbiota compared to healthy controls. Scientific Reports. https://doi.org/10.1038/srep28484</p>
@@ -157,3 +172,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=139"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=mechanisms_gut_microbiome_ms">Gut microbiome and MS</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_environmental_risk_factors">Environmental risk factors</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_genetic_susceptibility">Genetic susceptibility</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prevalence_by_geography">Prevalence by geography</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pediatric_ms">Pediatric MS</a></li>
+<li><a href="/mskb/journey/?concept=mechanisms_autoimmunity_mechanisms">Autoimmunity mechanisms</a></li>
+</ul>

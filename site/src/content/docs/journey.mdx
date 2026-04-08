@@ -1,0 +1,74 @@
+---
+title: Learning Journey
+description: Build a cross-topic paper list, map it to concepts, and export your study path.
+template: splash
+hero:
+  tagline: Move from citation topics to concept-first study plans with one shared paper list.
+sidebar:
+  label: Learning Journey
+  order: 4
+---
+
+import '../../styles/custom.css';
+
+<div class="journey-shell">
+  <p>
+    Start with a concept, a citation topic, or your own seed papers. The graph below maps pathways to concepts and lets you add linked papers into a reusable learning list.
+  </p>
+
+  <div id="mskb-graph-spine" class="mskb-graph-root"></div>
+
+  <section class="selection-panel">
+    <header class="selection-panel-head">
+      <div>
+        <h3>Relevant papers <span id="selection-count" class="selection-count">0</span></h3>
+        <p class="selection-panel-hint">This list is shared with the explorer and persisted in your browser.</p>
+      </div>
+      <div class="explorer-actions selection-panel-actions">
+        <button id="journey-clear" type="button">Clear all</button>
+      </div>
+    </header>
+    <div id="journey-selected"></div>
+  </section>
+
+  <div class="tools-panel">
+    <h3>Journey Tools</h3>
+    <div class="tool-grid">
+      <section class="tool-card">
+        <h4>Learning path</h4>
+        <p>Stage selected papers into foundations, bridges, and deep dives.</p>
+        <div class="explorer-actions">
+          <button id="journey-generate" type="button">Generate Learning Path</button>
+        </div>
+        <div id="journey-results"></div>
+      </section>
+
+      <section class="tool-card">
+        <h4>Community reading list</h4>
+        <p>Compute set-level graph stats and export a markdown handout.</p>
+        <div id="community-stats" class="community-stats"></div>
+        <div class="explorer-actions">
+          <button id="community-generate" type="button">Build Community Stats</button>
+          <button id="community-download" type="button" disabled>Download Reading List (.md)</button>
+        </div>
+        <div id="community-results"></div>
+      </section>
+
+      <section class="tool-card">
+        <h4>Import / Export</h4>
+        <p>Move your paper selection between sessions or share with collaborators.</p>
+        <div class="explorer-actions journey-io-actions">
+          <input id="journey-import" type="file" accept=".json,application/json" />
+          <button id="journey-export-json" type="button">Export JSON</button>
+          <button id="journey-export-bibtex" type="button">Export BibTeX</button>
+          <button id="journey-export-markdown" type="button">Export Markdown</button>
+        </div>
+        <div id="journey-io-status"></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script is:inline src="/mskb/javascripts/vendor/cytoscape.min.js"></script>
+<script is:inline src="/mskb/javascripts/mskb_graph_renderer.js"></script>
+<script is:inline src="/mskb/javascripts/explorer.js"></script>

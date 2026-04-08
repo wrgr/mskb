@@ -1,26 +1,44 @@
 ---
-title: Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis
-description: Imaging And Biomarkers · 2729 papers · Difficulty 5/5
+title: Multiple Sclerosis Research Studies
+description: "Clinical Care & Management · 2729 papers"
 sidebar:
-  label: Medicine
+  label: Multiple Sclerosis Research Studies
+topic_taxonomy:
+  category: clinical_care_and_management
+  category_source: concept
+  category_concept_id: therapeutics_immunosuppressive_therapies
 ---
 
 ## Overview
 
 This topic cluster covers Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis and contains 2729 papers.
 
+<p><em>Raw cluster label:</em> Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=therapeutics_immunosuppressive_therapies">Immunosuppressive therapies</a> (7 linked papers) · <a href="/mskb/concepts/therapeutics/immunosuppressive-therapies/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_disease_course">Disease course and prognosis</a> (6 linked papers) · <a href="/mskb/concepts/clinical/disease-course/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pregnancy_and_ms">Pregnancy and MS</a> (6 linked papers) · <a href="/mskb/concepts/clinical/pregnancy-and-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_progression_pira">Progression and PIRA</a> (6 linked papers) · <a href="/mskb/concepts/clinical/progression-pira/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_socioeconomic_disparities">Socioeconomic disparities</a> (6 linked papers) · <a href="/mskb/concepts/clinical/socioeconomic-disparities/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=foundations_ms_epidemiology">MS epidemiology and natural history</a> (6 linked papers) · <a href="/mskb/concepts/foundations/ms-epidemiology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=therapeutics_dmt_overview">Disease-modifying therapies — overview</a> (6 linked papers) · <a href="/mskb/concepts/therapeutics/dmt-overview/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_older_adult_ms">MS in older adults</a> (5 linked papers) · <a href="/mskb/concepts/clinical/older-adult-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pediatric_ms">Pediatric MS</a> (5 linked papers) · <a href="/mskb/concepts/clinical/pediatric-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prognostic_markers">Prognostic markers</a> (5 linked papers) · <a href="/mskb/concepts/clinical/prognostic-markers/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Rating neurologic impairment in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1983</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rating neurologic impairment in multiple sclerosis. Patterns of FS and relations of FS by type and grade to the DSS are demonstrated.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: One method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</li>
-<li>Challenge: A new Expanded Disability Status Scale (EDSS) is presented, with each of the former steps (1,2,3 .</li>
-<li>Action: .</li>
-<li>Resolution: This paper investigates rating neurologic impairment in multiple sclerosis.</li>
+<li>One method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</li>
+<li>A new Expanded Disability Status Scale (EDSS) is presented, with each of the former steps (1,2,3 .</li>
+<li>.</li>
+<li>This paper investigates rating neurologic impairment in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.33.11.1444" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John F. Kurtzke. (1983). Rating neurologic impairment in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.33.11.1444</p>
@@ -55,7 +73,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>New Multiple Sclerosis Phenotypic Classification</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -65,10 +82,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates new multiple sclerosis phenotypic classification. Accurate clinical course descriptions are useful for communication, prognostication, clinical trial design and to guide everyday clinical decision-making.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</li>
-<li>Challenge: All forms of MS should be further subcategorized as either active or non-active.</li>
-<li>Action: Active MS is defined as the occurrence of clinical relapse or the presence of new T2 or gadolinium-enhancing lesions over a specified period of time, preferably at least one year.</li>
-<li>Resolution: This paper investigates new multiple sclerosis phenotypic classification.</li>
+<li>Clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</li>
+<li>All forms of MS should be further subcategorized as either active or non-active.</li>
+<li>Active MS is defined as the occurrence of clinical relapse or the presence of new T2 or gadolinium-enhancing lesions over a specified period of time, preferably at least one year.</li>
+<li>This paper investigates new multiple sclerosis phenotypic classification.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1159/000367614" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fred Lublin. (2014). New Multiple Sclerosis Phenotypic Classification. European Neurology. https://doi.org/10.1159/000367614</p>
@@ -90,7 +107,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Defining the clinical course of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -100,10 +116,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates defining the clinical course of multiple sclerosis. Strategies for future research to better define phenotypes are also outlined.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</li>
-<li>Challenge: Standardized descriptions published in 1996 based on a survey of international MS experts provided purely clinical phenotypes based on data and consensus at that time, but imaging and biological correlates were lacking.</li>
-<li>Action: Increased understanding of MS and its pathology, coupled with general concern that the original descriptors may not adequately reflect more recently identified clinical aspects of the disease, prompted a re-examination of MS disease phenotypes by the International Advisory Committee on Clinical Trials of MS.</li>
-<li>Resolution: This paper investigates defining the clinical course of multiple sclerosis.</li>
+<li>Accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</li>
+<li>Standardized descriptions published in 1996 based on a survey of international MS experts provided purely clinical phenotypes based on data and consensus at that time, but imaging and biological correlates were lacking.</li>
+<li>Increased understanding of MS and its pathology, coupled with general concern that the original descriptors may not adequately reflect more recently identified clinical aspects of the disease, prompted a re-examination of MS disease phenotypes by the International Advisory Committee on Clinical Trials of MS.</li>
+<li>This paper investigates defining the clinical course of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000000560" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fred Lublin. (2014). Defining the clinical course of multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000000560</p>
@@ -125,7 +141,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Ocrelizumab versus Interferon Beta-1a in Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -135,10 +150,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ocrelizumab versus interferon beta-1a in relapsing multiple sclerosis. Hoffmann-La Roche; OPERA I and II ClinicalTrials.gov numbers, NCT01247324 and NCT01412333 , respectively.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</li>
-<li>Challenge: Larger and longer studies of the safety of ocrelizumab are required.</li>
-<li>Action: (Funded by F.</li>
-<li>Resolution: This paper investigates ocrelizumab versus interferon beta-1a in relapsing multiple sclerosis.</li>
+<li>Among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</li>
+<li>Larger and longer studies of the safety of ocrelizumab are required.</li>
+<li>(Funded by F.</li>
+<li>This paper investigates ocrelizumab versus interferon beta-1a in relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1601277" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephen L. Hauser. (2016). Ocrelizumab versus Interferon Beta-1a in Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1601277</p>
@@ -160,7 +175,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Randomized, Placebo-Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (73%)</span>
 </div>
@@ -170,10 +184,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis. (ClinicalTrials.gov number, NCT00027300.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</li>
-<li>Challenge: Adhesion-molecule inhibitors hold promise as an effective treatment for relapsing multiple sclerosis.</li>
-<li>Action: (ClinicalTrials.gov number, NCT00027300.).</li>
-<li>Resolution: This paper investigates a randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis.</li>
+<li>Natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</li>
+<li>Adhesion-molecule inhibitors hold promise as an effective treatment for relapsing multiple sclerosis.</li>
+<li>(ClinicalTrials.gov number, NCT00027300.).</li>
+<li>This paper investigates a randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa044397" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Chris H. Polman. (2006). A Randomized, Placebo-Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa044397</p>
@@ -195,7 +209,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Ocrelizumab versus Placebo in Primary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -205,10 +218,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ocrelizumab versus placebo in primary progressive multiple sclerosis. Hoffmann-La Roche; ORATORIO ClinicalTrials.gov number, NCT01194570 .).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among patients with primary progressive multiple sclerosis, ocrelizumab was associated with lower rates of clinical and MRI progression than placebo.</li>
-<li>Challenge: Extended observation is required to determine the long-term safety and efficacy of ocrelizumab.</li>
-<li>Action: (Funded by F.</li>
-<li>Resolution: This paper investigates ocrelizumab versus placebo in primary progressive multiple sclerosis.</li>
+<li>Among patients with primary progressive multiple sclerosis, ocrelizumab was associated with lower rates of clinical and MRI progression than placebo.</li>
+<li>Extended observation is required to determine the long-term safety and efficacy of ocrelizumab.</li>
+<li>(Funded by F.</li>
+<li>This paper investigates ocrelizumab versus placebo in primary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1606468" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Xavier Montalbán. (2016). Ocrelizumab versus Placebo in Primary Progressive Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1606468</p>
@@ -230,7 +243,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Defining the clinical course of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -240,10 +252,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates defining the clinical course of multiple sclerosis. In this report, we provide a summary of the survey results and propose standardized definitions for the most common clinical courses of patients with MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</li>
-<li>Challenge: It is particularly important in design of, and recruitment for, clinical trials statistically powered for expected outcomes for given patient populations with narrowly defined entry criteria.</li>
-<li>Action: For agents that prove safe and effective for MS, knowledge of the patient populations in definitive clinical trials assists clinicians in determining who may ultimately benefit from use of the medication.</li>
-<li>Resolution: This paper investigates defining the clinical course of multiple sclerosis.</li>
+<li>Standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</li>
+<li>It is particularly important in design of, and recruitment for, clinical trials statistically powered for expected outcomes for given patient populations with narrowly defined entry criteria.</li>
+<li>For agents that prove safe and effective for MS, knowledge of the patient populations in definitive clinical trials assists clinicians in determining who may ultimately benefit from use of the medication.</li>
+<li>This paper investigates defining the clinical course of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.46.4.907" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fred Lublin. (1996). Defining the clinical course of multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.46.4.907</p>
@@ -265,7 +277,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>R: A Language and Environment for Statistical Computing</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -275,10 +286,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates r: a language and environment for statistical computing. Most R novices will start with Appendix A [A sample session], page 80.This should give some familiarity with the style of R sessions and more importantly some instant feedback on what actually happens.Many users will come to R mainly for its graphical facilities.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Most R novices will start with Appendix A [A sample session], page 80.This should give some familiarity with the style of R sessions and more importantly some instant feedback on what actually happens.Many users will come to R mainly for its graphical facilities.</li>
-<li>Challenge: This paper investigates r: a language and environment for statistical computing.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Most R novices will start with Appendix A [A sample session], page 80.This should give some familiarity with the style of R sessions and more importantly some instant feedback on what actually happens.Many users will come to R mainly for its graphical facilities.</li>
+<li>This paper investigates r: a language and environment for statistical computing.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.32614/r.manuals" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> R Core Team. (2000). R: A Language and Environment for Statistical Computing. https://doi.org/10.32614/r.manuals</p>
@@ -299,7 +310,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -309,10 +319,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis. A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</li>
-<li>Challenge: A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</li>
-<li>Action: This paper investigates multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</li>
+<li>A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</li>
+<li>This paper investigates multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmra1401483" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Daniel S. Reich. (2018). Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmra1401483</p>
@@ -334,7 +344,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Placebo-Controlled Trial of Oral Fingolimod in Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -344,10 +353,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a placebo-controlled trial of oral fingolimod in relapsing multiple sclerosis. (ClinicalTrials.gov number, NCT00289978.)</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: As compared with placebo, both doses of oral fingolimod improved the relapse rate, the risk of disability progression, and end points on MRI.</li>
-<li>Challenge: These benefits will need to be weighed against possible long-term risks.</li>
-<li>Action: (ClinicalTrials.gov number, NCT00289978.).</li>
-<li>Resolution: This paper investigates a placebo-controlled trial of oral fingolimod in relapsing multiple sclerosis.</li>
+<li>As compared with placebo, both doses of oral fingolimod improved the relapse rate, the risk of disability progression, and end points on MRI.</li>
+<li>These benefits will need to be weighed against possible long-term risks.</li>
+<li>(ClinicalTrials.gov number, NCT00289978.).</li>
+<li>This paper investigates a placebo-controlled trial of oral fingolimod in relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa0909494" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2010). A Placebo-Controlled Trial of Oral Fingolimod in Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa0909494</p>
@@ -369,7 +378,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Placebo-Controlled Phase 3 Study of Oral BG-12 for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -379,10 +387,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates placebo-controlled phase 3 study of oral bg-12 for relapsing multiple sclerosis. (Funded by Biogen Idec; DEFINE ClinicalTrials.gov number, NCT00420212.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In patients with relapsing-remitting multiple sclerosis, both BG-12 regimens, as compared with placebo, significantly reduced the proportion of patients who had a relapse, the annualized relapse rate, the rate of disability progression, and the number of lesions on MRI.</li>
-<li>Challenge: (Funded by Biogen Idec; DEFINE ClinicalTrials.gov number, NCT00420212.).</li>
-<li>Action: This paper investigates placebo-controlled phase 3 study of oral bg-12 for relapsing multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In patients with relapsing-remitting multiple sclerosis, both BG-12 regimens, as compared with placebo, significantly reduced the proportion of patients who had a relapse, the annualized relapse rate, the rate of disability progression, and the number of lesions on MRI.</li>
+<li>(Funded by Biogen Idec; DEFINE ClinicalTrials.gov number, NCT00420212.).</li>
+<li>This paper investigates placebo-controlled phase 3 study of oral bg-12 for relapsing multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1114287" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ralf Gold. (2012). Placebo-Controlled Phase 3 Study of Oral BG-12 for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1114287</p>
@@ -404,7 +412,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Ofatumumab versus Teriflunomide in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -414,10 +421,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ofatumumab versus teriflunomide in multiple sclerosis. (Funded by Novartis; ASCLEPIOS I and II ClinicalTrials.gov numbers, NCT02792218 and NCT02792231.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among patients with multiple sclerosis, ofatumumab was associated with lower annualized relapse rates than teriflunomide.</li>
-<li>Challenge: (Funded by Novartis; ASCLEPIOS I and II ClinicalTrials.gov numbers, NCT02792218 and NCT02792231.).</li>
-<li>Action: This paper investigates ofatumumab versus teriflunomide in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Among patients with multiple sclerosis, ofatumumab was associated with lower annualized relapse rates than teriflunomide.</li>
+<li>(Funded by Novartis; ASCLEPIOS I and II ClinicalTrials.gov numbers, NCT02792218 and NCT02792231.).</li>
+<li>This paper investigates ofatumumab versus teriflunomide in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1917246" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephen L. Hauser. (2020). Ofatumumab versus Teriflunomide in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1917246</p>
@@ -439,7 +446,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Contribution of Relapse-Independent Progression vs Relapse-Associated Worsening to Overall Confirmed Disability Accumulation in Typical Relapsing Multiple Sclerosis in a Pooled Analysis of 2 Randomized Clinical Trials</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (41%)</span>
 </div>
@@ -449,10 +455,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates contribution of relapse-independent progression vs relapse-associated worsening to overall confirmed disability accumulation in typical relapsing multiple sclerosis in a pooled analysis of 2 randomized clinical trials. ClinicalTrials.gov Identifiers: OPERA I (NCT01247324) and OPERA II (NCT01412333).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: ClinicalTrials.gov Identifiers: OPERA I (NCT01247324) and OPERA II (NCT01412333).</li>
-<li>Challenge: This paper investigates contribution of relapse-independent progression vs relapse-associated worsening to overall confirmed disability accumulation in typical relapsing multiple sclerosis in a pooled analysis of 2 randomized clinical trials.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>ClinicalTrials.gov Identifiers: OPERA I (NCT01247324) and OPERA II (NCT01412333).</li>
+<li>This paper investigates contribution of relapse-independent progression vs relapse-associated worsening to overall confirmed disability accumulation in typical relapsing multiple sclerosis in a pooled analysis of 2 randomized clinical trials.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2020.1568" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2020). Contribution of Relapse-Independent Progression vs Relapse-Associated Worsening to Overall Confirmed Disability Accumulation in Typical Relapsing Multiple Sclerosis in a Pooled Analysis of 2 Randomized Clinical Trials. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2020.1568</p>
@@ -474,7 +480,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Placebo-Controlled Trial of Oral Cladribine for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -484,10 +489,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a placebo-controlled trial of oral cladribine for relapsing multiple sclerosis. (ClinicalTrials.gov number, NCT00213135.)</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Treatment with cladribine tablets significantly reduced relapse rates, the risk of disability progression, and MRI measures of disease activity at 96 weeks.</li>
-<li>Challenge: The benefits need to be weighed against the risks.</li>
-<li>Action: (ClinicalTrials.gov number, NCT00213135.).</li>
-<li>Resolution: This paper investigates a placebo-controlled trial of oral cladribine for relapsing multiple sclerosis.</li>
+<li>Treatment with cladribine tablets significantly reduced relapse rates, the risk of disability progression, and MRI measures of disease activity at 96 weeks.</li>
+<li>The benefits need to be weighed against the risks.</li>
+<li>(ClinicalTrials.gov number, NCT00213135.).</li>
+<li>This paper investigates a placebo-controlled trial of oral cladribine for relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa0902533" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gavin Giovannoni. (2010). A Placebo-Controlled Trial of Oral Cladribine for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa0902533</p>
@@ -509,7 +514,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Interferon beta‐1b is effective in relapsing‐remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1993</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -519,10 +523,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates interferon beta‐1b is effective in relapsing‐remitting multiple sclerosis. We report a multicenter, randomized, double-blind, placebo-controlled trial of interferon beta-1b (IFNB) in 372 ambulatory patients with relapsing-remitting multiple sclerosis (MS).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We report a multicenter, randomized, double-blind, placebo-controlled trial of interferon beta-1b (IFNB) in 372 ambulatory patients with relapsing-remitting multiple sclerosis (MS).</li>
-<li>Challenge: This paper investigates interferon beta‐1b is effective in relapsing‐remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We report a multicenter, randomized, double-blind, placebo-controlled trial of interferon beta-1b (IFNB) in 372 ambulatory patients with relapsing-remitting multiple sclerosis (MS).</li>
+<li>This paper investigates interferon beta‐1b is effective in relapsing‐remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.43.4.655" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> The IFNB Multiple Sclerosis Study Group. (1993). Interferon beta‐1b is effective in relapsing‐remitting multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.43.4.655</p>
@@ -544,7 +548,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Placebo-Controlled Phase 3 Study of Oral BG-12 or Glatiramer in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -554,10 +557,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates placebo-controlled phase 3 study of oral bg-12 or glatiramer in multiple sclerosis. (Funded by Biogen Idec; CONFIRM ClinicalTrials.gov number, NCT00451451.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In patients with relapsing-remitting multiple sclerosis, BG-12 (at both doses) and glatiramer acetate significantly reduced relapse rates and improved neuroradiologic outcomes relative to placebo.</li>
-<li>Challenge: (Funded by Biogen Idec; CONFIRM ClinicalTrials.gov number, NCT00451451.).</li>
-<li>Action: This paper investigates placebo-controlled phase 3 study of oral bg-12 or glatiramer in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In patients with relapsing-remitting multiple sclerosis, BG-12 (at both doses) and glatiramer acetate significantly reduced relapse rates and improved neuroradiologic outcomes relative to placebo.</li>
+<li>(Funded by Biogen Idec; CONFIRM ClinicalTrials.gov number, NCT00451451.).</li>
+<li>This paper investigates placebo-controlled phase 3 study of oral bg-12 or glatiramer in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1206328" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Robert J. Fox. (2012). Placebo-Controlled Phase 3 Study of Oral BG-12 or Glatiramer in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1206328</p>
@@ -579,7 +582,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rituximab in patients with primary progressive multiple sclerosis: Results of a randomized double‐blind placebo‐controlled multicenter trial</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (52%)</span>
 </div>
@@ -589,10 +591,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rituximab in patients with primary progressive multiple sclerosis: results of a randomized double‐blind placebo‐controlled multicenter trial. Although time to CDP between groups was not significant, overall subgroup analyses suggest selective B-cell depletion may affect disease progression in younger patients, particularly those with inflammatory lesions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although time to CDP between groups was not significant, overall subgroup analyses suggest selective B-cell depletion may affect disease progression in younger patients, particularly those with inflammatory lesions.</li>
-<li>Challenge: This paper investigates rituximab in patients with primary progressive multiple sclerosis: results of a randomized double‐blind placebo‐controlled multicenter trial.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Although time to CDP between groups was not significant, overall subgroup analyses suggest selective B-cell depletion may affect disease progression in younger patients, particularly those with inflammatory lesions.</li>
+<li>This paper investigates rituximab in patients with primary progressive multiple sclerosis: results of a randomized double‐blind placebo‐controlled multicenter trial.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21867" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Kathleen Hawker. (2009). Rituximab in patients with primary progressive multiple sclerosis: Results of a randomized double‐blind placebo‐controlled multicenter trial. Annals of Neurology. https://doi.org/10.1002/ana.21867</p>
@@ -614,7 +616,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Diagnosis and Treatment of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -624,10 +625,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates diagnosis and treatment of multiple sclerosis. Treatment with DMT can reduce the annual relapse rate by 29% to 68% compared with placebo or active comparator.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: MS is characterized by physical disability, cognitive impairment, and other symptoms that affect quality of life.</li>
-<li>Challenge: Treatment with DMT can reduce the annual relapse rate by 29% to 68% compared with placebo or active comparator.</li>
-<li>Action: This paper investigates diagnosis and treatment of multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>MS is characterized by physical disability, cognitive impairment, and other symptoms that affect quality of life.</li>
+<li>Treatment with DMT can reduce the annual relapse rate by 29% to 68% compared with placebo or active comparator.</li>
+<li>This paper investigates diagnosis and treatment of multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jama.2020.26858" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Marisa McGinley. (2021). Diagnosis and Treatment of Multiple Sclerosis. JAMA. https://doi.org/10.1001/jama.2020.26858</p>
@@ -649,7 +650,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Relapses and Progression of Disability in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -659,10 +659,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates relapses and progression of disability in multiple sclerosis. Among patients with multiple sclerosis, relapses do not significantly influence the progression of irreversible disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among patients with multiple sclerosis, relapses do not significantly influence the progression of irreversible disability.</li>
-<li>Challenge: This paper investigates relapses and progression of disability in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Among patients with multiple sclerosis, relapses do not significantly influence the progression of irreversible disability.</li>
+<li>This paper investigates relapses and progression of disability in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejm200011163432001" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Confavreux. (2000). Relapses and Progression of Disability in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejm200011163432001</p>
@@ -684,7 +684,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Initial Disease-Modifying Therapy With Later Conversion to Secondary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -694,10 +693,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of initial disease-modifying therapy with later conversion to secondary progressive multiple sclerosis. These findings, considered along with these therapies&#x27; risks, may help inform decisions about DMT selection.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among patients with relapsing-remitting MS, initial treatment with fingolimod, alemtuzumab, or natalizumab was associated with a lower risk of conversion to secondary progressive MS vs initial treatment with glatiramer acetate or interferon beta.</li>
-<li>Challenge: These findings, considered along with these therapies&#x27; risks, may help inform decisions about DMT selection.</li>
-<li>Action: This paper investigates association of initial disease-modifying therapy with later conversion to secondary progressive multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Among patients with relapsing-remitting MS, initial treatment with fingolimod, alemtuzumab, or natalizumab was associated with a lower risk of conversion to secondary progressive MS vs initial treatment with glatiramer acetate or interferon beta.</li>
+<li>These findings, considered along with these therapies&#x27; risks, may help inform decisions about DMT selection.</li>
+<li>This paper investigates association of initial disease-modifying therapy with later conversion to secondary progressive multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jama.2018.20588" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> J William L Brown. (2019). Association of Initial Disease-Modifying Therapy With Later Conversion to Secondary Progressive Multiple Sclerosis. JAMA. https://doi.org/10.1001/jama.2018.20588</p>
@@ -719,7 +718,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The prevalence of MS in the United States</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -729,10 +727,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the prevalence of ms in the united states. Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</li>
-<li>Challenge: Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</li>
-<li>Action: This paper investigates the prevalence of ms in the united states.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</li>
+<li>Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</li>
+<li>This paper investigates the prevalence of ms in the united states.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000007035" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mitchell T. Wallin. (2019). The prevalence of MS in the United States. Neurology. https://doi.org/10.1212/wnl.0000000000007035</p>
@@ -754,7 +752,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Randomized Trial of Oral Teriflunomide for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -764,10 +761,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates randomized trial of oral teriflunomide for relapsing multiple sclerosis. (Funded by Sanofi-Aventis; TEMSO ClinicalTrials.gov number, NCT00134563.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Teriflunomide significantly reduced relapse rates, disability progression (at the higher dose), and MRI evidence of disease activity, as compared with placebo.</li>
-<li>Challenge: (Funded by Sanofi-Aventis; TEMSO ClinicalTrials.gov number, NCT00134563.).</li>
-<li>Action: This paper investigates randomized trial of oral teriflunomide for relapsing multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Teriflunomide significantly reduced relapse rates, disability progression (at the higher dose), and MRI evidence of disease activity, as compared with placebo.</li>
+<li>(Funded by Sanofi-Aventis; TEMSO ClinicalTrials.gov number, NCT00134563.).</li>
+<li>This paper investigates randomized trial of oral teriflunomide for relapsing multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1014656" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Paul O’Connor. (2011). Randomized Trial of Oral Teriflunomide for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1014656</p>
@@ -789,7 +786,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Disability and T2 MRI lesions: a 20-year follow-up of patients with relapse onset of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -799,10 +795,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates disability and t2 mri lesions: a 20-year follow-up of patients with relapse onset of multiple sclerosis. This study extends previous follow-up of CIS patients and sheds new light on how the lesions evolve according to the natural history.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study extends previous follow-up of CIS patients and sheds new light on how the lesions evolve according to the natural history.</li>
-<li>Challenge: This paper investigates disability and t2 mri lesions: a 20-year follow-up of patients with relapse onset of multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study extends previous follow-up of CIS patients and sheds new light on how the lesions evolve according to the natural history.</li>
+<li>This paper investigates disability and t2 mri lesions: a 20-year follow-up of patients with relapse onset of multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awm329" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Leonora Fisniku. (2008). Disability and T2 MRI lesions: a 20-year follow-up of patients with relapse onset of multiple sclerosis. Brain. https://doi.org/10.1093/brain/awm329</p>
@@ -824,7 +820,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>How patients with multiple sclerosis acquire disability</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -834,10 +829,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates how patients with multiple sclerosis acquire disability. This study addresses the relative contribution of relapses to disability worsening over the course of the disease, how early progression begins and the extent to which multiple sclerosis therapies delay disability accumulation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study addresses the relative contribution of relapses to disability worsening over the course of the disease, how early progression begins and the extent to which multiple sclerosis therapies delay disability accumulation.</li>
-<li>Challenge: This paper investigates how patients with multiple sclerosis acquire disability.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study addresses the relative contribution of relapses to disability worsening over the course of the disease, how early progression begins and the extent to which multiple sclerosis therapies delay disability accumulation.</li>
+<li>This paper investigates how patients with multiple sclerosis acquire disability.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awac016" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fred Lublin. (2022). How patients with multiple sclerosis acquire disability. Brain. https://doi.org/10.1093/brain/awac016</p>
@@ -859,7 +854,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Practice guideline recommendations summary: Disease-modifying therapies for adults with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -869,10 +863,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates practice guideline recommendations summary: disease-modifying therapies for adults with multiple sclerosis. The field of MS treatment is rapidly changing; the Academy of Neurology development process includes planning for future updates.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Thirty recommendations were developed: 17 on starting DMTs, including recommendations on who should start them; 10 on switching DMTs if breakthrough disease develops; and 3 on stopping DMTs.</li>
-<li>Challenge: Recommendations encompassed patient engagement strategies and individualization of treatment, including adherence monitoring and disease comorbidity assessment.</li>
-<li>Action: The panel also discussed DMT risks, including counseling about progressive multifocal leukoencephalopathy risk in people with MS using natalizumab, fingolimod, rituximab, ocrelizumab, and dimethyl fumarate; and made suggestions for future research to evaluate relative merits of early treatment with higher potency DMTs vs standard stepped-care protocols, DMT comparative effectiveness, optimal switching strategies, long-term effects of DMT use, definitions of highly active MS, and effects of treatment on patient-specified priority outcomes.</li>
-<li>Resolution: This paper investigates practice guideline recommendations summary: disease-modifying therapies for adults with multiple sclerosis.</li>
+<li>Thirty recommendations were developed: 17 on starting DMTs, including recommendations on who should start them; 10 on switching DMTs if breakthrough disease develops; and 3 on stopping DMTs.</li>
+<li>Recommendations encompassed patient engagement strategies and individualization of treatment, including adherence monitoring and disease comorbidity assessment.</li>
+<li>The panel also discussed DMT risks, including counseling about progressive multifocal leukoencephalopathy risk in people with MS using natalizumab, fingolimod, rituximab, ocrelizumab, and dimethyl fumarate; and made suggestions for future research to evaluate relative merits of early treatment with higher potency DMTs vs standard stepped-care protocols, DMT comparative effectiveness, optimal switching strategies, long-term effects of DMT use, definitions of highly active MS, and effects of treatment on patient-specified priority outcomes.</li>
+<li>This paper investigates practice guideline recommendations summary: disease-modifying therapies for adults with multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000005347" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alexander Rae‐Grant. (2018). Practice guideline recommendations summary: Disease-modifying therapies for adults with multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000005347</p>
@@ -894,7 +888,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Intramuscular Interferon Beta-1A Therapy Initiated during a First Demyelinating Event in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (53%)</span>
 </div>
@@ -904,10 +897,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates intramuscular interferon beta-1a therapy initiated during a first demyelinating event in multiple sclerosis. Treatment with interferon beta has been shown to help patients with established multiple sclerosis, but it is not known whether initiating treatment at the time of a first clinical demyelinating event is of value.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Treatment with interferon beta has been shown to help patients with established multiple sclerosis, but it is not known whether initiating treatment at the time of a first clinical demyelinating event is of value.</li>
-<li>Challenge: This paper investigates intramuscular interferon beta-1a therapy initiated during a first demyelinating event in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Treatment with interferon beta has been shown to help patients with established multiple sclerosis, but it is not known whether initiating treatment at the time of a first clinical demyelinating event is of value.</li>
+<li>This paper investigates intramuscular interferon beta-1a therapy initiated during a first demyelinating event in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejm200009283431301" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lawrence Jacobs. (2000). Intramuscular Interferon Beta-1A Therapy Initiated during a First Demyelinating Event in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejm200009283431301</p>
@@ -929,7 +922,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Infection Risks Among Patients With Multiple Sclerosis Treated With Fingolimod, Natalizumab, Rituximab, and Injectable Therapies</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -939,10 +931,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates infection risks among patients with multiple sclerosis treated with fingolimod, natalizumab, rituximab, and injectable therapies. The different risk profiles should inform the risk-benefit assessments of these treatments.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Patients with MS are at a generally increased risk of infections, and this differs by treatment.</li>
-<li>Challenge: The rate of infections was lowest with interferon beta and GA; among newer treatments, off-label use of rituximab was associated with the highest rate of serious infections.</li>
-<li>Action: The different risk profiles should inform the risk-benefit assessments of these treatments.</li>
-<li>Resolution: This paper investigates infection risks among patients with multiple sclerosis treated with fingolimod, natalizumab, rituximab, and injectable therapies.</li>
+<li>Patients with MS are at a generally increased risk of infections, and this differs by treatment.</li>
+<li>The rate of infections was lowest with interferon beta and GA; among newer treatments, off-label use of rituximab was associated with the highest rate of serious infections.</li>
+<li>The different risk profiles should inform the risk-benefit assessments of these treatments.</li>
+<li>This paper investigates infection risks among patients with multiple sclerosis treated with fingolimod, natalizumab, rituximab, and injectable therapies.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.3365" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gustavo Luna. (2019). Infection Risks Among Patients With Multiple Sclerosis Treated With Fingolimod, Natalizumab, Rituximab, and Injectable Therapies. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.3365</p>
@@ -964,7 +956,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Silent progression in disease activity–free relapsing multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -974,10 +965,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates silent progression in disease activity–free relapsing multiple sclerosis. Ann Neurol 2019;85:653-666.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Long-term worsening is common in relapsing MS patients, is largely independent of relapse activity, and is associated with accelerated brain atrophy.</li>
-<li>Challenge: We propose the term silent progression to describe the insidious disability that accrues in many patients who satisfy traditional criteria for relapsing-remitting MS.</li>
-<li>Action: Ann Neurol 2019;85:653-666.</li>
-<li>Resolution: This paper investigates silent progression in disease activity–free relapsing multiple sclerosis.</li>
+<li>Long-term worsening is common in relapsing MS patients, is largely independent of relapse activity, and is associated with accelerated brain atrophy.</li>
+<li>We propose the term silent progression to describe the insidious disability that accrues in many patients who satisfy traditional criteria for relapsing-remitting MS.</li>
+<li>Ann Neurol 2019;85:653-666.</li>
+<li>This paper investigates silent progression in disease activity–free relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25463" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce Cree. (2019). Silent progression in disease activity–free relapsing multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.25463</p>
@@ -999,7 +990,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Risk of Natalizumab-Associated Progressive Multifocal Leukoencephalopathy</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -1009,10 +999,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates risk of natalizumab-associated progressive multifocal leukoencephalopathy. (Funded by Biogen Idec and Elan Pharmaceuticals.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Positive status with respect to anti-JC virus antibodies, prior use of immunosuppressants, and increased duration of natalizumab treatment, alone or in combination, were associated with distinct levels of PML risk in natalizumab-treated patients with multiple sclerosis.</li>
-<li>Challenge: (Funded by Biogen Idec and Elan Pharmaceuticals.).</li>
-<li>Action: This paper investigates risk of natalizumab-associated progressive multifocal leukoencephalopathy.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Positive status with respect to anti-JC virus antibodies, prior use of immunosuppressants, and increased duration of natalizumab treatment, alone or in combination, were associated with distinct levels of PML risk in natalizumab-treated patients with multiple sclerosis.</li>
+<li>(Funded by Biogen Idec and Elan Pharmaceuticals.).</li>
+<li>This paper investigates risk of natalizumab-associated progressive multifocal leukoencephalopathy.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1107829" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gary Bloomgren. (2012). Risk of Natalizumab-Associated Progressive Multifocal Leukoencephalopathy. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1107829</p>
@@ -1034,7 +1024,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Natural history of multiple sclerosis: a unifying concept</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1044,10 +1033,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates natural history of multiple sclerosis: a unifying concept. From the clinical and statistical positions, multiple sclerosis might be considered as one disease with different clinical phenotypes rather than an entity encompassing several distinct diseases-the position of complexity rather than true heterogeneity.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis can follow very different patterns of evolution and variable rates of disability accumulation.</li>
-<li>Challenge: This raises the issue whether it represents one or several distinct diseases.</li>
-<li>Action: We assessed demographic and clinical characteristics in 1844 patients with multiple sclerosis that we categorized according to the classification of Lublin and Reingold (1996) into 1066 (58%) relapsing-remitting, 496 (27%) secondary progressive, 109 (6%) progressive relapsing and 173 (9%) primary progressive cases of multiple sclerosis.</li>
-<li>Resolution: This paper investigates natural history of multiple sclerosis: a unifying concept.</li>
+<li>Multiple sclerosis can follow very different patterns of evolution and variable rates of disability accumulation.</li>
+<li>This raises the issue whether it represents one or several distinct diseases.</li>
+<li>We assessed demographic and clinical characteristics in 1844 patients with multiple sclerosis that we categorized according to the classification of Lublin and Reingold (1996) into 1066 (58%) relapsing-remitting, 496 (27%) secondary progressive, 109 (6%) progressive relapsing and 173 (9%) primary progressive cases of multiple sclerosis.</li>
+<li>This paper investigates natural history of multiple sclerosis: a unifying concept.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awl007" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Confavreux. (2006). Natural history of multiple sclerosis: a unifying concept. Brain. https://doi.org/10.1093/brain/awl007</p>
@@ -1069,7 +1058,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Alemtuzumab vs. Interferon Beta-1a in Early Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -1079,10 +1067,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates alemtuzumab vs. interferon beta-1a in early multiple sclerosis. (ClinicalTrials.gov number, NCT00050778.)</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In patients with early, relapsing-remitting multiple sclerosis, alemtuzumab was more effective than interferon beta-1a but was associated with autoimmunity, most seriously manifesting as immune thrombocytopenic purpura.</li>
-<li>Challenge: The study was not powered to identify uncommon adverse events.</li>
-<li>Action: (ClinicalTrials.gov number, NCT00050778.).</li>
-<li>Resolution: This paper investigates alemtuzumab vs.</li>
+<li>In patients with early, relapsing-remitting multiple sclerosis, alemtuzumab was more effective than interferon beta-1a but was associated with autoimmunity, most seriously manifesting as immune thrombocytopenic purpura.</li>
+<li>The study was not powered to identify uncommon adverse events.</li>
+<li>(ClinicalTrials.gov number, NCT00050778.).</li>
+<li>This paper investigates alemtuzumab vs.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa0802670" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> The CAMMS Trial Investigators. (2008). Alemtuzumab vs. Interferon Beta-1a in Early Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa0802670</p>
@@ -1104,7 +1092,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Early clinical predictors and progression of irreversible disability in multiple sclerosis: an amnesic process</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1114,10 +1101,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates early clinical predictors and progression of irreversible disability in multiple sclerosis: an amnesic process. Early assessable clinical variables significantly influence the time from the onset of multiple sclerosis to the assignment of a disability score of 4, but not the subsequent progression of irreversible disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Prognosis of multiple sclerosis is highly variable.</li>
-<li>Challenge: Clinical variables have been identified that are assessable early in the disease and are predictors of the time from the disease onset to the onset of irreversible disability.</li>
-<li>Action: Our objective was to determine if these clinical variables still have an effect after the first stages of disability have been reached.</li>
-<li>Resolution: This paper investigates early clinical predictors and progression of irreversible disability in multiple sclerosis: an amnesic process.</li>
+<li>Prognosis of multiple sclerosis is highly variable.</li>
+<li>Clinical variables have been identified that are assessable early in the disease and are predictors of the time from the disease onset to the onset of irreversible disability.</li>
+<li>Our objective was to determine if these clinical variables still have an effect after the first stages of disability have been reached.</li>
+<li>This paper investigates early clinical predictors and progression of irreversible disability in multiple sclerosis: an amnesic process.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awg081" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Confavreux. (2003). Early clinical predictors and progression of irreversible disability in multiple sclerosis: an amnesic process. Brain. https://doi.org/10.1093/brain/awg081</p>
@@ -1139,7 +1126,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis: Current Knowledge and Future Outlook</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1149,10 +1135,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis: current knowledge and future outlook. In general, agents used as escalation therapies (natalizumab, fingolimod and mitoxantrone) are more potent than the agents used for first-line therapy; however, these have potentially serious side effects and should be used with care.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This mini-review gives an overview of the current knowledge of MS with emphasis on the latest diagnostic criteria and both current and upcoming treatment options.</li>
-<li>Challenge: Key Messages: Treatment of MS changes rapidly as the knowledge and therapeutic options in MS expand.</li>
-<li>Action: Clinical Impact: Diagnosis of MS is based on McDonald criteria.</li>
-<li>Resolution: This paper investigates multiple sclerosis: current knowledge and future outlook.</li>
+<li>This mini-review gives an overview of the current knowledge of MS with emphasis on the latest diagnostic criteria and both current and upcoming treatment options.</li>
+<li>Key Messages: Treatment of MS changes rapidly as the knowledge and therapeutic options in MS expand.</li>
+<li>Clinical Impact: Diagnosis of MS is based on McDonald criteria.</li>
+<li>This paper investigates multiple sclerosis: current knowledge and future outlook.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1159/000360528" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian P. Kamm. (2014). Multiple Sclerosis: Current Knowledge and Future Outlook. European Neurology. https://doi.org/10.1159/000360528</p>
@@ -1174,7 +1160,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>ECTRIMS/EAN Guideline on the pharmacological treatment of people with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (47%)</span>
 </div>
@@ -1184,10 +1169,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ectrims/ean guideline on the pharmacological treatment of people with multiple sclerosis. The present guideline will enable homogeneity of treatment decisions across Europe.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The present guideline will enable homogeneity of treatment decisions across Europe.</li>
-<li>Challenge: This paper investigates ectrims/ean guideline on the pharmacological treatment of people with multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The present guideline will enable homogeneity of treatment decisions across Europe.</li>
+<li>This paper investigates ectrims/ean guideline on the pharmacological treatment of people with multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517751049" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Xavier Montalbán. (2018). ECTRIMS/EAN Guideline on the pharmacological treatment of people with multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517751049</p>
@@ -1209,7 +1194,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The natural history of multiple sclerosis, a geographically based study 10: relapses and long-term disability</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1219,10 +1203,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the natural history of multiple sclerosis, a geographically based study 10: relapses and long-term disability. The prevention or delay of the progressive phase of the disease is implicated as a key therapeutic target in relapsing-remitting patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The relationship of relapses to long-term disability in multiple sclerosis is uncertain.</li>
-<li>Challenge: Relapse reduction is a common therapeutic target but clinical trials have shown dissociation between relapse suppression and disability accumulation.</li>
-<li>Action: We investigated relationships between relapses and disability progression for outcomes of requiring assistance to walk, being bedridden and dying from multiple sclerosis [Disability Status Scale 6, 8, 10] by analysing 28 000 patient-years of evolution in 806-bout onset patients from the London Ontario natural history cohort.</li>
-<li>Resolution: This paper investigates the natural history of multiple sclerosis, a geographically based study 10: relapses and long-term disability.</li>
+<li>The relationship of relapses to long-term disability in multiple sclerosis is uncertain.</li>
+<li>Relapse reduction is a common therapeutic target but clinical trials have shown dissociation between relapse suppression and disability accumulation.</li>
+<li>We investigated relationships between relapses and disability progression for outcomes of requiring assistance to walk, being bedridden and dying from multiple sclerosis [Disability Status Scale 6, 8, 10] by analysing 28 000 patient-years of evolution in 806-bout onset patients from the London Ontario natural history cohort.</li>
+<li>This paper investigates the natural history of multiple sclerosis, a geographically based study 10: relapses and long-term disability.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awq118" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Antonio Scalfari. (2010). The natural history of multiple sclerosis, a geographically based study 10: relapses and long-term disability. Brain. https://doi.org/10.1093/brain/awq118</p>
@@ -1244,7 +1228,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The natural history of multiple sclerosis:a geographically based study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -1254,10 +1237,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the natural history of multiple sclerosis:a geographically based study. We report a natural history study of 216 patients with primary progressive (PP)- multiple sclerosis defined by at least 1 year of exacerbation-free progression at onset.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We report a natural history study of 216 patients with primary progressive (PP)- multiple sclerosis defined by at least 1 year of exacerbation-free progression at onset.</li>
-<li>Challenge: This paper investigates the natural history of multiple sclerosis:a geographically based study.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We report a natural history study of 216 patients with primary progressive (PP)- multiple sclerosis defined by at least 1 year of exacerbation-free progression at onset.</li>
+<li>This paper investigates the natural history of multiple sclerosis:a geographically based study.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/122.4.625" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David A. Cottrell. (1999). The natural history of multiple sclerosis:a geographically based study. Brain. https://doi.org/10.1093/brain/122.4.625</p>
@@ -1279,7 +1262,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Early Progression Independent of Relapse Activity With Long-term Disability After a First Demyelinating Event in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (62%)</span>
 </div>
@@ -1289,10 +1271,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of early progression independent of relapse activity with long-term disability after a first demyelinating event in multiple sclerosis. Results of this cohort study suggest that for patients with multiple sclerosis, presenting with PIRA after a first demyelinating event was not uncommon and suggests an unfavorable long-term prognosis, especially if it occurs early in the disease course.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Results of this cohort study suggest that for patients with multiple sclerosis, presenting with PIRA after a first demyelinating event was not uncommon and suggests an unfavorable long-term prognosis, especially if it occurs early in the disease course.</li>
-<li>Challenge: This paper investigates association of early progression independent of relapse activity with long-term disability after a first demyelinating event in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Results of this cohort study suggest that for patients with multiple sclerosis, presenting with PIRA after a first demyelinating event was not uncommon and suggests an unfavorable long-term prognosis, especially if it occurs early in the disease course.</li>
+<li>This paper investigates association of early progression independent of relapse activity with long-term disability after a first demyelinating event in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2022.4655" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Carmen Tur. (2022). Association of Early Progression Independent of Relapse Activity With Long-term Disability After a First Demyelinating Event in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2022.4655</p>
@@ -1314,7 +1296,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Secondary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1324,10 +1305,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates secondary progressive multiple sclerosis. Early identification of SPMS will require tools that, together with the use of appropriate treatments, may result in better long-term outcomes for the population of patients with SPMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In most cases, multiple sclerosis (MS) begins with a relapsing-remitting course followed by insidious disability worsening that is independent from clinically apparent relapses and is termed secondary progressive MS (SMPS).</li>
-<li>Challenge: Major differences exist between relapsing-remitting MS (RRMS) and SPMS, especially regarding therapeutic response to treatment.</li>
-<li>Action: This review provides an overview of the pathology, differentiation, and challenges in the diagnosis and treatment of SPMS.</li>
-<li>Resolution: We emphasize the criticality of conversion from a relapsing-remitting to a secondary progressive disease course not only because such conversion is evidence of disability progression, but also because, until recently, treatments that effectively reduced disability progression in relapsing MS were not proven to be effective in SPMS.</li>
+<li>In most cases, multiple sclerosis (MS) begins with a relapsing-remitting course followed by insidious disability worsening that is independent from clinically apparent relapses and is termed secondary progressive MS (SMPS).</li>
+<li>Major differences exist between relapsing-remitting MS (RRMS) and SPMS, especially regarding therapeutic response to treatment.</li>
+<li>This review provides an overview of the pathology, differentiation, and challenges in the diagnosis and treatment of SPMS.</li>
+<li>We emphasize the criticality of conversion from a relapsing-remitting to a secondary progressive disease course not only because such conversion is evidence of disability progression, but also because, until recently, treatments that effectively reduced disability progression in relapsing MS were not proven to be effective in SPMS.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000012323" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce Cree. (2021). Secondary Progressive Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000012323</p>
@@ -1349,7 +1330,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Defining secondary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1359,10 +1339,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates defining secondary progressive multiple sclerosis. If applied broadly, the definition has the potential to strengthen the design and improve comparability of clinical trials and observational studies in secondary progressive multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A number of studies have been conducted with the onset of secondary progressive multiple sclerosis as an inclusion criterion or an outcome of interest.</li>
-<li>Challenge: However, a standardized objective definition of secondary progressive multiple sclerosis has been lacking.</li>
-<li>Action: The aim of this work was to evaluate the accuracy and feasibility of an objective definition for secondary progressive multiple sclerosis, to enable comparability of future research studies.</li>
-<li>Resolution: This paper investigates defining secondary progressive multiple sclerosis.</li>
+<li>A number of studies have been conducted with the onset of secondary progressive multiple sclerosis as an inclusion criterion or an outcome of interest.</li>
+<li>However, a standardized objective definition of secondary progressive multiple sclerosis has been lacking.</li>
+<li>The aim of this work was to evaluate the accuracy and feasibility of an objective definition for secondary progressive multiple sclerosis, to enable comparability of future research studies.</li>
+<li>This paper investigates defining secondary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/aww173" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Johannes Lorscheider. (2016). Defining secondary progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/aww173</p>
@@ -1384,7 +1364,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Defining high, medium and low impact prognostic factors for developing multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1394,10 +1373,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates defining high, medium and low impact prognostic factors for developing multiple sclerosis. We conclude that the demographic and topographic characteristics are low-impact prognostic factors, the presence of oligoclonal bands is a medium-impact prognostic factor, and the number of lesions on brain magnetic resonance is a high-impact prognostic factor.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Natural history studies have identified factors that predict evolution to multiple sclerosis or risk of disability accumulation over time.</li>
-<li>Challenge: Although these studies are based on large multicentre cohorts with long follow-ups, they have limitations such as lack of standardized protocols, a retrospective data collection or lack of a systematic magnetic resonance imaging acquisition and analysis protocol, often resulting in failure to take magnetic resonance and oligoclonal bands into account as joint covariates in the prediction models.</li>
-<li>Action: To overcome some of these limitations, the aim of our study was to identify and stratify baseline demographic, clinical, radiological and biological characteristics that might predict multiple sclerosis development and disability accumulation using a multivariate approach based on a large prospective cohort of patients with clinically isolated syndromes.</li>
-<li>Resolution: This paper investigates defining high, medium and low impact prognostic factors for developing multiple sclerosis.</li>
+<li>Natural history studies have identified factors that predict evolution to multiple sclerosis or risk of disability accumulation over time.</li>
+<li>Although these studies are based on large multicentre cohorts with long follow-ups, they have limitations such as lack of standardized protocols, a retrospective data collection or lack of a systematic magnetic resonance imaging acquisition and analysis protocol, often resulting in failure to take magnetic resonance and oligoclonal bands into account as joint covariates in the prediction models.</li>
+<li>To overcome some of these limitations, the aim of our study was to identify and stratify baseline demographic, clinical, radiological and biological characteristics that might predict multiple sclerosis development and disability accumulation using a multivariate approach based on a large prospective cohort of patients with clinically isolated syndromes.</li>
+<li>This paper investigates defining high, medium and low impact prognostic factors for developing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awv105" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mar Tintoré. (2015). Defining high, medium and low impact prognostic factors for developing multiple sclerosis. Brain. https://doi.org/10.1093/brain/awv105</p>
@@ -1419,7 +1398,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Ponesimod Compared With Teriflunomide in Patients With Relapsing Multiple Sclerosis in the Active-Comparator Phase 3 OPTIMUM Study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (41%)</span>
 </div>
@@ -1429,10 +1407,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ponesimod compared with teriflunomide in patients with relapsing multiple sclerosis in the active-comparator phase 3 optimum study. ClinicalTrials.gov Identifier: NCT02425644.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: ClinicalTrials.gov Identifier: NCT02425644.</li>
-<li>Challenge: This paper investigates ponesimod compared with teriflunomide in patients with relapsing multiple sclerosis in the active-comparator phase 3 optimum study.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>ClinicalTrials.gov Identifier: NCT02425644.</li>
+<li>This paper investigates ponesimod compared with teriflunomide in patients with relapsing multiple sclerosis in the active-comparator phase 3 optimum study.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2021.0405" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2021). Ponesimod Compared With Teriflunomide in Patients With Relapsing Multiple Sclerosis in the Active-Comparator Phase 3 OPTIMUM Study. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2021.0405</p>
@@ -1454,7 +1432,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (42%)</span>
 </div>
@@ -1464,10 +1441,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the global burden of disease study 2016. Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the global burden of disease study 2016.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Bill &amp; Melinda Gates Foundation.</li>
+<li>This paper investigates global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the global burden of disease study 2016.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/s1474-4422(18)30443-5" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mitchell T. Wallin. (2019). Global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016. The Lancet Neurology. https://doi.org/10.1016/s1474-4422(18)30443-5</p>
@@ -1489,7 +1466,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Atlas of Multiple Sclerosis 2013: A growing global problem with widespread inequity</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1499,10 +1475,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates atlas of multiple sclerosis 2013: a growing global problem with widespread inequity. 2 The authors thank Bernard Uitdehaag, PhD (VU University Medical Center, the Netherlands); Ed Holloway (Multiple Sclerosis Society, UK); Lekha Pandit, MD, PhD (Nitte University, India); and Mario Battaglia, MD (Associazione Italiana Sclerosi Multipla, Italy) of the MSIF Atlas of MS Study Group Committee who developed the templates used to collect the data for this manuscript.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is one of the world&#x27;s most common neurologic disorders, and in many countries it is the leading cause of nontraumatic neurologic disability in young adults.</li>
-<li>Challenge: Despite this, global information on the epidemiology of MS and the availability of resources and services for people with MS is scarce in many regions of the world.</li>
-<li>Action: The first Atlas of MS , published in 2008 as a joint project of the Multiple Sclerosis International Federation (MSIF) and the World Health Organization (WHO),1 endeavored to fill this knowledge gap with information from 112 countries.</li>
-<li>Resolution: This paper investigates atlas of multiple sclerosis 2013: a growing global problem with widespread inequity.</li>
+<li>Multiple sclerosis (MS) is one of the world&#x27;s most common neurologic disorders, and in many countries it is the leading cause of nontraumatic neurologic disability in young adults.</li>
+<li>Despite this, global information on the epidemiology of MS and the availability of resources and services for people with MS is scarce in many regions of the world.</li>
+<li>The first Atlas of MS , published in 2008 as a joint project of the Multiple Sclerosis International Federation (MSIF) and the World Health Organization (WHO),1 endeavored to fill this knowledge gap with information from 112 countries.</li>
+<li>This paper investigates atlas of multiple sclerosis 2013: a growing global problem with widespread inequity.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000000768" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Paul Browne. (2014). Atlas of Multiple Sclerosis 2013: A growing global problem with widespread inequity. Neurology. https://doi.org/10.1212/wnl.0000000000000768</p>
@@ -1524,7 +1500,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rate of Pregnancy-Related Relapse in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -1534,10 +1509,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rate of pregnancy-related relapse in multiple sclerosis. In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</li>
-<li>Challenge: This paper investigates rate of pregnancy-related relapse in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</li>
+<li>This paper investigates rate of pregnancy-related relapse in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejm199807303390501" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Confavreux. (1998). Rate of Pregnancy-Related Relapse in Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejm199807303390501</p>
@@ -1559,7 +1534,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Clinical Outcomes of Escalation vs Early Intensive Disease-Modifying Therapy in Patients With Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (59%)</span>
 </div>
@@ -1569,10 +1543,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates clinical outcomes of escalation vs early intensive disease-modifying therapy in patients with multiple sclerosis. These data support the need for a prospective randomized clinical trial.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data support the need for a prospective randomized clinical trial.</li>
-<li>Challenge: This paper investigates clinical outcomes of escalation vs early intensive disease-modifying therapy in patients with multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data support the need for a prospective randomized clinical trial.</li>
+<li>This paper investigates clinical outcomes of escalation vs early intensive disease-modifying therapy in patients with multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2018.4905" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Katharine Harding. (2019). Clinical Outcomes of Escalation vs Early Intensive Disease-Modifying Therapy in Patients With Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2018.4905</p>
@@ -1594,7 +1568,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Age at disability milestones in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1604,10 +1577,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates age at disability milestones in multiple sclerosis. Aside acute focal recurrent inflammation and diffuse chronic neurodegeneration, accelerated ageing-related mechanisms may operate in the central nervous system of multiple sclerosis patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Many efforts have been devoted to the description of the prognosis of multiple sclerosis and its possible influential factors in terms of time to reach disability milestones.</li>
-<li>Challenge: By contrast, the age at which patients with multiple sclerosis reach these milestones has not yet stirred much interest.</li>
-<li>Action: We have tested the hypothesis whether the prognosis of multiple sclerosis depends on the current age of patients and the initial course of the disease.</li>
-<li>Resolution: This paper investigates age at disability milestones in multiple sclerosis.</li>
+<li>Many efforts have been devoted to the description of the prognosis of multiple sclerosis and its possible influential factors in terms of time to reach disability milestones.</li>
+<li>By contrast, the age at which patients with multiple sclerosis reach these milestones has not yet stirred much interest.</li>
+<li>We have tested the hypothesis whether the prognosis of multiple sclerosis depends on the current age of patients and the initial course of the disease.</li>
+<li>This paper investigates age at disability milestones in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awh714" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Confavreux. (2006). Age at disability milestones in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awh714</p>
@@ -1629,7 +1602,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Long‐term evolution of multiple sclerosis disability in the treatment era</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -1639,10 +1611,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates long‐term evolution of multiple sclerosis disability in the treatment era. Ann Neurol 2016;80:499-510.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Rates of worsening and evolution to SPMS were substantially lower when compared to earlier natural history studies.</li>
-<li>Challenge: Notably, the NEDA 2-year endpoint was not a predictor of long-term stability.</li>
-<li>Action: Finally, the data call into question the utility of annual MRI assessments as a treat-to-target approach for MS care.</li>
-<li>Resolution: This paper investigates long‐term evolution of multiple sclerosis disability in the treatment era.</li>
+<li>Rates of worsening and evolution to SPMS were substantially lower when compared to earlier natural history studies.</li>
+<li>Notably, the NEDA 2-year endpoint was not a predictor of long-term stability.</li>
+<li>Finally, the data call into question the utility of annual MRI assessments as a treat-to-target approach for MS care.</li>
+<li>This paper investigates long‐term evolution of multiple sclerosis disability in the treatment era.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24747" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bruce Cree. (2016). Long‐term evolution of multiple sclerosis disability in the treatment era. Annals of Neurology. https://doi.org/10.1002/ana.24747</p>
@@ -1664,7 +1636,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Evidence for a two-stage disability progression in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -1674,10 +1645,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates evidence for a two-stage disability progression in multiple sclerosis. Our results indicated that the disability progression during Phase 2 was independent of that during Phase 1.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results indicated that the disability progression during Phase 2 was independent of that during Phase 1.</li>
-<li>Challenge: Our findings demonstrate that multiple sclerosis disability progression follows a two-stage process, with a first stage probably dependent on focal inflammation and a second stage probably independent of current focal inflammation.</li>
-<li>Action: This paper investigates evidence for a two-stage disability progression in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results indicated that the disability progression during Phase 2 was independent of that during Phase 1.</li>
+<li>Our findings demonstrate that multiple sclerosis disability progression follows a two-stage process, with a first stage probably dependent on focal inflammation and a second stage probably independent of current focal inflammation.</li>
+<li>This paper investigates evidence for a two-stage disability progression in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awq076" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Emmanuelle Leray. (2010). Evidence for a two-stage disability progression in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awq076</p>
@@ -1699,7 +1670,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Development of a multiple sclerosis functional composite as a clinical trial outcome measure</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1709,10 +1679,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates development of a multiple sclerosis functional composite as a clinical trial outcome measure. This paper provides details concerning the development and testing of the MSFC.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The primary clinical outcome measure for evaluating multiple sclerosis in clinical trials has been Kurtzke&#x27;s expanded disability status scale (EDSS).</li>
-<li>Challenge: New therapies appear to favourably impact the course of multiple sclerosis and render continued use of placebo control groups more difficult.</li>
-<li>Action: Consequently, future trials are likely to compare active treatment groups which will most probably require increased sample sizes in order to detect therapeutic efficacy.</li>
-<li>Resolution: Because more responsive outcome measures will be needed for active arm comparison studies, the National Multiple Sclerosis Society&#x27;s Advisory Committee on Clinical Trials of New Agents in Multiple Sclerosis appointed a Task Force that was charged with developing improved clinical outcome measures.</li>
+<li>The primary clinical outcome measure for evaluating multiple sclerosis in clinical trials has been Kurtzke&#x27;s expanded disability status scale (EDSS).</li>
+<li>New therapies appear to favourably impact the course of multiple sclerosis and render continued use of placebo control groups more difficult.</li>
+<li>Consequently, future trials are likely to compare active treatment groups which will most probably require increased sample sizes in order to detect therapeutic efficacy.</li>
+<li>Because more responsive outcome measures will be needed for active arm comparison studies, the National Multiple Sclerosis Society&#x27;s Advisory Committee on Clinical Trials of New Agents in Multiple Sclerosis appointed a Task Force that was charged with developing improved clinical outcome measures.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/122.5.871" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gary Cutter. (1999). Development of a multiple sclerosis functional composite as a clinical trial outcome measure. Brain. https://doi.org/10.1093/brain/122.5.871</p>
@@ -1734,7 +1704,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Harmonizing Definitions for Progression Independent of Relapse Activity in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2023</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1744,10 +1713,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates harmonizing definitions for progression independent of relapse activity in multiple sclerosis. The harmonized definition suggested here may improve the comparability of results in current and future cohorts and data sets.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: PIRA is the most frequent manifestation of disability accumulation across the full spectrum of traditional MS phenotypes, including clinically isolated syndrome and early RRMS.</li>
-<li>Challenge: The harmonized definition suggested here may improve the comparability of results in current and future cohorts and data sets.</li>
-<li>Action: This paper investigates harmonizing definitions for progression independent of relapse activity in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>PIRA is the most frequent manifestation of disability accumulation across the full spectrum of traditional MS phenotypes, including clinically isolated syndrome and early RRMS.</li>
+<li>The harmonized definition suggested here may improve the comparability of results in current and future cohorts and data sets.</li>
+<li>This paper investigates harmonizing definitions for progression independent of relapse activity in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2023.3331" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jannis Müller. (2023). Harmonizing Definitions for Progression Independent of Relapse Activity in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2023.3331</p>
@@ -1769,7 +1738,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Oral Fingolimod (FTY720) for Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -1779,10 +1747,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates oral fingolimod (fty720) for relapsing multiple sclerosis. (Clinicaltrials.gov numbers, NCT00333138 [core study] and NCT00235430 [ClinicalTrials.gov] [extension].).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this proof-of-concept study, fingolimod reduced the number of lesions detected on MRI and clinical disease activity in patients with multiple sclerosis.</li>
-<li>Challenge: Evaluation in larger, longer-term studies is warranted.</li>
-<li>Action: (Clinicaltrials.gov numbers, NCT00333138 [core study] and NCT00235430 [ClinicalTrials.gov] [extension].).</li>
-<li>Resolution: This paper investigates oral fingolimod (fty720) for relapsing multiple sclerosis.</li>
+<li>In this proof-of-concept study, fingolimod reduced the number of lesions detected on MRI and clinical disease activity in patients with multiple sclerosis.</li>
+<li>Evaluation in larger, longer-term studies is warranted.</li>
+<li>(Clinicaltrials.gov numbers, NCT00333138 [core study] and NCT00235430 [ClinicalTrials.gov] [extension].).</li>
+<li>This paper investigates oral fingolimod (fty720) for relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa052643" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2006). Oral Fingolimod (FTY720) for Relapsing Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa052643</p>
@@ -1804,7 +1772,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Evaluation of No Evidence of Disease Activity in a 7-Year Longitudinal Multiple Sclerosis Cohort</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (57%)</span>
 </div>
@@ -1814,10 +1781,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates evaluation of no evidence of disease activity in a 7-year longitudinal multiple sclerosis cohort. Our results provide a basis for investigating NEDA as an outcome measure and treatment goal and for evaluating the effect of new MS drugs on NEDA.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results provide a basis for investigating NEDA as an outcome measure and treatment goal and for evaluating the effect of new MS drugs on NEDA.</li>
-<li>Challenge: This paper investigates evaluation of no evidence of disease activity in a 7-year longitudinal multiple sclerosis cohort.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results provide a basis for investigating NEDA as an outcome measure and treatment goal and for evaluating the effect of new MS drugs on NEDA.</li>
+<li>This paper investigates evaluation of no evidence of disease activity in a 7-year longitudinal multiple sclerosis cohort.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2014.3537" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Dalia Rotstein. (2014). Evaluation of No Evidence of Disease Activity in a 7-Year Longitudinal Multiple Sclerosis Cohort. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2014.3537</p>
@@ -1839,7 +1806,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Treatment with interferon beta-1b delays conversion to clinically definite and McDonald MS in patients with clinically isolated syndromes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (61%)</span>
 </div>
@@ -1849,10 +1815,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates treatment with interferon beta-1b delays conversion to clinically definite and mcdonald ms in patients with clinically isolated syndromes. Interferon beta-1b 250 mug subcutaneously every other day delayed conversion to clinically definite multiple sclerosis, and should be considered as a therapeutic option in patients presenting with a first clinical event suggestive of multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Interferon beta-1b 250 mug subcutaneously every other day delayed conversion to clinically definite multiple sclerosis, and should be considered as a therapeutic option in patients presenting with a first clinical event suggestive of multiple sclerosis.</li>
-<li>Challenge: This paper investigates treatment with interferon beta-1b delays conversion to clinically definite and mcdonald ms in patients with clinically isolated syndromes.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Interferon beta-1b 250 mug subcutaneously every other day delayed conversion to clinically definite multiple sclerosis, and should be considered as a therapeutic option in patients presenting with a first clinical event suggestive of multiple sclerosis.</li>
+<li>This paper investigates treatment with interferon beta-1b delays conversion to clinically definite and mcdonald ms in patients with clinically isolated syndromes.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000237641.33768.8d" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2006). Treatment with interferon beta-1b delays conversion to clinically definite and McDonald MS in patients with clinically isolated syndromes. Neurology. https://doi.org/10.1212/01.wnl.0000237641.33768.8d</p>
@@ -1874,7 +1840,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MSBase: an international, online registry and platform for collaborative outcomes research in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -1884,10 +1849,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates msbase: an international, online registry and platform for collaborative outcomes research in multiple sclerosis. This study design has been utilized in local and regional outcome studies in multiple sclerosis (MS) and has yielded invaluable epidemiological information.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study design has been utilized in local and regional outcome studies in multiple sclerosis (MS) and has yielded invaluable epidemiological information.</li>
-<li>Challenge: This paper investigates msbase: an international, online registry and platform for collaborative outcomes research in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study design has been utilized in local and regional outcome studies in multiple sclerosis (MS) and has yielded invaluable epidemiological information.</li>
+<li>This paper investigates msbase: an international, online registry and platform for collaborative outcomes research in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458506070775" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Helmut Butzkueven. (2006). MSBase: an international, online registry and platform for collaborative outcomes research in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458506070775</p>
@@ -1909,7 +1874,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>European/Canadian multicenter, double‐blind, randomized, placebo‐controlled study of the effects of glatiramer acetate on magnetic resonance imaging–measured disease activity and burden in patients with relapsing multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (73%)</span>
 </div>
@@ -1919,10 +1883,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates european/canadian multicenter, double‐blind, randomized, placebo‐controlled study of the effects of glatiramer acetate on magnetic resonance imaging–measured disease activity and burden in patients with relapsing multiple sclerosis. This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</li>
-<li>Challenge: This paper investigates european/canadian multicenter, double‐blind, randomized, placebo‐controlled study of the effects of glatiramer acetate on magnetic resonance imaging–measured disease activity and burden in patients with relapsing multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study was designed to determine the effect, onset, and durability of any effect of GA on disease activity monitored with magnetic resonance imaging (MRI) in patients with RRMS.</li>
+<li>This paper investigates european/canadian multicenter, double‐blind, randomized, placebo‐controlled study of the effects of glatiramer acetate on magnetic resonance imaging–measured disease activity and burden in patients with relapsing multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.64" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Giancarlo Comi. (2001). European/Canadian multicenter, double‐blind, randomized, placebo‐controlled study of the effects of glatiramer acetate on magnetic resonance imaging–measured disease activity and burden in patients with relapsing multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.64</p>
@@ -1944,7 +1908,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Glatiramer acetate in primary progressive multiple sclerosis: Results of a multinational, multicenter, double‐blind, placebo‐controlled trial</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -1954,10 +1917,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates glatiramer acetate in primary progressive multiple sclerosis: results of a multinational, multicenter, double‐blind, placebo‐controlled trial. Post hoc analysis suggests GA may have slowed clinical progression in male patients who showed more rapid progression when untreated.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The trial failed to demonstrate a treatment effect of GA on primary progressive multiple sclerosis.</li>
-<li>Challenge: Both the unanticipated low event rate and premature discontinuation of study medication decreased the power to detect a treatment effect.</li>
-<li>Action: Post hoc analysis suggests GA may have slowed clinical progression in male patients who showed more rapid progression when untreated.</li>
-<li>Resolution: This paper investigates glatiramer acetate in primary progressive multiple sclerosis: results of a multinational, multicenter, double‐blind, placebo‐controlled trial.</li>
+<li>The trial failed to demonstrate a treatment effect of GA on primary progressive multiple sclerosis.</li>
+<li>Both the unanticipated low event rate and premature discontinuation of study medication decreased the power to detect a treatment effect.</li>
+<li>Post hoc analysis suggests GA may have slowed clinical progression in male patients who showed more rapid progression when untreated.</li>
+<li>This paper investigates glatiramer acetate in primary progressive multiple sclerosis: results of a multinational, multicenter, double‐blind, placebo‐controlled trial.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21079" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jerry S. Wolinsky. (2007). Glatiramer acetate in primary progressive multiple sclerosis: Results of a multinational, multicenter, double‐blind, placebo‐controlled trial. Annals of Neurology. https://doi.org/10.1002/ana.21079</p>
@@ -1979,7 +1942,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Safety and efficacy of cladribine tablets in patients with relapsing–remitting multiple sclerosis: Results from the randomized extension trial of the CLARITY study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1989,10 +1951,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates safety and efficacy of cladribine tablets in patients with relapsing–remitting multiple sclerosis: results from the randomized extension trial of the clarity study. No clinical improvement in efficacy was apparent following further treatment with cladribine tablets after the initial 2-year treatment period in this trial setting.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Cladribine tablets treatment for 2 years followed by 2 years&#x27; placebo treatment produced durable clinical benefits similar to 4 years of cladribine treatment with a low risk of severe lymphopenia or clinical worsening.</li>
-<li>Challenge: No clinical improvement in efficacy was apparent following further treatment with cladribine tablets after the initial 2-year treatment period in this trial setting.</li>
-<li>Action: This paper investigates safety and efficacy of cladribine tablets in patients with relapsing–remitting multiple sclerosis: results from the randomized extension trial of the clarity study.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Cladribine tablets treatment for 2 years followed by 2 years&#x27; placebo treatment produced durable clinical benefits similar to 4 years of cladribine treatment with a low risk of severe lymphopenia or clinical worsening.</li>
+<li>No clinical improvement in efficacy was apparent following further treatment with cladribine tablets after the initial 2-year treatment period in this trial setting.</li>
+<li>This paper investigates safety and efficacy of cladribine tablets in patients with relapsing–remitting multiple sclerosis: results from the randomized extension trial of the clarity study.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517727603" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gavin Giovannoni. (2017). Safety and efficacy of cladribine tablets in patients with relapsing–remitting multiple sclerosis: Results from the randomized extension trial of the CLARITY study. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517727603</p>
@@ -2014,7 +1976,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Effect of relapses on development of residual deficit in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (45%)</span>
 </div>
@@ -2024,10 +1985,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates effect of relapses on development of residual deficit in multiple sclerosis. MS exacerbations produce a measurable and sustained effect on disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: MS exacerbations produce a measurable and sustained effect on disability.</li>
-<li>Challenge: This paper investigates effect of relapses on development of residual deficit in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>MS exacerbations produce a measurable and sustained effect on disability.</li>
+<li>This paper investigates effect of relapses on development of residual deficit in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000096175.39831.21" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Fred Lublin. (2003). Effect of relapses on development of residual deficit in multiple sclerosis. Neurology. https://doi.org/10.1212/01.wnl.0000096175.39831.21</p>
@@ -2049,7 +2010,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Treatment Escalation vs Immediate Initiation of Highly Effective Treatment for Patients With Relapsing-Remitting Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (64%)</span>
 </div>
@@ -2059,10 +2019,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates treatment escalation vs immediate initiation of highly effective treatment for patients with relapsing-remitting multiple sclerosis. The findings of this study suggest that there is an association between differences in treatment strategies for RRMS and disability outcomes at a national level.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The findings of this study suggest that there is an association between differences in treatment strategies for RRMS and disability outcomes at a national level.</li>
-<li>Challenge: This paper investigates treatment escalation vs immediate initiation of highly effective treatment for patients with relapsing-remitting multiple sclerosis.</li>
-<li>Action: Escalation of treatment efficacy was inferior to using more efficacious DMT as initial treatment.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The findings of this study suggest that there is an association between differences in treatment strategies for RRMS and disability outcomes at a national level.</li>
+<li>This paper investigates treatment escalation vs immediate initiation of highly effective treatment for patients with relapsing-remitting multiple sclerosis.</li>
+<li>Escalation of treatment efficacy was inferior to using more efficacious DMT as initial treatment.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2021.2738" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tim Spelman. (2021). Treatment Escalation vs Immediate Initiation of Highly Effective Treatment for Patients With Relapsing-Remitting Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2021.2738</p>
@@ -2084,7 +2044,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rituximab in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (47%)</span>
 </div>
@@ -2094,10 +2053,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rituximab in multiple sclerosis. This study provides Class IV evidence that for patients with MS, rituximab is safe and effective.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class IV evidence that for patients with MS, rituximab is safe and effective.</li>
-<li>Challenge: This paper investigates rituximab in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class IV evidence that for patients with MS, rituximab is safe and effective.</li>
+<li>This paper investigates rituximab in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000003331" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jonatan Salzer. (2016). Rituximab in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000003331</p>
@@ -2119,7 +2078,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Smouldering multiple sclerosis: the ‘real MS’</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2129,10 +2087,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates smouldering multiple sclerosis: the ‘real ms’. This should also be complemented with a holistic approach to the management of other systemic disease processes that have been shown to worsen MS outcomes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Using a philosophical approach or deductive reasoning, we challenge the dominant clinico-radiological worldview that defines multiple sclerosis (MS) as a focal inflammatory disease of the central nervous system (CNS).</li>
-<li>Challenge: We provide a range of evidence to argue that the &#x27;real MS&#x27; is in fact driven primarily by a smouldering pathological disease process.</li>
-<li>Action: In natural history studies and clinical trials, relapses and focal activity revealed by magnetic resonance imaging (MRI) in MS patients on placebo or on disease-modifying therapies (DMTs) were found to be poor predictors of long-term disease evolution and were dissociated from disability outcomes.</li>
-<li>Resolution: In addition, the progressive accumulation of disability in MS can occur independently of relapse activity from early in the disease course.</li>
+<li>Using a philosophical approach or deductive reasoning, we challenge the dominant clinico-radiological worldview that defines multiple sclerosis (MS) as a focal inflammatory disease of the central nervous system (CNS).</li>
+<li>We provide a range of evidence to argue that the &#x27;real MS&#x27; is in fact driven primarily by a smouldering pathological disease process.</li>
+<li>In natural history studies and clinical trials, relapses and focal activity revealed by magnetic resonance imaging (MRI) in MS patients on placebo or on disease-modifying therapies (DMTs) were found to be poor predictors of long-term disease evolution and were dissociated from disability outcomes.</li>
+<li>In addition, the progressive accumulation of disability in MS can occur independently of relapse activity from early in the disease course.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/17562864211066751" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gavin Giovannoni. (2022). Smouldering multiple sclerosis: the ‘real MS’. Therapeutic Advances in Neurological Disorders. https://doi.org/10.1177/17562864211066751</p>
@@ -2154,7 +2112,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Treatment effect on brain atrophy correlates with treatment effect on disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -2164,10 +2121,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates treatment effect on brain atrophy correlates with treatment effect on disability in multiple sclerosis. This effect is independent of the effect of active MRI lesions on disability; the 2 MRI measures predict the treatment effect on disability more closely when used in combination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In RRMS, the treatment effect on brain atrophy is correlated with the effect on disability progression over 2 years.</li>
-<li>Challenge: This effect is independent of the effect of active MRI lesions on disability; the 2 MRI measures predict the treatment effect on disability more closely when used in combination.</li>
-<li>Action: This paper investigates treatment effect on brain atrophy correlates with treatment effect on disability in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In RRMS, the treatment effect on brain atrophy is correlated with the effect on disability progression over 2 years.</li>
+<li>This effect is independent of the effect of active MRI lesions on disability; the 2 MRI measures predict the treatment effect on disability more closely when used in combination.</li>
+<li>This paper investigates treatment effect on brain atrophy correlates with treatment effect on disability in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24018" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Maria Pia Sormani. (2013). Treatment effect on brain atrophy correlates with treatment effect on disability in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.24018</p>
@@ -2189,7 +2146,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mechanism of Action of Oral Fingolimod (FTY720) in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -2199,10 +2155,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mechanism of action of oral fingolimod (fty720) in multiple sclerosis. Therapeutic efficacy observed in animal studies has been substantiated in phase 2 and 3 trials involving patients with relapsing or relapsing-remitting MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Fingolimod (FTY720) is a first-in-class orally bioavailable compound that has shown efficacy in advanced clinical trials for the treatment of multiple sclerosis (MS).</li>
-<li>Challenge: In vivo, fingolimod is phosphorylated to form fingolimod-phosphate, which resembles naturally occurring sphingosine 1-phosphate (S1P), an extracellular lipid mediator whose major effects are mediated by cognate G protein-coupled receptors.</li>
-<li>Action: There are at least 5 S1P receptor subtypes, known as S1P subtypes 1-5 (S1P1-5), 4 of which bind fingolimod-phosphate.</li>
-<li>Resolution: This paper investigates mechanism of action of oral fingolimod (fty720) in multiple sclerosis.</li>
+<li>Fingolimod (FTY720) is a first-in-class orally bioavailable compound that has shown efficacy in advanced clinical trials for the treatment of multiple sclerosis (MS).</li>
+<li>In vivo, fingolimod is phosphorylated to form fingolimod-phosphate, which resembles naturally occurring sphingosine 1-phosphate (S1P), an extracellular lipid mediator whose major effects are mediated by cognate G protein-coupled receptors.</li>
+<li>There are at least 5 S1P receptor subtypes, known as S1P subtypes 1-5 (S1P1-5), 4 of which bind fingolimod-phosphate.</li>
+<li>This paper investigates mechanism of action of oral fingolimod (fty720) in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/wnf.0b013e3181cbf825" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jerold Chun. (2010). Mechanism of Action of Oral Fingolimod (FTY720) in Multiple Sclerosis. Clinical Neuropharmacology. https://doi.org/10.1097/wnf.0b013e3181cbf825</p>
@@ -2224,7 +2180,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Memory B Cells are Major Targets for Effective Immunotherapy in Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -2234,10 +2189,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates memory b cells are major targets for effective immunotherapy in relapsing multiple sclerosis. This creates a unifying concept centered on memory B cells that is consistent with therapeutic, histopathological and etiological aspects of MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although multiple sclerosis (MS) is considered to be a CD4, Th17-mediated autoimmune disease, supportive evidence is perhaps circumstantial, often based on animal studies, and is questioned by the perceived failure of CD4-depleting antibodies to control relapsing MS.</li>
-<li>Challenge: Therefore, it was interestingly to find that current MS-treatments, believed to act via T cell inhibition, including: beta-interferons, glatiramer acetate, cytostatic agents, dimethyl fumarate, fingolimod, cladribine, daclizumab, rituximab/ocrelizumab physically, or functionally in the case of natalizumab, also depleted CD19+, CD27+ memory B cells.</li>
-<li>Action: This depletion was substantial and long-term following CD52 and CD20-depletion, and both also induced long-term inhibition of MS with few treatment cycles, indicating induction-therapy activity.</li>
-<li>Resolution: This paper investigates memory b cells are major targets for effective immunotherapy in relapsing multiple sclerosis.</li>
+<li>Although multiple sclerosis (MS) is considered to be a CD4, Th17-mediated autoimmune disease, supportive evidence is perhaps circumstantial, often based on animal studies, and is questioned by the perceived failure of CD4-depleting antibodies to control relapsing MS.</li>
+<li>Therefore, it was interestingly to find that current MS-treatments, believed to act via T cell inhibition, including: beta-interferons, glatiramer acetate, cytostatic agents, dimethyl fumarate, fingolimod, cladribine, daclizumab, rituximab/ocrelizumab physically, or functionally in the case of natalizumab, also depleted CD19+, CD27+ memory B cells.</li>
+<li>This depletion was substantial and long-term following CD52 and CD20-depletion, and both also induced long-term inhibition of MS with few treatment cycles, indicating induction-therapy activity.</li>
+<li>This paper investigates memory b cells are major targets for effective immunotherapy in relapsing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.ebiom.2017.01.042" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David Baker. (2017). Memory B Cells are Major Targets for Effective Immunotherapy in Relapsing Multiple Sclerosis. EBioMedicine. https://doi.org/10.1016/j.ebiom.2017.01.042</p>
@@ -2259,7 +2214,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Disease modifying therapies in multiple sclerosis: Subcommittee of the American Academy of Neurology and the MS Council for Clinical Practice Guidelines [RETIRED]</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -2269,10 +2223,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates disease modifying therapies in multiple sclerosis: subcommittee of the american academy of neurology and the ms council for clinical practice guidelines [retired]. The fourth type, progressive-relapsing MS (PRMS), also begins with a progressive course although these patients also experience occasional attacks.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Overview.</li>
-<li>Challenge: Clinical types of MS.</li>
-<li>Action: MS is a chronic recurrent inflammatory disorder of the CNS.</li>
-<li>Resolution: This paper investigates disease modifying therapies in multiple sclerosis: subcommittee of the american academy of neurology and the ms council for clinical practice guidelines [retired].</li>
+<li>Overview.</li>
+<li>Clinical types of MS.</li>
+<li>MS is a chronic recurrent inflammatory disorder of the CNS.</li>
+<li>This paper investigates disease modifying therapies in multiple sclerosis: subcommittee of the american academy of neurology and the ms council for clinical practice guidelines [retired].</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.58.2.169" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Report of the Therapeutics and Technology Assessment Subcommittee of the American Academy of Neurology and the MS Council for Clinical Practice Guidelines. (2002). Disease modifying therapies in multiple sclerosis: Subcommittee of the American Academy of Neurology and the MS Council for Clinical Practice Guidelines [RETIRED]. Neurology. https://doi.org/10.1212/wnl.58.2.169</p>
@@ -2294,7 +2248,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Is it time to target no evident disease activity (NEDA) in multiple sclerosis?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2304,10 +2257,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates is it time to target no evident disease activity (neda) in multiple sclerosis?. We envisage the definition of NEDA evolving with time as new technological innovations are adopted into clinical practice, for example the normalisation of whole, or regional, brain atrophy rates and cerebrospinal fluid neurofilament levels.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The management of multiple sclerosis is becoming increasingly complex with the emergence of new and more effective disease-modifying therapies (DMT).</li>
-<li>Challenge: We propose a new treatment paradigm that individualises treatment based on a choice between two interchangeable therapeutic strategies of maintenance-escalation or induction therapy.</li>
-<li>Action: We propose treating- to-target of no evident disease activity (NEDA) as defined using clinical and MRI criteria.</li>
-<li>Resolution: This paper investigates is it time to target no evident disease activity (neda) in multiple sclerosis?.</li>
+<li>The management of multiple sclerosis is becoming increasingly complex with the emergence of new and more effective disease-modifying therapies (DMT).</li>
+<li>We propose a new treatment paradigm that individualises treatment based on a choice between two interchangeable therapeutic strategies of maintenance-escalation or induction therapy.</li>
+<li>We propose treating- to-target of no evident disease activity (NEDA) as defined using clinical and MRI criteria.</li>
+<li>This paper investigates is it time to target no evident disease activity (neda) in multiple sclerosis?.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.msard.2015.04.006" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gavin Giovannoni. (2015). Is it time to target no evident disease activity (NEDA) in multiple sclerosis?. Multiple Sclerosis and Related Disorders. https://doi.org/10.1016/j.msard.2015.04.006</p>
@@ -2329,7 +2282,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Defining reliable disability outcomes in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (85%)</span>
 </div>
@@ -2339,10 +2291,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates defining reliable disability outcomes in multiple sclerosis. Extension of the required confirmation period increases the persistence of progression events.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Prevention of irreversible disability is currently the most important goal of disease modifying therapy for multiple sclerosis.</li>
-<li>Challenge: The disability outcomes used in most clinical trials rely on progression of Expanded Disability Status Scale score confirmed over 3 or 6 months.</li>
-<li>Action: However, sensitivity and stability of this metric has not been extensively evaluated.</li>
-<li>Resolution: This paper investigates defining reliable disability outcomes in multiple sclerosis.</li>
+<li>Prevention of irreversible disability is currently the most important goal of disease modifying therapy for multiple sclerosis.</li>
+<li>The disability outcomes used in most clinical trials rely on progression of Expanded Disability Status Scale score confirmed over 3 or 6 months.</li>
+<li>However, sensitivity and stability of this metric has not been extensively evaluated.</li>
+<li>This paper investigates defining reliable disability outcomes in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awv258" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tomáš Kalinčík. (2015). Defining reliable disability outcomes in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awv258</p>
@@ -2364,7 +2316,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Onset of secondary progressive phase and long-term evolution of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -2374,10 +2325,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates onset of secondary progressive phase and long-term evolution of multiple sclerosis. Baseline clinical features of early relapse frequency and age at onset can be used to select groups at higher risk of developing severe disability based on the probability of their disease becoming progressive within a defined time period.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The onset of SP MS is the dominant determinant of long-term prognosis, and its prevention is the most important target measure for treatment.</li>
-<li>Challenge: Baseline clinical features of early relapse frequency and age at onset can be used to select groups at higher risk of developing severe disability based on the probability of their disease becoming progressive within a defined time period.</li>
-<li>Action: This paper investigates onset of secondary progressive phase and long-term evolution of multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The onset of SP MS is the dominant determinant of long-term prognosis, and its prevention is the most important target measure for treatment.</li>
+<li>Baseline clinical features of early relapse frequency and age at onset can be used to select groups at higher risk of developing severe disability based on the probability of their disease becoming progressive within a defined time period.</li>
+<li>This paper investigates onset of secondary progressive phase and long-term evolution of multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2012-304333" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Antonio Scalfari. (2013). Onset of secondary progressive phase and long-term evolution of multiple sclerosis. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2012-304333</p>
@@ -2399,7 +2350,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>New insights into the burden and costs of multiple sclerosis in Europe</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (52%)</span>
 </div>
@@ -2409,10 +2359,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates new insights into the burden and costs of multiple sclerosis in europe. Costs and utility were highly correlated with disease severity, but resource consumption was heavily influenced by healthcare systems organisation and availability of services.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Costs and utility were highly correlated with disease severity, but resource consumption was heavily influenced by healthcare systems organisation and availability of services.</li>
-<li>Challenge: This paper investigates new insights into the burden and costs of multiple sclerosis in europe.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Costs and utility were highly correlated with disease severity, but resource consumption was heavily influenced by healthcare systems organisation and availability of services.</li>
+<li>This paper investigates new insights into the burden and costs of multiple sclerosis in europe.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517694432" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Gisela Kobelt. (2017). New insights into the burden and costs of multiple sclerosis in Europe. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517694432</p>
@@ -2434,7 +2384,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Age and disability accumulation in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -2444,10 +2393,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates age and disability accumulation in multiple sclerosis. Age independently affects disability development primarily by changing probability and latency of SP onset, with little effect on the progressive course.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Development of SP is the dominant determinant of long-term prognosis, independent of disease duration and early relapse frequency.</li>
-<li>Challenge: Age independently affects disability development primarily by changing probability and latency of SP onset, with little effect on the progressive course.</li>
-<li>Action: This paper investigates age and disability accumulation in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Development of SP is the dominant determinant of long-term prognosis, independent of disease duration and early relapse frequency.</li>
+<li>Age independently affects disability development primarily by changing probability and latency of SP onset, with little effect on the progressive course.</li>
+<li>This paper investigates age and disability accumulation in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e318230a17d" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Antonio Scalfari. (2011). Age and disability accumulation in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0b013e318230a17d</p>
@@ -2469,7 +2418,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Inclusion of brain volume loss in a revised measure of ‘no evidence of disease activity’ (NEDA-4) in relapsing–remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -2479,10 +2427,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates inclusion of brain volume loss in a revised measure of ‘no evidence of disease activity’ (neda-4) in relapsing–remitting multiple sclerosis. NEDA-4 has the potential to capture the impact of therapies on both inflammation and neurodegeneration, and deserves further evaluation across different compounds and in long-term studies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: NEDA-4 has the potential to capture the impact of therapies on both inflammation and neurodegeneration, and deserves further evaluation across different compounds and in long-term studies.</li>
-<li>Challenge: This paper investigates inclusion of brain volume loss in a revised measure of ‘no evidence of disease activity’ (neda-4) in relapsing–remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>NEDA-4 has the potential to capture the impact of therapies on both inflammation and neurodegeneration, and deserves further evaluation across different compounds and in long-term studies.</li>
+<li>This paper investigates inclusion of brain volume loss in a revised measure of ‘no evidence of disease activity’ (neda-4) in relapsing–remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458515616701" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2016). Inclusion of brain volume loss in a revised measure of ‘no evidence of disease activity’ (NEDA-4) in relapsing–remitting multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458515616701</p>
@@ -2504,7 +2452,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Relapses in multiple sclerosis are age- and time-dependent</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (74%)</span>
 </div>
@@ -2514,10 +2461,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates relapses in multiple sclerosis are age- and time-dependent. Our observations have clinical implications: 1) any drug able to modify relapse rates has the greatest potential for a population impact in patients &lt;40 years old and within the first few demi-decades of disease; 2) continuation of drug beyond these times may be of limited value; 3) long-term follow-up studies must consider that relapse rates probably decline at different rates over time according to the patient&#x27;s onset age; 4) a relapse-quiescent period in MS is not uncommon.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Relapse rates were age- and time-dependent.</li>
-<li>Challenge: Our observations have clinical implications: 1) any drug able to modify relapse rates has the greatest potential for a population impact in patients &lt;40 years old and within the first few demi-decades of disease; 2) continuation of drug beyond these times may be of limited value; 3) long-term follow-up studies must consider that relapse rates probably decline at different rates over time according to the patient&#x27;s onset age; 4) a relapse-quiescent period in MS is not uncommon.</li>
-<li>Action: This paper investigates relapses in multiple sclerosis are age- and time-dependent.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Relapse rates were age- and time-dependent.</li>
+<li>Our observations have clinical implications: 1) any drug able to modify relapse rates has the greatest potential for a population impact in patients &lt;40 years old and within the first few demi-decades of disease; 2) continuation of drug beyond these times may be of limited value; 3) long-term follow-up studies must consider that relapse rates probably decline at different rates over time according to the patient&#x27;s onset age; 4) a relapse-quiescent period in MS is not uncommon.</li>
+<li>This paper investigates relapses in multiple sclerosis are age- and time-dependent.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp.2008.145805" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Helen Tremlett. (2008). Relapses in multiple sclerosis are age- and time-dependent. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp.2008.145805</p>
@@ -2539,7 +2486,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Progression is independent of relapse activity in early multiple sclerosis: a real-life cohort study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (85%)</span>
 </div>
@@ -2549,10 +2495,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates progression is independent of relapse activity in early multiple sclerosis: a real-life cohort study. This study provides evidence that in an early relapsing-onset multiple sclerosis cohort, progression independent of relapse activity was an important contributor to confirmed disability accumulation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides evidence that in an early relapsing-onset multiple sclerosis cohort, progression independent of relapse activity was an important contributor to confirmed disability accumulation.</li>
-<li>Challenge: Our findings indicate that insidious progression appears even in the earliest phases of the disease, suggesting that inflammation and neurodegeneration can represent a single disease continuum, in which age is one of the main determinants of disease phenomenology.</li>
-<li>Action: This paper investigates progression is independent of relapse activity in early multiple sclerosis: a real-life cohort study.</li>
-<li>Resolution: Disability accrual in multiple sclerosis may occur as relapse-associated worsening or progression independent of relapse activity.</li>
+<li>This study provides evidence that in an early relapsing-onset multiple sclerosis cohort, progression independent of relapse activity was an important contributor to confirmed disability accumulation.</li>
+<li>Our findings indicate that insidious progression appears even in the earliest phases of the disease, suggesting that inflammation and neurodegeneration can represent a single disease continuum, in which age is one of the main determinants of disease phenomenology.</li>
+<li>This paper investigates progression is independent of relapse activity in early multiple sclerosis: a real-life cohort study.</li>
+<li>Disability accrual in multiple sclerosis may occur as relapse-associated worsening or progression independent of relapse activity.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awac111" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Emilio Portaccio. (2022). Progression is independent of relapse activity in early multiple sclerosis: a real-life cohort study. Brain. https://doi.org/10.1093/brain/awac111</p>
@@ -2574,7 +2520,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Subcutaneous ofatumumab in patients with relapsing-remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (53%)</span>
 </div>
@@ -2584,10 +2529,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates subcutaneous ofatumumab in patients with relapsing-remitting multiple sclerosis. This study provides Class I evidence that for patients with RMS, ofatumumab decreases the number of new MRI gadolinium-enhancing lesions 12 weeks after treatment initiation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class I evidence that for patients with RMS, ofatumumab decreases the number of new MRI gadolinium-enhancing lesions 12 weeks after treatment initiation.</li>
-<li>Challenge: This paper investigates subcutaneous ofatumumab in patients with relapsing-remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class I evidence that for patients with RMS, ofatumumab decreases the number of new MRI gadolinium-enhancing lesions 12 weeks after treatment initiation.</li>
+<li>This paper investigates subcutaneous ofatumumab in patients with relapsing-remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000005516" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Amit Bar‐Or. (2018). Subcutaneous ofatumumab in patients with relapsing-remitting multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000005516</p>
@@ -2609,7 +2554,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Validity of the Symbol Digit Modalities Test as a cognition performance outcome measure for multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2619,10 +2563,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates validity of the symbol digit modalities test as a cognition performance outcome measure for multiple sclerosis. The research in MS clearly supports the reliability and validity of this test and recently has supported a responder definition of SDMT change approximating 4 points or 10% in magnitude.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</li>
-<li>Challenge: The increasing focus of new therapies on slowing progression or reversing neurological disability makes the utilization of sensitive, reproducible, and valid measures essential.</li>
-<li>Action: Processing speed is a basic elemental cognitive function that likely influences downstream processes such as memory.</li>
-<li>Resolution: The Multiple Sclerosis Outcome Assessments Consortium (MSOAC) includes representatives from advocacy organizations, Food and Drug Administration (FDA), European Medicines Agency (EMA), National Institute of Neurological Disorders and Stroke (NINDS), academic institutions, and industry partners along with persons living with MS.</li>
+<li>Cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</li>
+<li>The increasing focus of new therapies on slowing progression or reversing neurological disability makes the utilization of sensitive, reproducible, and valid measures essential.</li>
+<li>Processing speed is a basic elemental cognitive function that likely influences downstream processes such as memory.</li>
+<li>The Multiple Sclerosis Outcome Assessments Consortium (MSOAC) includes representatives from advocacy organizations, Food and Drug Administration (FDA), European Medicines Agency (EMA), National Institute of Neurological Disorders and Stroke (NINDS), academic institutions, and industry partners along with persons living with MS.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517690821" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ralph H. B. Benedict. (2017). Validity of the Symbol Digit Modalities Test as a cognition performance outcome measure for multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517690821</p>
@@ -2644,7 +2588,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Predictors of long‐term disability accrual in relapse‐onset multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -2654,10 +2597,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates predictors of long‐term disability accrual in relapse‐onset multiple sclerosis. We demonstrate that high annualized relapse rate, particularly on-treatment relapse, is an indicator of poor prognosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We demonstrate that high annualized relapse rate, particularly on-treatment relapse, is an indicator of poor prognosis.</li>
-<li>Challenge: This paper investigates predictors of long‐term disability accrual in relapse‐onset multiple sclerosis.</li>
-<li>Action: We provide evidence of long-term treatment benefit in a large registry cohort, and provide evidence of long-term protective effects of pregnancy against disability accrual.</li>
-<li>Resolution: Ann Neurol 2016;80:89-100.</li>
+<li>We demonstrate that high annualized relapse rate, particularly on-treatment relapse, is an indicator of poor prognosis.</li>
+<li>This paper investigates predictors of long‐term disability accrual in relapse‐onset multiple sclerosis.</li>
+<li>We provide evidence of long-term treatment benefit in a large registry cohort, and provide evidence of long-term protective effects of pregnancy against disability accrual.</li>
+<li>Ann Neurol 2016;80:89-100.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24682" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Vilija Jokubaitis. (2016). Predictors of long‐term disability accrual in relapse‐onset multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.24682</p>
@@ -2679,7 +2622,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Greater sensitivity to multiple sclerosis disability worsening and progression events using a roving versus a fixed reference value in a prospective cohort study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (62%)</span>
 </div>
@@ -2689,10 +2631,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates greater sensitivity to multiple sclerosis disability worsening and progression events using a roving versus a fixed reference value in a prospective cohort study. In this long-term observational RRMS dataset, a roving EDSS reference value was more efficient than a study baseline EDSS reference in detecting progression/worsening events unrelated to relapses and thus the transition to secondary progressive disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this long-term observational RRMS dataset, a roving EDSS reference value was more efficient than a study baseline EDSS reference in detecting progression/worsening events unrelated to relapses and thus the transition to secondary progressive disease.</li>
-<li>Challenge: This paper investigates greater sensitivity to multiple sclerosis disability worsening and progression events using a roving versus a fixed reference value in a prospective cohort study.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this long-term observational RRMS dataset, a roving EDSS reference value was more efficient than a study baseline EDSS reference in detecting progression/worsening events unrelated to relapses and thus the transition to secondary progressive disease.</li>
+<li>This paper investigates greater sensitivity to multiple sclerosis disability worsening and progression events using a roving versus a fixed reference value in a prospective cohort study.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458517709619" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ludwig Kappos. (2017). Greater sensitivity to multiple sclerosis disability worsening and progression events using a roving versus a fixed reference value in a prospective cohort study. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458517709619</p>
@@ -2714,7 +2656,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>New natural history of interferon‐β–treated relapsing multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (45%)</span>
 </div>
@@ -2724,10 +2665,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates new natural history of interferon‐β–treated relapsing multiple sclerosis. IFN-beta slows progression in relapsing-remitting multiple sclerosis patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: IFN-beta slows progression in relapsing-remitting multiple sclerosis patients.</li>
-<li>Challenge: This paper investigates new natural history of interferon‐β–treated relapsing multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>IFN-beta slows progression in relapsing-remitting multiple sclerosis patients.</li>
+<li>This paper investigates new natural history of interferon‐β–treated relapsing multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21102" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> María Trojano. (2007). New natural history of interferon‐β–treated relapsing multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.21102</p>
@@ -2749,7 +2690,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Early use of high-efficacy disease‑modifying therapies makes the difference in people with multiple sclerosis: an expert opinion</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -2759,10 +2699,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates early use of high-efficacy disease‑modifying therapies makes the difference in people with multiple sclerosis: an expert opinion. However, these barriers do not apply to each HE-DMT and none of these appear insuperable.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic and progressive neurological disease that is characterized by neuroinflammation, demyelination and neurodegeneration occurring from the earliest phases of the disease and that may be underestimated.</li>
-<li>Challenge: MS patients accumulate disability through relapse-associated worsening or progression independent of relapse activity.</li>
-<li>Action: Early intervention with high-efficacy disease-modifying therapies (HE-DMTs) may represent the best window of opportunity to delay irreversible central nervous system damage and MS-related disability progression by hindering underlying heterogeneous pathophysiological processes contributing to disability progression.</li>
-<li>Resolution: In line with this, growing evidence suggests that early use of HE-DMTs is associated with a significant greater reduction not only of inflammatory activity (clinical relapses and new lesion formation at magnetic resonance imaging) but also of disease progression, in terms of accumulation of irreversible clinical disability and neurodegeneration compared to delayed HE-DMT use or escalation strategy.</li>
+<li>Multiple sclerosis (MS) is a chronic and progressive neurological disease that is characterized by neuroinflammation, demyelination and neurodegeneration occurring from the earliest phases of the disease and that may be underestimated.</li>
+<li>MS patients accumulate disability through relapse-associated worsening or progression independent of relapse activity.</li>
+<li>Early intervention with high-efficacy disease-modifying therapies (HE-DMTs) may represent the best window of opportunity to delay irreversible central nervous system damage and MS-related disability progression by hindering underlying heterogeneous pathophysiological processes contributing to disability progression.</li>
+<li>In line with this, growing evidence suggests that early use of HE-DMTs is associated with a significant greater reduction not only of inflammatory activity (clinical relapses and new lesion formation at magnetic resonance imaging) but also of disease progression, in terms of accumulation of irreversible clinical disability and neurodegeneration compared to delayed HE-DMT use or escalation strategy.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00415-022-11193-w" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimo Filippi. (2022). Early use of high-efficacy disease‑modifying therapies makes the difference in people with multiple sclerosis: an expert opinion. Journal of Neurology. https://doi.org/10.1007/s00415-022-11193-w</p>
@@ -2784,7 +2724,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Risk of natalizumab-associated PML in patients with MS is reduced with extended interval dosing</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -2794,10 +2733,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates risk of natalizumab-associated pml in patients with ms is reduced with extended interval dosing. This study provides Class III evidence that for patients with MS, natalizumab EID is associated with a lower PML risk than SID.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that for patients with MS, natalizumab EID is associated with a lower PML risk than SID.</li>
-<li>Challenge: This paper investigates risk of natalizumab-associated pml in patients with ms is reduced with extended interval dosing.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that for patients with MS, natalizumab EID is associated with a lower PML risk than SID.</li>
+<li>This paper investigates risk of natalizumab-associated pml in patients with ms is reduced with extended interval dosing.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000008243" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lana Zhovtis Ryerson. (2019). Risk of natalizumab-associated PML in patients with MS is reduced with extended interval dosing. Neurology. https://doi.org/10.1212/wnl.0000000000008243</p>
@@ -2819,7 +2758,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Clinical Course of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2829,10 +2767,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates clinical course of multiple sclerosis. There is still a lack of imaging and biological markers that would distinguish MS phenotypes and prognosticate the disease course on an individual patient&#x27;s level, creating a pressing need for large collaborative research efforts in this field.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The 1996 originally established multiple sclerosis (MS) subtypes, based solely on clinical impression and consensus, were revised in 2013 to review potential imaging and biological correlates and to reflect recently identified clinical aspects of MS.</li>
-<li>Challenge: As a result, potential new disease phenotypes, radiologically isolated syndrome, and clinically isolated syndrome were considered along with the addition of two new descriptor subtypes: activity and progression applied to relapsing remitting and progressive MS phenotypes.</li>
-<li>Action: In this way, the description of an individual patient&#x27;s disease course is refined and provides temporal information about the ongoing disease process.</li>
-<li>Resolution: There is still a lack of imaging and biological markers that would distinguish MS phenotypes and prognosticate the disease course on an individual patient&#x27;s level, creating a pressing need for large collaborative research efforts in this field.</li>
+<li>The 1996 originally established multiple sclerosis (MS) subtypes, based solely on clinical impression and consensus, were revised in 2013 to review potential imaging and biological correlates and to reflect recently identified clinical aspects of MS.</li>
+<li>As a result, potential new disease phenotypes, radiologically isolated syndrome, and clinically isolated syndrome were considered along with the addition of two new descriptor subtypes: activity and progression applied to relapsing remitting and progressive MS phenotypes.</li>
+<li>In this way, the description of an individual patient&#x27;s disease course is refined and provides temporal information about the ongoing disease process.</li>
+<li>There is still a lack of imaging and biological markers that would distinguish MS phenotypes and prognosticate the disease course on an individual patient&#x27;s level, creating a pressing need for large collaborative research efforts in this field.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1101/cshperspect.a028928" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sylvia Klineova. (2018). Clinical Course of Multiple Sclerosis. Cold Spring Harbor Perspectives in Medicine. https://doi.org/10.1101/cshperspect.a028928</p>
@@ -2854,7 +2792,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Establishing pathological cut-offs of brain atrophy rates in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -2864,10 +2801,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates establishing pathological cut-offs of brain atrophy rates in multiple sclerosis. Such results could be of great value in a clinical setting, particularly in assessing treatment efficacy in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our evidence-based criteria provide values able to discriminate the presence or absence of &#x27;pathological&#x27; brain volume loss in MS with high specificity.</li>
-<li>Challenge: Such results could be of great value in a clinical setting, particularly in assessing treatment efficacy in MS.</li>
-<li>Action: This paper investigates establishing pathological cut-offs of brain atrophy rates in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our evidence-based criteria provide values able to discriminate the presence or absence of &#x27;pathological&#x27; brain volume loss in MS with high specificity.</li>
+<li>Such results could be of great value in a clinical setting, particularly in assessing treatment efficacy in MS.</li>
+<li>This paper investigates establishing pathological cut-offs of brain atrophy rates in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2014-309903" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nicola De Stefano. (2015). Establishing pathological cut-offs of brain atrophy rates in multiple sclerosis. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2014-309903</p>
@@ -2889,7 +2826,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Initial high-efficacy disease-modifying therapy in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -2899,10 +2835,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates initial high-efficacy disease-modifying therapy in multiple sclerosis. This study provides Class III evidence that for patients with MS, starting heDMT lowers the risk of EDSS worsening and relapses compared to starting meDMT.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that for patients with MS, starting heDMT lowers the risk of EDSS worsening and relapses compared to starting meDMT.</li>
-<li>Challenge: This paper investigates initial high-efficacy disease-modifying therapy in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that for patients with MS, starting heDMT lowers the risk of EDSS worsening and relapses compared to starting meDMT.</li>
+<li>This paper investigates initial high-efficacy disease-modifying therapy in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000010135" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mathias Due Buron. (2020). Initial high-efficacy disease-modifying therapy in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000010135</p>
@@ -2924,7 +2860,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rituximab versus fingolimod after natalizumab in multiple sclerosis patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (62%)</span>
 </div>
@@ -2934,10 +2869,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rituximab versus fingolimod after natalizumab in multiple sclerosis patients. Our findings suggest an improved effectiveness and tolerability of rituximab compared with fingolimod in stable RRMS patients who switch from natalizumab due to JC virus antibody positivity.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings suggest an improved effectiveness and tolerability of rituximab compared with fingolimod in stable RRMS patients who switch from natalizumab due to JC virus antibody positivity.</li>
-<li>Challenge: This paper investigates rituximab versus fingolimod after natalizumab in multiple sclerosis patients.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our findings suggest an improved effectiveness and tolerability of rituximab compared with fingolimod in stable RRMS patients who switch from natalizumab due to JC virus antibody positivity.</li>
+<li>This paper investigates rituximab versus fingolimod after natalizumab in multiple sclerosis patients.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24651" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Peter Alping. (2016). Rituximab versus fingolimod after natalizumab in multiple sclerosis patients. Annals of Neurology. https://doi.org/10.1002/ana.24651</p>
@@ -2959,7 +2894,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Increased Relapse Rate in Pediatric-Onset Compared With Adult-Onset Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -2969,10 +2903,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates increased relapse rate in pediatric-onset compared with adult-onset multiple sclerosis. This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</li>
-<li>Challenge: This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</li>
-<li>Action: This paper investigates increased relapse rate in pediatric-onset compared with adult-onset multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</li>
+<li>This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</li>
+<li>This paper investigates increased relapse rate in pediatric-onset compared with adult-onset multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneurol.2008.505" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mark Gorman. (2009). Increased Relapse Rate in Pediatric-Onset Compared With Adult-Onset Multiple Sclerosis. Archives of Neurology. https://doi.org/10.1001/archneurol.2008.505</p>
@@ -2994,7 +2928,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Vascular comorbidity is associated with more rapid disability progression in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -3004,10 +2937,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates vascular comorbidity is associated with more rapid disability progression in multiple sclerosis. The impact of treating vascular comorbidities on disease progression deserves investigation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Vascular comorbidity, whether present at symptom onset, diagnosis, or later in the disease course, is associated with a substantially increased risk of disability progression in multiple sclerosis.</li>
-<li>Challenge: The impact of treating vascular comorbidities on disease progression deserves investigation.</li>
-<li>Action: This paper investigates vascular comorbidity is associated with more rapid disability progression in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Vascular comorbidity, whether present at symptom onset, diagnosis, or later in the disease course, is associated with a substantially increased risk of disability progression in multiple sclerosis.</li>
+<li>The impact of treating vascular comorbidities on disease progression deserves investigation.</li>
+<li>This paper investigates vascular comorbidity is associated with more rapid disability progression in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181d6b125" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ruth Ann Marrie. (2010). Vascular comorbidity is associated with more rapid disability progression in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0b013e3181d6b125</p>
@@ -3029,7 +2962,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Trial of Fingolimod versus Interferon Beta-1a in Pediatric Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -3039,10 +2971,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates trial of fingolimod versus interferon beta-1a in pediatric multiple sclerosis. (Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</li>
-<li>Challenge: Longer studies are required to determine the durability and safety of fingolimod in pediatric multiple sclerosis.</li>
-<li>Action: (Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</li>
-<li>Resolution: This paper investigates trial of fingolimod versus interferon beta-1a in pediatric multiple sclerosis.</li>
+<li>Among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</li>
+<li>Longer studies are required to determine the durability and safety of fingolimod in pediatric multiple sclerosis.</li>
+<li>(Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</li>
+<li>This paper investigates trial of fingolimod versus interferon beta-1a in pediatric multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1800149" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tanuja Chitnis. (2018). Trial of Fingolimod versus Interferon Beta-1a in Pediatric Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1800149</p>
@@ -3064,7 +2996,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Efficacy and safety of ofatumumab in recently diagnosed, treatment-naive patients with multiple sclerosis: Results from ASCLEPIOS I and II</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (53%)</span>
 </div>
@@ -3074,10 +3005,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates efficacy and safety of ofatumumab in recently diagnosed, treatment-naive patients with multiple sclerosis: results from asclepios i and ii. The favourable benefit-risk profile of ofatumumab versus teriflunomide supports its consideration as a first-line therapy in RDTN patients.ASCLEPIOS I and II are registered at ClinicalTrials.gov (NCT02792218 and NCT02792231).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The favourable benefit-risk profile of ofatumumab versus teriflunomide supports its consideration as a first-line therapy in RDTN patients.ASCLEPIOS I and II are registered at ClinicalTrials.gov (NCT02792218 and NCT02792231).</li>
-<li>Challenge: This paper investigates efficacy and safety of ofatumumab in recently diagnosed, treatment-naive patients with multiple sclerosis: results from asclepios i and ii.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The favourable benefit-risk profile of ofatumumab versus teriflunomide supports its consideration as a first-line therapy in RDTN patients.ASCLEPIOS I and II are registered at ClinicalTrials.gov (NCT02792218 and NCT02792231).</li>
+<li>This paper investigates efficacy and safety of ofatumumab in recently diagnosed, treatment-naive patients with multiple sclerosis: results from asclepios i and ii.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/13524585221078825" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jutta Gärtner. (2022). Efficacy and safety of ofatumumab in recently diagnosed, treatment-naive patients with multiple sclerosis: Results from ASCLEPIOS I and II. Multiple Sclerosis Journal. https://doi.org/10.1177/13524585221078825</p>
@@ -3099,7 +3030,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Epitope interactions of monoclonal antibodies targeting CD20 and their relationship to functional properties</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -3109,10 +3039,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates epitope interactions of monoclonal antibodies targeting cd20 and their relationship to functional properties. Taken together, these factors may explain differences in the preclinical properties and clinical efficacy of anti-CD20 antibodies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Several novel anti-CD20 monoclonal antibodies are currently in development with the aim of improving the treatment of B cell malignancies.</li>
-<li>Challenge: Mutagenesis and epitope mapping studies have revealed differences between the CD20 epitopes recognized by these antibodies.</li>
-<li>Action: Recently, X-ray crystallography studies confirmed that the Type I CD20 antibody rituximab and the Type II CD20 antibody obinutuzumab (GA101) differ fundamentally in their interaction with CD20 despite recognizing a partially overlapping epitope on CD20.</li>
-<li>Resolution: This paper investigates epitope interactions of monoclonal antibodies targeting cd20 and their relationship to functional properties.</li>
+<li>Several novel anti-CD20 monoclonal antibodies are currently in development with the aim of improving the treatment of B cell malignancies.</li>
+<li>Mutagenesis and epitope mapping studies have revealed differences between the CD20 epitopes recognized by these antibodies.</li>
+<li>Recently, X-ray crystallography studies confirmed that the Type I CD20 antibody rituximab and the Type II CD20 antibody obinutuzumab (GA101) differ fundamentally in their interaction with CD20 despite recognizing a partially overlapping epitope on CD20.</li>
+<li>This paper investigates epitope interactions of monoclonal antibodies targeting cd20 and their relationship to functional properties.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.4161/mabs.22771" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christian Klein. (2013). Epitope interactions of monoclonal antibodies targeting CD20 and their relationship to functional properties. mAbs. https://doi.org/10.4161/mabs.22771</p>
@@ -3134,7 +3064,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Ocrelizumab Extended Interval Dosing in Multiple Sclerosis in Times of COVID-19</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -3144,10 +3073,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ocrelizumab extended interval dosing in multiple sclerosis in times of covid-19. This study provides Class IV evidence that for patients with RRMS, an EID of at least 4 weeks does not diminish effectiveness of ocrelizumab.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class IV evidence that for patients with RRMS, an EID of at least 4 weeks does not diminish effectiveness of ocrelizumab.</li>
-<li>Challenge: This paper investigates ocrelizumab extended interval dosing in multiple sclerosis in times of covid-19.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class IV evidence that for patients with RRMS, an EID of at least 4 weeks does not diminish effectiveness of ocrelizumab.</li>
+<li>This paper investigates ocrelizumab extended interval dosing in multiple sclerosis in times of covid-19.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000001035" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Leoni Rolfes. (2021). Ocrelizumab Extended Interval Dosing in Multiple Sclerosis in Times of COVID-19. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000001035</p>
@@ -3169,7 +3098,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Alemtuzumab CARE-MS II 5-year follow-up</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -3179,10 +3107,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates alemtuzumab care-ms ii 5-year follow-up. This study provides Class III evidence that alemtuzumab provides efficacy and slowing of brain atrophy through 5 years.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that alemtuzumab provides efficacy and slowing of brain atrophy through 5 years.</li>
-<li>Challenge: This paper investigates alemtuzumab care-ms ii 5-year follow-up.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that alemtuzumab provides efficacy and slowing of brain atrophy through 5 years.</li>
+<li>This paper investigates alemtuzumab care-ms ii 5-year follow-up.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000004354" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alasdair Coles. (2017). Alemtuzumab CARE-MS II 5-year follow-up. Neurology. https://doi.org/10.1212/wnl.0000000000004354</p>
@@ -3204,7 +3132,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Sex as a determinant of relapse incidence and progressive course of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -3214,10 +3141,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates sex as a determinant of relapse incidence and progressive course of multiple sclerosis. Decline in relapse activity over time is more closely related to patient age than disease duration.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The aim of this work was to evaluate sex differences in the incidence of multiple sclerosis relapses; assess the relationship between sex and primary progressive disease course; and compare effects of age and disease duration on relapse incidence.</li>
-<li>Challenge: Annualized relapse rates were calculated using the MSBase registry.</li>
-<li>Action: Patients with incomplete data or &lt;1 year of follow-up were excluded.</li>
-<li>Resolution: Patients with primary progressive multiple sclerosis were only included in the sex ratio analysis.</li>
+<li>The aim of this work was to evaluate sex differences in the incidence of multiple sclerosis relapses; assess the relationship between sex and primary progressive disease course; and compare effects of age and disease duration on relapse incidence.</li>
+<li>Annualized relapse rates were calculated using the MSBase registry.</li>
+<li>Patients with incomplete data or &lt;1 year of follow-up were excluded.</li>
+<li>Patients with primary progressive multiple sclerosis were only included in the sex ratio analysis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awt281" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tomáš Kalinčík. (2013). Sex as a determinant of relapse incidence and progressive course of multiple sclerosis. Brain. https://doi.org/10.1093/brain/awt281</p>
@@ -3239,7 +3166,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Alemtuzumab more effective than interferon β-1a at 5-year follow-up of CAMMS223 Clinical Trial</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -3249,10 +3175,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates alemtuzumab more effective than interferon β-1a at 5-year follow-up of camms223 clinical trial. This study provides Class III evidence that alemtuzumab is more effective than interferon β-1a in reducing relapses and disability in patients with RRMS in a long-term follow-up of a rater-blinded, randomized clinical trial with 59.5% of patients participating in the extended follow-up period.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that alemtuzumab is more effective than interferon β-1a in reducing relapses and disability in patients with RRMS in a long-term follow-up of a rater-blinded, randomized clinical trial with 59.5% of patients participating in the extended follow-up period.</li>
-<li>Challenge: This paper investigates alemtuzumab more effective than interferon β-1a at 5-year follow-up of camms223 clinical trial.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that alemtuzumab is more effective than interferon β-1a in reducing relapses and disability in patients with RRMS in a long-term follow-up of a rater-blinded, randomized clinical trial with 59.5% of patients participating in the extended follow-up period.</li>
+<li>This paper investigates alemtuzumab more effective than interferon β-1a at 5-year follow-up of camms223 clinical trial.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31824e8ee7" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alasdair Coles. (2012). Alemtuzumab more effective than interferon β-1a at 5-year follow-up of CAMMS223 Clinical Trial. Neurology. https://doi.org/10.1212/wnl.0b013e31824e8ee7</p>
@@ -3274,7 +3200,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple Sclerosis Therapy Consensus Group (MSTCG): position statement on disease-modifying therapies for multiple sclerosis (white paper)</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -3284,10 +3209,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis therapy consensus group (mstcg): position statement on disease-modifying therapies for multiple sclerosis (white paper). Our recommendations are based on current scientific evidence and apply to those medications approved in wide parts of Europe, particularly German-speaking countries (Germany, Austria, and Switzerland).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a complex, autoimmune-mediated disease of the central nervous system characterized by inflammatory demyelination and axonal/neuronal damage.</li>
-<li>Challenge: The approval of various disease-modifying therapies and our increased understanding of disease mechanisms and evolution in recent years have significantly changed the prognosis and course of the disease.</li>
-<li>Action: This update of the Multiple Sclerosis Therapy Consensus Group treatment recommendation focuses on the most important recommendations for disease-modifying therapies of multiple sclerosis in 2021.</li>
-<li>Resolution: Our recommendations are based on current scientific evidence and apply to those medications approved in wide parts of Europe, particularly German-speaking countries (Germany, Austria, and Switzerland).</li>
+<li>Multiple sclerosis is a complex, autoimmune-mediated disease of the central nervous system characterized by inflammatory demyelination and axonal/neuronal damage.</li>
+<li>The approval of various disease-modifying therapies and our increased understanding of disease mechanisms and evolution in recent years have significantly changed the prognosis and course of the disease.</li>
+<li>This update of the Multiple Sclerosis Therapy Consensus Group treatment recommendation focuses on the most important recommendations for disease-modifying therapies of multiple sclerosis in 2021.</li>
+<li>Our recommendations are based on current scientific evidence and apply to those medications approved in wide parts of Europe, particularly German-speaking countries (Germany, Austria, and Switzerland).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/17562864211039648" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Heinz Wiendl. (2021). Multiple Sclerosis Therapy Consensus Group (MSTCG): position statement on disease-modifying therapies for multiple sclerosis (white paper). Therapeutic Advances in Neurological Disorders. https://doi.org/10.1177/17562864211039648</p>
@@ -3309,7 +3234,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Comparative Effectiveness of Rituximab and Other Initial Treatment Choices for Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (61%)</span>
 </div>
@@ -3319,10 +3243,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates comparative effectiveness of rituximab and other initial treatment choices for multiple sclerosis. Collectively, our findings suggest that rituximab performs better than other commonly used DMTs in patients with newly diagnosed RRMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Collectively, our findings suggest that rituximab performs better than other commonly used DMTs in patients with newly diagnosed RRMS.</li>
-<li>Challenge: This paper investigates comparative effectiveness of rituximab and other initial treatment choices for multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Collectively, our findings suggest that rituximab performs better than other commonly used DMTs in patients with newly diagnosed RRMS.</li>
+<li>This paper investigates comparative effectiveness of rituximab and other initial treatment choices for multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2017.4011" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mathias Granqvist. (2018). Comparative Effectiveness of Rituximab and Other Initial Treatment Choices for Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2017.4011</p>
@@ -3344,7 +3268,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Effect of Nonmyeloablative Hematopoietic Stem Cell Transplantation vs Continued Disease-Modifying Therapy on Disease Progression in Patients With Relapsing-Remitting Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (41%)</span>
 </div>
@@ -3354,10 +3277,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates effect of nonmyeloablative hematopoietic stem cell transplantation vs continued disease-modifying therapy on disease progression in patients with relapsing-remitting multiple sclerosis. ClinicalTrials.gov Identifier: NCT00273364.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: ClinicalTrials.gov Identifier: NCT00273364.</li>
-<li>Challenge: This paper investigates effect of nonmyeloablative hematopoietic stem cell transplantation vs continued disease-modifying therapy on disease progression in patients with relapsing-remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>ClinicalTrials.gov Identifier: NCT00273364.</li>
+<li>This paper investigates effect of nonmyeloablative hematopoietic stem cell transplantation vs continued disease-modifying therapy on disease progression in patients with relapsing-remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jama.2018.18743" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Richard K. Burt. (2019). Effect of Nonmyeloablative Hematopoietic Stem Cell Transplantation vs Continued Disease-Modifying Therapy on Disease Progression in Patients With Relapsing-Remitting Multiple Sclerosis. JAMA. https://doi.org/10.1001/jama.2018.18743</p>
@@ -3379,7 +3302,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Validation of patient determined disease steps (PDDS) scale scores in persons with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (46%)</span>
 </div>
@@ -3389,10 +3311,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates validation of patient determined disease steps (pdds) scale scores in persons with multiple sclerosis. This study provides novel evidence supporting the PDDS as valid PRO of disability in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides novel evidence supporting the PDDS as valid PRO of disability in MS.</li>
-<li>Challenge: This paper investigates validation of patient determined disease steps (pdds) scale scores in persons with multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides novel evidence supporting the PDDS as valid PRO of disability in MS.</li>
+<li>This paper investigates validation of patient determined disease steps (pdds) scale scores in persons with multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/1471-2377-13-37" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Yvonne C. Learmonth. (2013). Validation of patient determined disease steps (PDDS) scale scores in persons with multiple sclerosis. BMC Neurology. https://doi.org/10.1186/1471-2377-13-37</p>
@@ -3414,7 +3336,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MRI outcomes in a placebo-controlled trial of natalizumab in relapsing MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (47%)</span>
 </div>
@@ -3424,10 +3345,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mri outcomes in a placebo-controlled trial of natalizumab in relapsing ms. Natalizumab has a sustained effect in preventing the formation of new lesions in patients with relapsing multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Natalizumab has a sustained effect in preventing the formation of new lesions in patients with relapsing multiple sclerosis.</li>
-<li>Challenge: This paper investigates mri outcomes in a placebo-controlled trial of natalizumab in relapsing ms.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Natalizumab has a sustained effect in preventing the formation of new lesions in patients with relapsing multiple sclerosis.</li>
+<li>This paper investigates mri outcomes in a placebo-controlled trial of natalizumab in relapsing ms.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000260064.77700.fd" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David H. Miller. (2007). MRI outcomes in a placebo-controlled trial of natalizumab in relapsing MS. Neurology. https://doi.org/10.1212/01.wnl.0000260064.77700.fd</p>
@@ -3449,7 +3370,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Impact of multiple sclerosis relapses on progression diminishes with time</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -3459,10 +3379,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates impact of multiple sclerosis relapses on progression diminishes with time. Long-term disease progression was least affected by relapses in patients with an extended disease duration (&gt;10 years) or already in the secondary progressive phase.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Relapses within the first 5 years of disease impacted on disease progression over the short term.</li>
-<li>Challenge: However, the long-term impact was minimal, either for early or later relapses.</li>
-<li>Action: Long-term disease progression was least affected by relapses in patients with an extended disease duration (&gt;10 years) or already in the secondary progressive phase.</li>
-<li>Resolution: This paper investigates impact of multiple sclerosis relapses on progression diminishes with time.</li>
+<li>Relapses within the first 5 years of disease impacted on disease progression over the short term.</li>
+<li>However, the long-term impact was minimal, either for early or later relapses.</li>
+<li>Long-term disease progression was least affected by relapses in patients with an extended disease duration (&gt;10 years) or already in the secondary progressive phase.</li>
+<li>This paper investigates impact of multiple sclerosis relapses on progression diminishes with time.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181c1e44f" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Helen Tremlett. (2009). Impact of multiple sclerosis relapses on progression diminishes with time. Neurology. https://doi.org/10.1212/wnl.0b013e3181c1e44f</p>
@@ -3484,7 +3404,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>FTY720 (fingolimod) efficacy in an animal model of multiple sclerosis requires astrocyte sphingosine 1-phosphate receptor 1 (S1P &lt;sub&gt;1&lt;/sub&gt; ) modulation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -3494,10 +3413,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates fty720 (fingolimod) efficacy in an animal model of multiple sclerosis requires astrocyte sphingosine 1-phosphate receptor 1 (s1p &lt;sub&gt;1&lt;/sub&gt; ) modulation. These data identify nonimmunological CNS mechanisms of FTY720 efficacy and implicate S1P signaling pathways within the CNS as targets for multiple sclerosis therapies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data identify nonimmunological CNS mechanisms of FTY720 efficacy and implicate S1P signaling pathways within the CNS as targets for multiple sclerosis therapies.</li>
-<li>Challenge: This paper investigates fty720 (fingolimod) efficacy in an animal model of multiple sclerosis requires astrocyte sphingosine 1-phosphate receptor 1 (s1p &lt;sub&gt;1&lt;/sub&gt; ) modulation.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data identify nonimmunological CNS mechanisms of FTY720 efficacy and implicate S1P signaling pathways within the CNS as targets for multiple sclerosis therapies.</li>
+<li>This paper investigates fty720 (fingolimod) efficacy in an animal model of multiple sclerosis requires astrocyte sphingosine 1-phosphate receptor 1 (s1p &lt;sub&gt;1&lt;/sub&gt; ) modulation.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1073/pnas.1014154108" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ji Woong Choi. (2010). FTY720 (fingolimod) efficacy in an animal model of multiple sclerosis requires astrocyte sphingosine 1-phosphate receptor 1 (S1P &lt;sub&gt;1&lt;/sub&gt; ) modulation. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.1014154108</p>
@@ -3519,7 +3438,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Switch to natalizumab versus fingolimod in active relapsing–remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -3529,10 +3447,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates switch to natalizumab versus fingolimod in active relapsing–remitting multiple sclerosis. This study suggests that in active multiple sclerosis during treatment with injectable disease-modifying therapies, switching to natalizumab is more effective than switching to fingolimod in reducing relapse rate and short-term disability burden.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study suggests that in active multiple sclerosis during treatment with injectable disease-modifying therapies, switching to natalizumab is more effective than switching to fingolimod in reducing relapse rate and short-term disability burden.</li>
-<li>Challenge: This paper investigates switch to natalizumab versus fingolimod in active relapsing–remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study suggests that in active multiple sclerosis during treatment with injectable disease-modifying therapies, switching to natalizumab is more effective than switching to fingolimod in reducing relapse rate and short-term disability burden.</li>
+<li>This paper investigates switch to natalizumab versus fingolimod in active relapsing–remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24339" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tomáš Kalinčík. (2014). Switch to natalizumab versus fingolimod in active relapsing–remitting multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.24339</p>
@@ -3554,7 +3472,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cladribine treatment of multiple sclerosis is associated with depletion of memory B cells</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (59%)</span>
 </div>
@@ -3564,10 +3481,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cladribine treatment of multiple sclerosis is associated with depletion of memory b cells. These may offer a new target, possibly with potential biomarker activity, for future drug development.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Selective B cell cytotoxicity coupled with slow repopulation kinetics results in long-term, memory B cell depletion by cladribine.</li>
-<li>Challenge: These may offer a new target, possibly with potential biomarker activity, for future drug development.</li>
-<li>Action: This paper investigates cladribine treatment of multiple sclerosis is associated with depletion of memory b cells.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Selective B cell cytotoxicity coupled with slow repopulation kinetics results in long-term, memory B cell depletion by cladribine.</li>
+<li>These may offer a new target, possibly with potential biomarker activity, for future drug development.</li>
+<li>This paper investigates cladribine treatment of multiple sclerosis is associated with depletion of memory b cells.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00415-018-8830-y" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bryan Ceronie. (2018). Cladribine treatment of multiple sclerosis is associated with depletion of memory B cells. Journal of Neurology. https://doi.org/10.1007/s00415-018-8830-y</p>
@@ -3589,7 +3506,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Safety of Ocrelizumab in Patients With Relapsing and Primary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -3599,10 +3515,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates safety of ocrelizumab in patients with relapsing and primary progressive multiple sclerosis. This study is rated Class III because of the use of OLE data and historical controls.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study is rated Class III because of the use of OLE data and historical controls.</li>
-<li>Challenge: This paper investigates safety of ocrelizumab in patients with relapsing and primary progressive multiple sclerosis.</li>
-<li>Action: This analysis provides Class III evidence that long-term, continuous treatment with OCR has a consistent and favorable safety profile in patients with RMS and PPMS.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study is rated Class III because of the use of OLE data and historical controls.</li>
+<li>This paper investigates safety of ocrelizumab in patients with relapsing and primary progressive multiple sclerosis.</li>
+<li>This analysis provides Class III evidence that long-term, continuous treatment with OCR has a consistent and favorable safety profile in patients with RMS and PPMS.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000012700" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stephen L. Hauser. (2021). Safety of Ocrelizumab in Patients With Relapsing and Primary Progressive Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000012700</p>
@@ -3624,7 +3540,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Alemtuzumab CARE-MS I 5-year follow-up</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2017</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -3634,10 +3549,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates alemtuzumab care-ms i 5-year follow-up. This study provides Class III evidence that alemtuzumab durably improves efficacy outcomes and slows BVL in patients with RRMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that alemtuzumab durably improves efficacy outcomes and slows BVL in patients with RRMS.</li>
-<li>Challenge: This paper investigates alemtuzumab care-ms i 5-year follow-up.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that alemtuzumab durably improves efficacy outcomes and slows BVL in patients with RRMS.</li>
+<li>This paper investigates alemtuzumab care-ms i 5-year follow-up.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000004313" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Eva Havrdová. (2017). Alemtuzumab CARE-MS I 5-year follow-up. Neurology. https://doi.org/10.1212/wnl.0000000000004313</p>
@@ -3659,7 +3574,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Thymic output generates a new and diverse TCR repertoire after autologous stem cell transplantation in multiple sclerosis patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -3669,10 +3583,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates thymic output generates a new and diverse tcr repertoire after autologous stem cell transplantation in multiple sclerosis patients. These data are the first to demonstrate that long-term suppression of inflammatory activity in MS patients who received HSCT does not depend on persisting lymphopenia and is associated with profound qualitative immunological changes that demonstrate a de novo regeneration of the T cell compartment.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data are the first to demonstrate that long-term suppression of inflammatory activity in MS patients who received HSCT does not depend on persisting lymphopenia and is associated with profound qualitative immunological changes that demonstrate a de novo regeneration of the T cell compartment.</li>
-<li>Challenge: This paper investigates thymic output generates a new and diverse tcr repertoire after autologous stem cell transplantation in multiple sclerosis patients.</li>
-<li>Action: Clinical trials have indicated that autologous hematopoietic stem cell transplantation (HSCT) can persistently suppress inflammatory disease activity in a subset of patients with severe multiple sclerosis (MS), but the mechanism has remained unclear.</li>
-<li>Resolution: To understand whether the beneficial effects on the course of disease are mediated by lympho-depletive effects alone or are sustained by a regeneration of the immune repertoire, we examined the long-term immune reconstitution in patients with MS who received HSCT.</li>
+<li>These data are the first to demonstrate that long-term suppression of inflammatory activity in MS patients who received HSCT does not depend on persisting lymphopenia and is associated with profound qualitative immunological changes that demonstrate a de novo regeneration of the T cell compartment.</li>
+<li>This paper investigates thymic output generates a new and diverse tcr repertoire after autologous stem cell transplantation in multiple sclerosis patients.</li>
+<li>Clinical trials have indicated that autologous hematopoietic stem cell transplantation (HSCT) can persistently suppress inflammatory disease activity in a subset of patients with severe multiple sclerosis (MS), but the mechanism has remained unclear.</li>
+<li>To understand whether the beneficial effects on the course of disease are mediated by lympho-depletive effects alone or are sustained by a regeneration of the immune repertoire, we examined the long-term immune reconstitution in patients with MS who received HSCT.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20041679" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Paolo A. Muraro. (2005). Thymic output generates a new and diverse TCR repertoire after autologous stem cell transplantation in multiple sclerosis patients. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20041679</p>
@@ -3694,7 +3608,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The Swedish &lt;scp&gt;MS&lt;/scp&gt; registry – clinical support tool and scientific resource</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3704,10 +3617,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the swedish &lt;scp&gt;ms&lt;/scp&gt; registry – clinical support tool and scientific resource. As these studies combine physical sampling and questionnaire data with clinical documentation and possible linkage to other public registries, together they provide an excellent platform for integrated MS research.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The Swedish MS registry (SMSreg) is designed to assure quality health care for patients with multiple sclerosis (MS).</li>
-<li>Challenge: It has been active since 2001 and web-based since 2004.</li>
-<li>Action: It runs on government funding only and is used in all Swedish neurology departments.</li>
-<li>Resolution: The SMSreg currently includes data on 14,500 of Sweden&#x27;s estimated 17,500 prevalent patients with MS.</li>
+<li>The Swedish MS registry (SMSreg) is designed to assure quality health care for patients with multiple sclerosis (MS).</li>
+<li>It has been active since 2001 and web-based since 2004.</li>
+<li>It runs on government funding only and is used in all Swedish neurology departments.</li>
+<li>The SMSreg currently includes data on 14,500 of Sweden&#x27;s estimated 17,500 prevalent patients with MS.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/ane.12425" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jan Hillert. (2015). The Swedish &lt;scp&gt;MS&lt;/scp&gt; registry – clinical support tool and scientific resource. Acta Neurologica Scandinavica. https://doi.org/10.1111/ane.12425</p>
@@ -3729,7 +3642,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Disease activity return during natalizumab treatment interruption in patients with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -3739,10 +3651,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates disease activity return during natalizumab treatment interruption in patients with multiple sclerosis. Following interruption of natalizumab treatment, MS disease activity returned in a pattern that was consistent with known pharmacokinetic and pharmacodynamic properties of natalizumab, and did not show evidence of rebound.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Following interruption of natalizumab treatment, MS disease activity returned in a pattern that was consistent with known pharmacokinetic and pharmacodynamic properties of natalizumab, and did not show evidence of rebound.</li>
-<li>Challenge: This paper investigates disease activity return during natalizumab treatment interruption in patients with multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Following interruption of natalizumab treatment, MS disease activity returned in a pattern that was consistent with known pharmacokinetic and pharmacodynamic properties of natalizumab, and did not show evidence of rebound.</li>
+<li>This paper investigates disease activity return during natalizumab treatment interruption in patients with multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31821e7c8a" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Paul O’Connor. (2011). Disease activity return during natalizumab treatment interruption in patients with multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0b013e31821e7c8a</p>
@@ -3764,7 +3676,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Rebound Syndrome in Patients With Multiple Sclerosis After Cessation of Fingolimod Treatment</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -3774,10 +3685,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates rebound syndrome in patients with multiple sclerosis after cessation of fingolimod treatment. A large prospective registry or population-based study would be helpful to confirm this rebound phenomenon and to determine contributing factors, including immune biomarkers, that increase risk for this syndrome.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These cases provide evidence for a fingolimod rebound syndrome at a clinically relevant frequency, highlighting the need to determine the best methods for sequencing or discontinuing MS therapies.</li>
-<li>Challenge: A large prospective registry or population-based study would be helpful to confirm this rebound phenomenon and to determine contributing factors, including immune biomarkers, that increase risk for this syndrome.</li>
-<li>Action: This paper investigates rebound syndrome in patients with multiple sclerosis after cessation of fingolimod treatment.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These cases provide evidence for a fingolimod rebound syndrome at a clinically relevant frequency, highlighting the need to determine the best methods for sequencing or discontinuing MS therapies.</li>
+<li>A large prospective registry or population-based study would be helpful to confirm this rebound phenomenon and to determine contributing factors, including immune biomarkers, that increase risk for this syndrome.</li>
+<li>This paper investigates rebound syndrome in patients with multiple sclerosis after cessation of fingolimod treatment.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2016.0826" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Stacy E. Hatcher. (2016). Rebound Syndrome in Patients With Multiple Sclerosis After Cessation of Fingolimod Treatment. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2016.0826</p>
@@ -3799,7 +3710,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MS disease activity in RESTORE</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (55%)</span>
 </div>
@@ -3809,10 +3719,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates ms disease activity in restore. This study provides Class II evidence that for patients with MS taking natalizumab who are relapse-free for 1 year, stopping natalizumab increases the risk of MS relapse or MRI disease activity as compared with continuing natalizumab.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class II evidence that for patients with MS taking natalizumab who are relapse-free for 1 year, stopping natalizumab increases the risk of MS relapse or MRI disease activity as compared with continuing natalizumab.</li>
-<li>Challenge: This paper investigates ms disease activity in restore.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class II evidence that for patients with MS taking natalizumab who are relapse-free for 1 year, stopping natalizumab increases the risk of MS relapse or MRI disease activity as compared with continuing natalizumab.</li>
+<li>This paper investigates ms disease activity in restore.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000000355" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Robert J. Fox. (2014). MS disease activity in RESTORE. Neurology. https://doi.org/10.1212/wnl.0000000000000355</p>
@@ -3834,7 +3744,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Correlation between brain volume loss and clinical and MRI outcomes in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (50%)</span>
 </div>
@@ -3844,10 +3753,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates correlation between brain volume loss and clinical and mri outcomes in multiple sclerosis. Rate of BVL in patients during the fingolimod trials correlated with disease severity at baseline and new disease activity on study, and was associated with worsening disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Rate of BVL in patients during the fingolimod trials correlated with disease severity at baseline and new disease activity on study, and was associated with worsening disability.</li>
-<li>Challenge: This paper investigates correlation between brain volume loss and clinical and mri outcomes in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Rate of BVL in patients during the fingolimod trials correlated with disease severity at baseline and new disease activity on study, and was associated with worsening disability.</li>
+<li>This paper investigates correlation between brain volume loss and clinical and mri outcomes in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000001281" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ernst‐Wilhelm Radue. (2015). Correlation between brain volume loss and clinical and MRI outcomes in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000001281</p>
@@ -3866,3 +3775,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=121"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=therapeutics_immunosuppressive_therapies">Immunosuppressive therapies</a></li>
+<li><a href="/mskb/journey/?concept=clinical_disease_course">Disease course and prognosis</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pregnancy_and_ms">Pregnancy and MS</a></li>
+<li><a href="/mskb/journey/?concept=clinical_progression_pira">Progression and PIRA</a></li>
+<li><a href="/mskb/journey/?concept=clinical_socioeconomic_disparities">Socioeconomic disparities</a></li>
+<li><a href="/mskb/journey/?concept=foundations_ms_epidemiology">MS epidemiology and natural history</a></li>
+</ul>

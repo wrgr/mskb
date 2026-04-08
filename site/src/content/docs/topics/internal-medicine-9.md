@@ -1,26 +1,33 @@
 ---
-title: Medicine / Internal medicine / Disease
-description: Epidemiology And Population Health · 120 papers · Difficulty 3/5
+title: Internal medicine
+description: "Epidemiology & Population Health · 120 papers"
 sidebar:
-  label: Medicine
+  label: Internal medicine
+topic_taxonomy:
+  category: epidemiology_and_population_health
+  category_source: fallback
+  category_concept_id: ""
 ---
 
 ## Overview
 
 This topic cluster covers Medicine / Internal medicine / Disease and contains 120 papers.
 
+<p><em>Raw cluster label:</em> Medicine / Internal medicine / Disease</p>
+
+## Concepts this topic supports
+
+<p><em>No linked concepts available yet for this topic.</em></p>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Global, regional, and national burden of neurological disorders, 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (41%)</span>
 </div>
@@ -30,10 +37,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates global, regional, and national burden of neurological disorders, 1990–2016: a systematic analysis for the global burden of disease study 2016. Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of neurological disorders, 1990–2016: a systematic analysis for the global burden of disease study 2016.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Bill &amp; Melinda Gates Foundation.</li>
+<li>This paper investigates global, regional, and national burden of neurological disorders, 1990–2016: a systematic analysis for the global burden of disease study 2016.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/s1474-4422(18)30499-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Valery L. Feigin. (2019). Global, regional, and national burden of neurological disorders, 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016. The Lancet Neurology. https://doi.org/10.1016/s1474-4422(18)30499-x</p>
@@ -52,3 +59,7 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=9"><strong>Turn this topic into a learning journey →</strong></a></p>

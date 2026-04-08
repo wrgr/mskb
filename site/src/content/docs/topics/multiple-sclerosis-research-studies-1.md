@@ -1,26 +1,44 @@
 ---
-title: Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis
-description: Imaging And Biomarkers · 2570 papers · Difficulty 5/5
+title: Multiple Sclerosis Research Studies
+description: "Clinical Care & Management · 2570 papers"
 sidebar:
-  label: Medicine
+  label: Multiple Sclerosis Research Studies
+topic_taxonomy:
+  category: clinical_care_and_management
+  category_source: concept
+  category_concept_id: foundations_basic_neuroanatomy
 ---
 
 ## Overview
 
 This topic cluster covers Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis and contains 2570 papers.
 
+<p><em>Raw cluster label:</em> Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=foundations_basic_neuroanatomy">Basic neuroanatomy for MS</a> (8 linked papers) · <a href="/mskb/concepts/foundations/basic-neuroanatomy/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prognostic_markers">Prognostic markers</a> (7 linked papers) · <a href="/mskb/concepts/clinical/prognostic-markers/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=diagnosis_spinal_cord_lesions">Spinal cord lesions</a> (7 linked papers) · <a href="/mskb/concepts/diagnosis/spinal-cord-lesions/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=mcdonald_criteria_mri">McDonald criteria and MRI findings</a> (7 linked papers) · <a href="/mskb/concepts/diagnosis/mcdonald-criteria/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_smoldering_ms">Smoldering MS</a> (6 linked papers) · <a href="/mskb/concepts/clinical/smoldering-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_socioeconomic_disparities">Socioeconomic disparities</a> (6 linked papers) · <a href="/mskb/concepts/clinical/socioeconomic-disparities/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=diagnosis_oct_imaging">Optical coherence tomography (OCT)</a> (6 linked papers) · <a href="/mskb/concepts/diagnosis/oct-imaging/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=what_is_ms">What is Multiple Sclerosis?</a> (6 linked papers) · <a href="/mskb/concepts/foundations/what-is-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_cognitive_impairment">Cognitive impairment</a> (5 linked papers) · <a href="/mskb/concepts/clinical/cognitive-impairment/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=clinical_pediatric_ms">Pediatric MS</a> (5 linked papers) · <a href="/mskb/concepts/clinical/pediatric-ms/">open concept page</a></li>
+</ul>
+
 ## Reading Path
 
 Papers ordered by importance and pedagogic progression.
-
-
 
 <div class="paper-stream">
 <article class="paper-card">
 <h3>Diagnostic criteria for multiple sclerosis: 2010 Revisions to the McDonald criteria</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (79%)</span>
 </div>
@@ -30,10 +48,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates diagnostic criteria for multiple sclerosis: 2010 revisions to the mcdonald criteria. These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: New evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</li>
-<li>Challenge: The use of imaging for demonstration of dissemination of central nervous system lesions in space and time has been simplified, and in some circumstances dissemination in space and time can be established by a single scan.</li>
-<li>Action: These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</li>
-<li>Resolution: This paper investigates diagnostic criteria for multiple sclerosis: 2010 revisions to the mcdonald criteria.</li>
+<li>New evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</li>
+<li>The use of imaging for demonstration of dissemination of central nervous system lesions in space and time has been simplified, and in some circumstances dissemination in space and time can be established by a single scan.</li>
+<li>These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</li>
+<li>This paper investigates diagnostic criteria for multiple sclerosis: 2010 revisions to the mcdonald criteria.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22366" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Chris H. Polman. (2011). Diagnostic criteria for multiple sclerosis: 2010 Revisions to the McDonald criteria. Annals of Neurology. https://doi.org/10.1002/ana.22366</p>
@@ -55,7 +73,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Recommended diagnostic criteria for multiple sclerosis: Guidelines from the international panel on the diagnosis of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -65,10 +82,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates recommended diagnostic criteria for multiple sclerosis: guidelines from the international panel on the diagnosis of multiple sclerosis. The outcome of a diagnostic evaluation is either MS, &quot;possible MS&quot; (for those at risk for MS, but for whom diagnostic evaluation is equivocal), or &quot;not MS.&quot;</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</li>
-<li>Challenge: The focus remains on the objective demonstration of dissemination of lesions in both time and space.</li>
-<li>Action: Magnetic resonance imaging is integrated with dinical and other paraclinical diagnostic methods.</li>
-<li>Resolution: This paper investigates recommended diagnostic criteria for multiple sclerosis: guidelines from the international panel on the diagnosis of multiple sclerosis.</li>
+<li>The International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</li>
+<li>The focus remains on the objective demonstration of dissemination of lesions in both time and space.</li>
+<li>Magnetic resonance imaging is integrated with dinical and other paraclinical diagnostic methods.</li>
+<li>This paper investigates recommended diagnostic criteria for multiple sclerosis: guidelines from the international panel on the diagnosis of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.1032" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> W. I. McDonald. (2001). Recommended diagnostic criteria for multiple sclerosis: Guidelines from the international panel on the diagnosis of multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.1032</p>
@@ -90,7 +107,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical demyelination and diffuse white matter injury in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -100,10 +116,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical demyelination and diffuse white matter injury in multiple sclerosis. With chronicity, diffuse inflammation accumulates throughout the whole brain, and is associated with slowly progressive axonal injury in the NAWM and cortical demyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</li>
-<li>Challenge: We thus analysed global brain pathology in multiple sclerosis, focusing on the normal-appearing white matter (NAWM) and the cortex.</li>
-<li>Action: Autopsy tissue from 52 multiple sclerosis patients (acute, relapsing-remitting, primary and secondary progressive multiple sclerosis) and from 30 controls was analysed using quantitative morphological techniques.</li>
-<li>Resolution: This paper investigates cortical demyelination and diffuse white matter injury in multiple sclerosis.</li>
+<li>Focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</li>
+<li>We thus analysed global brain pathology in multiple sclerosis, focusing on the normal-appearing white matter (NAWM) and the cortex.</li>
+<li>Autopsy tissue from 52 multiple sclerosis patients (acute, relapsing-remitting, primary and secondary progressive multiple sclerosis) and from 30 controls was analysed using quantitative morphological techniques.</li>
+<li>This paper investigates cortical demyelination and diffuse white matter injury in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awh641" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alexandra Kutzelnigg. (2005). Cortical demyelination and diffuse white matter injury in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awh641</p>
@@ -125,7 +141,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Meningeal B-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (74%)</span>
 </div>
@@ -135,10 +150,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates meningeal b-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology. In this study we examined the distribution of ectopic B-cell follicles in multiple sclerosis cases with primary and secondary progressive clinical courses to determine their association with clinical and neuropathological features.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study we examined the distribution of ectopic B-cell follicles in multiple sclerosis cases with primary and secondary progressive clinical courses to determine their association with clinical and neuropathological features.</li>
-<li>Challenge: These data support an immunopathogenetic mechanism whereby B-cell follicles developing in the multiple sclerosis meninges exacerbate the detrimental effects of humoral immunity with a subsequent major impact on the integrity of the cortical structures.</li>
-<li>Action: This paper investigates meningeal b-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study we examined the distribution of ectopic B-cell follicles in multiple sclerosis cases with primary and secondary progressive clinical courses to determine their association with clinical and neuropathological features.</li>
+<li>These data support an immunopathogenetic mechanism whereby B-cell follicles developing in the multiple sclerosis meninges exacerbate the detrimental effects of humoral immunity with a subsequent major impact on the integrity of the cortical structures.</li>
+<li>This paper investigates meningeal b-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awm038" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Roberta Magliozzi. (2006). Meningeal B-cell follicles in secondary progressive multiple sclerosis associate with early onset of disease and severe cortical pathology. Brain. https://doi.org/10.1093/brain/awm038</p>
@@ -160,7 +175,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>International consensus diagnostic criteria for neuromyelitis optica spectrum disorders</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -170,10 +184,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates international consensus diagnostic criteria for neuromyelitis optica spectrum disorders. The IPND also proposed validation strategies and achieved consensus on pediatric NMOSD diagnosis and the concepts of monophasic NMOSD and opticospinal MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</li>
-<li>Challenge: Prior NMO diagnostic criteria required optic nerve and spinal cord involvement but more restricted or more extensive CNS involvement may occur.</li>
-<li>Action: The International Panel for NMO Diagnosis (IPND) was convened to develop revised diagnostic criteria using systematic literature reviews and electronic surveys to facilitate consensus.</li>
-<li>Resolution: This paper investigates international consensus diagnostic criteria for neuromyelitis optica spectrum disorders.</li>
+<li>Neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</li>
+<li>Prior NMO diagnostic criteria required optic nerve and spinal cord involvement but more restricted or more extensive CNS involvement may occur.</li>
+<li>The International Panel for NMO Diagnosis (IPND) was convened to develop revised diagnostic criteria using systematic literature reviews and electronic surveys to facilitate consensus.</li>
+<li>This paper investigates international consensus diagnostic criteria for neuromyelitis optica spectrum disorders.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000001729" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Dean M. Wingerchuk. (2015). International consensus diagnostic criteria for neuromyelitis optica spectrum disorders. Neurology. https://doi.org/10.1212/wnl.0000000000001729</p>
@@ -195,7 +209,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -205,10 +218,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions. These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</li>
-<li>Challenge: This paper investigates transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</li>
+<li>This paper investigates transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.1123" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John W. Peterson. (2001). Transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions. Annals of Neurology. https://doi.org/10.1002/ana.1123</p>
@@ -230,7 +243,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Inflammatory Cortical Demyelination in Early Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -240,10 +252,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates inflammatory cortical demyelination in early multiple sclerosis. (Funded by the National Multiple Sclerosis Society and the National Institutes of Health.).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this cohort of patients with early-stage multiple sclerosis, cortical demyelinating lesions were frequent, inflammatory, and strongly associated with meningeal inflammation.</li>
-<li>Challenge: (Funded by the National Multiple Sclerosis Society and the National Institutes of Health.).</li>
-<li>Action: This paper investigates inflammatory cortical demyelination in early multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this cohort of patients with early-stage multiple sclerosis, cortical demyelinating lesions were frequent, inflammatory, and strongly associated with meningeal inflammation.</li>
+<li>(Funded by the National Multiple Sclerosis Society and the National Institutes of Health.).</li>
+<li>This paper investigates inflammatory cortical demyelination in early multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1056/nejmoa1100648" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claudia F. Lucchinetti. (2011). Inflammatory Cortical Demyelination in Early Multiple Sclerosis. New England Journal of Medicine. https://doi.org/10.1056/nejmoa1100648</p>
@@ -265,7 +277,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Meningeal inflammation is widespread and linked to cortical pathology in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -275,10 +286,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates meningeal inflammation is widespread and linked to cortical pathology in multiple sclerosis. The aim of this study was to analyse the incidence and distribution of B cell follicle-like structures in an extensive collection of cases with secondary progressive multiple sclerosis with a wide age range and to determine their relationship to diffuse meningeal inflammation, white matter perivascular infiltrates and microglial activation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The aim of this study was to analyse the incidence and distribution of B cell follicle-like structures in an extensive collection of cases with secondary progressive multiple sclerosis with a wide age range and to determine their relationship to diffuse meningeal inflammation, white matter perivascular infiltrates and microglial activation.</li>
-<li>Challenge: Our findings suggest that meningeal infiltrates may play a contributory role in the underlying subpial grey matter pathology and accelerated clinical course, which is exacerbated in a significant proportion of cases by the presence of B cell follicle-like structures.</li>
-<li>Action: This paper investigates meningeal inflammation is widespread and linked to cortical pathology in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The aim of this study was to analyse the incidence and distribution of B cell follicle-like structures in an extensive collection of cases with secondary progressive multiple sclerosis with a wide age range and to determine their relationship to diffuse meningeal inflammation, white matter perivascular infiltrates and microglial activation.</li>
+<li>Our findings suggest that meningeal infiltrates may play a contributory role in the underlying subpial grey matter pathology and accelerated clinical course, which is exacerbated in a significant proportion of cases by the presence of B cell follicle-like structures.</li>
+<li>This paper investigates meningeal inflammation is widespread and linked to cortical pathology in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awr182" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Owain W. Howell. (2011). Meningeal inflammation is widespread and linked to cortical pathology in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awr182</p>
@@ -300,7 +311,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Clinical and pathological insights into the dynamic nature of the white matter multiple sclerosis plaque</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (77%)</span>
 </div>
@@ -310,10 +320,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates clinical and pathological insights into the dynamic nature of the white matter multiple sclerosis plaque. Whether current MS therapeutics impact this pathological driver of disease progression remains uncertain.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Disease duration, clinical course, age, and gender contribute to the dynamic nature of white matter MS pathology.</li>
-<li>Challenge: Active MS plaques predominate in acute and early RRMS and are the likely substrate of clinical attacks.</li>
-<li>Action: Progressive MS transitions to an accumulation of smoldering plaques characterized by microglial activation and slow expansion of pre-existing plaques.</li>
-<li>Resolution: This paper investigates clinical and pathological insights into the dynamic nature of the white matter multiple sclerosis plaque.</li>
+<li>Disease duration, clinical course, age, and gender contribute to the dynamic nature of white matter MS pathology.</li>
+<li>Active MS plaques predominate in acute and early RRMS and are the likely substrate of clinical attacks.</li>
+<li>Progressive MS transitions to an accumulation of smoldering plaques characterized by microglial activation and slow expansion of pre-existing plaques.</li>
+<li>This paper investigates clinical and pathological insights into the dynamic nature of the white matter multiple sclerosis plaque.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24497" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Josa M. Frischer. (2015). Clinical and pathological insights into the dynamic nature of the white matter multiple sclerosis plaque. Annals of Neurology. https://doi.org/10.1002/ana.24497</p>
@@ -335,7 +345,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A Gradient of neuronal loss and meningeal inflammation in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -345,10 +354,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a gradient of neuronal loss and meningeal inflammation in multiple sclerosis. We demonstrate substantial cortical neurodegeneration and generalized cell loss in progressive MS in association with meningeal inflammation and lymphoid tissue formation, supporting the hypothesis that cytotoxic factors diffusing from the meningeal compartment contribute to grey matter pathology and the consequent increase in clinical disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We demonstrate substantial cortical neurodegeneration and generalized cell loss in progressive MS in association with meningeal inflammation and lymphoid tissue formation, supporting the hypothesis that cytotoxic factors diffusing from the meningeal compartment contribute to grey matter pathology and the consequent increase in clinical disability.</li>
-<li>Challenge: This paper investigates a gradient of neuronal loss and meningeal inflammation in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We demonstrate substantial cortical neurodegeneration and generalized cell loss in progressive MS in association with meningeal inflammation and lymphoid tissue formation, supporting the hypothesis that cytotoxic factors diffusing from the meningeal compartment contribute to grey matter pathology and the consequent increase in clinical disability.</li>
+<li>This paper investigates a gradient of neuronal loss and meningeal inflammation in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22230" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Roberta Magliozzi. (2010). A Gradient of neuronal loss and meningeal inflammation in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.22230</p>
@@ -370,7 +379,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>IgG marker of optic-spinal multiple sclerosis binds to the aquaporin-4 water channel</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -380,10 +388,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates igg marker of optic-spinal multiple sclerosis binds to the aquaporin-4 water channel. Here we show that NMO-IgG binds selectively to the aquaporin-4 water channel, a component of the dystroglycan protein complex located in astrocytic foot processes at the blood-brain barrier.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Here we show that NMO-IgG binds selectively to the aquaporin-4 water channel, a component of the dystroglycan protein complex located in astrocytic foot processes at the blood-brain barrier.</li>
-<li>Challenge: This paper investigates igg marker of optic-spinal multiple sclerosis binds to the aquaporin-4 water channel.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Here we show that NMO-IgG binds selectively to the aquaporin-4 water channel, a component of the dystroglycan protein complex located in astrocytic foot processes at the blood-brain barrier.</li>
+<li>This paper investigates igg marker of optic-spinal multiple sclerosis binds to the aquaporin-4 water channel.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1084/jem.20050304" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Vanda A. Lennon. (2005). IgG marker of optic-spinal multiple sclerosis binds to the aquaporin-4 water channel. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20050304</p>
@@ -405,7 +413,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Chronic Active Multiple Sclerosis Lesions With Disability In Vivo</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -415,10 +422,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of chronic active multiple sclerosis lesions with disability in vivo. These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</li>
-<li>Challenge: These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</li>
-<li>Action: This paper investigates association of chronic active multiple sclerosis lesions with disability in vivo.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</li>
+<li>These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</li>
+<li>This paper investigates association of chronic active multiple sclerosis lesions with disability in vivo.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.2399" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2019). Association of Chronic Active Multiple Sclerosis Lesions With Disability In Vivo. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.2399</p>
@@ -440,7 +447,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Identifying multiple sclerosis subtypes using unsupervised machine learning and MRI data</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -450,10 +456,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates identifying multiple sclerosis subtypes using unsupervised machine learning and mri data. Our findings suggest that MRI-based subtypes predict MS disability progression and response to treatment and may be used to define groups of patients in interventional trials.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings suggest that MRI-based subtypes predict MS disability progression and response to treatment and may be used to define groups of patients in interventional trials.</li>
-<li>Challenge: This paper investigates identifying multiple sclerosis subtypes using unsupervised machine learning and mri data.</li>
-<li>Action: Multiple sclerosis (MS) can be divided into four phenotypes based on clinical evolution.</li>
-<li>Resolution: The pathophysiological boundaries of these phenotypes are unclear, limiting treatment stratification.</li>
+<li>Our findings suggest that MRI-based subtypes predict MS disability progression and response to treatment and may be used to define groups of patients in interventional trials.</li>
+<li>This paper investigates identifying multiple sclerosis subtypes using unsupervised machine learning and mri data.</li>
+<li>Multiple sclerosis (MS) can be divided into four phenotypes based on clinical evolution.</li>
+<li>The pathophysiological boundaries of these phenotypes are unclear, limiting treatment stratification.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41467-021-22265-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arman Eshaghi. (2021). Identifying multiple sclerosis subtypes using unsupervised machine learning and MRI data. Nature Communications. https://doi.org/10.1038/s41467-021-22265-2</p>
@@ -475,7 +481,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Subpial Demyelination in the Cerebral Cortex of Multiple Sclerosis Patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -485,10 +490,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates subpial demyelination in the cerebral cortex of multiple sclerosis patients. These results indicate that the cerebral cortex is likely to be a predilection site for MS lesions and identify general cortical subpial demyelination as a distinct pattern occurring in a significant subpopulation of MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The extent and pattern of demyelination in the cerebral cortex was determined in 78 tissue blocks from the brains of 20 multiple sclerosis (MS) patients and 28 tissue blocks from 7 patients without neurological disease.</li>
-<li>Challenge: Tissue blocks from 4 predetermined areas (cingulate gyrus, frontal, parietal, and temporal lobe) were studied, irrespective of macroscopically evident MS plaques.</li>
-<li>Action: All tissue blocks contained cerebral cortex and periventricular and/or subcortical white matter.</li>
-<li>Resolution: This paper investigates subpial demyelination in the cerebral cortex of multiple sclerosis patients.</li>
+<li>The extent and pattern of demyelination in the cerebral cortex was determined in 78 tissue blocks from the brains of 20 multiple sclerosis (MS) patients and 28 tissue blocks from 7 patients without neurological disease.</li>
+<li>Tissue blocks from 4 predetermined areas (cingulate gyrus, frontal, parietal, and temporal lobe) were studied, irrespective of macroscopically evident MS plaques.</li>
+<li>All tissue blocks contained cerebral cortex and periventricular and/or subcortical white matter.</li>
+<li>This paper investigates subpial demyelination in the cerebral cortex of multiple sclerosis patients.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/jnen/62.7.723" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lars Bø. (2003). Subpial Demyelination in the Cerebral Cortex of Multiple Sclerosis Patients. Journal of Neuropathology &amp; Experimental Neurology. https://doi.org/10.1093/jnen/62.7.723</p>
@@ -510,7 +515,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Slow expansion of multiple sclerosis iron rim lesions: pathology and 7 T magnetic resonance imaging</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -520,10 +524,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates slow expansion of multiple sclerosis iron rim lesions: pathology and 7 t magnetic resonance imaging. Pathologically, we found iron rims around slowly expanding and some inactive lesions but hardly around remyelinated shadow plaques.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Pathologically, we found iron rims around slowly expanding and some inactive lesions but hardly around remyelinated shadow plaques.</li>
-<li>Challenge: We show for the first time that rim lesions significantly expanded in vivo after 3.5 years, compared to lesions without rims (p = 0.003).</li>
-<li>Action: This paper investigates slow expansion of multiple sclerosis iron rim lesions: pathology and 7 t magnetic resonance imaging.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Pathologically, we found iron rims around slowly expanding and some inactive lesions but hardly around remyelinated shadow plaques.</li>
+<li>We show for the first time that rim lesions significantly expanded in vivo after 3.5 years, compared to lesions without rims (p = 0.003).</li>
+<li>This paper investigates slow expansion of multiple sclerosis iron rim lesions: pathology and 7 t magnetic resonance imaging.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00401-016-1636-z" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Assunta Dal‐Bianco. (2016). Slow expansion of multiple sclerosis iron rim lesions: pathology and 7 T magnetic resonance imaging. Acta Neuropathologica. https://doi.org/10.1007/s00401-016-1636-z</p>
@@ -545,7 +549,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Pathogenic Mechanisms Associated With Different Clinical Courses of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (85%)</span>
 </div>
@@ -555,10 +558,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates pathogenic mechanisms associated with different clinical courses of multiple sclerosis. Key open questions in MS research are the identification of the target antigen recognized by tissue resident CD8&lt;sup&gt;+&lt;/sup&gt; T-cells and B-cells and the molecular nature of the soluble inflammatory mediators, which may trigger tissue damage.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In the majority of patients multiple sclerosis starts with a relapsing remitting course (RRMS), which may at later times transform into secondary progressive disease (SPMS).</li>
-<li>Challenge: In a minority of patients the relapsing remitting disease is skipped and the patients show progression from the onset (primary progressive MS, PPMS).</li>
-<li>Action: Evidence obtained so far indicate major differences between RRMS and progressive MS, but no essential differences between SPMS and PPMS, with the exception of a lower incidence in the global load of focal white matter lesions and in particular in the presence of classical active plaques in PPMS.</li>
-<li>Resolution: This paper investigates pathogenic mechanisms associated with different clinical courses of multiple sclerosis.</li>
+<li>In the majority of patients multiple sclerosis starts with a relapsing remitting course (RRMS), which may at later times transform into secondary progressive disease (SPMS).</li>
+<li>In a minority of patients the relapsing remitting disease is skipped and the patients show progression from the onset (primary progressive MS, PPMS).</li>
+<li>Evidence obtained so far indicate major differences between RRMS and progressive MS, but no essential differences between SPMS and PPMS, with the exception of a lower incidence in the global load of focal white matter lesions and in particular in the presence of classical active plaques in PPMS.</li>
+<li>This paper investigates pathogenic mechanisms associated with different clinical courses of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3389/fimmu.2018.03116" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Hans Lassmann. (2019). Pathogenic Mechanisms Associated With Different Clinical Courses of Multiple Sclerosis. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2018.03116</p>
@@ -580,7 +583,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Comparison of MRI criteria at first presentation to predict conversion to clinically definite multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1997</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -590,10 +592,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates comparison of mri criteria at first presentation to predict conversion to clinically definite multiple sclerosis. We concluded that a four-parameter dichotomized MRI model including gadolinium-enhancement, juxtacortical, infratentorial and periventricular lesions best predicts conversion to clinically definite multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We compared MRI criteria used to predict conversion of suspected multiple sclerosis to clinically definite multiple sclerosis.</li>
-<li>Challenge: Seventy-four patients with clinically isolated neurological symptoms suggestive of multiple sclerosis were studied with MRI.</li>
-<li>Action: Logistic regression analysis was used to remove redundant information, and a diagnostic model was built after each MRI parameter was dichotomized according to maximum accuracy using receiver operating characteristic analysis.</li>
-<li>Resolution: This paper investigates comparison of mri criteria at first presentation to predict conversion to clinically definite multiple sclerosis.</li>
+<li>We compared MRI criteria used to predict conversion of suspected multiple sclerosis to clinically definite multiple sclerosis.</li>
+<li>Seventy-four patients with clinically isolated neurological symptoms suggestive of multiple sclerosis were studied with MRI.</li>
+<li>Logistic regression analysis was used to remove redundant information, and a diagnostic model was built after each MRI parameter was dichotomized according to maximum accuracy using receiver operating characteristic analysis.</li>
+<li>This paper investigates comparison of mri criteria at first presentation to predict conversion to clinically definite multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/120.11.2059" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Frederik Barkhof. (1997). Comparison of MRI criteria at first presentation to predict conversion to clinically definite multiple sclerosis. Brain. https://doi.org/10.1093/brain/120.11.2059</p>
@@ -615,7 +617,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Incidental MRI anomalies suggestive of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -625,10 +626,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates incidental mri anomalies suggestive of multiple sclerosis. Additional studies will be necessary to fully define this risk.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Individuals with MRI anomalies highly suggestive of demyelinating pathology, not better accounted for by another disease process, are very likely to experience subsequent radiologic or clinical events related to multiple sclerosis.</li>
-<li>Challenge: Additional studies will be necessary to fully define this risk.</li>
-<li>Action: This paper investigates incidental mri anomalies suggestive of multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Individuals with MRI anomalies highly suggestive of demyelinating pathology, not better accounted for by another disease process, are very likely to experience subsequent radiologic or clinical events related to multiple sclerosis.</li>
+<li>Additional studies will be necessary to fully define this risk.</li>
+<li>This paper investigates incidental mri anomalies suggestive of multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000335764.14513.1a" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Darin T. Okuda. (2008). Incidental MRI anomalies suggestive of multiple sclerosis. Neurology. https://doi.org/10.1212/01.wnl.0000335764.14513.1a</p>
@@ -650,7 +651,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -660,10 +660,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines. We also discuss the possible place of emerging qualitative features of lesions which may become important in the near future.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: MRI has improved the diagnostic work-up of multiple sclerosis, but inappropriate image interpretation and application of MRI diagnostic criteria contribute to misdiagnosis.</li>
-<li>Challenge: Some diseases, now recognized as conditions distinct from multiple sclerosis, may satisfy the MRI criteria for multiple sclerosis (e.g.</li>
-<li>Action: neuromyelitis optica spectrum disorders, Susac syndrome), thus making the diagnosis of multiple sclerosis more challenging, especially if biomarker testing (such as serum anti-AQP4 antibodies) is not informative.</li>
-<li>Resolution: This paper investigates assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines.</li>
+<li>MRI has improved the diagnostic work-up of multiple sclerosis, but inappropriate image interpretation and application of MRI diagnostic criteria contribute to misdiagnosis.</li>
+<li>Some diseases, now recognized as conditions distinct from multiple sclerosis, may satisfy the MRI criteria for multiple sclerosis (e.g.</li>
+<li>neuromyelitis optica spectrum disorders, Susac syndrome), thus making the diagnosis of multiple sclerosis more challenging, especially if biomarker testing (such as serum anti-AQP4 antibodies) is not informative.</li>
+<li>This paper investigates assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awz144" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimo Filippi. (2019). Assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines. Brain. https://doi.org/10.1093/brain/awz144</p>
@@ -685,7 +685,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical lesions in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -695,10 +694,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical lesions in multiple sclerosis. Investigation of the cortical venous supply shows how such lesions may arise, and why the majority also involve the underlying white matter.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although previous studies have shown that the lesions of multiple sclerosis may involve the cerebral cortex, there is little published research on the prevalence and distribution of such lesions.</li>
-<li>Challenge: Using neuropathological techniques and MRI, a series of studies has been undertaken in order to assess this, in particular to identify their relationship to cortical veins.</li>
-<li>Action: A serial MRI study showed that the use of gadolinium proffered an increase in cortical lesion detection of 140% and showed that 26% of active lesions arose within or adjacent to the cortex.</li>
-<li>Resolution: This paper investigates cortical lesions in multiple sclerosis.</li>
+<li>Although previous studies have shown that the lesions of multiple sclerosis may involve the cerebral cortex, there is little published research on the prevalence and distribution of such lesions.</li>
+<li>Using neuropathological techniques and MRI, a series of studies has been undertaken in order to assess this, in particular to identify their relationship to cortical veins.</li>
+<li>A serial MRI study showed that the use of gadolinium proffered an increase in cortical lesion detection of 140% and showed that 26% of active lesions arose within or adjacent to the cortex.</li>
+<li>This paper investigates cortical lesions in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/122.1.17" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Desmond P. Kidd. (1999). Cortical lesions in multiple sclerosis. Brain. https://doi.org/10.1093/brain/122.1.17</p>
@@ -720,7 +719,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Persistent 7-tesla phase rim predicts poor outcome in new multiple sclerosis patient lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (42%)</span>
 </div>
@@ -730,10 +728,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates persistent 7-tesla phase rim predicts poor outcome in new multiple sclerosis patient lesions. The Intramural Research Program of NINDS supported this study.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The Intramural Research Program of NINDS supported this study.</li>
-<li>Challenge: This paper investigates persistent 7-tesla phase rim predicts poor outcome in new multiple sclerosis patient lesions.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The Intramural Research Program of NINDS supported this study.</li>
+<li>This paper investigates persistent 7-tesla phase rim predicts poor outcome in new multiple sclerosis patient lesions.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1172/jci86198" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2016). Persistent 7-tesla phase rim predicts poor outcome in new multiple sclerosis patient lesions. Journal of Clinical Investigation. https://doi.org/10.1172/jci86198</p>
@@ -755,7 +753,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MAGNIMS consensus guidelines on the use of MRI in multiple sclerosis—establishing disease prognosis and monitoring patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -765,10 +762,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—establishing disease prognosis and monitoring patients. We present recommendations on how and when to use MRI for disease monitoring, and discuss some promising MRI approaches that may be introduced into clinical practice in the near future.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The role of MRI in the assessment of multiple sclerosis (MS) goes far beyond the diagnostic process.</li>
-<li>Challenge: MRI techniques can be used as regular monitoring to help stage patients with MS and measure disease progression.</li>
-<li>Action: MRI can also be used to measure lesion burden, thus providing useful information for the prediction of long-term disability.</li>
-<li>Resolution: This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—establishing disease prognosis and monitoring patients.</li>
+<li>The role of MRI in the assessment of multiple sclerosis (MS) goes far beyond the diagnostic process.</li>
+<li>MRI techniques can be used as regular monitoring to help stage patients with MS and measure disease progression.</li>
+<li>MRI can also be used to measure lesion burden, thus providing useful information for the prediction of long-term disability.</li>
+<li>This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—establishing disease prognosis and monitoring patients.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/nrneurol.2015.157" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> on behalf of the MAGNIMS study group. (2015). MAGNIMS consensus guidelines on the use of MRI in multiple sclerosis—establishing disease prognosis and monitoring patients. Nature Reviews Neurology. https://doi.org/10.1038/nrneurol.2015.157</p>
@@ -790,7 +787,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Progressive multiple sclerosis patients show substantial lesion activity that correlates with clinical disease severity and sex: a retrospective autopsy cohort analysis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (73%)</span>
 </div>
@@ -800,10 +796,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates progressive multiple sclerosis patients show substantial lesion activity that correlates with clinical disease severity and sex: a retrospective autopsy cohort analysis. In this study, we investigated pathological correlates of disease course in MS using the autopsy cohort of the Netherlands Brain Bank (NBB), containing 182 MS brain donors.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, we investigated pathological correlates of disease course in MS using the autopsy cohort of the Netherlands Brain Bank (NBB), containing 182 MS brain donors.</li>
-<li>Challenge: This paper investigates progressive multiple sclerosis patients show substantial lesion activity that correlates with clinical disease severity and sex: a retrospective autopsy cohort analysis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, we investigated pathological correlates of disease course in MS using the autopsy cohort of the Netherlands Brain Bank (NBB), containing 182 MS brain donors.</li>
+<li>This paper investigates progressive multiple sclerosis patients show substantial lesion activity that correlates with clinical disease severity and sex: a retrospective autopsy cohort analysis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00401-018-1818-y" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sabina Luchetti. (2018). Progressive multiple sclerosis patients show substantial lesion activity that correlates with clinical disease severity and sex: a retrospective autopsy cohort analysis. Acta Neuropathologica. https://doi.org/10.1007/s00401-018-1818-y</p>
@@ -825,7 +821,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Axonal loss in multiple sclerosis lesions: Magnetic resonance imaging insights into substrates of disability</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -835,10 +830,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates axonal loss in multiple sclerosis lesions: magnetic resonance imaging insights into substrates of disability. T1 hypointensity and MTR were strongly associated with axonal density, emphasizing their role in monitoring progression in multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Magnetic resonance imaging (MRI) monitoring of disease progression in multiple sclerosis is limited by the lack of correlation of abnormalities seen on T2-weighted imaging, and disability.</li>
-<li>Challenge: We studied the histopathology of multiple sclerosis lesions, as depicted by MRI, in a large postmortem sample, focusing on axonal loss.</li>
-<li>Action: Tissue samples from 17 patients were selected immediately postmortem for histopathological analysis on the basis of T2-weighted imaging, including normal appearing white matter and T1 hypointense lesions.</li>
-<li>Resolution: This paper investigates axonal loss in multiple sclerosis lesions: magnetic resonance imaging insights into substrates of disability.</li>
+<li>Magnetic resonance imaging (MRI) monitoring of disease progression in multiple sclerosis is limited by the lack of correlation of abnormalities seen on T2-weighted imaging, and disability.</li>
+<li>We studied the histopathology of multiple sclerosis lesions, as depicted by MRI, in a large postmortem sample, focusing on axonal loss.</li>
+<li>Tissue samples from 17 patients were selected immediately postmortem for histopathological analysis on the basis of T2-weighted imaging, including normal appearing white matter and T1 hypointense lesions.</li>
+<li>This paper investigates axonal loss in multiple sclerosis lesions: magnetic resonance imaging insights into substrates of disability.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/1531-8249(199911)46:5&lt;747::aid-ana10&gt;3.0.co;2-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> J.H.T.M. van Waesberghe. (1999). Axonal loss in multiple sclerosis lesions: Magnetic resonance imaging insights into substrates of disability. Annals of Neurology. https://doi.org/10.1002/1531-8249(199911)46:5&lt;747::aid-ana10&gt;3.0.co;2-4</p>
@@ -860,7 +855,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Meningeal inflammation plays a role in the pathology of primary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -870,10 +864,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates meningeal inflammation plays a role in the pathology of primary progressive multiple sclerosis. Our data suggest that generalized diffuse meningeal inflammation and the associated inflammatory milieu in the subarachnoid compartment plays a role in the pathogenesis of cortical grey matter lesions and an increased rate of clinical progression in primary progressive multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The primary progressive form of multiple sclerosis is characterized by accrual of neurological dysfunction from disease onset without remission and it is still a matter of debate whether this disease course results from different pathogenetic mechanisms compared with secondary progressive multiple sclerosis.</li>
-<li>Challenge: Inflammation in the leptomeninges has been identified as a key feature of secondary progressive multiple sclerosis and may contribute to the extensive cortical pathology that accompanies progressive disease.</li>
-<li>Action: Our aim was to investigate the extent of perivascular and meningeal inflammation in primary progressive multiple sclerosis in order to understand their contribution to the pathogenetic mechanisms associated with cortical pathology.</li>
-<li>Resolution: This paper investigates meningeal inflammation plays a role in the pathology of primary progressive multiple sclerosis.</li>
+<li>The primary progressive form of multiple sclerosis is characterized by accrual of neurological dysfunction from disease onset without remission and it is still a matter of debate whether this disease course results from different pathogenetic mechanisms compared with secondary progressive multiple sclerosis.</li>
+<li>Inflammation in the leptomeninges has been identified as a key feature of secondary progressive multiple sclerosis and may contribute to the extensive cortical pathology that accompanies progressive disease.</li>
+<li>Our aim was to investigate the extent of perivascular and meningeal inflammation in primary progressive multiple sclerosis in order to understand their contribution to the pathogenetic mechanisms associated with cortical pathology.</li>
+<li>This paper investigates meningeal inflammation plays a role in the pathology of primary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/aws189" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sung R. Choi. (2012). Meningeal inflammation plays a role in the pathology of primary progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/aws189</p>
@@ -895,7 +889,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Intracortical multiple sclerosis lesions are not associated with increased lymphocyte infiltration</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2003</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -905,10 +898,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates intracortical multiple sclerosis lesions are not associated with increased lymphocyte infiltration. These data indicate that areas of intracortical demyelination in chronic MS are not associated with an increased number of lymphocytes, or an altered distribution of lymphocyte subsets, when compared with control areas in MS and control patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data indicate that areas of intracortical demyelination in chronic MS are not associated with an increased number of lymphocytes, or an altered distribution of lymphocyte subsets, when compared with control areas in MS and control patients.</li>
-<li>Challenge: This paper investigates intracortical multiple sclerosis lesions are not associated with increased lymphocyte infiltration.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data indicate that areas of intracortical demyelination in chronic MS are not associated with an increased number of lymphocytes, or an altered distribution of lymphocyte subsets, when compared with control areas in MS and control patients.</li>
+<li>This paper investigates intracortical multiple sclerosis lesions are not associated with increased lymphocyte infiltration.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1191/1352458503ms917oa" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lars Bø. (2003). Intracortical multiple sclerosis lesions are not associated with increased lymphocyte infiltration. Multiple Sclerosis Journal. https://doi.org/10.1191/1352458503ms917oa</p>
@@ -930,7 +923,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Deep gray matter volume loss drives disability worsening in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (75%)</span>
 </div>
@@ -940,10 +932,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates deep gray matter volume loss drives disability worsening in multiple sclerosis. Ann Neurol 2018;83:210-222.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This large, multicenter and longitudinal study shows that DGM volume loss drives disability accumulation in MS, and that temporal cortical GM shows accelerated atrophy in SPMS than RRMS.</li>
-<li>Challenge: The difference in regional GM atrophy development between phenotypes needs to be taken into account when evaluating treatment effect of therapeutic interventions.</li>
-<li>Action: Ann Neurol 2018;83:210-222.</li>
-<li>Resolution: This paper investigates deep gray matter volume loss drives disability worsening in multiple sclerosis.</li>
+<li>This large, multicenter and longitudinal study shows that DGM volume loss drives disability accumulation in MS, and that temporal cortical GM shows accelerated atrophy in SPMS than RRMS.</li>
+<li>The difference in regional GM atrophy development between phenotypes needs to be taken into account when evaluating treatment effect of therapeutic interventions.</li>
+<li>Ann Neurol 2018;83:210-222.</li>
+<li>This paper investigates deep gray matter volume loss drives disability worsening in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25145" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arman Eshaghi. (2018). Deep gray matter volume loss drives disability worsening in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.25145</p>
@@ -965,7 +957,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Iron and neurodegeneration in the multiple sclerosis brain</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (60%)</span>
 </div>
@@ -975,10 +966,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates iron and neurodegeneration in the multiple sclerosis brain. Cellular degeneration in MS lesions leads to waves of iron liberation, which may propagate neurodegeneration together with inflammatory oxidative burst.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Iron decreases in the NAWM of MS patients with increasing disease duration.</li>
-<li>Challenge: Cellular degeneration in MS lesions leads to waves of iron liberation, which may propagate neurodegeneration together with inflammatory oxidative burst.</li>
-<li>Action: This paper investigates iron and neurodegeneration in the multiple sclerosis brain.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Iron decreases in the NAWM of MS patients with increasing disease duration.</li>
+<li>Cellular degeneration in MS lesions leads to waves of iron liberation, which may propagate neurodegeneration together with inflammatory oxidative burst.</li>
+<li>This paper investigates iron and neurodegeneration in the multiple sclerosis brain.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.23974" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Simon Hametner. (2013). Iron and neurodegeneration in the multiple sclerosis brain. Annals of Neurology. https://doi.org/10.1002/ana.23974</p>
@@ -1000,7 +991,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Magnetization transfer ratio and myelin in postmortem multiple sclerosis brain</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -1010,10 +1000,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnetization transfer ratio and myelin in postmortem multiple sclerosis brain. This study investigates the relationship of quantitative measures of myelin content, axonal density, and gliosis with quantitative MR measures in postmortem (PM) MS tissue.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study investigates the relationship of quantitative measures of myelin content, axonal density, and gliosis with quantitative MR measures in postmortem (PM) MS tissue.</li>
-<li>Challenge: This paper investigates magnetization transfer ratio and myelin in postmortem multiple sclerosis brain.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study investigates the relationship of quantitative measures of myelin content, axonal density, and gliosis with quantitative MR measures in postmortem (PM) MS tissue.</li>
+<li>This paper investigates magnetization transfer ratio and myelin in postmortem multiple sclerosis brain.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.20202" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Klaus Schmierer. (2004). Magnetization transfer ratio and myelin in postmortem multiple sclerosis brain. Annals of Neurology. https://doi.org/10.1002/ana.20202</p>
@@ -1035,7 +1025,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Immunopathology of secondary‐progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2001</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1045,10 +1034,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates immunopathology of secondary‐progressive multiple sclerosis. It suggests that slowly expanding lesions (progressive plaques), in which ongoing myelin breakdown occurs in the absence of florid perivascular cell cuffing or other histological signs of acute inflammation, contribute to disease progression in cases of secondary-progressive multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Twenty-three plaques obtained at early autopsy from 2 patients with secondary-progressive multiple sclerosis were examined immunohistochemically for microglia/macrophages, and for immunoglobulins and components of activated complement.</li>
-<li>Challenge: Most of the lesions examined in both cases exhibited evidence of low-grade active demyelination of an unusual type (frustrated phagocytosis) in periplaque white matter.</li>
-<li>Action: This included linear groups of microglia engaging short segments of disrupted myelin that were associated with deposits of C3d, an opsonin formed during complement activation.</li>
-<li>Resolution: This paper investigates immunopathology of secondary‐progressive multiple sclerosis.</li>
+<li>Twenty-three plaques obtained at early autopsy from 2 patients with secondary-progressive multiple sclerosis were examined immunohistochemically for microglia/macrophages, and for immunoglobulins and components of activated complement.</li>
+<li>Most of the lesions examined in both cases exhibited evidence of low-grade active demyelination of an unusual type (frustrated phagocytosis) in periplaque white matter.</li>
+<li>This included linear groups of microglia engaging short segments of disrupted myelin that were associated with deposits of C3d, an opsonin formed during complement activation.</li>
+<li>This paper investigates immunopathology of secondary‐progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.1255" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> John W. Prineas. (2001). Immunopathology of secondary‐progressive multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.1255</p>
@@ -1070,7 +1059,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A role for humoral mechanisms in the pathogenesis of Devic&#x27;s neuromyelitis optica</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1080,10 +1068,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a role for humoral mechanisms in the pathogenesis of devic&#x27;s neuromyelitis optica. The purpose of this study was to investigate the importance of humoral mechanisms, including complement activation, in producing the necrotizing demyelination seen in the spinal cord and optic nerves.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The purpose of this study was to investigate the importance of humoral mechanisms, including complement activation, in producing the necrotizing demyelination seen in the spinal cord and optic nerves.</li>
-<li>Challenge: Based on this study, future therapeutic strategies designed to limit the deleterious effects of complement activation, eosinophil degranulation and neutrophil/macrophage/microglial activation are worthy of further investigation.</li>
-<li>Action: This paper investigates a role for humoral mechanisms in the pathogenesis of devic&#x27;s neuromyelitis optica.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The purpose of this study was to investigate the importance of humoral mechanisms, including complement activation, in producing the necrotizing demyelination seen in the spinal cord and optic nerves.</li>
+<li>Based on this study, future therapeutic strategies designed to limit the deleterious effects of complement activation, eosinophil degranulation and neutrophil/macrophage/microglial activation are worthy of further investigation.</li>
+<li>This paper investigates a role for humoral mechanisms in the pathogenesis of devic&#x27;s neuromyelitis optica.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf151" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Claudia F. Lucchinetti. (2002). A role for humoral mechanisms in the pathogenesis of Devic&#x27;s neuromyelitis optica. Brain. https://doi.org/10.1093/brain/awf151</p>
@@ -1105,7 +1093,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The Multiple Sclerosis Functional Composite measure (MSFC): an integrated approach to MS clinical outcome assessment</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1999</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1115,10 +1102,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the multiple sclerosis functional composite measure (msfc): an integrated approach to ms clinical outcome assessment. The advantages and potential limitations of incorporating quantitative functional outcome measures such as the MSFC into collaborative databases are discussed.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Clinical outcome assessment in Multiple Sclerosis (MS) is challenging due to the diversity and fluctuating nature of MS symptoms.</li>
-<li>Challenge: Traditional clinical scales such as the EDSS are inadequate in their assessment of key clinical dimensions of MS (e.g.</li>
-<li>Action: , cognitive function), and they have psychometric limitations as well.</li>
-<li>Resolution: This paper investigates the multiple sclerosis functional composite measure (msfc): an integrated approach to ms clinical outcome assessment.</li>
+<li>Clinical outcome assessment in Multiple Sclerosis (MS) is challenging due to the diversity and fluctuating nature of MS symptoms.</li>
+<li>Traditional clinical scales such as the EDSS are inadequate in their assessment of key clinical dimensions of MS (e.g.</li>
+<li>, cognitive function), and they have psychometric limitations as well.</li>
+<li>This paper investigates the multiple sclerosis functional composite measure (msfc): an integrated approach to ms clinical outcome assessment.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/135245859900500409" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jill S. Fischer. (1999). The Multiple Sclerosis Functional Composite measure (MSFC): an integrated approach to MS clinical outcome assessment. Multiple Sclerosis Journal. https://doi.org/10.1177/135245859900500409</p>
@@ -1140,7 +1127,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Neocortical neuronal, synaptic, and glial loss in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -1150,10 +1136,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates neocortical neuronal, synaptic, and glial loss in multiple sclerosis. New therapies should be directed toward limiting this damage.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Neocortical neuronal and glial degeneration is significant in multiple sclerosis.</li>
-<li>Challenge: Synaptic loss was particularly striking in the neocortical lesions, which should make a major independent contribution to the expression of pathology.</li>
-<li>Action: New therapies should be directed toward limiting this damage.</li>
-<li>Resolution: This paper investigates neocortical neuronal, synaptic, and glial loss in multiple sclerosis.</li>
+<li>Neocortical neuronal and glial degeneration is significant in multiple sclerosis.</li>
+<li>Synaptic loss was particularly striking in the neocortical lesions, which should make a major independent contribution to the expression of pathology.</li>
+<li>New therapies should be directed toward limiting this damage.</li>
+<li>This paper investigates neocortical neuronal, synaptic, and glial loss in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000237551.26858.39" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christiane Wegner. (2006). Neocortical neuronal, synaptic, and glial loss in multiple sclerosis. Neurology. https://doi.org/10.1212/01.wnl.0000237551.26858.39</p>
@@ -1175,7 +1161,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Tracking iron in multiple sclerosis: a combined imaging and histopathological study at 7 Tesla</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1185,10 +1170,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates tracking iron in multiple sclerosis: a combined imaging and histopathological study at 7 tesla. The samples used for this study derive from two patients with multiple sclerosis and one non-multiple sclerosis donor.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The samples used for this study derive from two patients with multiple sclerosis and one non-multiple sclerosis donor.</li>
-<li>Challenge: This paper investigates tracking iron in multiple sclerosis: a combined imaging and histopathological study at 7 tesla.</li>
-<li>Action: Previous authors have shown that the transverse relaxivity R(2)* and frequency shifts that characterize gradient echo signal decay in magnetic resonance imaging are closely associated with the distribution of iron and myelin in the brain&#x27;s white matter.</li>
-<li>Resolution: In multiple sclerosis, iron accumulation in brain tissue may reflect a multiplicity of pathological processes.</li>
+<li>The samples used for this study derive from two patients with multiple sclerosis and one non-multiple sclerosis donor.</li>
+<li>This paper investigates tracking iron in multiple sclerosis: a combined imaging and histopathological study at 7 tesla.</li>
+<li>Previous authors have shown that the transverse relaxivity R(2)* and frequency shifts that characterize gradient echo signal decay in magnetic resonance imaging are closely associated with the distribution of iron and myelin in the brain&#x27;s white matter.</li>
+<li>In multiple sclerosis, iron accumulation in brain tissue may reflect a multiplicity of pathological processes.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awr278" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Francesca Bagnato. (2011). Tracking iron in multiple sclerosis: a combined imaging and histopathological study at 7 Tesla. Brain. https://doi.org/10.1093/brain/awr278</p>
@@ -1210,7 +1195,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The clinico-radiological paradox in multiple sclerosis revisited</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1220,10 +1204,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the clinico-radiological paradox in multiple sclerosis revisited. This corroborates with conventional wisdom that one should not rely on a single magnetic resonance measure, but take full advantage of the fact that magnetic resonance is able to provide multidimensional information.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The use of magnetic resonance imaging as a surrogate outcome measure in clinical trials, or even as a prognosticator in the assessment of the natural evolution, assumes a close relationship between extent and rate of development of magnetic resonance imaging abnormalities with the clinical status and rate of development of disability.</li>
-<li>Challenge: While it may seem obvious that patients who develop new lesions are worse off than those without new lesions, the association between clinical findings and radiological extent of involvement is generally poor.</li>
-<li>Action: In this review, various confounders are discussed, including inappropriate clinical rating, lack of histopathological specificity (especially for axonal loss), neglect of spinal cord involvement, underestimation of damage to the normal appearing brain tissue (both white and gray matter), and masking effects of cortical adaptation.</li>
-<li>Resolution: This paper investigates the clinico-radiological paradox in multiple sclerosis revisited.</li>
+<li>The use of magnetic resonance imaging as a surrogate outcome measure in clinical trials, or even as a prognosticator in the assessment of the natural evolution, assumes a close relationship between extent and rate of development of magnetic resonance imaging abnormalities with the clinical status and rate of development of disability.</li>
+<li>While it may seem obvious that patients who develop new lesions are worse off than those without new lesions, the association between clinical findings and radiological extent of involvement is generally poor.</li>
+<li>In this review, various confounders are discussed, including inappropriate clinical rating, lack of histopathological specificity (especially for axonal loss), neglect of spinal cord involvement, underestimation of damage to the normal appearing brain tissue (both white and gray matter), and masking effects of cortical adaptation.</li>
+<li>This paper investigates the clinico-radiological paradox in multiple sclerosis revisited.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/00019052-200206000-00003" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Frederik Barkhof. (2002). The clinico-radiological paradox in multiple sclerosis revisited. Current Opinion in Neurology. https://doi.org/10.1097/00019052-200206000-00003</p>
@@ -1245,7 +1229,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Major differences in the dynamics of primary and secondary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1991</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1255,10 +1238,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates major differences in the dynamics of primary and secondary progressive multiple sclerosis. These findings may indicate a difference in the dynamics of disease activity between the two forms of progressive MS, particularly in relation to the inflammatory component of the lesions, and have important implications for the selection of patients and the monitoring of disease activity in therapeutic trials.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In patients with primary and secondary progressive multiple sclerosis (MS), major differences in the pattern and extent of abnormality on cerebral magnetic resonance imaging (MRI) between the two groups have recently been demonstrated.</li>
-<li>Challenge: In the present study, 24 patients, matched for age, sex, duration of disease, and disability, had serial gadolinium diethylenetriaminepentaacetic acid-enhanced MRI over a 6-month period.</li>
-<li>Action: The 12 patients in the secondary progressive group had a total of 109 new lesions over this time (18.2 lesions per patient per year) and 87% of these enhanced.</li>
-<li>Resolution: This paper investigates major differences in the dynamics of primary and secondary progressive multiple sclerosis.</li>
+<li>In patients with primary and secondary progressive multiple sclerosis (MS), major differences in the pattern and extent of abnormality on cerebral magnetic resonance imaging (MRI) between the two groups have recently been demonstrated.</li>
+<li>In the present study, 24 patients, matched for age, sex, duration of disease, and disability, had serial gadolinium diethylenetriaminepentaacetic acid-enhanced MRI over a 6-month period.</li>
+<li>The 12 patients in the secondary progressive group had a total of 109 new lesions over this time (18.2 lesions per patient per year) and 87% of these enhanced.</li>
+<li>This paper investigates major differences in the dynamics of primary and secondary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410290111" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alan J. Thompson. (1991). Major differences in the dynamics of primary and secondary progressive multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.410290111</p>
@@ -1280,7 +1263,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MAGNIMS consensus guidelines on the use of MRI in multiple sclerosis—clinical implementation in the diagnostic process</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -1290,10 +1272,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—clinical implementation in the diagnostic process. Our recommendations are intended to help radiologists and neurologists standardize and optimize the use of MRI in clinical practice for the diagnosis of MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The clinical use of MRI in patients with multiple sclerosis (MS) has advanced markedly over the past few years.</li>
-<li>Challenge: Technical improvements and continuously emerging data from clinical trials and observational studies have contributed to the enhanced performance of this tool for achieving a prompt diagnosis in patients with MS.</li>
-<li>Action: The aim of this article is to provide guidelines for the implementation of MRI of the brain and spinal cord in the diagnosis of patients who are suspected of having MS.</li>
-<li>Resolution: This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—clinical implementation in the diagnostic process.</li>
+<li>The clinical use of MRI in patients with multiple sclerosis (MS) has advanced markedly over the past few years.</li>
+<li>Technical improvements and continuously emerging data from clinical trials and observational studies have contributed to the enhanced performance of this tool for achieving a prompt diagnosis in patients with MS.</li>
+<li>The aim of this article is to provide guidelines for the implementation of MRI of the brain and spinal cord in the diagnosis of patients who are suspected of having MS.</li>
+<li>This paper investigates magnims consensus guidelines on the use of mri in multiple sclerosis—clinical implementation in the diagnostic process.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/nrneurol.2015.106" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> on behalf of the MAGNIMS study group. (2015). MAGNIMS consensus guidelines on the use of MRI in multiple sclerosis—clinical implementation in the diagnostic process. Nature Reviews Neurology. https://doi.org/10.1038/nrneurol.2015.106</p>
@@ -1315,7 +1297,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Spinal cord atrophy and disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1325,10 +1306,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates spinal cord atrophy and disability in multiple sclerosis. The aim of this study was to develop a highly reproducible and accurate method for the quantification of atrophy.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The aim of this study was to develop a highly reproducible and accurate method for the quantification of atrophy.</li>
-<li>Challenge: At levels 3 and 8 of the EDSS we observed a reduction in average cord area of 12 and 35%, respectively.</li>
-<li>Action: This paper investigates spinal cord atrophy and disability in multiple sclerosis.</li>
-<li>Resolution: Recent MRI studies in multiple sclerosis have highlighted the potential importance of spinal cord atrophy (implicating axonal loss) in the development of disability.</li>
+<li>The aim of this study was to develop a highly reproducible and accurate method for the quantification of atrophy.</li>
+<li>At levels 3 and 8 of the EDSS we observed a reduction in average cord area of 12 and 35%, respectively.</li>
+<li>This paper investigates spinal cord atrophy and disability in multiple sclerosis.</li>
+<li>Recent MRI studies in multiple sclerosis have highlighted the potential importance of spinal cord atrophy (implicating axonal loss) in the development of disability.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/119.3.701" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> N. A. Losseff. (1996). Spinal cord atrophy and disability in multiple sclerosis. Brain. https://doi.org/10.1093/brain/119.3.701</p>
@@ -1350,7 +1331,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Recommended standard of cerebrospinal fluid analysis in the diagnosis of multiple sclerosis: a consensus statement.</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1360,10 +1340,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates recommended standard of cerebrospinal fluid analysis in the diagnosis of multiple sclerosis: a consensus statement. These recommendations for establishing a standard for the evaluation of CSF in patients suspected of having MS should greatly complement the new criteria in ensuring that a correct diagnosis of MS is being made.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: New criteria for the diagnosis of multiple sclerosis (MS) were published as the result of an internationally formed committee.</li>
-<li>Challenge: To increase the specificity of diagnosis and to minimize the number of false diagnoses, the committee recommended the use of both clinical and paraclinical criteria, the latter involving information obtained from magnetic resonance imaging, evoked potentials, and cerebrospinal fluid (CSF) analysis.</li>
-<li>Action: Although rigorous magnetic resonance imaging requirements were provided, the &quot;new criteria paper&quot; fell short in terms of guidelines as to how the CSF analysis should be performed and simply equated the IgG index with isoelectric focusing, without any justification.</li>
-<li>Resolution: This paper investigates recommended standard of cerebrospinal fluid analysis in the diagnosis of multiple sclerosis: a consensus statement.</li>
+<li>New criteria for the diagnosis of multiple sclerosis (MS) were published as the result of an internationally formed committee.</li>
+<li>To increase the specificity of diagnosis and to minimize the number of false diagnoses, the committee recommended the use of both clinical and paraclinical criteria, the latter involving information obtained from magnetic resonance imaging, evoked potentials, and cerebrospinal fluid (CSF) analysis.</li>
+<li>Although rigorous magnetic resonance imaging requirements were provided, the &quot;new criteria paper&quot; fell short in terms of guidelines as to how the CSF analysis should be performed and simply equated the IgG index with isoelectric focusing, without any justification.</li>
+<li>This paper investigates recommended standard of cerebrospinal fluid analysis in the diagnosis of multiple sclerosis: a consensus statement.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneur.62.6.865" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mark S. Freedman. (2005). Recommended standard of cerebrospinal fluid analysis in the diagnosis of multiple sclerosis: a consensus statement.. PubMed. https://doi.org/10.1001/archneur.62.6.865</p>
@@ -1385,7 +1365,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Inflammatory central nervous system demyelination: Correlation of magnetic resonance imaging findings with lesion pathology</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1997</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1395,10 +1374,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates inflammatory central nervous system demyelination: correlation of magnetic resonance imaging findings with lesion pathology. T1 scans revealed major differences in the degree of hypointensity that correlated with the extent of axonal damage, extracellular edema, and the degree of demyelination or remyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Magnetic resonance imaging (MRI) is widely used to evaluate and monitor disease activity in inflammatory demyelinating central nervous system (CNS) diseases such as multiple sclerosis.</li>
-<li>Challenge: The present study aimed at correlating MRI findings with histological parameters in 6 cases of biopsy-proven inflammatory demyelination of the CNS.</li>
-<li>Action: The earliest stages of demyelinating activity manifested as almost isointense lesions with a massive gadolinium-DTPA (Gd-DTPA) enhancement in T1-weighted scans.</li>
-<li>Resolution: This paper investigates inflammatory central nervous system demyelination: correlation of magnetic resonance imaging findings with lesion pathology.</li>
+<li>Magnetic resonance imaging (MRI) is widely used to evaluate and monitor disease activity in inflammatory demyelinating central nervous system (CNS) diseases such as multiple sclerosis.</li>
+<li>The present study aimed at correlating MRI findings with histological parameters in 6 cases of biopsy-proven inflammatory demyelination of the CNS.</li>
+<li>The earliest stages of demyelinating activity manifested as almost isointense lesions with a massive gadolinium-DTPA (Gd-DTPA) enhancement in T1-weighted scans.</li>
+<li>This paper investigates inflammatory central nervous system demyelination: correlation of magnetic resonance imaging findings with lesion pathology.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410420515" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Wolfgang Brück. (1997). Inflammatory central nervous system demyelination: Correlation of magnetic resonance imaging findings with lesion pathology. Annals of Neurology. https://doi.org/10.1002/ana.410420515</p>
@@ -1420,7 +1399,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The topograpy of demyelination and neurodegeneration in the multiple sclerosis brain</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1430,10 +1408,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the topograpy of demyelination and neurodegeneration in the multiple sclerosis brain. Our data show that accumulation of lesions and neurodegeneration in the multiple sclerosis brain does not affect all brain regions equally and provides the pathological basis for the selection of brain areas for monitoring regional injury and atrophy development in future magnetic resonance imaging studies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a chronic inflammatory disease with primary demyelination and neurodegeneration in the central nervous system.</li>
-<li>Challenge: In our study we analysed demyelination and neurodegeneration in a large series of multiple sclerosis brains and provide a map that displays the frequency of different brain areas to be affected by these processes.</li>
-<li>Action: Demyelination in the cerebral cortex was related to inflammatory infiltrates in the meninges, which was pronounced in invaginations of the brain surface (sulci) and possibly promoted by low flow of the cerebrospinal fluid in these areas.</li>
-<li>Resolution: Focal demyelinated lesions in the white matter occurred at sites with high venous density and additionally accumulated in watershed areas of low arterial blood supply.</li>
+<li>Multiple sclerosis is a chronic inflammatory disease with primary demyelination and neurodegeneration in the central nervous system.</li>
+<li>In our study we analysed demyelination and neurodegeneration in a large series of multiple sclerosis brains and provide a map that displays the frequency of different brain areas to be affected by these processes.</li>
+<li>Demyelination in the cerebral cortex was related to inflammatory infiltrates in the meninges, which was pronounced in invaginations of the brain surface (sulci) and possibly promoted by low flow of the cerebrospinal fluid in these areas.</li>
+<li>Focal demyelinated lesions in the white matter occurred at sites with high venous density and additionally accumulated in watershed areas of low arterial blood supply.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awv398" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lukas Haider. (2016). The topograpy of demyelination and neurodegeneration in the multiple sclerosis brain. Brain. https://doi.org/10.1093/brain/awv398</p>
@@ -1455,7 +1433,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Radiologically Isolated Syndrome: 5-Year Risk for an Initial Clinical Event</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -1465,10 +1442,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates radiologically isolated syndrome: 5-year risk for an initial clinical event. These data provide supportive evidence that a meaningful number of RIS subjects evolve to a first clinical symptom.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These data provide supportive evidence that a meaningful number of RIS subjects evolve to a first clinical symptom.</li>
-<li>Challenge: This paper investigates radiologically isolated syndrome: 5-year risk for an initial clinical event.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These data provide supportive evidence that a meaningful number of RIS subjects evolve to a first clinical symptom.</li>
+<li>This paper investigates radiologically isolated syndrome: 5-year risk for an initial clinical event.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1371/journal.pone.0090509" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Darin T. Okuda. (2014). Radiologically Isolated Syndrome: 5-Year Risk for an Initial Clinical Event. PLoS ONE. https://doi.org/10.1371/journal.pone.0090509</p>
@@ -1490,7 +1467,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Brain Atrophy With Disease Progression Independent of Relapse Activity in Patients With Relapsing Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -1500,10 +1476,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of brain atrophy with disease progression independent of relapse activity in patients with relapsing multiple sclerosis. These results point to the need to recognize the insidious manifestations of PIRA in clinical practice and to further evaluate treatment strategies for patients with PIRA in clinical trials.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our study shows that patients with RMS and PIRA exhibit accelerated brain atrophy, especially in the cerebral cortex.</li>
-<li>Challenge: These results point to the need to recognize the insidious manifestations of PIRA in clinical practice and to further evaluate treatment strategies for patients with PIRA in clinical trials.</li>
-<li>Action: This paper investigates association of brain atrophy with disease progression independent of relapse activity in patients with relapsing multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our study shows that patients with RMS and PIRA exhibit accelerated brain atrophy, especially in the cerebral cortex.</li>
+<li>These results point to the need to recognize the insidious manifestations of PIRA in clinical practice and to further evaluate treatment strategies for patients with PIRA in clinical trials.</li>
+<li>This paper investigates association of brain atrophy with disease progression independent of relapse activity in patients with relapsing multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2022.1025" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alessandro Cagol. (2022). Association of Brain Atrophy With Disease Progression Independent of Relapse Activity in Patients With Relapsing Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2022.1025</p>
@@ -1525,7 +1501,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Progression of regional grey matter atrophy in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -1535,10 +1510,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates progression of regional grey matter atrophy in multiple sclerosis. The spread of atrophy was associated with disease duration and with disability accumulation over time in relapsing-remitting multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: See Stankoff and Louapre (doi:10.1093/brain/awy114) for a scientific commentary on this article.Grey matter atrophy is present from the earliest stages of multiple sclerosis, but its temporal ordering is poorly understood.</li>
-<li>Challenge: We aimed to determine the sequence in which grey matter regions become atrophic in multiple sclerosis and its association with disability accumulation.</li>
-<li>Action: In this longitudinal study, we included 1417 subjects: 253 with clinically isolated syndrome, 708 with relapsing-remitting multiple sclerosis, 128 with secondary-progressive multiple sclerosis, 125 with primary-progressive multiple sclerosis, and 203 healthy control subjects from seven European centres.</li>
-<li>Resolution: Subjects underwent repeated MRI (total number of scans 3604); the mean follow-up for patients was 2.41 years (standard deviation = 1.97).</li>
+<li>See Stankoff and Louapre (doi:10.1093/brain/awy114) for a scientific commentary on this article.Grey matter atrophy is present from the earliest stages of multiple sclerosis, but its temporal ordering is poorly understood.</li>
+<li>We aimed to determine the sequence in which grey matter regions become atrophic in multiple sclerosis and its association with disability accumulation.</li>
+<li>In this longitudinal study, we included 1417 subjects: 253 with clinically isolated syndrome, 708 with relapsing-remitting multiple sclerosis, 128 with secondary-progressive multiple sclerosis, 125 with primary-progressive multiple sclerosis, and 203 healthy control subjects from seven European centres.</li>
+<li>Subjects underwent repeated MRI (total number of scans 3604); the mean follow-up for patients was 2.41 years (standard deviation = 1.97).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy088" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Arman Eshaghi. (2018). Progression of regional grey matter atrophy in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awy088</p>
@@ -1560,7 +1535,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Long-term evolution of multiple sclerosis iron rim lesions in 7 T MRI</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1570,10 +1544,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates long-term evolution of multiple sclerosis iron rim lesions in 7 t mri. We observed 16 nascent iron rim lesions, which mainly formed in relapsing-remitting multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We observed 16 nascent iron rim lesions, which mainly formed in relapsing-remitting multiple sclerosis.</li>
-<li>Challenge: This paper investigates long-term evolution of multiple sclerosis iron rim lesions in 7 t mri.</li>
-<li>Action: Recent data suggest that multiple sclerosis white matter lesions surrounded by a rim of iron containing microglia, termed iron rim lesions, signify patients with more severe disease course and a propensity to develop progressive multiple sclerosis.</li>
-<li>Resolution: So far, however, little is known regarding the dynamics of iron rim lesions over long-time follow-up.</li>
+<li>We observed 16 nascent iron rim lesions, which mainly formed in relapsing-remitting multiple sclerosis.</li>
+<li>This paper investigates long-term evolution of multiple sclerosis iron rim lesions in 7 t mri.</li>
+<li>Recent data suggest that multiple sclerosis white matter lesions surrounded by a rim of iron containing microglia, termed iron rim lesions, signify patients with more severe disease course and a propensity to develop progressive multiple sclerosis.</li>
+<li>So far, however, little is known regarding the dynamics of iron rim lesions over long-time follow-up.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awaa436" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Assunta Dal‐Bianco. (2020). Long-term evolution of multiple sclerosis iron rim lesions in 7 T MRI. Brain. https://doi.org/10.1093/brain/awaa436</p>
@@ -1595,7 +1569,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Gray matter atrophy is related to long‐term disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -1605,10 +1578,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates gray matter atrophy is related to long‐term disability in multiple sclerosis. In MS patients with a relatively long and homogeneous disease duration, GM atrophy is more marked than WM atrophy, and reflects disease subtype and disability to a greater extent than WM atrophy or lesions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In MS patients with a relatively long and homogeneous disease duration, GM atrophy is more marked than WM atrophy, and reflects disease subtype and disability to a greater extent than WM atrophy or lesions.</li>
-<li>Challenge: This paper investigates gray matter atrophy is related to long‐term disability in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In MS patients with a relatively long and homogeneous disease duration, GM atrophy is more marked than WM atrophy, and reflects disease subtype and disability to a greater extent than WM atrophy or lesions.</li>
+<li>This paper investigates gray matter atrophy is related to long‐term disability in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21423" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Leonora Fisniku. (2008). Gray matter atrophy is related to long‐term disability in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.21423</p>
@@ -1630,7 +1603,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Measurement of atrophy in multiple sclerosis: pathological basis, methodological aspects and clinical relevance</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1640,10 +1612,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates measurement of atrophy in multiple sclerosis: pathological basis, methodological aspects and clinical relevance. Atrophy provides a sensitive measure of the neurodegenerative component of multiple sclerosis and should be measured in trials evaluating potential anti-inflammatory, remyelinating or neuroprotective therapies.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: MRI methods are widely used to follow the pathological evolution of multiple sclerosis in life and its modification by treatment.</li>
-<li>Challenge: To date, measures of the number and volume of macroscopically visible lesions have been studied most often.</li>
-<li>Action: These MRI outcomes have demonstrated clear treatment effects but without a commensurate clinical benefit, suggesting that there are other aspects of multiple sclerosis pathology that warrant investigation.</li>
-<li>Resolution: This paper investigates measurement of atrophy in multiple sclerosis: pathological basis, methodological aspects and clinical relevance.</li>
+<li>MRI methods are widely used to follow the pathological evolution of multiple sclerosis in life and its modification by treatment.</li>
+<li>To date, measures of the number and volume of macroscopically visible lesions have been studied most often.</li>
+<li>These MRI outcomes have demonstrated clear treatment effects but without a commensurate clinical benefit, suggesting that there are other aspects of multiple sclerosis pathology that warrant investigation.</li>
+<li>This paper investigates measurement of atrophy in multiple sclerosis: pathological basis, methodological aspects and clinical relevance.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf177" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David H. Miller. (2002). Measurement of atrophy in multiple sclerosis: pathological basis, methodological aspects and clinical relevance. Brain. https://doi.org/10.1093/brain/awf177</p>
@@ -1665,7 +1637,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Assessing brain atrophy rates in a large population of untreated multiple sclerosis subtypes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -1675,10 +1646,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates assessing brain atrophy rates in a large population of untreated multiple sclerosis subtypes. This first large study in untreated patients with multiple sclerosis (MS) with different disease subtypes shows that brain atrophy proceeds relentlessly throughout the course of MS, with a rate that seems largely independent of the MS subtype, when adjusting for baseline brain volume.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This first large study in untreated patients with multiple sclerosis (MS) with different disease subtypes shows that brain atrophy proceeds relentlessly throughout the course of MS, with a rate that seems largely independent of the MS subtype, when adjusting for baseline brain volume.</li>
-<li>Challenge: This paper investigates assessing brain atrophy rates in a large population of untreated multiple sclerosis subtypes.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This first large study in untreated patients with multiple sclerosis (MS) with different disease subtypes shows that brain atrophy proceeds relentlessly throughout the course of MS, with a rate that seems largely independent of the MS subtype, when adjusting for baseline brain volume.</li>
+<li>This paper investigates assessing brain atrophy rates in a large population of untreated multiple sclerosis subtypes.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181e24136" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Nicola De Stefano. (2010). Assessing brain atrophy rates in a large population of untreated multiple sclerosis subtypes. Neurology. https://doi.org/10.1212/wnl.0b013e3181e24136</p>
@@ -1700,7 +1671,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical Lesions and Atrophy Associated With Cognitive Impairment in Relapsing-Remitting Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -1710,10 +1680,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical lesions and atrophy associated with cognitive impairment in relapsing-remitting multiple sclerosis. The burden of CLs and tissue loss are among the major structural changes associated with cognitive impairment in relapsing-remitting MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The burden of CLs and tissue loss are among the major structural changes associated with cognitive impairment in relapsing-remitting MS.</li>
-<li>Challenge: This paper investigates cortical lesions and atrophy associated with cognitive impairment in relapsing-remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The burden of CLs and tissue loss are among the major structural changes associated with cognitive impairment in relapsing-remitting MS.</li>
+<li>This paper investigates cortical lesions and atrophy associated with cognitive impairment in relapsing-remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneurol.2009.174" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimiliano Calabrese. (2009). Cortical Lesions and Atrophy Associated With Cognitive Impairment in Relapsing-Remitting Multiple Sclerosis. Archives of Neurology. https://doi.org/10.1001/archneurol.2009.174</p>
@@ -1735,7 +1705,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Inflammatory intrathecal profiles and cortical damage in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -1745,10 +1714,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates inflammatory intrathecal profiles and cortical damage in multiple sclerosis. Ann Neurol 2018 Ann Neurol 2018;83:739-755.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A common pattern of intrathecal (meninges and CSF) inflammatory profile strongly correlates with increased cortical pathology, both at the time of diagnosis and at death.</li>
-<li>Challenge: These results suggest a role for detailed CSF analysis combined with MRI as a prognostic marker for more aggressive MS.</li>
-<li>Action: Ann Neurol 2018 Ann Neurol 2018;83:739-755.</li>
-<li>Resolution: This paper investigates inflammatory intrathecal profiles and cortical damage in multiple sclerosis.</li>
+<li>A common pattern of intrathecal (meninges and CSF) inflammatory profile strongly correlates with increased cortical pathology, both at the time of diagnosis and at death.</li>
+<li>These results suggest a role for detailed CSF analysis combined with MRI as a prognostic marker for more aggressive MS.</li>
+<li>Ann Neurol 2018 Ann Neurol 2018;83:739-755.</li>
+<li>This paper investigates inflammatory intrathecal profiles and cortical damage in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25197" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Roberta Magliozzi. (2018). Inflammatory intrathecal profiles and cortical damage in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.25197</p>
@@ -1770,7 +1739,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Chronic white matter lesion activity predicts clinical progression in primary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -1780,10 +1748,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates chronic white matter lesion activity predicts clinical progression in primary progressive multiple sclerosis. We observed in this clinical trial population that most of total brain non-enhancing T1 hypointense lesion volume accumulation was derived from chronic lesion activity within pre-existing T2 lesions rather than new T2 lesion formation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We observed in this clinical trial population that most of total brain non-enhancing T1 hypointense lesion volume accumulation was derived from chronic lesion activity within pre-existing T2 lesions rather than new T2 lesion formation.</li>
-<li>Challenge: This paper investigates chronic white matter lesion activity predicts clinical progression in primary progressive multiple sclerosis.</li>
-<li>Action: Chronic active and slowly expanding lesions with smouldering inflammation are neuropathological correlates of progressive multiple sclerosis pathology.</li>
-<li>Resolution: T1 hypointense volume and signal intensity on T1-weighted MRI reflect brain tissue damage that may develop within newly formed acute focal inflammatory lesions or in chronic pre-existing lesions without signs of acute inflammation.</li>
+<li>We observed in this clinical trial population that most of total brain non-enhancing T1 hypointense lesion volume accumulation was derived from chronic lesion activity within pre-existing T2 lesions rather than new T2 lesion formation.</li>
+<li>This paper investigates chronic white matter lesion activity predicts clinical progression in primary progressive multiple sclerosis.</li>
+<li>Chronic active and slowly expanding lesions with smouldering inflammation are neuropathological correlates of progressive multiple sclerosis pathology.</li>
+<li>T1 hypointense volume and signal intensity on T1-weighted MRI reflect brain tissue damage that may develop within newly formed acute focal inflammatory lesions or in chronic pre-existing lesions without signs of acute inflammation.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awz212" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Colm Elliott. (2019). Chronic white matter lesion activity predicts clinical progression in primary progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/awz212</p>
@@ -1805,7 +1773,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Thalamic neurodegeneration in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -1815,10 +1782,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates thalamic neurodegeneration in multiple sclerosis. Our results show that neuronal loss in multiple sclerosis can be substantial (30-35% reduction).</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results show that neuronal loss in multiple sclerosis can be substantial (30-35% reduction).</li>
-<li>Challenge: This paper investigates thalamic neurodegeneration in multiple sclerosis.</li>
-<li>Action: Multiple sclerosis is still regarded primarily as a disease of the white matter.</li>
-<li>Resolution: However, recent evidence suggests that there may be significant involvement of gray matter.</li>
+<li>Our results show that neuronal loss in multiple sclerosis can be substantial (30-35% reduction).</li>
+<li>This paper investigates thalamic neurodegeneration in multiple sclerosis.</li>
+<li>Multiple sclerosis is still regarded primarily as a disease of the white matter.</li>
+<li>However, recent evidence suggests that there may be significant involvement of gray matter.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.10326" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alberto Cifelli. (2002). Thalamic neurodegeneration in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.10326</p>
@@ -1840,7 +1807,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Gadolinium-based MRI characterization of leptomeningeal inflammation in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -1850,10 +1816,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates gadolinium-based mri characterization of leptomeningeal inflammation in multiple sclerosis. It might therefore enable testing of new treatments aimed at eliminating this inflammation and potentially arresting progressive MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Leptomeningeal contrast enhancement occurs frequently in MS and is a noninvasive, in vivo marker of inflammation and associated subpial demyelination.</li>
-<li>Challenge: It might therefore enable testing of new treatments aimed at eliminating this inflammation and potentially arresting progressive MS.</li>
-<li>Action: This paper investigates gadolinium-based mri characterization of leptomeningeal inflammation in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Leptomeningeal contrast enhancement occurs frequently in MS and is a noninvasive, in vivo marker of inflammation and associated subpial demyelination.</li>
+<li>It might therefore enable testing of new treatments aimed at eliminating this inflammation and potentially arresting progressive MS.</li>
+<li>This paper investigates gadolinium-based mri characterization of leptomeningeal inflammation in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000001587" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2015). Gadolinium-based MRI characterization of leptomeningeal inflammation in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000001587</p>
@@ -1875,7 +1841,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MAGNIMS consensus recommendations on the use of brain and spinal cord atrophy measures in clinical practice</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -1885,10 +1850,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnims consensus recommendations on the use of brain and spinal cord atrophy measures in clinical practice. On the basis of this review, the group makes consensus statements and recommendations for future research.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Early evaluation of treatment response and prediction of disease evolution are key issues in the management of people with multiple sclerosis (MS).</li>
-<li>Challenge: In the past 20 years, MRI has become the most useful paraclinical tool in both situations and is used clinically to assess the inflammatory component of the disease, particularly the presence and evolution of focal lesions - the pathological hallmark of MS.</li>
-<li>Action: However, diffuse neurodegenerative processes that are at least partly independent of inflammatory mechanisms can develop early in people with MS and are closely related to disability.</li>
-<li>Resolution: The effects of these neurodegenerative processes at a macroscopic level can be quantified by estimation of brain and spinal cord atrophy with MRI.</li>
+<li>Early evaluation of treatment response and prediction of disease evolution are key issues in the management of people with multiple sclerosis (MS).</li>
+<li>In the past 20 years, MRI has become the most useful paraclinical tool in both situations and is used clinically to assess the inflammatory component of the disease, particularly the presence and evolution of focal lesions - the pathological hallmark of MS.</li>
+<li>However, diffuse neurodegenerative processes that are at least partly independent of inflammatory mechanisms can develop early in people with MS and are closely related to disability.</li>
+<li>The effects of these neurodegenerative processes at a macroscopic level can be quantified by estimation of brain and spinal cord atrophy with MRI.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1038/s41582-020-0314-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> on behalf of the MAGNIMS study group. (2020). MAGNIMS consensus recommendations on the use of brain and spinal cord atrophy measures in clinical practice. Nature Reviews Neurology. https://doi.org/10.1038/s41582-020-0314-x</p>
@@ -1910,7 +1875,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Consensus recommendations for MS cortical lesion scoring using double inversion recovery MRI</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -1920,10 +1884,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates consensus recommendations for ms cortical lesion scoring using double inversion recovery mri. Sensitivity and specificity of the proposed recommendations should now be studied in a more formal, prospective, multicenter setting using similar DIR protocols.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although not designed as a formal interobserver study, the current study suggests that comparing available literature data on cortical lesions may be problematic, and increased consistency in acquisition protocols may improve scoring agreement.</li>
-<li>Challenge: Sensitivity and specificity of the proposed recommendations should now be studied in a more formal, prospective, multicenter setting using similar DIR protocols.</li>
-<li>Action: This paper investigates consensus recommendations for ms cortical lesion scoring using double inversion recovery mri.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Although not designed as a formal interobserver study, the current study suggests that comparing available literature data on cortical lesions may be problematic, and increased consistency in acquisition protocols may improve scoring agreement.</li>
+<li>Sensitivity and specificity of the proposed recommendations should now be studied in a more formal, prospective, multicenter setting using similar DIR protocols.</li>
+<li>This paper investigates consensus recommendations for ms cortical lesion scoring using double inversion recovery mri.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31820a0cc4" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jeroen J.G. Geurts. (2011). Consensus recommendations for MS cortical lesion scoring using double inversion recovery MRI. Neurology. https://doi.org/10.1212/wnl.0b013e31820a0cc4</p>
@@ -1945,7 +1909,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Paramagnetic Rim Lesions are Specific to Multiple Sclerosis: An International Multicenter 3T MRI Study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (78%)</span>
 </div>
@@ -1955,10 +1918,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates paramagnetic rim lesions are specific to multiple sclerosis: an international multicenter 3t mri study. ANN NEUROL 2020;88:1034-1042.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In multiple sclerosis (MS), a subset of chronic active white matter lesions are identifiable on magnetic resonance imaging by their paramagnetic rims, and increasing evidence supports their association with severity of clinical disease.</li>
-<li>Challenge: We studied their potential role in differential diagnosis, screening an international multicenter clinical research-based sample of 438 individuals affected by different neurological conditions (MS, other inflammatory, infectious, and non-inflammatory conditions).</li>
-<li>Action: Paramagnetic rim lesions, rare in other neurological conditions (52% of MS vs 7% of non-MS cases), yielded high specificity (93%) in differentiating MS from non-MS.</li>
-<li>Resolution: Future prospective multicenter studies should validate their role as a diagnostic biomarker.</li>
+<li>In multiple sclerosis (MS), a subset of chronic active white matter lesions are identifiable on magnetic resonance imaging by their paramagnetic rims, and increasing evidence supports their association with severity of clinical disease.</li>
+<li>We studied their potential role in differential diagnosis, screening an international multicenter clinical research-based sample of 438 individuals affected by different neurological conditions (MS, other inflammatory, infectious, and non-inflammatory conditions).</li>
+<li>Paramagnetic rim lesions, rare in other neurological conditions (52% of MS vs 7% of non-MS cases), yielded high specificity (93%) in differentiating MS from non-MS.</li>
+<li>Future prospective multicenter studies should validate their role as a diagnostic biomarker.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25877" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Pietro Maggi. (2020). Paramagnetic Rim Lesions are Specific to Multiple Sclerosis: An International Multicenter 3T MRI Study. Annals of Neurology. https://doi.org/10.1002/ana.25877</p>
@@ -1980,7 +1943,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Grey Matter Pathology in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2005</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -1990,10 +1952,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates grey matter pathology in multiple sclerosis. Grey matter demyelination and neuronal loss could contribute to disability and cognitive dysfunctions in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The aim of our study is to evaluate the extent and distribution of grey matter demyelinating lesions in multiple sclerosis (MS), addressing also neuronal loss and synaptic loss.</li>
-<li>Challenge: Whole coronal sections of 6 MS brains and 6 control brains were selected.</li>
-<li>Action: Immunohistochemistry was performed for myelin basic protein, neurofilaments, synaptophysin, ubiquitin, and activated caspase-3.</li>
-<li>Resolution: This paper investigates grey matter pathology in multiple sclerosis.</li>
+<li>The aim of our study is to evaluate the extent and distribution of grey matter demyelinating lesions in multiple sclerosis (MS), addressing also neuronal loss and synaptic loss.</li>
+<li>Whole coronal sections of 6 MS brains and 6 control brains were selected.</li>
+<li>Immunohistochemistry was performed for myelin basic protein, neurofilaments, synaptophysin, ubiquitin, and activated caspase-3.</li>
+<li>This paper investigates grey matter pathology in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/01.jnen.0000190067.20935.42" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Marco Vercellino. (2005). Grey Matter Pathology in Multiple Sclerosis. Journal of Neuropathology &amp; Experimental Neurology. https://doi.org/10.1097/01.jnen.0000190067.20935.42</p>
@@ -2015,7 +1977,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Slowly expanding/evolving lesions as a magnetic resonance imaging marker of chronic active multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (56%)</span>
 </div>
@@ -2025,10 +1986,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates slowly expanding/evolving lesions as a magnetic resonance imaging marker of chronic active multiple sclerosis lesions. SELs may represent a conventional brain MRI correlate of chronic active MS lesions and a candidate biomarker for smoldering inflammation in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We suggest that SELs reflect chronic tissue loss in the absence of ongoing acute inflammation.</li>
-<li>Challenge: SELs may represent a conventional brain MRI correlate of chronic active MS lesions and a candidate biomarker for smoldering inflammation in MS.</li>
-<li>Action: This paper investigates slowly expanding/evolving lesions as a magnetic resonance imaging marker of chronic active multiple sclerosis lesions.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We suggest that SELs reflect chronic tissue loss in the absence of ongoing acute inflammation.</li>
+<li>SELs may represent a conventional brain MRI correlate of chronic active MS lesions and a candidate biomarker for smoldering inflammation in MS.</li>
+<li>This paper investigates slowly expanding/evolving lesions as a magnetic resonance imaging marker of chronic active multiple sclerosis lesions.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/1352458518814117" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Colm Elliott. (2018). Slowly expanding/evolving lesions as a magnetic resonance imaging marker of chronic active multiple sclerosis lesions. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458518814117</p>
@@ -2050,7 +2011,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Progressive cerebral atrophy in multiple sclerosis A serial MRI study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -2060,10 +2020,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates progressive cerebral atrophy in multiple sclerosis a serial mri study. This study demonstrates that progressive cerebral atrophy can be detected in individual patients with multiple sclerosis, correlates with worsening disability and gives additional information to that obtained with conventional MRI.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study demonstrates that progressive cerebral atrophy can be detected in individual patients with multiple sclerosis, correlates with worsening disability and gives additional information to that obtained with conventional MRI.</li>
-<li>Challenge: This paper investigates progressive cerebral atrophy in multiple sclerosis a serial mri study.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study demonstrates that progressive cerebral atrophy can be detected in individual patients with multiple sclerosis, correlates with worsening disability and gives additional information to that obtained with conventional MRI.</li>
+<li>This paper investigates progressive cerebral atrophy in multiple sclerosis a serial mri study.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/119.6.2009" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> N. A. Losseff. (1996). Progressive cerebral atrophy in multiple sclerosis A serial MRI study. Brain. https://doi.org/10.1093/brain/119.6.2009</p>
@@ -2085,7 +2045,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Multiple sclerosis deep grey matter: the relation between demyelination, neurodegeneration, inflammation and iron</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2014</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2095,10 +2054,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates multiple sclerosis deep grey matter: the relation between demyelination, neurodegeneration, inflammation and iron. Thus, both focal lesions as well as diffuse neurodegeneration in the deep grey matter appeared to contribute to the neurological disabilities of MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In multiple sclerosis (MS), diffuse degenerative processes in the deep grey matter have been associated with clinical disabilities.</li>
-<li>Challenge: We performed a systematic study in MS deep grey matter with a focus on the incidence and topographical distribution of lesions in relation to white matter and cortex in a total sample of 75 MS autopsy patients and 12 controls.</li>
-<li>Action: In addition, detailed analyses of inflammation, acute axonal injury, iron deposition and oxidative stress were performed.</li>
-<li>Resolution: This paper investigates multiple sclerosis deep grey matter: the relation between demyelination, neurodegeneration, inflammation and iron.</li>
+<li>In multiple sclerosis (MS), diffuse degenerative processes in the deep grey matter have been associated with clinical disabilities.</li>
+<li>We performed a systematic study in MS deep grey matter with a focus on the incidence and topographical distribution of lesions in relation to white matter and cortex in a total sample of 75 MS autopsy patients and 12 controls.</li>
+<li>In addition, detailed analyses of inflammation, acute axonal injury, iron deposition and oxidative stress were performed.</li>
+<li>This paper investigates multiple sclerosis deep grey matter: the relation between demyelination, neurodegeneration, inflammation and iron.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2014-307712" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lukas Haider. (2014). Multiple sclerosis deep grey matter: the relation between demyelination, neurodegeneration, inflammation and iron. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2014-307712</p>
@@ -2120,7 +2079,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical lesion load associates with progression of disability in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -2130,10 +2088,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical lesion load associates with progression of disability in multiple sclerosis. Thus, the combination of grey and white matter parameters gives a more comprehensive view of multiple sclerosis pathology and allows a better understanding of the progressive phase of the disease, which, however, seems more related to cortical damage than to subcortical white matter changes.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Cortical inflammatory lesions have been correlated with disability and cortical atrophy in multiple sclerosis.</li>
-<li>Challenge: The extent to which cortical lesion load is associated with longer-term physical and cognitive disability in different multiple sclerosis phenotypes has not yet been investigated.</li>
-<li>Action: Thus, a 5-year prospective longitudinal study was carried on in a large group of patients with multiple sclerosis.</li>
-<li>Resolution: This paper investigates cortical lesion load associates with progression of disability in multiple sclerosis.</li>
+<li>Cortical inflammatory lesions have been correlated with disability and cortical atrophy in multiple sclerosis.</li>
+<li>The extent to which cortical lesion load is associated with longer-term physical and cognitive disability in different multiple sclerosis phenotypes has not yet been investigated.</li>
+<li>Thus, a 5-year prospective longitudinal study was carried on in a large group of patients with multiple sclerosis.</li>
+<li>This paper investigates cortical lesion load associates with progression of disability in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/aws246" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimiliano Calabrese. (2012). Cortical lesion load associates with progression of disability in multiple sclerosis. Brain. https://doi.org/10.1093/brain/aws246</p>
@@ -2155,7 +2113,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Brain atrophy in clinically early relapsing–remitting multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -2165,10 +2122,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates brain atrophy in clinically early relapsing–remitting multiple sclerosis. Using quantitative MRI, this study investigated whole brain, grey and white matter atrophy in clinically early relapsing-remitting multiple sclerosis and its relationship to lesion measures.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Using quantitative MRI, this study investigated whole brain, grey and white matter atrophy in clinically early relapsing-remitting multiple sclerosis and its relationship to lesion measures.</li>
-<li>Challenge: This paper investigates brain atrophy in clinically early relapsing–remitting multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Using quantitative MRI, this study investigated whole brain, grey and white matter atrophy in clinically early relapsing-remitting multiple sclerosis and its relationship to lesion measures.</li>
+<li>This paper investigates brain atrophy in clinically early relapsing–remitting multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awf025" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Declan Chard. (2002). Brain atrophy in clinically early relapsing–remitting multiple sclerosis. Brain. https://doi.org/10.1093/brain/awf025</p>
@@ -2190,7 +2147,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Dimethyl Fumarate Delays Multiple Sclerosis in Radiologically Isolated Syndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (55%)</span>
 </div>
@@ -2200,10 +2156,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates dimethyl fumarate delays multiple sclerosis in radiologically isolated syndrome. ANN NEUROL 2023;93:604-614.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This is the first randomized clinical trial demonstrating the benefit of a disease-modifying therapy in preventing a first acute clinical event in people with RIS.</li>
-<li>Challenge: ANN NEUROL 2023;93:604-614.</li>
-<li>Action: This paper investigates dimethyl fumarate delays multiple sclerosis in radiologically isolated syndrome.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This is the first randomized clinical trial demonstrating the benefit of a disease-modifying therapy in preventing a first acute clinical event in people with RIS.</li>
+<li>ANN NEUROL 2023;93:604-614.</li>
+<li>This paper investigates dimethyl fumarate delays multiple sclerosis in radiologically isolated syndrome.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.26555" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Darin T. Okuda. (2022). Dimethyl Fumarate Delays Multiple Sclerosis in Radiologically Isolated Syndrome. Annals of Neurology. https://doi.org/10.1002/ana.26555</p>
@@ -2225,7 +2181,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The contemporary spectrum of multiple sclerosis misdiagnosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -2235,10 +2190,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the contemporary spectrum of multiple sclerosis misdiagnosis. Misinterpretation and misapplication of MS clinical and radiographic diagnostic criteria are important contemporary contributors to misdiagnosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Misdiagnosis of MS leads to unnecessary and potentially harmful risks to patients.</li>
-<li>Challenge: Misinterpretation and misapplication of MS clinical and radiographic diagnostic criteria are important contemporary contributors to misdiagnosis.</li>
-<li>Action: This paper investigates the contemporary spectrum of multiple sclerosis misdiagnosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Misdiagnosis of MS leads to unnecessary and potentially harmful risks to patients.</li>
+<li>Misinterpretation and misapplication of MS clinical and radiographic diagnostic criteria are important contemporary contributors to misdiagnosis.</li>
+<li>This paper investigates the contemporary spectrum of multiple sclerosis misdiagnosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000003152" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Andrew Solomon. (2016). The contemporary spectrum of multiple sclerosis misdiagnosis. Neurology. https://doi.org/10.1212/wnl.0000000000003152</p>
@@ -2260,7 +2215,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Detection of Cortical Inflammatory Lesions by Double Inversion Recovery Magnetic Resonance Imaging in Patients With Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -2270,10 +2224,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates detection of cortical inflammatory lesions by double inversion recovery magnetic resonance imaging in patients with multiple sclerosis. The ICLs may help to define MS clinical heterogeneity and prognosis in clinical settings.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Although more frequent in patients with SPMS, ICLs were observed from the early disease stages.</li>
-<li>Challenge: The ICLs were more frequently detected in patients with IgGOBs and were associated with a higher clinical disability score and male sex.</li>
-<li>Action: The ICLs may help to define MS clinical heterogeneity and prognosis in clinical settings.</li>
-<li>Resolution: This paper investigates detection of cortical inflammatory lesions by double inversion recovery magnetic resonance imaging in patients with multiple sclerosis.</li>
+<li>Although more frequent in patients with SPMS, ICLs were observed from the early disease stages.</li>
+<li>The ICLs were more frequently detected in patients with IgGOBs and were associated with a higher clinical disability score and male sex.</li>
+<li>The ICLs may help to define MS clinical heterogeneity and prognosis in clinical settings.</li>
+<li>This paper investigates detection of cortical inflammatory lesions by double inversion recovery magnetic resonance imaging in patients with multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneur.64.10.1416" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimiliano Calabrese. (2007). Detection of Cortical Inflammatory Lesions by Double Inversion Recovery Magnetic Resonance Imaging in Patients With Multiple Sclerosis. Archives of Neurology. https://doi.org/10.1001/archneur.64.10.1416</p>
@@ -2295,7 +2249,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Imaging chronic active lesions in multiple sclerosis: a consensus statement</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2024</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -2305,10 +2258,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates imaging chronic active lesions in multiple sclerosis: a consensus statement. The proposed manuscript presents this consensus statement, summarizes the multistep process leading to it, and identifies the remaining major gaps in knowledge.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Chronic active lesions (CAL) are an important manifestation of chronic inflammation in multiple sclerosis and have implications for non-relapsing biological progression.</li>
-<li>Challenge: In recent years, the discovery of innovative MRI and PET-derived biomarkers has made it possible to detect CAL, and to some extent quantify them, in the brain of persons with multiple sclerosis, in vivo.</li>
-<li>Action: Paramagnetic rim lesions on susceptibility-sensitive MRI sequences, MRI-defined slowly expanding lesions on T1-weighted and T2-weighted scans, and 18-kDa translocator protein-positive lesions on PET are promising candidate biomarkers of CAL.</li>
-<li>Resolution: While partially overlapping, these biomarkers do not have equivalent sensitivity and specificity to histopathological CAL.</li>
+<li>Chronic active lesions (CAL) are an important manifestation of chronic inflammation in multiple sclerosis and have implications for non-relapsing biological progression.</li>
+<li>In recent years, the discovery of innovative MRI and PET-derived biomarkers has made it possible to detect CAL, and to some extent quantify them, in the brain of persons with multiple sclerosis, in vivo.</li>
+<li>Paramagnetic rim lesions on susceptibility-sensitive MRI sequences, MRI-defined slowly expanding lesions on T1-weighted and T2-weighted scans, and 18-kDa translocator protein-positive lesions on PET are promising candidate biomarkers of CAL.</li>
+<li>While partially overlapping, these biomarkers do not have equivalent sensitivity and specificity to histopathological CAL.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awae013" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Francesca Bagnato. (2024). Imaging chronic active lesions in multiple sclerosis: a consensus statement. Brain. https://doi.org/10.1093/brain/awae013</p>
@@ -2330,7 +2283,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Revised Recommendations of the Consortium of MS Centers Task Force for a Standardized MRI Protocol and Clinical Guidelines for the Diagnosis and Follow-Up of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -2340,10 +2292,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates revised recommendations of the consortium of ms centers task force for a standardized mri protocol and clinical guidelines for the diagnosis and follow-up of multiple sclerosis. The current revision incorporates new clinical information and imaging techniques that have become more available.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: An international group of neurologists and radiologists developed revised guidelines for standardized brain and spinal cord MR imaging for the diagnosis and follow-up of MS.</li>
-<li>Challenge: A brain MR imaging with gadolinium is recommended for the diagnosis of MS.</li>
-<li>Action: A spinal cord MR imaging is recommended if the brain MR imaging is nondiagnostic or if the presenting symptoms are at the level of the spinal cord.</li>
-<li>Resolution: A follow-up brain MR imaging with gadolinium is recommended to demonstrate dissemination in time and ongoing clinically silent disease activity while on treatment, to evaluate unexpected clinical worsening, to re-assess the original diagnosis, and as a new baseline before starting or modifying therapy.</li>
+<li>An international group of neurologists and radiologists developed revised guidelines for standardized brain and spinal cord MR imaging for the diagnosis and follow-up of MS.</li>
+<li>A brain MR imaging with gadolinium is recommended for the diagnosis of MS.</li>
+<li>A spinal cord MR imaging is recommended if the brain MR imaging is nondiagnostic or if the presenting symptoms are at the level of the spinal cord.</li>
+<li>A follow-up brain MR imaging with gadolinium is recommended to demonstrate dissemination in time and ongoing clinically silent disease activity while on treatment, to evaluate unexpected clinical worsening, to re-assess the original diagnosis, and as a new baseline before starting or modifying therapy.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3174/ajnr.a4539" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Anthony Traboulsee. (2015). Revised Recommendations of the Consortium of MS Centers Task Force for a Standardized MRI Protocol and Clinical Guidelines for the Diagnosis and Follow-Up of Multiple Sclerosis. American Journal of Neuroradiology. https://doi.org/10.3174/ajnr.a4539</p>
@@ -2365,7 +2317,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Widespread Demyelination in the Cerebellar Cortex in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -2375,10 +2326,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates widespread demyelination in the cerebellar cortex in multiple sclerosis. We found no correlation between demyelination in the cortex and the white matter, and in some cases, extensive cortical demyelination was present in the near absence of white matter lesions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We found no correlation between demyelination in the cortex and the white matter, and in some cases, extensive cortical demyelination was present in the near absence of white matter lesions.</li>
-<li>Challenge: This paper investigates widespread demyelination in the cerebellar cortex in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>We found no correlation between demyelination in the cortex and the white matter, and in some cases, extensive cortical demyelination was present in the near absence of white matter lesions.</li>
+<li>This paper investigates widespread demyelination in the cerebellar cortex in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1111/j.1750-3639.2006.00041.x" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alexandra Kutzelnigg. (2007). Widespread Demyelination in the Cerebellar Cortex in Multiple Sclerosis. Brain Pathology. https://doi.org/10.1111/j.1750-3639.2006.00041.x</p>
@@ -2400,7 +2351,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Imaging Cortical Lesions in Multiple Sclerosis With Ultra–High-Field Magnetic Resonance Imaging</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (71%)</span>
 </div>
@@ -2410,10 +2360,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates imaging cortical lesions in multiple sclerosis with ultra–high-field magnetic resonance imaging. This study indicates the potential of T2*GRE and white matter-attenuated TFE sequences in ultra-high-field magnetic resonance imaging for cortical lesion detection in patients with multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study indicates the potential of T2*GRE and white matter-attenuated TFE sequences in ultra-high-field magnetic resonance imaging for cortical lesion detection in patients with multiple sclerosis.</li>
-<li>Challenge: This paper investigates imaging cortical lesions in multiple sclerosis with ultra–high-field magnetic resonance imaging.</li>
-<li>Action: Three-dimensional T2*GRE and white matter-attenuated TFE sequences at a 7-T field strength detect most cortical lesions in postmortem multiple sclerosis tissue.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study indicates the potential of T2*GRE and white matter-attenuated TFE sequences in ultra-high-field magnetic resonance imaging for cortical lesion detection in patients with multiple sclerosis.</li>
+<li>This paper investigates imaging cortical lesions in multiple sclerosis with ultra–high-field magnetic resonance imaging.</li>
+<li>Three-dimensional T2*GRE and white matter-attenuated TFE sequences at a 7-T field strength detect most cortical lesions in postmortem multiple sclerosis tissue.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/archneurol.2010.148" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David Pitt. (2010). Imaging Cortical Lesions in Multiple Sclerosis With Ultra–High-Field Magnetic Resonance Imaging. Archives of Neurology. https://doi.org/10.1001/archneurol.2010.148</p>
@@ -2435,7 +2385,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>In vivo imaging of cortical pathology in multiple sclerosis using ultra-high field MRI</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -2445,10 +2394,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates in vivo imaging of cortical pathology in multiple sclerosis using ultra-high field mri. Seven-tesla MRI detected different histologic cortical lesion types in our small multiple sclerosis (MS) sample, suggesting, if validated in a larger population, that it may prove a valuable tool to assess the contribution of cortical MS pathology to clinical disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Seven-tesla MRI detected different histologic cortical lesion types in our small multiple sclerosis (MS) sample, suggesting, if validated in a larger population, that it may prove a valuable tool to assess the contribution of cortical MS pathology to clinical disability.</li>
-<li>Challenge: This paper investigates in vivo imaging of cortical pathology in multiple sclerosis using ultra-high field mri.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Seven-tesla MRI detected different histologic cortical lesion types in our small multiple sclerosis (MS) sample, suggesting, if validated in a larger population, that it may prove a valuable tool to assess the contribution of cortical MS pathology to clinical disability.</li>
+<li>This paper investigates in vivo imaging of cortical pathology in multiple sclerosis using ultra-high field mri.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181b64bf7" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Caterina Mainero. (2009). In vivo imaging of cortical pathology in multiple sclerosis using ultra-high field MRI. Neurology. https://doi.org/10.1212/wnl.0b013e3181b64bf7</p>
@@ -2470,7 +2419,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Eight-year follow-up study of brain atrophy in patients with MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2002</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (76%)</span>
 </div>
@@ -2480,10 +2428,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates eight-year follow-up study of brain atrophy in patients with ms. The relation between lesions and subsequent atrophy indicates that brain atrophy may be related to focal tissue damage at earlier points in time, but important predisposing or other factors contributing to atrophy remain undefined.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The relation between atrophy progression and subsequent neurologic disability status suggests that atrophy progression during RRMS is clinically relevant.</li>
-<li>Challenge: Therefore, atrophy progression may be a useful marker for disease progression in clinical trials.</li>
-<li>Action: The relation between lesions and subsequent atrophy indicates that brain atrophy may be related to focal tissue damage at earlier points in time, but important predisposing or other factors contributing to atrophy remain undefined.</li>
-<li>Resolution: This paper investigates eight-year follow-up study of brain atrophy in patients with ms.</li>
+<li>The relation between atrophy progression and subsequent neurologic disability status suggests that atrophy progression during RRMS is clinically relevant.</li>
+<li>Therefore, atrophy progression may be a useful marker for disease progression in clinical trials.</li>
+<li>The relation between lesions and subsequent atrophy indicates that brain atrophy may be related to focal tissue damage at earlier points in time, but important predisposing or other factors contributing to atrophy remain undefined.</li>
+<li>This paper investigates eight-year follow-up study of brain atrophy in patients with ms.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000036271.49066.06" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Elizabeth Fisher. (2002). Eight-year follow-up study of brain atrophy in patients with MS. Neurology. https://doi.org/10.1212/01.wnl.0000036271.49066.06</p>
@@ -2505,7 +2453,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Radiologically Isolated Syndrome:&lt;scp&gt;10‐Year&lt;/scp&gt;Risk Estimate of a Clinical Event</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -2515,10 +2462,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates radiologically isolated syndrome:&lt;scp&gt;10‐year&lt;/scp&gt;risk estimate of a clinical event. ANN NEUROL 2020;88:407-417.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Approximately half of all individuals with RIS experience a first clinical event within 10 years of the index MRI.</li>
-<li>Challenge: The identification of independent predictors of risk for symptom onset may guide education and clinical management of individuals with RIS.</li>
-<li>Action: ANN NEUROL 2020;88:407-417.</li>
-<li>Resolution: This paper investigates radiologically isolated syndrome:&lt;scp&gt;10‐year&lt;/scp&gt;risk estimate of a clinical event.</li>
+<li>Approximately half of all individuals with RIS experience a first clinical event within 10 years of the index MRI.</li>
+<li>The identification of independent predictors of risk for symptom onset may guide education and clinical management of individuals with RIS.</li>
+<li>ANN NEUROL 2020;88:407-417.</li>
+<li>This paper investigates radiologically isolated syndrome:&lt;scp&gt;10‐year&lt;/scp&gt;risk estimate of a clinical event.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25799" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christine Lebrun‐Frénay. (2020). Radiologically Isolated Syndrome:&lt;scp&gt;10‐Year&lt;/scp&gt;Risk Estimate of a Clinical Event. Annals of Neurology. https://doi.org/10.1002/ana.25799</p>
@@ -2540,7 +2487,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Central vein sign differentiates Multiple Sclerosis from central nervous system inflammatory vasculopathies</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (56%)</span>
 </div>
@@ -2550,10 +2496,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates central vein sign differentiates multiple sclerosis from central nervous system inflammatory vasculopathies. Ann Neurol 2018;83:283-294.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The central vein sign differentiates inflammatory CNS vasculopathies from MS at standard clinical magnetic field strengths.</li>
-<li>Challenge: Ann Neurol 2018;83:283-294.</li>
-<li>Action: This paper investigates central vein sign differentiates multiple sclerosis from central nervous system inflammatory vasculopathies.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The central vein sign differentiates inflammatory CNS vasculopathies from MS at standard clinical magnetic field strengths.</li>
+<li>Ann Neurol 2018;83:283-294.</li>
+<li>This paper investigates central vein sign differentiates multiple sclerosis from central nervous system inflammatory vasculopathies.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25146" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Pietro Maggi. (2018). Central vein sign differentiates Multiple Sclerosis from central nervous system inflammatory vasculopathies. Annals of Neurology. https://doi.org/10.1002/ana.25146</p>
@@ -2575,7 +2521,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Asymptomatic spinal cord lesions predict disease progression in radiologically isolated syndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -2585,10 +2530,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates asymptomatic spinal cord lesions predict disease progression in radiologically isolated syndrome. These findings suggest that the presence of asymptomatic spinal cord lesions place subjects with RIS at substantial risk for clinical conversion to either an acute or progressive event, a risk that is independent of brain lesions on MRI.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These findings suggest that the presence of asymptomatic spinal cord lesions place subjects with RIS at substantial risk for clinical conversion to either an acute or progressive event, a risk that is independent of brain lesions on MRI.</li>
-<li>Challenge: This paper investigates asymptomatic spinal cord lesions predict disease progression in radiologically isolated syndrome.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These findings suggest that the presence of asymptomatic spinal cord lesions place subjects with RIS at substantial risk for clinical conversion to either an acute or progressive event, a risk that is independent of brain lesions on MRI.</li>
+<li>This paper investigates asymptomatic spinal cord lesions predict disease progression in radiologically isolated syndrome.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31820d8b1d" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Darin T. Okuda. (2011). Asymptomatic spinal cord lesions predict disease progression in radiologically isolated syndrome. Neurology. https://doi.org/10.1212/wnl.0b013e31820d8b1d</p>
@@ -2610,7 +2555,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Seven‐tesla phase imaging of acute multiple sclerosis lesions: A new window into the inflammatory process</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -2620,10 +2564,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates seven‐tesla phase imaging of acute multiple sclerosis lesions: a new window into the inflammatory process. In acute lesions, the hypointense phase rim reflects the expanding inflammatory edge and may directly correspond to inflammatory byproducts and sequelae of blood-brain barrier opening.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Ultrahigh-field MRI and, especially, phase contrast, are highly sensitive to tissue changes in acute MS lesions, which differ from the patterns seen in chronic lesions.</li>
-<li>Challenge: In acute lesions, the hypointense phase rim reflects the expanding inflammatory edge and may directly correspond to inflammatory byproducts and sequelae of blood-brain barrier opening.</li>
-<li>Action: This paper investigates seven‐tesla phase imaging of acute multiple sclerosis lesions: a new window into the inflammatory process.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Ultrahigh-field MRI and, especially, phase contrast, are highly sensitive to tissue changes in acute MS lesions, which differ from the patterns seen in chronic lesions.</li>
+<li>In acute lesions, the hypointense phase rim reflects the expanding inflammatory edge and may directly correspond to inflammatory byproducts and sequelae of blood-brain barrier opening.</li>
+<li>This paper investigates seven‐tesla phase imaging of acute multiple sclerosis lesions: a new window into the inflammatory process.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.23959" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2013). Seven‐tesla phase imaging of acute multiple sclerosis lesions: A new window into the inflammatory process. Annals of Neurology. https://doi.org/10.1002/ana.23959</p>
@@ -2645,7 +2589,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Iron Is a Sensitive Biomarker for Inflammation in Multiple Sclerosis Lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -2655,10 +2598,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates iron is a sensitive biomarker for inflammation in multiple sclerosis lesions. Finally, we demonstrated in MS patients using GRE phase imaging with ultra-highfield MRI that phase hypointense lesions were significantly more prevalent in patients with active relapsing than with secondary progressive MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Finally, we demonstrated in MS patients using GRE phase imaging with ultra-highfield MRI that phase hypointense lesions were significantly more prevalent in patients with active relapsing than with secondary progressive MS.</li>
-<li>Challenge: This paper investigates iron is a sensitive biomarker for inflammation in multiple sclerosis lesions.</li>
-<li>Action: MRI phase imaging in multiple sclerosis (MS) patients and in autopsy tissue have demonstrated the presence of iron depositions in white matter lesions.</li>
-<li>Resolution: The accumulation of iron in some but not all lesions suggests a specific, potentially disease-relevant process, however; its pathophysiological significance remains unknown.</li>
+<li>Finally, we demonstrated in MS patients using GRE phase imaging with ultra-highfield MRI that phase hypointense lesions were significantly more prevalent in patients with active relapsing than with secondary progressive MS.</li>
+<li>This paper investigates iron is a sensitive biomarker for inflammation in multiple sclerosis lesions.</li>
+<li>MRI phase imaging in multiple sclerosis (MS) patients and in autopsy tissue have demonstrated the presence of iron depositions in white matter lesions.</li>
+<li>The accumulation of iron in some but not all lesions suggests a specific, potentially disease-relevant process, however; its pathophysiological significance remains unknown.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1371/journal.pone.0057573" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Veela B. Mehta. (2013). Iron Is a Sensitive Biomarker for Inflammation in Multiple Sclerosis Lesions. PLoS ONE. https://doi.org/10.1371/journal.pone.0057573</p>
@@ -2680,7 +2623,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Quantitative susceptibility mapping identifies inflammation in a subset of chronic multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -2690,10 +2632,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates quantitative susceptibility mapping identifies inflammation in a subset of chronic multiple sclerosis lesions. Accordingly, this study aimed to validate that lesions with a hyperintense rim on quantitative susceptibility mapping from both relapsing and progressive patients demonstrate a higher level of innate immune activation as measured on 11C-PK11195 PET.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Accordingly, this study aimed to validate that lesions with a hyperintense rim on quantitative susceptibility mapping from both relapsing and progressive patients demonstrate a higher level of innate immune activation as measured on 11C-PK11195 PET.</li>
-<li>Challenge: Thirty patients were enrolled in this study, 24 patients had relapsing remitting multiple sclerosis, six had progressive multiple sclerosis, and all patients had concomitant MRI with a gradient echo sequence and PET with 11C-PK11195.</li>
-<li>Action: In conclusion, this study provides evidence that suggests that a hyperintense rim on quantitative susceptibility measure within a chronic lesion is a correlate for persistent inflammatory activity and that these lesions can be identified in the relapsing patients.</li>
-<li>Resolution: This paper investigates quantitative susceptibility mapping identifies inflammation in a subset of chronic multiple sclerosis lesions.</li>
+<li>Accordingly, this study aimed to validate that lesions with a hyperintense rim on quantitative susceptibility mapping from both relapsing and progressive patients demonstrate a higher level of innate immune activation as measured on 11C-PK11195 PET.</li>
+<li>Thirty patients were enrolled in this study, 24 patients had relapsing remitting multiple sclerosis, six had progressive multiple sclerosis, and all patients had concomitant MRI with a gradient echo sequence and PET with 11C-PK11195.</li>
+<li>In conclusion, this study provides evidence that suggests that a hyperintense rim on quantitative susceptibility measure within a chronic lesion is a correlate for persistent inflammatory activity and that these lesions can be identified in the relapsing patients.</li>
+<li>This paper investigates quantitative susceptibility mapping identifies inflammation in a subset of chronic multiple sclerosis lesions.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy296" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ulrike W. Kaunzner. (2018). Quantitative susceptibility mapping identifies inflammation in a subset of chronic multiple sclerosis lesions. Brain. https://doi.org/10.1093/brain/awy296</p>
@@ -2715,7 +2657,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Accumulation of hypointense lesions (&quot;black holes&quot;) on T &lt;sub&gt;1&lt;/sub&gt; spin-echo MRI correlates with disease progression in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -2725,10 +2666,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates accumulation of hypointense lesions (&quot;black holes&quot;) on t &lt;sub&gt;1&lt;/sub&gt; spin-echo mri correlates with disease progression in multiple sclerosis. Quantification of hypointense lesion load on T1-weighted spin-echo MRI helps to resolve the clinical-radiological paradox between disability and MRI and has the potential to be a surrogate marker of disability in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: MRI findings are increasingly used as outcome measures in therapeutic trials in MS.</li>
-<li>Challenge: The discrepancy between the extent of the lesions on conventional T2 images and the clinical condition of the patient is one of the problems encountered in such studies.</li>
-<li>Action: This clinical-radiological paradox prevents the use of MRI data as surrogate markers of disability in MS.</li>
-<li>Resolution: This paper investigates accumulation of hypointense lesions (&quot;black holes&quot;) on t &lt;sub&gt;1&lt;/sub&gt; spin-echo mri correlates with disease progression in multiple sclerosis.</li>
+<li>MRI findings are increasingly used as outcome measures in therapeutic trials in MS.</li>
+<li>The discrepancy between the extent of the lesions on conventional T2 images and the clinical condition of the patient is one of the problems encountered in such studies.</li>
+<li>This clinical-radiological paradox prevents the use of MRI data as surrogate markers of disability in MS.</li>
+<li>This paper investigates accumulation of hypointense lesions (&quot;black holes&quot;) on t &lt;sub&gt;1&lt;/sub&gt; spin-echo mri correlates with disease progression in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.47.6.1469" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> L. Truyen. (1996). Accumulation of hypointense lesions (&quot;black holes&quot;) on T &lt;sub&gt;1&lt;/sub&gt; spin-echo MRI correlates with disease progression in multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.47.6.1469</p>
@@ -2750,7 +2691,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Chronic White Matter Inflammation and Serum Neurofilament Levels in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -2760,10 +2700,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates chronic white matter inflammation and serum neurofilament levels in multiple sclerosis. Chronic white matter inflammation was associated with increased levels of sNfL and disease severity in nonacute MS, suggesting that PRL contribute to clinically relevant, inflammation-driven neurodegeneration.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Chronic white matter inflammation was associated with increased levels of sNfL and disease severity in nonacute MS, suggesting that PRL contribute to clinically relevant, inflammation-driven neurodegeneration.</li>
-<li>Challenge: This paper investigates chronic white matter inflammation and serum neurofilament levels in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Chronic white matter inflammation was associated with increased levels of sNfL and disease severity in nonacute MS, suggesting that PRL contribute to clinically relevant, inflammation-driven neurodegeneration.</li>
+<li>This paper investigates chronic white matter inflammation and serum neurofilament levels in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000012326" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Pietro Maggi. (2021). Chronic White Matter Inflammation and Serum Neurofilament Levels in Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000012326</p>
@@ -2785,7 +2725,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A New Advanced&lt;scp&gt;MRI&lt;/scp&gt;Biomarker for Remyelinated Lesions in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (58%)</span>
 </div>
@@ -2795,10 +2734,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a new advanced&lt;scp&gt;mri&lt;/scp&gt;biomarker for remyelinated lesions in multiple sclerosis. ANN NEUROL 2022;92:486-502.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These results provide the first evidence that it is possible to distinguish chronic MS lesions in a clinical setting, hereby supporting with new biomarkers to develop and assess remyelinating treatments.</li>
-<li>Challenge: ANN NEUROL 2022;92:486-502.</li>
-<li>Action: This paper investigates a new advanced&lt;scp&gt;mri&lt;/scp&gt;biomarker for remyelinated lesions in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>These results provide the first evidence that it is possible to distinguish chronic MS lesions in a clinical setting, hereby supporting with new biomarkers to develop and assess remyelinating treatments.</li>
+<li>ANN NEUROL 2022;92:486-502.</li>
+<li>This paper investigates a new advanced&lt;scp&gt;mri&lt;/scp&gt;biomarker for remyelinated lesions in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.26441" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Reza Rahmanzadeh. (2022). A New Advanced&lt;scp&gt;MRI&lt;/scp&gt;Biomarker for Remyelinated Lesions in Multiple Sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.26441</p>
@@ -2820,7 +2759,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Magnetization transfer changes in the normal appering white matter precede the appearance of enhancing lesions in patients with multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -2830,10 +2768,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnetization transfer changes in the normal appering white matter precede the appearance of enhancing lesions in patients with multiple sclerosis. These results suggest that changes in the NAWM of patients with MS occur before lesions become evident on conventional MRI scans.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Serial monthly magnetization transfer (MT) imaging was performed to evaluate whether a change of the normal appearing white matter (NAWM), which precedes the appearance of enhancing lesions, is seen in patients with multiple sclerosis (MS).</li>
-<li>Challenge: Every 4 weeks for 3 months, 10 patients with relapsing-remitting MS were scanned with a T1-weighted sequence, 20 minutes after injection with 0.3 mmol/kg gadolinium-DTPA (Gd-DTPA).</li>
-<li>Action: During each of the monthly sessions, MT and dual echo scans were also performed before Gd-DTPA injection.</li>
-<li>Resolution: This paper investigates magnetization transfer changes in the normal appering white matter precede the appearance of enhancing lesions in patients with multiple sclerosis.</li>
+<li>Serial monthly magnetization transfer (MT) imaging was performed to evaluate whether a change of the normal appearing white matter (NAWM), which precedes the appearance of enhancing lesions, is seen in patients with multiple sclerosis (MS).</li>
+<li>Every 4 weeks for 3 months, 10 patients with relapsing-remitting MS were scanned with a T1-weighted sequence, 20 minutes after injection with 0.3 mmol/kg gadolinium-DTPA (Gd-DTPA).</li>
+<li>During each of the monthly sessions, MT and dual echo scans were also performed before Gd-DTPA injection.</li>
+<li>This paper investigates magnetization transfer changes in the normal appering white matter precede the appearance of enhancing lesions in patients with multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410430616" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Massimo Filippi. (1998). Magnetization transfer changes in the normal appering white matter precede the appearance of enhancing lesions in patients with multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.410430616</p>
@@ -2855,7 +2793,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Evaluation of the Central Vein Sign as a Diagnostic Imaging Biomarker in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (63%)</span>
 </div>
@@ -2865,10 +2802,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates evaluation of the central vein sign as a diagnostic imaging biomarker in multiple sclerosis. In this study, use of the central vein sign at 3T MRI yielded a high specificity and a moderate sensitivity in differentiating MS from not MS; international, multicenter studies may be needed to ascertain whether the central vein sign-based criteria can accurately detect MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this study, use of the central vein sign at 3T MRI yielded a high specificity and a moderate sensitivity in differentiating MS from not MS; international, multicenter studies may be needed to ascertain whether the central vein sign-based criteria can accurately detect MS.</li>
-<li>Challenge: This paper investigates evaluation of the central vein sign as a diagnostic imaging biomarker in multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this study, use of the central vein sign at 3T MRI yielded a high specificity and a moderate sensitivity in differentiating MS from not MS; international, multicenter studies may be needed to ascertain whether the central vein sign-based criteria can accurately detect MS.</li>
+<li>This paper investigates evaluation of the central vein sign as a diagnostic imaging biomarker in multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2019.2478" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tim Sinnecker. (2019). Evaluation of the Central Vein Sign as a Diagnostic Imaging Biomarker in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2019.2478</p>
@@ -2890,7 +2827,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Postmortem verification of MS cortical lesion detection with 3D DIR</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -2900,10 +2836,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates postmortem verification of ms cortical lesion detection with 3d dir. In this postmortem verification study, we have shown that 3D DIR is highly pathologically specific, and more sensitive to CLs than 3D FLAIR in MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: In this postmortem verification study, we have shown that 3D DIR is highly pathologically specific, and more sensitive to CLs than 3D FLAIR in MS.</li>
-<li>Challenge: This paper investigates postmortem verification of ms cortical lesion detection with 3d dir.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>In this postmortem verification study, we have shown that 3D DIR is highly pathologically specific, and more sensitive to CLs than 3D FLAIR in MS.</li>
+<li>This paper investigates postmortem verification of ms cortical lesion detection with 3d dir.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31824528a0" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alexandra Seewann. (2012). Postmortem verification of MS cortical lesion detection with 3D DIR. Neurology. https://doi.org/10.1212/wnl.0b013e31824528a0</p>
@@ -2925,7 +2861,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The prognostic value of brain MRI in clinically isolated syndromes of the CNS. A 10-year follow-up</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -2935,10 +2870,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the prognostic value of brain mri in clinically isolated syndromes of the cns. a 10-year follow-up. Brain MRI at presentation with a clinically isolated syndrome is predictive of the long-term risk of subsequent development of multiple sclerosis, the type of disease and extent of disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A definitive diagnosis of multiple sclerosis cannot be made at presentation on patients with a clinically isolated syndrome of the optic nerve, spinal cord or brainstem suggestive of demyelination, as dissemination in time is not established.</li>
-<li>Challenge: To determine the long-term risk of abnormalities on brain MRI for the development of multiple sclerosis and disability we performed a 10-year follow-up on 81 such patients who had T2-weighted brain MRI at presentation.</li>
-<li>Action: Initial brain MRI was abnormal in 54 (67%).</li>
-<li>Resolution: This paper investigates the prognostic value of brain mri in clinically isolated syndromes of the cns.</li>
+<li>A definitive diagnosis of multiple sclerosis cannot be made at presentation on patients with a clinically isolated syndrome of the optic nerve, spinal cord or brainstem suggestive of demyelination, as dissemination in time is not established.</li>
+<li>To determine the long-term risk of abnormalities on brain MRI for the development of multiple sclerosis and disability we performed a 10-year follow-up on 81 such patients who had T2-weighted brain MRI at presentation.</li>
+<li>Initial brain MRI was abnormal in 54 (67%).</li>
+<li>This paper investigates the prognostic value of brain mri in clinically isolated syndromes of the cns.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.3.495" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> J O’Riordan. (1998). The prognostic value of brain MRI in clinically isolated syndromes of the CNS. A 10-year follow-up. Brain. https://doi.org/10.1093/brain/121.3.495</p>
@@ -2960,7 +2895,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Brain and spinal cord abnormalities in multiple sclerosis. Correlation between MRI parameters, clinical subtypes and symptoms</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -2970,10 +2904,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates brain and spinal cord abnormalities in multiple sclerosis. correlation between mri parameters, clinical subtypes and symptoms. In relapsing-remitting and secondary progressive multiple sclerosis both brain and spinal cord MRI may provide a tool for monitoring patients, while in primary progressive multiple sclerosis the clinicoradiological correlation is weak for brain imaging.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We investigated various magnetic resonance MRI parameters for both brain and spinal cord to see if any improved the clinicoradiological correlation in multiple sclerosis.</li>
-<li>Challenge: Ninety-one multiple sclerosis patients (28 relapsing-remitting, 32 secondary progressive and 31 primary progressive) were imaged using conventional T1, proton density- and T2-weighted MRI of the brain and spinal cord.</li>
-<li>Action: Focal brain and spinal cord lesion load was scored, as were diffuse signal abnormalities, brain ventricular volume and spinal cord cross-sectional area.</li>
-<li>Resolution: Clinical measures included the expanded disability status scale (EDSS), the functional systems score and a dedicated urology complaint questionnaire.</li>
+<li>We investigated various magnetic resonance MRI parameters for both brain and spinal cord to see if any improved the clinicoradiological correlation in multiple sclerosis.</li>
+<li>Ninety-one multiple sclerosis patients (28 relapsing-remitting, 32 secondary progressive and 31 primary progressive) were imaged using conventional T1, proton density- and T2-weighted MRI of the brain and spinal cord.</li>
+<li>Focal brain and spinal cord lesion load was scored, as were diffuse signal abnormalities, brain ventricular volume and spinal cord cross-sectional area.</li>
+<li>Clinical measures included the expanded disability status scale (EDSS), the functional systems score and a dedicated urology complaint questionnaire.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.4.687" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> G. Nijeholt. (1998). Brain and spinal cord abnormalities in multiple sclerosis. Correlation between MRI parameters, clinical subtypes and symptoms. Brain. https://doi.org/10.1093/brain/121.4.687</p>
@@ -2995,7 +2929,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A new focal EAE model of cortical demyelination: multiple sclerosis-like lesions with rapid resolution of inflammation and extensive remyelination</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2006</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3005,10 +2938,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a new focal eae model of cortical demyelination: multiple sclerosis-like lesions with rapid resolution of inflammation and extensive remyelination. Our data thus suggest that cortical inflammation is a transient phenomenon, and that remyelination of cortical inflammatory-demyelinating lesions may occur rapidly.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Recent studies have revealed widespread demyelination in the cortex of patients with chronic multiple sclerosis.</li>
-<li>Challenge: In contrast to white matter lesions, cortical multiple sclerosis lesions are accompanied by only minor inflammation.</li>
-<li>Action: Research into the pathogenesis of cortical lesion formation has been hampered by the fact that the conventional rodent model of multiple sclerosis, experimental autoimmune encephalomyelitis (EAE), does not regularly affect the cortex.</li>
-<li>Resolution: This paper investigates a new focal eae model of cortical demyelination: multiple sclerosis-like lesions with rapid resolution of inflammation and extensive remyelination.</li>
+<li>Recent studies have revealed widespread demyelination in the cortex of patients with chronic multiple sclerosis.</li>
+<li>In contrast to white matter lesions, cortical multiple sclerosis lesions are accompanied by only minor inflammation.</li>
+<li>Research into the pathogenesis of cortical lesion formation has been hampered by the fact that the conventional rodent model of multiple sclerosis, experimental autoimmune encephalomyelitis (EAE), does not regularly affect the cortex.</li>
+<li>This paper investigates a new focal eae model of cortical demyelination: multiple sclerosis-like lesions with rapid resolution of inflammation and extensive remyelination.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awl135" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Doron Merkler. (2006). A new focal EAE model of cortical demyelination: multiple sclerosis-like lesions with rapid resolution of inflammation and extensive remyelination. Brain. https://doi.org/10.1093/brain/awl135</p>
@@ -3030,7 +2963,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Thalamic atrophy in multiple sclerosis: A magnetic resonance imaging marker of neurodegeneration throughout disease</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -3040,10 +2972,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates thalamic atrophy in multiple sclerosis: a magnetic resonance imaging marker of neurodegeneration throughout disease. Ann Neurol 2018;83:223-234.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Thalamic atrophy occurs early and consistently throughout MS.</li>
-<li>Challenge: Preliminary sample size calculations appear feasible, adding to its appeal as an MRI marker associated with neurodegeneration.</li>
-<li>Action: Ann Neurol 2018;83:223-234.</li>
-<li>Resolution: This paper investigates thalamic atrophy in multiple sclerosis: a magnetic resonance imaging marker of neurodegeneration throughout disease.</li>
+<li>Thalamic atrophy occurs early and consistently throughout MS.</li>
+<li>Preliminary sample size calculations appear feasible, adding to its appeal as an MRI marker associated with neurodegeneration.</li>
+<li>Ann Neurol 2018;83:223-234.</li>
+<li>This paper investigates thalamic atrophy in multiple sclerosis: a magnetic resonance imaging marker of neurodegeneration throughout disease.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.25150" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christina Azevedo. (2018). Thalamic atrophy in multiple sclerosis: A magnetic resonance imaging marker of neurodegeneration throughout disease. Annals of Neurology. https://doi.org/10.1002/ana.25150</p>
@@ -3065,7 +2997,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The role of magnetic resonance techniques in understanding and managing multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -3075,10 +3006,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the role of magnetic resonance techniques in understanding and managing multiple sclerosis. Further work is needed to address issues of quality control in serial studies, statistical calculation of appropriate sample sizes, and optimization of the nature and frequency of MR outcomes measured.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Magnetic resonance (MR) techniques have had a major impact in the last 10-15 years in understanding and managing multiple sclerosis.</li>
-<li>Challenge: This review summarizes the current uses of MR in multiple sclerosis, based on the proceedings of a recent international workshop, under four headings: (i) technical issues; (ii) role in diagnosis; (iii) natural history studies in understanding the disease; (iv) application in clinical trials.</li>
-<li>Action: The theory and methodology of relevant technical issues is outlined, in order to provide a framework with which to understand the potential and limitations of MR in addressing biological and clinical questions in multiple sclerosis.</li>
-<li>Resolution: This paper investigates the role of magnetic resonance techniques in understanding and managing multiple sclerosis.</li>
+<li>Magnetic resonance (MR) techniques have had a major impact in the last 10-15 years in understanding and managing multiple sclerosis.</li>
+<li>This review summarizes the current uses of MR in multiple sclerosis, based on the proceedings of a recent international workshop, under four headings: (i) technical issues; (ii) role in diagnosis; (iii) natural history studies in understanding the disease; (iv) application in clinical trials.</li>
+<li>The theory and methodology of relevant technical issues is outlined, in order to provide a framework with which to understand the potential and limitations of MR in addressing biological and clinical questions in multiple sclerosis.</li>
+<li>This paper investigates the role of magnetic resonance techniques in understanding and managing multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.1.3" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> D. H. Miller. (1998). The role of magnetic resonance techniques in understanding and managing multiple sclerosis. Brain. https://doi.org/10.1093/brain/121.1.3</p>
@@ -3100,7 +3031,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Early development of multiple sclerosis is associated with progressive grey matter atrophy in patients presenting with clinically isolated syndromes</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2004</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -3110,10 +3040,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates early development of multiple sclerosis is associated with progressive grey matter atrophy in patients presenting with clinically isolated syndromes. Longer-term follow-up is required to determine whether early grey matter atrophy is associated with subsequent disability or cognitive impairment.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: While brain atrophy occurs early in the clinical course of multiple sclerosis, exactly how early, which tissues are affected and the rate at which early atrophy occurs are unclear.</li>
-<li>Challenge: Regional brain atrophy was investigated in 58 patients recruited within 3 months of onset of a clinically isolated syndrome (CIS) suggestive of multiple sclerosis, who were followed-up for 3 years.</li>
-<li>Action: At 3 years, 31 subjects had developed multiple sclerosis as defined by the McDonald criteria, while 27 had not (13 had MRI-visible brain lesions and 14 did not).</li>
-<li>Resolution: This paper investigates early development of multiple sclerosis is associated with progressive grey matter atrophy in patients presenting with clinically isolated syndromes.</li>
+<li>While brain atrophy occurs early in the clinical course of multiple sclerosis, exactly how early, which tissues are affected and the rate at which early atrophy occurs are unclear.</li>
+<li>Regional brain atrophy was investigated in 58 patients recruited within 3 months of onset of a clinically isolated syndrome (CIS) suggestive of multiple sclerosis, who were followed-up for 3 years.</li>
+<li>At 3 years, 31 subjects had developed multiple sclerosis as defined by the McDonald criteria, while 27 had not (13 had MRI-visible brain lesions and 14 did not).</li>
+<li>This paper investigates early development of multiple sclerosis is associated with progressive grey matter atrophy in patients presenting with clinically isolated syndromes.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awh126" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Catherine M. Dalton. (2004). Early development of multiple sclerosis is associated with progressive grey matter atrophy in patients presenting with clinically isolated syndromes. Brain. https://doi.org/10.1093/brain/awh126</p>
@@ -3135,7 +3065,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Demyelination causes synaptic alterations in hippocampi from multiple sclerosis patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2010</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -3145,10 +3074,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates demyelination causes synaptic alterations in hippocampi from multiple sclerosis patients. Collectively, these data support hippocampal demyelination as a cause of synaptic alterations in MS patients and establish that the neuronal genes regulated by myelination reflect specific functions of neuronal subpopulations.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Collectively, these data support hippocampal demyelination as a cause of synaptic alterations in MS patients and establish that the neuronal genes regulated by myelination reflect specific functions of neuronal subpopulations.</li>
-<li>Challenge: This paper investigates demyelination causes synaptic alterations in hippocampi from multiple sclerosis patients.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Collectively, these data support hippocampal demyelination as a cause of synaptic alterations in MS patients and establish that the neuronal genes regulated by myelination reflect specific functions of neuronal subpopulations.</li>
+<li>This paper investigates demyelination causes synaptic alterations in hippocampi from multiple sclerosis patients.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.22337" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Ranjan Dutta. (2010). Demyelination causes synaptic alterations in hippocampi from multiple sclerosis patients. Annals of Neurology. https://doi.org/10.1002/ana.22337</p>
@@ -3170,7 +3099,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Identification of Chronic Active Multiple Sclerosis Lesions on 3T MRI</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -3180,10 +3108,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates identification of chronic active multiple sclerosis lesions on 3t mri. Imaging at 3T opens the possibility of implementing paramagnetic rims as an outcome measure in multicenter, MR imaging-based clinical trials aimed at treating perilesional persistent inflammation and its potential effects on remyelination.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Nearly all 7T paramagnetic rims can also be seen at 3T.</li>
-<li>Challenge: Imaging at 3T opens the possibility of implementing paramagnetic rims as an outcome measure in multicenter, MR imaging-based clinical trials aimed at treating perilesional persistent inflammation and its potential effects on remyelination.</li>
-<li>Action: This paper investigates identification of chronic active multiple sclerosis lesions on 3t mri.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Nearly all 7T paramagnetic rims can also be seen at 3T.</li>
+<li>Imaging at 3T opens the possibility of implementing paramagnetic rims as an outcome measure in multicenter, MR imaging-based clinical trials aimed at treating perilesional persistent inflammation and its potential effects on remyelination.</li>
+<li>This paper investigates identification of chronic active multiple sclerosis lesions on 3t mri.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3174/ajnr.a5660" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2018). Identification of Chronic Active Multiple Sclerosis Lesions on 3T MRI. American Journal of Neuroradiology. https://doi.org/10.3174/ajnr.a5660</p>
@@ -3205,7 +3133,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Primary &lt;scp&gt;P&lt;/scp&gt;rogressive &lt;scp&gt;M&lt;/scp&gt;ultiple &lt;scp&gt;S&lt;/scp&gt;clerosis &lt;scp&gt;E&lt;/scp&gt;volving &lt;scp&gt;F&lt;/scp&gt;rom &lt;scp&gt;R&lt;/scp&gt;adiologically &lt;scp&gt;I&lt;/scp&gt;solated &lt;scp&gt;S&lt;/scp&gt;yndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -3215,10 +3142,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates primary &lt;scp&gt;p&lt;/scp&gt;rogressive &lt;scp&gt;m&lt;/scp&gt;ultiple &lt;scp&gt;s&lt;/scp&gt;clerosis &lt;scp&gt;e&lt;/scp&gt;volving &lt;scp&gt;f&lt;/scp&gt;rom &lt;scp&gt;r&lt;/scp&gt;adiologically &lt;scp&gt;i&lt;/scp&gt;solated &lt;scp&gt;s&lt;/scp&gt;yndrome. Our findings further suggest that RIS is biologically part of the MS spectrum.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings further suggest that RIS is biologically part of the MS spectrum.</li>
-<li>Challenge: This paper investigates primary &lt;scp&gt;p&lt;/scp&gt;rogressive &lt;scp&gt;m&lt;/scp&gt;ultiple &lt;scp&gt;s&lt;/scp&gt;clerosis &lt;scp&gt;e&lt;/scp&gt;volving &lt;scp&gt;f&lt;/scp&gt;rom &lt;scp&gt;r&lt;/scp&gt;adiologically &lt;scp&gt;i&lt;/scp&gt;solated &lt;scp&gt;s&lt;/scp&gt;yndrome.</li>
-<li>Action: Subjects with RIS evolve to PPMS at the same frequency as expected from general MS populations in an age-dependent manner.</li>
-<li>Resolution: Besides age, unequivocal presence of spinal cord lesions and being male predicted evolution to PPMS.</li>
+<li>Our findings further suggest that RIS is biologically part of the MS spectrum.</li>
+<li>This paper investigates primary &lt;scp&gt;p&lt;/scp&gt;rogressive &lt;scp&gt;m&lt;/scp&gt;ultiple &lt;scp&gt;s&lt;/scp&gt;clerosis &lt;scp&gt;e&lt;/scp&gt;volving &lt;scp&gt;f&lt;/scp&gt;rom &lt;scp&gt;r&lt;/scp&gt;adiologically &lt;scp&gt;i&lt;/scp&gt;solated &lt;scp&gt;s&lt;/scp&gt;yndrome.</li>
+<li>Subjects with RIS evolve to PPMS at the same frequency as expected from general MS populations in an age-dependent manner.</li>
+<li>Besides age, unequivocal presence of spinal cord lesions and being male predicted evolution to PPMS.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.24564" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Orhun H. Kantarci. (2015). Primary &lt;scp&gt;P&lt;/scp&gt;rogressive &lt;scp&gt;M&lt;/scp&gt;ultiple &lt;scp&gt;S&lt;/scp&gt;clerosis &lt;scp&gt;E&lt;/scp&gt;volving &lt;scp&gt;F&lt;/scp&gt;rom &lt;scp&gt;R&lt;/scp&gt;adiologically &lt;scp&gt;I&lt;/scp&gt;solated &lt;scp&gt;S&lt;/scp&gt;yndrome. Annals of Neurology. https://doi.org/10.1002/ana.24564</p>
@@ -3240,7 +3167,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MOG-IgG in NMO and related disorders: a multicenter study of 50 patients. Part 2: Epidemiology, clinical presentation, radiological and laboratory features, treatment responses, and long-term outcome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (61%)</span>
 </div>
@@ -3250,10 +3176,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mog-igg in nmo and related disorders: a multicenter study of 50 patients. part 2: epidemiology, clinical presentation, radiological and laboratory features, treatment responses, and long-term outcome. Our findings from a predominantly Caucasian cohort strongly argue against the concept of MOG-IgG denoting a mild and usually monophasic variant of NMOSD.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings from a predominantly Caucasian cohort strongly argue against the concept of MOG-IgG denoting a mild and usually monophasic variant of NMOSD.</li>
-<li>Challenge: This paper investigates mog-igg in nmo and related disorders: a multicenter study of 50 patients.</li>
-<li>Action: part 2: epidemiology, clinical presentation, radiological and laboratory features, treatment responses, and long-term outcome.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our findings from a predominantly Caucasian cohort strongly argue against the concept of MOG-IgG denoting a mild and usually monophasic variant of NMOSD.</li>
+<li>This paper investigates mog-igg in nmo and related disorders: a multicenter study of 50 patients.</li>
+<li>part 2: epidemiology, clinical presentation, radiological and laboratory features, treatment responses, and long-term outcome.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/s12974-016-0718-0" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> in cooperation with the Neuromyelitis Optica Study Group (NEMOS). (2016). MOG-IgG in NMO and related disorders: a multicenter study of 50 patients. Part 2: Epidemiology, clinical presentation, radiological and laboratory features, treatment responses, and long-term outcome. Journal of Neuroinflammation. https://doi.org/10.1186/s12974-016-0718-0</p>
@@ -3275,7 +3201,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>XVIII.–The Histology of Disseminated Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1916</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (72%)</span>
 </div>
@@ -3285,10 +3210,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates xviii.–the histology of disseminated sclerosis. The following preliminary communication made to the Pathological Society of Great Britain and Ireland in July 1910 represents in brief outline the position which had been reached at the time of Dr Bruce&#x27;s lamented death:—</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The research of which this paper gives an account was originated by the late Dr Alexander Bruce and undertaken in conjunction with him; most of the material used had been accumulated by him during the later years of his life.</li>
-<li>Challenge: The following preliminary communication made to the Pathological Society of Great Britain and Ireland in July 1910 represents in brief outline the position which had been reached at the time of Dr Bruce&#x27;s lamented death:—.</li>
-<li>Action: This paper investigates xviii.–the histology of disseminated sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The research of which this paper gives an account was originated by the late Dr Alexander Bruce and undertaken in conjunction with him; most of the material used had been accumulated by him during the later years of his life.</li>
+<li>The following preliminary communication made to the Pathological Society of Great Britain and Ireland in July 1910 represents in brief outline the position which had been reached at the time of Dr Bruce&#x27;s lamented death:—.</li>
+<li>This paper investigates xviii.–the histology of disseminated sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1017/s0080456800027174" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> James Dawson. (1916). XVIII.–The Histology of Disseminated Sclerosis. Transactions of the Royal Society of Edinburgh. https://doi.org/10.1017/s0080456800027174</p>
@@ -3310,7 +3235,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Early imaging predictors of long-term outcomes in relapse-onset multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -3320,10 +3244,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates early imaging predictors of long-term outcomes in relapse-onset multiple sclerosis. Our findings suggest that early focal inflammatory disease activity and spinal cord lesions are predictors of very long-term disease outcomes in relapse-onset multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our findings suggest that early focal inflammatory disease activity and spinal cord lesions are predictors of very long-term disease outcomes in relapse-onset multiple sclerosis.</li>
-<li>Challenge: This paper investigates early imaging predictors of long-term outcomes in relapse-onset multiple sclerosis.</li>
-<li>Action: The clinical course of relapse-onset multiple sclerosis is highly variable.</li>
-<li>Resolution: Demographic factors, clinical features and global brain T2 lesion load have limited value in counselling individual patients.</li>
+<li>Our findings suggest that early focal inflammatory disease activity and spinal cord lesions are predictors of very long-term disease outcomes in relapse-onset multiple sclerosis.</li>
+<li>This paper investigates early imaging predictors of long-term outcomes in relapse-onset multiple sclerosis.</li>
+<li>The clinical course of relapse-onset multiple sclerosis is highly variable.</li>
+<li>Demographic factors, clinical features and global brain T2 lesion load have limited value in counselling individual patients.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awz156" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Wallace Brownlee. (2019). Early imaging predictors of long-term outcomes in relapse-onset multiple sclerosis. Brain. https://doi.org/10.1093/brain/awz156</p>
@@ -3345,7 +3269,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Value of 3T Susceptibility-Weighted Imaging in the Diagnosis of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -3355,10 +3278,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates value of 3t susceptibility-weighted imaging in the diagnosis of multiple sclerosis. A single 3T SWI scan offers valuable diagnostic information, which has the potential to prevent MS misdiagnosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A single 3T SWI scan offers valuable diagnostic information, which has the potential to prevent MS misdiagnosis.</li>
-<li>Challenge: This paper investigates value of 3t susceptibility-weighted imaging in the diagnosis of multiple sclerosis.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>A single 3T SWI scan offers valuable diagnostic information, which has the potential to prevent MS misdiagnosis.</li>
+<li>This paper investigates value of 3t susceptibility-weighted imaging in the diagnosis of multiple sclerosis.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.3174/ajnr.a6547" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Margareta A. Clarke. (2020). Value of 3T Susceptibility-Weighted Imaging in the Diagnosis of Multiple Sclerosis. American Journal of Neuroradiology. https://doi.org/10.3174/ajnr.a6547</p>
@@ -3380,7 +3303,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Demyelination, Inflammation, and Neurodegeneration in Multiple Sclerosis Deep Gray Matter</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2009</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3390,10 +3312,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates demyelination, inflammation, and neurodegeneration in multiple sclerosis deep gray matter. The aims of this study were to determine the frequency and distribution of lesions and characterize the inflammatory and neurodegenerative changes in DGM of MS patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The aims of this study were to determine the frequency and distribution of lesions and characterize the inflammatory and neurodegenerative changes in DGM of MS patients.</li>
-<li>Challenge: This paper investigates demyelination, inflammation, and neurodegeneration in multiple sclerosis deep gray matter.</li>
-<li>Action: Gray matter (GM) lesions are recognized as important components of the pathology of multiple sclerosis (MS), and involvement of the deep gray matter (DGM) is suggested by magnetic resonance imaging.</li>
-<li>Resolution: Histochemistry, immunohistochemistry, and morphometry were performed on whole coronal sections of 14 MS and 12 control (6 normal, 6 from amyotrophic lateral sclerosis patients) brains.</li>
+<li>The aims of this study were to determine the frequency and distribution of lesions and characterize the inflammatory and neurodegenerative changes in DGM of MS patients.</li>
+<li>This paper investigates demyelination, inflammation, and neurodegeneration in multiple sclerosis deep gray matter.</li>
+<li>Gray matter (GM) lesions are recognized as important components of the pathology of multiple sclerosis (MS), and involvement of the deep gray matter (DGM) is suggested by magnetic resonance imaging.</li>
+<li>Histochemistry, immunohistochemistry, and morphometry were performed on whole coronal sections of 14 MS and 12 control (6 normal, 6 from amyotrophic lateral sclerosis patients) brains.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/nen.0b013e3181a19a5a" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Marco Vercellino. (2009). Demyelination, Inflammation, and Neurodegeneration in Multiple Sclerosis Deep Gray Matter. Journal of Neuropathology &amp; Experimental Neurology. https://doi.org/10.1097/nen.0b013e3181a19a5a</p>
@@ -3415,7 +3337,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Do oligoclonal bands add information to MRI in first attacks of multiple sclerosis?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2007</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (52%)</span>
 </div>
@@ -3425,10 +3346,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates do oligoclonal bands add information to mri in first attacks of multiple sclerosis?. Presence of oligoclonal bands doubles the risk for having a second attack, independently of MRI, but does not seem to influence the development of disability.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Presence of oligoclonal bands doubles the risk for having a second attack, independently of MRI, but does not seem to influence the development of disability.</li>
-<li>Challenge: This paper investigates do oligoclonal bands add information to mri in first attacks of multiple sclerosis?.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Presence of oligoclonal bands doubles the risk for having a second attack, independently of MRI, but does not seem to influence the development of disability.</li>
+<li>This paper investigates do oligoclonal bands add information to mri in first attacks of multiple sclerosis?.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/01.wnl.0000280576.73609.c6" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Mar Tintoré. (2007). Do oligoclonal bands add information to MRI in first attacks of multiple sclerosis?. Neurology. https://doi.org/10.1212/01.wnl.0000280576.73609.c6</p>
@@ -3450,7 +3371,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Quantitative Susceptibility Mapping of Multiple Sclerosis Lesions at Various Ages</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (70%)</span>
 </div>
@@ -3460,10 +3380,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates quantitative susceptibility mapping of multiple sclerosis lesions at various ages. Online supplemental material is available for this article.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Magnetic susceptibility of MS lesions increased rapidly as it changed from enhanced to nonenhanced, it attained a high susceptibility value relative to NAWM during its initial few years (approximately 4 years), and it gradually dissipated back to susceptibility similar to that of NAWM as it aged, which may provide new insight into pathophysiologic features of MS lesions.</li>
-<li>Challenge: Online supplemental material is available for this article.</li>
-<li>Action: This paper investigates quantitative susceptibility mapping of multiple sclerosis lesions at various ages.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Magnetic susceptibility of MS lesions increased rapidly as it changed from enhanced to nonenhanced, it attained a high susceptibility value relative to NAWM during its initial few years (approximately 4 years), and it gradually dissipated back to susceptibility similar to that of NAWM as it aged, which may provide new insight into pathophysiologic features of MS lesions.</li>
+<li>Online supplemental material is available for this article.</li>
+<li>This paper investigates quantitative susceptibility mapping of multiple sclerosis lesions at various ages.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1148/radiol.13130353" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Weiwei Chen. (2013). Quantitative Susceptibility Mapping of Multiple Sclerosis Lesions at Various Ages. Radiology. https://doi.org/10.1148/radiol.13130353</p>
@@ -3485,7 +3405,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Using gadolinium‐enhanced magnetic resonance imaging lesions to monitor disease activity in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1992</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -3495,10 +3414,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates using gadolinium‐enhanced magnetic resonance imaging lesions to monitor disease activity in multiple sclerosis. Monitoring Gd-enhancing lesions may be an effective tool to assist in the assessment of experimental therapies in early MS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The highly variable clinical course and the lack of a direct measurement of disease activity have made evaluation of experimental therapies in multiple sclerosis (MS) difficult.</li>
-<li>Challenge: Recent studies indicate that clinically silent lesions can be demonstrated by magnetic resonance imaging (MRI) in patients with mild relapsing-remitting MS.</li>
-<li>Action: Thus, MRI may provide a means for monitoring therapeutic trials in the early phase of MS.</li>
-<li>Resolution: We studied 12 patients longitudinally for 12 to 21 months with monthly gadolinium (Gd)-enhanced MRIs.</li>
+<li>The highly variable clinical course and the lack of a direct measurement of disease activity have made evaluation of experimental therapies in multiple sclerosis (MS) difficult.</li>
+<li>Recent studies indicate that clinically silent lesions can be demonstrated by magnetic resonance imaging (MRI) in patients with mild relapsing-remitting MS.</li>
+<li>Thus, MRI may provide a means for monitoring therapeutic trials in the early phase of MS.</li>
+<li>We studied 12 patients longitudinally for 12 to 21 months with monthly gadolinium (Gd)-enhanced MRIs.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410320609" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Henry F. McFarland. (1992). Using gadolinium‐enhanced magnetic resonance imaging lesions to monitor disease activity in multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.410320609</p>
@@ -3520,7 +3439,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Regional variations in the extent and pattern of grey matter demyelination in multiple sclerosis: a comparison between the cerebral cortex, cerebellar cortex, deep grey matter nuclei and the spinal cord</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -3530,10 +3448,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates regional variations in the extent and pattern of grey matter demyelination in multiple sclerosis: a comparison between the cerebral cortex, cerebellar cortex, deep grey matter nuclei and the spinal cord. GM demyelination was most extensive in the spinal cord and cerebellum while WM demyelination was most prominent in the spinal cord.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Overall, 28.8% of the GM was demyelinated compared with 15.6% of the WM (p&lt;0.001), with demyelination being greater in the GM than in the WM at each of the anatomical sites.</li>
-<li>Challenge: There was substantial variation in the extent of demyelination between the different CNS regions.</li>
-<li>Action: GM demyelination was most extensive in the spinal cord and cerebellum while WM demyelination was most prominent in the spinal cord.</li>
-<li>Resolution: This paper investigates regional variations in the extent and pattern of grey matter demyelination in multiple sclerosis: a comparison between the cerebral cortex, cerebellar cortex, deep grey matter nuclei and the spinal cord.</li>
+<li>Overall, 28.8% of the GM was demyelinated compared with 15.6% of the WM (p&lt;0.001), with demyelination being greater in the GM than in the WM at each of the anatomical sites.</li>
+<li>There was substantial variation in the extent of demyelination between the different CNS regions.</li>
+<li>GM demyelination was most extensive in the spinal cord and cerebellum while WM demyelination was most prominent in the spinal cord.</li>
+<li>This paper investigates regional variations in the extent and pattern of grey matter demyelination in multiple sclerosis: a comparison between the cerebral cortex, cerebellar cortex, deep grey matter nuclei and the spinal cord.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp.2008.148767" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christopher P. Gilmore. (2008). Regional variations in the extent and pattern of grey matter demyelination in multiple sclerosis: a comparison between the cerebral cortex, cerebellar cortex, deep grey matter nuclei and the spinal cord. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp.2008.148767</p>
@@ -3555,7 +3473,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Guidelines for the use of magnetic resonance techniques in monitoring the treatment of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1996</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3565,10 +3482,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates guidelines for the use of magnetic resonance techniques in monitoring the treatment of multiple sclerosis. Further technical developments should lead to more accurate quantitation, greater pathological specificity, and stronger clinical correlations.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Because of the major difficulties in measuring clinical end points in multiple sclerosis (MS) treatment trials, there has been much enthusiasm for using magnetic resonance imaging (MRI) findings as an alternative outcome.</li>
-<li>Challenge: To provide international consensus guidelines for the use of MRI in MS clinical trials, a task force of the US National MS Society was convened.</li>
-<li>Action: The recommendations of the task force are presented in this review.</li>
-<li>Resolution: This paper investigates guidelines for the use of magnetic resonance techniques in monitoring the treatment of multiple sclerosis.</li>
+<li>Because of the major difficulties in measuring clinical end points in multiple sclerosis (MS) treatment trials, there has been much enthusiasm for using magnetic resonance imaging (MRI) findings as an alternative outcome.</li>
+<li>To provide international consensus guidelines for the use of MRI in MS clinical trials, a task force of the US National MS Society was convened.</li>
+<li>The recommendations of the task force are presented in this review.</li>
+<li>This paper investigates guidelines for the use of magnetic resonance techniques in monitoring the treatment of multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410390104" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> D. H. Miller. (1996). Guidelines for the use of magnetic resonance techniques in monitoring the treatment of multiple sclerosis. Annals of Neurology. https://doi.org/10.1002/ana.410390104</p>
@@ -3590,7 +3507,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Mechanisms underlying progression in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -3600,10 +3516,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mechanisms underlying progression in multiple sclerosis. As a consequence, new therapeutic approaches are emerging outside the modulation of T-cell activity and/or the depletion of B cells.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The neuropathological and biological understanding of disease progression in multiple sclerosis have progressed in the last few years.</li>
-<li>Challenge: As a consequence, new therapeutic approaches are emerging outside the modulation of T-cell activity and/or the depletion of B cells.</li>
-<li>Action: This paper investigates mechanisms underlying progression in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The neuropathological and biological understanding of disease progression in multiple sclerosis have progressed in the last few years.</li>
+<li>As a consequence, new therapeutic approaches are emerging outside the modulation of T-cell activity and/or the depletion of B cells.</li>
+<li>This paper investigates mechanisms underlying progression in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1097/wco.0000000000000818" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Martina Absinta. (2020). Mechanisms underlying progression in multiple sclerosis. Current Opinion in Neurology. https://doi.org/10.1097/wco.0000000000000818</p>
@@ -3625,7 +3541,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The radiologically isolated syndrome: revised diagnostic criteria</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2023</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -3635,10 +3550,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the radiologically isolated syndrome: revised diagnostic criteria. Our results provide a rationale for revisions to existing RIS diagnostic criteria.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results provide a rationale for revisions to existing RIS diagnostic criteria.</li>
-<li>Challenge: This paper investigates the radiologically isolated syndrome: revised diagnostic criteria.</li>
-<li>Action: The radiologically isolated syndrome (RIS) was defined in 2009 as the presence of asymptomatic, incidentally identified demyelinating-appearing white matter lesions in the CNS within individuals lacking symptoms typical of multiple sclerosis (MS).</li>
-<li>Resolution: The RIS criteria have been validated and predict the transition to symptomatic MS reliably.</li>
+<li>Our results provide a rationale for revisions to existing RIS diagnostic criteria.</li>
+<li>This paper investigates the radiologically isolated syndrome: revised diagnostic criteria.</li>
+<li>The radiologically isolated syndrome (RIS) was defined in 2009 as the presence of asymptomatic, incidentally identified demyelinating-appearing white matter lesions in the CNS within individuals lacking symptoms typical of multiple sclerosis (MS).</li>
+<li>The RIS criteria have been validated and predict the transition to symptomatic MS reliably.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awad073" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christine Lebrun‐Frénay. (2023). The radiologically isolated syndrome: revised diagnostic criteria. Brain. https://doi.org/10.1093/brain/awad073</p>
@@ -3660,7 +3575,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Distinct lesion morphology at 7-T MRI differentiates neuromyelitis optica from multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -3670,10 +3584,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates distinct lesion morphology at 7-t mri differentiates neuromyelitis optica from multiple sclerosis. The fact that cortical pathology is common in MS but is not present in patients with NMOSDs may reflect the difference in the underlying pathogenesis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The MRI features of white matter and the absence of cortical gray matter findings substantially differentiate NMOSDs from MS and can be used as a potential marker to distinguish these 2 entities.</li>
-<li>Challenge: The fact that cortical pathology is common in MS but is not present in patients with NMOSDs may reflect the difference in the underlying pathogenesis.</li>
-<li>Action: This paper investigates distinct lesion morphology at 7-t mri differentiates neuromyelitis optica from multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>The MRI features of white matter and the absence of cortical gray matter findings substantially differentiate NMOSDs from MS and can be used as a potential marker to distinguish these 2 entities.</li>
+<li>The fact that cortical pathology is common in MS but is not present in patients with NMOSDs may reflect the difference in the underlying pathogenesis.</li>
+<li>This paper investigates distinct lesion morphology at 7-t mri differentiates neuromyelitis optica from multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e3182648bc8" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Tim Sinnecker. (2012). Distinct lesion morphology at 7-T MRI differentiates neuromyelitis optica from multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0b013e3182648bc8</p>
@@ -3695,7 +3609,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Chronic Multiple Sclerosis Lesions: Characterization with High-Field-Strength MR Imaging</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2011</span>
-<span class="kpi-pill">Language level 1/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (57%)</span>
 </div>
@@ -3705,10 +3618,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates chronic multiple sclerosis lesions: characterization with high-field-strength mr imaging. The observed R2* decreases suggest profound myelin loss, whereas negative phase shifts suggest a focal iron accumulation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Combined analysis of 7.0-T R2* and phase data may help in characterizing the pathologic features of MS lesions.</li>
-<li>Challenge: The observed R2* decreases suggest profound myelin loss, whereas negative phase shifts suggest a focal iron accumulation.</li>
-<li>Action: This paper investigates chronic multiple sclerosis lesions: characterization with high-field-strength mr imaging.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Combined analysis of 7.0-T R2* and phase data may help in characterizing the pathologic features of MS lesions.</li>
+<li>The observed R2* decreases suggest profound myelin loss, whereas negative phase shifts suggest a focal iron accumulation.</li>
+<li>This paper investigates chronic multiple sclerosis lesions: characterization with high-field-strength mr imaging.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1148/radiol.11110601" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Bing Yao. (2011). Chronic Multiple Sclerosis Lesions: Characterization with High-Field-Strength MR Imaging. Radiology. https://doi.org/10.1148/radiol.11110601</p>
@@ -3730,7 +3643,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Quantitative magnetic resonance imaging towards clinical application in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3740,10 +3652,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates quantitative magnetic resonance imaging towards clinical application in multiple sclerosis. We aim to provide a better understanding of how quantitative MRI may help clinical practice by improving stratification of patients with multiple sclerosis, and assessment of disease progression, and evaluation of treatment response.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Quantitative MRI provides biophysical measures of the microstructural integrity of the CNS, which can be compared across CNS regions, patients, and centres.</li>
-<li>Challenge: In patients with multiple sclerosis, quantitative MRI techniques such as relaxometry, myelin imaging, magnetization transfer, diffusion MRI, quantitative susceptibility mapping, and perfusion MRI, complement conventional MRI techniques by providing insight into disease mechanisms.</li>
-<li>Action: These include: (i) presence and extent of diffuse damage in CNS tissue outside lesions (normal-appearing tissue); (ii) heterogeneity of damage and repair in focal lesions; and (iii) specific damage to CNS tissue components.</li>
-<li>Resolution: This review summarizes recent technical advances in quantitative MRI, existing pathological validation of quantitative MRI techniques, and emerging applications of quantitative MRI to patients with multiple sclerosis in both research and clinical settings.</li>
+<li>Quantitative MRI provides biophysical measures of the microstructural integrity of the CNS, which can be compared across CNS regions, patients, and centres.</li>
+<li>In patients with multiple sclerosis, quantitative MRI techniques such as relaxometry, myelin imaging, magnetization transfer, diffusion MRI, quantitative susceptibility mapping, and perfusion MRI, complement conventional MRI techniques by providing insight into disease mechanisms.</li>
+<li>These include: (i) presence and extent of diffuse damage in CNS tissue outside lesions (normal-appearing tissue); (ii) heterogeneity of damage and repair in focal lesions; and (iii) specific damage to CNS tissue components.</li>
+<li>This review summarizes recent technical advances in quantitative MRI, existing pathological validation of quantitative MRI techniques, and emerging applications of quantitative MRI to patients with multiple sclerosis in both research and clinical settings.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awab029" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Cristina Granziera. (2021). Quantitative magnetic resonance imaging towards clinical application in multiple sclerosis. Brain. https://doi.org/10.1093/brain/awab029</p>
@@ -3765,7 +3677,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>A comparison of the pathology of primary and secondary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1994</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3775,10 +3686,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates a comparison of the pathology of primary and secondary progressive multiple sclerosis. These observations have implications for therapeutic strategies in progressive multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The dynamics of primary progressive multiple sclerosis differ from those of the more common secondary progressive form.</li>
-<li>Challenge: The observation by MRI that the frequency of enhancement with gadolinium-DTPA, a marker for blood-brain barrier dysfunction, is significantly less in the primary progressive form, has led to the hypothesis that inflammation is less intense in this group.</li>
-<li>Action: To test this, we have studied postmortem material from nine cases judged from a retrospective analysis of case notes to show clear clinical evidence of either primary progressive or secondary progressive disease.</li>
-<li>Resolution: This paper investigates a comparison of the pathology of primary and secondary progressive multiple sclerosis.</li>
+<li>The dynamics of primary progressive multiple sclerosis differ from those of the more common secondary progressive form.</li>
+<li>The observation by MRI that the frequency of enhancement with gadolinium-DTPA, a marker for blood-brain barrier dysfunction, is significantly less in the primary progressive form, has led to the hypothesis that inflammation is less intense in this group.</li>
+<li>To test this, we have studied postmortem material from nine cases judged from a retrospective analysis of case notes to show clear clinical evidence of either primary progressive or secondary progressive disease.</li>
+<li>This paper investigates a comparison of the pathology of primary and secondary progressive multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/117.4.759" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> T Révész. (1994). A comparison of the pathology of primary and secondary progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/117.4.759</p>
@@ -3800,7 +3711,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Brain MRI atrophy quantification in MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2016</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -3810,10 +3720,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates brain mri atrophy quantification in ms. Current methods provide sufficient precision for cohort studies, but are not adequate for confidently assessing changes in individual patients over the scale of months or a few years.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Patients with the main clinical phenotypes of multiple sclerosis (MS) manifest varying degrees of brain atrophy beyond that of normal aging.</li>
-<li>Challenge: Assessment of atrophy helps to distinguish clinically and cognitively deteriorating patients and predicts those who will have a less-favorable clinical outcome over the long term.</li>
-<li>Action: Atrophy can be measured from brain MRI scans, and many technological improvements have been made over the last few years.</li>
-<li>Resolution: Several software tools, with differing requirements on technical ability and levels of operator intervention, are currently available and have already been applied in research or clinical trial settings.</li>
+<li>Patients with the main clinical phenotypes of multiple sclerosis (MS) manifest varying degrees of brain atrophy beyond that of normal aging.</li>
+<li>Assessment of atrophy helps to distinguish clinically and cognitively deteriorating patients and predicts those who will have a less-favorable clinical outcome over the long term.</li>
+<li>Atrophy can be measured from brain MRI scans, and many technological improvements have been made over the last few years.</li>
+<li>Several software tools, with differing requirements on technical ability and levels of operator intervention, are currently available and have already been applied in research or clinical trial settings.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000003542" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Maria A. Rocca. (2016). Brain MRI atrophy quantification in MS. Neurology. https://doi.org/10.1212/wnl.0000000000003542</p>
@@ -3835,7 +3745,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Imaging axonal damage of normal-appearing white matter in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1998</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -3845,10 +3754,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates imaging axonal damage of normal-appearing white matter in multiple sclerosis. The accumulation of secondary axonal damage in the normal-appearing white matter may be of particular significance for understanding chronic disability in this disease.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The current study was designed to determine the relative distribution of decreases of N-acetylasparate (NAA), a marker of axonal damage, between lesions and normal-appearing white matter of patients with established multiple sclerosis and to test for associations between changes in the ratio of NAA to creatine/phosphocreatine (NAA:Cr) in those compartments and changes in disability.</li>
-<li>Challenge: Data were collected from a 30-month longitudinal study of 28 patients with either a relapsing course with partial remissons and no progression between attacks (relapsing/remitting) (11 patients) or a course of progressively increasing disability, following a period of relapsing/remitting disease (secondary progressive) (17 patients).</li>
-<li>Action: Proton magnetic resonance spectroscopic imaging (MRSI) and conventional MRI examinations were performed at 6-8-month intervals with concurrent clinical assessments of disability.</li>
-<li>Resolution: This paper investigates imaging axonal damage of normal-appearing white matter in multiple sclerosis.</li>
+<li>The current study was designed to determine the relative distribution of decreases of N-acetylasparate (NAA), a marker of axonal damage, between lesions and normal-appearing white matter of patients with established multiple sclerosis and to test for associations between changes in the ratio of NAA to creatine/phosphocreatine (NAA:Cr) in those compartments and changes in disability.</li>
+<li>Data were collected from a 30-month longitudinal study of 28 patients with either a relapsing course with partial remissons and no progression between attacks (relapsing/remitting) (11 patients) or a course of progressively increasing disability, following a period of relapsing/remitting disease (secondary progressive) (17 patients).</li>
+<li>Proton magnetic resonance spectroscopic imaging (MRSI) and conventional MRI examinations were performed at 6-8-month intervals with concurrent clinical assessments of disability.</li>
+<li>This paper investigates imaging axonal damage of normal-appearing white matter in multiple sclerosis.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/121.1.103" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Lili Fu. (1998). Imaging axonal damage of normal-appearing white matter in multiple sclerosis. Brain. https://doi.org/10.1093/brain/121.1.103</p>
@@ -3870,7 +3779,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Relationship between paramagnetic rim lesions and slowly expanding lesions in multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -3880,10 +3788,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates relationship between paramagnetic rim lesions and slowly expanding lesions in multiple sclerosis. Compared with either SELs or PRLs found in isolation, their joint occurrence was associated with greater clinical progression.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: SELs are more numerous than PRLs in pwMS.</li>
-<li>Challenge: Compared with either SELs or PRLs found in isolation, their joint occurrence was associated with greater clinical progression.</li>
-<li>Action: This paper investigates relationship between paramagnetic rim lesions and slowly expanding lesions in multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>SELs are more numerous than PRLs in pwMS.</li>
+<li>Compared with either SELs or PRLs found in isolation, their joint occurrence was associated with greater clinical progression.</li>
+<li>This paper investigates relationship between paramagnetic rim lesions and slowly expanding lesions in multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1177/13524585221141964" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alberto Calvi. (2022). Relationship between paramagnetic rim lesions and slowly expanding lesions in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/13524585221141964</p>
@@ -3905,7 +3813,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Surface-in pathology in multiple sclerosis: a new view on pathogenesis?</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -3915,10 +3822,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates surface-in pathology in multiple sclerosis: a new view on pathogenesis?. In this Update, we review this &#x27;surface-in&#x27; spatial distribution of multiple sclerosis abnormalities and consider the implications for understanding pathogenic mechanisms and treatments designed to slow or stop them.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: While multiple sclerosis can affect any part of the CNS, it does not do so evenly.</li>
-<li>Challenge: In white matter it has long been recognized that lesions tend to occur around the ventricles, and grey matter lesions mainly accrue in the outermost (subpial) cortex.</li>
-<li>Action: In cortical grey matter, neuronal loss is greater in the outermost layers.</li>
-<li>Resolution: This cortical gradient has been replicated in vivo with magnetization transfer ratio and similar gradients in grey and white matter magnetization transfer ratio are seen around the ventricles, with the most severe abnormalities abutting the ventricular surface.</li>
+<li>While multiple sclerosis can affect any part of the CNS, it does not do so evenly.</li>
+<li>In white matter it has long been recognized that lesions tend to occur around the ventricles, and grey matter lesions mainly accrue in the outermost (subpial) cortex.</li>
+<li>In cortical grey matter, neuronal loss is greater in the outermost layers.</li>
+<li>This cortical gradient has been replicated in vivo with magnetization transfer ratio and similar gradients in grey and white matter magnetization transfer ratio are seen around the ventricles, with the most severe abnormalities abutting the ventricular surface.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awab025" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Matteo Pardini. (2021). Surface-in pathology in multiple sclerosis: a new view on pathogenesis?. Brain. https://doi.org/10.1093/brain/awab025</p>
@@ -3940,7 +3847,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The effect of interferon beta-1b treatment on MRI measures of cerebral atrophy in secondary progressive multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -3950,10 +3856,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the effect of interferon beta-1b treatment on mri measures of cerebral atrophy in secondary progressive multiple sclerosis. These results are consistent with ongoing tissue loss in both arms of this study of secondary progressive multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: These results are consistent with ongoing tissue loss in both arms of this study of secondary progressive multiple sclerosis.</li>
-<li>Challenge: This paper investigates the effect of interferon beta-1b treatment on mri measures of cerebral atrophy in secondary progressive multiple sclerosis.</li>
-<li>Action: The recently completed European trial of interferon beta-1b (IFNbeta-1b) in patients with secondary progressive multiple sclerosis (SP multiple sclerosis) has given an opportunity to assess the impact of treatment on cerebral atrophy using serial MRI.</li>
-<li>Resolution: Unenhanced T(1)-weighted brain imaging was acquired in a subgroup of 95 patients from five of the European centres; imaging was performed at 6-month intervals from month 0 to month 36.</li>
+<li>These results are consistent with ongoing tissue loss in both arms of this study of secondary progressive multiple sclerosis.</li>
+<li>This paper investigates the effect of interferon beta-1b treatment on mri measures of cerebral atrophy in secondary progressive multiple sclerosis.</li>
+<li>The recently completed European trial of interferon beta-1b (IFNbeta-1b) in patients with secondary progressive multiple sclerosis (SP multiple sclerosis) has given an opportunity to assess the impact of treatment on cerebral atrophy using serial MRI.</li>
+<li>Unenhanced T(1)-weighted brain imaging was acquired in a subgroup of 95 patients from five of the European centres; imaging was performed at 6-month intervals from month 0 to month 36.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/123.11.2256" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> P. D. Molyneux. (2000). The effect of interferon beta-1b treatment on MRI measures of cerebral atrophy in secondary progressive multiple sclerosis. Brain. https://doi.org/10.1093/brain/123.11.2256</p>
@@ -3975,7 +3881,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Improved detection of cortical MS lesions with phase-sensitive inversion recovery MRI</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (69%)</span>
 </div>
@@ -3985,10 +3890,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates improved detection of cortical ms lesions with phase-sensitive inversion recovery mri. The presence of at least one IC lesion in every MS patient, but very few healthy controls, suggests that it may be a useful adjunct to conventional MRI when a diagnosis of MS is suspected but not confirmed.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Compared with DIR, using PSIR the authors are able to detect a significantly greater number of cortical grey matter lesions.</li>
-<li>Challenge: The presence of at least one IC lesion in every MS patient, but very few healthy controls, suggests that it may be a useful adjunct to conventional MRI when a diagnosis of MS is suspected but not confirmed.</li>
-<li>Action: This paper investigates improved detection of cortical ms lesions with phase-sensitive inversion recovery mri.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Compared with DIR, using PSIR the authors are able to detect a significantly greater number of cortical grey matter lesions.</li>
+<li>The presence of at least one IC lesion in every MS patient, but very few healthy controls, suggests that it may be a useful adjunct to conventional MRI when a diagnosis of MS is suspected but not confirmed.</li>
+<li>This paper investigates improved detection of cortical ms lesions with phase-sensitive inversion recovery mri.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1136/jnnp-2012-303023" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Varun Sethi. (2012). Improved detection of cortical MS lesions with phase-sensitive inversion recovery MRI. Journal of Neurology Neurosurgery &amp; Psychiatry. https://doi.org/10.1136/jnnp-2012-303023</p>
@@ -4010,7 +3915,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Serial gadolinium‐enhanced magnetic resonance imaging scans in patients with early, relapsing‐remitting multiple sclerosis: Implications for clinical trials and natural history</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1991</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -4020,10 +3924,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates serial gadolinium‐enhanced magnetic resonance imaging scans in patients with early, relapsing‐remitting multiple sclerosis: implications for clinical trials and natural history. The frequency of these lesions appears to be sufficient to use as an outcome measure in clinical trials testing clinical efficacy in patients with early, relapsing-remitting multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Six patients with early, mild, relapsing-remitting multiple sclerosis were studied with monthly gadolinium-enhanced magnetic resonance imaging scans for 8 to 11 months.</li>
-<li>Challenge: Numerous enhancing lesions were observed irrespective of clinical activity.</li>
-<li>Action: Four of the 6 patients had one or more enhancing lesions present on each examination.</li>
-<li>Resolution: The other 2 patients had enhancing lesions noted in 7 and 9 of 11 months.</li>
+<li>Six patients with early, mild, relapsing-remitting multiple sclerosis were studied with monthly gadolinium-enhanced magnetic resonance imaging scans for 8 to 11 months.</li>
+<li>Numerous enhancing lesions were observed irrespective of clinical activity.</li>
+<li>Four of the 6 patients had one or more enhancing lesions present on each examination.</li>
+<li>The other 2 patients had enhancing lesions noted in 7 and 9 of 11 months.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.410290515" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jonathan O. Harris. (1991). Serial gadolinium‐enhanced magnetic resonance imaging scans in patients with early, relapsing‐remitting multiple sclerosis: Implications for clinical trials and natural history. Annals of Neurology. https://doi.org/10.1002/ana.410290515</p>
@@ -4045,7 +3949,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Targeted Complement Inhibition at Synapses Prevents Microglial Synaptic Engulfment and Synapse Loss in Demyelinating Disease</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2019</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -4055,10 +3958,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates targeted complement inhibition at synapses prevents microglial synaptic engulfment and synapse loss in demyelinating disease. We further provide a novel gene therapy approach to prevent synapse loss by microglia, which may be broadly applicable to other neurodegenerative diseases.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Summary Multiple sclerosis (MS) is a demyelinating, autoimmune disease of the central nervous system.</li>
-<li>Challenge: While work has focused on axon loss in MS, far less is known about synaptic changes.</li>
-<li>Action: Here, in striking similarity to other neurodegenerative diseases, we identify in postmortem human MS tissue and in nonhuman primate and mouse MS models profound synapse loss and microglial synaptic engulfment.</li>
-<li>Resolution: These events can occur independently of local demyelination, neuronal degeneration, and peripheral immune cell infiltration, but coincide with gliosis and increased localization of complement component C3, but not C1q, at synapses.</li>
+<li>Summary Multiple sclerosis (MS) is a demyelinating, autoimmune disease of the central nervous system.</li>
+<li>While work has focused on axon loss in MS, far less is known about synaptic changes.</li>
+<li>Here, in striking similarity to other neurodegenerative diseases, we identify in postmortem human MS tissue and in nonhuman primate and mouse MS models profound synapse loss and microglial synaptic engulfment.</li>
+<li>These events can occur independently of local demyelination, neuronal degeneration, and peripheral immune cell infiltration, but coincide with gliosis and increased localization of complement component C3, but not C1q, at synapses.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1016/j.immuni.2019.12.004" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sebastian Werneburg. (2019). Targeted Complement Inhibition at Synapses Prevents Microglial Synaptic Engulfment and Synapse Loss in Demyelinating Disease. Immunity. https://doi.org/10.1016/j.immuni.2019.12.004</p>
@@ -4080,7 +3983,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Choroid Plexus Enlargement in Inflammatory Multiple Sclerosis: 3.0-T MRI and Translocator Protein PET Evaluation</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2021</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -4090,10 +3992,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates choroid plexus enlargement in inflammatory multiple sclerosis: 3.0-t mri and translocator protein pet evaluation. NCT02305264 and NCT01651520&lt;/i&gt; &lt;i&gt;Online supplemental material is available for this article.&lt;/i&gt;</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Background Choroid plexuses (CPs) have been suggested as a key gateway for inflammation in experimental autoimmune encephalitis, but in vivo evidence of their involvement in multiple sclerosis (MS) is lacking.</li>
-<li>Challenge: Purpose To assess CP volumetric and inflammatory changes in patients with MS versus healthy control participants.</li>
-<li>Action: Materials and Methods This was a secondary analysis of 97 patients (61 with relapsing-remitting MS [RRMS] and 36 with progressive MS) and 44 healthy control participants who participated in three prospective 3.0-T brain MRI studies between May 2009 and September 2017.</li>
-<li>Resolution: A subgroup of 37 patients and 19 healthy control participants also underwent translocator protein fluorine 18 (&lt;sup&gt;18&lt;/sup&gt;F)-DPA-714 PET for neuroinflammation.</li>
+<li>Background Choroid plexuses (CPs) have been suggested as a key gateway for inflammation in experimental autoimmune encephalitis, but in vivo evidence of their involvement in multiple sclerosis (MS) is lacking.</li>
+<li>Purpose To assess CP volumetric and inflammatory changes in patients with MS versus healthy control participants.</li>
+<li>Materials and Methods This was a secondary analysis of 97 patients (61 with relapsing-remitting MS [RRMS] and 36 with progressive MS) and 44 healthy control participants who participated in three prospective 3.0-T brain MRI studies between May 2009 and September 2017.</li>
+<li>A subgroup of 37 patients and 19 healthy control participants also underwent translocator protein fluorine 18 (&lt;sup&gt;18&lt;/sup&gt;F)-DPA-714 PET for neuroinflammation.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1148/radiol.2021204426" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Vito A. G. Ricigliano. (2021). Choroid Plexus Enlargement in Inflammatory Multiple Sclerosis: 3.0-T MRI and Translocator Protein PET Evaluation. Radiology. https://doi.org/10.1148/radiol.2021204426</p>
@@ -4115,7 +4017,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The pathogenesis of lesions and normal-appearing white matter changes in multiple sclerosis: A serial diffusion MRI study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2000</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (86%)</span>
 </div>
@@ -4125,10 +4026,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the pathogenesis of lesions and normal-appearing white matter changes in multiple sclerosis: a serial diffusion mri study. The increases in ADC(av) in anatomically matched contralateral regions after lesions have appeared supports the concept that structural damage in lesions causes damage or dysfunction in connected areas of NAWM.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The idea that the initiating event in the formation of all new multiple sclerosis lesions is a focal blood-brain barrier (BBB) leakage associated with perivascular inflammation has been challenged recently by the observation of subtle abnormalities in some quantitative magnetic resonance (MR) parameters (including the magnetization transfer ratio) prior to lesion enhancement.</li>
-<li>Challenge: MR diffusion imaging can non-invasively quantify the average apparent diffusion coefficient (ADC(av)), a measure of water molecule random motion that is sensitive to pathological change in multiple sclerosis lesions and to abnormalities in the normal-appearing white matter (NAWM).</li>
-<li>Action: We therefore used MR diffusion imaging to investigate the dynamic evolution of water diffusion measurements in new enhancing multiple sclerosis lesions, in the NAWM from which they arise, and in anatomically matched contralateral NAWM regions from which no visible lesions develop.</li>
-<li>Resolution: Gadolinium diethylenetriaminepentaacetic acid (Gd)-enhanced MRI and MR diffusion studies were performed monthly for 1 year in five multiple sclerosis patients with clinically and radiologically active disease.</li>
+<li>The idea that the initiating event in the formation of all new multiple sclerosis lesions is a focal blood-brain barrier (BBB) leakage associated with perivascular inflammation has been challenged recently by the observation of subtle abnormalities in some quantitative magnetic resonance (MR) parameters (including the magnetization transfer ratio) prior to lesion enhancement.</li>
+<li>MR diffusion imaging can non-invasively quantify the average apparent diffusion coefficient (ADC(av)), a measure of water molecule random motion that is sensitive to pathological change in multiple sclerosis lesions and to abnormalities in the normal-appearing white matter (NAWM).</li>
+<li>We therefore used MR diffusion imaging to investigate the dynamic evolution of water diffusion measurements in new enhancing multiple sclerosis lesions, in the NAWM from which they arise, and in anatomically matched contralateral NAWM regions from which no visible lesions develop.</li>
+<li>Gadolinium diethylenetriaminepentaacetic acid (Gd)-enhanced MRI and MR diffusion studies were performed monthly for 1 year in five multiple sclerosis patients with clinically and radiologically active disease.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/123.8.1667" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> David J. Werring. (2000). The pathogenesis of lesions and normal-appearing white matter changes in multiple sclerosis: A serial diffusion MRI study. Brain. https://doi.org/10.1093/brain/123.8.1667</p>
@@ -4150,7 +4051,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Spinal cord lesions in patients with clinically isolated syndrome</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (66%)</span>
 </div>
@@ -4160,10 +4060,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates spinal cord lesions in patients with clinically isolated syndrome. We therefore recommend performing an SC scan in patients with nonspinal CIS who do not fulfill McDonald brain MRI criteria.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Presence of SC lesions facilitates diagnosing MS and is predictive for conversion to CDMS, especially in patients with nonspinal CIS who do not fulfill brain MRI criteria.</li>
-<li>Challenge: We therefore recommend performing an SC scan in patients with nonspinal CIS who do not fulfill McDonald brain MRI criteria.</li>
-<li>Action: This paper investigates spinal cord lesions in patients with clinically isolated syndrome.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Presence of SC lesions facilitates diagnosing MS and is predictive for conversion to CDMS, especially in patients with nonspinal CIS who do not fulfill brain MRI criteria.</li>
+<li>We therefore recommend performing an SC scan in patients with nonspinal CIS who do not fulfill McDonald brain MRI criteria.</li>
+<li>This paper investigates spinal cord lesions in patients with clinically isolated syndrome.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0b013e31827b1a67" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Madeleine H Sombekke. (2012). Spinal cord lesions in patients with clinically isolated syndrome. Neurology. https://doi.org/10.1212/wnl.0b013e31827b1a67</p>
@@ -4185,7 +4085,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>FLAIR*: A Combined MR Contrast Technique for Visualizing White Matter Lesions and Parenchymal Veins</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -4195,10 +4094,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates flair*: a combined mr contrast technique for visualizing white matter lesions and parenchymal veins. High-isotropic-resolution FLAIR* images obtained at 3.0 T yield high contrast for WM lesions and parenchymal veins, making it well suited to investigate the relationship between WM abnormalities and veins in a clinical setting.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: High-isotropic-resolution FLAIR* images obtained at 3.0 T yield high contrast for WM lesions and parenchymal veins, making it well suited to investigate the relationship between WM abnormalities and veins in a clinical setting.</li>
-<li>Challenge: This paper investigates flair*: a combined mr contrast technique for visualizing white matter lesions and parenchymal veins.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>High-isotropic-resolution FLAIR* images obtained at 3.0 T yield high contrast for WM lesions and parenchymal veins, making it well suited to investigate the relationship between WM abnormalities and veins in a clinical setting.</li>
+<li>This paper investigates flair*: a combined mr contrast technique for visualizing white matter lesions and parenchymal veins.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1148/radiol.12120208" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Pascal Sati. (2012). FLAIR*: A Combined MR Contrast Technique for Visualizing White Matter Lesions and Parenchymal Veins. Radiology. https://doi.org/10.1148/radiol.12120208</p>
@@ -4220,7 +4119,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Cortical grey matter demyelination can be induced by elevated pro-inflammatory cytokines in the subarachnoid space of MOG-immunized rats</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2013</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -4230,10 +4128,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates cortical grey matter demyelination can be induced by elevated pro-inflammatory cytokines in the subarachnoid space of mog-immunized rats. These results support the hypothesis that pro-inflammatory molecules produced in the meninges play a major role in cortical demyelination in multiple sclerosis, but also emphasize the involvement of an anti-myelin immune response.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: A substantial proportion of cases with secondary progressive multiple sclerosis have extensive inflammation in the leptomeninges that is associated with increased subpial demyelination, neuronal loss and an exacerbated disease course.</li>
-<li>Challenge: However, the mechanisms underlying this extensive subpial pathology are poorly understood.</li>
-<li>Action: We hypothesize that pro-inflammatory cytokine production within the meninges may be a key to this process.</li>
-<li>Resolution: Post-mortem cerebrospinal fluid and dissected cerebral leptomeningeal tissue from patients with multiple sclerosis were used to study the presence of tumour necrosis factor and interferon gamma protein and messenger RNA levels.</li>
+<li>A substantial proportion of cases with secondary progressive multiple sclerosis have extensive inflammation in the leptomeninges that is associated with increased subpial demyelination, neuronal loss and an exacerbated disease course.</li>
+<li>However, the mechanisms underlying this extensive subpial pathology are poorly understood.</li>
+<li>We hypothesize that pro-inflammatory cytokine production within the meninges may be a key to this process.</li>
+<li>Post-mortem cerebrospinal fluid and dissected cerebral leptomeningeal tissue from patients with multiple sclerosis were used to study the presence of tumour necrosis factor and interferon gamma protein and messenger RNA levels.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awt279" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Christopher Gardner. (2013). Cortical grey matter demyelination can be induced by elevated pro-inflammatory cytokines in the subarachnoid space of MOG-immunized rats. Brain. https://doi.org/10.1093/brain/awt279</p>
@@ -4255,7 +4153,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Slowly Expanding Lesions on MRI With Disability in People With Secondary Progressive Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (65%)</span>
 </div>
@@ -4265,10 +4162,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of slowly expanding lesions on mri with disability in people with secondary progressive multiple sclerosis. They are associated with neurodegenerative MRI markers and related to clinical worsening, suggesting that they may contribute to disease progression and be a new target for therapeutic interventions.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Definite SELs represent almost one-third of T2 lesions in SPMS.</li>
-<li>Challenge: They are associated with neurodegenerative MRI markers and related to clinical worsening, suggesting that they may contribute to disease progression and be a new target for therapeutic interventions.</li>
-<li>Action: This paper investigates association of slowly expanding lesions on mri with disability in people with secondary progressive multiple sclerosis.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Definite SELs represent almost one-third of T2 lesions in SPMS.</li>
+<li>They are associated with neurodegenerative MRI markers and related to clinical worsening, suggesting that they may contribute to disease progression and be a new target for therapeutic interventions.</li>
+<li>This paper investigates association of slowly expanding lesions on mri with disability in people with secondary progressive multiple sclerosis.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000200144" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alberto Calvi. (2022). Association of Slowly Expanding Lesions on MRI With Disability in People With Secondary Progressive Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000200144</p>
@@ -4290,7 +4187,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Magnetization transfer ratio evolution with demyelination and remyelination in multiple sclerosis lesions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2008</span>
-<span class="kpi-pill">Language level 5/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (82%)</span>
 </div>
@@ -4300,10 +4196,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates magnetization transfer ratio evolution with demyelination and remyelination in multiple sclerosis lesions. Interpretation We found significant changes in MTR consistent with demyelination and remyelination that followed different temporal evolutions and were ongoing in different lesion regions for at least 3 years after lesion formation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Interpretation We found significant changes in MTR consistent with demyelination and remyelination that followed different temporal evolutions and were ongoing in different lesion regions for at least 3 years after lesion formation.</li>
-<li>Challenge: This paper investigates magnetization transfer ratio evolution with demyelination and remyelination in multiple sclerosis lesions.</li>
-<li>Action: Abstract Objective To assess demyelination and remyelination in vivo in acute gadolinium (Gd)‐enhancing lesions of multiple sclerosis (MS).</li>
-<li>Resolution: Methods We measured significant changes in magnetization transfer ratio (MTR) consistent with demyelination and remyelination of individual lesion voxels, as well as the mean normalized MTR over all lesion voxels during and after contrast enhancement, in MS patients participating in a 3‐year Canadian trial assessing immunoablation and autologous stem cell transplantation for treatment of MS.</li>
+<li>Interpretation We found significant changes in MTR consistent with demyelination and remyelination that followed different temporal evolutions and were ongoing in different lesion regions for at least 3 years after lesion formation.</li>
+<li>This paper investigates magnetization transfer ratio evolution with demyelination and remyelination in multiple sclerosis lesions.</li>
+<li>Abstract Objective To assess demyelination and remyelination in vivo in acute gadolinium (Gd)‐enhancing lesions of multiple sclerosis (MS).</li>
+<li>Methods We measured significant changes in magnetization transfer ratio (MTR) consistent with demyelination and remyelination of individual lesion voxels, as well as the mean normalized MTR over all lesion voxels during and after contrast enhancement, in MS patients participating in a 3‐year Canadian trial assessing immunoablation and autologous stem cell transplantation for treatment of MS.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.21302" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jacqueline T. Chen. (2008). Magnetization transfer ratio evolution with demyelination and remyelination in multiple sclerosis lesions. Annals of Neurology. https://doi.org/10.1002/ana.21302</p>
@@ -4325,7 +4221,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The pathology of central nervous system inflammatory demyelinating disease accompanying myelin oligodendrocyte glycoprotein autoantibody</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2020</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (80%)</span>
 </div>
@@ -4335,10 +4230,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the pathology of central nervous system inflammatory demyelinating disease accompanying myelin oligodendrocyte glycoprotein autoantibody. Parallels with MOG-EAE suggest MOG may be an amplification factor that augments CNS demyelination, possibly via complement mediated destruction of myelin or ADCC phagocytosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We sought to define the pathological features of myelin oligodendrocyte glycoprotein (MOG) antibody associated disorders (MOGAD) in an archival autopsy/biopsy cohort.</li>
-<li>Challenge: We histopathologically analyzed 2 autopsies and 22 brain biopsies from patients with CNS inflammatory demyelinating diseases seropositive for MOG-antibody by live-cell-based-assay with full length MOG in its conformational form.</li>
-<li>Action: MOGAD autopsies (ages 52 and 67) demonstrate the full spectrum of histopathological features observed within the 22 brain biopsies (median age, 10 years; range, 1-66; 56% female).</li>
-<li>Resolution: Clinical, radiologic, and laboratory characteristics and course (78% relapsing) are consistent with MOGAD.</li>
+<li>We sought to define the pathological features of myelin oligodendrocyte glycoprotein (MOG) antibody associated disorders (MOGAD) in an archival autopsy/biopsy cohort.</li>
+<li>We histopathologically analyzed 2 autopsies and 22 brain biopsies from patients with CNS inflammatory demyelinating diseases seropositive for MOG-antibody by live-cell-based-assay with full length MOG in its conformational form.</li>
+<li>MOGAD autopsies (ages 52 and 67) demonstrate the full spectrum of histopathological features observed within the 22 brain biopsies (median age, 10 years; range, 1-66; 56% female).</li>
+<li>Clinical, radiologic, and laboratory characteristics and course (78% relapsing) are consistent with MOGAD.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1007/s00401-020-02132-y" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Romana Höftberger. (2020). The pathology of central nervous system inflammatory demyelinating disease accompanying myelin oligodendrocyte glycoprotein autoantibody. Acta Neuropathologica. https://doi.org/10.1007/s00401-020-02132-y</p>
@@ -4360,7 +4255,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Choroid Plexus Volume in Multiple Sclerosis vs Neuromyelitis Optica Spectrum Disorder</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (49%)</span>
 </div>
@@ -4370,10 +4264,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates choroid plexus volume in multiple sclerosis vs neuromyelitis optica spectrum disorder. This study supports an involvement of the choroid plexus in MS in contrast to NMOSD and provides clues to better understand the respective pathogenesis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study supports an involvement of the choroid plexus in MS in contrast to NMOSD and provides clues to better understand the respective pathogenesis.</li>
-<li>Challenge: This paper investigates choroid plexus volume in multiple sclerosis vs neuromyelitis optica spectrum disorder.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study supports an involvement of the choroid plexus in MS in contrast to NMOSD and provides clues to better understand the respective pathogenesis.</li>
+<li>This paper investigates choroid plexus volume in multiple sclerosis vs neuromyelitis optica spectrum disorder.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000001147" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Jannis Müller. (2022). Choroid Plexus Volume in Multiple Sclerosis vs Neuromyelitis Optica Spectrum Disorder. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000001147</p>
@@ -4395,7 +4289,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Misdiagnosis of multiple sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -4405,10 +4298,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates misdiagnosis of multiple sclerosis. In those situations, further evaluation or monitoring rather than immediate diagnosis of MS is prudent.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Misdiagnosis of multiple sclerosis (MS) (the incorrect assignment of a diagnosis of MS) remains a problem in contemporary clinical practice.</li>
-<li>Challenge: Studies indicate that misdiagnosed patients are often exposed to prolonged unnecessary health care risks and morbidity.</li>
-<li>Action: The recently published 2017 revision of the McDonald criteria for the diagnosis of MS provides an opportunity to consider the effect of these revisions on the problem of MS misdiagnosis.</li>
-<li>Resolution: The 2017 McDonald criteria include several new recommendations to reduce potential for misdiagnoses.</li>
+<li>Misdiagnosis of multiple sclerosis (MS) (the incorrect assignment of a diagnosis of MS) remains a problem in contemporary clinical practice.</li>
+<li>Studies indicate that misdiagnosed patients are often exposed to prolonged unnecessary health care risks and morbidity.</li>
+<li>The recently published 2017 revision of the McDonald criteria for the diagnosis of MS provides an opportunity to consider the effect of these revisions on the problem of MS misdiagnosis.</li>
+<li>The 2017 McDonald criteria include several new recommendations to reduce potential for misdiagnoses.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000006583" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Andrew Solomon. (2018). Misdiagnosis of multiple sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000006583</p>
@@ -4430,7 +4323,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Contrasting disease patterns in seropositive and seronegative neuromyelitis optica: A multicentre study of 175 patients</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2012</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (51%)</span>
 </div>
@@ -4440,10 +4332,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates contrasting disease patterns in seropositive and seronegative neuromyelitis optica: a multicentre study of 175 patients. This study provides an overview of the clinical and paraclinical features of NMOSD in Caucasians and demonstrates a number of distinct disease characteristics in seropositive and seronegative patients.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides an overview of the clinical and paraclinical features of NMOSD in Caucasians and demonstrates a number of distinct disease characteristics in seropositive and seronegative patients.</li>
-<li>Challenge: This paper investigates contrasting disease patterns in seropositive and seronegative neuromyelitis optica: a multicentre study of 175 patients.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides an overview of the clinical and paraclinical features of NMOSD in Caucasians and demonstrates a number of distinct disease characteristics in seropositive and seronegative patients.</li>
+<li>This paper investigates contrasting disease patterns in seropositive and seronegative neuromyelitis optica: a multicentre study of 175 patients.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/1742-2094-9-14" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sven Jarius. (2012). Contrasting disease patterns in seropositive and seronegative neuromyelitis optica: A multicentre study of 175 patients. Journal of Neuroinflammation. https://doi.org/10.1186/1742-2094-9-14</p>
@@ -4465,7 +4357,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Spinal Cord Atrophy and Brain Paramagnetic Rim Lesions With Progression Independent of Relapse Activity in People With MS</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2023</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (67%)</span>
 </div>
@@ -4475,10 +4366,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of spinal cord atrophy and brain paramagnetic rim lesions with progression independent of relapse activity in people with ms. Our results show that PIRA is associated with both increased spinal cord atrophy and PRL burden, and this association is evident also in patients with RRMS.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Our results show that PIRA is associated with both increased spinal cord atrophy and PRL burden, and this association is evident also in patients with RRMS.</li>
-<li>Challenge: This paper investigates association of spinal cord atrophy and brain paramagnetic rim lesions with progression independent of relapse activity in people with ms.</li>
-<li>Action: These findings further point to the need to develop targeted treatment strategies for PIRA to prevent irreversible neuroaxonal loss and optimize long-term outcomes of patients with MS.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>Our results show that PIRA is associated with both increased spinal cord atrophy and PRL burden, and this association is evident also in patients with RRMS.</li>
+<li>This paper investigates association of spinal cord atrophy and brain paramagnetic rim lesions with progression independent of relapse activity in people with ms.</li>
+<li>These findings further point to the need to develop targeted treatment strategies for PIRA to prevent irreversible neuroaxonal loss and optimize long-term outcomes of patients with MS.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.0000000000207768" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Alessandro Cagol. (2023). Association of Spinal Cord Atrophy and Brain Paramagnetic Rim Lesions With Progression Independent of Relapse Activity in People With MS. Neurology. https://doi.org/10.1212/wnl.0000000000207768</p>
@@ -4500,7 +4391,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Smouldering‐Associated Worsening in Multiple Sclerosis: An International Consensus Statement on Definition, Biology, Clinical Implications, and Future Directions</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2024</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (81%)</span>
 </div>
@@ -4510,10 +4400,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates smouldering‐associated worsening in multiple sclerosis: an international consensus statement on definition, biology, clinical implications, and future directions. ANN NEUROL 2024;96:826-845.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Despite therapeutic suppression of relapses, multiple sclerosis (MS) patients often experience subtle deterioration, which extends beyond the definition of &quot;progression independent of relapsing activity.&quot; We propose the concept of smouldering-associated-worsening (SAW), encompassing physical and cognitive symptoms, resulting from smouldering pathological processes, which remain unmet therapeutic targets.</li>
-<li>Challenge: We provide a consensus-based framework of possible pathological substrates and manifestations of smouldering MS, and we discuss clinical, radiological, and serum/cerebrospinal fluid biomarkers for potentially monitoring SAW.</li>
-<li>Action: Finally, we share considerations for optimizing disease surveillance and implications for clinical trials to promote the integration of smouldering MS into routine practice and future research efforts.</li>
-<li>Resolution: ANN NEUROL 2024;96:826-845.</li>
+<li>Despite therapeutic suppression of relapses, multiple sclerosis (MS) patients often experience subtle deterioration, which extends beyond the definition of &quot;progression independent of relapsing activity.&quot; We propose the concept of smouldering-associated-worsening (SAW), encompassing physical and cognitive symptoms, resulting from smouldering pathological processes, which remain unmet therapeutic targets.</li>
+<li>We provide a consensus-based framework of possible pathological substrates and manifestations of smouldering MS, and we discuss clinical, radiological, and serum/cerebrospinal fluid biomarkers for potentially monitoring SAW.</li>
+<li>Finally, we share considerations for optimizing disease surveillance and implications for clinical trials to promote the integration of smouldering MS into routine practice and future research efforts.</li>
+<li>ANN NEUROL 2024;96:826-845.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1002/ana.27034" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Antonio Scalfari. (2024). Smouldering‐Associated Worsening in Multiple Sclerosis: An International Consensus Statement on Definition, Biology, Clinical Implications, and Future Directions. Annals of Neurology. https://doi.org/10.1002/ana.27034</p>
@@ -4535,7 +4425,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Slowly Expanding Lesions Predict 9-Year Multiple Sclerosis Disease Progression</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty low (54%)</span>
 </div>
@@ -4545,10 +4434,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates slowly expanding lesions predict 9-year multiple sclerosis disease progression. This study provides Class III evidence that in patients with RRMS starting treatment with natalizumab or fingolimod, the proportion of SELs on brain MRI was associated with EDSS score worsening and SPMS conversion at 9-year follow-up.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides Class III evidence that in patients with RRMS starting treatment with natalizumab or fingolimod, the proportion of SELs on brain MRI was associated with EDSS score worsening and SPMS conversion at 9-year follow-up.</li>
-<li>Challenge: This paper investigates slowly expanding lesions predict 9-year multiple sclerosis disease progression.</li>
-<li>Action: A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides Class III evidence that in patients with RRMS starting treatment with natalizumab or fingolimod, the proportion of SELs on brain MRI was associated with EDSS score worsening and SPMS conversion at 9-year follow-up.</li>
+<li>This paper investigates slowly expanding lesions predict 9-year multiple sclerosis disease progression.</li>
+<li>A practical next action is to test, replicate, or validate the findings in a focused cohort.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/nxi.0000000000001139" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Paolo Preziosa. (2022). Slowly Expanding Lesions Predict 9-Year Multiple Sclerosis Disease Progression. Neurology Neuroimmunology &amp; Neuroinflammation. https://doi.org/10.1212/nxi.0000000000001139</p>
@@ -4570,7 +4459,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Association of Cortical Lesion Burden on 7-T Magnetic Resonance Imaging With Cognition and Disability in Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2015</span>
-<span class="kpi-pill">Language level 3/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (68%)</span>
 </div>
@@ -4580,10 +4468,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates association of cortical lesion burden on 7-t magnetic resonance imaging with cognition and disability in multiple sclerosis. This study provides in vivo evidence that CLs are associated with cognitive and physical disability in MS and that leukocortical and subpial lesion subtypes have differing clinical relevance.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: This study provides in vivo evidence that CLs are associated with cognitive and physical disability in MS and that leukocortical and subpial lesion subtypes have differing clinical relevance.</li>
-<li>Challenge: This paper investigates association of cortical lesion burden on 7-t magnetic resonance imaging with cognition and disability in multiple sclerosis.</li>
-<li>Action: Quantitative assessments of CL burden on high-field MRI may further our understanding of the development of disability and progression in MS and lead to more effective treatments.</li>
-<li>Resolution: The paper offers partial resolution and defines what evidence should come next.</li>
+<li>This study provides in vivo evidence that CLs are associated with cognitive and physical disability in MS and that leukocortical and subpial lesion subtypes have differing clinical relevance.</li>
+<li>This paper investigates association of cortical lesion burden on 7-t magnetic resonance imaging with cognition and disability in multiple sclerosis.</li>
+<li>Quantitative assessments of CL burden on high-field MRI may further our understanding of the development of disability and progression in MS and lead to more effective treatments.</li>
+<li>The paper offers partial resolution and defines what evidence should come next.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1001/jamaneurol.2015.1241" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Daniel M. Harrison. (2015). Association of Cortical Lesion Burden on 7-T Magnetic Resonance Imaging With Cognition and Disability in Multiple Sclerosis. JAMA Neurology. https://doi.org/10.1001/jamaneurol.2015.1241</p>
@@ -4605,7 +4493,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>The value of oligoclonal bands in the multiple sclerosis diagnostic criteria</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (87%)</span>
 </div>
@@ -4615,10 +4502,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates the value of oligoclonal bands in the multiple sclerosis diagnostic criteria. According to these results, we propose radiological dissemination in space at any time plus positive oligoclonal bands as an additional criterion for diagnosing multiple sclerosis.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: The presence of oligoclonal bands in clinically isolated syndromes is an independent risk factor for developing multiple sclerosis and has been largely excluded from the more recent multiple sclerosis diagnostic criteria.</li>
-<li>Challenge: Therefore, our objective was to explore the value of oligoclonal bands in the context of the 2010 McDonald criteria, especially in patients fulfilling exclusively dissemination in space at baseline.</li>
-<li>Action: For this purpose, we selected 566 patients from a clinically isolated syndrome inception cohort who had IgG oligoclonal bands determination and sufficient data on baseline brain MRI to assess dissemination in space and time.</li>
-<li>Resolution: We excluded the cases already fulfilling both dissemination in space and time and divided the remaining 398 into &#x27;no dissemination in space and time&#x27; (n = 218), &#x27;dissemination in space&#x27; (n = 164) and &#x27;dissemination in time&#x27; (n = 16).</li>
+<li>The presence of oligoclonal bands in clinically isolated syndromes is an independent risk factor for developing multiple sclerosis and has been largely excluded from the more recent multiple sclerosis diagnostic criteria.</li>
+<li>Therefore, our objective was to explore the value of oligoclonal bands in the context of the 2010 McDonald criteria, especially in patients fulfilling exclusively dissemination in space at baseline.</li>
+<li>For this purpose, we selected 566 patients from a clinically isolated syndrome inception cohort who had IgG oligoclonal bands determination and sufficient data on baseline brain MRI to assess dissemination in space and time.</li>
+<li>We excluded the cases already fulfilling both dissemination in space and time and divided the remaining 398 into &#x27;no dissemination in space and time&#x27; (n = 218), &#x27;dissemination in space&#x27; (n = 164) and &#x27;dissemination in time&#x27; (n = 16).</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1093/brain/awy006" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Georgina Arrambide. (2018). The value of oligoclonal bands in the multiple sclerosis diagnostic criteria. Brain. https://doi.org/10.1093/brain/awy006</p>
@@ -4640,7 +4527,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>MOG encephalomyelitis: international recommendations on diagnosis and antibody testing</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2018</span>
-<span class="kpi-pill">Language level 4/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty medium (82%)</span>
 </div>
@@ -4650,10 +4536,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates mog encephalomyelitis: international recommendations on diagnosis and antibody testing. Finally, we provide recommendations regarding assay methodology, specimen sampling and data interpretation.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Over the past few years, new-generation cell-based assays have demonstrated a robust association of autoantibodies to full-length human myelin oligodendrocyte glycoprotein (MOG-IgG) with (mostly recurrent) optic neuritis, myelitis and brainstem encephalitis, as well as with acute disseminated encephalomyelitis (ADEM)-like presentations.</li>
-<li>Challenge: Most experts now consider MOG-IgG-associated encephalomyelitis (MOG-EM) a disease entity in its own right, immunopathogenetically distinct from both classic multiple sclerosis (MS) and aquaporin-4 (AQP4)-IgG-positive neuromyelitis optica spectrum disorders (NMOSD).</li>
-<li>Action: Owing to a substantial overlap in clinicoradiological presentation, MOG-EM was often unwittingly misdiagnosed as MS in the past.</li>
-<li>Resolution: This paper investigates mog encephalomyelitis: international recommendations on diagnosis and antibody testing.</li>
+<li>Over the past few years, new-generation cell-based assays have demonstrated a robust association of autoantibodies to full-length human myelin oligodendrocyte glycoprotein (MOG-IgG) with (mostly recurrent) optic neuritis, myelitis and brainstem encephalitis, as well as with acute disseminated encephalomyelitis (ADEM)-like presentations.</li>
+<li>Most experts now consider MOG-IgG-associated encephalomyelitis (MOG-EM) a disease entity in its own right, immunopathogenetically distinct from both classic multiple sclerosis (MS) and aquaporin-4 (AQP4)-IgG-positive neuromyelitis optica spectrum disorders (NMOSD).</li>
+<li>Owing to a substantial overlap in clinicoradiological presentation, MOG-EM was often unwittingly misdiagnosed as MS in the past.</li>
+<li>This paper investigates mog encephalomyelitis: international recommendations on diagnosis and antibody testing.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1186/s12974-018-1144-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Sven Jarius. (2018). MOG encephalomyelitis: international recommendations on diagnosis and antibody testing. Journal of Neuroinflammation. https://doi.org/10.1186/s12974-018-1144-2</p>
@@ -4675,7 +4561,6 @@ Papers ordered by importance and pedagogic progression.
 <h3>Spinal cord MRI using multi‐array coils and fast spin echo</h3>
 <div class="paper-meta">
 <span class="kpi-pill">1993</span>
-<span class="kpi-pill">Language level 2/5</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
@@ -4685,10 +4570,10 @@ Papers ordered by importance and pedagogic progression.
 <p class="paper-summary">This paper investigates spinal cord mri using multi‐array coils and fast spin echo. A lack of association between cord lesions and disability may relate to limitations in MR resolution but also suggests that the mechanisms of disability in MS are complex and multifactorial.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: We performed MRI of brain and spinal cord on 80 patients with multiple sclerosis (MS).</li>
-<li>Challenge: Using multi-array coils and fast spin echo, 139 intrinsic lesions were identified in 59 patients (74%).</li>
-<li>Action: Lesions were more common in the cervical than in the thoracic cord.</li>
-<li>Resolution: Cross-sectional areas of the cord, measured from axial images at four levels, showed atrophy in 40%.</li>
+<li>We performed MRI of brain and spinal cord on 80 patients with multiple sclerosis (MS).</li>
+<li>Using multi-array coils and fast spin echo, 139 intrinsic lesions were identified in 59 patients (74%).</li>
+<li>Lesions were more common in the cervical than in the thoracic cord.</li>
+<li>Cross-sectional areas of the cord, measured from axial images at four levels, showed atrophy in 40%.</li>
 </ul>
 <p><strong><a href="https://doi.org/10.1212/wnl.43.12.2632" target="_blank" rel="noopener">Open source paper</a></strong></p>
 <p><strong>Bibliography (plain text):</strong> Desmond P. Kidd. (1993). Spinal cord MRI using multi‐array coils and fast spin echo. Neurology. https://doi.org/10.1212/wnl.43.12.2632</p>
@@ -4707,3 +4592,18 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 </div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=1"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=foundations_basic_neuroanatomy">Basic neuroanatomy for MS</a></li>
+<li><a href="/mskb/journey/?concept=clinical_prognostic_markers">Prognostic markers</a></li>
+<li><a href="/mskb/journey/?concept=diagnosis_spinal_cord_lesions">Spinal cord lesions</a></li>
+<li><a href="/mskb/journey/?concept=mcdonald_criteria_mri">McDonald criteria and MRI findings</a></li>
+<li><a href="/mskb/journey/?concept=clinical_smoldering_ms">Smoldering MS</a></li>
+<li><a href="/mskb/journey/?concept=clinical_socioeconomic_disparities">Socioeconomic disparities</a></li>
+</ul>
