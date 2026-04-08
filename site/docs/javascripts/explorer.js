@@ -824,7 +824,16 @@ window.__mskbDebug = function (msg) {
   function buildRankIndexes(nodes) {
     const rankedPapers = [...nodes].sort((a, b) => ((b.core_score || 0) - (a.core_score || 0)) || ((b.importance || 0) - (a.importance || 0)));
     paperRankMap = new Map();
-    rankedPapers.forEach((n, idx) => paperRankMap.set(n.id, idx + 1));
+    // Also stamp a normalized percentile rank on every node so the composite
+    // filter has something to compare against (mirrors the rank_pagerank /
+    // rank_kcore / rank_in_degree / rank_age_normalized_importance fields the
+    // pipeline emits via pandas .rank(method="average", pct=True) — the
+    // best-scoring node lands at 1.0 and the worst at ~1/n).
+    const totalRanked = rankedPapers.length;
+    rankedPapers.forEach((n, idx) => {
+      paperRankMap.set(n.id, idx + 1);
+      n.rank_core_score = totalRanked > 0 ? (totalRanked - idx) / totalRanked : 0;
+    });
     const rankedAgeNorm = [...nodes].sort((a, b) => ((b.age_normalized_importance || 0) - (a.age_normalized_importance || 0)) || ((b.importance || 0) - (a.importance || 0)));
     paperAgeRankMap = new Map();
     rankedAgeNorm.forEach((n, idx) => paperAgeRankMap.set(n.id, idx + 1));
@@ -1264,7 +1273,10 @@ window.__mskbDebug = function (msg) {
           if (metric === "kcore") return (n.rank_kcore || 0) >= cutoff;
           if (metric === "in_degree") return (n.rank_in_degree || 0) >= cutoff;
           if (metric === "age_normalized") return (n.rank_age_normalized_importance || 0) >= cutoff;
-          return (n.core_score || 0) >= cutoff;
+          // Composite uses rank_core_score (computed in buildRankIndexes), NOT
+          // the raw core_score, so the percentile slider behaves like the other
+          // metrics: cutoff=0.4 keeps the top 60% by composite rank.
+          return (n.rank_core_score || 0) >= cutoff;
         });
 
     const renderNodes = matchedNodes;
