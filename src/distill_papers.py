@@ -14,7 +14,59 @@ import pandas as pd
 from .utils import ensure_dir, load_config, save_json
 
 
-DISTILL_PROMPT = """You are helping undergraduate researchers understand a scientific paper about multiple sclerosis.
+READING_LEVELS = ("basic", "advanced")
+DEFAULT_READING_LEVEL = "basic"
+
+READING_LEVEL_GUIDE = {
+    "basic": (
+        "Write at the BASIC reading level (plain language for an undergraduate "
+        "with basic biology background). Use short sentences, minimal jargon, "
+        "and define any specialist term the first time it appears. Favor "
+        "concrete, everyday wording over clinical terminology."
+    ),
+    "advanced": (
+        "Write at the ADVANCED reading level (graduate student or practicing "
+        "MS researcher/clinician). Use precise biomedical terminology, "
+        "acronyms, and mechanism-level detail. Assume familiarity with common "
+        "MS concepts (DMTs, EAE, NfL, OCBs, MRI metrics); do not gloss them."
+    ),
+}
+
+# Numeric compatibility mapping for downstream code that still expects a 1-5
+# "language_difficulty" integer. Basic ≈ level 2 (undergrad), advanced ≈ 4.
+READING_LEVEL_NUMERIC = {"basic": 2, "advanced": 4}
+
+
+def _normalize_reading_level(value, default: str = DEFAULT_READING_LEVEL) -> str:
+    if value is None:
+        return default
+    try:
+        text = str(value).strip().lower()
+    except Exception:
+        return default
+    if not text:
+        return default
+    if text in READING_LEVELS:
+        return text
+    # Back-compat: accept 1-5 integers.
+    try:
+        n = int(float(text))
+    except (TypeError, ValueError):
+        return default
+    return "basic" if n <= 3 else "advanced"
+
+
+def _reading_level_guide(level: str) -> str:
+    return READING_LEVEL_GUIDE[_normalize_reading_level(level)]
+
+
+def _reading_level_numeric(level: str) -> int:
+    return READING_LEVEL_NUMERIC[_normalize_reading_level(level)]
+
+
+DISTILL_PROMPT = """You are helping readers understand a scientific paper about multiple sclerosis.
+
+{reading_level_guide}
 
 Paper title: {title}
 Year: {year}
@@ -23,15 +75,14 @@ Topic cluster: {topic_label}
 Source text: {abstract}
 
 Please provide:
-1. A 2-3 sentence plain-English summary suitable for an undergraduate student with basic biology knowledge.
-2. Four key takeaways in plain language, each prefixed with one label:
+1. A 2-3 sentence summary written at the reading level described above.
+2. Four key takeaways at the same reading level, each prefixed with one label:
    - Opportunity:
    - Challenge:
    - Action:
    - Resolution:
-3. A one-sentence "why this matters" statement connecting this paper to the broader understanding of MS.
-4. A language difficulty rating from 1 (very plain language) to 5 (highly technical language), based on the wording and jargon in your summary/takeaways.
-5. A list of up to 5 technical terms from the abstract that an undergraduate might not know, each with a brief definition.
+3. A one-sentence "why this matters" statement connecting this paper to the broader understanding of MS, at the same reading level.
+4. A list of up to 5 technical terms from the abstract that a reader at this level might not know, each with a brief definition. Return an empty list if none would help the target reader.
 
 Respond in JSON format:
 {{
@@ -43,7 +94,6 @@ Respond in JSON format:
     "Resolution: ..."
   ],
   "why_it_matters": "...",
-  "difficulty": 3,
   "jargon": [{{"term": "...", "definition": "..."}}, ...]
 }}"""
 
@@ -460,20 +510,33 @@ def _context_from_row(
     return "", "none"
 
 
-def _load_cache(cache_dir: Path, paper_id: str) -> dict | None:
-    cache_path = cache_dir / f"{paper_id}.json"
-    if cache_path.exists():
+def _cache_path(cache_dir: Path, paper_id: str, level: str) -> Path:
+    return cache_dir / f"{paper_id}__{_normalize_reading_level(level)}.json"
+
+
+def _load_cache(cache_dir: Path, paper_id: str, level: str) -> dict | None:
+    primary = _cache_path(cache_dir, paper_id, level)
+    if primary.exists():
         try:
-            return json.loads(cache_path.read_text(encoding="utf-8"))
+            return json.loads(primary.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             return None
+    # Back-compat: accept the pre-level cache filename for the default level
+    # so prior runs are not discarded on upgrade.
+    if _normalize_reading_level(level) == DEFAULT_READING_LEVEL:
+        legacy = cache_dir / f"{paper_id}.json"
+        if legacy.exists():
+            try:
+                return json.loads(legacy.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                return None
     return None
 
 
-def _save_cache(cache_dir: Path, paper_id: str, data: dict) -> None:
+def _save_cache(cache_dir: Path, paper_id: str, level: str, data: dict) -> None:
     ensure_dir(cache_dir)
-    cache_path = cache_dir / f"{paper_id}.json"
-    cache_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    path = _cache_path(cache_dir, paper_id, level)
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
 def _distill_with_api(client, model: str, prompt: str) -> dict | None:
@@ -495,7 +558,7 @@ def _distill_with_api(client, model: str, prompt: str) -> dict | None:
         return None
 
 
-def _rules_based_distill(row: dict, source_text: str = "") -> dict:
+def _rules_based_distill(row: dict, source_text: str = "", reading_level: str = DEFAULT_READING_LEVEL) -> dict:
     abstract = _clean_text(source_text) or _clean_text(row.get("abstract", ""))
     title = str(row.get("title", "") or "")
     sentences = [s.strip() for s in abstract.replace(". ", ".\n").split("\n") if s.strip()]
@@ -540,13 +603,21 @@ def _rules_based_distill(row: dict, source_text: str = "") -> dict:
         why = f"This matters for MS because it adds evidence about disease mechanisms and care{f' ({context})' if context else ''}."
 
     structured_takeaways = _structured_takeaways(takeaways, summary=summary, abstract=abstract)
-    language_difficulty = _estimate_language_difficulty(summary, structured_takeaways)
+    # Rules-based distillation can't actually rewrite at a target reading
+    # level; it extracts sentences verbatim from the source. Stamp the
+    # configured target so downstream consumers know which slot this result
+    # fills, and keep the text-level estimate for transparency.
+    target_level = _normalize_reading_level(reading_level)
+    numeric_level = _reading_level_numeric(target_level)
+    estimated_level = _estimate_language_difficulty(summary, structured_takeaways)
     return {
         "summary": summary,
         "key_takeaways": structured_takeaways,
         "why_it_matters": why,
-        "difficulty": language_difficulty,
-        "language_difficulty": language_difficulty,
+        "difficulty": numeric_level,
+        "language_difficulty": numeric_level,
+        "reading_level_target": target_level,
+        "reading_level_estimated": estimated_level,
         "jargon": [],
     }
 
@@ -569,7 +640,7 @@ def _safe_float(value, default: float = 0.0) -> float:
         return default
 
 
-def _sanitize_distill_result(result: dict | None) -> dict:
+def _sanitize_distill_result(result: dict | None, reading_level: str | None = None) -> dict:
     result = result or {}
 
     key_takeaways = result.get("key_takeaways", [])
@@ -629,7 +700,16 @@ def _sanitize_distill_result(result: dict | None) -> dict:
             summary = ""
 
     key_takeaways = _structured_takeaways(key_takeaways, summary=summary, abstract=_clean_text(result.get("abstract", "")))
-    language_difficulty = _estimate_language_difficulty(summary, key_takeaways)
+    estimated_level = _estimate_language_difficulty(summary, key_takeaways)
+    # If a target reading level is configured, it is authoritative: the
+    # summary was generated to serve that level. Fall back to any previously
+    # stored target, then to the default.
+    if reading_level is not None:
+        target_level = _normalize_reading_level(reading_level)
+    else:
+        prev_target = result.get("reading_level_target")
+        target_level = _normalize_reading_level(prev_target, default=DEFAULT_READING_LEVEL)
+    language_difficulty = _reading_level_numeric(target_level)
 
     summary_source = _clean_text(result.get("summary_source", ""))
     source_text_hash = _clean_text(result.get("source_text_hash", ""))
@@ -647,6 +727,8 @@ def _sanitize_distill_result(result: dict | None) -> dict:
         "why_it_matters": why,
         "difficulty": language_difficulty,
         "language_difficulty": language_difficulty,
+        "reading_level_target": target_level,
+        "reading_level_estimated": int(estimated_level),
         "jargon": clean_jargon,
         "summary_source": summary_source,
         "source_text_hash": source_text_hash,
@@ -721,71 +803,84 @@ def run(config_path: str) -> None:
             print(f"Could not initialize Anthropic client ({e}). Falling back to rules-based distillation.")
             api_client = None
 
-    summary_rows = []
-    for idx, (_, row) in enumerate(scored.iterrows()):
-        paper_id = row["canonical_paper_id"]
-        source_text, source_type = _context_from_row(row.to_dict(), fulltext_by_id, fulltext_source_by_id)
-        if not source_text:
-            continue
-        source_hash = hashlib.sha1(source_text.encode("utf-8")).hexdigest()
-        generated_at_utc = datetime.now(timezone.utc).isoformat()
+    default_level = _normalize_reading_level(dist_cfg.get("default_reading_level", DEFAULT_READING_LEVEL))
+    configured_levels = dist_cfg.get("reading_levels") or list(READING_LEVELS)
+    if isinstance(configured_levels, str):
+        configured_levels = [configured_levels]
+    active_levels: list[str] = []
+    for lvl in configured_levels:
+        n = _normalize_reading_level(lvl)
+        if n not in active_levels:
+            active_levels.append(n)
+    if not active_levels:
+        active_levels = list(READING_LEVELS)
+    if default_level not in active_levels:
+        default_level = active_levels[0]
 
-        cached = _load_cache(cache_dir, paper_id)
-        if cached:
-            cached = _sanitize_distill_result(cached)
-            if cached.get("source_text_hash") == source_hash:
-                cached["distill_method"] = _clean_text(cached.get("distill_method", "")) or "cache"
-                overlap = _faithfulness_overlap(
-                    _clean_text(cached.get("summary", "")),
-                    _parse_json_list(cached.get("key_takeaways", [])),
-                    source_text,
-                )
-                certainty_score, certainty_label = _certainty_from_signals(
-                    source_type=source_type,
-                    source_chars=len(source_text),
-                    method=str(cached.get("distill_method", "cache")),
-                    overlap=overlap,
-                )
-                cached["summary_source"] = source_type
-                cached["source_text_hash"] = source_hash
-                cached["source_text_chars"] = len(source_text)
-                cached["summary_generated_at_utc"] = _clean_text(cached.get("summary_generated_at_utc", "")) or generated_at_utc
-                cached["faithfulness_overlap"] = overlap
-                cached["summary_certainty_score"] = certainty_score
-                cached["summary_certainty_label"] = certainty_label
-                cached["summary_disclaimer"] = _disclaimer_for_source(source_type, certainty_label)
-                summary_rows.append({
-                    "canonical_paper_id": paper_id,
-                    "title": row.get("title", ""),
-                    "year": _coerce_int(row.get("year"), default=None),
-                    "doi": row.get("doi", ""),
-                    **cached,
-                })
-                continue
+    def _distill_one_level(
+        paper_row: dict,
+        paper_id: str,
+        topic_label: str,
+        source_text: str,
+        source_type: str,
+        source_hash: str,
+        generated_at_utc: str,
+        level: str,
+    ) -> dict:
+        """Return a sanitized distill result for one paper at one reading level.
 
-        topic_id = paper_topic_map.get(paper_id)
-        topic_label = topic_labels.get(topic_id, "General MS")
+        Uses a per-level cache keyed by source_hash + level, so the cache is
+        invalidated only when the source text or the target level changes.
+        """
+        cached = _load_cache(cache_dir, paper_id, level)
+        if cached and cached.get("source_text_hash") == source_hash and _normalize_reading_level(
+            cached.get("reading_level_target"), default=level
+        ) == level:
+            cached = _sanitize_distill_result(cached, reading_level=level)
+            cached["distill_method"] = _clean_text(cached.get("distill_method", "")) or "cache"
+            overlap = _faithfulness_overlap(
+                _clean_text(cached.get("summary", "")),
+                _parse_json_list(cached.get("key_takeaways", [])),
+                source_text,
+            )
+            certainty_score, certainty_label = _certainty_from_signals(
+                source_type=source_type,
+                source_chars=len(source_text),
+                method=str(cached.get("distill_method", "cache")),
+                overlap=overlap,
+            )
+            cached["summary_source"] = source_type
+            cached["source_text_hash"] = source_hash
+            cached["source_text_chars"] = len(source_text)
+            cached["summary_generated_at_utc"] = _clean_text(cached.get("summary_generated_at_utc", "")) or generated_at_utc
+            cached["faithfulness_overlap"] = overlap
+            cached["summary_certainty_score"] = certainty_score
+            cached["summary_certainty_label"] = certainty_label
+            cached["summary_disclaimer"] = _disclaimer_for_source(source_type, certainty_label)
+            return cached
+
         distill_method = "rules_based"
-
         if api_client:
             prompt = DISTILL_PROMPT.format(
-                title=row.get("title", ""),
-                year=row.get("year", ""),
-                venue=row.get("venue", ""),
+                reading_level_guide=_reading_level_guide(level),
+                title=paper_row.get("title", ""),
+                year=paper_row.get("year", ""),
+                venue=paper_row.get("venue", ""),
                 topic_label=topic_label,
                 abstract=f"[{source_type}] {source_text[:3000]}",
             )
-            result = _distill_with_api(api_client, model, prompt)
-            if result is None:
-                result = _rules_based_distill(row, source_text=source_text)
+            api_result = _distill_with_api(api_client, model, prompt)
+            if api_result is None:
+                result = _rules_based_distill(paper_row, source_text=source_text, reading_level=level)
                 distill_method = "rules_based"
             else:
+                result = api_result
                 distill_method = "claude_api"
         else:
-            result = _rules_based_distill(row, source_text=source_text)
+            result = _rules_based_distill(paper_row, source_text=source_text, reading_level=level)
             distill_method = "rules_based"
 
-        result = _sanitize_distill_result(result)
+        result = _sanitize_distill_result(result, reading_level=level)
         result["summary_source"] = source_type
         result["source_text_hash"] = source_hash
         result["source_text_chars"] = len(source_text)
@@ -805,20 +900,62 @@ def run(config_path: str) -> None:
         result["summary_certainty_score"] = certainty_score
         result["summary_certainty_label"] = certainty_label
         result["summary_disclaimer"] = _disclaimer_for_source(source_type, certainty_label)
-        _save_cache(cache_dir, paper_id, result)
-        summary_rows.append({
+        _save_cache(cache_dir, paper_id, level, result)
+        return result
+
+    summary_rows = []
+    api_call_counter = 0
+    for idx, (_, row) in enumerate(scored.iterrows()):
+        paper_id = row["canonical_paper_id"]
+        source_text, source_type = _context_from_row(row.to_dict(), fulltext_by_id, fulltext_source_by_id)
+        if not source_text:
+            continue
+        source_hash = hashlib.sha1(source_text.encode("utf-8")).hexdigest()
+        generated_at_utc = datetime.now(timezone.utc).isoformat()
+
+        topic_id = paper_topic_map.get(paper_id)
+        topic_label = topic_labels.get(topic_id, "General MS")
+        paper_row_dict = row.to_dict()
+
+        variants: dict[str, dict] = {}
+        for level in active_levels:
+            variants[level] = _distill_one_level(
+                paper_row=paper_row_dict,
+                paper_id=paper_id,
+                topic_label=topic_label,
+                source_text=source_text,
+                source_type=source_type,
+                source_hash=source_hash,
+                generated_at_utc=generated_at_utc,
+                level=level,
+            )
+            if api_client and variants[level].get("distill_method") == "claude_api":
+                api_call_counter += 1
+                if api_call_counter % batch_size == 0:
+                    time.sleep(1)
+
+        default_variant = variants.get(default_level) or next(iter(variants.values()))
+        combined: dict = {
             "canonical_paper_id": paper_id,
             "title": row.get("title", ""),
             "year": _coerce_int(row.get("year"), default=None),
             "doi": row.get("doi", ""),
-            **result,
-        })
-
-        if api_client and (idx + 1) % batch_size == 0:
-            time.sleep(1)
+            **default_variant,
+            "reading_level_target": default_level,
+            "language_difficulty": _reading_level_numeric(default_level),
+            "difficulty": _reading_level_numeric(default_level),
+        }
+        # Emit per-level variant fields so the frontend can switch between
+        # basic/advanced without another pipeline run.
+        for level, variant in variants.items():
+            combined[f"summary_{level}"] = _clean_text(variant.get("summary", ""))
+            combined[f"why_it_matters_{level}"] = _clean_text(variant.get("why_it_matters", ""))
+            combined[f"key_takeaways_{level}"] = variant.get("key_takeaways", [])
+            combined[f"jargon_{level}"] = variant.get("jargon", [])
+        summary_rows.append(combined)
 
         if (idx + 1) % 50 == 0:
-            print(f"  Distilled {idx + 1}/{len(scored)} papers")
+            print(f"  Distilled {idx + 1}/{len(scored)} papers (levels: {', '.join(active_levels)})")
 
     summaries_df = pd.DataFrame(summary_rows)
     _generate_faithfulness_qa_outputs(
@@ -828,7 +965,11 @@ def run(config_path: str) -> None:
         random_seed=qa_random_seed,
     )
     # Serialize list/dict columns to JSON strings for CSV
-    for col in ["key_takeaways", "jargon"]:
+    list_cols = ["key_takeaways", "jargon"]
+    for level in active_levels:
+        list_cols.append(f"key_takeaways_{level}")
+        list_cols.append(f"jargon_{level}")
+    for col in list_cols:
         if col in summaries_df.columns:
             summaries_df[col] = summaries_df[col].apply(lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x)
     summaries_df.to_csv(outdir / "paper_summaries.csv", index=False)

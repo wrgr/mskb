@@ -1,50 +1,7 @@
-// ---- explorer boot diagnostics (must run before anything else) ----
-window.__mskbDebug = function (msg) {
-  try {
-    var panel = document.getElementById("mskb-debug-panel");
-    if (!panel) {
-      panel = document.createElement("div");
-      panel.id = "mskb-debug-panel";
-      panel.style.cssText = "position:fixed;left:8px;bottom:8px;z-index:999999;max-width:46vw;max-height:40vh;overflow:auto;background:#111;color:#0f0;font:11px/1.35 ui-monospace,Menlo,Consolas,monospace;padding:8px 10px;border:1px solid #0f0;border-radius:6px;white-space:pre-wrap;box-shadow:0 4px 12px rgba(0,0,0,0.4);";
-      panel.innerHTML = '<strong style="color:#fff;">mskb debug</strong> <a href="#" id="mskb-debug-close" style="color:#0ff;float:right;">close</a><br>';
-      (document.body || document.documentElement).appendChild(panel);
-      var closer = document.getElementById("mskb-debug-close");
-      if (closer) closer.addEventListener("click", function (e) { e.preventDefault(); panel.style.display = "none"; });
-    }
-    var line = document.createElement("div");
-    var t = new Date().toISOString().slice(11, 23);
-    line.textContent = "[" + t + "] " + String(msg);
-    panel.appendChild(line);
-    if (window.console && console.log) console.log("[mskb]", msg);
-  } catch (_) { /* swallow */ }
-};
-(function explorerBootDiagnostics() {
-  try {
-    window.__mskbDebug("boot: inline script reached");
-    window.__mskbDebug("vendors: cytoscape=" + (typeof window.cytoscape));
-    var dimsEl = document.getElementById("paper-graph");
-    if (dimsEl) {
-      var r = dimsEl.getBoundingClientRect();
-      window.__mskbDebug("paper-graph rect: " + Math.round(r.width) + "x" + Math.round(r.height) + " at " + Math.round(r.top));
-    } else {
-      window.__mskbDebug("paper-graph: NOT FOUND in DOM");
-    }
-    window.addEventListener("error", function (event) {
-      var msg = (event && event.error && event.error.message) || (event && event.message) || "Unknown script error";
-      var stack = (event && event.error && event.error.stack) || "";
-      window.__mskbDebug("ERROR: " + String(msg) + "\n" + String(stack));
-      if (window.console && console.error) console.error("[explorer-boot]", msg, stack);
-    });
-    window.addEventListener("unhandledrejection", function (event) {
-      var reason = event && event.reason;
-      var msg = (reason && reason.message) || String(reason || "Unknown rejection");
-      window.__mskbDebug("REJECTION: " + String(msg));
-      if (window.console && console.error) console.error("[explorer-boot-rejection]", reason);
-    });
-  } catch (e) {
-    if (window.console && console.error) console.error("[explorer-boot-diag]", e);
-  }
-})();
+// ---- explorer boot ----
+// IIFE that wires the Cytoscape-based Explorer page. DOM ids referenced here
+// are asserted in tests/test_explorer_assets.py so they stay in sync with
+// the markdown shell in site/docs/explorer.md.
 (() => {
   const graphEl = document.getElementById("paper-graph");
   const detailsEl = document.getElementById("paper-details");
@@ -70,7 +27,7 @@ window.__mskbDebug = function (msg) {
   const nodeDragToggleEl = document.getElementById("node-drag-toggle");
   const graphStatusEl = document.getElementById("graph-status");
   const coreMetricEl = document.getElementById("core-metric");
-  const difficultyMaxEl = document.getElementById("difficulty-max");
+  const readingLevelEl = document.getElementById("reading-level");
   const minInDegreeEl = document.getElementById("min-in-degree");
   const minOutDegreeEl = document.getElementById("min-out-degree");
   const minKcoreEl = document.getElementById("min-kcore");
@@ -197,6 +154,36 @@ window.__mskbDebug = function (msg) {
         window.localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify(journeySelection));
       }
     } catch (_) { /* swallow */ }
+  }
+
+  const READING_LEVEL_STORAGE_KEY = "mskb.explorer.readingLevel.v2";
+  const READING_LEVELS = new Set(["basic", "advanced"]);
+  function normalizeReadingLevel(value) {
+    const raw = String(value == null ? "" : value).trim().toLowerCase();
+    if (READING_LEVELS.has(raw)) return raw;
+    // Legacy numeric values from the older 1-5 control.
+    const n = Number(raw);
+    if (Number.isFinite(n)) return n >= 4 ? "advanced" : "basic";
+    return "basic";
+  }
+  function loadStoredReadingLevel() {
+    try {
+      const raw = window.localStorage && window.localStorage.getItem(READING_LEVEL_STORAGE_KEY);
+      if (raw == null) return null;
+      return normalizeReadingLevel(raw);
+    } catch (_) { /* swallow */ }
+    return null;
+  }
+  function persistReadingLevel(value) {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(READING_LEVEL_STORAGE_KEY, normalizeReadingLevel(value));
+      }
+    } catch (_) { /* swallow */ }
+  }
+  function currentReadingLevel() {
+    if (readingLevelEl) return normalizeReadingLevel(readingLevelEl.value);
+    return "basic";
   }
 
   function pruneSelectionToCorpus() {
@@ -326,6 +313,12 @@ window.__mskbDebug = function (msg) {
     n.summary_source = String(n.summary_source || "");
     n.why_it_matters = String(n.why_it_matters || "");
     n.key_takeaways = Array.isArray(n.key_takeaways) ? n.key_takeaways : [];
+    n.summary_basic = String(n.summary_basic || "");
+    n.summary_advanced = String(n.summary_advanced || "");
+    n.why_it_matters_basic = String(n.why_it_matters_basic || "");
+    n.why_it_matters_advanced = String(n.why_it_matters_advanced || "");
+    n.key_takeaways_basic = Array.isArray(n.key_takeaways_basic) ? n.key_takeaways_basic : [];
+    n.key_takeaways_advanced = Array.isArray(n.key_takeaways_advanced) ? n.key_takeaways_advanced : [];
     n.summary_generated_at_utc = String(n.summary_generated_at_utc || "");
     n.distill_method = String(n.distill_method || "");
     n.summary_certainty_score = Number(n.summary_certainty_score || 0);
@@ -437,6 +430,12 @@ window.__mskbDebug = function (msg) {
           summary_source: String(obj.summary_source || ""),
           why_it_matters: String(obj.why_it_matters || ""),
           key_takeaways: Array.isArray(obj.key_takeaways) ? obj.key_takeaways : [],
+          summary_basic: String(obj.summary_basic || ""),
+          summary_advanced: String(obj.summary_advanced || ""),
+          why_it_matters_basic: String(obj.why_it_matters_basic || ""),
+          why_it_matters_advanced: String(obj.why_it_matters_advanced || ""),
+          key_takeaways_basic: Array.isArray(obj.key_takeaways_basic) ? obj.key_takeaways_basic : [],
+          key_takeaways_advanced: Array.isArray(obj.key_takeaways_advanced) ? obj.key_takeaways_advanced : [],
           jargon: normalizeJargon(obj.jargon),
           summary_generated_at_utc: String(obj.summary_generated_at_utc || ""),
           distill_method: String(obj.distill_method || ""),
@@ -459,6 +458,12 @@ window.__mskbDebug = function (msg) {
         summary_source: String(obj?.summary_source || ""),
         why_it_matters: String(obj?.why_it_matters || ""),
         key_takeaways: Array.isArray(obj?.key_takeaways) ? obj.key_takeaways : [],
+        summary_basic: String(obj?.summary_basic || ""),
+        summary_advanced: String(obj?.summary_advanced || ""),
+        why_it_matters_basic: String(obj?.why_it_matters_basic || ""),
+        why_it_matters_advanced: String(obj?.why_it_matters_advanced || ""),
+        key_takeaways_basic: Array.isArray(obj?.key_takeaways_basic) ? obj.key_takeaways_basic : [],
+        key_takeaways_advanced: Array.isArray(obj?.key_takeaways_advanced) ? obj.key_takeaways_advanced : [],
         jargon: normalizeJargon(obj?.jargon),
         summary_generated_at_utc: String(obj?.summary_generated_at_utc || ""),
         distill_method: String(obj?.distill_method || ""),
@@ -486,6 +491,12 @@ window.__mskbDebug = function (msg) {
         node.summary_source = String(details.summary_source || "");
         node.why_it_matters = String(details.why_it_matters || "");
         node.key_takeaways = Array.isArray(details.key_takeaways) ? details.key_takeaways : [];
+        node.summary_basic = String(details.summary_basic || "");
+        node.summary_advanced = String(details.summary_advanced || "");
+        node.why_it_matters_basic = String(details.why_it_matters_basic || "");
+        node.why_it_matters_advanced = String(details.why_it_matters_advanced || "");
+        node.key_takeaways_basic = Array.isArray(details.key_takeaways_basic) ? details.key_takeaways_basic : [];
+        node.key_takeaways_advanced = Array.isArray(details.key_takeaways_advanced) ? details.key_takeaways_advanced : [];
         node.jargon = Array.isArray(details.jargon) ? details.jargon : [];
         node.summary_generated_at_utc = String(details.summary_generated_at_utc || "");
         node.distill_method = String(details.distill_method || "");
@@ -1069,11 +1080,6 @@ window.__mskbDebug = function (msg) {
       });
       elements.length = ei;
 
-      if (window.__mskbDebug) {
-        var rr2 = graphEl.getBoundingClientRect();
-        window.__mskbDebug("buildCytoGraph: nodes=" + visibleNodes.length + " edges=" + visibleEdges.length + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
-      }
-
       // Construct cytoscape with NO elements first; we add them in idle-callback
       // chunks below to keep the main thread responsive on large payloads.
       cy = CytoCtor({
@@ -1178,12 +1184,8 @@ window.__mskbDebug = function (msg) {
           scheduleIdle(pumpElements);
         } else {
           try { cy.fit(undefined, 30); } catch (_) {}
-          if (window.__mskbDebug) {
-            const t1 = (performance && performance.now) ? performance.now() : 0;
-            window.__mskbDebug("cytoscape chunked-ready in " + Math.round(t1 - t0) + " ms (" + elements.length + " elements)");
-          }
           if (typeof onReady === "function") {
-            try { onReady(); } catch (e) { if (window.__mskbDebug) window.__mskbDebug("cy onReady failed: " + e); }
+            try { onReady(); } catch (_) { /* swallow */ }
           }
         }
       }
@@ -1347,7 +1349,7 @@ window.__mskbDebug = function (msg) {
   function setPreset(mode) {
     if (mode === "undergrad") {
       coreMetricEl.value = "composite";
-      difficultyMaxEl.value = "3";
+      if (readingLevelEl) readingLevelEl.value = "basic";
       minInDegreeEl.value = "3";
       minOutDegreeEl.value = "3";
       minKcoreEl.value = "6";
@@ -1355,7 +1357,7 @@ window.__mskbDebug = function (msg) {
       requireAbstractEl.checked = true;
     } else if (mode === "grad") {
       coreMetricEl.value = "pagerank";
-      difficultyMaxEl.value = "5";
+      if (readingLevelEl) readingLevelEl.value = "advanced";
       minInDegreeEl.value = "8";
       minOutDegreeEl.value = "8";
       minKcoreEl.value = "12";
@@ -1363,20 +1365,21 @@ window.__mskbDebug = function (msg) {
       requireAbstractEl.checked = true;
     } else {
       coreMetricEl.value = "composite";
-      difficultyMaxEl.value = "4";
+      if (readingLevelEl) readingLevelEl.value = "basic";
       minInDegreeEl.value = "5";
       minOutDegreeEl.value = "5";
       minKcoreEl.value = "10";
       corePctEl.value = "40";
       requireAbstractEl.checked = true;
     }
+    if (readingLevelEl) persistReadingLevel(readingLevelEl.value);
     corePctValueEl.textContent = `${corePctEl.value}%`;
     applyCoreFilter();
+    if (selectedNodeId) renderPaper(selectedNodeId);
   }
 
   function applyCoreFilter() {
     const metric = coreMetricEl.value || "composite";
-    const maxDifficulty = Number(difficultyMaxEl.value || 5);
     const minInDegree = Math.max(0, Number(minInDegreeEl.value || 0));
     const minOutDegree = Math.max(0, Number(minOutDegreeEl.value || 0));
     const minKcore = Math.max(0, Number(minKcoreEl.value || 0));
@@ -1386,7 +1389,6 @@ window.__mskbDebug = function (msg) {
 
     const matchedNodes = rawNodes
         .filter(n => !requireAbstract || !!n.has_abstract)
-        .filter(n => Number(n.difficulty || 3) <= maxDifficulty)
         .filter(n => Number(n.in_degree || 0) >= minInDegree)
         .filter(n => Number(n.out_degree || 0) >= minOutDegree)
         .filter(n => Number(n.kcore || 0) >= minKcore)
@@ -1437,11 +1439,11 @@ window.__mskbDebug = function (msg) {
         styleSelectedSubgraph(null);
         if (initialFocusTarget) {
           try { focusNode(initialFocusTarget.id); }
-          catch (e) { if (window.__mskbDebug) window.__mskbDebug("initial focus failed: " + e); }
+          catch (_) { /* swallow */ }
         }
       });
     } else {
-      detailsEl.innerHTML = "No papers match the current core/language filter.";
+      detailsEl.innerHTML = "No papers match the current core filter.";
       parentEl.innerHTML = "";
       childEl.innerHTML = "";
       relatedEl.innerHTML = "";
@@ -1536,15 +1538,28 @@ window.__mskbDebug = function (msg) {
     const bibLink = `<a href="${bibHref}" download="${node.id}.bib">Download .bib</a>`;
     const yearInt = Number.isFinite(Number(node.year)) ? Math.trunc(Number(node.year)) : null;
     const year = yearInt ? ` (${yearInt})` : "";
-    const summary = cleanNarrativeText(node.summary || "");
+    const level = currentReadingLevel();
+    const summaryVariant = (level === "advanced" && node.summary_advanced)
+      ? node.summary_advanced
+      : (level === "basic" && node.summary_basic)
+        ? node.summary_basic
+        : (node.summary || node.summary_basic || node.summary_advanced || "");
+    const whyVariant = (level === "advanced" && node.why_it_matters_advanced)
+      ? node.why_it_matters_advanced
+      : (level === "basic" && node.why_it_matters_basic)
+        ? node.why_it_matters_basic
+        : (node.why_it_matters || node.why_it_matters_basic || node.why_it_matters_advanced || "");
+    const takeawaysVariant = (level === "advanced" && Array.isArray(node.key_takeaways_advanced) && node.key_takeaways_advanced.length)
+      ? node.key_takeaways_advanced
+      : (level === "basic" && Array.isArray(node.key_takeaways_basic) && node.key_takeaways_basic.length)
+        ? node.key_takeaways_basic
+        : (Array.isArray(node.key_takeaways) && node.key_takeaways.length
+          ? node.key_takeaways
+          : (Array.isArray(node.key_takeaways_basic) ? node.key_takeaways_basic : []));
+    const summary = cleanNarrativeText(summaryVariant || "");
     const topic = node.topic_label ? `<span class="pill">${escapeHtml(node.topic_label)}</span>` : "";
-    const difficultyLevel = Number(node.difficulty || 3);
-    const difficultyLabel = (
-      difficultyLevel <= 2 ? "plain language" :
-      difficultyLevel === 3 ? "moderately technical" :
-      difficultyLevel === 4 ? "advanced technical" : "specialist technical"
-    );
-    const diff = `<span class="pill">Language level ${difficultyLevel}/5 (${difficultyLabel})</span>`;
+    const levelLabel = level === "advanced" ? "Advanced (specialist)" : "Basic (plain language)";
+    const diff = `<span class="pill">Reading level: ${levelLabel}</span>`;
     const inLinks = Number(node.in_degree || 0);
     const outLinks = Number(node.out_degree || 0);
     const visibleIn = (incoming.get(id) || new Set()).size;
@@ -1871,14 +1886,12 @@ window.__mskbDebug = function (msg) {
     }
     const baseNodes = rawNodes.filter(n => {
       const metric = coreMetricEl.value || "composite";
-      const maxDifficulty = Number(difficultyMaxEl.value || 5);
       const minInDegree = Math.max(0, Number(minInDegreeEl.value || 0));
       const minOutDegree = Math.max(0, Number(minOutDegreeEl.value || 0));
       const minKcore = Math.max(0, Number(minKcoreEl.value || 0));
       const cutoff = Number(corePctEl.value || 0) / 100;
       const requireAbstract = !!requireAbstractEl.checked;
       if (requireAbstract && !n.has_abstract) return false;
-      if (Number(n.difficulty || 3) > maxDifficulty) return false;
       if (Number(n.in_degree || 0) < minInDegree) return false;
       if (Number(n.out_degree || 0) < minOutDegree) return false;
       if (Number(n.kcore || 0) < minKcore) return false;
@@ -2159,21 +2172,9 @@ window.__mskbDebug = function (msg) {
   }
 
   setGraphStatus("Loading explorer graph...");
-  if (window.__mskbDebug) window.__mskbDebug("main IIFE: about to call loadCorpusPayload (mobile=" + isMobileView + ")");
   loadCorpusPayload(initialPayloadCandidates).then(function () {
     pruneSelectionToCorpus();
     renderJourneySelection();
-    if (window.__mskbDebug) {
-      window.__mskbDebug("after load: rawNodes=" + rawNodes.length + " rawEdges=" + rawEdges.length + " visibleNodes=" + visibleNodes.length + " visibleEdges=" + visibleEdges.length);
-      window.__mskbDebug("after load: cy=" + (cy ? "yes" : "no") + (cy ? " " + cy.nodes().length + "n/" + cy.edges().length + "e" : ""));
-      var pg = document.getElementById("paper-graph");
-      if (pg) {
-        var rr = pg.getBoundingClientRect();
-        window.__mskbDebug("paper-graph rect after load: " + Math.round(rr.width) + "x" + Math.round(rr.height));
-        var canv = pg.querySelectorAll("canvas");
-        window.__mskbDebug("paper-graph canvases: " + canv.length);
-      }
-    }
   });
 
   [parentEl, childEl, relatedEl, directSearchResultsEl, ideaResultsEl, journeySelectedEl, journeyResultsEl, detailsEl].forEach(container => {
@@ -2217,6 +2218,14 @@ window.__mskbDebug = function (msg) {
   corePctEl.addEventListener("input", () => {
     corePctValueEl.textContent = `${corePctEl.value}%`;
   });
+  if (readingLevelEl) {
+    const storedLevel = loadStoredReadingLevel();
+    if (storedLevel) readingLevelEl.value = storedLevel;
+    readingLevelEl.addEventListener("change", () => {
+      persistReadingLevel(readingLevelEl.value);
+      if (selectedNodeId) renderPaper(selectedNodeId);
+    });
+  }
   if (clusterSpreadEl) {
     const refreshSpreadLabel = () => {
       if (clusterSpreadValueEl) {

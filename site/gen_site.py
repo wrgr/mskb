@@ -659,6 +659,24 @@ def _build_explorer_assets(
                 "evidence_strength": int(pd.to_numeric(row.get("evidence_strength", 2), errors="coerce") or 2),
             }
         )
+        # Per-level (basic/advanced) variants. Fall back to the default
+        # summary/why/takeaways if a level-specific variant is missing so the
+        # frontend always has something to render.
+        summary_basic = _clean_text(summary_row.get("summary_basic", "")) or summary
+        summary_advanced = _clean_text(summary_row.get("summary_advanced", "")) or summary
+        why_basic = _clean_text(summary_row.get("why_it_matters_basic", "")) or why
+        why_advanced = _clean_text(summary_row.get("why_it_matters_advanced", "")) or why
+        takeaways_basic = _structured_takeaways_for_display(
+            _parse_json_list(summary_row.get("key_takeaways_basic", [])),
+            summary=summary_basic,
+            abstract=abstract,
+        ) if _parse_json_list(summary_row.get("key_takeaways_basic", [])) else key_takeaways
+        takeaways_advanced = _structured_takeaways_for_display(
+            _parse_json_list(summary_row.get("key_takeaways_advanced", [])),
+            summary=summary_advanced,
+            abstract=abstract,
+        ) if _parse_json_list(summary_row.get("key_takeaways_advanced", [])) else key_takeaways
+
         details_rows.append(
             {
                 "id": pid,
@@ -668,6 +686,12 @@ def _build_explorer_assets(
                 "key_takeaways": key_takeaways,
                 "why_it_matters": why,
                 "jargon": _parse_jargon_structured(summary_row.get("jargon", [])),
+                "summary_basic": summary_basic,
+                "summary_advanced": summary_advanced,
+                "why_it_matters_basic": why_basic,
+                "why_it_matters_advanced": why_advanced,
+                "key_takeaways_basic": takeaways_basic,
+                "key_takeaways_advanced": takeaways_advanced,
                 "summary_generated_at_utc": summary_generated_at_utc,
                 "distill_method": distill_method,
                 "summary_certainty_score": _round_float(summary_certainty_score, 4),
@@ -764,6 +788,12 @@ def _build_explorer_assets(
         "key_takeaways",
         "why_it_matters",
         "jargon",
+        "summary_basic",
+        "summary_advanced",
+        "why_it_matters_basic",
+        "why_it_matters_advanced",
+        "key_takeaways_basic",
+        "key_takeaways_advanced",
         "summary_generated_at_utc",
         "distill_method",
         "summary_certainty_score",

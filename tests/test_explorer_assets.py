@@ -51,7 +51,7 @@ REQUIRED_DOM_IDS = [
     "node-drag-toggle",
     "graph-status",
     "core-metric",
-    "difficulty-max",
+    "reading-level",
     "min-in-degree",
     "min-out-degree",
     "min-kcore",
@@ -82,7 +82,7 @@ def test_explorer_js_is_non_trivial(explorer_js_text: str) -> None:
     # The extracted file should be at least a few hundred lines / kilobytes.
     # If we ever accidentally truncate it we want a loud failure here.
     assert len(explorer_js_text) > 50_000, "explorer.js looks suspiciously small"
-    assert explorer_js_text.startswith("// ---- explorer boot diagnostics")
+    assert explorer_js_text.startswith("// ---- explorer boot")
     assert explorer_js_text.rstrip().endswith("})();")
 
 

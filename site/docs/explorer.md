@@ -8,8 +8,8 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   <h3>Explore the MS Knowledge Graph</h3>
   <p>Use this view to inspect citation structure, read paper summaries, and plan literature exploration from core papers out to related work. Papers are grouped by <strong>research themes</strong> derived from citation communities.</p>
   <div class="explorer-guide">
-    <div class="guide-card"><strong>Undergrad flow:</strong> start with lower language level, then branch through related papers.</div>
-    <div class="guide-card"><strong>Grad flow:</strong> raise structural filters (in/out degree and k-core) for denser, high-signal papers.</div>
+    <div class="guide-card"><strong>Undergrad flow:</strong> pick a lower target reading level for plain-language summaries, then branch through related papers.</div>
+    <div class="guide-card"><strong>Grad flow:</strong> raise structural filters (in/out degree and k-core) for denser, high-signal papers; use a higher target reading level for specialist wording.</div>
     <div class="guide-card"><strong>Node semantics:</strong> size is log(citations), color is k-core tier, arrows are citations. Use <em>Cluster spread</em> if the graph looks too dense.</div>
   </div>
 </div>
@@ -31,12 +31,10 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
       <option value="in_degree">In-degree</option>
       <option value="age_normalized">Age-normalized centrality</option>
     </select>
-    <label for="difficulty-max">Max language level</label>
-    <select id="difficulty-max">
-      <option value="5" selected>All (1-5)</option>
-      <option value="2">1-2 Plain language</option>
-      <option value="3">1-3 Moderate technicality</option>
-      <option value="4">1-4 Advanced language</option>
+    <label for="reading-level">Reading level</label>
+    <select id="reading-level">
+      <option value="basic" selected>Basic (undergraduate, plain language)</option>
+      <option value="advanced">Advanced (specialist, technical)</option>
     </select>
     <label for="min-in-degree">Min in-degree</label>
     <input id="min-in-degree" type="number" min="0" step="1" value="5" />
@@ -52,7 +50,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     <span id="cluster-spread-value">1.2&times;</span>
     <label><input id="require-abstract" type="checkbox" checked /> Require abstract</label>
   </div>
-  <p><strong>Language scale:</strong> 1-2 plain wording, 3 moderate technical wording, 4-5 specialist terminology density.</p>
+  <p><strong>Reading level</strong> picks which summary variant to display for each paper. The distillation pipeline generates a <em>Basic</em> (plain-language undergraduate) and an <em>Advanced</em> (specialist technical) summary for every paper; this toggle swaps between them in place. It does <strong>not</strong> hide papers from the graph.</p>
   <div class="explorer-actions">
     <button id="core-apply">Apply Core Filter</button>
     <button id="load-full-corpus" type="button">Load Full Corpus</button>
