@@ -76,11 +76,7 @@ Source text: {abstract}
 
 Please provide:
 1. A 2-3 sentence summary written at the reading level described above.
-2. Four key takeaways at the same reading level, each prefixed with one label:
-   - Opportunity:
-   - Challenge:
-   - Action:
-   - Resolution:
+2. Three to four short key takeaways at the same reading level. Each takeaway should be a plain sentence — do NOT prefix with any label like Opportunity, Challenge, Action, or Resolution.
 3. A one-sentence "why this matters" statement connecting this paper to the broader understanding of MS, at the same reading level.
 4. A list of up to 5 technical terms from the abstract that a reader at this level might not know, each with a brief definition. Return an empty list if none would help the target reader.
 
@@ -88,10 +84,9 @@ Respond in JSON format:
 {{
   "summary": "...",
   "key_takeaways": [
-    "Opportunity: ...",
-    "Challenge: ...",
-    "Action: ...",
-    "Resolution: ..."
+    "First takeaway sentence.",
+    "Second takeaway sentence.",
+    "Third takeaway sentence."
   ],
   "why_it_matters": "...",
   "jargon": [{{"term": "...", "definition": "..."}}, ...]
@@ -150,8 +145,6 @@ def _parse_json_list(value: object) -> list[str]:
     return out
 
 
-TAKEAWAY_LABELS = ["Opportunity", "Challenge", "Action", "Resolution"]
-
 LANGUAGE_COMPLEXITY_TERMS = {
     "cytokine", "chemokine", "oligodendrocyte", "astrocyte", "microglia",
     "immunopathology", "neuropathology", "transcriptome", "proteome",
@@ -199,21 +192,9 @@ def _structured_takeaways(candidates: list[str], summary: str, abstract: str) ->
         if key in seen:
             continue
         seen.add(key)
-        seeds.append(text)
+        seeds.append(text.rstrip("."))
 
-    defaults = {
-        "Opportunity": "This paper highlights a concrete opportunity to improve MS understanding or care.",
-        "Challenge": "A central challenge is uncertainty about mechanism, measurement, or generalizability.",
-        "Action": "A practical next action is to test, replicate, or validate the findings in a focused cohort.",
-        "Resolution": "The paper offers partial resolution and defines what evidence should come next.",
-    }
-
-    output = []
-    for idx, label in enumerate(TAKEAWAY_LABELS):
-        sentence = seeds[idx] if idx < len(seeds) else defaults[label]
-        sentence = sentence.rstrip(".")
-        output.append(f"{label}: {sentence}.")
-    return output
+    return [f"{seed}." for seed in seeds[:4]]
 
 
 def _strip_takeaway_label(text: str) -> str:
