@@ -119,9 +119,9 @@ site:
     # 0 means no hard cap before explorer-side filtering.
     start_nodes: 0
     # Desktop initial load uses a lite payload for faster first render.
-    lite_start_nodes: 2500
+    lite_start_nodes: 1500
     # Mobile loads a lighter payload by default.
-    mobile_start_nodes: 2500
+    mobile_start_nodes: 1500
 
 governance:
   seed_checklist:
