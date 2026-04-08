@@ -28,26 +28,37 @@ retrieval:
 
 queries:
   lexical:
-    - "multiple sclerosis pathogenesis"
-    - "multiple sclerosis immunology"
-    - "demyelination autoimmune"
-    - "experimental autoimmune encephalomyelitis"
-    - "multiple sclerosis disease-modifying therapy"
-    - "multiple sclerosis MRI lesion"
-    - "multiple sclerosis epidemiology risk factors"
-    - "multiple sclerosis remyelination"
-    - "multiple sclerosis biomarker neurofilament"
-    - "oligodendrocyte precursor cell multiple sclerosis"
-    - "multiple sclerosis Epstein-Barr virus"
-    - "multiple sclerosis progressive neurodegeneration"
-    - "multiple sclerosis blood-brain barrier"
-    - "multiple sclerosis T cell B cell"
+    # Layer 1 — Foundation
+    - "multiple sclerosis global epidemiology prevalence incidence"
+    - "multiple sclerosis natural history disability progression"
+    - "multiple sclerosis phenotype relapsing progressive clinical course"
+    - "multiple sclerosis pathology demyelination neurodegeneration"
+    - "multiple sclerosis immunology T cell B cell microglia"
+    - "multiple sclerosis genetics HLA-DRB1 genome-wide association"
+    - "Epstein-Barr virus multiple sclerosis risk etiology"
+    - "multiple sclerosis environmental risk factors vitamin D smoking"
+    # Layer 2 — Clinical
+    - "multiple sclerosis MRI diagnosis monitoring McDonald criteria"
+    - "paramagnetic rim lesions slowly expanding chronic active multiple sclerosis"
+    - "neurofilament light GFAP serum blood biomarker multiple sclerosis"
+    - "multiple sclerosis disease-modifying therapy anti-CD20 ocrelizumab"
+    - "multiple sclerosis smoldering PIRA progression independent relapse"
+    - "multiple sclerosis patient-reported outcomes EDSS quality of life"
+    - "multiple sclerosis comorbidities depression cognitive impairment"
+    - "multiple sclerosis pregnancy DMT family planning"
+    # Layer 3 — Context and Future
+    - "pediatric multiple sclerosis POMS diagnosis treatment"
+    - "multiple sclerosis racial disparities equity health disparities"
+    - "multiple sclerosis artificial intelligence machine learning prediction"
+    - "remyelination neuroprotection oligodendrocyte multiple sclerosis therapy"
   dataset:
-    - "UK Biobank multiple sclerosis"
     - "MSBase registry multiple sclerosis"
     - "IMSGC genome-wide association multiple sclerosis"
-    - "CLIMB cohort multiple sclerosis"
     - "NARCOMS registry multiple sclerosis"
+    - "Atlas of MS multiple sclerosis global"
+    - "GBD Global Burden of Disease multiple sclerosis"
+    - "Lyon cohort natural history multiple sclerosis"
+    - "Kaiser Permanente multiple sclerosis cohort"
 
 dedup:
   auto_merge_threshold: 0.85
@@ -80,12 +91,14 @@ scoring:
   topic_balance:
     enabled: true
     # Enforced on anchor-based categories during scoring.
+    # Ranges reflect the new orientation-guide seed distribution:
+    # epi=8, path=7, img=6, trial=4, ccm=11 out of 36 total seeds.
     target_ranges:
-      pathogenesis_and_immunology: {min_pct: 0.15, max_pct: 0.35}
-      imaging_and_biomarkers: {min_pct: 0.15, max_pct: 0.35}
-      clinical_trials_and_therapeutics: {min_pct: 0.10, max_pct: 0.30}
-      clinical_care_and_management: {min_pct: 0.05, max_pct: 0.20}
-      epidemiology_and_population_health: {min_pct: 0.10, max_pct: 0.30}
+      pathogenesis_and_immunology: {min_pct: 0.12, max_pct: 0.32}
+      imaging_and_biomarkers: {min_pct: 0.12, max_pct: 0.30}
+      clinical_trials_and_therapeutics: {min_pct: 0.08, max_pct: 0.25}
+      clinical_care_and_management: {min_pct: 0.15, max_pct: 0.40}
+      epidemiology_and_population_health: {min_pct: 0.12, max_pct: 0.32}
   weights:
     direct_seed_citation: 3.0
     landmark_anchor: 0.5
@@ -97,12 +110,12 @@ scoring:
 
 topics:
   min_cluster_size: 5
-  # Categories aligned with ACTRIMS / CMSC / MSJ conference structure:
-  # - pathogenesis_and_immunology: basic science, EAE, immune mechanisms
-  # - imaging_and_biomarkers: MRI, OCT, NfL, CSF markers
-  # - clinical_trials_and_therapeutics: DMTs, trial design, efficacy
-  # - clinical_care_and_management: diagnosis, symptoms, rehabilitation
-  # - epidemiology_and_population_health: risk factors, GWAS, registries
+  # Categories aligned with the MS Field Orientation Guide topic map (April 2026):
+  # - pathogenesis_and_immunology: Topics 2 (pathophysiology), 3 (genetics), 4 (risk/EBV), 8B (smoldering)
+  # - imaging_and_biomarkers: Topics 5 (diagnosis/MRI), 6 (NfL/GFAP), 14A (AI/imaging), 15A (ML reclassification)
+  # - clinical_trials_and_therapeutics: Topics 7 (DMTs), 11A (pregnancy PRIMS), 12B (pediatric PARADIGMS)
+  # - clinical_care_and_management: Topics 1, 8A, 9, 10B, 11B, 12A, 14B, 16
+  # - epidemiology_and_population_health: Topics 0, 1b, 4B, 10A, 13
 
 distillation:
   provider: "anthropic"
@@ -152,13 +165,14 @@ governance:
     fail_on_error: true
     # If true, unresolved DOI metadata will fail seed checks.
     fail_on_unresolved_metadata: false
-    # Strict acceptance checklist
+    # Quotas reflect the orientation-guide topic map (18 topics × 2 seeds = 36 core seeds).
+    # Distribution: epi=8, path=7, img=6, trial=4, ccm=11.
     category_quotas:
-      pathogenesis_and_immunology: {min: 8, max: 14}
-      imaging_and_biomarkers: {min: 8, max: 14}
-      clinical_trials_and_therapeutics: {min: 8, max: 14}
-      clinical_care_and_management: {min: 8, max: 14}
-      epidemiology_and_population_health: {min: 8, max: 14}
+      pathogenesis_and_immunology: {min: 4, max: 12}
+      imaging_and_biomarkers: {min: 4, max: 12}
+      clinical_trials_and_therapeutics: {min: 4, max: 10}
+      clinical_care_and_management: {min: 6, max: 16}
+      epidemiology_and_population_health: {min: 6, max: 14}
     venue_cap: 12
     author_cap: 8
     ms_lexical_min_hits: 1
