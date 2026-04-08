@@ -6,11 +6,11 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 
 <div class="top-idea reveal">
   <h3>Explore the MS Knowledge Graph</h3>
-  <p>Use this view to inspect citation structure, read paper summaries, and plan literature exploration from core papers out to related work.</p>
+  <p>Use this view to inspect citation structure, read paper summaries, and plan literature exploration from core papers out to related work. Papers are grouped by <strong>research themes</strong> derived from citation communities.</p>
   <div class="explorer-guide">
     <div class="guide-card"><strong>Undergrad flow:</strong> start with lower language level, then branch through related papers.</div>
     <div class="guide-card"><strong>Grad flow:</strong> raise structural filters (in/out degree and k-core) for denser, high-signal papers.</div>
-    <div class="guide-card"><strong>Node semantics:</strong> size is log(citations), color is k-core tier, arrows are citations.</div>
+    <div class="guide-card"><strong>Node semantics:</strong> size is log(citations), color is k-core tier, arrows are citations. Use <em>Cluster spread</em> if the graph looks too dense.</div>
   </div>
 </div>
 
@@ -47,6 +47,9 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
     <label for="core-percentile">Percentile cutoff</label>
     <input id="core-percentile" type="range" min="0" max="95" step="5" value="40" />
     <span id="core-percentile-value">40%</span>
+    <label for="cluster-spread">Cluster spread</label>
+    <input id="cluster-spread" type="range" min="60" max="260" step="10" value="120" />
+    <span id="cluster-spread-value">1.2&times;</span>
     <label><input id="require-abstract" type="checkbox" checked /> Require abstract</label>
   </div>
   <p><strong>Language scale:</strong> 1-2 plain wording, 3 moderate technical wording, 4-5 specialist terminology density.</p>
@@ -64,29 +67,30 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   </div>
   </details>
 
-<div id="paper-graph"></div>
-
-<section class="paper-panel reveal">
-  <header class="paper-panel-head">
-    <h3>Selected paper</h3>
-    <span class="paper-panel-hint">Click any node in the graph to focus it.</span>
-  </header>
-  <div id="paper-details">Select a node to view summary, source link, and relationship choices.</div>
-  <div class="rel-grid">
-    <div class="rel-section">
-      <h4>Parents <small>(papers this one cites)</small></h4>
-      <div id="parent-links"></div>
+<div class="explorer-layout">
+  <div id="paper-graph"></div>
+  <section class="paper-panel reveal">
+    <header class="paper-panel-head">
+      <h3>Selected paper</h3>
+      <span class="paper-panel-hint">Click any node in the graph to focus it.</span>
+    </header>
+    <div id="paper-details">Select a node to view summary, source link, and relationship choices.</div>
+    <div class="rel-grid">
+      <div class="rel-section">
+        <h4>Parents <small>(papers this one cites)</small></h4>
+        <div id="parent-links"></div>
+      </div>
+      <div class="rel-section">
+        <h4>Children <small>(papers that cite this one)</small></h4>
+        <div id="child-links"></div>
+      </div>
+      <div class="rel-section">
+        <h4>Related <small>(nearby in citation neighborhood)</small></h4>
+        <div id="related-links"></div>
+      </div>
     </div>
-    <div class="rel-section">
-      <h4>Children <small>(papers that cite this one)</small></h4>
-      <div id="child-links"></div>
-    </div>
-    <div class="rel-section">
-      <h4>Related <small>(nearby in citation neighborhood)</small></h4>
-      <div id="related-links"></div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <div class="tools-panel reveal">
   <h3>Tools</h3>

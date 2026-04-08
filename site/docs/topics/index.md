@@ -1,9 +1,9 @@
 # Topics
 
 <div class="landing-hero">
-<p>Browse the citation-derived topic atlas and jump directly into guided reading paths.</p>
+<p>Browse the citation-derived research themes and jump directly into guided reading paths.</p>
 <div class="landing-kpis">
-<span class="kpi-pill">11 discovered clusters</span>
+<span class="kpi-pill">11 research themes</span>
 <span class="kpi-pill">Algorithmic taxonomy</span>
 <span class="kpi-pill">Language-level paper filters</span>
 </div>

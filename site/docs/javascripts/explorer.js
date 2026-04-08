@@ -76,6 +76,8 @@ window.__mskbDebug = function (msg) {
   const minKcoreEl = document.getElementById("min-kcore");
   const corePctEl = document.getElementById("core-percentile");
   const corePctValueEl = document.getElementById("core-percentile-value");
+  const clusterSpreadEl = document.getElementById("cluster-spread");
+  const clusterSpreadValueEl = document.getElementById("cluster-spread-value");
   const coreApplyEl = document.getElementById("core-apply");
   const loadFullCorpusEl = document.getElementById("load-full-corpus");
   const requireAbstractEl = document.getElementById("require-abstract");
@@ -170,6 +172,7 @@ window.__mskbDebug = function (msg) {
   let paperAgeRankMap = new Map();
   let authorStatsMap = new Map();
   let searchIndexCache = { signature: "", index: null };
+  let spreadMultiplier = clusterSpreadEl ? (Number(clusterSpreadEl.value || 120) / 100) : 1.2;
 
   function setGraphStatus(text, strong = false) {
     if (!graphStatusEl) return;
@@ -765,6 +768,57 @@ window.__mskbDebug = function (msg) {
     return label ? `label:${label}` : "unassigned";
   }
 
+  // Convert raw topic_label like "Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis"
+  // into a friendlier theme name. Strips redundant words that are common across the whole MS corpus
+  // and keeps the most distinctive terms.
+  const CLUSTER_LABEL_STOPWORDS = new Set([
+    "medicine", "biology", "internal medicine", "disease",
+    "multiple sclerosis", "ms", "research", "studies",
+    "multiple sclerosis research studies", "research studies",
+    "general", "other",
+  ]);
+  function prettifyClusterLabel(raw, fallbackKey) {
+    const text = String(raw || "").trim();
+    if (!text) {
+      if (!fallbackKey) return "Research theme";
+      const fb = fallbackKey
+        .replace(/^topic:/, "Theme ")
+        .replace(/^label:/, "")
+        .trim();
+      return fb || "Research theme";
+    }
+    const parts = text
+      .split(/\s*[\/|]\s*/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+    const distinctive = [];
+    const seenNorm = new Set();
+    for (const p of parts) {
+      const norm = p.toLowerCase().replace(/\s+/g, " ").trim();
+      if (CLUSTER_LABEL_STOPWORDS.has(norm)) continue;
+      if (seenNorm.has(norm)) continue;
+      // Skip if this part is a substring of (or contains) one already kept.
+      let dup = false;
+      for (const k of distinctive) {
+        const kn = k.toLowerCase();
+        if (kn.includes(norm) || norm.includes(kn)) { dup = true; break; }
+      }
+      if (dup) continue;
+      seenNorm.add(norm);
+      distinctive.push(p);
+    }
+    let chosen;
+    if (distinctive.length === 0) {
+      // All parts were stopwords or duplicates. Pick the longest non-empty raw part.
+      chosen = parts.slice().sort((a, b) => b.length - a.length)[0] || text;
+    } else if (distinctive.length === 1) {
+      chosen = distinctive[0];
+    } else {
+      chosen = distinctive.slice(0, 2).join(" \u00b7 ");
+    }
+    return chosen.charAt(0).toUpperCase() + chosen.slice(1);
+  }
+
   function buildCommunityPositions(nodes) {
     const groups = new Map();
     nodes.forEach((n) => {
@@ -782,8 +836,9 @@ window.__mskbDebug = function (msg) {
 
     const cols = Math.max(1, Math.ceil(Math.sqrt(ordered.length)));
     const rows = Math.max(1, Math.ceil(ordered.length / cols));
-    const spacingX = 620;
-    const spacingY = 540;
+    const mult = Math.max(0.4, Number(spreadMultiplier) || 1);
+    const spacingX = 700 * mult;
+    const spacingY = 600 * mult;
     const goldenAngle = Math.PI * (3 - Math.sqrt(5));
     const positions = new Map();
 
@@ -793,7 +848,7 @@ window.__mskbDebug = function (msg) {
       const cx = (col - (cols - 1) / 2) * spacingX;
       const cy = (row - (rows - 1) / 2) * spacingY;
       members.sort((a, b) => ((b.citation_count || 0) - (a.citation_count || 0)) || String(a.id).localeCompare(String(b.id)));
-      const radialStep = Math.max(18, Math.min(32, 16 + Math.sqrt(members.length)));
+      const radialStep = Math.max(20, Math.min(48, 18 + Math.sqrt(members.length))) * mult;
       members.forEach((node, i) => {
         if (i === 0) {
           positions.set(node.id, { x: cx, y: cy });
@@ -889,7 +944,7 @@ window.__mskbDebug = function (msg) {
         const ck = communityKey(n);
         let agg = clusterAgg.get(ck);
         if (!agg) {
-          const niceName = (n.topic_label && String(n.topic_label).trim()) || ck.replace(/^topic:/, "Topic ").replace(/^label:/, "");
+          const niceName = prettifyClusterLabel(n.topic_label, ck);
           agg = { name: niceName, count: 0, sumX: 0, sumY: 0, minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity };
           clusterAgg.set(ck, agg);
         }
@@ -1904,6 +1959,27 @@ window.__mskbDebug = function (msg) {
   corePctEl.addEventListener("input", () => {
     corePctValueEl.textContent = `${corePctEl.value}%`;
   });
+  if (clusterSpreadEl) {
+    const refreshSpreadLabel = () => {
+      if (clusterSpreadValueEl) {
+        const m = (Number(clusterSpreadEl.value || 100) / 100).toFixed(1);
+        clusterSpreadValueEl.innerHTML = `${m}&times;`;
+      }
+    };
+    refreshSpreadLabel();
+    let spreadRaf = 0;
+    clusterSpreadEl.addEventListener("input", () => {
+      spreadMultiplier = Math.max(0.4, Number(clusterSpreadEl.value || 100) / 100);
+      refreshSpreadLabel();
+      if (!cy) return;
+      if (spreadRaf) cancelAnimationFrame(spreadRaf);
+      spreadRaf = requestAnimationFrame(() => {
+        spreadRaf = 0;
+        stabilizeThenSettle(0);
+        try { cy.fit(undefined, 30); } catch (_) {}
+      });
+    });
+  }
   loadFullCorpusEl.addEventListener("click", () => {
     if (isMobileView || payloadMode === "full") return;
     loadCorpusPayload([{ url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" }]);
