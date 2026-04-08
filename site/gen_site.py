@@ -213,9 +213,6 @@ DIFFICULTY_JARGON_HINTS = {
 }
 
 
-TAKEAWAY_LABELS = ["Opportunity", "Challenge", "Action", "Resolution"]
-
-
 def _split_sentences(text: str) -> list[str]:
     text = _clean_text(text)
     if not text:
@@ -242,18 +239,7 @@ def _structured_takeaways_for_display(candidates: list[str], summary: str, abstr
         seen.add(key)
         seeds.append(text.rstrip("."))
 
-    defaults = {
-        "Opportunity": "This paper points to a practical opportunity for MS research or care",
-        "Challenge": "A key challenge is uncertainty in mechanism, measurement, or generalization",
-        "Action": "A practical action is to test or replicate the approach in focused cohorts",
-        "Resolution": "The paper offers partial resolution and clarifies what evidence should come next",
-    }
-
-    out = []
-    for idx, label in enumerate(TAKEAWAY_LABELS):
-        text = seeds[idx] if idx < len(seeds) else defaults[label]
-        out.append(f"{label}: {text}.")
-    return out
+    return [f"{seed}." for seed in seeds[:4]]
 
 
 def _estimate_summary_language_difficulty(summary: str, takeaways: list[str] | None = None) -> int:

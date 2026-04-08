@@ -237,17 +237,41 @@
     } catch (_) { /* swallow */ }
   }
 
+  // Only escalate to the fatal overlay when the error actually came from
+  // explorer code. On mobile, unrelated Starlight/image errors fire during
+  // pinch-zoom and would otherwise paint the whole page red.
+  let lastOverlayAtMs = 0;
+  const OVERLAY_DEBOUNCE_MS = 1500;
+  function isExplorerError(filename, stack) {
+    const hay = `${filename || ""}\n${stack || ""}`.toLowerCase();
+    return hay.includes("explorer.js") || hay.includes("cytoscape") || hay.includes("mskb_graph_renderer");
+  }
+  function maybeShowFatalOverlay(title, msg, filename, stack) {
+    if (!isExplorerError(filename, stack)) {
+      console.warn(`[explorer] non-fatal error ignored: ${msg}`);
+      return;
+    }
+    const now = Date.now();
+    if (now - lastOverlayAtMs < OVERLAY_DEBOUNCE_MS) {
+      console.warn(`[explorer] debounced overlay: ${msg}`);
+      return;
+    }
+    lastOverlayAtMs = now;
+    showFatalOverlay(title, `${msg}\n${stack || ""}`);
+  }
+
   window.addEventListener("error", (event) => {
     const msg = event?.error?.message || event?.message || "Unknown script error";
     const stack = event?.error?.stack || "";
-    showFatalOverlay("Explorer runtime error", `${msg}\n${stack}`);
+    const filename = event?.filename || "";
+    maybeShowFatalOverlay("Explorer runtime error", msg, filename, stack);
   });
 
   window.addEventListener("unhandledrejection", (event) => {
     const reason = event?.reason;
     const msg = typeof reason === "string" ? reason : (reason?.message || String(reason || "Unknown promise rejection"));
-    const stack = reason && reason.stack ? `\n${reason.stack}` : "";
-    showFatalOverlay("Explorer async error", `${msg}${stack}`);
+    const stack = reason && reason.stack ? reason.stack : "";
+    maybeShowFatalOverlay("Explorer async error", msg, "", stack);
   });
 
   function escapeHtml(text) {
@@ -1029,13 +1053,17 @@
         const px = Number(pos.x) || 0;
         const py = Number(pos.y) || 0;
         nodeIds.add(n.id);
+        const baseSizeRaw = (Number(style.size) || 2) * 1.6;
+        const baseSize = isMobileView
+          ? Math.max(12, baseSizeRaw * 1.8)
+          : Math.max(4, baseSizeRaw);
         elements[ei++] = {
           group: "nodes",
           data: {
             id: n.id,
             label: style.label,
             baseColor: style.kcoreColor || style.color,
-            baseSize: Math.max(4, (Number(style.size) || 2) * 1.6),
+            baseSize,
           },
           position: { x: px, y: py },
         };
@@ -1064,12 +1092,14 @@
         };
       }
       // Cluster label "ghost" nodes — non-interactive, always visible.
-      // Skip clusters of 1 node and "(unlabeled)" buckets.
+      // Skip clusters of 1 node and "(unlabeled)" buckets. Guard against
+      // Infinity/NaN from pathological coordinate inputs.
       clusterAgg.forEach((agg, key) => {
         if (agg.count < 2) return;
         if (!agg.name || agg.name === "unassigned") return;
         const cx = agg.sumX / agg.count;
         const cy = (agg.minY) - 30;
+        if (!Number.isFinite(cx) || !Number.isFinite(cy)) return;
         elements[ei++] = {
           group: "nodes",
           data: { id: "__cl__" + key, label: agg.name, isCluster: 1 },
@@ -1092,8 +1122,12 @@
         motionBlur: false,
         autoungrabify: !dragEnabled || isMobileView,
         autounselectify: false,
-        minZoom: 0.05,
-        maxZoom: 4,
+        // Tighter bounds avoid numerically unstable pinch-zoom on touch.
+        minZoom: 0.15,
+        maxZoom: 3,
+        tapThreshold: 8,
+        touchTapThreshold: 12,
+        wheelSensitivity: 0.2,
         style: [
           {
             selector: "node[baseColor]",
@@ -1156,10 +1190,36 @@
         focusNode(node.id());
       });
       cy.on("tap", (evt) => {
-        if (evt.target === cy) {
-          selectedNodeId = null;
-          styleSelectedSubgraph(null);
+        if (evt.target !== cy) return;
+        // Coarse-pointer fallback: if the tap landed near a node, select that
+        // node instead of clearing the selection. Fixes "I can't tap this
+        // small node" on mobile.
+        const coarse = typeof window.matchMedia === "function" && window.matchMedia("(pointer: coarse)").matches;
+        if (coarse && evt.position) {
+          const { x: tx, y: ty } = evt.position;
+          let best = null;
+          let bestDist2 = Infinity;
+          const RADIUS_PX = 20;
+          const zoom = cy.zoom() || 1;
+          const thresh2 = (RADIUS_PX / zoom) * (RADIUS_PX / zoom);
+          cy.nodes().forEach((n) => {
+            if (n.data("isCluster")) return;
+            const p = n.position();
+            const dx = p.x - tx;
+            const dy = p.y - ty;
+            const d2 = dx * dx + dy * dy;
+            if (d2 < thresh2 && d2 < bestDist2) {
+              best = n;
+              bestDist2 = d2;
+            }
+          });
+          if (best) {
+            focusNode(best.id());
+            return;
+          }
         }
+        selectedNodeId = null;
+        styleSelectedSubgraph(null);
       });
 
       // Drain the elements array into cytoscape in idle-callback chunks so the
@@ -1198,12 +1258,43 @@
     }
   }
 
-  function journeyButtonLabel(id) {
-    return journeySelection.includes(id) ? "Remove" : "Add";
+  function renderJourneyButton(id) {
+    const inList = journeySelection.includes(id);
+    const cls = inList ? "btn-in-list" : "btn-add";
+    const label = inList ? "In list ✓" : "Add to list";
+    const pressed = inList ? "true" : "false";
+    return `<button class="${cls}" data-journey-toggle="${id}" aria-pressed="${pressed}">${label}</button>`;
+  }
+
+  function refreshJourneyButtons() {
+    const nodes = document.querySelectorAll("[data-journey-toggle]");
+    nodes.forEach((btn) => {
+      const id = btn.getAttribute("data-journey-toggle");
+      if (!id) return;
+      const inList = journeySelection.includes(id);
+      btn.classList.toggle("btn-in-list", inList);
+      btn.classList.toggle("btn-add", !inList);
+      btn.setAttribute("aria-pressed", inList ? "true" : "false");
+      btn.textContent = inList ? "In list ✓" : "Add to list";
+    });
+  }
+
+  // Pub/sub hook for cross-page journey sync. The full window.mskbJourney
+  // facade is added in §6 alongside journey.mdx; this stub keeps callers
+  // safe until then.
+  const journeyEventTarget = typeof EventTarget === "function" ? new EventTarget() : null;
+  function notifyJourneyChange() {
+    try {
+      if (journeyEventTarget) {
+        journeyEventTarget.dispatchEvent(new Event("change"));
+      }
+    } catch (_err) {
+      // no-op: event dispatch must never break UI flows
+    }
   }
 
   function renderActionButtons(node) {
-    return `<button data-focus="${node.id}">Focus</button> <button data-journey-toggle="${node.id}">${journeyButtonLabel(node.id)}</button>`;
+    return `<button data-focus="${node.id}">Focus</button> ${renderJourneyButton(node.id)}`;
   }
 
   async function runDirectSearch() {
@@ -1584,10 +1675,13 @@
     const ageNormScorePill = `<span class="pill">Age-normalized score: ${Number(node.age_normalized_importance || 0).toFixed(3)}</span>`;
     const cpyPill = `<span class="pill">Citations/year: ${Number(node.citations_per_year || 0).toFixed(2)}</span>`;
     const provenance = `<strong>Summary provenance:</strong> source=${escapeHtml(node.summary_source || "unknown")}; method=${escapeHtml(node.distill_method || "unknown")}; generated=${escapeHtml(node.summary_generated_at_utc || "unknown")}; hash=${escapeHtml(String(node.source_text_hash || "").slice(0, 12) || "n/a")}; overlap=${Number(node.faithfulness_overlap || 0).toFixed(2)}`;
-    const journeyToggle = `<button data-journey-toggle="${node.id}">${journeyButtonLabel(node.id)} ${journeySelection.includes(node.id) ? "from" : "to"} Journey</button>`;
-    const takeaways = Array.isArray(node.key_takeaways) ? node.key_takeaways : [];
-    const takeawayHtml = takeaways.length
-      ? `<ul>${takeaways.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
+    const journeyToggle = renderJourneyButton(node.id);
+    const takeaways = Array.isArray(takeawaysVariant) ? takeawaysVariant : [];
+    const strippedTakeaways = takeaways
+      .map(t => String(t || "").replace(/^(opportunity|challenge|action|resolution)\s*:\s*/i, "").trim())
+      .filter(Boolean);
+    const takeawayHtml = strippedTakeaways.length
+      ? `<ul>${strippedTakeaways.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
       : "<p>No key takeaways available.</p>";
     const abstractText = cleanNarrativeText(node.abstract || "");
     detailsEl.innerHTML = `
@@ -1613,7 +1707,9 @@
     const el = cy.getElementById(id);
     if (el && el.length) {
       try {
-        cy.animate({ center: { eles: el }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: 280 });
+        const current = Number(cy.zoom()) || 1;
+        const target = Math.min(Math.max(current, 1.2), cy.maxZoom());
+        cy.animate({ center: { eles: el }, zoom: target }, { duration: 280 });
       } catch (_) {}
     }
     renderPaper(id);
@@ -1629,13 +1725,15 @@
     persistSelection();
     invalidateCommunityCache();
     renderJourneySelection();
+    refreshJourneyButtons();
+    notifyJourneyChange();
     if (selectedNodeId === id) {
       renderPaper(id);
     }
-    if ((directSearchInputEl.value || "").trim()) {
+    if (directSearchInputEl && (directSearchInputEl.value || "").trim()) {
       runDirectSearch();
     }
-    if ((ideaInputEl.value || "").trim()) {
+    if (ideaInputEl && (ideaInputEl.value || "").trim()) {
       runIdeaMatch();
     }
   }
@@ -1649,6 +1747,8 @@
     persistSelection();
     invalidateCommunityCache();
     renderJourneySelection();
+    refreshJourneyButtons();
+    notifyJourneyChange();
     if (selectedNodeId) {
       renderPaper(selectedNodeId);
     }

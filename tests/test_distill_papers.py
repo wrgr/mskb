@@ -23,8 +23,9 @@ def test_rules_based_distill_basic():
     assert "language_difficulty" in result
     assert "jargon" in result
     assert isinstance(result["key_takeaways"], list)
-    assert len(result["key_takeaways"]) == 4
-    assert result["key_takeaways"][0].startswith("Opportunity:")
+    assert 1 <= len(result["key_takeaways"]) <= 4
+    for takeaway in result["key_takeaways"]:
+        assert not takeaway.lower().startswith(("opportunity:", "challenge:", "action:", "resolution:"))
     assert 1 <= int(result["language_difficulty"]) <= 5
 
 
@@ -53,4 +54,5 @@ def test_rules_based_distill_finds_results():
     }
     result = _rules_based_distill(row)
     assert any("causal" in t.lower() or "demonstrate" in t.lower() for t in result["key_takeaways"])
-    assert all(":" in t for t in result["key_takeaways"])
+    for takeaway in result["key_takeaways"]:
+        assert not takeaway.lower().startswith(("opportunity:", "challenge:", "action:", "resolution:"))
