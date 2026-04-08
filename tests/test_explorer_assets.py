@@ -21,6 +21,8 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EXPLORER_MD = REPO_ROOT / "site" / "docs" / "explorer.md"
 EXPLORER_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "explorer.js"
+EXPLORER_UTILS_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "explorer" / "utils.js"
+EXPLORER_DEBUG_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "explorer" / "debug.js"
 CYTOSCAPE_JS = REPO_ROOT / "site" / "docs" / "javascripts" / "vendor" / "cytoscape.min.js"
 
 
@@ -82,21 +84,41 @@ def test_explorer_js_is_non_trivial(explorer_js_text: str) -> None:
     # The extracted file should be at least a few hundred lines / kilobytes.
     # If we ever accidentally truncate it we want a loud failure here.
     assert len(explorer_js_text) > 50_000, "explorer.js looks suspiciously small"
-    assert explorer_js_text.startswith("// ---- explorer boot diagnostics")
+    assert explorer_js_text.startswith("// Main explorer IIFE")
     assert explorer_js_text.rstrip().endswith("})();")
 
 
-def test_explorer_js_parses_with_node() -> None:
+def test_explorer_js_destructures_utils_module(explorer_js_text: str) -> None:
+    """The main IIFE should pull its pure helpers from window.MSKBExplorerUtils."""
+    assert "window.MSKBExplorerUtils" in explorer_js_text, (
+        "explorer.js should destructure helpers from window.MSKBExplorerUtils "
+        "rather than redefining them locally."
+    )
+    # Spot-check that a few helpers are pulled from the module rather than
+    # defined as top-level functions.
+    for helper in ("escapeHtml", "cleanNarrativeText", "normalizeNode", "bm25", "colorFor"):
+        assert f"function {helper}(" not in explorer_js_text, (
+            f"explorer.js still defines {helper} locally; it should come from utils.js."
+        )
+
+
+@pytest.mark.parametrize(
+    "path",
+    [EXPLORER_JS, EXPLORER_UTILS_JS, EXPLORER_DEBUG_JS],
+    ids=["explorer.js", "explorer/utils.js", "explorer/debug.js"],
+)
+def test_explorer_js_parses_with_node(path: Path) -> None:
     """Run `node --check` to catch parse-level breakage."""
     if shutil.which("node") is None:
         pytest.skip("node not available; skipping JS syntax check")
+    assert path.exists(), f"missing {path}"
     result = subprocess.run(
-        ["node", "--check", str(EXPLORER_JS)],
+        ["node", "--check", str(path)],
         capture_output=True,
         text=True,
     )
     assert result.returncode == 0, (
-        f"node --check failed for explorer.js:\n"
+        f"node --check failed for {path.name}:\n"
         f"stdout: {result.stdout}\nstderr: {result.stderr}"
     )
 
@@ -112,14 +134,28 @@ def test_cytoscape_vendor_bundle_present() -> None:
 
 def test_explorer_md_loads_cytoscape_then_explorer_js(explorer_md_text: str) -> None:
     cy_marker = '<script src="../javascripts/vendor/cytoscape.min.js">'
+    utils_marker = '<script src="../javascripts/explorer/utils.js">'
+    debug_marker = '<script src="../javascripts/explorer/debug.js">'
     js_marker = '<script src="../javascripts/explorer.js">'
     assert cy_marker in explorer_md_text, "cytoscape vendor script tag missing"
+    assert utils_marker in explorer_md_text, "explorer/utils.js script tag missing"
+    assert debug_marker in explorer_md_text, "explorer/debug.js script tag missing"
     assert js_marker in explorer_md_text, "explorer.js script tag missing"
     cy_idx = explorer_md_text.index(cy_marker)
+    utils_idx = explorer_md_text.index(utils_marker)
+    debug_idx = explorer_md_text.index(debug_marker)
     js_idx = explorer_md_text.index(js_marker)
     assert cy_idx < js_idx, (
         "cytoscape vendor must be loaded BEFORE explorer.js so window.cytoscape "
         "is defined when the IIFE runs."
+    )
+    assert utils_idx < js_idx, (
+        "explorer/utils.js must be loaded BEFORE explorer.js so the "
+        "MSKBExplorerUtils destructure at the top of the IIFE works."
+    )
+    assert debug_idx < js_idx, (
+        "explorer/debug.js must be loaded BEFORE explorer.js so window.__mskbDebug "
+        "is defined when the IIFE's fallback error path runs."
     )
 
 

@@ -144,4 +144,6 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
   </div>
 </div>
 
+<script src="../javascripts/explorer/utils.js"></script>
+<script src="../javascripts/explorer/debug.js"></script>
 <script src="../javascripts/explorer.js"></script>
