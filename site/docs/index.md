@@ -2,7 +2,7 @@
 
 <div class="landing-hero">
   <p><strong>MSKB</strong> is a navigable research map for undergraduate teams working in multiple sclerosis.</p>
-  <p>Move from mechanisms to trials to population health using topic clusters, plain-English summaries, and guided reading paths.</p>
+  <p>Move from mechanisms to trials to population health using research themes, plain-English summaries, and guided reading paths.</p>
   <div class="landing-kpis">
     <a class="kpi-pill kpi-link" href="topics/">Citation-network topics</a>
     <a class="kpi-pill kpi-link" href="topics/">Paper-level summaries</a>
@@ -30,7 +30,7 @@
 
 ## What You’ll Find
 
-- Topic clusters derived from citation communities (Louvain + concept labeling)
+- Research themes derived from citation communities (Louvain + concept labeling)
 - Plain-English paper cards with abstracts, takeaways, citation links, and BibTeX
 - A dynamic “core knowledge” filter using PageRank, k-core, and in-degree
 - A glossary for key immunology, imaging, and clinical vocabulary
