@@ -166,6 +166,43 @@
     showFatalOverlay("Explorer async error", `${msg}${stack}`);
   });
 
+  // Resize handling. On iOS Safari, rotating the device, showing/hiding
+  // the URL bar, or toggling the parameters <details> all change the
+  // container's size *after* cytoscape has initialized. Without an
+  // explicit cy.resize() call the canvas stays at the old dimensions and
+  // users see a cropped or blank graph. We listen on three surfaces so
+  // every real resize eventually triggers a refit:
+  //   - window resize / orientationchange (catches rotation and URL bar)
+  //   - ResizeObserver on #paper-graph (catches layout-only changes
+  //     like the parameters tray collapsing)
+  // Both paths debounce into a single resize+fit call.
+  let resizeTimer = null;
+  let lastRect = { w: 0, h: 0 };
+  function scheduleGraphResize() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resizeTimer = null;
+      if (!cy || typeof cy.resize !== "function") return;
+      const rect = graphEl ? graphEl.getBoundingClientRect() : { width: 0, height: 0 };
+      if (!(rect.width > 0 && rect.height > 0)) return;
+      if (Math.abs(rect.width - lastRect.w) < 1 && Math.abs(rect.height - lastRect.h) < 1) {
+        return;
+      }
+      lastRect = { w: rect.width, h: rect.height };
+      try {
+        cy.resize();
+        cy.fit(undefined, 30);
+      } catch (_) { /* never let a resize tear down the page */ }
+    }, 150);
+  }
+  window.addEventListener("resize", scheduleGraphResize);
+  window.addEventListener("orientationchange", scheduleGraphResize);
+  if (typeof ResizeObserver === "function" && graphEl) {
+    try {
+      new ResizeObserver(scheduleGraphResize).observe(graphEl);
+    } catch (_) { /* older Safari: fall back to window resize only */ }
+  }
+
   function decodeGraphPayload(payload) {
     if (payload && Array.isArray(payload.node_fields) && Array.isArray(payload.nodes)) {
       const fields = payload.node_fields;
@@ -607,6 +644,39 @@
       return false;
     }
 
+    // Cytoscape crashes internally (inside its renderer's event emitter —
+    // "undefined is not an object evaluating 'ee.emit'") if we hand it a
+    // container with 0x0 dimensions or zero nodes. Guard both cases.
+    if (!graphEl) {
+      showFatalOverlay("Explorer renderer failed to initialize", "#paper-graph is missing from the DOM.");
+      return false;
+    }
+    if (!visibleNodes.length) {
+      killRenderer();
+      graphEl.innerHTML = '<div style="padding:1rem 1.2rem;color:#555;font-family:ui-monospace,Menlo,Consolas,monospace;">No nodes match the current filters. Loosen the Core filter, lower Min in/out-degree, or uncheck &quot;Require abstract&quot; to see papers.</div>';
+      setGraphStatus("No nodes visible with current filters.", true);
+      return false;
+    }
+    {
+      const rect = graphEl.getBoundingClientRect();
+      if (!(rect.width > 0 && rect.height > 0)) {
+        // iOS Safari occasionally measures 0x0 the first tick (URL-bar
+        // layout thrash, reveal animations, details/summary collapse).
+        // Defer one rAF and retry; if it's still 0 just render anyway and
+        // let the resize observer fix it once layout settles.
+        if (window.__mskbDebug) window.__mskbDebug("buildCytoGraph: container=" + Math.round(rect.width) + "x" + Math.round(rect.height) + " (deferring 1 rAF)");
+        if (!buildCytoscapeGraph._retried) {
+          buildCytoscapeGraph._retried = true;
+          requestAnimationFrame(() => {
+            buildCytoscapeGraph._retried = false;
+            buildCytoscapeGraph(positionById);
+          });
+          return false;
+        }
+        buildCytoscapeGraph._retried = false;
+      }
+    }
+
     try {
       killRenderer();
 
@@ -679,13 +749,16 @@
         window.__mskbDebug("buildCytoGraph: nodes=" + visibleNodes.length + " edges=" + visibleEdges.length + " container=" + Math.round(rr2.width) + "x" + Math.round(rr2.height));
       }
 
+      // NOTE: textureOnViewport and hideEdgesOnViewport used to be on for
+      // perceived pan/zoom performance, but both trigger an internal
+      // renderer emitter path on iOS Safari that crashes on small graphs
+      // with "undefined is not an object (evaluating 'ee.emit')". We drop
+      // them here; the fix is cheap on desktop too.
       cy = CytoCtor({
         container: graphEl,
         elements: elements,
         layout: { name: "preset", fit: true, padding: 30 },
         pixelRatio: 1,
-        textureOnViewport: true,
-        hideEdgesOnViewport: true,
         motionBlur: false,
         autoungrabify: !dragEnabled || isMobileView,
         autounselectify: false,

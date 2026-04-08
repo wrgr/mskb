@@ -1,8 +1,14 @@
 // Explorer boot diagnostics: an on-page debug panel + unhandled-error
 // capture, extracted from explorer.js. Loaded as a classic <script> BEFORE
-// explorer.js so window.__mskbDebug is available when the main IIFE runs
-// and the boot diagnostics fire against the DOM that already exists above
-// the script tag in explorer.md.
+// explorer.js so window.__mskbDebug is available when the main IIFE runs.
+//
+// By default the visible green panel is OFF in production — it would
+// otherwise clutter every pageview. Activate it with:
+//   - ?mskbdebug=1 in the URL, or
+//   - localStorage.setItem("mskbdebug", "1") from DevTools
+// When disabled, window.__mskbDebug is still a function that logs to
+// console.log("[mskb]", ...) so we can grep Safari logs without a DOM
+// panel showing up for regular users.
 //
 // Kept out of explorer/utils.js because this file deliberately touches
 // window / document / console and is therefore not safely require-able
@@ -14,7 +20,20 @@
     return;
   }
 
+  function debugEnabled() {
+    try {
+      var search = (window.location && window.location.search) || "";
+      if (/[?&]mskbdebug=1\b/.test(search)) return true;
+      if (window.localStorage && window.localStorage.getItem("mskbdebug") === "1") return true;
+    } catch (_) { /* swallow (storage may throw in privacy modes) */ }
+    return false;
+  }
+
+  var PANEL_ON = debugEnabled();
+
   window.__mskbDebug = function (msg) {
+    if (window.console && console.log) console.log("[mskb]", msg);
+    if (!PANEL_ON) return;
     try {
       var panel = document.getElementById("mskb-debug-panel");
       if (!panel) {
@@ -35,7 +54,6 @@
       var t = new Date().toISOString().slice(11, 23);
       line.textContent = "[" + t + "] " + String(msg);
       panel.appendChild(line);
-      if (window.console && console.log) console.log("[mskb]", msg);
     } catch (_) { /* swallow */ }
   };
 
