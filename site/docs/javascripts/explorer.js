@@ -167,7 +167,47 @@ window.__mskbDebug = function (msg) {
     detailsFetchMs: 0,
     detailsParseMs: 0,
   };
-  let journeySelection = [];
+  const SELECTION_STORAGE_KEY = "mskb.explorer.selection.v1";
+  let journeySelection = loadStoredSelection();
+  const selectionCountEl = document.getElementById("selection-count");
+
+  function loadStoredSelection() {
+    try {
+      const raw = window.localStorage && window.localStorage.getItem(SELECTION_STORAGE_KEY);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) return [];
+      const seen = new Set();
+      const out = [];
+      for (const id of parsed) {
+        const s = String(id || "");
+        if (!s || seen.has(s)) continue;
+        seen.add(s);
+        out.push(s);
+      }
+      return out;
+    } catch (_) {
+      return [];
+    }
+  }
+
+  function persistSelection() {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify(journeySelection));
+      }
+    } catch (_) { /* swallow */ }
+  }
+
+  function pruneSelectionToCorpus() {
+    if (!journeySelection.length || !nodeById.size) return;
+    const before = journeySelection.length;
+    journeySelection = journeySelection.filter((id) => nodeById.has(id));
+    if (journeySelection.length !== before) {
+      persistSelection();
+    }
+  }
+
   let paperRankMap = new Map();
   let paperAgeRankMap = new Map();
   let authorStatsMap = new Map();
@@ -1544,6 +1584,7 @@ window.__mskbDebug = function (msg) {
     } else {
       journeySelection.push(id);
     }
+    persistSelection();
     invalidateCommunityCache();
     renderJourneySelection();
     if (selectedNodeId === id) {
@@ -1558,9 +1599,17 @@ window.__mskbDebug = function (msg) {
   }
 
   function clearJourneySelection() {
+    if (!journeySelection.length) return;
+    if (typeof window.confirm === "function" && !window.confirm("Clear all relevant papers from your working list?")) {
+      return;
+    }
     journeySelection = [];
+    persistSelection();
     invalidateCommunityCache();
     renderJourneySelection();
+    if (selectedNodeId) {
+      renderPaper(selectedNodeId);
+    }
   }
 
   function invalidateCommunityCache() {
@@ -1571,20 +1620,41 @@ window.__mskbDebug = function (msg) {
   }
 
   function renderJourneySelection() {
+    if (selectionCountEl) {
+      selectionCountEl.textContent = String(journeySelection.length);
+    }
+    if (!journeySelectedEl) return;
     if (!journeySelection.length) {
-      journeySelectedEl.innerHTML = "<p>No papers in selection yet. Use the <em>Add</em> buttons in the graph, search results, or paper details.</p>";
+      journeySelectedEl.innerHTML = `<p class="selection-empty">No papers added yet. Click any node in the graph to view its details, then use the <em>Add</em> button to build your relevant papers list. The list is saved in your browser and shared by every tool below.</p>`;
       return;
     }
-    journeySelectedEl.innerHTML = `
-      <p><strong>Working selection (${journeySelection.length})</strong></p>
-      <ol>
-        ${journeySelection.map((id) => {
-          const node = nodeById.get(id);
-          if (!node) return "";
-          return `<li>${renderActionButtons(node)} ${escapeHtml(node.title || "Untitled")}</li>`;
-        }).join("")}
-      </ol>
-    `;
+    const items = journeySelection.map((id, i) => {
+      const node = nodeById.get(id);
+      if (!node) {
+        return `<li class="selection-item"><span class="selection-index">${i + 1}.</span><div class="selection-title"><em>Unknown paper</em><span class="selection-meta">id: ${escapeHtml(id)} (not in current corpus)</span></div><div class="selection-actions"><button data-journey-toggle="${escapeHtml(id)}">Remove</button></div></li>`;
+      }
+      const yr = Number.isFinite(Number(node.year)) ? Math.trunc(Number(node.year)) : null;
+      const author = String(node.first_author || "").trim();
+      const metaParts = [];
+      if (author) metaParts.push(escapeHtml(author));
+      if (yr) metaParts.push(String(yr));
+      if (node.topic_label) metaParts.push(escapeHtml(node.topic_label));
+      const meta = metaParts.length ? `<span class="selection-meta">${metaParts.join(" · ")}</span>` : "";
+      return `
+        <li class="selection-item">
+          <span class="selection-index">${i + 1}.</span>
+          <div class="selection-title">
+            ${escapeHtml(node.title || "Untitled")}
+            ${meta}
+          </div>
+          <div class="selection-actions">
+            <button data-focus="${node.id}">Focus</button>
+            <button data-journey-toggle="${node.id}">Remove</button>
+          </div>
+        </li>
+      `;
+    }).join("");
+    journeySelectedEl.innerHTML = `<ol class="selection-list">${items}</ol>`;
   }
 
   function neighborOverlapWithSeeds(nodeId, seedSet) {
@@ -1959,6 +2029,8 @@ window.__mskbDebug = function (msg) {
   setGraphStatus("Loading explorer graph...");
   if (window.__mskbDebug) window.__mskbDebug("main IIFE: about to call loadCorpusPayload (mobile=" + isMobileView + ")");
   loadCorpusPayload(initialPayloadCandidates).then(function () {
+    pruneSelectionToCorpus();
+    renderJourneySelection();
     if (window.__mskbDebug) {
       window.__mskbDebug("after load: rawNodes=" + rawNodes.length + " rawEdges=" + rawEdges.length + " visibleNodes=" + visibleNodes.length + " visibleEdges=" + visibleEdges.length);
       window.__mskbDebug("after load: cy=" + (cy ? "yes" : "no") + (cy ? " " + cy.nodes().length + "n/" + cy.edges().length + "e" : ""));
@@ -2036,7 +2108,10 @@ window.__mskbDebug = function (msg) {
   }
   loadFullCorpusEl.addEventListener("click", () => {
     if (isMobileView || payloadMode === "full") return;
-    loadCorpusPayload([{ url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" }]);
+    loadCorpusPayload([{ url: fullDataUrl, detailsUrl: fullDetailsUrl, mode: "full", label: "full" }]).then(() => {
+      pruneSelectionToCorpus();
+      renderJourneySelection();
+    });
   });
   relayoutEl.addEventListener("click", () => {
     if (isMobileView) return;

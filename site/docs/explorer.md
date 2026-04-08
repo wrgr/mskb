@@ -69,40 +69,52 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 
 <div class="explorer-layout">
   <div id="paper-graph"></div>
-  <section class="paper-panel reveal">
-    <header class="paper-panel-head">
-      <h3>Selected paper</h3>
-      <span class="paper-panel-hint">Click any node in the graph to focus it.</span>
-    </header>
-    <div id="paper-details">Select a node to view summary, source link, and relationship choices.</div>
-    <div class="rel-grid">
-      <div class="rel-section">
-        <h4>Parents <small>(papers this one cites)</small></h4>
-        <div id="parent-links"></div>
-      </div>
-      <div class="rel-section">
-        <h4>Children <small>(papers that cite this one)</small></h4>
-        <div id="child-links"></div>
-      </div>
-      <div class="rel-section">
-        <h4>Related <small>(nearby in citation neighborhood)</small></h4>
-        <div id="related-links"></div>
-      </div>
-    </div>
-  </section>
 </div>
+
+<section class="paper-panel reveal">
+  <header class="paper-panel-head">
+    <h3>Selected paper</h3>
+    <span class="paper-panel-hint">Click any node in the graph to view its details below.</span>
+  </header>
+  <div id="paper-details">Select a node in the graph to view summary, source link, and relationship choices.</div>
+  <div class="rel-grid">
+    <div class="rel-section">
+      <h4>Parents <small>(papers this one cites)</small></h4>
+      <div id="parent-links"></div>
+    </div>
+    <div class="rel-section">
+      <h4>Children <small>(papers that cite this one)</small></h4>
+      <div id="child-links"></div>
+    </div>
+    <div class="rel-section">
+      <h4>Related <small>(nearby in citation neighborhood)</small></h4>
+      <div id="related-links"></div>
+    </div>
+  </div>
+</section>
+
+<section class="selection-panel reveal">
+  <header class="selection-panel-head">
+    <div>
+      <h3>Relevant papers <span id="selection-count" class="selection-count">0</span></h3>
+      <p class="selection-panel-hint">Build a working list of papers using the <em>Add</em> buttons in the graph, search results, and tool output. This list is shared by every tool below and is saved in your browser.</p>
+    </div>
+    <div class="explorer-actions selection-panel-actions">
+      <button id="journey-clear" type="button">Clear all</button>
+    </div>
+  </header>
+  <div id="journey-selected"></div>
+</section>
 
 <div class="tools-panel reveal">
   <h3>Tools</h3>
-  <p class="tools-intro">Add papers to your <strong>working selection</strong> using the <em>Add</em> buttons in the graph, search results, or paper details. The selection is shared between the Learning Path and Community Reading List tools.</p>
+  <p class="tools-intro">Each tool below operates on the <strong>Relevant papers</strong> list above (or, where applicable, on the visible graph corpus).</p>
   <div class="tool-grid">
     <section class="tool-card">
       <h4>Learning path</h4>
-      <p>Stage your selection into <em>foundations &rarr; bridges &rarr; deep dives</em> for self-paced study.</p>
-      <div id="journey-selected"></div>
+      <p>Stage your relevant papers into <em>foundations &rarr; bridges &rarr; deep dives</em> for self-paced study.</p>
       <div class="explorer-actions">
         <button id="journey-generate" type="button">Generate Learning Path</button>
-        <button id="journey-clear" type="button">Clear Selection</button>
       </div>
       <div id="journey-results"></div>
     </section>
@@ -137,7 +149,7 @@ Use this graph to inspect papers, follow citation paths, and turn a short resear
 
     <section class="tool-card">
       <h4>Community reading list</h4>
-      <p>Treat your selection as a community: compute graph stats, suggest companion papers, and export a markdown reading list (e.g. for a journal club).</p>
+      <p>Treat your relevant papers as a community: compute graph stats, suggest companion papers, and export a markdown reading list (e.g. for a journal club).</p>
       <div id="community-stats" class="community-stats"></div>
       <div class="explorer-actions">
         <button id="community-generate" type="button">Build Community Stats</button>
