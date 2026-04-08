@@ -27,17 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
       ".paper-card",
       ".top-idea",
       "#paper-graph",
+      ".paper-panel",
+      ".tools-panel",
       ".panel",
       ".md-typeset h2",
       ".md-typeset h3",
     ].join(", ")
   );
-  if (!targets.length) return;
+  // Also pick up any elements that statically declare `.reveal` in markup
+  // (e.g. inside explorer.md), so the IntersectionObserver actually unhides them.
+  const staticReveal = document.querySelectorAll(".reveal");
+  const allTargets = new Set([...targets, ...staticReveal]);
+  if (!allTargets.size) return;
 
-  targets.forEach((el) => el.classList.add("reveal"));
+  allTargets.forEach((el) => el.classList.add("reveal"));
 
   if (!("IntersectionObserver" in window)) {
-    targets.forEach((el) => el.classList.add("in-view"));
+    allTargets.forEach((el) => el.classList.add("in-view"));
     return;
   }
 
@@ -53,5 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
     { rootMargin: "0px 0px -6% 0px", threshold: 0.12 }
   );
 
-  targets.forEach((el) => observer.observe(el));
+  allTargets.forEach((el) => observer.observe(el));
 });
