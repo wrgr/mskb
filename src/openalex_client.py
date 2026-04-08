@@ -91,10 +91,16 @@ class OpenAlexClient:
             params = {"search": query, "per-page": min(self.per_page, max_results - len(results)), "cursor": cursor}
             if filter_expr:
                 params["filter"] = filter_expr
-            payload = self._get(
-                "/works",
-                params,
-            )
+            try:
+                payload = self._get(
+                    "/works",
+                    params,
+                )
+            except requests.HTTPError as exc:
+                if exc.response is not None and exc.response.status_code == 400:
+                    # Malformed query (e.g. journal-name fragment extracted as title); skip.
+                    break
+                raise
             page_results = payload.get("results", [])
             results.extend(page_results)
             meta = payload.get("meta", {})
