@@ -945,7 +945,7 @@ window.__mskbDebug = function (msg) {
         maxZoom: 4,
         style: [
           {
-            selector: "node",
+            selector: "node[baseColor]",
             style: {
               "background-color": "data(baseColor)",
               "width": "data(baseSize)",
