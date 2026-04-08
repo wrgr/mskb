@@ -191,30 +191,124 @@ body,
 .topic-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
 }
 
 .topic-card {
   display: block;
+  position: relative;
   border: 1px solid var(--mskb-border);
-  border-left: 4px solid var(--mskb-accent);
-  border-radius: 12px;
-  padding: 0.7rem 0.8rem;
-  background: color-mix(in oklab, var(--mskb-surface) 94%, transparent);
+  border-left: 6px solid var(--mskb-accent);
+  border-radius: 14px;
+  padding: 1.15rem 1.25rem 1.05rem;
+  background: color-mix(in oklab, var(--mskb-surface) 96%, transparent);
   box-shadow: var(--mskb-shadow);
+  text-decoration: none;
+  color: var(--mskb-ink);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.topic-card:hover,
+.topic-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--mskb-accent);
+  box-shadow: 0 14px 34px rgba(8, 42, 38, 0.14);
+  background: color-mix(in oklab, var(--mskb-accent) 6%, var(--mskb-surface));
+  text-decoration: none;
 }
 
 .topic-card strong {
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.55rem;
+  font-family: var(--mskb-font-heading);
+  font-size: clamp(1.2rem, 0.95rem + 0.9vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--mskb-ink);
+  letter-spacing: 0.005em;
 }
 
 .topic-card span {
   display: inline-block;
   margin-right: 0.4rem;
   color: var(--mskb-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.topic-category {
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.topic-category h2 {
+  font-family: var(--mskb-font-heading);
+  font-size: clamp(1.3rem, 1rem + 0.9vw, 1.85rem);
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid color-mix(in oklab, var(--mskb-accent) 40%, var(--mskb-border));
+}
+
+.topic-category p {
+  color: var(--mskb-muted);
+  margin-top: 0.2rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.topic-landing-hero {
+  border: 1px solid var(--mskb-border);
+  border-radius: 18px;
+  padding: 1.3rem 1.4rem 1.2rem;
+  background:
+    radial-gradient(circle at 92% -10%, color-mix(in oklab, var(--mskb-accent) 22%, transparent), transparent 60%),
+    color-mix(in oklab, var(--mskb-surface) 92%, transparent);
+  box-shadow: var(--mskb-shadow);
+  margin-bottom: 1.2rem;
+}
+
+.topic-landing-hero h2 {
+  font-family: var(--mskb-font-heading);
+  font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2.1rem);
+  margin: 0 0 0.25rem;
+}
+
+.topic-landing-hero p {
+  color: var(--mskb-muted);
+  margin: 0.2rem 0 0.7rem;
+  font-size: 1rem;
+}
+
+.topic-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.topic-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--mskb-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  background: color-mix(in oklab, var(--mskb-surface) 96%, transparent);
+  color: var(--mskb-ink);
+  font-weight: 650;
+  text-decoration: none;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
+}
+
+.topic-jump a:hover,
+.topic-jump a:focus-visible {
+  border-color: var(--mskb-accent);
+  background: color-mix(in oklab, var(--mskb-accent) 12%, var(--mskb-surface));
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .topic-hero {
@@ -732,6 +826,98 @@ body,
   font-size: 0.8rem;
   margin-right: 0.4rem;
   margin-bottom: 0.2rem;
+}
+
+.journey-phase {
+  margin-top: 0.9rem;
+  border: 1px solid var(--mskb-border);
+  border-left: 4px solid var(--mskb-accent);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  background: color-mix(in oklab, var(--mskb-surface) 96%, transparent);
+}
+
+.journey-phase h5 {
+  margin: 0 0 0.35rem;
+  font-family: var(--mskb-font-heading);
+  font-size: 1.05rem;
+}
+
+.journey-phase p {
+  margin: 0.15rem 0 0.5rem;
+  color: var(--mskb-muted);
+  font-size: 0.88rem;
+}
+
+.journey-phase ol {
+  margin: 0.2rem 0 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.journey-skills {
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--mskb-border);
+}
+
+.journey-skills strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mskb-accent);
+}
+
+.journey-skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+}
+
+.journey-skills li {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid color-mix(in oklab, var(--mskb-accent) 30%, var(--mskb-border));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--mskb-accent) 8%, var(--mskb-surface));
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--mskb-ink);
+}
+
+.journey-skills li.journey-skill--concept {
+  border-color: color-mix(in oklab, var(--mskb-accent) 45%, var(--mskb-border));
+}
+
+.journey-skills li details {
+  display: inline;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.journey-skills li details summary {
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+}
+
+.journey-skills li details[open] summary::after {
+  content: " —";
+  color: var(--mskb-muted);
+}
+
+.journey-skills li details p {
+  display: block;
+  margin: 0.3rem 0 0;
+  color: var(--mskb-muted);
+  font-weight: 400;
+  font-size: 0.8rem;
+  white-space: normal;
 }
 
 .md-typeset button,
