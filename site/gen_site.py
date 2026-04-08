@@ -295,6 +295,17 @@ def _extract_jargon_from_row(row: dict) -> list[dict]:
     return _parse_jargon_structured(raw)
 
 
+def _yaml_escape(value: str) -> str:
+    """Escape a string for use as a single-line YAML scalar."""
+    value = _clean_text(value).replace("\n", " ").strip()
+    if not value:
+        return '""'
+    needs_quote = any(ch in value for ch in ':#&*!|>%@`\'"') or value.startswith("-")
+    if needs_quote:
+        return '"' + value.replace('\\', '\\\\').replace('"', '\\"') + '"'
+    return value
+
+
 def _topic_concepts_block(paper_rows: list[dict], limit: int = 14) -> str:
     """Build a "Concepts & skills you'll learn" block for a topic page.
 
@@ -331,7 +342,7 @@ def _topic_concepts_block(paper_rows: list[dict], limit: int = 14) -> str:
     if not ranked:
         return ""
     lines = [
-        '<div class="info-panel reveal">',
+        '<div class="info-panel">',
         "<p>Working through this reading path builds fluency in the core vocabulary and techniques of the topic. "
         "Tap a concept to see its plain-English definition.</p>",
         '<div class="journey-skills">',
@@ -388,7 +399,7 @@ def _paper_card(row: dict) -> str:
     if difficulty_int is None:
         difficulty_int = _estimate_summary_language_difficulty(summary, takeaways)
 
-    lines.append('<article class="paper-card reveal">')
+    lines.append('<article class="paper-card">')
     lines.append(f"<h3>{html.escape(title)}</h3>")
     lines.append('<div class="paper-meta">')
     if year is not None:
@@ -407,13 +418,10 @@ def _paper_card(row: dict) -> str:
     if summary:
         lines.append("<h4>Plain-English Summary</h4>")
         lines.append(f'<p class="paper-summary">{html.escape(summary)}</p>')
-    if summary_source:
-        lines.append(f"<p><strong>Summary basis:</strong> {html.escape(summary_source)}</p>")
-    if summary_generated_at_utc or distill_method:
-        lines.append(
-            f"<p><strong>Summary provenance:</strong> method={html.escape(distill_method or 'unknown')}; "
-            f"generated={html.escape(summary_generated_at_utc or 'unknown')}; overlap={faithfulness_overlap:.2f}</p>"
-        )
+    # Provenance debug (summary basis / method / overlap) is intentionally
+    # omitted from the rendered pages — it was leaking pipeline internals into
+    # the learner-facing site. Provenance is still available in the CSVs.
+    del summary_source, summary_generated_at_utc, distill_method, faithfulness_overlap
 
     if takeaways:
         lines.append("<h4>Key Takeaways</h4>")
@@ -461,7 +469,7 @@ def _paper_card(row: dict) -> str:
 def _build_explorer_assets(
     root: Path,
     cfg: dict,
-    site_docs: Path,
+    assets_root: Path,
     paper_summaries: pd.DataFrame,
     paper_topics: pd.DataFrame,
     topic_clusters: pd.DataFrame,
@@ -723,7 +731,7 @@ def _build_explorer_assets(
         seen.add(key)
         edges.append({"source": source, "target": target, "type": "CITES"})
 
-    assets_dir = site_docs / "assets"
+    assets_dir = assets_root / "assets"
     assets_dir.mkdir(parents=True, exist_ok=True)
     generated_at_utc = datetime.now(timezone.utc).isoformat()
 
@@ -923,13 +931,16 @@ def generate(config_path: str) -> None:
     topics_dir = root / cfg["output_dir"] / "topics"
     distilled_dir = root / cfg["output_dir"] / "distilled"
     graph_dir = root / cfg["output_dir"] / "graph"
-    site_docs = root / "site" / "docs"
+    # Starlight content root (Astro). The pipeline writes directly into the
+    # content collection so no second migration step is needed.
+    site_docs = root / "site" / "src" / "content" / "docs"
+    # Explorer JSON payloads are shipped from the Astro public/ directory.
+    public_dir = root / "site" / "public"
 
     topics_out = site_docs / "topics"
     topics_out.mkdir(parents=True, exist_ok=True)
     for existing in topics_out.glob("*.md"):
-        if existing.name != "index.md":
-            existing.unlink(missing_ok=True)
+        existing.unlink(missing_ok=True)
 
     topic_clusters = pd.DataFrame()
     paper_topics = pd.DataFrame()
@@ -1017,7 +1028,18 @@ def generate(config_path: str) -> None:
         category_groups.setdefault(cat, []).append(cluster)
 
     # Generate topics index — lead with the topic labels so readers can zoom in quickly.
-    index_lines = ["# Browse by Research Theme\n"]
+    index_lines = [
+        "---",
+        "title: Citation topics",
+        "description: " + _yaml_escape(
+            "Research themes derived from the citation graph — each theme is a curated reading path with plain-English paper summaries."
+        ),
+        "sidebar:",
+        "  label: All topics",
+        "  order: 0",
+        "---",
+        "",
+    ]
     index_lines.append('<div class="topic-landing-hero">')
     index_lines.append('<h2>Pick a topic, then zoom in.</h2>')
     index_lines.append(
@@ -1075,19 +1097,25 @@ def generate(config_path: str) -> None:
         n = cluster["n_papers"]
         cat = cluster.get("dominant_category", "")
 
-        lines = [f"# {label}\n"]
-        lines.append('<div class="topic-hero reveal">')
-        lines.append('<div class="landing-kpis">')
-        lines.append(f'<span class="kpi-pill">Difficulty {_safe_int(diff, 3)}/5</span>')
-        lines.append(f'<span class="kpi-pill">{_safe_int(n)} papers</span>')
-        lines.append(f'<span class="kpi-pill">{html.escape(str(cat).replace("_", " ").title())}</span>')
-        lines.append("</div>")
-        lines.append("</div>\n")
+        cat_display = str(cat).replace("_", " ").title()
+        description = (
+            f"{cat_display} · {_safe_int(n)} papers · Difficulty {_safe_int(diff, 3)}/5"
+        )
+        sidebar_label = label.split(" / ")[0][:40]
+        lines = [
+            "---",
+            "title: " + _yaml_escape(label),
+            "description: " + _yaml_escape(description),
+            "sidebar:",
+            f"  label: {_yaml_escape(sidebar_label)}",
+            "---",
+            "",
+        ]
 
         overview = overview_map.get(tid, {})
         if overview.get("overview"):
             lines.append("## Overview\n")
-            lines.append(f'<div class="info-panel reveal"><p>{html.escape(_clean_text(overview["overview"]))}</p></div>')
+            lines.append(html.escape(_clean_text(overview["overview"])))
             lines.append("")
 
         # Reading path — render papers, and aggregate concepts/skills from their jargon.
@@ -1111,39 +1139,20 @@ def generate(config_path: str) -> None:
         if topic_paper_data:
             lines.append("## Reading Path\n")
             lines.append("Papers ordered by importance and pedagogic progression.\n")
+            lines.append('<div class="paper-stream">')
             for paper_data in topic_paper_data:
                 lines.append(_paper_card(paper_data))
+            lines.append("</div>")
 
         (topics_out / f"{slug}.md").write_text("\n".join(lines), encoding="utf-8")
 
-    _build_explorer_assets(root, cfg, site_docs, paper_summaries, paper_topics, topic_clusters)
-    # site/docs/explorer.md is hand-maintained (the JS was extracted to
-    # site/docs/javascripts/explorer.js in PR #13). The pipeline only refreshes
-    # the explorer payload assets above; the page markup itself is not generated.
+    _build_explorer_assets(root, cfg, public_dir, paper_summaries, paper_topics, topic_clusters)
+    # site/src/content/docs/explorer.mdx is hand-maintained; the vendor JS and
+    # explorer.js live in site/public/javascripts/. The pipeline only refreshes
+    # the explorer JSON payloads in site/public/assets/.
 
-    # Update nav in mkdocs.yml
-    mkdocs_path = root / "site" / "mkdocs.yml"
-    if mkdocs_path.exists():
-        with open(mkdocs_path, "r") as f:
-            mkdocs_cfg = yaml.safe_load(f)
-
-        topic_nav = [{"Overview": "topics/index.md"}]
-        for _, cluster in topic_clusters.iterrows():
-            label = cluster["auto_label"]
-            slug = _topic_slug(label, cluster["topic_id"])
-            topic_nav.append({label: f"topics/{slug}.md"})
-
-        mkdocs_cfg["nav"] = [
-            {"Home": "index.md"},
-            {"Getting Started": "getting-started.md"},
-            {"Topics": topic_nav},
-            {"Explorer": "explorer.md"},
-            {"Glossary": "glossary.md"},
-        ]
-        mkdocs_cfg["use_directory_urls"] = True
-
-        with open(mkdocs_path, "w") as f:
-            yaml.dump(mkdocs_cfg, f, default_flow_style=False, sort_keys=False)
+    # Starlight auto-generates the sidebar from directory contents (configured
+    # in astro.config.mjs), so there is no nav file to rewrite.
 
     print(f"Generated {len(topic_clusters)} topic pages in {topics_out}")
 

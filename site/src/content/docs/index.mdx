@@ -1,0 +1,87 @@
+---
+title: Multiple Sclerosis Knowledge Base
+description: A concept-first learning map for MS research, linked to the citation graph and curated resources.
+template: doc
+tableOfContents: false
+pagefind: true
+head:
+  - tag: meta
+    attrs:
+      name: robots
+      content: index, follow
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<div class="home-hero">
+  <h1>Learn multiple sclerosis by concept, not by pile.</h1>
+  <p>
+    MSKB is a concept-first map of MS research for undergraduate and early-graduate learners.
+    Start with a concept, see its prerequisites, and follow curated papers and resources —
+    or use the citation explorer to browse the literature network directly.
+  </p>
+  <div class="home-cta">
+    <a class="primary" href="/mskb/concepts/">Browse concepts</a>
+    <a href="/mskb/explorer/">Open explorer</a>
+  </div>
+</div>
+
+## Three layers, one learner journey
+
+MSKB is built from three coordinated layers. You can enter from any of them and move between them as you learn.
+
+<CardGrid>
+  <LinkCard
+    title="Layer A · Concept map"
+    href="/mskb/concepts/"
+    description="~80 MS concepts with prerequisites, learning objectives, and curated resources. Pick a concept and follow the prerequisite chain."
+  />
+  <LinkCard
+    title="Layer B · Citation graph"
+    href="/mskb/topics/"
+    description="Papers clustered into research topics by citation community. Use the explorer to navigate parents, children, and related papers."
+  />
+  <LinkCard
+    title="Layer C · Glossary & terms"
+    href="/mskb/glossary/"
+    description="Quick lookup for immunology, imaging, and clinical vocabulary used across the corpus."
+  />
+</CardGrid>
+
+## Pick a starting pathway
+
+<CardGrid>
+  <LinkCard
+    title="Clinical pathway"
+    href="/mskb/pathways/clinical/"
+    description="Symptom → diagnosis → classification → treatment. Best if you want to know what MS looks like in the clinic."
+  />
+  <LinkCard
+    title="Mechanistic pathway"
+    href="/mskb/pathways/mechanistic/"
+    description="Immune basics → inflammation → demyelination → therapeutic targets. Best if you want to know why MS happens."
+  />
+  <LinkCard
+    title="Emerging topics"
+    href="/mskb/pathways/emerging/"
+    description="PIRA, smoldering MS, paramagnetic rim lesions, BTK inhibitors. Best if you already know the basics."
+  />
+</CardGrid>
+
+## What makes a concept page
+
+Every concept page has the same structure:
+
+- **Learning objectives** — what you should be able to do after you understand it (tagged with Bloom's level)
+- **Prerequisites** — concepts you should understand first
+- **Specializes into / related** — where to go next
+- **Papers** — 3–7 foundational references from the citation graph
+- **Resources** — videos, tools, and datasets curated against a quality rubric
+
+Concepts, citations, and resources are kept **separate** on purpose. The citation graph answers *"what's the research landscape?"*; the concept map answers *"what should I learn next?"*; resources answer *"how do I learn it?"*.
+
+## How this was built
+
+MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology grounded in Bloom's taxonomy and cognitive load theory. The full architecture, governance checklist, and curation rubric are documented in [`EDUCATOR_INTEGRATION_GUIDE.md`](https://github.com/wrgr/mskb/blob/main/EDUCATOR_INTEGRATION_GUIDE.md).
+
+Pipeline source: [wrgr/mskb](https://github.com/wrgr/mskb). Derived from [connectome-kb](https://github.com/wrgr/connectome-kb).

@@ -9,16 +9,23 @@ if [[ ! -x ".venv/bin/python" ]]; then
   exit 1
 fi
 
-echo "[1/3] Generating docs + building site"
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm is required to build the Starlight site."
+  exit 1
+fi
+
+echo "[1/3] Generating topic pages + explorer payloads, then building Starlight"
 .venv/bin/python site/build_site.py --config config.yaml --strict
 
 echo "[2/3] Preflight checks for explorer assets"
 for p in \
-  "site/docs/explorer.md" \
-  "site/docs/assets/explorer_graph_lite.json" \
-  "site/docs/assets/explorer_details_lite.json" \
-  "site/docs/assets/explorer_graph.json" \
-  "site/docs/assets/explorer_details.json"
+  "site/src/content/docs/explorer.mdx" \
+  "site/public/javascripts/explorer.js" \
+  "site/public/assets/explorer_graph_lite.json" \
+  "site/public/assets/explorer_details_lite.json" \
+  "site/public/assets/explorer_graph.json" \
+  "site/public/assets/explorer_details.json" \
+  "site/dist/index.html"
 do
   if [[ ! -f "$p" ]]; then
     echo "Missing required file: $p"
@@ -26,7 +33,16 @@ do
   fi
 done
 
-echo "[3/3] Deploying to gh-pages"
-.venv/bin/python -m mkdocs gh-deploy -f site/mkdocs.yml --force
+echo "[3/3] Pushing site/dist to gh-pages branch"
+# Use the same publish strategy as the GitHub Actions workflow: orphaned
+# gh-pages branch built from site/dist. This relies on the `gh` CLI being
+# present locally; for unattended deploys use the GitHub Actions workflow.
+TMPDIR="$(mktemp -d)"
+trap 'rm -rf "$TMPDIR"' EXIT
+git worktree add "$TMPDIR" gh-pages 2>/dev/null || git worktree add -b gh-pages "$TMPDIR"
+rsync -a --delete --exclude '.git' site/dist/ "$TMPDIR"/
+(cd "$TMPDIR" && git add -A && git commit -m "Deploy site $(date -u +%Y-%m-%dT%H:%M:%SZ)" || true)
+(cd "$TMPDIR" && git push origin gh-pages)
+git worktree remove "$TMPDIR"
 
 echo "Done. Verify in GitHub Settings -> Pages that source is gh-pages /(root)."
