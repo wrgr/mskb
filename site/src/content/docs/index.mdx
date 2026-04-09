@@ -33,10 +33,11 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
     biomarkers now clinical-grade — the research literature can be overwhelming to enter.
   </p>
   <p>
-    MSKB is a free, openly-licensed learning map built for undergraduate and early-graduate
-    researchers. It organizes ~600 peer-reviewed papers into 18 research topics, links them
-    to 80+ learner-centered concepts, and curates videos, tools, and datasets alongside each concept.
-    Start with a concept, follow its prerequisites, and trace your way to the frontier.
+    MSKB is a free, openly-licensed learning map for undergraduate and early-graduate
+    researchers. It structures <strong>649 peer-reviewed papers</strong> (T1–T4 corpus, April 2026)
+    into 18 research topics, links them to 30 learner-centered concept pages,
+    and curates reading paths from foundations to frontier.
+    Start with a concept, follow its prerequisites, and trace your way into the literature.
   </p>
   <div class="home-cta">
     <a class="primary" href="/mskb/pathways/">Start with a pathway</a>
@@ -85,7 +86,7 @@ MSKB is built from three coordinated layers. You can enter from any of them and 
   <LinkCard
     title="Layer C · Citation explorer"
     href="/mskb/explorer/"
-    description="Browse the full citation graph — 450–650 papers — filtering by topic, PageRank, reading level, or citation depth."
+    description="Browse the canonical 649-paper citation graph, filtering by topic, centrality, reading level, or citation depth."
   />
 </CardGrid>
 
@@ -103,7 +104,7 @@ Concepts, citations, and resources are kept **separate** on purpose: the citatio
 
 ## About the corpus
 
-MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across 18 MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity and within-subdomain citation scores. Every design decision is documented.
+MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across 18 MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity, within-subdomain citation scores, and expert-signal curation. Every design decision is documented.
 
 <CardGrid>
   <LinkCard
@@ -112,14 +113,14 @@ MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score
     description="Target size, four-tier architecture, expansion sources, and quality gates."
   />
   <LinkCard
+    title="Methodology &amp; limitations"
+    href="/mskb/corpus/methodology/"
+    description="Full pipeline description, corpus statistics, known limitations, and transparency notes."
+  />
+  <LinkCard
     title="Design decisions"
     href="/mskb/corpus/design-decisions/"
     description="Audit trail — every significant design decision with explicit rationale."
-  />
-  <LinkCard
-    title="Topic map"
-    href="/mskb/corpus/topics/"
-    description="18 research topics + Natural History across Foundation, Clinical, and Context/Future layers."
   />
   <LinkCard
     title="Gap tracker"

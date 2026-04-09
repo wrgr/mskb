@@ -1,6 +1,6 @@
 ---
 title: Multiple Sclerosis Research Studies
-description: "Clinical Trials & Therapeutics · 815 papers"
+description: "Clinical Trials & Therapeutics · 12 papers"
 sidebar:
   label: Multiple Sclerosis Research Studies
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Medicine / Multiple sclerosis / Multiple Sclerosis Research Studies and contains 815 papers.
+This topic cluster covers Medicine / Multiple sclerosis / Multiple Sclerosis Research Studies and contains 12 papers.
 
 <p><em>Raw cluster label:</em> Medicine / Multiple sclerosis / Multiple Sclerosis Research Studies</p>
 

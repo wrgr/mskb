@@ -1,6 +1,6 @@
 ---
 title: Pathology
-description: "Imaging & Biomarkers · 1471 papers"
+description: "Imaging & Biomarkers · 61 papers"
 sidebar:
   label: Pathology
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Medicine / Internal medicine / Pathology and contains 1471 papers.
+This topic cluster covers Medicine / Internal medicine / Pathology and contains 61 papers.
 
 <p><em>Raw cluster label:</em> Medicine / Internal medicine / Pathology</p>
 

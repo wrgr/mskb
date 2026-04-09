@@ -1,125 +1,684 @@
 {
-  "version": 1,
+  "_generated_by": "build from T1+T2+T3+T4 corpus (649 papers)",
+  "_note": "Derived from canonical T1+T2+T3+T4 scoped graph. Regenerate after pipeline rerun.",
   "concepts": {
-    "b_cell_therapies": {
-      "foundational": [],
-      "advanced": []
-    },
-    "bladder_bowel_dysfunction": {
-      "foundational": [],
-      "advanced": []
-    },
-    "blood_brain_barrier": {
-      "foundational": [],
-      "advanced": []
-    },
-    "btk_inhibitors": {
-      "foundational": [],
-      "advanced": []
-    },
-    "cognition_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "csf_biomarkers": {
-      "foundational": [],
-      "advanced": []
-    },
-    "demyelination_remyelination": {
-      "foundational": [],
-      "advanced": []
-    },
-    "depression_anxiety_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "disease_course": {
-      "foundational": [],
-      "advanced": []
-    },
-    "dmt_overview": {
-      "foundational": [],
-      "advanced": []
-    },
-    "ebv_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "environmental_risk_factors": {
-      "foundational": [],
-      "advanced": []
-    },
-    "equity_sdoh": {
-      "foundational": [],
-      "advanced": []
-    },
-    "fatigue_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "genetic_susceptibility": {
-      "foundational": [],
-      "advanced": []
-    },
-    "immune_system_basics": {
-      "foundational": [],
-      "advanced": []
-    },
-    "mcdonald_criteria": {
-      "foundational": [],
-      "advanced": []
-    },
-    "mri_patterns": {
-      "foundational": [],
-      "advanced": []
+    "what_is_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6"
+      ],
+      "advanced": [
+        "cfda84294c6b892ebbd7c1efff0b7afb",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098"
+      ],
+      "rationales": {}
     },
     "ms_epidemiology": {
-      "foundational": [],
-      "advanced": []
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "51eb2aa90d450a375b2869dd85e8b9d7",
+        "1b9c675a434b0249154a2443adfb9c52",
+        "6d8489df9953235b9db14617634bb7f4"
+      ],
+      "advanced": [
+        "6b77d37902e3cc2c5c3e0deb04c72a65",
+        "2b252b02bdc99fa12db744fb1ecf7243",
+        "746b4621c05f13bab10c519ef3efcb0c",
+        "9aafebf4725f952505a2f96ca42b9d27",
+        "933d2e003219c08c60761084f41a8790",
+        "40b2412b060a65cc34f4d790102d0f8c",
+        "69eb9d62d493757b9b5d356736bb1041",
+        "915a0e4d10533766d6c79ea9ac4d50d0"
+      ],
+      "rationales": {}
     },
-    "ms_phenotypes": {
-      "foundational": [],
-      "advanced": []
+    "immune_system_basics": {
+      "foundational": [
+        "dd050edd43edfb032001cbd6c46d638c",
+        "2ea62baa88b1d7f0b3ba441a5cd7dc6e",
+        "ab642b9255f962f00084042f2154bb2b",
+        "8f74f55a5ffdbf102e55a123fa031090",
+        "7cc218c2a28e03eb000441efcf3bfa2a",
+        "df9088c44cf01dde59d662581fc253da",
+        "bedbd9f89ae755763e7157321ba83f3e",
+        "8d2354c36285c5163f378dee31071b0e"
+      ],
+      "advanced": [
+        "a1c229f51b5c7e7e2ea08f8ed1bee5e7",
+        "15991b1d49f0ddd7500826c3893c81a3",
+        "c853d06822022037fb6972b7a567afc5",
+        "9298725bc7c8805af9681cfeba3bbabb",
+        "b4ebe41bd1a03714cf45c362d4bd8f0d",
+        "0f219b3b7566ca251b64135ad6ff3f3d",
+        "c64b243a85cfddaecd548fbccfea7f49",
+        "7c1b4bce7393e41f9b0ff70e459657af"
+      ],
+      "rationales": {}
+    },
+    "demyelination_remyelination": {
+      "foundational": [
+        "225f4792a2e3d57c6b65813382e955fc",
+        "d6ec96bd4c56cb827b47625ed36f2318",
+        "e5d9ce9e69921545837f9e2ab38589b0",
+        "ac493a2b3c0e1da06953d27942d421ff",
+        "a2bc642cc464e27bdfc808b7753ac635",
+        "75b1b62c647536543a29ed425646c064",
+        "bdfca4616a1b784261a99a6e618077c9",
+        "a658576ea70fd9b436f25cc4b62a4c53"
+      ],
+      "advanced": [
+        "41f3e3ef026957b227e23d76d752e210",
+        "3e8a4a957c9835df1e6a2240a5c566dc",
+        "2d99fb2803d7a3271478013323dfaa0e",
+        "4ddc284e668a26d39fa07cd15083a75c",
+        "5a688b6dbc671fe8137dd92fd8616e1c",
+        "0f064a13ad8b7917d9dc15e9eab177d5",
+        "68811557b636031edcb9a53a7234ddc6",
+        "739fc182f92147c92436cd5c48064b55"
+      ],
+      "rationales": {}
+    },
+    "blood_brain_barrier": {
+      "foundational": [
+        "225f4792a2e3d57c6b65813382e955fc",
+        "d6ec96bd4c56cb827b47625ed36f2318",
+        "e5d9ce9e69921545837f9e2ab38589b0",
+        "ac493a2b3c0e1da06953d27942d421ff",
+        "a2bc642cc464e27bdfc808b7753ac635",
+        "75b1b62c647536543a29ed425646c064",
+        "bdfca4616a1b784261a99a6e618077c9",
+        "a658576ea70fd9b436f25cc4b62a4c53"
+      ],
+      "advanced": [
+        "41f3e3ef026957b227e23d76d752e210",
+        "3e8a4a957c9835df1e6a2240a5c566dc",
+        "2d99fb2803d7a3271478013323dfaa0e",
+        "4ddc284e668a26d39fa07cd15083a75c",
+        "5a688b6dbc671fe8137dd92fd8616e1c",
+        "0f064a13ad8b7917d9dc15e9eab177d5",
+        "68811557b636031edcb9a53a7234ddc6",
+        "739fc182f92147c92436cd5c48064b55"
+      ],
+      "rationales": {}
+    },
+    "genetic_susceptibility": {
+      "foundational": [
+        "dd050edd43edfb032001cbd6c46d638c",
+        "2ea62baa88b1d7f0b3ba441a5cd7dc6e",
+        "ab642b9255f962f00084042f2154bb2b",
+        "8f74f55a5ffdbf102e55a123fa031090",
+        "7cc218c2a28e03eb000441efcf3bfa2a",
+        "df9088c44cf01dde59d662581fc253da",
+        "bedbd9f89ae755763e7157321ba83f3e",
+        "8d2354c36285c5163f378dee31071b0e"
+      ],
+      "advanced": [
+        "a1c229f51b5c7e7e2ea08f8ed1bee5e7",
+        "15991b1d49f0ddd7500826c3893c81a3",
+        "c853d06822022037fb6972b7a567afc5",
+        "9298725bc7c8805af9681cfeba3bbabb",
+        "b4ebe41bd1a03714cf45c362d4bd8f0d",
+        "0f219b3b7566ca251b64135ad6ff3f3d",
+        "c64b243a85cfddaecd548fbccfea7f49",
+        "7c1b4bce7393e41f9b0ff70e459657af"
+      ],
+      "rationales": {}
+    },
+    "environmental_risk_factors": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "51eb2aa90d450a375b2869dd85e8b9d7",
+        "13e45ab1959b154ba05577dc160acbc7",
+        "746b4621c05f13bab10c519ef3efcb0c",
+        "d8829a17076dc7b6b4678c5aea8e2db1",
+        "22092527fa6e11b1e5ab3a6336e4353d",
+        "f5caf3b516e5ce50ec285c0e363c35d9"
+      ],
+      "advanced": [
+        "730f37ee5280dd8a2485d8573094c34b",
+        "82444830e7527570a0e9037e50c46eb2",
+        "675b163134c56749010c672cdf8ad285",
+        "9005f423e1d5c8dae7c12e96da455621",
+        "fb0218650738dce7b084a4d0dfff68db",
+        "2ca69f3cc838e7356d8ebf3e185796be",
+        "ad6ada838b6bf3f679151af2545ff538",
+        "1c45726403fd26e7ca64ed84525c559e"
+      ],
+      "rationales": {}
+    },
+    "ebv_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "51eb2aa90d450a375b2869dd85e8b9d7",
+        "13e45ab1959b154ba05577dc160acbc7",
+        "746b4621c05f13bab10c519ef3efcb0c",
+        "d8829a17076dc7b6b4678c5aea8e2db1",
+        "22092527fa6e11b1e5ab3a6336e4353d",
+        "f5caf3b516e5ce50ec285c0e363c35d9"
+      ],
+      "advanced": [
+        "730f37ee5280dd8a2485d8573094c34b",
+        "82444830e7527570a0e9037e50c46eb2",
+        "675b163134c56749010c672cdf8ad285",
+        "9005f423e1d5c8dae7c12e96da455621",
+        "fb0218650738dce7b084a4d0dfff68db",
+        "2ca69f3cc838e7356d8ebf3e185796be",
+        "ad6ada838b6bf3f679151af2545ff538",
+        "1c45726403fd26e7ca64ed84525c559e"
+      ],
+      "rationales": {}
     },
     "neuroinflammation": {
-      "foundational": [],
-      "advanced": []
+      "foundational": [
+        "225f4792a2e3d57c6b65813382e955fc",
+        "d6ec96bd4c56cb827b47625ed36f2318",
+        "e5d9ce9e69921545837f9e2ab38589b0",
+        "dd050edd43edfb032001cbd6c46d638c",
+        "ac493a2b3c0e1da06953d27942d421ff",
+        "a2bc642cc464e27bdfc808b7753ac635",
+        "75b1b62c647536543a29ed425646c064",
+        "2ea62baa88b1d7f0b3ba441a5cd7dc6e"
+      ],
+      "advanced": [
+        "ab642b9255f962f00084042f2154bb2b",
+        "8f74f55a5ffdbf102e55a123fa031090",
+        "7cc218c2a28e03eb000441efcf3bfa2a",
+        "bdfca4616a1b784261a99a6e618077c9",
+        "a658576ea70fd9b436f25cc4b62a4c53",
+        "41f3e3ef026957b227e23d76d752e210",
+        "2d99fb2803d7a3271478013323dfaa0e",
+        "4ddc284e668a26d39fa07cd15083a75c"
+      ],
+      "rationales": {}
+    },
+    "mcdonald_criteria": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
+    },
+    "mri_patterns": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
+    },
+    "csf_biomarkers": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "225f4792a2e3d57c6b65813382e955fc",
+        "d6ec96bd4c56cb827b47625ed36f2318",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "e5d9ce9e69921545837f9e2ab38589b0",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "ac493a2b3c0e1da06953d27942d421ff",
+        "1b9c675a434b0249154a2443adfb9c52"
+      ],
+      "advanced": [
+        "6d8489df9953235b9db14617634bb7f4",
+        "6b77d37902e3cc2c5c3e0deb04c72a65",
+        "a2bc642cc464e27bdfc808b7753ac635",
+        "2b252b02bdc99fa12db744fb1ecf7243",
+        "75b1b62c647536543a29ed425646c064",
+        "bdfca4616a1b784261a99a6e618077c9",
+        "a658576ea70fd9b436f25cc4b62a4c53",
+        "41f3e3ef026957b227e23d76d752e210"
+      ],
+      "rationales": {}
+    },
+    "ms_phenotypes": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
     },
     "paramagnetic_rim_lesions": {
-      "foundational": [],
-      "advanced": []
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
     },
-    "pediatric_ms": {
-      "foundational": [],
-      "advanced": []
+    "dmt_overview": {
+      "foundational": [
+        "ea31c0895c674247573c455d363dbb20",
+        "78d5f7580ff63ca98598392558f5274d",
+        "d9b3b7fe443d36924c673434a27ae08e",
+        "9c65af9cba92675e236848f797bc5664",
+        "9fd24e8d092a2e49f46e96821cc102a8",
+        "7ddd757c3885c0d2f59adac2d26505e1",
+        "a760d6574c8cbcd5a8f339b88bcf8ba4",
+        "c6eb5a0adde048787c1150c4dcab39a2"
+      ],
+      "advanced": [
+        "6074717774ef998b58e2e792569881ec",
+        "c35e07055ec20c5b90deb386ee340394",
+        "1d18276976ef22170fd310a18489f377",
+        "24144108a1bd9ed94777c141c9fe52d6"
+      ],
+      "rationales": {}
     },
-    "pira_smoldering_ms": {
-      "foundational": [],
-      "advanced": []
+    "b_cell_therapies": {
+      "foundational": [
+        "ea31c0895c674247573c455d363dbb20",
+        "dd050edd43edfb032001cbd6c46d638c",
+        "2ea62baa88b1d7f0b3ba441a5cd7dc6e",
+        "ab642b9255f962f00084042f2154bb2b",
+        "8f74f55a5ffdbf102e55a123fa031090",
+        "7cc218c2a28e03eb000441efcf3bfa2a",
+        "df9088c44cf01dde59d662581fc253da",
+        "bedbd9f89ae755763e7157321ba83f3e"
+      ],
+      "advanced": [
+        "8d2354c36285c5163f378dee31071b0e",
+        "a1c229f51b5c7e7e2ea08f8ed1bee5e7",
+        "15991b1d49f0ddd7500826c3893c81a3",
+        "c853d06822022037fb6972b7a567afc5",
+        "9298725bc7c8805af9681cfeba3bbabb",
+        "b4ebe41bd1a03714cf45c362d4bd8f0d",
+        "0f219b3b7566ca251b64135ad6ff3f3d",
+        "c64b243a85cfddaecd548fbccfea7f49"
+      ],
+      "rationales": {}
     },
-    "pregnancy_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "rehabilitation_exercise": {
-      "foundational": [],
-      "advanced": []
-    },
-    "sex_gender_ms": {
-      "foundational": [],
-      "advanced": []
-    },
-    "shared_decision_making": {
-      "foundational": [],
-      "advanced": []
+    "btk_inhibitors": {
+      "foundational": [
+        "ea31c0895c674247573c455d363dbb20",
+        "78d5f7580ff63ca98598392558f5274d",
+        "d9b3b7fe443d36924c673434a27ae08e",
+        "9c65af9cba92675e236848f797bc5664",
+        "9fd24e8d092a2e49f46e96821cc102a8",
+        "7ddd757c3885c0d2f59adac2d26505e1",
+        "a760d6574c8cbcd5a8f339b88bcf8ba4",
+        "c6eb5a0adde048787c1150c4dcab39a2"
+      ],
+      "advanced": [
+        "6074717774ef998b58e2e792569881ec",
+        "c35e07055ec20c5b90deb386ee340394",
+        "1d18276976ef22170fd310a18489f377",
+        "24144108a1bd9ed94777c141c9fe52d6"
+      ],
+      "rationales": {}
     },
     "treatment_monitoring": {
-      "foundational": [],
-      "advanced": []
+      "foundational": [
+        "ea31c0895c674247573c455d363dbb20",
+        "78d5f7580ff63ca98598392558f5274d",
+        "d9b3b7fe443d36924c673434a27ae08e",
+        "9c65af9cba92675e236848f797bc5664",
+        "9fd24e8d092a2e49f46e96821cc102a8",
+        "7ddd757c3885c0d2f59adac2d26505e1",
+        "a760d6574c8cbcd5a8f339b88bcf8ba4",
+        "c6eb5a0adde048787c1150c4dcab39a2"
+      ],
+      "advanced": [
+        "6074717774ef998b58e2e792569881ec",
+        "c35e07055ec20c5b90deb386ee340394",
+        "1d18276976ef22170fd310a18489f377",
+        "24144108a1bd9ed94777c141c9fe52d6"
+      ],
+      "rationales": {}
     },
-    "what_is_ms": {
-      "foundational": [],
-      "advanced": []
+    "disease_course": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "pira_smoldering_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "cognition_ms": {
+      "foundational": [
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "225f4792a2e3d57c6b65813382e955fc",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "d6ec96bd4c56cb827b47625ed36f2318",
+        "99b45a8213ee1867e10a9344b4fe5db6"
+      ],
+      "advanced": [
+        "cfda84294c6b892ebbd7c1efff0b7afb",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "e5d9ce9e69921545837f9e2ab38589b0",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ac493a2b3c0e1da06953d27942d421ff",
+        "ed52f1142535e802d7df6961f23eb512"
+      ],
+      "rationales": {}
+    },
+    "pregnancy_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "fatigue_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "bladder_bowel_dysfunction": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
+    },
+    "depression_anxiety_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "rehabilitation_exercise": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc",
+        "51eb2aa90d450a375b2869dd85e8b9d7"
+      ],
+      "rationales": {}
+    },
+    "shared_decision_making": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "ea31c0895c674247573c455d363dbb20",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6"
+      ],
+      "advanced": [
+        "cfda84294c6b892ebbd7c1efff0b7afb",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512"
+      ],
+      "rationales": {}
+    },
+    "pediatric_ms": {
+      "foundational": [
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "1ab813d2f87432ead481a99a3c3909f7",
+        "10d94ef31b459d6a188fca3faf88fb44",
+        "9ec641a9d3aecf3127df762cf059f582",
+        "3be219c79ed6acd2d1696e3bbda3da2f",
+        "a076e268d7706f1a9aa86bbf8cf02558",
+        "99b45a8213ee1867e10a9344b4fe5db6",
+        "cfda84294c6b892ebbd7c1efff0b7afb"
+      ],
+      "advanced": [
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "77a64bb1f2f8935539a668023d8bb96a",
+        "2daf1fa5752b68655d14f66cf15729c8",
+        "cff13def8cf1a22f2734334016eb99a5",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "a5582b30a3de4ae4e46a40078d695098",
+        "ed52f1142535e802d7df6961f23eb512",
+        "1d44380f4643434c432fbb73e2ee01fc"
+      ],
+      "rationales": {}
+    },
+    "equity_sdoh": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "51eb2aa90d450a375b2869dd85e8b9d7",
+        "1b9c675a434b0249154a2443adfb9c52",
+        "6d8489df9953235b9db14617634bb7f4"
+      ],
+      "advanced": [
+        "6b77d37902e3cc2c5c3e0deb04c72a65",
+        "2b252b02bdc99fa12db744fb1ecf7243",
+        "746b4621c05f13bab10c519ef3efcb0c",
+        "9aafebf4725f952505a2f96ca42b9d27",
+        "933d2e003219c08c60761084f41a8790",
+        "40b2412b060a65cc34f4d790102d0f8c",
+        "69eb9d62d493757b9b5d356736bb1041",
+        "915a0e4d10533766d6c79ea9ac4d50d0"
+      ],
+      "rationales": {}
+    },
+    "sex_gender_ms": {
+      "foundational": [
+        "5d4d6b78d72bf344da7a438287013397",
+        "86e3107d354907a0704e6f10f10b5bdb",
+        "e7f3950da40b2549bf7eb222752d21d3",
+        "698387817a5c6806599cf1f9b7e1a910",
+        "8260be4d16f19ad2df7970c2366e5852",
+        "51eb2aa90d450a375b2869dd85e8b9d7",
+        "1b9c675a434b0249154a2443adfb9c52",
+        "6d8489df9953235b9db14617634bb7f4"
+      ],
+      "advanced": [
+        "6b77d37902e3cc2c5c3e0deb04c72a65",
+        "2b252b02bdc99fa12db744fb1ecf7243",
+        "746b4621c05f13bab10c519ef3efcb0c",
+        "9aafebf4725f952505a2f96ca42b9d27",
+        "933d2e003219c08c60761084f41a8790",
+        "40b2412b060a65cc34f4d790102d0f8c",
+        "69eb9d62d493757b9b5d356736bb1041",
+        "915a0e4d10533766d6c79ea9ac4d50d0"
+      ],
+      "rationales": {}
     }
   }
 }

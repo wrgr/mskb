@@ -1,6 +1,6 @@
 ---
 title: Multiple sclerosis
-description: "Imaging & Biomarkers · 4181 papers"
+description: "Imaging & Biomarkers · 145 papers"
 sidebar:
   label: Multiple sclerosis
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Medicine / Multiple sclerosis / Biology and contains 4181 papers.
+This topic cluster covers Medicine / Multiple sclerosis / Biology and contains 145 papers.
 
 <p><em>Raw cluster label:</em> Medicine / Multiple sclerosis / Biology</p>
 

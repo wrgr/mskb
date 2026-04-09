@@ -30,6 +30,33 @@
   --mskb-rule: color-mix(in srgb, currentColor 12%, transparent);
   --mskb-muted: color-mix(in srgb, currentColor 64%, transparent);
   --mskb-subtle-bg: color-mix(in srgb, currentColor 4%, transparent);
+
+  /* Accessibility: consistent focus ring used across all interactive elements. */
+  --mskb-focus-ring: 2px solid var(--sl-color-accent);
+  --mskb-focus-offset: 2px;
+}
+
+/* ===================================================================== */
+/* Accessibility — focus management                                        */
+/* ===================================================================== */
+
+/* Keyboard-visible focus rings on every interactive element.
+   :focus-visible targets keyboard/programmatic focus only, not mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+details summary:focus-visible {
+  outline: var(--mskb-focus-ring);
+  outline-offset: var(--mskb-focus-offset);
+  border-radius: 2px;
+}
+
+/* Remove the default outline only for mouse users. */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Lean, neutral reading widths. Starlight's default is already good; we just
@@ -152,12 +179,17 @@
 .concept-graph a {
   display: block;
   padding: 0.2rem 0;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
   border-bottom: 0;
+  transition: text-decoration-color 0.12s;
 }
 
-.concept-graph a:hover {
+.concept-graph a:hover,
+.concept-graph a:focus-visible {
   color: var(--sl-color-accent);
+  text-decoration-color: var(--sl-color-accent);
 }
 
 .concept-graph .empty {
@@ -461,33 +493,80 @@
 }
 
 .home-cta {
-  display: inline-flex;
-  gap: 0.7rem;
-  margin-top: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
 }
 
 .home-cta a {
-  display: inline-block;
-  padding: 0.55rem 1.1rem;
-  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: 550;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-height: 44px;   /* WCAG 2.5.8 — minimum target size */
+  transition: background 0.12s, color 0.12s;
 }
 
 .home-cta a.primary {
   background: var(--sl-color-accent);
-  color: var(--sl-color-white);
+  color: #ffffff;
   border-color: var(--sl-color-accent);
 }
 
-.home-cta a.primary:hover {
-  background: var(--sl-color-accent-high);
-  color: var(--sl-color-accent-low);
+.home-cta a.primary:hover,
+.home-cta a.primary:focus-visible {
+  background: color-mix(in srgb, var(--sl-color-accent) 85%, black);
+  border-color: color-mix(in srgb, var(--sl-color-accent) 85%, black);
+}
+
+.home-cta a:not(.primary):hover,
+.home-cta a:not(.primary):focus-visible {
+  background: var(--mskb-subtle-bg);
+}
+
+/* ===================================================================== */
+/* Skip-to-content helper (Starlight adds one; this ensures our styles    */
+/* don't inadvertently hide it)                                           */
+/* ===================================================================== */
+.sl-skip-to-content a:focus-visible {
+  outline: var(--mskb-focus-ring);
+  outline-offset: 4px;
 }
 
 /* ===================================================================== */
 /* Explorer page — keep the tool dense, but strip the chrome              */
 /* ===================================================================== */
+
+/* Guide cards shown above the graph */
+.explorer-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.6rem;
+  margin: 0.6rem 0 1rem;
+}
+
+.guide-card {
+  border-left: 3px solid var(--sl-color-accent);
+  padding: 0.55rem 0.75rem;
+  background: color-mix(in srgb, var(--sl-color-accent) 5%, transparent);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  border-radius: 0 3px 3px 0;
+}
+
+.guide-card strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--sl-color-accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
 
 .explorer-shell {
   margin: 1rem 0 2rem;
@@ -542,10 +621,12 @@
   font: inherit;
   font-size: 0.85rem;
   padding: 0.3rem 0.7rem;
+  min-height: 36px;     /* comfortable click target */
   background: transparent;
   border: 1px solid currentColor;
   color: inherit;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .explorer-shell button:hover {
@@ -841,5 +922,96 @@
   .mskb-sigma-stage,
   .mskb-graph-canvas {
     min-height: 24rem;
+  }
+}
+
+/* ===================================================================== */
+/* Kid journey page                                                        */
+/* ===================================================================== */
+
+.kid-journey-hero {
+  background: color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+  border-left: 4px solid var(--sl-color-accent);
+  padding: 1rem 1.25rem 1.1rem;
+  margin-bottom: 1.8rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.kid-journey-hero h2 {
+  margin-top: 0;
+  border-top: 0;
+  color: var(--sl-color-accent);
+}
+
+.paper-stream--kid .paper-card {
+  border-left: 2px solid var(--sl-color-accent);
+  padding-left: 0.85rem;
+  border-bottom: 0;
+  margin-bottom: 0.9rem;
+}
+
+/* ===================================================================== */
+/* Methodology / transparency page stats grid                             */
+/* ===================================================================== */
+
+.corpus-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.8rem;
+}
+
+.stat-card {
+  border: 1px solid var(--mskb-rule);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--sl-color-accent);
+  line-height: 1.1;
+}
+
+.stat-card .stat-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--mskb-muted);
+  margin-top: 0.2rem;
+}
+
+/* ===================================================================== */
+/* Accessibility — high-contrast mode support                             */
+/* ===================================================================== */
+
+@media (forced-colors: active) {
+  .home-cta a.primary,
+  .mskb-add button,
+  .explorer-shell .btn-add {
+    forced-color-adjust: none;
+    background: ButtonText;
+    color: ButtonFace;
+    border-color: ButtonText;
+  }
+
+  .kpi-pill,
+  .mskb-chip {
+    border-color: ButtonText;
+  }
+}
+
+/* ===================================================================== */
+/* Print styles — hide interactive chrome, show clean reading content     */
+/* ===================================================================== */
+
+@media print {
+  .explorer-shell,
+  .journey-shell,
+  .home-cta,
+  .mskb-graph-root {
+    display: none;
   }
 }

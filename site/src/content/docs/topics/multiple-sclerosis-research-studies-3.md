@@ -1,6 +1,6 @@
 ---
 title: Multiple Sclerosis Research Studies
-description: "Imaging & Biomarkers · 3666 papers"
+description: "Imaging & Biomarkers · 206 papers"
 sidebar:
   label: Multiple Sclerosis Research Studies
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis and contains 3666 papers.
+This topic cluster covers Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis and contains 206 papers.
 
 <p><em>Raw cluster label:</em> Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis</p>
 
