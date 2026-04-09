@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CACHE_PATH = REPO_ROOT / "data" / "concept_papers.json"
 CONCEPTS_ROOT = REPO_ROOT / "site" / "src" / "content" / "docs" / "concepts"
 SCORED_PAPERS_PATH = REPO_ROOT / "outputs" / "graph" / "scored_papers.csv"
+EXPLORER_GRAPH_PATH = REPO_ROOT / "site" / "public" / "assets" / "explorer_graph.json"
 
 
 def _load_concept_ids_from_disk() -> set[str]:
@@ -36,7 +37,14 @@ def _load_concept_ids_from_disk() -> set[str]:
 
 
 def _load_valid_paper_ids() -> set[str]:
-    assert SCORED_PAPERS_PATH.exists(), f"missing {SCORED_PAPERS_PATH}"
+    # Prefer the explorer graph (canonical scoped corpus) over the pipeline CSV.
+    # The CSV requires a full pipeline run; the explorer graph is always present.
+    if EXPLORER_GRAPH_PATH.exists():
+        payload = json.loads(EXPLORER_GRAPH_PATH.read_text(encoding="utf-8"))
+        fields = payload.get("node_fields", [])
+        id_idx = fields.index("id") if "id" in fields else 0
+        return {str(n[id_idx]).strip() for n in payload.get("nodes", []) if str(n[id_idx]).strip()}
+    assert SCORED_PAPERS_PATH.exists(), f"missing {SCORED_PAPERS_PATH} and {EXPLORER_GRAPH_PATH}"
     frame = pd.read_csv(SCORED_PAPERS_PATH, usecols=["canonical_paper_id"])
     return {str(value).strip() for value in frame["canonical_paper_id"].tolist() if str(value).strip()}
 

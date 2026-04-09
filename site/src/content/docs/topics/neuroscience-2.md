@@ -1,6 +1,6 @@
 ---
 title: Neuroscience
-description: "Imaging & Biomarkers · 3452 papers"
+description: "Imaging & Biomarkers · 69 papers"
 sidebar:
   label: Neuroscience
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Multiple sclerosis / Neuroscience / Biology and contains 3452 papers.
+This topic cluster covers Multiple sclerosis / Neuroscience / Biology and contains 69 papers.
 
 <p><em>Raw cluster label:</em> Multiple sclerosis / Neuroscience / Biology</p>
 

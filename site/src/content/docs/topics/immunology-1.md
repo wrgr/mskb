@@ -1,6 +1,6 @@
 ---
 title: Immunology
-description: "Imaging & Biomarkers · 2318 papers"
+description: "Imaging & Biomarkers · 52 papers"
 sidebar:
   label: Immunology
 topic_taxonomy:
@@ -11,7 +11,7 @@ topic_taxonomy:
 
 ## Overview
 
-This topic cluster covers Immunology / Multiple sclerosis / Medicine and contains 2318 papers.
+This topic cluster covers Immunology / Multiple sclerosis / Medicine and contains 52 papers.
 
 <p><em>Raw cluster label:</em> Immunology / Multiple sclerosis / Medicine</p>
 

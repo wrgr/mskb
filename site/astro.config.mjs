@@ -78,6 +78,7 @@ export default defineConfig({
           label: 'Corpus & Docs',
           items: [
             { label: 'Overview', link: '/corpus/' },
+            { label: 'Methodology & Limitations', link: '/corpus/methodology/' },
             { label: 'Topic Map', link: '/corpus/topics/' },
             { label: 'Seeds & Anchors', link: '/corpus/seeds/' },
             { label: 'Design Decisions', link: '/corpus/design-decisions/' },
