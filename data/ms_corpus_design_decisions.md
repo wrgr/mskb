@@ -1,7 +1,7 @@
 # MS Knowledge Base: Corpus Design Decisions and Justification
 ## Domain-Specific Document
 
-*Version 1.1 | April 2026*
+*Version 1.2 | April 2026*
 *Companion to: Corpus Construction Methodology (Generic) and MS Corpus Specification v1.0 (Excel)*
 
 ---
@@ -26,6 +26,8 @@ Intended readers: anyone who needs to understand, replicate, challenge, or exten
 
 No published literature directly specifies optimal corpus sizes for RAG knowledge bases; this remains an empirical question in the knowledge engineering literature. The target should be treated as a starting point subject to revision based on retrieval quality evaluation.
 
+> **⚑ ENGINEERING JUDGMENT:** The 450–650 range and the 15–35 documents-per-topic estimate are derived from the 18-topic orientation map and practical review capacity, not from empirical evidence about optimal RAG corpus sizes. The 18-topic × ~25-doc-per-topic arithmetic is how the range was initially set; nothing in the literature validates this for retrieval quality. Calibration against retrieval evaluation is needed before the target is treated as fixed.
+
 **Decision:** Documents organized into four tiers (T1 seeds, T2 cross-seed connected, T3 velocity/emerging, T4 expert signal).
 
 **Rationale:** Different selection mechanisms are appropriate for different purposes. Seeds require human curation for conceptual coverage; established literature requires structural connectivity for quality filtering; emerging literature requires velocity as a leading indicator; expert-designated documents (conference awards, non-Western cohort studies) require explicit human identification because algorithmic methods miss them systematically.
@@ -37,6 +39,8 @@ No published literature directly specifies optimal corpus sizes for RAG knowledg
 **Decision:** 40 seeds across 18 topics (plus Topic 1b, Natural History), with a baseline of 2 per topic and targeted augmentations for thin topics (T09, T13, T16).
 
 **Rationale:** Two seeds per topic remains the baseline for triangulation, but strict uniformity produced under-coverage in patient-reported outcomes (T09), equity (T13), and research-priorities framing (T16). Additional seeds were added only where structural gaps were observed, preserving selectivity while improving topic balance.
+
+> **⚑ ENGINEERING JUDGMENT:** "2 seeds per topic" is a practical minimum, not a statistically validated triangulation requirement. The augmentation decision for T09/T13/T16 was made post-hoc after observing structural gaps in the provisional corpus — the same gap-detection logic could justify augmentation for other thin topics in future iterations. No formal procedure exists for deciding when augmentation is warranted.
 
 **Decision:** Seeds selected to cover document type diversity — not only review articles or trials.
 
@@ -93,6 +97,8 @@ The `cross_seed_score ≥ 2` floor remains the default quality gate. The added `
 
 The "multi-topic bridge" signal (seeds from ≥2 different topic codes) is recorded but not used as a filter. These bridging papers often answer the most interesting cross-topic queries.
 
+> **⚑ ENGINEERING JUDGMENT:** The specific numeric floors (cross_seed ≥ 2, or cross_seed ≥ 1 AND review_anchor_link_count ≥ 1) were calibrated by inspection of the provisional corpus, not derived analytically. Lowering the floor increases recall but risks including tangentially related papers; raising it increases precision but worsens structural bias against thin subfields. No sensitivity analysis of these thresholds against retrieval quality has been performed.
+
 **Decision:** Preserve seed-anchored quality scoring while allowing anchor-informed bridge qualification.
 
 **Rationale:** Direct seed connectivity remains the primary structural signal. Review anchors are not independent quality anchors, but their link count is allowed as a secondary bridge term to correct known structural disconnection in thin subfields (see Section 3).
@@ -115,6 +121,8 @@ Raw citation counts are ill-suited to compare the impact of papers from differen
 **Decision:** Set topic-specific thresholds rather than a uniform threshold.
 
 **Rationale:** Different topics have different-sized candidate pools after one-hop expansion. A uniform 90th percentile threshold would yield very different document counts for large subfields (DMTs, biomarkers) vs. small ones (pediatric MS, equity). Topic-specific thresholds are set to yield the target document counts from the orientation map. This is correct: different thresholds reflect different subdomain sizes, not differential quality standards.
+
+> **⚑ ENGINEERING JUDGMENT:** Topic-specific thresholds are calibrated to yield document counts matching the orientation map targets (15–35 per topic). The calibration is not a documented reproducible procedure — it is judgment applied to provisional candidate counts. A topic with very few candidates above any reasonable threshold will require manual supplementation or T4 designation; no automated fallback exists for this failure mode.
 
 ---
 
@@ -141,12 +149,16 @@ Bridging papers — papers that connect multiple topics — are often the most v
 
 The manual check requirement is essential: velocity alone can be gamed or inflated in thin subfields where a small number of papers cite each other rapidly. Human judgment is the safeguard.
 
+> **⚑ ENGINEERING JUDGMENT:** The citations/year ≥ 20 floor (≈ 2 citations/month) was set by inspection to exclude papers not demonstrably gaining broad field uptake. No sensitivity analysis has been performed. Tightening to 25 or loosening to 15 would materially change T3 candidate pools; the right value likely varies by subfield and should be calibrated post-retrieval-evaluation.
+
 **Decision:** Tier 3 selection remains capped and manually reviewed; recency/accumulation is a screening signal, not automatic inclusion.
 
 **Decision (April 2026 update):** Tier 3 cap is now topic-coupled rather than global:  
 `T3_cap(topic) = max(5, ceil(0.20 × T2_count(topic)))`.
 
 **Rationale:** A topic-coupled cap preserves proportionality between established and emerging literature while preventing dominant topics from monopolizing Tier 3 capacity. The floor of 5 preserves minimal forward-looking coverage for sparse topics.
+
+> **⚑ ENGINEERING JUDGMENT:** The 20% fraction (`T3_cap = max(5, ceil(0.20 × T2_count))`) encodes a target T3:T2 ratio of approximately 1:5. The floor of 5 ensures emerging-literature coverage even for very small topics. Both values were set by inspection of provisional corpus proportions, not by empirical modeling of learner needs or retrieval quality. The cap is implemented in `select_core_corpus.py:_select_t3_ids` and is configurable via `config.yaml:core_corpus_selection.t3.cap_fraction_of_t2_per_topic` and `floor_per_topic`.
 
 **Decision (April 2026 update):** Tier 2 structural rule is now explicit:
 - `cross_seed_score >= 2`
@@ -158,9 +170,13 @@ For topics contributing `<2%` of the strict-pass provisional corpus, `kcore` and
 
 **Rationale:** Structural gates improve precision in large topics, but can over-penalize thin topics with sparse citation graphs. The `<2%` relaxation is a controlled fairness correction that preserves relevance gates while reducing systematic underrepresentation.
 
+> **⚑ ENGINEERING JUDGMENT:** The 2% threshold identifies topics that fall below a minimum viable representation in the strict-pass provisional corpus. At a 450-document target, 2% ≈ 9 papers — chosen as a rough floor for a topic to be query-answerable. This threshold is corpus-size-sensitive: for a 600-document corpus the equivalent floor would be ~1.5%. The relaxation is implemented as a two-pass approach in `select_core_corpus.py`: strict-pass first, then identify under-threshold topics, then re-evaluate those topics with structure gates removed.
+
 **Decision (April 2026 update):** Final corpus balancing applies a hard concentration constraint: no topic may exceed 20% of the selected corpus.
 
 **Rationale:** Without an explicit concentration cap, broad foundational topics dominate by volume even after Tier gates. A hard ceiling enforces minimum topical diversity and improves downstream retrieval balance for learners.
+
+> **⚑ ENGINEERING JUDGMENT:** The 20% cap ensures at least 5 topics are represented in any 100-paper sample. The value was chosen by inspection — no evidence base exists for this specific ceiling. The cap is enforced iteratively in `select_core_corpus.py:_apply_topic_cap`, which trims the lowest-tier, lowest-importance papers from over-represented topics. This trimming order (T3 before T2, lower importance before higher) is one reasonable policy; alternatives (proportional trimming, recency-preserving) would yield different tradeoffs and have not been evaluated.
 
 ---
 
@@ -170,12 +186,31 @@ For topics contributing `<2%` of the strict-pass provisional corpus, `kcore` and
 
 **Rationale:** A small, high-precision Tier 4 where every document has a documented expert signal is more defensible than a large one requiring criteria that are harder to apply consistently. If Tier 4 is too large, it becomes a catch-all that undermines the algorithmic rigor of Tiers 2 and 3.
 
+> **⚑ ENGINEERING JUDGMENT:** The 10–12% ceiling was set to prevent T4 from exceeding the typical size of a large T2 topic cluster. It was not derived from analysis of how many expert-signal documents a corpus of this size requires. At the April 2026 count (52 concept-anchor papers, 45 new additions), T4 sits at roughly 7–10% of a 450–650 document corpus — within the guard but close to the lower bound. Any additional T4 source types should be evaluated against this ceiling before inclusion.
+
 Specific Tier 4 source types were selected to address known algorithmic blind spots:
 - **Conference best papers (ECTRIMS, ACTRIMS, AAN):** Conference program committees perform expert selection that identifies emerging important work before publication or citation accumulation. This is explicitly expert curation without algorithmic mediation.
 - **NMSS-funded research outputs:** The primary funder of MS research in North America shapes the field's development. Their supported outputs represent the field's strategic priorities.
 - **Cures Roadmap reference lists:** Papers cited in the field's own strategic planning document are treated as foundational by the community itself — the highest form of expert endorsement.
 - **Explicitly non-Western cohort studies:** The one-hop expansion from US and European seeds systematically underrepresents non-Western literature. Tier 4 is the correction mechanism.
-- **Concept-anchor signal (April 2026):** Papers explicitly nominated by editors as required anchors for MSKB educational concept pages covering thin-coverage topic areas. These papers were identified via systematic review of JLA priorities, AAN Quality Measures, and MSIF PROMS framework — areas where the algorithmic T2/T3 selection is structurally thin (T09 PROs, T10 symptom management, T12 pediatric MS, T13 equity/SDOH, T16 research priorities). Documented in `data/t4_expert_signal.yaml` (52 papers across 8 concept pages, generated 2026-04-09). 7 of 52 are already structurally included in the corpus; 45 are new additions. For already-included papers, the T4 record formalises the educational expert signal and links the paper to its concept page.
+- **Concept-anchor signal (April 2026):** Papers explicitly nominated by editors as required anchors for MSKB educational concept pages covering thin-coverage topic areas. These papers were identified via systematic review of JLA priorities, AAN Quality Measures, and MSIF PROMS framework — areas where the algorithmic T2/T3 selection is structurally thin. Documented in `data/t4_expert_signal.yaml` (52 papers across 8 concept groups, generated 2026-04-09).
+
+  **Coverage by concept group (T4-001 – T4-052):**
+
+  | Concept group | T4 IDs | Count | Primary topic(s) |
+  |---|---|---|---|
+  | Bladder and bowel dysfunction | T4-001 – T4-006 | 6 | T10 (symptom mgmt) |
+  | Depression and anxiety in MS | T4-007 – T4-013 | 7 | T10 |
+  | Equity, SDOH, and access | T4-014 – T4-021 | 8 | T13 (equity/SDOH) |
+  | Fatigue in MS | T4-022 – T4-028 | 7 | T09 (PROs), T10 |
+  | Pediatric MS | T4-029 – T4-034 | 6 | T12 (pediatric) |
+  | Rehabilitation and exercise | T4-035 – T4-041 | 7 | T10 |
+  | Sex and gender differences | T4-042 – T4-046 | 5 | T14 (special populations) |
+  | Shared decision-making | T4-047 – T4-052 | 6 | T09, T16 (research priorities) |
+
+  **Outcome split:** 7 of 52 were already structurally included in the corpus (identified via `corpus_status: title_fuzzy(p)` or `doi_match` in the YAML). For these papers the T4 record formalises the educational expert signal and links the paper to its concept page. 45 are new additions not reached by T2/T3 graph selection.
+
+  **Implementation pathways:** Papers matched to existing corpus entries (via `corpus_id` or `corpus_doi`) are added as `T4_mapped` rows annotated with T4 concept metadata (`tracked_source = T1_T2_T3_plus_T4`). Papers not found in the scored corpus (`corpus_status: not_found`) are added as forced stub entries with synthetic IDs (`canonical_paper_id = t4::<t4_id>`), `paper_importance_score = 0`, and `tracked_source = T4_forced_not_found`. Forced stubs carry no bibliometric signals; they appear in `core_corpus_tracked_with_t4.csv` and the separate `t4_forced_not_found.csv` for manual review and OpenAlex ID resolution in future pipeline runs.
 
 **Decision:** cross_seed_score = 0 is acceptable for Tier 4 documents if an explicit expert signal is documented.
 
@@ -221,6 +256,8 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 
 **Decision:** The threshold of 70% as the target for "seeds well-chosen" is an operational heuristic, not a validated threshold.
 
+> **⚑ ENGINEERING JUDGMENT:** The 70% floor was set by expectation reasoning (roughly 30% of review references are topic-specific or tangential), not by empirical calibration. Per-anchor tracking is the meaningful diagnostic — a low overlap on the equity anchor (R5) specifically signals a structural gap, not a general seed weakness. The threshold should be revisited after end-to-end retrieval quality evaluation.
+
 **Transparency:** This is documented explicitly because stating it as validated would be misleading. The threshold is set based on the expectation that ~70% of review article references should be field-canonical enough to appear in seed neighborhoods; ~30% represents topic-specific, methodological, or tangential citations that the seeds appropriately don't capture. Future corpus iterations should empirically calibrate this threshold based on retrieval quality evaluation.
 
 ---
@@ -260,4 +297,61 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 
 ---
 
-*Document version 1.1 — April 2026. Update version number and Update Log in the corpus specification workbook when methodology changes.*
+## 15. Concept-Paper Linkage Heuristics
+
+The `link_concepts_to_papers.py` module maps each educational concept page to a ranked shortlist of corpus papers, then selects foundational and advanced paper sets — either via LLM or a deterministic fallback. The following heuristics govern that process.
+
+**Shortlist construction:**
+
+- **MAX_CANDIDATES_PER_CONCEPT = 60:** The TF-IDF-ranked candidate list is capped at 60 papers per concept before LLM or heuristic selection. This prevents oversized prompts while retaining sufficient diversity for the LLM to select from.
+
+  > **⚑ ENGINEERING JUDGMENT:** 60 was chosen to fit within typical LLM context budgets and to provide ~8–10× the number of papers that will ultimately be selected. No analysis was done to verify that the 60th-ranked paper is meaningfully different from no-cap.
+
+- **MAX_PER_TOPIC = 8:** Within the shortlist, no more than 8 papers from the same bibliometric topic cluster are included, regardless of their TF-IDF scores.
+
+  > **⚑ ENGINEERING JUDGMENT:** This cap enforces topical diversity in the shortlist so the LLM (or heuristic) isn't presented with 20 near-identical papers from one cluster. The value 8 is arbitrary; it could be reduced to 5 for finer diversity or raised to 10 without substantially changing most selections.
+
+**Heuristic fallback selection (used when no LLM is available):**
+
+- **Foundational selection key:** Papers are sorted by `(-importance, year_ascending, -score, paper_id)`. This prioritises high-importance (citation-based) papers and, among ties, older papers — on the theory that foundational papers are typically older and highly cited.
+
+  > **⚑ ENGINEERING JUDGMENT:** Sorting foundational by importance-first then age reflects the assumption that classic, heavily cited papers are the best orientation anchors. For fast-moving concepts (BTK inhibitors, PIRA) this heuristic will select older, less relevant papers over newer pivotal ones. The LLM selection is preferred for such concepts; the heuristic is a degraded fallback.
+
+- **Advanced selection key:** Papers are sorted by `(-score, -year, -importance, paper_id)`. This prioritises high lexical relevance and, among ties, newer papers — on the theory that advanced papers are typically recent and concept-specific.
+
+  > **⚑ ENGINEERING JUDGMENT:** Sorting advanced by score-first then recency embeds a bias toward newer specialist papers. For concepts where the most important specialist work is a decade old (e.g., CSF oligoclonal bands), this heuristic may deprioritise it in favour of newer but shallower papers.
+
+- **DEFAULT_FOUNDATIONAL_COUNT = DEFAULT_ADVANCED_COUNT = 8:** Both selection lists are capped at 8 papers each.
+
+  > **⚑ ENGINEERING JUDGMENT:** The 8-paper caps were chosen to match the SELECTION_PROMPT instruction and to ensure concept pages have sufficient breadth without overwhelming learners. No learning-science evidence was consulted for this specific number.
+
+---
+
+## 16. Engineering Judgment Heuristics — Summary Register
+
+This register lists every decision in the corpus construction methodology that was made by inspection or practical reasoning rather than derived from published evidence or empirical calibration. Each entry links to the section where the decision is documented and annotated.
+
+| # | Decision | Value(s) | Section | Sensitivity |
+|---|---|---|---|---|
+| EJ-01 | Target corpus size | 450–650 docs | §1 | Adjust based on retrieval quality evaluation |
+| EJ-02 | Documents per topic target | 15–35 | §1 | Drives topic-specific threshold calibration |
+| EJ-03 | Baseline seeds per topic | 2 (augmented to 3–4 for thin topics) | §2 | Lower → more concentration risk; higher → over-seeding |
+| EJ-04 | Tier 2 cross-seed floor | ≥ 2 (or ≥1 + anchor ≥1) | §4 | Controls precision/recall tradeoff for T2 |
+| EJ-05 | Topic-specific citation thresholds | Calibrated to yield 15–35 docs/topic | §5 | Undocumented procedure; hard to reproduce exactly |
+| EJ-06 | T3 citations/year floor | ≥ 20 | §7 | Tightening to 25 reduces T3; loosening to 15 expands it |
+| EJ-07 | T3 cap fraction of T2 | 20% (floor: 5 per topic) | §7 | Changes T3:T2 ratio; floor controls sparse-topic coverage |
+| EJ-08 | T2 structure relaxation threshold | < 2% of strict-pass corpus | §7 | Corpus-size-sensitive; ~9 papers at 450-doc target |
+| EJ-09 | Hard topic concentration cap | 20% of selected corpus | §7 | Trimming order (T3 before T2) is one of several policies |
+| EJ-10 | T4 size ceiling | 10–12% of corpus | §8 | At 52 papers / 450-doc corpus ≈ 7–10% — near lower bound |
+| EJ-11 | QA overlap threshold | 70% | §11 | Per-anchor tracking is more diagnostic than global threshold |
+| EJ-12 | Concept shortlist cap | 60 candidates/concept | §15 | Controls LLM prompt size |
+| EJ-13 | Per-topic shortlist cap | 8 papers/topic cluster | §15 | Controls topical diversity in shortlist |
+| EJ-14 | Foundational paper sort order | Importance-first, then age-ascending | §15 | Biases toward classics; wrong for fast-moving concepts |
+| EJ-15 | Advanced paper sort order | Score-first, then recency-descending | §15 | Biases toward recency; may miss older specialist papers |
+| EJ-16 | Papers per selection list | 8 foundational + 8 advanced | §15 | No learning-science validation for this number |
+
+**How to use this register:** Before changing any of these values, (a) check whether a retrieval quality evaluation has been run since the value was set, (b) run the pipeline with the proposed value and compare corpus statistics, and (c) update this table and the corresponding section with the new value and rationale.
+
+---
+
+*Document version 1.2 — April 2026. Update version number and Update Log in the corpus specification workbook when methodology changes.*
