@@ -176,8 +176,11 @@ Specific T4 source types and why each was selected:
 | NMSS-funded research outputs | Primary MS funder's supported outputs represent the field's strategic priorities |
 | Cures Roadmap reference lists | Papers cited in the field's own strategic planning document — the highest form of expert endorsement |
 | Non-Western cohort studies | One-hop expansion from US/European seeds systematically underrepresents non-Western literature; T4 is the correction |
+| Concept anchor signals | Papers explicitly nominated as required anchors for MSKB educational concept pages — selected by editors for thin-coverage topics structurally under-served by T2/T3 algorithms |
 
 `cross_seed_score = 0` is acceptable for T4 documents if an explicit expert signal is documented.
+
+**As of v1.1 (April 2026):** The authoritative T4 source is `data/t4_expert_signal.yaml`, which contains 52 concept anchor signals across 8 clinical concept areas (bladder/bowel dysfunction, depression/anxiety, equity/SDOH, fatigue, pediatric MS, rehabilitation/exercise, sex/gender, shared decision-making). Of these, 7 were already in the corpus; 45 are newly targeted for retrieval via OpenAlex on the next pipeline run. The pipeline reads this YAML directly via `src/retrieve_corpora.py`; `seeds/t4_expert_signals.csv` is now deprecated as an authoritative source.
 
 ---
 
@@ -254,4 +257,4 @@ This is documented explicitly because stating it as validated would be misleadin
 
 **Equity gap:** The structural disconnection between equity literature and the main MS citation network is a known limitation of all citation-based corpus construction approaches. Tier 4 mechanisms partially address this but do not fully resolve it. Future iterations should consider whether equity research merits a separate, parallel selection pipeline.
 
-See [Gap Tracker](/mskb/corpus/gaps/) for the full list of 10 tracked gaps.
+See [Gap Tracker](/mskb/corpus/gaps/) for the full list of 12 tracked gaps.

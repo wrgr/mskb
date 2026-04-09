@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional
 
 import pandas as pd
+import yaml
 from rapidfuzz import fuzz
 
 from .crossref_client import CrossrefClient
@@ -485,25 +486,113 @@ def _run_query_channel(
     return rows
 
 
-def _run_t4_expert_channel(
-    t4_registry: pd.DataFrame,
+def _run_framing_seed_channel(
+    framing_seeds: pd.DataFrame,
     client: OpenAlexClient,
-) -> list[dict]:
-    """Retrieve expert-signal papers by DOI from seeds/t4_expert_signals.csv."""
+    retrieval_cfg: dict,
+) -> tuple[list[dict], list[dict]]:
+    """Retrieve papers and citation edges for the six review-anchor seeds (R1–R6).
+
+    Framing seeds expand the candidate pool and provide anchor links for topic
+    assignment but are NOT counted toward cross_seed_score (that uses only the
+    40 core seeds). Channel labels are distinct so downstream scoring can treat
+    them separately.
+    """
     rows: list[dict] = []
-    if t4_registry.empty or "doi" not in t4_registry.columns:
-        return rows
-    for _, record in t4_registry.iterrows():
-        doi = str(record.get("doi", "") or "").strip()
-        if not doi or doi.lower() == "nan":
+    citation_edges: list[dict] = []
+    max_pages = int(retrieval_cfg.get("max_pages_cited_by", 3))
+
+    for _, seed in framing_seeds.iterrows():
+        doi = str(seed["doi"]) if pd.notna(seed.get("doi")) else ""
+        title = str(seed.get("title", "") or "").strip()
+        if not doi:
             continue
         work = client.get_work_by_doi(doi)
         if not work:
             continue
-        source = str(record.get("selection_source", "") or "").strip()
-        signal_type = str(record.get("signal_type", "") or "").strip()
-        query = f"{source} | {signal_type}".strip(" |")
-        rows.append(_paper_row(work, "expert_signal", query=query))
+        work_id = str(work.get("id", "") or "").strip()
+        rows.append(_paper_row(work, "framing_seed_resolution", seed_doi=doi, seed_title=title))
+        refs = [r.split("/")[-1] for r in work.get("referenced_works", []) if r]
+        for ref in client.get_multiple_works(refs):
+            rows.append(_paper_row(ref, "framing_seed_reference", seed_doi=doi, seed_title=title))
+            ref_id = str(ref.get("id", "") or "").strip()
+            if ref_id and work_id:
+                citation_edges.append(
+                    {"source_openalex_id": work_id, "target_openalex_id": ref_id, "edge_type": "CITES"}
+                )
+        for citing in client.get_citing_works(work_id, max_pages=max_pages):
+            rows.append(_paper_row(citing, "framing_seed_cited_by", seed_doi=doi, seed_title=title))
+            citing_id = str(citing.get("id", "") or "").strip()
+            if citing_id and work_id:
+                citation_edges.append(
+                    {"source_openalex_id": citing_id, "target_openalex_id": work_id, "edge_type": "CITES"}
+                )
+
+    return rows, citation_edges
+
+
+def _run_t4_expert_channel(
+    t4_yaml_path: Path,
+    client: OpenAlexClient,
+    max_title_queries: int = 30,
+) -> list[dict]:
+    """Retrieve all expert-signal T4 papers from data/t4_expert_signal.yaml.
+
+    Uses DOI lookup for entries with corpus_doi; falls back to title search for
+    not_found entries so papers without a recorded DOI can still be retrieved.
+    """
+    rows: list[dict] = []
+    if not t4_yaml_path.exists():
+        return rows
+    payload = yaml.safe_load(t4_yaml_path.read_text(encoding="utf-8")) or {}
+    # flat_list is the canonical de-duped view; fall back to by_concept if absent.
+    entries: list[dict] = payload.get("flat_list", [])
+    if not entries:
+        by_concept = payload.get("by_concept", {})
+        for items in by_concept.values():
+            entries.extend(items or [])
+
+    doi_queried: set[str] = set()
+    title_queries_used = 0
+
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        t4_id = str(entry.get("t4_id", "") or "").strip()
+        title = str(entry.get("title", "") or "").strip()
+        year = entry.get("year")
+
+        # DOI lookup first — corpus_doi is populated for papers already in corpus.
+        corpus_doi = str(entry.get("corpus_doi", "") or "").strip()
+        doi = _normalize_doi(corpus_doi)
+        work: Optional[Dict[str, object]] = None
+
+        if doi and doi not in doi_queried:
+            doi_queried.add(doi)
+            work = client.get_work_by_doi(doi)
+
+        # Title search for entries without a recorded DOI (most not_found papers).
+        if not work and title and title_queries_used < max_title_queries:
+            filter_expr = ""
+            if year is not None:
+                try:
+                    yr = int(str(year))
+                    filter_expr = f"from_publication_year:{yr - 1},to_publication_year:{yr + 1}"
+                except (TypeError, ValueError):
+                    pass
+            results = client.search_works(title, max_results=5, filter_expr=filter_expr)
+            work = _choose_best_openalex_match(
+                {"title": title, "year": year},
+                results,
+                min_title_similarity=88.0,
+                max_year_delta=2,
+            )
+            title_queries_used += 1
+
+        if not work:
+            continue
+        rows.append(_paper_row(work, "expert_signal_t4", query=t4_id))
+
     return rows
 
 
@@ -537,9 +626,10 @@ def run(config_path: str) -> None:
 
     core_seeds = pd.read_csv(root / "seeds" / "core_seeds.csv")
     framing_seeds = pd.read_csv(root / "seeds" / "framing_seeds.csv")
-    t4_registry_path = root / "seeds" / "t4_expert_signals.csv"
-    t4_registry = pd.read_csv(t4_registry_path) if t4_registry_path.exists() else pd.DataFrame()
+    # T4 expert signals are sourced from the YAML (authoritative) not the CSV.
+    t4_yaml_path = root / "data" / "t4_expert_signal.yaml"
     max_per_query = retrieval_cfg["max_search_results_per_query"]
+    max_t4_title_queries = int(retrieval_cfg.get("t4_max_title_queries", 30))
 
     rows: list[dict] = []
     citation_edges: list[dict] = []
@@ -555,22 +645,39 @@ def run(config_path: str) -> None:
         for key, value in seed_totals.items():
             enrichment_totals[key] += value
 
+    if bool(retrieval_cfg.get("use_framing_seed_channel", True)):
+        framing_rows, framing_edges = _run_framing_seed_channel(framing_seeds, client, retrieval_cfg)
+        rows.extend(framing_rows)
+        citation_edges.extend(framing_edges)
+
     if retrieval_cfg["use_lexical_channel"]:
         rows.extend(_run_query_channel(client, cfg["queries"]["lexical"], "lexical", max_per_query))
     if retrieval_cfg["use_dataset_channel"]:
         rows.extend(_run_query_channel(client, cfg["queries"]["dataset"], "dataset", max_per_query))
     if bool(retrieval_cfg.get("use_t4_expert_channel", True)):
-        rows.extend(_run_t4_expert_channel(t4_registry=t4_registry, client=client))
+        rows.extend(_run_t4_expert_channel(
+            t4_yaml_path=t4_yaml_path, client=client, max_title_queries=max_t4_title_queries,
+        ))
 
     candidates = pd.DataFrame(rows).drop_duplicates(subset=["openalex_id", "doi", "title", "channel"])
     candidates.to_csv(outdir / "candidate_papers.csv", index=False)
     citation_edges_df = pd.DataFrame(citation_edges).drop_duplicates()
     citation_edges_df.to_csv(outdir / "seed_citation_edges.csv", index=False)
 
+    # Count T4 YAML entries for provenance.
+    n_t4_yaml = 0
+    if t4_yaml_path.exists():
+        t4_payload = yaml.safe_load(t4_yaml_path.read_text(encoding="utf-8")) or {}
+        n_t4_yaml = len(t4_payload.get("flat_list", []) or list(
+            item for items in (t4_payload.get("by_concept") or {}).values() for item in (items or [])
+        ))
+
     stats_payload = {
-        "n_candidates": int(len(candidates)), "n_seed_edges": int(len(citation_edges_df)),
-        "n_core_seeds": int(len(core_seeds)), "n_framing_seeds": int(len(framing_seeds)),
-        "n_t4_registry_rows": int(len(t4_registry)),
+        "n_candidates": int(len(candidates)),
+        "n_seed_edges": int(len(citation_edges_df)),
+        "n_core_seeds": int(len(core_seeds)),
+        "n_framing_seeds": int(len(framing_seeds)),
+        "n_t4_yaml_entries": n_t4_yaml,
         "seed_reference_enrichment_enabled": enrichment_enabled,
     }
     stats_payload.update({f"enrichment_{k}": int(v) for k, v in enrichment_totals.items()})

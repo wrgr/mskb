@@ -43,17 +43,18 @@ MSKB uses a seven-stage bibliometric pipeline run entirely from publicly availab
 
 ### Stage 0 — Seed governance
 
-A governance checklist validates **40 hand-curated T1 seed papers** against quotas for five clinical categories, venue concentration caps, author concentration caps, and explicit MS relevance requirements. Seeds are committed to `seeds/core_seeds.csv`. An additional **52 expert-signal T4 papers** are curated by domain experts and committed to `seeds/t4_expert_signals.csv`.
+A governance checklist validates **40 hand-curated T1 seed papers** against quotas for five clinical categories, venue concentration caps, author concentration caps, and explicit MS relevance requirements. Seeds are committed to `seeds/core_seeds.csv`. An additional **52 expert-signal T4 papers** are curated by domain experts and documented in `data/t4_expert_signal.yaml` (the authoritative source for T4 retrieval and selection).
 
 ### Stage 1 — Corpus retrieval
 
-Papers are retrieved from **OpenAlex** via three channels:
-- **Seed channel**: direct DOI lookup for every seed
+Papers are retrieved from **OpenAlex** via five channels:
+- **Seed channel**: direct DOI lookup for every T1 core seed, with one-hop reference expansion
+- **Framing seed channel**: one-hop expansion from each of the six review-anchor seeds (R1–R6), providing additional candidate mass and anchor links for topic assignment
 - **Lexical channel**: 20 structured keyword queries covering the five MS categories
 - **Dataset channel**: 7 registry/cohort-level queries (MSBase, NARCOMS, Atlas of MS, GBD, etc.)
-- **T4 expert channel**: DOI lookup for each expert-signal paper
+- **T4 expert channel**: DOI lookup + title search for every entry in `data/t4_expert_signal.yaml` (all 52 expert-signal papers)
 
-Seed papers are additionally enriched via CrossRef and Semantic Scholar (one-hop reference expansion, title-similarity matching at ≥ 88%).
+Core seed papers are additionally enriched via CrossRef and Semantic Scholar (one-hop reference expansion, title-similarity matching at ≥ 88%). Framing seeds contribute to the candidate pool and topic assignment but are NOT counted toward cross-seed scoring (which uses only the 40 core seeds).
 
 ### Stage 2 — Deduplication & merge
 
@@ -100,6 +101,30 @@ All T1+T2+T3+T4 papers are processed by the Claude API (Haiku model) to generate
 - **Advanced summary** — specialist/clinical terminology
 
 Summaries are cached per paper per reading level. A rules-based fallback generates summaries from the abstract when the full-text is unavailable. Every summary includes a certainty score (faithfulness overlap metric) and an explicit AI-generation disclaimer.
+
+---
+
+## Classification systems
+
+MSKB uses three distinct classification systems with distinct roles. Understanding which system does what is important for interpreting corpus statistics and site navigation.
+
+| System | Count | Role | Used in selection? |
+|--------|-------|------|--------------------|
+| **T-codes** (T00–T16 + T1b) | 19 topics | Drives corpus balance gate and topic assignment | **Yes** |
+| **Leiden citation clusters** | 9 clusters | Bibliometric alternative view; available in explorer graph | No |
+| **Learner concepts** | ~30 concepts | Pedagogical site navigation; T4 signal source | No |
+
+### T-codes — primary corpus taxonomy
+
+19 topics (T00–T16 plus T1b Natural History) manually defined in the MS Field Orientation Guide. Each core seed is assigned a `primary_topic` code; this assignment propagates to neighboring papers via the `assign_topic_evidence` pipeline stage. T-codes drive the corpus balance constraint (no topic may exceed 20% of the selected corpus) and are the authoritative topic labels in all pipeline provenance outputs.
+
+### Leiden citation clusters — informational only
+
+9 clusters produced by Louvain community detection on the full citation subgraph. These are a bibliometric view of how the literature groups by co-citation patterns — not a hand-curated taxonomy. Leiden clusters appear in `explorer_graph.json` as `topic_id` and power the **Citation Topics** sidebar section. They are **not used** in corpus selection, topic balance, or T-code assignment. They provide an alternative framing and are surfaced for transparency.
+
+### Learner concepts — pedagogical navigation only
+
+~30 concept pages (`site/src/content/docs/concepts/`) derived from literature review and learning science. Concepts are manually authored to guide learners through the knowledge base. They link to corpus papers and serve as the nomination source for T4 expert signals (each T4 paper is nominated because a concept page requires it as an anchor). Learner concepts are **not used** in corpus selection or balance.
 
 ---
 
