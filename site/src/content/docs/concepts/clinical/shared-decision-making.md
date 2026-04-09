@@ -57,3 +57,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [Fatigue in MS](/mskb/concepts/clinical/fatigue-ms/)
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [Equity and Social Determinants](/mskb/concepts/populations/equity-sdoh/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

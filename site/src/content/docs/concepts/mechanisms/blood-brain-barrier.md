@@ -41,3 +41,11 @@ The blood-brain barrier is maintained by tight junctions between endothelial cel
 - [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
 - [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
 - [DMT Overview](/mskb/concepts/therapeutics/dmt-overview/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

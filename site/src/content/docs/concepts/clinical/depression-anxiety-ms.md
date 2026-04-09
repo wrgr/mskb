@@ -59,3 +59,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [Cognition in MS](/mskb/concepts/clinical/cognition-ms/)
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

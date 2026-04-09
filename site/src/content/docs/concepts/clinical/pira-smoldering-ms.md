@@ -43,3 +43,11 @@ PIRA accounts for 40–50% of disability accumulation in RRMS and the majority i
 - [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
 - [BTK Inhibitors](/mskb/concepts/therapeutics/btk-inhibitors/)
 - [CSF Biomarkers](/mskb/concepts/diagnosis/csf-biomarkers/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

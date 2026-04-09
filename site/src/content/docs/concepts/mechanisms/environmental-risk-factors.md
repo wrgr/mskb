@@ -41,3 +41,11 @@ The 2022 Bjornevik et al. (*Science*) military cohort study found that EBV infec
 - [Genetic Susceptibility in MS](/mskb/concepts/mechanisms/genetic-susceptibility/)
 - [MS Epidemiology](/mskb/concepts/foundations/ms-epidemiology/)
 - [Immune System Basics for MS](/mskb/concepts/foundations/immune-system-basics/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

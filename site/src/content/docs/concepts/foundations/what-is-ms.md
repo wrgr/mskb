@@ -42,3 +42,11 @@ The disease is heterogeneous: most patients begin with relapsing-remitting disea
 - [Immune System Basics](/mskb/concepts/foundations/immune-system-basics/)
 - [McDonald Criteria](/mskb/concepts/diagnosis/mcdonald-criteria/)
 - [MS Phenotypes](/mskb/concepts/diagnosis/ms-phenotypes/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

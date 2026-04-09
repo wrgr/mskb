@@ -40,3 +40,11 @@ MS affects approximately 2.8 million people worldwide (2020 Atlas). Prevalence i
 - [What is Multiple Sclerosis?](/mskb/concepts/foundations/what-is-ms/)
 - [Environmental Risk Factors](/mskb/concepts/mechanisms/environmental-risk-factors/)
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

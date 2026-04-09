@@ -41,3 +41,11 @@ CSF oligoclonal IgG bands (OCBs), present in ~85-95% of MS patients, reflect int
 - [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
 - [Treatment Monitoring](/mskb/concepts/therapeutics/treatment-monitoring/)
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

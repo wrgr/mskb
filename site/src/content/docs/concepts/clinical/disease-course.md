@@ -41,3 +41,11 @@ Longitudinal cohort studies (London Ontario, Gothenburg) established that withou
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
 - [Treatment Monitoring](/mskb/concepts/therapeutics/treatment-monitoring/)
 - [Cognition in MS](/mskb/concepts/clinical/cognition-ms/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

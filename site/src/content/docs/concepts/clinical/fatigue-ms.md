@@ -58,3 +58,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [Depression and Anxiety in MS](/mskb/concepts/clinical/depression-anxiety-ms/)
 - [Exercise and Rehabilitation](/mskb/concepts/clinical/rehabilitation-exercise/)
 - [Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

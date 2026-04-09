@@ -41,3 +41,11 @@ The 2013 Lublin/Reingold phenotype revision defines RRMS (discrete relapses with
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
 - [DMT Overview](/mskb/concepts/therapeutics/dmt-overview/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

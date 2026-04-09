@@ -42,3 +42,11 @@ Anti-CD20 monoclonal antibodies deplete mature B cells by ADCC, CDC, and apoptos
 - [BTK Inhibitors](/mskb/concepts/therapeutics/btk-inhibitors/)
 - [Treatment Monitoring](/mskb/concepts/therapeutics/treatment-monitoring/)
 - [Immune System Basics for MS](/mskb/concepts/foundations/immune-system-basics/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

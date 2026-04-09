@@ -40,3 +40,11 @@ MS is driven by autoreactive T cells (primarily Th1/Th17) and B cells that penet
 - [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
 - [Genetic Susceptibility](/mskb/concepts/mechanisms/genetic-susceptibility/)
 - [B Cell–Targeted Therapies](/mskb/concepts/therapeutics/b-cell-therapies/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

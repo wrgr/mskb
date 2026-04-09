@@ -59,3 +59,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [What is Multiple Sclerosis?](/mskb/concepts/foundations/what-is-ms/)
 - [McDonald Criteria](/mskb/concepts/diagnosis/mcdonald-criteria/)
 - [Environmental Risk Factors](/mskb/concepts/mechanisms/environmental-risk-factors/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

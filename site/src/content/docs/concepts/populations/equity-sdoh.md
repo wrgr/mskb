@@ -59,3 +59,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [DMT Overview](/mskb/concepts/therapeutics/dmt-overview/)
 - [Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
 - [Sex and Gender in MS](/mskb/concepts/populations/sex-gender-ms/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)
