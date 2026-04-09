@@ -1,0 +1,250 @@
+---
+title: Emerging Topics & Research Frontiers
+description: The NMSS Pathways to Cures framework — where MS research stands today, the hardest open problems, and what the field needs next.
+sidebar:
+  label: Emerging topics
+  order: 3
+---
+
+import { Aside, Badge, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<Aside type="tip" title="Why this page exists">
+The National MS Society's **Pathways to Cures** roadmap (Bebo et al., 2022 & 2024) synthesized input from 300+ people living with MS, 30+ MS societies, and the global research community into a shared agenda. This page distills that agenda into the challenges and frontiers most likely to shape the next decade of MS research — and the questions that need the next generation of investigators.
+</Aside>
+
+## The Pathways to Cures framework
+
+The NMSS organizes its research agenda around three interdependent pillars. Progress in each pillar is necessary but not sufficient — **ending MS forever requires all three**.
+
+| Pillar | Core question | Where the field is |
+|--------|--------------|-------------------|
+| **Stop MS** | How do we halt the underlying disease process, especially in progressive MS? | Promising — BTK inhibitors in Phase 3, smoldering MS newly measurable |
+| **Restore function** | Can we repair damage that has already occurred? | Early-stage — no approved remyelinating therapy yet |
+| **End MS forever** | Can we prevent MS from developing in the first place? | Breakthrough moment — EBV causality now established, vaccines in trials |
+
+---
+
+## Pillar 1 — Stop MS
+
+### The challenge: smoldering disease behind the BBB
+
+For decades, MS research focused on controlling relapses — the dramatic, visible attacks driven by peripheral immune cells breaching the blood-brain barrier. The field succeeded: modern anti-CD20 therapies suppress relapse rates by >50%. Yet **disability keeps accumulating** in many patients even when MRI shows no new lesions and relapses stop.
+
+Why? The answer reshaping the field is **smoldering neuroinflammation**: a slow, chronic disease process driven by immune cells (microglia, B cells, T cells) already resident *inside* the CNS, behind the BBB, largely invisible to the therapies that work brilliantly in the periphery. This process drives:
+
+- **PIRA** (Progression Independent of Relapse Activity) — disability that worsens between attacks, newly measurable as a trial endpoint
+- **Slowly Expanding Lesions (SELs)** — old lesion borders that keep creeping outward for years
+- **Paramagnetic Rim Lesions (PRLs)** — chronic active lesions with a ferritic iron rim visible on 7T (and some 3T) MRI, a marker of ongoing smoldering inflammation
+
+<Aside type="note" title="Why PIRA changes everything">
+PIRA reframes how we measure progressive MS. Instead of waiting years for EDSS milestones, researchers can now ask: does this therapy *slow the rate* of silent disability accumulation? This opens trials to drugs that work inside the CNS rather than in the periphery.
+</Aside>
+
+### The frontier: CNS-penetrant therapies
+
+**BTK inhibitors** (Bruton's tyrosine kinase inhibitors) are the most watched class of drugs in MS right now. Unlike anti-CD20 antibodies, which are large proteins excluded by the BBB, small-molecule BTK inhibitors penetrate the CNS and can reach resident B cells and microglia directly.
+
+Three are in Phase 3 trials: **tolebrutinib**, **fenebrutinib**, and **evobrutinib**. The 2024 NMSS roadmap identifies CNS-penetrant immunotherapy as a top priority — the first real chance to reach smoldering inflammation where it lives.
+
+**Open questions for the next generation:**
+- What distinguishes patients whose PIRA is driven by smoldering inflammation from those with pure neurodegeneration?
+- Can paramagnetic rim lesion count serve as a Phase 2 surrogate endpoint for smoldering disease?
+- Why does progressive MS develop in some RRMS patients and not others — and what predicts conversion?
+
+<CardGrid>
+  <LinkCard
+    title="PIRA & smoldering MS"
+    href="/mskb/concepts/clinical/pira-smoldering-ms/"
+    description="Disability that accumulates silently between relapses — the mechanism behind progressive MS."
+  />
+  <LinkCard
+    title="BTK inhibitors"
+    href="/mskb/concepts/therapeutics/btk-inhibitors/"
+    description="CNS-penetrant small molecules targeting resident microglia and B cells."
+  />
+  <LinkCard
+    title="Paramagnetic rim lesions"
+    href="/mskb/concepts/diagnosis/paramagnetic-rim-lesions/"
+    description="Chronic active lesions as an imaging biomarker for smoldering inflammation."
+  />
+</CardGrid>
+
+---
+
+## Pillar 2 — Restore Function
+
+### The challenge: repair is possible but incomplete
+
+The adult CNS retains a remarkable capacity for remyelination. After a demyelinating attack, oligodendrocyte precursor cells (OPCs) migrate to lesion sites, differentiate, and rewrap naked axons. In early MS, this repair is often sufficient for clinical recovery after a relapse. But **remyelination fails progressively** over the course of the disease.
+
+Why? OPCs are still present — even in chronic lesions, the cells needed for repair are there. Something blocks them from differentiating. The field has identified several candidate inhibitory signals:
+
+- **Lingo-1** (an axonal signaling molecule that blocks OPC differentiation)
+- **RGMa** (repulsive guidance molecule A)
+- **Senescent OPCs** — cells that have stopped responding to pro-remyelination signals
+- **Reactive astrocytes** — glia that create a hostile environment for repair
+
+And once axons degenerate — once the bare wire shorts and dies — remyelination cannot restore function. **Neuroprotection** (preventing axonal loss in the first place) is the other half of this problem.
+
+<Aside type="caution" title="The remyelination gap">
+Despite multiple Phase 2 trials over the past decade (opicinumab, clemastine, biotin), no remyelinating therapy has yet proven effective in a Phase 3 trial. This is one of the most important unmet needs in the field. It is also one of the most actively worked problems — the biology is now well enough understood to design better trials.
+</Aside>
+
+### The frontier: repair biology meets measurable endpoints
+
+Progress in two directions is accelerating this pillar:
+
+**Biology**: A clearer understanding of why remyelination fails in chronic lesions — OPC senescence, inhibitory signals, astrocytic scarring — is generating new therapeutic targets. Agents in trials include **PIPE-307** (M1R muscarinic receptor antagonist) and novel anti-LINGO approaches.
+
+**Endpoints**: You can't run a remyelination trial without measuring remyelination. **Magnetization transfer ratio (MTR)**, **myelin water imaging**, and **visual evoked potential (VEP) latency** are emerging as measurable surrogates for myelin content in lesions, allowing proof-of-concept trials in smaller cohorts.
+
+**Open questions for the next generation:**
+- Can we identify *which* lesions are "remyelination-competent" vs. chronically irreparable at diagnosis?
+- Is there a therapeutic window after a lesion forms within which remyelination therapy must be given?
+- How do we distinguish remyelination from axonal sprouting in imaging endpoints?
+- Can neuroprotective agents (simvastatin, ibudilast) slow brain atrophy independent of anti-inflammatory effects?
+
+<CardGrid>
+  <LinkCard
+    title="Demyelination & remyelination"
+    href="/mskb/concepts/mechanisms/demyelination-remyelination/"
+    description="What happens when myelin is lost and why repair fails in progressive MS."
+  />
+  <LinkCard
+    title="PIRA & smoldering MS"
+    href="/mskb/concepts/clinical/pira-smoldering-ms/"
+    description="The biological and clinical overlap between progressive disease and repair failure."
+  />
+</CardGrid>
+
+---
+
+## Pillar 3 — End MS Forever
+
+### The breakthrough: EBV causality established
+
+In January 2022, a landmark study in *Science* by Björnevik et al. followed 10 million US military personnel for 20 years with serial blood samples. Among 955 who developed MS, **every single one had been infected with Epstein-Barr virus (EBV) before disease onset** — in contrast to a control group where EBV infection lagged behind. The risk of MS increased 32-fold after EBV infection and not at all before it.
+
+This is the clearest evidence yet of a **necessary environmental cause of MS** — one without which MS essentially does not develop.
+
+Later that year, Lanz et al. in *Nature* provided a mechanistic explanation: EBV protein **EBNA1** structurally mimics **GlialCAM**, a protein expressed by astrocytes and oligodendrocytes. Antibodies generated against EBNA1 during infection can cross-react with GlialCAM in the CNS — a molecular mimicry mechanism that could explain how EBV primes the autoimmune response decades before symptoms appear.
+
+<Aside type="tip" title="A rare moment in medicine">
+Establishing a necessary environmental cause of a common autoimmune disease — with a target for prevention — is exceptionally rare. The EBV-MS connection now opens a path that didn't exist five years ago: **preventing MS by preventing EBV infection**.
+</Aside>
+
+### The frontier: vaccination and preclinical MS
+
+**EBV vaccines** are in active clinical development for the first time in history, with MS prevention as a downstream goal. ModernaTX's mRNA-1189 EBV vaccine and GSK's gp350-adjuvanted vaccine are among those in early trials. Timeline to MS-specific efficacy data is likely 10–15 years, but the scientific case is compelling enough to justify the investment.
+
+Complementing vaccination is the concept of **preclinical MS**: using blood biomarkers (NfL, specific antibody patterns, genetic risk scores) to identify individuals at elevated risk *years before* their first lesion. If we can identify preclinical MS and intervene early, we may prevent the first demyelinating event entirely.
+
+**Open questions for the next generation:**
+- Which EBV proteins are most important for molecular mimicry — EBNA1 alone, or a broader repertoire?
+- What additional factors determine who develops MS after EBV infection (genetics, timing, immune state)?
+- What would a preclinical MS screening program look like, and what are its ethical implications?
+- Can EBV vaccine trials use MS incidence as a primary endpoint, and what is the required sample size?
+
+<CardGrid>
+  <LinkCard
+    title="EBV and molecular mimicry"
+    href="/mskb/concepts/mechanisms/ebv-ms/"
+    description="The epidemiological and mechanistic evidence linking EBV infection to MS onset."
+  />
+  <LinkCard
+    title="Genetic susceptibility"
+    href="/mskb/concepts/mechanisms/genetic-susceptibility/"
+    description="HLA-DRB1, non-HLA loci, and gene-environment interactions in MS risk."
+  />
+  <LinkCard
+    title="Environmental risk factors"
+    href="/mskb/concepts/mechanisms/environmental-risk-factors/"
+    description="EBV, vitamin D, smoking — how environment interacts with genetics to trigger MS."
+  />
+</CardGrid>
+
+---
+
+## Cross-cutting frontiers
+
+### Biomarkers for the whole arc of disease
+
+Blood-based biomarkers have transformed what's measurable outside the MRI scanner:
+
+- **Serum NfL** (neurofilament light chain) — rises during relapses, correlates with brain atrophy, predicts long-term disability. The first clinically deployable blood biomarker for MS disease activity.
+- **Serum GFAP** (glial fibrillary acidic protein) — elevated in progressive MS even without relapses; may reflect smoldering astrocyte activation.
+- **Paramagnetic rim lesion count** — the leading imaging biomarker for chronic active inflammation; associated with faster progression and worse outcomes.
+
+Together, these create the possibility of **precision monitoring**: following patients between clinic visits, catching silent worsening early, and using biomarkers as trial endpoints.
+
+### Artificial intelligence and the digital clinic
+
+The same lesion on MRI can be interpreted differently by two radiologists. AI-based **automated lesion segmentation** is approaching radiologist-level accuracy and can detect subtle changes invisible to the human eye. Beyond imaging, AI is being applied to:
+
+- Predicting which patients will progress to SPMS
+- Identifying treatment non-responders before disability accumulates
+- Integrating genomic, imaging, and clinical data into richer prognostic models
+
+The NMSS roadmap identifies AI as a cross-cutting infrastructure need — not a standalone research priority, but the substrate that enables all three pillars to move faster.
+
+### Equity: the underserved majority
+
+MS affects Black Americans at **higher rates** than previously recognized and with **more aggressive disease course** on average — yet Black patients are underrepresented in clinical trials, underdiagnosed due to the mistaken assumption that MS is a "white person's disease," and undertreated relative to white patients.
+
+Hispanic populations are the fastest-growing demographic in the United States and among the least studied in MS research. The global MS burden is also shifting — with rising incidence documented in regions (Iran, South America) historically considered low-prevalence.
+
+The NMSS roadmap treats equity as a core pillar, not an afterthought. The next generation of MS researchers needs to look like the population affected by the disease.
+
+<CardGrid>
+  <LinkCard
+    title="CSF & blood biomarkers"
+    href="/mskb/concepts/diagnosis/csf-biomarkers/"
+    description="NfL, GFAP, and oligoclonal bands — blood-based markers for disease activity and progression."
+  />
+  <LinkCard
+    title="Equity & social determinants"
+    href="/mskb/concepts/populations/equity-sdoh/"
+    description="Racial/ethnic disparities in MS incidence, diagnosis, and treatment access."
+  />
+</CardGrid>
+
+---
+
+## What can you contribute?
+
+The NMSS Pathways to Cures roadmap is explicit about where more investigators are needed:
+
+<Aside type="note" title="High-priority gaps the field acknowledges">
+
+1. **Progressive MS biology** — We understand relapsing MS far better than progressive MS. The biological drivers of slow, smoldering worsening are incompletely known.
+
+2. **Remyelination endpoints** — Better imaging and biomarker tools to measure myelin repair would unlock faster proof-of-concept trials.
+
+3. **EBV mechanism** — The molecular mimicry hypothesis explains some MS, but the full immunological story of how EBV primes MS-specific autoimmunity is not yet written.
+
+4. **Equity-focused cohorts** — Prospective studies that deliberately enroll diverse populations are needed to understand why MS presents differently across racial and ethnic groups.
+
+5. **Patient-centered outcomes** — Fatigue, cognition, and quality of life — the domains patients rank as most important — are still poorly served by existing trial endpoints.
+
+6. **Prevention trial infrastructure** — Running EBV vaccine trials with MS as an endpoint requires registries, biobank infrastructure, and long follow-up that doesn't yet exist at scale.
+
+</Aside>
+
+**The gap between what we know and what we need to know is large — and that is the opportunity.**
+
+---
+
+## Suggested reading order for this pathway
+
+This pathway assumes familiarity with basic MS concepts. If you're new to the field, start with the [Clinical pathway](/mskb/pathways/clinical/) or [Mechanistic pathway](/mskb/pathways/mechanistic/) first.
+
+1. **Bebo BF et al.** — Pathways to cures for MS (2022), *Mult Scler J* — the framework
+2. **Bebo BF et al.** — Refined Pathways to Cures Roadmap (2024), *Mult Scler J* — 2024 update
+3. **Björnevik K et al.** — Longitudinal analysis reveals high prevalence of EBV associated with MS (2022), *Science*
+4. **Lanz TV et al.** — Clonally expanded B cells in MS bind EBV EBNA1 and GlialCAM (2022), *Nature*
+5. **Kappos L et al.** — Contribution of PIRA to overall disability accumulation in RRMS (2020), *Neurology*
+6. **Ontaneda D et al.** — Progressive MS: prospects for therapy, repair, and restoration (2016), *Lancet*
+
+---
+
+*Source documents: Bebo BF et al. Pathways to cures for MS: research roadmap 2022. [doi:10.1177/13524585221075990](https://doi.org/10.1177/13524585221075990). Bebo BF et al. Refined Pathways to Cures Research Roadmap 2024. [doi:10.1177/13524585241266483](https://doi.org/10.1177/13524585241266483).*
