@@ -3,8 +3,15 @@ title: Environmental Risk Factors in MS
 description: Epstein-Barr virus, vitamin D, smoking, migration patterns, and the evidence that environment shapes 50 % of MS risk.
 concept:
   id: environmental_risk_factors
-  category: mechanisms
+  category: pathogenesis_and_immunology
   papers: []
+  anchors:
+    topic_map: ["T04"]
+    bloom_level: "Understand, Analyze"
+    edu_rationale: "Links biology to modifiable risk; EBV-MS causation is a landmark 2022 finding; critical for prevention framing"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

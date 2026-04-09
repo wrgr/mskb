@@ -3,8 +3,15 @@ title: MRI Patterns in MS
 description: T2/FLAIR lesion characteristics, gadolinium enhancement, central vein sign, paramagnetic rim lesions, and spinal cord imaging in MS diagnosis and monitoring.
 concept:
   id: mri_patterns
-  category: diagnosis
+  category: imaging_and_biomarkers
   papers: []
+  anchors:
+    topic_map: ["T05"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Core diagnostic skill; imaging literacy is essential for understanding trial endpoints and disease monitoring"
+    jla_priority: 1
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

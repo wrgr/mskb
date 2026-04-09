@@ -47,3 +47,13 @@ Why processing speed and thalamic atrophy matter more than EDSS in the smolderin
 [Disease Course and Disability Progression](/mskb/concepts/clinical/disease-course/)
 
 Rethinking the relapsing/progressive binary through the lens of PIRA and smoldering activity.
+
+## Step 7 — Equity and the research agenda
+
+[Equity and Social Determinants](/mskb/concepts/populations/equity-sdoh/)
+
+Who is left out of MS trials and clinical care — structural racism, DMT access, and disparities.
+
+[Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
+
+Patient partnership as a structural mechanism — how patient priorities reshape research and practice. *JLA Priority #3.*

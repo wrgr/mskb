@@ -3,8 +3,15 @@ title: Genetic Susceptibility in MS
 description: HLA and non-HLA risk loci, GWAS findings, gene-environment interactions, and why MS is not a Mendelian disease.
 concept:
   id: genetic_susceptibility
-  category: mechanisms
+  category: pathogenesis_and_immunology
   papers: []
+  anchors:
+    topic_map: ["T03"]
+    bloom_level: "Understand, Analyze"
+    edu_rationale: "Anchors the immune-driven disease model in molecular genetics; explains why MS is not Mendelian but is heritable"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

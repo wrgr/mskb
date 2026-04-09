@@ -3,8 +3,15 @@ title: McDonald Criteria
 description: The international diagnostic criteria for MS — dissemination in space, dissemination in time, and how the 2024 revision incorporates new biomarkers.
 concept:
   id: mcdonald_criteria
-  category: diagnosis
+  category: imaging_and_biomarkers
   papers: []
+  anchors:
+    topic_map: ["T05"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Applied clinical decision-making; 2024 revision adds CVS and PRLs — direct bridge between mechanism and bedside"
+    jla_priority: 1
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

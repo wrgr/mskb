@@ -3,8 +3,15 @@ title: B Cell–Targeted Therapies
 description: Anti-CD20 agents (ocrelizumab, ofatumumab, rituximab, ublituximab), mechanism of B-cell depletion, pivotal trial evidence, and safety considerations.
 concept:
   id: b_cell_therapies
-  category: therapeutics
+  category: clinical_trials_and_therapeutics
   papers: []
+  anchors:
+    topic_map: ["T07"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Paradigm-shift concept; anti-CD20 efficacy reshaped MS immunology and treatment; ORATORIO was a landmark for PPMS"
+    jla_priority: 2
+    aan_quality_measure: true
+    proms: false
 ---
 
 ## Learning objectives

@@ -3,8 +3,15 @@ title: BTK Inhibitors in MS
 description: Tolebrutinib, fenebrutinib, evobrutinib — CNS-penetrant Bruton's tyrosine kinase inhibitors targeting both B cells and microglia in smoldering MS.
 concept:
   id: btk_inhibitors
-  category: therapeutics
+  category: clinical_trials_and_therapeutics
   papers: []
+  anchors:
+    topic_map: ["T08", "T15"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Emerging frontier; first mechanistic approach to smoldering MS/compartmentalized inflammation — bridges T07 and T08"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

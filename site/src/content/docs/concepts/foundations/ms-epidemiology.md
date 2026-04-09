@@ -3,8 +3,15 @@ title: MS Epidemiology and Natural History
 description: Who gets MS, where, and why — incidence, prevalence, geographic gradients, and the longitudinal disease trajectory.
 concept:
   id: ms_epidemiology
-  category: foundations
+  category: epidemiology_and_population_health
   papers: []
+  anchors:
+    topic_map: ["T00"]
+    bloom_level: "Remember, Understand"
+    edu_rationale: "Quantitative global frame; geographic diversity; prerequisite for understanding risk factors and equity disparities"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

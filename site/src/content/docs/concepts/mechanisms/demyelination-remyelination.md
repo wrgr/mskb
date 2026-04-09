@@ -3,8 +3,15 @@ title: Demyelination and Remyelination
 description: How inflammatory demyelination destroys myelin sheaths, why remyelination fails, and the path from reversible lesions to permanent axonal damage.
 concept:
   id: demyelination_remyelination
-  category: mechanisms
+  category: pathogenesis_and_immunology
   papers: []
+  anchors:
+    topic_map: ["T02"]
+    bloom_level: "Understand, Apply, Analyze"
+    edu_rationale: "Core mechanism concept; explains the duality of reversible vs. permanent injury and why progressive MS is hard to treat"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

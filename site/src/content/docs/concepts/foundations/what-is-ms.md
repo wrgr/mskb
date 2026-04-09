@@ -3,8 +3,15 @@ title: What is Multiple Sclerosis?
 description: Definition and classification of MS as a CNS autoimmune demyelinating disease — and how it differs from other neurological conditions.
 concept:
   id: what_is_ms
-  category: foundations
+  category: clinical_care_and_management
   papers: []
+  anchors:
+    topic_map: ["T01"]
+    bloom_level: "Remember, Understand"
+    edu_rationale: "Entry point concept; prerequisite vocabulary for the full ontology (Bloom: knowledge foundation before mechanism or treatment)"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

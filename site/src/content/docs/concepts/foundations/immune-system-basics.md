@@ -3,8 +3,15 @@ title: Immune System Basics for MS
 description: T cells, B cells, antigen presentation, and the breakdown of self-tolerance that drives MS autoimmunity.
 concept:
   id: immune_system_basics
-  category: foundations
+  category: pathogenesis_and_immunology
   papers: []
+  anchors:
+    topic_map: ["T02", "T03"]
+    bloom_level: "Understand"
+    edu_rationale: "Conceptual prerequisite for all mechanism, treatment, and biomarker concepts; scaffolding per cognitive load theory"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

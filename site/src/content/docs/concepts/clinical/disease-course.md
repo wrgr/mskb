@@ -3,8 +3,15 @@ title: Disease Course and Disability Progression
 description: Relapse dynamics, EDSS, long-term disability trajectories, and the transition from relapsing to progressive MS.
 concept:
   id: disease_course
-  category: clinical
+  category: clinical_care_and_management
   papers: []
+  anchors:
+    topic_map: ["T1b", "T08"]
+    bloom_level: "Understand, Apply"
+    edu_rationale: "Long-term perspective essential for shared decision-making; natural history data grounds treatment benefit estimates"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: true
 ---
 
 ## Learning objectives

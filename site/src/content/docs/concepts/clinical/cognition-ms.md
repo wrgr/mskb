@@ -3,8 +3,15 @@ title: Cognition in MS
 description: MS-associated cognitive dysfunction — prevalence, affected domains, neuroimaging correlates, assessment tools, and management strategies.
 concept:
   id: cognition_ms
-  category: clinical
+  category: clinical_care_and_management
   papers: []
+  anchors:
+    topic_map: ["T09", "T10"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Cognitive impairment affects 40–70% of pwMS; SDMT processing speed is a stronger disability predictor than EDSS in many cohorts"
+    jla_priority: null
+    aan_quality_measure: true
+    proms: true
 ---
 
 ## Learning objectives

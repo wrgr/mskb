@@ -3,8 +3,15 @@ title: Treatment Monitoring and Switches
 description: MRI-based treat-to-target, NfL as a monitoring biomarker, criteria for treatment failure, and when to switch or de-escalate.
 concept:
   id: treatment_monitoring
-  category: therapeutics
+  category: clinical_trials_and_therapeutics
   papers: []
+  anchors:
+    topic_map: ["T07", "T06"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Treat-to-target is a live debate; NfL-guided monitoring bridges biomarkers (T06) and DMTs (T07)"
+    jla_priority: 2
+    aan_quality_measure: true
+    proms: false
 ---
 
 ## Learning objectives

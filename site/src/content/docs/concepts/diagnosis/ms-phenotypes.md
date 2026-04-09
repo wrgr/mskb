@@ -3,8 +3,15 @@ title: MS Phenotypes and Classification
 description: RRMS, PPMS, SPMS, CIS, and RIS — definitions, clinical course, and how phenotype guides prognosis and treatment eligibility.
 concept:
   id: ms_phenotypes
-  category: diagnosis
+  category: imaging_and_biomarkers
   papers: []
+  anchors:
+    topic_map: ["T01", "T1b"]
+    bloom_level: "Remember, Understand"
+    edu_rationale: "Prerequisite classification framework; phenotype guides DMT eligibility and trial design; challenged by smoldering model"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

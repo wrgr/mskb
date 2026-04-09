@@ -56,12 +56,34 @@ All approved DMT classes, efficacy tiers, and the early high-efficacy treatment 
 
 NEDA, NfL monitoring, treatment failure criteria, and extended interval dosing.
 
-## Step 6 — Special situations
+## Step 6 — Patient-priority symptoms
+
+[Fatigue in MS](/mskb/concepts/clinical/fatigue-ms/)
+
+The most prevalent MS symptom — mechanisms, validated scales, and evidence-based management. *AAN Quality Measure. JLA Priority #5.*
+
+[Bladder and Bowel Dysfunction](/mskb/concepts/clinical/bladder-bowel-dysfunction/)
+
+~90% lifetime prevalence; systematic screening recommended; practical management. *AAN Quality Measure.*
+
+[Depression and Anxiety in MS](/mskb/concepts/clinical/depression-anxiety-ms/)
+
+50% lifetime prevalence; bidirectional link with disease activity. *JLA Priority #4.*
+
+[Exercise and Rehabilitation](/mskb/concepts/clinical/rehabilitation-exercise/)
+
+Exercise as medicine — the JLA's top non-pharmacological priority. *JLA Priority #5.*
+
+[Cognition in MS](/mskb/concepts/clinical/cognition-ms/)
+
+Cognitive dysfunction prevalence, assessment tools, and management. *AAN Quality Measure.*
+
+## Step 7 — Special situations and context
 
 [Pregnancy and MS](/mskb/concepts/clinical/pregnancy-ms/)
 
 DMT safety in pregnancy, postpartum relapse risk, and family planning.
 
-[Cognition in MS](/mskb/concepts/clinical/cognition-ms/)
+[Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
 
-Cognitive dysfunction prevalence, assessment tools, and management.
+Patient partnership in DMT choice — frameworks, tools, and patient priorities. *JLA Priority #3.*

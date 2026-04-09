@@ -158,6 +158,8 @@
           label: String(node && node.label ? node.label : ""),
           summary: String(node && node.summary ? node.summary : ""),
           group: String(node && node.group ? node.group : "Other"),
+          // node_color: optional per-node hex override (e.g. concept section color)
+          node_color: String(node && node.node_color ? node.node_color : ""),
           href: String(node && node.href ? node.href : ""),
           paper_ids: rawPaperIds,
           paper_count: paperCount,
@@ -324,7 +326,8 @@
 
     const graph = new runtime.Graph({ multi: false, allowSelfLoops: false });
     idToNode.forEach((node) => {
-      const color = colors.get(node.group) || "#5e7388";
+      // node_color overrides group-based color (used for per-section concept coloring)
+      const color = node.node_color || colors.get(node.group) || "#5e7388";
       const size = nodeSize(node);
       graph.addNode(node.id, {
         label: node.label,

@@ -3,8 +3,15 @@ title: Blood-Brain Barrier Dysfunction
 description: How tight-junction disruption and immune cell transmigration drive CNS inflammation — and why BBB integrity is a biomarker of disease activity.
 concept:
   id: blood_brain_barrier
-  category: mechanisms
+  category: pathogenesis_and_immunology
   papers: []
+  anchors:
+    topic_map: ["T02"]
+    bloom_level: "Understand"
+    edu_rationale: "Bridges immune biology to clinical imaging (gadolinium) and specific DMT mechanisms (natalizumab VLA-4)"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

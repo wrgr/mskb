@@ -3,8 +3,15 @@ title: Pregnancy and MS
 description: DMT safety in pregnancy, disease activity changes during gestation, postpartum relapse risk, and family planning counselling.
 concept:
   id: pregnancy_ms
-  category: clinical
+  category: clinical_care_and_management
   papers: []
+  anchors:
+    topic_map: ["T11"]
+    bloom_level: "Apply"
+    edu_rationale: "High-stakes clinical scenario; DMT teratogenicity decisions affect a large proportion of the MS population (young women)"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: true
 ---
 
 ## Learning objectives

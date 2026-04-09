@@ -3,8 +3,15 @@ title: CSF and Blood Biomarkers in MS
 description: Oligoclonal bands, kappa free light chains, neurofilament light chain (NfL), and GFAP as diagnostic and prognostic biomarkers.
 concept:
   id: csf_biomarkers
-  category: diagnosis
+  category: imaging_and_biomarkers
   papers: []
+  anchors:
+    topic_map: ["T06"]
+    bloom_level: "Apply, Analyze"
+    edu_rationale: "Bridges lab science to clinical decision-making; NfL is now a standard treatment-monitoring tool"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: false
 ---
 
 ## Learning objectives

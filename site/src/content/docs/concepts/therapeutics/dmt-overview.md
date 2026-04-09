@@ -3,8 +3,15 @@ title: Disease-Modifying Therapies — Overview
 description: "The landscape of MS DMTs: mechanism classes, efficacy tiers, key trials, and the shift toward early high-efficacy treatment."
 concept:
   id: dmt_overview
-  category: therapeutics
+  category: clinical_trials_and_therapeutics
   papers: []
+  anchors:
+    topic_map: ["T07"]
+    bloom_level: "Understand, Apply"
+    edu_rationale: "Central therapeutic concept; early high-efficacy debate is the most active clinical controversy in MS"
+    jla_priority: 2
+    aan_quality_measure: true
+    proms: false
 ---
 
 ## Learning objectives

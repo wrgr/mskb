@@ -3,8 +3,15 @@ title: PIRA and Smoldering MS
 description: Progression independent of relapse activity, chronic active lesions, slowly expanding lesions, and the emerging model of smoldering neurodegeneration.
 concept:
   id: pira_smoldering_ms
-  category: clinical
+  category: clinical_care_and_management
   papers: []
+  anchors:
+    topic_map: ["T08"]
+    bloom_level: "Analyze"
+    edu_rationale: "Most important conceptual shift in MS research 2020–2025; reshapes trial endpoints and treatment targets"
+    jla_priority: null
+    aan_quality_measure: false
+    proms: true
 ---
 
 ## Learning objectives
