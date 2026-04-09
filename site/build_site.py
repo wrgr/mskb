@@ -121,6 +121,10 @@ def main() -> None:
     python = sys.executable
     if not args.skip_gen:
         _run([python, "site/gen_site.py", "--config", args.config], cwd=repo_root)
+        # Patch concept nodes and pathway edges into the graph JSON assets.
+        # update_graph_assets.py must run after gen_site.py (which creates/updates
+        # the graph JSONs) and before npm build (which bundles them into the site).
+        _run([python, "scripts/update_graph_assets.py"], cwd=repo_root)
 
     if not (site_dir / "node_modules").exists():
         _run(["npm", "ci", "--no-audit", "--no-fund"], cwd=site_dir)

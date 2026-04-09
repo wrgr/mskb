@@ -237,6 +237,7 @@ CONCEPT_TOPIC_MAP: dict[str, list[str]] = {
     "rehabilitation_exercise":      ["3", "5", "8"],
     "shared_decision_making":       ["0", "3", "7"],
     "pediatric_ms":                 ["0", "3", "113"],
+    "ebv_ms":                        ["5", "8"],
     "equity_sdoh":                  ["0", "5", "161"],
     "sex_gender_ms":                ["0", "5"],
 }

@@ -9,7 +9,7 @@ import { Aside, Badge } from '@astrojs/starlight/components';
 
 Known gaps are tracked here and updated as the corpus grows. Documentation requirements are not relaxed because of gaps — we document what we have and flag what is missing.
 
-10 gaps tracked as of version 1.0 (April 2026).
+12 gaps tracked as of version 1.1 (April 2026).
 
 ---
 
@@ -60,7 +60,7 @@ Gaps are a feature of honest corpus documentation, not a failure of the pipeline
 
 **Recommended action:** Add 2–3 qualitative studies as Tier 4 documents. Candidate: Joanna Smith (Leeds) on progressive MS experience. Add NMSS and MS Society (UK) patient resources to source diversity documentation. The Cures Roadmap (seeds MS-T1-033, MS-T1-034) remains the closest bridge in the current corpus — it explicitly incorporated input from 300+ people living with MS.
 
-**Status:** Open
+**Status:** Open — partially improved. The v1.1 T4 YAML adds 20+ patient-centered clinical outcome papers (depression/anxiety, fatigue, bladder/bowel dysfunction, rehabilitation, shared decision-making) that improve T09/T10 coverage depth. Quantitative patient outcome research is now better represented; true qualitative methods (ethnographic, interview-based studies) remain absent.
 
 ---
 
@@ -105,7 +105,7 @@ Gaps are a feature of honest corpus documentation, not a failure of the pipeline
 
 **Recommended action:** The T2/T3 pipeline should surface post-2017 DMT literature through forward citation expansion from OPERA/ORATORIO. Manually verify that tolebrutinib and BTK inhibitor papers reach the Tier 3 velocity threshold. If not, add as Tier 4 with conference award documentation.
 
-**Status:** Open — monitor pipeline
+**Status:** Open — monitor pipeline. v1.1 activates full framing seed expansion (R1–R6), including R2 (Jakimovski 2024 *Lancet* comprehensive review) and R1 (Reich 2018 *NEJM*). Forward citation expansion from these anchors should surface post-2017 DMT literature including BTK inhibitor and ofatumumab papers. Assess coverage after next pipeline rerun.
 
 ---
 
@@ -166,3 +166,45 @@ Gaps are a feature of honest corpus documentation, not a failure of the pipeline
 **Recommended action:** Consider adding 1–2 registry methodology papers to Tier 4. Candidate: MSBase methodology paper (Butzkueven et al.). Low priority because the registry literature is well-connected to the existing seeds through the DMT and progressive MS citation networks and should surface through T2 expansion.
 
 **Status:** Open — low priority
+
+---
+
+## G-011 — EBV-MS Concept Page Missing T-code Assignment
+<Badge text="Low severity" variant="note" />
+
+**Topics:** T02, T15
+
+**Gap:** The `ebv-ms` concept page (`concepts/mechanisms/ebv-ms`) is not mapped to a T-code in the pipeline's `CONCEPT_TOPIC_MAP`. It is covered by environmental risk factors (T04) and emerging frontiers (T15) but lacks an explicit assignment, so it is not linked into the graph explorer's concept layer.
+
+**Why this matters:** The EBV-MS paper (seed MS-T1-009, Bjornevik 2022 *Science*) is the highest-impact recent MS paper and the primary citation anchor for T04. The concept page amplifying it should be wired into the same topic cluster in the research map. Without a T-code mapping, the concept node floats without citation-cluster edges in `research_map_graph.json`.
+
+**Recommended action:** Add `"ebv_ms": ["8", "5"]` to `CONCEPT_TOPIC_MAP` in `scripts/update_graph_assets.py`. Map to Leiden clusters 8 (emerging/risk factors) and 5 (epidemiology), which are the algorithmic homes of T04 and T15 content. Note: T-code assignment (T04/T15) is separate from the Leiden cluster mapping — both should be documented.
+
+**Status:** Resolved — `"ebv_ms": ["5", "8"]` added to `CONCEPT_TOPIC_MAP` in `scripts/update_graph_assets.py` (v1.1, April 2026). Will take effect on the next site rebuild.
+
+---
+
+## G-012 — 10 T1 Seeds Missing from Graph (Pre-Rerun State)
+<Badge text="Medium severity" variant="caution" />
+
+**Topics:** T01, T05, T06, T08, T09, T11, T15, T16
+
+**Gap:** 10 of the 40 T1 seed papers are absent from the current `explorer_graph.json` because they failed OpenAlex resolution or were deduplicated during the previous pipeline run. This includes foundational papers such as the McDonald 2018 criteria, 2021 MAGNIMS MRI consensus, and Krysko 2023 family planning consensus.
+
+**Affected DOIs:**
+- `10.1016/S0140-6736(08)61620-7` — Compston & Coles 2008 (T01)
+- `10.1016/S1474-4422(17)30470-2` — Thompson 2018 McDonald Criteria (T01)
+- `10.1016/S1474-4422(21)00095-8` — 2021 MAGNIMS-CMSC-NAIMS MRI consensus (T05)
+- `10.1038/s41582-018-0058-z` — Khalil 2018 Neurofilaments (T06)
+- `10.1016/j.msard.2019.07.007` — Ziemssen 2019 PROs (T09)
+- `10.1016/S1474-4422(08)70259-X` — Chiaravalloti 2008 Cognition (T10)
+- `10.1016/S1474-4422(22)00426-4` — Krysko 2023 Family planning (T11)
+- `10.1038/nrn2480` — Franklin 2008 Remyelination (T15)
+- `10.1177/13524585241266483` — Bebo 2024 Refined Roadmap (T16)
+- `10.1016/S0140-6736(16)31320-4` — Ontaneda 2016 Progressive MS (T16)
+
+**Why this matters:** Seeds that are absent from the graph cannot contribute to cross-seed scoring, topic evidence propagation, or learner journey paths. Their absence weakens coverage in the topics they anchor.
+
+**Recommended action:** Re-run the full pipeline. The revised retrieval stage (v1.1) now expands all 6 framing seeds (R1–R6) and resolves all 52 T4 expert signals from the YAML. On the next run, OpenAlex will be queried with the current DOIs — most or all of the 10 missing seeds should resolve. If any still fail after rerun, add them manually to the T4 YAML with `corpus_status: forced_seed`.
+
+**Status:** Open — will be resolved on next pipeline rerun
