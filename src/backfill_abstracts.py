@@ -70,8 +70,9 @@ def run(config_path: str) -> None:
         canonical["abstract_backfill_source"] = ""
 
     backfill_cfg = cfg.get("abstract_backfill", {}) or {}
+    enabled = bool(backfill_cfg.get("enabled", True))
     selected_cfg = backfill_cfg.get("selected_scope", {}) or {}
-    selected_scope_enabled = bool(selected_cfg.get("enabled", False))
+    selected_scope_enabled = bool(enabled and selected_cfg.get("enabled", False))
     selected_scope_ids: set[str] = set()
     selected_scope_mask = pd.Series(True, index=canonical.index)
     if selected_scope_enabled:
@@ -135,7 +136,6 @@ def run(config_path: str) -> None:
             stats["filled_from_candidate_versions"] = int(selector.sum())
 
     # Pass 2: query OpenAlex for remaining missing abstracts.
-    enabled = bool(backfill_cfg.get("enabled", True))
     max_queries = backfill_cfg.get("max_openalex_queries")
     env_max_queries = _clean_text(os.environ.get("MSKB_MAX_OPENALEX_QUERIES", ""))
     if env_max_queries:

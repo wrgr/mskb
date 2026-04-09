@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 import re
 import unicodedata
 from pathlib import Path
@@ -20,7 +21,11 @@ def _coerce_text(value: Any) -> str:
 def load_config(path: str) -> Dict[str, Any]:
     """Load a YAML config file and return its contents as a dict."""
     with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f) or {}
+    mailto_override = str(os.environ.get("OPENALEX_MAILTO", "")).strip()
+    if mailto_override:
+        cfg["email"] = mailto_override
+    return cfg
 
 
 def ensure_dir(path: Path) -> None:

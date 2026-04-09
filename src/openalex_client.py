@@ -21,6 +21,7 @@ class OpenAlexClient:
         cache_dir: Optional[Path] = None,
         max_retries: int = 4,
         max_retry_sleep_s: float = 30.0,
+        api_key: str = "",
     ):
         self.base_url = base_url.rstrip("/")
         self.email = email
@@ -28,6 +29,8 @@ class OpenAlexClient:
         self.timeout = timeout
         self.max_retries = max(1, int(max_retries))
         self.max_retry_sleep_s = max(1.0, float(max_retry_sleep_s))
+        env_api_key = (os.environ.get("OPENALEX_API_KEY") or "").strip()
+        self.api_key = (str(api_key or "").strip() or env_api_key)
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
@@ -48,6 +51,8 @@ class OpenAlexClient:
     def _get(self, path: str, params: Optional[Dict] = None) -> Dict:
         params = params or {}
         params["mailto"] = self.email
+        if self.api_key:
+            params.setdefault("api_key", self.api_key)
         cache_path = self._cache_path(path, params)
         if cache_path and cache_path.exists():
             try:
@@ -129,8 +134,8 @@ class OpenAlexClient:
         work_id = work_id.strip()
         if not work_id:
             return None
-        if not work_id.startswith("https://openalex.org/"):
-            work_id = f"https://openalex.org/{work_id}"
+        if work_id.startswith("https://openalex.org/"):
+            work_id = work_id.split("/")[-1]
         try:
             payload = self._get(f"/works/{work_id}")
             if payload.get("_not_found"):
