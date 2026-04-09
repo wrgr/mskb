@@ -175,6 +175,7 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 - **NMSS-funded research outputs:** The primary funder of MS research in North America shapes the field's development. Their supported outputs represent the field's strategic priorities.
 - **Cures Roadmap reference lists:** Papers cited in the field's own strategic planning document are treated as foundational by the community itself — the highest form of expert endorsement.
 - **Explicitly non-Western cohort studies:** The one-hop expansion from US and European seeds systematically underrepresents non-Western literature. Tier 4 is the correction mechanism.
+- **Concept-anchor signal (April 2026):** Papers explicitly nominated by editors as required anchors for MSKB educational concept pages covering thin-coverage topic areas. These papers were identified via systematic review of JLA priorities, AAN Quality Measures, and MSIF PROMS framework — areas where the algorithmic T2/T3 selection is structurally thin (T09 PROs, T10 symptom management, T12 pediatric MS, T13 equity/SDOH, T16 research priorities). Documented in `data/t4_expert_signal.yaml` (52 papers across 8 concept pages, generated 2026-04-09). 7 of 52 are already structurally included in the corpus; 45 are new additions. For already-included papers, the T4 record formalises the educational expert signal and links the paper to its concept page.
 
 **Decision:** cross_seed_score = 0 is acceptable for Tier 4 documents if an explicit expert signal is documented.
 
