@@ -534,7 +534,7 @@ def _run_framing_seed_channel(
 def _run_t4_expert_channel(
     t4_yaml_path: Path,
     client: OpenAlexClient,
-    max_title_queries: int = 30,
+    max_title_queries: int = 0,
 ) -> list[dict]:
     """Retrieve all expert-signal T4 papers from data/t4_expert_signal.yaml.
 
@@ -554,6 +554,7 @@ def _run_t4_expert_channel(
 
     doi_queried: set[str] = set()
     title_queries_used = 0
+    unlimited_title_queries = max_title_queries <= 0
 
     for entry in entries:
         if not isinstance(entry, dict):
@@ -572,7 +573,7 @@ def _run_t4_expert_channel(
             work = client.get_work_by_doi(doi)
 
         # Title search for entries without a recorded DOI (most not_found papers).
-        if not work and title and title_queries_used < max_title_queries:
+        if not work and title and (unlimited_title_queries or title_queries_used < max_title_queries):
             filter_expr = ""
             if year is not None:
                 try:
@@ -581,6 +582,10 @@ def _run_t4_expert_channel(
                 except (TypeError, ValueError):
                     pass
             results = client.search_works(title, max_results=5, filter_expr=filter_expr)
+            if not results and filter_expr:
+                # OpenAlex filters can be brittle for historical/legacy records.
+                # Retry unfiltered title search before giving up.
+                results = client.search_works(title, max_results=5)
             work = _choose_best_openalex_match(
                 {"title": title, "year": year},
                 results,
@@ -629,7 +634,7 @@ def run(config_path: str) -> None:
     # T4 expert signals are sourced from the YAML (authoritative) not the CSV.
     t4_yaml_path = root / "data" / "t4_expert_signal.yaml"
     max_per_query = retrieval_cfg["max_search_results_per_query"]
-    max_t4_title_queries = int(retrieval_cfg.get("t4_max_title_queries", 30))
+    max_t4_title_queries = int(retrieval_cfg.get("t4_max_title_queries", 0))
 
     rows: list[dict] = []
     citation_edges: list[dict] = []

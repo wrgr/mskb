@@ -19,8 +19,9 @@ retrieval:
   # Uses DOI lookup for entries with corpus_doi; falls back to title search for not_found entries.
   # The legacy seeds/t4_expert_signals.csv is no longer the authoritative source for retrieval.
   use_t4_expert_channel: true
-  # Maximum OpenAlex title-search queries for T4 not_found entries without a corpus_doi.
-  t4_max_title_queries: 30
+  # Maximum OpenAlex title-search queries for T4 entries without a corpus_doi.
+  # Set <=0 for no cap (recommended).
+  t4_max_title_queries: 0
   seed_reference_enrichment:
     enabled: true
     use_crossref: true

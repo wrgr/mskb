@@ -5,6 +5,7 @@ Writes:
 - outputs/fulltext/fulltext_retrieval.csv
 - outputs/fulltext/fulltext_retrieval_stats.json
 - outputs/fulltext/text/<canonical_paper_id>.txt
+- outputs/fulltext/pdf/<canonical_paper_id>.pdf
 """
 
 from __future__ import annotations
@@ -139,23 +140,25 @@ def _fetch_text_from_url(
     timeout_seconds: int,
     max_bytes: int,
     min_chars: int,
-) -> tuple[str, str, str]:
-    """Return (text, final_url, error)."""
+) -> tuple[str, str, str, bytes]:
+    """Return (text, final_url, error, pdf_blob)."""
     try:
         resp = session.get(url, timeout=timeout_seconds, allow_redirects=True)
     except Exception as exc:
-        return "", "", f"request_error:{type(exc).__name__}"
+        return "", "", f"request_error:{type(exc).__name__}", b""
 
     if resp.status_code >= 400:
-        return "", "", f"http_{resp.status_code}"
+        return "", "", f"http_{resp.status_code}", b""
 
     final_url = resp.url
     ctype = _clean_text(resp.headers.get("content-type", "")).lower()
     data = resp.content[:max_bytes]
+    pdf_blob = b""
 
     text = ""
     is_pdf = ("application/pdf" in ctype) or final_url.lower().endswith(".pdf")
     if is_pdf:
+        pdf_blob = data
         text = _extract_pdf_text(data)
     else:
         try:
@@ -168,8 +171,8 @@ def _fetch_text_from_url(
             text = re.sub(r"\s+", " ", raw).strip()
 
     if len(text) < min_chars:
-        return "", final_url, "text_too_short"
-    return text, final_url, ""
+        return "", final_url, "text_too_short", pdf_blob
+    return text, final_url, "", pdf_blob
 
 
 def _load_cached_works(cache_dir: Path) -> dict[str, dict[str, Any]]:
@@ -195,6 +198,7 @@ def run(
     max_papers: int | None,
     max_openalex_lookups: int,
     retry_failed: bool,
+    retry_missing_pdf: bool,
 ) -> None:
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
@@ -204,8 +208,10 @@ def run(
     raw_dir = outdir / "raw"
     fulltext_dir = outdir / "fulltext"
     text_dir = fulltext_dir / "text"
+    pdf_dir = fulltext_dir / "pdf"
     ensure_dir(fulltext_dir)
     ensure_dir(text_dir)
+    ensure_dir(pdf_dir)
 
     if scope == "selected":
         papers_path = graph_dir / "core_corpus_selected.csv"
@@ -226,18 +232,38 @@ def run(
         papers = papers.head(max_papers).copy()
 
     jsonl_path = fulltext_dir / "fulltext_retrieval.jsonl"
-    done_ids: set[str] = set()
+    latest_by_id: dict[str, dict[str, Any]] = {}
     if jsonl_path.exists():
         with jsonl_path.open("r", encoding="utf-8") as f:
             for line in f:
                 try:
                     row = json.loads(line)
                     pid = _clean_text(row.get("canonical_paper_id", ""))
-                    status = _clean_text(row.get("status", ""))
-                    if pid and (not retry_failed or status == "ok"):
-                        done_ids.add(pid)
+                    if pid:
+                        latest_by_id[pid] = row
                 except Exception:
                     continue
+
+    done_ids: set[str] = set()
+    if retry_missing_pdf:
+        for pid, row in latest_by_id.items():
+            has_pdf_flag = bool(row.get("has_pdf", False))
+            pdf_path = _clean_text(row.get("pdf_path", ""))
+            if has_pdf_flag:
+                done_ids.add(pid)
+                continue
+            if pdf_path and Path(pdf_path).exists():
+                done_ids.add(pid)
+                continue
+            if (pdf_dir / f"{pid}.pdf").exists():
+                done_ids.add(pid)
+    elif retry_failed:
+        for pid, row in latest_by_id.items():
+            status = _clean_text(row.get("status", ""))
+            if status in {"ok", "ok_pdf_only"}:
+                done_ids.add(pid)
+    else:
+        done_ids = set(latest_by_id.keys())
 
     cached_works = _load_cached_works(raw_dir / "openalex_cache")
     client = OpenAlexClient(
@@ -259,6 +285,7 @@ def run(
     stats = {
         "scope": scope,
         "retry_failed": bool(retry_failed),
+        "retry_missing_pdf": bool(retry_missing_pdf),
         "total_input_papers": int(len(papers)),
         "skipped_already_done": 0,
         "openalex_cache_hits": 0,
@@ -267,6 +294,9 @@ def run(
         "openalex_api_errors": 0,
         "fulltext_success": 0,
         "fulltext_fail": 0,
+        "pdf_success": 0,
+        "pdf_fail": 0,
+        "pdf_only_success": 0,
     }
 
     with jsonl_path.open("a", encoding="utf-8") as out:
@@ -303,29 +333,52 @@ def run(
 
             urls = _extract_candidate_urls(work or {})
             text = ""
+            pdf_blob = b""
+            pdf_path = ""
+            pdf_url = ""
+            pdf_source_kind = ""
             final_url = ""
             status = "no_url"
             source_kind = ""
             error = ""
             for url, kind in urls:
                 source_kind = kind
-                text, final_url, error = _fetch_text_from_url(
+                fetched_text, final_url, error, fetched_pdf_blob = _fetch_text_from_url(
                     session=session,
                     url=url,
                     timeout_seconds=timeout_seconds,
                     max_bytes=max_bytes,
                     min_chars=min_chars,
                 )
-                if text:
+                if fetched_pdf_blob and not pdf_path:
+                    target_pdf = pdf_dir / f"{pid}.pdf"
+                    target_pdf.write_bytes(fetched_pdf_blob)
+                    pdf_blob = fetched_pdf_blob
+                    pdf_path = str(target_pdf)
+                    pdf_url = final_url
+                    pdf_source_kind = kind
+                if fetched_text:
+                    text = fetched_text
                     status = "ok"
                     break
                 status = "failed_url"
+
+            if not text and pdf_path:
+                status = "ok_pdf_only"
+                error = ""
 
             if text:
                 (text_dir / f"{pid}.txt").write_text(text, encoding="utf-8")
                 stats["fulltext_success"] += 1
             else:
                 stats["fulltext_fail"] += 1
+
+            if pdf_path:
+                stats["pdf_success"] += 1
+                if status == "ok_pdf_only":
+                    stats["pdf_only_success"] += 1
+            else:
+                stats["pdf_fail"] += 1
 
             rec = {
                 "canonical_paper_id": pid,
@@ -340,13 +393,19 @@ def run(
                 "full_text": text,
                 "full_text_chars": int(len(text)),
                 "full_text_path": str((text_dir / f"{pid}.txt")) if text else "",
+                "has_pdf": bool(pdf_path),
+                "pdf_path": pdf_path,
+                "pdf_bytes": int(len(pdf_blob)) if pdf_blob else 0,
+                "pdf_source_url": pdf_url,
+                "pdf_source_kind": pdf_source_kind,
             }
             out.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
             if i % 100 == 0:
                 print(
-                    f"processed={i}/{len(papers)} success={stats['fulltext_success']} "
-                    f"fail={stats['fulltext_fail']} openalex_lookups={openalex_lookups}"
+                    f"processed={i}/{len(papers)} fulltext_success={stats['fulltext_success']} "
+                    f"fulltext_fail={stats['fulltext_fail']} pdf_success={stats['pdf_success']} "
+                    f"pdf_fail={stats['pdf_fail']} openalex_lookups={openalex_lookups}"
                 )
                 out.flush()
                 time.sleep(0.02)
@@ -380,6 +439,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Retry papers that exist in JSONL but have non-ok status; only skip prior ok rows.",
     )
+    parser.add_argument(
+        "--retry-missing-pdf",
+        action="store_true",
+        help="Retry papers until a PDF is captured; skip rows that already have a saved PDF.",
+    )
     args = parser.parse_args()
     max_papers = args.max_papers if args.max_papers > 0 else None
     run(
@@ -388,4 +452,5 @@ if __name__ == "__main__":
         max_papers=max_papers,
         max_openalex_lookups=max(0, int(args.max_openalex_lookups)),
         retry_failed=bool(args.retry_failed),
+        retry_missing_pdf=bool(args.retry_missing_pdf),
     )

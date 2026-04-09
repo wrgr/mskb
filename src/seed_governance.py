@@ -2,6 +2,7 @@
 
 import argparse
 import math
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -42,6 +43,30 @@ MS_CONCEPT_TERMS = [
 ]
 
 BRIDGE_HINTS = ["bridge", "bridging", "context", "adjacent", "cross-disease", "mechanistic context"]
+_TOPIC_CODE_RE = re.compile(r"^(T\d+b?)", re.IGNORECASE)
+
+# Map canonical topic codes to the broad governance quota categories.
+# Some topics contribute to more than one governance category by design.
+TOPIC_CATEGORY_MAP: dict[str, list[str]] = {
+    "T00": ["epidemiology_and_population_health"],
+    "T01": ["clinical_care_and_management"],
+    "T1b": ["epidemiology_and_population_health"],
+    "T02": ["pathogenesis_and_immunology"],
+    "T03": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],
+    "T04": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],
+    "T05": ["imaging_and_biomarkers"],
+    "T06": ["imaging_and_biomarkers"],
+    "T07": ["clinical_trials_and_therapeutics"],
+    "T08": ["pathogenesis_and_immunology", "clinical_trials_and_therapeutics"],
+    "T09": ["clinical_care_and_management"],
+    "T10": ["clinical_care_and_management", "epidemiology_and_population_health"],
+    "T11": ["clinical_trials_and_therapeutics", "clinical_care_and_management"],
+    "T12": ["clinical_trials_and_therapeutics"],
+    "T13": ["epidemiology_and_population_health"],
+    "T14": ["imaging_and_biomarkers"],
+    "T15": ["pathogenesis_and_immunology", "imaging_and_biomarkers"],
+    "T16": ["clinical_trials_and_therapeutics"],
+}
 
 
 def _clean_text(value: object) -> str:
@@ -54,6 +79,21 @@ def _clean_text(value: object) -> str:
 def _count_hits(text: str, terms: list[str]) -> int:
     t = _clean_text(text).lower()
     return int(sum(1 for term in terms if term in t))
+
+
+def _extract_topic_code(value: object) -> str:
+    text = _clean_text(value)
+    match = _TOPIC_CODE_RE.match(text)
+    return match.group(1) if match else ""
+
+
+def _count_seed_categories_from_primary_topic(core: pd.DataFrame) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for _, row in core.iterrows():
+        code = _extract_topic_code(row.get("primary_topic", ""))
+        for category in TOPIC_CATEGORY_MAP.get(code, []):
+            counts[category] = int(counts.get(category, 0)) + 1
+    return counts
 
 
 def _extract_seed_metadata(seed_row: pd.Series, work: dict | None) -> dict:
@@ -129,20 +169,29 @@ def _extract_seed_metadata(seed_row: pd.Series, work: dict | None) -> dict:
     }
 
 
-def _evaluate_category_quotas(core: pd.DataFrame, quota_cfg: dict) -> tuple[list[str], dict]:
+def _evaluate_category_quotas(core: pd.DataFrame, quota_cfg: dict) -> tuple[list[str], dict, dict, dict]:
     errors = []
-    counts = core["category"].fillna("uncategorized").value_counts().to_dict()
+    mapped_counts = _count_seed_categories_from_primary_topic(core)
+    doc_type_counts = core["category"].fillna("uncategorized").value_counts().to_dict()
+    effective_counts: dict[str, int] = {}
+    count_sources: dict[str, str] = {}
     for category, bounds in (quota_cfg or {}).items():
         if not isinstance(bounds, dict):
             continue
+        if category in mapped_counts:
+            observed = int(mapped_counts.get(category, 0))
+            count_sources[category] = "primary_topic_map"
+        else:
+            observed = int(doc_type_counts.get(category, 0))
+            count_sources[category] = "seed_category_column"
+        effective_counts[category] = observed
         min_allowed = int(bounds.get("min", 0))
         max_allowed = int(bounds.get("max", 10**9))
-        observed = int(counts.get(category, 0))
         if observed < min_allowed:
             errors.append(f"category '{category}' below minimum: {observed} < {min_allowed}")
         if observed > max_allowed:
             errors.append(f"category '{category}' above maximum: {observed} > {max_allowed}")
-    return errors, counts
+    return errors, effective_counts, mapped_counts, count_sources
 
 
 def _evaluate_caps(values: pd.Series, cap: int, label: str) -> tuple[list[str], dict]:
@@ -330,7 +379,9 @@ def run(config_path: str) -> None:
         meta["category"] = meta["category"].fillna("uncategorized").astype(str)
     meta.to_csv(outdir / "seed_metadata.csv", index=False)
 
-    quota_errors, category_counts = _evaluate_category_quotas(core, gcfg.get("category_quotas", {}))
+    quota_errors, category_counts, topic_mapped_counts, category_count_sources = _evaluate_category_quotas(
+        core, gcfg.get("category_quotas", {})
+    )
     errors.extend(quota_errors)
 
     venue_cap = max(0, int(gcfg.get("venue_cap", 0)))
@@ -364,6 +415,9 @@ def run(config_path: str) -> None:
         "n_framing_seeds": int(len(framing)),
         "n_resolved_metadata": int(meta["metadata_resolved"].fillna(False).astype(bool).sum()) if not meta.empty else 0,
         "category_counts": {str(k): int(v) for k, v in category_counts.items()},
+        "category_count_sources": {str(k): str(v) for k, v in category_count_sources.items()},
+        "topic_mapped_category_counts": {str(k): int(v) for k, v in topic_mapped_counts.items()},
+        "seed_doc_type_counts": {str(k): int(v) for k, v in core["category"].fillna("uncategorized").value_counts().to_dict().items()},
         "venue_counts": {str(k): int(v) for k, v in venue_counts.items()},
         "author_counts": {str(k): int(v) for k, v in author_counts.items()},
         "errors": errors,

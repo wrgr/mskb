@@ -6,8 +6,9 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import yaml
 
-from .utils import load_config
+from .utils import load_config, normalize_title
 
 
 POSITIVE_TERMS = [
@@ -352,21 +353,71 @@ def _collect_anchor_dois(cfg: dict, root: Path) -> set[str]:
 
 
 def _load_t4_registry(root: Path) -> pd.DataFrame:
-    """Load T4 expert-signal registry from seeds/t4_expert_signals.csv if present."""
-    path = root / "seeds" / "t4_expert_signals.csv"
-    if not path.exists():
-        return pd.DataFrame()
-    try:
-        df = pd.read_csv(path)
-    except Exception:
-        return pd.DataFrame()
+    """Load T4 expert-signal registry from YAML (authoritative) plus optional legacy CSV."""
+    rows: list[dict] = []
+
+    # Legacy CSV compatibility.
+    csv_path = root / "seeds" / "t4_expert_signals.csv"
+    if csv_path.exists():
+        try:
+            csv_df = pd.read_csv(csv_path)
+        except Exception:
+            csv_df = pd.DataFrame()
+        if not csv_df.empty:
+            for _, row in csv_df.iterrows():
+                rows.append(
+                    {
+                        "doi_norm": _normalize_doi(row.get("doi", "")),
+                        "title_norm": normalize_title(str(row.get("title", "") or "")),
+                        "selection_source": str(row.get("selection_source", "") or ""),
+                        "signal_type": str(row.get("signal_type", "") or ""),
+                        "topic_code": str(row.get("topic_code", "") or ""),
+                        "rationale": str(row.get("rationale", "") or ""),
+                    }
+                )
+
+    # Authoritative YAML source.
+    yaml_path = root / "data" / "t4_expert_signal.yaml"
+    if yaml_path.exists():
+        try:
+            payload = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+        except Exception:
+            payload = {}
+        entries = payload.get("flat_list", []) if isinstance(payload, dict) else []
+        if not entries and isinstance(payload, dict):
+            by_concept = payload.get("by_concept", {}) or {}
+            for items in by_concept.values():
+                entries.extend(items or [])
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+            topic_codes = entry.get("topic_codes", [])
+            if isinstance(topic_codes, list):
+                topic_code = ",".join(str(c).strip() for c in topic_codes if str(c).strip())
+            else:
+                topic_code = str(topic_codes or "").strip()
+            rows.append(
+                {
+                    "doi_norm": _normalize_doi(entry.get("corpus_doi", "") or entry.get("doi", "")),
+                    "title_norm": normalize_title(str(entry.get("title", "") or "")),
+                    "selection_source": str(entry.get("concept_path", "") or entry.get("concept", "") or ""),
+                    "signal_type": str(entry.get("t4_source_type", "concept_anchor_signal") or "concept_anchor_signal"),
+                    "topic_code": topic_code,
+                    "rationale": str(entry.get("t4_signal", "") or ""),
+                }
+            )
+
+    df = pd.DataFrame(rows)
     if df.empty:
-        return pd.DataFrame()
-    if "doi" in df.columns:
-        df["doi_norm"] = df["doi"].apply(_normalize_doi)
-    else:
-        df["doi_norm"] = ""
-    df = df[df["doi_norm"] != ""].copy()
+        return pd.DataFrame(columns=["doi_norm", "title_norm", "selection_source", "signal_type", "topic_code", "rationale"])
+    for col in ["doi_norm", "title_norm", "selection_source", "signal_type", "topic_code", "rationale"]:
+        if col not in df.columns:
+            df[col] = ""
+        df[col] = df[col].fillna("").astype(str)
+
+    df = df[(df["doi_norm"] != "") | (df["title_norm"] != "")].copy()
+    if df.empty:
+        return pd.DataFrame(columns=["doi_norm", "title_norm", "selection_source", "signal_type", "topic_code", "rationale"])
     return df
 
 
@@ -446,6 +497,7 @@ def _add_t4_expert_columns(
 ) -> None:
     """Add T4 expert-signal provenance columns in-place."""
     papers_doi_norm = papers.get("doi", pd.Series("", index=papers.index)).apply(_normalize_doi)
+    papers_title_norm = papers.get("title", pd.Series("", index=papers.index)).apply(lambda t: normalize_title(str(t or "")))
     if t4_registry.empty:
         papers["signal_t4_expert"] = 0
         papers["t4_selection_source"] = ""
@@ -455,19 +507,40 @@ def _add_t4_expert_columns(
         return
 
     registry = t4_registry.copy()
-    registry = registry.sort_values("doi_norm").drop_duplicates(subset=["doi_norm"], keep="first")
-    doi_set = set(registry["doi_norm"].tolist())
-    papers["signal_t4_expert"] = papers_doi_norm.isin(doi_set).astype(int)
+    registry = registry.drop_duplicates(subset=["doi_norm", "title_norm"], keep="first")
+    doi_registry = registry[registry["doi_norm"] != ""].drop_duplicates(subset=["doi_norm"], keep="first")
+    title_registry = registry[registry["title_norm"] != ""].drop_duplicates(subset=["title_norm"], keep="first")
 
-    source_map = dict(zip(registry["doi_norm"], registry.get("selection_source", pd.Series("", index=registry.index)).fillna("").astype(str)))
-    signal_type_map = dict(zip(registry["doi_norm"], registry.get("signal_type", pd.Series("", index=registry.index)).fillna("").astype(str)))
-    topic_map = dict(zip(registry["doi_norm"], registry.get("topic_code", pd.Series("", index=registry.index)).fillna("").astype(str)))
-    rationale_map = dict(zip(registry["doi_norm"], registry.get("rationale", pd.Series("", index=registry.index)).fillna("").astype(str)))
+    doi_set = set(doi_registry["doi_norm"].tolist())
+    title_set = set(title_registry["title_norm"].tolist())
+    doi_hit = papers_doi_norm.isin(doi_set)
+    title_hit = papers_title_norm.isin(title_set)
+    papers["signal_t4_expert"] = (doi_hit | title_hit).astype(int)
 
-    papers["t4_selection_source"] = papers_doi_norm.map(source_map).fillna("")
-    papers["t4_signal_type"] = papers_doi_norm.map(signal_type_map).fillna("")
-    papers["t4_topic_code"] = papers_doi_norm.map(topic_map).fillna("")
-    papers["t4_rationale"] = papers_doi_norm.map(rationale_map).fillna("")
+    source_map_doi = dict(zip(doi_registry["doi_norm"], doi_registry["selection_source"]))
+    signal_type_map_doi = dict(zip(doi_registry["doi_norm"], doi_registry["signal_type"]))
+    topic_map_doi = dict(zip(doi_registry["doi_norm"], doi_registry["topic_code"]))
+    rationale_map_doi = dict(zip(doi_registry["doi_norm"], doi_registry["rationale"]))
+
+    source_map_title = dict(zip(title_registry["title_norm"], title_registry["selection_source"]))
+    signal_type_map_title = dict(zip(title_registry["title_norm"], title_registry["signal_type"]))
+    topic_map_title = dict(zip(title_registry["title_norm"], title_registry["topic_code"]))
+    rationale_map_title = dict(zip(title_registry["title_norm"], title_registry["rationale"]))
+
+    papers["t4_selection_source"] = papers_doi_norm.map(source_map_doi).fillna("")
+    papers["t4_signal_type"] = papers_doi_norm.map(signal_type_map_doi).fillna("")
+    papers["t4_topic_code"] = papers_doi_norm.map(topic_map_doi).fillna("")
+    papers["t4_rationale"] = papers_doi_norm.map(rationale_map_doi).fillna("")
+
+    # Fallback to title-based metadata for entries lacking DOI matches.
+    empty_source = papers["t4_selection_source"].astype(str) == ""
+    papers.loc[empty_source, "t4_selection_source"] = papers_title_norm[empty_source].map(source_map_title).fillna("")
+    empty_signal_type = papers["t4_signal_type"].astype(str) == ""
+    papers.loc[empty_signal_type, "t4_signal_type"] = papers_title_norm[empty_signal_type].map(signal_type_map_title).fillna("")
+    empty_topic = papers["t4_topic_code"].astype(str) == ""
+    papers.loc[empty_topic, "t4_topic_code"] = papers_title_norm[empty_topic].map(topic_map_title).fillna("")
+    empty_rationale = papers["t4_rationale"].astype(str) == ""
+    papers.loc[empty_rationale, "t4_rationale"] = papers_title_norm[empty_rationale].map(rationale_map_title).fillna("")
 
 
 def _add_connectivity_columns(
@@ -556,8 +629,14 @@ def _add_ms_focus_labels(
     biology_downweight = min(1.0, max(0.0, _safe_float(downweight_cfg.get("biology_no_ms_multiplier", 0.35), 0.35)))
     biology_hit_min = max(1, int(downweight_cfg.get("biology_hit_min", 2)))
 
-    papers["has_ms_focus"] = (papers["ms_lexical_hits"] >= ms_lexical_min) | (papers["ms_concept_hits"] >= ms_concept_min)
-    papers["has_strong_ms_focus"] = (papers["ms_lexical_hits"] >= ms_lexical_min) & (papers["ms_concept_hits"] >= ms_concept_min)
+    text_focus = (papers["ms_lexical_hits"] >= ms_lexical_min) | (papers["ms_concept_hits"] >= ms_concept_min)
+    strong_text_focus = (papers["ms_lexical_hits"] >= ms_lexical_min) & (papers["ms_concept_hits"] >= ms_concept_min)
+    t4_exempt = papers.get("signal_t4_expert", pd.Series(0, index=papers.index)).fillna(0).astype(int) == 1
+
+    papers["ms_focus_exempt_t4"] = t4_exempt
+    papers["has_ms_focus_text"] = text_focus
+    papers["has_ms_focus"] = text_focus | t4_exempt
+    papers["has_strong_ms_focus"] = strong_text_focus
     papers["seed_affinity_raw_total"] = papers["cocitation_seed_affinity_raw"] + papers["bibcoupling_seed_affinity_raw"]
     papers["biology_no_ms_link"] = (
         (papers["biology_generic_hits"] >= biology_hit_min)
@@ -566,7 +645,7 @@ def _add_ms_focus_labels(
         & (papers["signal_seed"] == 0)
     )
     papers["score_focus_adjustment"] = 1.0
-    papers.loc[papers["has_ms_focus"], "score_focus_adjustment"] *= ms_focus_minor_boost
+    papers.loc[papers["has_ms_focus_text"], "score_focus_adjustment"] *= ms_focus_minor_boost
     papers.loc[papers["has_strong_ms_focus"], "score_focus_adjustment"] *= ms_focus_boost
     papers.loc[papers["biology_no_ms_link"], "score_focus_adjustment"] *= biology_downweight
     papers["score_field_membership"] = papers["score_field_membership_base"] * papers["score_focus_adjustment"]
