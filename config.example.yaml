@@ -172,12 +172,17 @@ distillation:
   batch_size: 10
   qa_sample_size: 25
   qa_random_seed: 13
-  # Reading levels to pre-generate for each paper. The explorer swaps between
-  # the "basic" (plain language, undergrad) and "advanced" (specialist,
-  # technical) variants in place using the dropdown; it does not filter
-  # papers by difficulty. Results are cached per level as
+  # Reading levels to pre-generate for each paper. Three levels are supported:
+  #   kid      — plain language for a curious 12-year-old; inspiring, no jargon,
+  #              everyday analogies. Powers the "MS Science for Curious Minds" page.
+  #              Can also be generated on-demand via: python update_kid_journey.py
+  #   basic    — plain language for an undergraduate with basic biology background.
+  #   advanced — graduate student / practicing clinician; precise biomedical terminology.
+  # The explorer swaps between basic/advanced variants in-place; kid summaries appear
+  # on the companion kid-journey page. Results are cached per level as
   # {paper_id}__{level}.json under cache_dir.
   reading_levels:
+    - kid
     - basic
     - advanced
   default_reading_level: basic

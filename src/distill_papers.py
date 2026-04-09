@@ -15,7 +15,7 @@ import pandas as pd
 from .utils import ensure_dir, load_config, save_json
 
 
-READING_LEVELS = ("basic", "advanced")
+READING_LEVELS = ("kid", "basic", "advanced")
 DEFAULT_READING_LEVEL = "basic"
 
 # Maximum tokens to request from the LLM per distillation call.
@@ -26,6 +26,17 @@ PROMPT_SOURCE_TEXT_MAX_CHARS = 3000
 TOPIC_ABSTRACT_PREVIEW_CHARS = 500
 
 READING_LEVEL_GUIDE = {
+    "kid": (
+        "Write for a CURIOUS 12-YEAR-OLD who has never studied medicine but loves learning "
+        "how the world works. Use short sentences (under 20 words each). Replace every "
+        "medical term with an everyday analogy or plain word — if you must use a technical "
+        "term, define it immediately in brackets using simple language. Open with a "
+        "one-sentence hook that sparks curiosity (e.g. 'Scientists discovered that...' or "
+        "'Imagine your immune system mistakenly...').  End with a sentence that connects "
+        "the finding to hope or possibility for people living with MS. The tone should be "
+        "warm, encouraging, and inspiring — like a great science teacher explaining why "
+        "this discovery matters to the world."
+    ),
     "basic": (
         "Write at the BASIC reading level (plain language for an undergraduate "
         "with basic biology background). Use short sentences, minimal jargon, "
@@ -41,8 +52,8 @@ READING_LEVEL_GUIDE = {
 }
 
 # Numeric compatibility mapping for downstream code that still expects a 1-5
-# "language_difficulty" integer. Basic ≈ level 2 (undergrad), advanced ≈ 4.
-READING_LEVEL_NUMERIC = {"basic": 2, "advanced": 4}
+# "language_difficulty" integer. Kid ≈ level 1, basic ≈ level 2 (undergrad), advanced ≈ 4.
+READING_LEVEL_NUMERIC = {"kid": 1, "basic": 2, "advanced": 4}
 
 
 def _normalize_reading_level(value, default: str = DEFAULT_READING_LEVEL) -> str:
@@ -61,6 +72,8 @@ def _normalize_reading_level(value, default: str = DEFAULT_READING_LEVEL) -> str
         n = int(float(text))
     except (TypeError, ValueError):
         return default
+    if n <= 1:
+        return "kid"
     return "basic" if n <= 3 else "advanced"
 
 
@@ -116,6 +129,21 @@ Write a 2-3 paragraph overview of this topic cluster suitable for undergraduate 
 3. What the key findings and open questions are
 
 Keep the language accessible. Avoid jargon or define it when used."""
+
+TOPIC_OVERVIEW_PROMPT_KID = """You are writing for curious 12-year-olds who want to understand what scientists are learning about multiple sclerosis (MS).
+
+Topic area: {topic_label}
+Number of research papers in this area: {n_papers}
+
+Here are summaries of key papers:
+
+{paper_summaries}
+
+Write 2 short paragraphs (3-4 sentences each) that a 12-year-old would find fascinating. Use everyday language — no medical jargon unless you explain it simply right away. Include:
+1. What this area of science is about and why it is exciting or surprising
+2. How this knowledge could help people living with MS in the future
+
+End with one inspiring sentence about what scientists are still working to discover. Use short sentences. Be warm and encouraging."""
 
 
 def _clean_text(value: object) -> str:
@@ -1037,10 +1065,18 @@ def _generate_topic_overviews(
     api_client: object | None,
     model: str,
     outdir: Path,
+    active_levels: list[str] | None = None,
 ) -> None:
-    """Generate a plain-language overview for each topic cluster and write topic_overviews.csv."""
+    """Generate plain-language overviews for each topic cluster and write topic_overviews.csv.
+
+    When "kid" is in active_levels an additional kid-friendly overview column is generated
+    alongside the standard undergraduate-level overview.
+    """
     if topic_clusters.empty:
         return
+    if active_levels is None:
+        active_levels = list(READING_LEVELS)
+    include_kid = "kid" in active_levels
     overview_rows = []
     for _, cluster in topic_clusters.iterrows():
         tid = cluster["topic_id"]
@@ -1065,11 +1101,33 @@ def _generate_topic_overviews(
                 overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
         else:
             overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
-        overview_rows.append({
+
+        row: dict = {
             "topic_id": tid, "auto_label": cluster["auto_label"], "overview": overview_text,
             "n_papers": cluster["n_papers"], "difficulty": cluster.get("difficulty", 3),
             "dominant_category": cluster.get("dominant_category", ""),
-        })
+        }
+
+        if include_kid:
+            if api_client and not cluster_papers.empty:
+                kid_paper_text = "".join(
+                    f"Title: {p.get('title', '')}\nAbstract: {str(p.get('abstract', '') or '')[:TOPIC_ABSTRACT_PREVIEW_CHARS]}\n\n"
+                    for _, p in cluster_papers.iterrows()
+                )
+                kid_prompt = TOPIC_OVERVIEW_PROMPT_KID.format(
+                    topic_label=cluster["auto_label"],
+                    n_papers=cluster["n_papers"],
+                    paper_summaries=kid_paper_text,
+                )
+                try:
+                    resp = api_client.messages.create(model=model, max_tokens=LLM_MAX_TOKENS, messages=[{"role": "user", "content": kid_prompt}])
+                    row["overview_kid"] = resp.content[0].text
+                except Exception:
+                    row["overview_kid"] = ""
+            else:
+                row["overview_kid"] = ""
+
+        overview_rows.append(row)
     pd.DataFrame(overview_rows).to_csv(outdir / "topic_overviews.csv", index=False)
 
 
@@ -1248,7 +1306,7 @@ def run(config_path: str) -> None:
             print(f"  Distilled {idx + 1}/{len(scored)} papers (levels: {', '.join(active_levels)})")
 
     _write_summaries_csv(summary_rows, active_levels, outdir, qa_sample_size, qa_random_seed)
-    _generate_topic_overviews(topic_clusters, scored, paper_topics, api_client, model, outdir)
+    _generate_topic_overviews(topic_clusters, scored, paper_topics, api_client, model, outdir, active_levels=active_levels)
     _generate_reading_paths(paper_topics, scored, outdir)
     print(f"Distilled {len(summary_rows)} papers. Outputs in {outdir}")
 
