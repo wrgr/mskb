@@ -11,8 +11,16 @@ retrieval:
   use_seed_channel: true
   use_lexical_channel: true
   use_dataset_channel: true
-  # Pull explicitly curated Tier-4 expert-signal papers by DOI from seeds/t4_expert_signals.csv.
+  # Expand the six review-anchor seeds (R1–R6 from seeds/framing_seeds.csv) via one-hop retrieval.
+  # These seeds expand the candidate pool and provide anchor links for topic assignment but do NOT
+  # contribute to cross_seed_score, which uses only the 40 core seeds.
+  use_framing_seed_channel: true
+  # Pull all curated Tier-4 expert-signal papers from data/t4_expert_signal.yaml.
+  # Uses DOI lookup for entries with corpus_doi; falls back to title search for not_found entries.
+  # The legacy seeds/t4_expert_signals.csv is no longer the authoritative source for retrieval.
   use_t4_expert_channel: true
+  # Maximum OpenAlex title-search queries for T4 not_found entries without a corpus_doi.
+  t4_max_title_queries: 30
   seed_reference_enrichment:
     enabled: true
     use_crossref: true

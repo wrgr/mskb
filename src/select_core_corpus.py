@@ -486,8 +486,54 @@ def run(config_path: str) -> None:
     else:
         forced_df.to_csv(t4_forced_path, index=False)
 
+    # Document the three classification systems and their roles for provenance.
+    classification_systems = {
+        "topic_codes": {
+            "description": (
+                "19 T-codes (T00–T16 plus T1b) manually assigned by editors based on "
+                "the MS Field Orientation Guide. Primary_topic from core_seeds.csv is "
+                "propagated to neighboring papers by assign_topic_evidence."
+            ),
+            "role": (
+                "primary — drives corpus balance (max_topic_share gate) and is the "
+                "authoritative topic label for all pipeline outputs"
+            ),
+            "source": "seeds/core_seeds.csv (primary_topic column) → outputs/topics/paper_topic_evidence.csv",
+            "not_used_for": "Leiden citation clusters are not used here",
+        },
+        "leiden_citation_clusters": {
+            "description": (
+                "9 algorithmically derived citation clusters produced by Louvain community "
+                "detection on the citation graph (discover_topics stage). Stored as topic_id "
+                "on paper nodes in explorer_graph.json."
+            ),
+            "role": (
+                "informational — available on the website as an alternative framing and "
+                "in explorer_graph.json for graph exploration; NOT used in corpus balance "
+                "or selection decisions at any pipeline stage"
+            ),
+            "source": "outputs/graph/topic_clusters.csv (discover_topics stage)",
+            "not_used_for": "balance gate, T2/T3 selection, or topic assignment",
+        },
+        "learner_concepts": {
+            "description": (
+                "~30 pedagogical concept pages derived from literature and learning science "
+                "(site/src/content/docs/concepts/). Concepts are manually authored and link "
+                "to corpus papers. They also serve as the nomination source for T4 expert "
+                "signals via data/t4_expert_signal.yaml."
+            ),
+            "role": (
+                "site navigation only — drives concept page links and T4 expert signal "
+                "nomination; NOT used in corpus selection or balance"
+            ),
+            "source": "site/src/content/docs/concepts/**/*.md → data/t4_expert_signal.yaml",
+            "not_used_for": "balance gate, T2/T3 selection, or topic_code assignment",
+        },
+    }
+
     summary = {
         "input_scoped_rows": int(len(scoped)),
+        "classification_systems": classification_systems,
         "rules": {
             "t2": {
                 "min_cross_seed_score": t2_min_cross_seed,

@@ -7,9 +7,21 @@ sidebar:
 
 import { Aside, Badge } from '@astrojs/starlight/components';
 
-MSKB is built from a curated corpus of approximately **450–650 peer-reviewed documents** spanning 18 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
+MSKB is built from a curated corpus of approximately **450–650 peer-reviewed documents** spanning 19 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
 
 The corpus specification lives in [`data/ms_corpus_specification_v1.xlsx`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_specification_v1.xlsx) and the full audit trail in [`data/ms_corpus_design_decisions.md`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_design_decisions.md).
+
+<Aside type="note" title="Three classification systems — different roles">
+MSKB uses three distinct classification systems. It is important not to conflate them:
+
+| System | Source | Role |
+|--------|--------|------|
+| **T-codes** (T00–T16 + T1b) | Manually defined; assigned via seed propagation | Drives corpus selection and balance — the authoritative taxonomy |
+| **Leiden citation clusters** (9 clusters) | Algorithmic; Louvain community detection | Available in graph explorer and Citation Topics sidebar; **not** used in selection |
+| **Learner concepts** (~30 pages) | Pedagogical; authored for site navigation | Powers concept pages and T4 signal nomination; **not** used in selection |
+
+See [Methodology → Classification systems](/mskb/corpus/methodology/#classification-systems) for full details.
+</Aside>
 
 ---
 
