@@ -1,19 +1,19 @@
 ---
 title: Seeds & Review Anchors
-description: All 36 T1 seed papers and 6 review anchors (R1–R6), with metadata and selection rationale.
+description: All 40 T1 seed papers and 6 review anchors (R1–R6), with metadata and selection rationale.
 sidebar:
   order: 3
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 
-The corpus starts from **41 expansion sources**: 36 hand-curated T1 seed papers plus 6 review anchors. One-hop expansion (forward + backward citations) runs from all 41. Cross-seed quality scoring uses the 36 seeds only.
+The corpus starts from **46 expansion sources**: 40 hand-curated T1 seed papers plus 6 review anchors. One-hop expansion (forward + backward citations) runs from all 46. Cross-seed quality scoring uses the 40 seeds, with a bridge rule (`seed>=1 + anchor>=1`) for effective Tier 2 coverage.
 
 Recency flags: ⚓ foundational anchor (read for framing, not current guidance) · ✅ current · ⚠️ aging (content still relevant but consult newer literature on specific claims)
 
 ---
 
-## Tier 1 seeds (36 papers)
+## Tier 1 seeds (40 papers)
 
 ### Foundation layer
 
@@ -101,6 +101,8 @@ Both DMT seeds are 2017. The escalation vs. early high-efficacy debate, tolebrut
 |----|-------|---------|
 | MS-T1-019 | Ziemssen T et al. **Patient-reported outcomes in MS care.** *Mult Scler Relat Disord* 2019. [doi](https://doi.org/10.1016/j.msard.2019.07.007) | ⚠️ |
 | MS-T1-020 | Ontaneda D et al. **Evaluation of MS disability outcome measures (MSOAC).** *Neurology* 2019. [doi](https://doi.org/10.1212/WNL.0000000000008519) | ⚠️ |
+| MS-T1-037 | Benedict RHB et al. **Validity of the Symbol Digit Modalities Test as a cognition performance outcome measure for multiple sclerosis.** *Mult Scler J* 2017. [doi](https://doi.org/10.1177/1352458517690821) | ⚠️ |
+| MS-T1-038 | Hobart J et al. **The Multiple Sclerosis Impact Scale (MSIS-29): a new patient-based outcome measure.** *Brain* 2001. [doi](https://doi.org/10.1093/brain/124.5.962) | ⚓ |
 
 #### T10 — Comorbidities
 
@@ -131,11 +133,12 @@ Both DMT seeds are 2017. The escalation vs. early high-efficacy debate, tolebrut
 
 | ID | Paper | Recency |
 |----|-------|---------|
-| MS-T1-027 | Langer-Gould A et al. **Embodiment of structural racism and MS risk and outcomes.** *Nat Rev Neurology* 2025. [doi](https://doi.org/10.1038/s41582-025-01096-5) | ✅ |
+| MS-T1-027 | Wallin MT et al. **The prevalence of multiple sclerosis in the United States by race and ethnicity.** *JAMA Neurol* 2023. [doi](https://doi.org/10.1001/jamaneurol.2023.1135) | ✅ |
 | MS-T1-028 | Langer-Gould A et al. **Racial and ethnic disparities in MS prevalence.** *Neurology* 2022. [doi](https://doi.org/10.1212/WNL.0000000000200151) | ✅ |
+| MS-T1-039 | Langer-Gould A et al. **The incidence of multiple sclerosis in multiple racial and ethnic groups.** *Neurology* 2013. [doi](https://doi.org/10.1212/WNL.0b013e3182918cc2) | ⚠️ |
 
-<Aside type="note" title="Single-author concentration acknowledged">
-Both T13 seeds are by Langer-Gould — the field leader on MS disparities epidemiology in the US and the appropriate choice for both papers. This single-author concentration is explicitly acknowledged as a diversity limitation. Named complement papers for T4 consideration: Amezcua & McCauley *MSJ* 2020; Hittle et al. *JAMA Neurol* 2023.
+<Aside type="note" title="Equity coverage change">
+The prior 2025 structural-racism seed had weak structural pull because it is very new. T13 now uses two established epidemiology anchors (Wallin 2023, Langer-Gould 2013) plus the 2022 disparities paper, while retaining review anchor R5 for bridge coverage in structurally isolated equity literature.
 </Aside>
 
 #### T14 — Clinical AI & Learning Systems
@@ -158,12 +161,13 @@ Both T13 seeds are by Langer-Gould — the field leader on MS disparities epidem
 |----|-------|---------|
 | MS-T1-033 | Bebo BF et al. (NMSS). **Pathways to cures for MS: research roadmap 2022.** *Mult Scler J* 2022. [doi](https://doi.org/10.1177/13524585221075990) | ✅ |
 | MS-T1-034 | Bebo BF et al. (NMSS). **Refined Pathways to Cures Research Roadmap 2024.** *Mult Scler J* 2024. [doi](https://doi.org/10.1177/13524585241266483) | ✅ |
+| MS-T1-040 | Ontaneda D et al. **Progressive multiple sclerosis: prospects for disease therapy, repair, and restoration of function.** *The Lancet* 2016. [doi](https://doi.org/10.1016/S0140-6736(16)31320-4) | ⚠️ |
 
 ---
 
 ## Review anchors (R1–R6)
 
-Review anchors are expansion sources only — they are **not** quality anchors. Cross-seed scoring is computed against the 36 seeds above. A paper that appears only in a review anchor's reference list has not demonstrated structural importance in the field's citation network.
+Review anchors are expansion sources only — they are **not** full quality anchors. Cross-seed scoring is computed against the 40 seeds above; review anchors contribute a bridge signal for effective T2 connectivity (`seed>=1 + anchor>=1`).
 
 | ID | Paper | Topics | Anchor role |
 |----|-------|--------|------------|

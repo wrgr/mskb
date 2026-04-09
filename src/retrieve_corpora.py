@@ -485,6 +485,28 @@ def _run_query_channel(
     return rows
 
 
+def _run_t4_expert_channel(
+    t4_registry: pd.DataFrame,
+    client: OpenAlexClient,
+) -> list[dict]:
+    """Retrieve expert-signal papers by DOI from seeds/t4_expert_signals.csv."""
+    rows: list[dict] = []
+    if t4_registry.empty or "doi" not in t4_registry.columns:
+        return rows
+    for _, record in t4_registry.iterrows():
+        doi = str(record.get("doi", "") or "").strip()
+        if not doi or doi.lower() == "nan":
+            continue
+        work = client.get_work_by_doi(doi)
+        if not work:
+            continue
+        source = str(record.get("selection_source", "") or "").strip()
+        signal_type = str(record.get("signal_type", "") or "").strip()
+        query = f"{source} | {signal_type}".strip(" |")
+        rows.append(_paper_row(work, "expert_signal", query=query))
+    return rows
+
+
 def run(config_path: str) -> None:
     """Retrieve paper candidates via seed, lexical, and dataset channels and write candidate_papers.csv."""
     cfg = load_config(config_path)
@@ -515,6 +537,8 @@ def run(config_path: str) -> None:
 
     core_seeds = pd.read_csv(root / "seeds" / "core_seeds.csv")
     framing_seeds = pd.read_csv(root / "seeds" / "framing_seeds.csv")
+    t4_registry_path = root / "seeds" / "t4_expert_signals.csv"
+    t4_registry = pd.read_csv(t4_registry_path) if t4_registry_path.exists() else pd.DataFrame()
     max_per_query = retrieval_cfg["max_search_results_per_query"]
 
     rows: list[dict] = []
@@ -535,6 +559,8 @@ def run(config_path: str) -> None:
         rows.extend(_run_query_channel(client, cfg["queries"]["lexical"], "lexical", max_per_query))
     if retrieval_cfg["use_dataset_channel"]:
         rows.extend(_run_query_channel(client, cfg["queries"]["dataset"], "dataset", max_per_query))
+    if bool(retrieval_cfg.get("use_t4_expert_channel", True)):
+        rows.extend(_run_t4_expert_channel(t4_registry=t4_registry, client=client))
 
     candidates = pd.DataFrame(rows).drop_duplicates(subset=["openalex_id", "doi", "title", "channel"])
     candidates.to_csv(outdir / "candidate_papers.csv", index=False)
@@ -544,6 +570,7 @@ def run(config_path: str) -> None:
     stats_payload = {
         "n_candidates": int(len(candidates)), "n_seed_edges": int(len(citation_edges_df)),
         "n_core_seeds": int(len(core_seeds)), "n_framing_seeds": int(len(framing_seeds)),
+        "n_t4_registry_rows": int(len(t4_registry)),
         "seed_reference_enrichment_enabled": enrichment_enabled,
     }
     stats_payload.update({f"enrichment_{k}": int(v) for k, v in enrichment_totals.items()})

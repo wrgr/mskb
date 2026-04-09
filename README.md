@@ -40,6 +40,8 @@ python run_pipeline.py --config config.yaml
 | 3 | `src/build_graphs.py` | Build bibliometric networks and compute graph metrics |
 | 4 | `src/compute_scores.py` | Score papers for MS relevance + age-normalized centrality + evidence strength |
 | 5 | `src/discover_topics.py` | Discover topic clusters from citation structure |
+| 5b | `src/assign_topic_evidence.py` | Assign per-paper topic evidence with seed/anchor provenance |
+| 5c | `src/select_core_corpus.py` | Apply explicit T1/T2/T3 balancing rules and export selected core corpus |
 | 6 | `src/build_learner_journey.py` | Recommend next papers/topics from citation + topic structure |
 | 7 | `src/distill_papers.py` | Generate accessible summaries with provenance/certainty + faithfulness QA sample |
 | 8 | `src/build_knowledge_graph.py` | Extract MS entities and build heterogeneous KG |
@@ -48,6 +50,8 @@ python run_pipeline.py --config config.yaml
 Run individual stages:
 ```bash
 python -m src.retrieve_corpora --config config.yaml
+python -m src.assign_topic_evidence --config config.yaml
+python -m src.select_core_corpus --config config.yaml
 python -m src.discover_topics --config config.yaml
 python -m src.distill_papers --config config.yaml
 python -m src.seed_governance --config config.yaml

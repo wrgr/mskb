@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "generated_from": "ms_corpus_specification_v1.xlsx — Topic Map sheet",
-  "description": "18 topics + Topic 1b organised into three layers (Foundation, Clinical, Context/Future). Each topic has 2 T1 seeds and a target document count for the full corpus.",
+  "description": "18 topics + Topic 1b organised into three layers (Foundation, Clinical, Context/Future). Baseline is 2 T1 seeds per topic, with additional seeds added where citation-structure coverage is known to be thin (T09, T13, T16).",
   "layers": {
     "Foundation": "Topics T00, T01, T1b, T02–T04 — biological vocabulary and disease framing. Read first.",
     "Clinical": "Topics T05–T11 — diagnosis, treatment, management. Presuppose Foundation layer.",
@@ -105,6 +105,8 @@
       "why_it_matters": "EDSS limitations; fatigue; cognition; PRO instruments; trial endpoint gaps; digital health",
       "seed_A": "MS-T1-019",
       "seed_B": "MS-T1-020",
+      "seed_C": "MS-T1-037",
+      "seed_D": "MS-T1-038",
       "target_n": "20-25"
     },
     {
@@ -141,6 +143,7 @@
       "why_it_matters": "Structural racism; Black/Hispanic disparities; diagnostic delay; access to high-efficacy DMTs",
       "seed_A": "MS-T1-027",
       "seed_B": "MS-T1-028",
+      "seed_C": "MS-T1-039",
       "target_n": "20-25"
     },
     {
@@ -168,6 +171,7 @@
       "why_it_matters": "Stop/Restore/End pathways; patient-informed priorities; field-wide strategic agenda; funding alignment",
       "seed_A": "MS-T1-033",
       "seed_B": "MS-T1-034",
+      "seed_C": "MS-T1-040",
       "target_n": "10-15"
     }
   ],

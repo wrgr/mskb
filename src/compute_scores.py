@@ -174,6 +174,27 @@ def _seed_affinity(edges: pd.DataFrame, seed_ids: set[str]) -> pd.Series:
     return hits.groupby("canonical_paper_id")["weight"].sum()
 
 
+def _direct_source_link_counts(edges: pd.DataFrame, source_ids: set[str]) -> pd.Series:
+    """Count distinct source papers with a direct citation edge to each paper (either direction)."""
+    if edges.empty or not source_ids:
+        return pd.Series(dtype=float)
+    source_ids_str = {str(s) for s in source_ids}
+    src_hits = (
+        edges[edges["source_paper_id"].astype(str).isin(source_ids_str)][["source_paper_id", "target_paper_id"]]
+        .rename(columns={"source_paper_id": "source_id", "target_paper_id": "canonical_paper_id"})
+    )
+    dst_hits = (
+        edges[edges["target_paper_id"].astype(str).isin(source_ids_str)][["target_paper_id", "source_paper_id"]]
+        .rename(columns={"target_paper_id": "source_id", "source_paper_id": "canonical_paper_id"})
+    )
+    if src_hits.empty and dst_hits.empty:
+        return pd.Series(dtype=float)
+    hits = pd.concat([src_hits, dst_hits], ignore_index=True)
+    hits["canonical_paper_id"] = hits["canonical_paper_id"].astype(str)
+    hits["source_id"] = hits["source_id"].astype(str)
+    return hits.groupby("canonical_paper_id")["source_id"].nunique().astype(float)
+
+
 def _top_k_sum(series: pd.Series, k: int = 3) -> float:
     return float(series.nlargest(k).sum())
 
@@ -291,7 +312,7 @@ def _rebalance_by_category(
 def _load_scoring_inputs(
     cfg: dict,
     root: Path,
-) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Load and merge canonical papers with graph metrics and supporting tables."""
     norm = root / cfg["output_dir"] / "normalized"
     graph = root / cfg["output_dir"] / "graph"
@@ -301,9 +322,14 @@ def _load_scoring_inputs(
     canonical_authors = pd.read_csv(norm / "canonical_authors.csv") if (norm / "canonical_authors.csv").exists() else pd.DataFrame()
     cocitation_edges = pd.read_csv(graph / "co_citation_edges.csv") if (graph / "co_citation_edges.csv").exists() else pd.DataFrame()
     bibcoupling_edges = pd.read_csv(graph / "bibliographic_coupling_edges.csv") if (graph / "bibliographic_coupling_edges.csv").exists() else pd.DataFrame()
+    citation_edges = (
+        pd.read_csv(graph / "corpus_citation_edges.csv")
+        if (graph / "corpus_citation_edges.csv").exists()
+        else pd.DataFrame(columns=["source_paper_id", "target_paper_id"])
+    )
     papers = papers.merge(metrics, on="canonical_paper_id", how="left")
     papers["canonical_paper_id"] = papers["canonical_paper_id"].astype(str)
-    return papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges
+    return papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges, citation_edges
 
 
 def _collect_anchor_dois(cfg: dict, root: Path) -> set[str]:
@@ -323,6 +349,50 @@ def _collect_anchor_dois(cfg: dict, root: Path) -> set[str]:
         except Exception:
             continue
     return anchor_dois
+
+
+def _load_t4_registry(root: Path) -> pd.DataFrame:
+    """Load T4 expert-signal registry from seeds/t4_expert_signals.csv if present."""
+    path = root / "seeds" / "t4_expert_signals.csv"
+    if not path.exists():
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(path)
+    except Exception:
+        return pd.DataFrame()
+    if df.empty:
+        return pd.DataFrame()
+    if "doi" in df.columns:
+        df["doi_norm"] = df["doi"].apply(_normalize_doi)
+    else:
+        df["doi_norm"] = ""
+    df = df[df["doi_norm"] != ""].copy()
+    return df
+
+
+def _collect_seed_paper_ids(seed_path: Path, papers: pd.DataFrame) -> set[str]:
+    """Resolve seed-paper DOIs in a seed CSV to canonical_paper_id values in papers."""
+    if not seed_path.exists():
+        return set()
+    try:
+        seeds = pd.read_csv(seed_path)
+    except Exception:
+        return set()
+    if "doi" not in seeds.columns:
+        return set()
+    papers_doi = papers.get("doi", pd.Series("", index=papers.index)).apply(_normalize_doi)
+    papers_pid = papers.get("canonical_paper_id", pd.Series("", index=papers.index)).astype(str)
+    doi_to_ids: dict[str, set[str]] = {}
+    for doi, pid in zip(papers_doi.tolist(), papers_pid.tolist()):
+        if not doi:
+            continue
+        doi_to_ids.setdefault(doi, set()).add(str(pid))
+    source_ids: set[str] = set()
+    for doi in seeds["doi"].apply(_normalize_doi).tolist():
+        if not doi:
+            continue
+        source_ids.update(doi_to_ids.get(doi, set()))
+    return source_ids
 
 
 def _add_signal_columns(
@@ -368,6 +438,66 @@ def _add_signal_columns(
         papers["score_core_author_overlap"] = papers["canonical_paper_id"].map(core_author_overlap).fillna(0.0)
     else:
         papers["score_core_author_overlap"] = 0.0
+
+
+def _add_t4_expert_columns(
+    papers: pd.DataFrame,
+    t4_registry: pd.DataFrame,
+) -> None:
+    """Add T4 expert-signal provenance columns in-place."""
+    papers_doi_norm = papers.get("doi", pd.Series("", index=papers.index)).apply(_normalize_doi)
+    if t4_registry.empty:
+        papers["signal_t4_expert"] = 0
+        papers["t4_selection_source"] = ""
+        papers["t4_signal_type"] = ""
+        papers["t4_topic_code"] = ""
+        papers["t4_rationale"] = ""
+        return
+
+    registry = t4_registry.copy()
+    registry = registry.sort_values("doi_norm").drop_duplicates(subset=["doi_norm"], keep="first")
+    doi_set = set(registry["doi_norm"].tolist())
+    papers["signal_t4_expert"] = papers_doi_norm.isin(doi_set).astype(int)
+
+    source_map = dict(zip(registry["doi_norm"], registry.get("selection_source", pd.Series("", index=registry.index)).fillna("").astype(str)))
+    signal_type_map = dict(zip(registry["doi_norm"], registry.get("signal_type", pd.Series("", index=registry.index)).fillna("").astype(str)))
+    topic_map = dict(zip(registry["doi_norm"], registry.get("topic_code", pd.Series("", index=registry.index)).fillna("").astype(str)))
+    rationale_map = dict(zip(registry["doi_norm"], registry.get("rationale", pd.Series("", index=registry.index)).fillna("").astype(str)))
+
+    papers["t4_selection_source"] = papers_doi_norm.map(source_map).fillna("")
+    papers["t4_signal_type"] = papers_doi_norm.map(signal_type_map).fillna("")
+    papers["t4_topic_code"] = papers_doi_norm.map(topic_map).fillna("")
+    papers["t4_rationale"] = papers_doi_norm.map(rationale_map).fillna("")
+
+
+def _add_connectivity_columns(
+    papers: pd.DataFrame,
+    root: Path,
+    citation_edges: pd.DataFrame,
+    scoring_cfg: dict,
+) -> None:
+    """Add direct seed/anchor connectivity columns and effective Tier 2 gate flags in-place."""
+    core_seed_ids = _collect_seed_paper_ids(root / "seeds" / "core_seeds.csv", papers)
+    review_anchor_ids = _collect_seed_paper_ids(root / "seeds" / "framing_seeds.csv", papers)
+    core_counts = _direct_source_link_counts(citation_edges, core_seed_ids)
+    anchor_counts = _direct_source_link_counts(citation_edges, review_anchor_ids)
+
+    papers["cross_seed_score"] = papers["canonical_paper_id"].map(core_counts).fillna(0.0).astype(int)
+    papers["review_anchor_link_count"] = papers["canonical_paper_id"].map(anchor_counts).fillna(0.0).astype(int)
+    papers["is_core_seed"] = papers["canonical_paper_id"].astype(str).isin(core_seed_ids)
+    papers["is_review_anchor_source"] = papers["canonical_paper_id"].astype(str).isin(review_anchor_ids)
+
+    t2_cfg = (scoring_cfg.get("tier_connectivity", {}) or {})
+    min_seed_only = max(1, int(t2_cfg.get("t2_min_cross_seed", 2)))
+    min_seed_with_anchor = max(1, int(t2_cfg.get("t2_seed_plus_anchor_min_cross_seed", 1)))
+    min_anchor_links = max(1, int(t2_cfg.get("t2_seed_plus_anchor_min_anchor_links", 1)))
+
+    papers["meets_t2_seed_only"] = papers["cross_seed_score"] >= min_seed_only
+    papers["meets_t2_seed_plus_anchor"] = (
+        (papers["cross_seed_score"] >= min_seed_with_anchor)
+        & (papers["review_anchor_link_count"] >= min_anchor_links)
+    )
+    papers["meets_t2_effective"] = papers["meets_t2_seed_only"] | papers["meets_t2_seed_plus_anchor"]
 
 
 def _add_feature_scores(papers: pd.DataFrame, scoring_cfg: dict) -> None:
@@ -474,6 +604,7 @@ def _select_final_corpus(
     scoring_cfg: dict,
     core_context_cfg: dict,
     topic_balance_cfg: dict,
+    tier4_cfg: dict,
 ) -> None:
     """Apply inclusion logic and set in_core_corpus, in_context_corpus, in_final_corpus in-place."""
     papers["n_independent_signals"] = papers[
@@ -500,6 +631,17 @@ def _select_final_corpus(
     mode = str(core_context_cfg.get("mode", "core_plus_context")).strip().lower()
     papers["in_final_corpus"] = papers["in_core_corpus"] if mode == "core_only" else papers["in_core_corpus"] | papers["in_context_corpus"]
 
+    t4_enabled = bool(tier4_cfg.get("enabled", True))
+    t4_require_ms_focus = bool(tier4_cfg.get("require_ms_focus", False))
+    t4_min_field_score = max(0.0, _safe_float(tier4_cfg.get("min_score_field_membership", 0.0), 0.0))
+    papers["in_t4_expert_signal"] = False
+    if t4_enabled and "signal_t4_expert" in papers.columns:
+        t4_mask = papers["signal_t4_expert"].fillna(0).astype(int) == 1
+        if t4_require_ms_focus:
+            t4_mask = t4_mask & papers["has_ms_focus"]
+        t4_mask = t4_mask & (papers["score_field_membership"] >= t4_min_field_score)
+        papers["in_t4_expert_signal"] = t4_mask
+
     if bool(topic_balance_cfg.get("enabled", False)):
         eligible_for_promotion = base_inclusion & (~papers["biology_no_ms_link"])
         papers["in_final_corpus"] = _rebalance_by_category(
@@ -513,11 +655,15 @@ def _select_final_corpus(
         papers["in_core_corpus"] = papers["in_final_corpus"] & papers["has_ms_focus"]
         papers["in_context_corpus"] = papers["in_final_corpus"] & (~papers["in_core_corpus"])
 
+    if papers["in_t4_expert_signal"].any():
+        papers["in_final_corpus"] = papers["in_final_corpus"] | papers["in_t4_expert_signal"]
+
     papers["tier"] = "excluded"
     papers["corpus_role"] = "excluded"
     papers.loc[papers["signal_seed"] == 1, "tier"] = "seed_neighbor"
     papers.loc[papers["in_context_corpus"], "corpus_role"] = "context"
     papers.loc[papers["in_core_corpus"], "corpus_role"] = "core"
+    papers.loc[papers["in_t4_expert_signal"], "corpus_role"] = "expert_signal"
     papers.loc[papers["in_final_corpus"], "tier"] = "included"
     papers.loc[papers["version_count"].fillna(1).astype(int) > 1, "merge_flag"] = "merged_versions"
     papers["merge_flag"] = papers["merge_flag"].fillna("single_version")
@@ -609,12 +755,15 @@ def run(config_path: str) -> None:
     root = Path(config_path).resolve().parent
     graph = root / cfg["output_dir"] / "graph"
 
-    papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges = _load_scoring_inputs(cfg, root)
+    papers, paper_authors, canonical_authors, cocitation_edges, bibcoupling_edges, citation_edges = _load_scoring_inputs(cfg, root)
     anchor_dois = _collect_anchor_dois(cfg, root)
+    t4_registry = _load_t4_registry(root)
 
     _add_signal_columns(papers, anchor_dois, cocitation_edges, bibcoupling_edges, paper_authors)
+    _add_t4_expert_columns(papers, t4_registry)
 
     scoring_cfg = cfg.get("scoring", {})
+    _add_connectivity_columns(papers, root, citation_edges, scoring_cfg)
     _add_feature_scores(papers, scoring_cfg)
     _add_ms_focus_labels(papers, scoring_cfg.get("ms_focus", {}), scoring_cfg.get("downweight", {}))
     _add_age_normalized_importance(papers)
@@ -622,6 +771,7 @@ def run(config_path: str) -> None:
         papers, scoring_cfg,
         scoring_cfg.get("core_vs_context", {}),
         scoring_cfg.get("topic_balance", {}),
+        scoring_cfg.get("tier4_expert", {}),
     )
 
     papers.to_csv(graph / "scored_papers.csv", index=False)

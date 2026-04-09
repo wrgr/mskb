@@ -1,7 +1,7 @@
 # MS Knowledge Base: Corpus Design Decisions and Justification
 ## Domain-Specific Document
 
-*Version 1.0 | April 2026*
+*Version 1.1 | April 2026*
 *Companion to: Corpus Construction Methodology (Generic) and MS Corpus Specification v1.0 (Excel)*
 
 ---
@@ -16,12 +16,12 @@ Intended readers: anyone who needs to understand, replicate, challenge, or exten
 
 ## 1. Scope and Target Size
 
-**Decision:** Target corpus of approximately 500 documents.
+**Decision:** Target corpus range of approximately 450–650 documents.
 
-**Rationale:** A knowledge base needs sufficient depth for genuine coverage (too few documents produces thin, unreliable retrieval) but not so many that precision degrades (too many documents dilutes the signal-to-noise ratio in retrieval). The 500-document target was selected based on:
+**Rationale:** A knowledge base needs sufficient depth for genuine coverage (too few documents produces thin, unreliable retrieval) but not so many that precision degrades (too many documents dilutes the signal-to-noise ratio in retrieval). The target range was selected based on:
 
-- 18 topics in the orientation map, with estimated 15–35 documents per topic yielding approximately 380–530 documents when accounting for multi-topic overlap
-- Practical review capacity: 500 documents at 5 minutes each is approximately 40 hours of review work, spreadable across a semester
+- 18 topics in the orientation map, with estimated 15–35 documents per topic and controlled Tier 2/Tier 3 caps
+- Practical review capacity and diversity tradeoff: enough documents for topic coverage without overwhelming manual review
 - Manageable corpus size for initial knowledge base deployment and evaluation
 
 No published literature directly specifies optimal corpus sizes for RAG knowledge bases; this remains an empirical question in the knowledge engineering literature. The target should be treated as a starting point subject to revision based on retrieval quality evaluation.
@@ -34,9 +34,9 @@ No published literature directly specifies optimal corpus sizes for RAG knowledg
 
 ## 2. Seed Selection
 
-**Decision:** 36 seeds across 18 topics (plus Topic 1b, Natural History), approximately 2 per topic.
+**Decision:** 40 seeds across 18 topics (plus Topic 1b, Natural History), with a baseline of 2 per topic and targeted augmentations for thin topics (T09, T13, T16).
 
-**Rationale:** Two seeds per topic provides triangulation (confirming two independent entry points to the topic's literature) without inflating the seed set to the point where cross-seed connectivity loses discrimination power. If every paper in a field is within 1 hop of a seed, the connectivity filter becomes vacuous.
+**Rationale:** Two seeds per topic remains the baseline for triangulation, but strict uniformity produced under-coverage in patient-reported outcomes (T09), equity (T13), and research-priorities framing (T16). Additional seeds were added only where structural gaps were observed, preserving selectivity while improving topic balance.
 
 **Decision:** Seeds selected to cover document type diversity — not only review articles or trials.
 
@@ -67,7 +67,7 @@ The 6 review anchors were selected for:
 - Recency (2018–2025)
 - Institutional and geographic diversity of authorship
 
-**Critical constraint documented explicitly:** Cross-seed connectivity is scored against the 36 seeds only, not the review anchors. A paper that appears in a review anchor's reference list but has no connection to any seed has not demonstrated structural importance in the field's citation network. Review anchors expand the candidate pool; seeds are the quality gate.
+**Critical constraint documented explicitly:** Cross-seed connectivity is scored against the 40 seeds, with an explicit bridge clause: papers can satisfy effective Tier 2 via `cross_seed_score >= 2` or via `cross_seed_score >= 1` and `review_anchor_link_count >= 1`. Review anchors remain expansion sources rather than full quality anchors.
 
 **Decision:** Keep the Reich/Lucchinetti/Calabresi 2018 *NEJM* review (R1) alongside the more recent Jakimovski 2024 *Lancet* review (R2), rather than replacing it.
 
@@ -85,17 +85,17 @@ The 6 review anchors were selected for:
 
 ## 4. Cross-Seed Connectivity
 
-**Decision:** Use cross-seed connectivity (minimum score = 2) as the primary quality filter for Tier 2 candidates.
+**Decision:** Use an effective Tier 2 connectivity rule: `cross_seed_score ≥ 2` OR (`cross_seed_score ≥ 1` AND `review_anchor_link_count ≥ 1`).
 
 **Rationale:** A paper appearing in the one-hop neighborhood of multiple seeds has demonstrated structural importance in the field's citation network, independent of which institution produced it or what its absolute citation count is. This directly addresses the goal of identifying important papers outside the well-known labs: structural centrality in the citation network is earned by the field's collective citation behavior, not by institutional prestige.
 
-The minimum threshold of 2 (rather than 1) ensures papers are genuinely field-connected rather than tangentially related to a single seed. Papers appearing in only one seed's neighborhood are more likely to be topic-adjacent rather than field-canonical.
+The `cross_seed_score ≥ 2` floor remains the default quality gate. The added `seed+anchor` bridge clause addresses a known structural failure mode in thin but important subfields (especially equity): papers can be strongly connected to one canonical seed and one dedicated expert review anchor while remaining disconnected from the dominant trial/pathophysiology backbone.
 
 The "multi-topic bridge" signal (seeds from ≥2 different topic codes) is recorded but not used as a filter. These bridging papers often answer the most interesting cross-topic queries.
 
-**Decision:** Score connectivity against the 36 seeds only, not the 6 review anchors.
+**Decision:** Preserve seed-anchored quality scoring while allowing anchor-informed bridge qualification.
 
-**Rationale:** See Section 3. This is the critical design constraint that maintains the integrity of the quality gate.
+**Rationale:** Direct seed connectivity remains the primary structural signal. Review anchors are not independent quality anchors, but their link count is allowed as a secondary bridge term to correct known structural disconnection in thin subfields (see Section 3).
 
 ---
 
@@ -135,13 +135,32 @@ Bridging papers — papers that connect multiple topics — are often the most v
 
 ## 7. Tier 3 (Velocity/Emerging) Design
 
-**Decision:** Tier 3 uses a relaxed connectivity floor (cross_seed_score ≥ 1 rather than ≥ 2) alongside velocity_percentile ≥ 80th.
+**Decision:** Tier 3 uses a recency plus accumulation rule: publication year ≥ 2022 and citations_per_year ≥ 20, with optional minimum connectivity (`cross_seed_score` floor configurable; default 0).
 
-**Rationale:** Very new papers (published within the last 4 years) may not yet have accumulated the citation mass needed to appear in multiple seed neighborhoods — not because they are unimportant but because they are young. Requiring cross_seed_score ≥ 2 for Tier 3 would systematically exclude emerging important work from non-dominant researchers before it becomes well-known. The relaxed floor (≥ 1) maintains some structural grounding while not penalizing recency.
+**Rationale:** Very new papers may not yet have accumulated multi-seed connectivity, so a strict Tier 2-style graph gate will under-select emerging work. Using a direct accumulation threshold ("accumulating citations in general") is easier to audit than percentile-only velocity rules and avoids cross-topic denominator effects. Citation rate is computed over observed paper age (i.e., divide by available years, not a fixed full window for newer papers).
 
 The manual check requirement is essential: velocity alone can be gamed or inflated in thin subfields where a small number of papers cite each other rapidly. Human judgment is the safeguard.
 
-**Decision:** The 4-year publication window for Tier 3 was set based on typical field-specific citation accumulation timelines for medical literature.
+**Decision:** Tier 3 selection remains capped and manually reviewed; recency/accumulation is a screening signal, not automatic inclusion.
+
+**Decision (April 2026 update):** Tier 3 cap is now topic-coupled rather than global:  
+`T3_cap(topic) = max(5, ceil(0.20 × T2_count(topic)))`.
+
+**Rationale:** A topic-coupled cap preserves proportionality between established and emerging literature while preventing dominant topics from monopolizing Tier 3 capacity. The floor of 5 preserves minimal forward-looking coverage for sparse topics.
+
+**Decision (April 2026 update):** Tier 2 structural rule is now explicit:
+- `cross_seed_score >= 2`
+- `kcore >= 4`
+- `in_degree >= 2`
+- `paper_importance_score > P70(anchor_category)`
+
+For topics contributing `<2%` of the strict-pass provisional corpus, `kcore` and `in_degree` are relaxed while retaining cross-seed and category-relative importance requirements.
+
+**Rationale:** Structural gates improve precision in large topics, but can over-penalize thin topics with sparse citation graphs. The `<2%` relaxation is a controlled fairness correction that preserves relevance gates while reducing systematic underrepresentation.
+
+**Decision (April 2026 update):** Final corpus balancing applies a hard concentration constraint: no topic may exceed 20% of the selected corpus.
+
+**Rationale:** Without an explicit concentration cap, broad foundational topics dominate by volume even after Tier gates. A hard ceiling enforces minimum topical diversity and improves downstream retrieval balance for learners.
 
 ---
 
@@ -183,9 +202,9 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 
 **Rationale:** The layering is a reading recommendation reflecting epistemological dependencies, not a value judgment about importance. Equity research is most meaningful when read against the Clinical baseline — it critically interrogates the assumptions baked into the clinical literature. Placing equity in Layer 3 is not a statement that it matters less; it is a statement that its critical function is best understood after the baseline it is critiquing has been established.
 
-**Decision:** Both Topic 13 seeds are authored by Langer-Gould; this is explicitly flagged as a source diversity limitation with complement papers named.
+**Decision:** Topic 13 seed set was rebalanced from a single-author concentration to a mixed anchor set (Wallin 2023 prevalence, Langer-Gould 2022 prevalence disparities, Langer-Gould 2013 incidence).
 
-**Rationale:** Langer-Gould is the field leader on MS epidemiology and racial/ethnic disparities in the US, and both seeds are the right papers for their respective functions. Acknowledging the single-author concentration honestly is more defensible than substituting a less appropriate paper for diversity's sake. The complement papers (Amezcua & McCauley 2020, Hittle et al. 2023 *JAMA Neurology*) are named explicitly so corpus builders know what to add.
+**Rationale:** The 2025 structural-racism review was conceptually strong but too new to provide structural pull in the graph. Replacing it with Wallin 2023 and adding Langer-Gould 2013 increased T13 neighborhood depth while preserving equity framing through review anchor R5 and retaining structurally connected disparities epidemiology seeds.
 
 **Decision:** The patient voice is acknowledged as an explicit gap in the seed list, not papered over.
 
@@ -232,7 +251,7 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 
 **Citation API coverage:** OpenAlex has good but not complete coverage. Older papers and non-English publications are underrepresented. The cross-seed connectivity scores for papers from under-indexed venues will be artificially low.
 
-**Threshold validation:** The minimum cross-seed score of 2, the velocity window of 2 years, the 80th percentile Tier 3 cutoff, and the 70% QA overlap target are operational heuristics that should be empirically calibrated through retrieval quality evaluation of the resulting knowledge base.
+**Threshold validation:** The effective Tier 2 rule (`2` seeds or `1+anchor`) and the Tier 3 accumulation threshold (`≥20 citations/year`, year ≥ 2022) are operational heuristics that should be empirically calibrated through retrieval quality evaluation of the resulting knowledge base.
 
 **Temporal decay:** The corpus will age. Review anchors should be updated to include newer comprehensive reviews as the field evolves. Seeds from 2017 (the two NEJM DMT seeds) and 2018–2019 should be reviewed for replacement in corpus v2.0.
 
@@ -240,4 +259,4 @@ Specific Tier 4 source types were selected to address known algorithmic blind sp
 
 ---
 
-*Document version 1.0 — April 2026. Update version number and Update Log in the corpus specification workbook when methodology changes.*
+*Document version 1.1 — April 2026. Update version number and Update Log in the corpus specification workbook when methodology changes.*

@@ -3,6 +3,7 @@
 import argparse
 
 from src.audit_kb import run as run_audit
+from src.assign_topic_evidence import run as run_topic_evidence
 from src.backfill_abstracts import run as run_backfill_abstracts
 from src.build_graphs import run as run_graphs
 from src.build_knowledge_graph import run as run_kg
@@ -12,6 +13,7 @@ from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
 from src.retrieve_corpora import run as run_retrieve
+from src.select_core_corpus import run as run_select_core_corpus
 from src.seed_governance import run as run_seed_governance
 
 
@@ -35,8 +37,14 @@ def main(config_path: str) -> None:
     print("Stage 4/8: Computing scores...")
     run_scores(config_path)
 
-    print("Stage 5/8: Discovering topics...")
+    print("Stage 5/9: Discovering topics...")
     run_topics(config_path)
+
+    print("Stage 5b/9: Assigning topic evidence...")
+    run_topic_evidence(config_path)
+
+    print("Stage 5c/9: Selecting core corpus...")
+    run_select_core_corpus(config_path)
 
     print("Stage 6/9: Building learner journey...")
     run_learner_journey(config_path)

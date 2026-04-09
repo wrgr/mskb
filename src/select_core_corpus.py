@@ -1,0 +1,338 @@
+"""Select the core corpus using explicit tier rules with topic-balance constraints."""
+
+import argparse
+import json
+import math
+from collections import Counter
+from pathlib import Path
+
+import pandas as pd
+
+from .utils import ensure_dir, load_config, save_json
+
+
+def _boolish(value: object) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    text = str(value).strip().lower()
+    return text in {"1", "true", "yes", "y", "on"}
+
+
+def _is_missing_abstract(series: pd.Series) -> pd.Series:
+    return series.isna() | series.astype(str).str.strip().str.lower().isin({"", "nan"})
+
+
+def _topic_counts(frame: pd.DataFrame) -> dict[str, int]:
+    return {str(k): int(v) for k, v in frame["primary_topic_code"].value_counts().sort_index().items()}
+
+
+def _select_t3_ids(
+    scoped: pd.DataFrame,
+    is_t1: pd.Series,
+    is_t2: pd.Series,
+    t3_min_year: int,
+    t3_min_citations_per_year: float,
+    t3_fraction_of_t2: float,
+    t3_floor_per_topic: int,
+) -> tuple[set[str], dict[str, dict[str, int]]]:
+    eligible = (
+        (~is_t1)
+        & (~is_t2)
+        & (scoped["year_int"] >= t3_min_year)
+        & (scoped["citations_per_year_raw"] >= t3_min_citations_per_year)
+    )
+    selected_ids: set[str] = set()
+    diagnostics: dict[str, dict[str, int]] = {}
+
+    for topic, group in scoped.groupby("primary_topic_code"):
+        topic_is_t2 = is_t2.loc[group.index]
+        topic_eligible = group[eligible.loc[group.index]].copy()
+        topic_t2_count = int(topic_is_t2.sum())
+        topic_cap = max(t3_floor_per_topic, int(math.ceil(t3_fraction_of_t2 * topic_t2_count)))
+        topic_eligible = topic_eligible.sort_values(
+            ["citations_per_year_raw", "paper_importance_score", "merged_cited_by_count"],
+            ascending=False,
+        )
+        picked = topic_eligible.head(topic_cap)
+        selected_ids.update(picked["canonical_paper_id"].astype(str).tolist())
+        diagnostics[str(topic)] = {
+            "t2_count": topic_t2_count,
+            "t3_cap": int(topic_cap),
+            "t3_eligible": int(len(topic_eligible)),
+            "t3_selected": int(len(picked)),
+        }
+    return selected_ids, diagnostics
+
+
+def _apply_topic_cap(
+    selected: pd.DataFrame,
+    max_topic_share: float,
+) -> tuple[pd.DataFrame, list[dict]]:
+    capped = selected.copy()
+    removed: list[dict] = []
+    tier_rank = {"T3": 0, "T2": 1, "T1": 2}
+
+    while True:
+        total = int(len(capped))
+        if total <= 0:
+            break
+        max_allowed = int(math.floor(max_topic_share * total))
+        over = capped["primary_topic_code"].value_counts()
+        over = over[over > max_allowed]
+        if over.empty:
+            break
+
+        topic = str((over - max_allowed).sort_values(ascending=False).index[0])
+        candidates = capped[(capped["primary_topic_code"] == topic) & (capped["core_selection_tier"] != "T1")].copy()
+        if candidates.empty:
+            break
+        candidates["tier_rank"] = candidates["core_selection_tier"].map(tier_rank).fillna(1)
+        candidates = candidates.sort_values(["tier_rank", "paper_importance_score", "citations_per_year_raw"])
+        drop_row = candidates.iloc[0]
+        drop_id = str(drop_row["canonical_paper_id"])
+        removed.append(
+            {
+                "canonical_paper_id": drop_id,
+                "primary_topic_code": topic,
+                "removed_tier": str(drop_row.get("core_selection_tier", "")),
+                "paper_importance_score": float(drop_row.get("paper_importance_score", 0.0)),
+            }
+        )
+        capped = capped[capped["canonical_paper_id"].astype(str) != drop_id].copy()
+
+    return capped, removed
+
+
+def run(config_path: str) -> None:
+    cfg = load_config(config_path)
+    root = Path(config_path).resolve().parent
+    outdir = root / cfg["output_dir"]
+    graph_dir = outdir / "graph"
+    topics_dir = outdir / "topics"
+    ensure_dir(graph_dir)
+
+    scored_path = graph_dir / "scored_papers.csv"
+    topic_evidence_path = topics_dir / "paper_topic_evidence.csv"
+    if not scored_path.exists():
+        raise FileNotFoundError(f"Missing {scored_path}")
+    if not topic_evidence_path.exists():
+        raise FileNotFoundError(
+            f"Missing {topic_evidence_path}. Run `python -m src.assign_topic_evidence --config {config_path}` first."
+        )
+
+    selection_cfg = cfg.get("core_corpus_selection", {}) or {}
+    t2_cfg = selection_cfg.get("t2", {}) or {}
+    t3_cfg = selection_cfg.get("t3", {}) or {}
+    balance_cfg = selection_cfg.get("balance", {}) or {}
+
+    t2_min_cross_seed = max(1, int(t2_cfg.get("min_cross_seed_score", 2)))
+    t2_min_kcore = max(0, int(t2_cfg.get("min_kcore", 4)))
+    t2_min_in_degree = max(0, int(t2_cfg.get("min_in_degree", 2)))
+    t2_importance_pct = float(t2_cfg.get("importance_percentile_by_category", 70.0))
+    t2_importance_quantile = min(0.999, max(0.0, t2_importance_pct / 100.0))
+    t2_relax_below_topic_share = min(1.0, max(0.0, float(t2_cfg.get("relax_structure_below_topic_share", 0.02))))
+
+    t3_min_year = int(t3_cfg.get("min_year", 2022))
+    t3_min_citations_per_year = float(t3_cfg.get("min_citations_per_year", 20.0))
+    t3_fraction_of_t2 = max(0.0, float(t3_cfg.get("cap_fraction_of_t2_per_topic", 0.20)))
+    t3_floor_per_topic = max(0, int(t3_cfg.get("floor_per_topic", 5)))
+
+    max_topic_share = min(1.0, max(0.0, float(balance_cfg.get("max_topic_share", 0.20))))
+
+    scored = pd.read_csv(scored_path, low_memory=False)
+    scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
+    scoped = scored.copy()
+    if "in_final_corpus" in scoped.columns:
+        scoped = scoped[scoped["in_final_corpus"] == True].copy()  # noqa: E712
+    elif "tier" in scoped.columns:
+        scoped = scoped[scoped["tier"].astype(str).isin({"included", "seed_neighbor"})].copy()
+
+    topic_evidence = pd.read_csv(topic_evidence_path, usecols=["canonical_paper_id", "primary_topic_code"])
+    topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
+    scoped = scoped.merge(topic_evidence, on="canonical_paper_id", how="left")
+    scoped["primary_topic_code"] = scoped["primary_topic_code"].fillna("UNMAPPED").astype(str)
+    scoped["anchor_category"] = scoped.get("anchor_category", pd.Series("", index=scoped.index)).fillna("unmapped")
+    scoped["anchor_category"] = scoped["anchor_category"].astype(str).replace({"": "unmapped"})
+    scoped["is_core_seed"] = scoped.get("is_core_seed", pd.Series(False, index=scoped.index)).map(_boolish)
+
+    for col in [
+        "cross_seed_score",
+        "kcore",
+        "in_degree",
+        "paper_importance_score",
+        "year_int",
+        "year",
+        "citations_per_year_raw",
+        "merged_cited_by_count",
+    ]:
+        if col in scoped.columns:
+            scoped[col] = pd.to_numeric(scoped[col], errors="coerce")
+    scoped["cross_seed_score"] = scoped.get("cross_seed_score", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["kcore"] = scoped.get("kcore", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["in_degree"] = scoped.get("in_degree", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["paper_importance_score"] = scoped.get("paper_importance_score", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["citations_per_year_raw"] = scoped.get("citations_per_year_raw", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["merged_cited_by_count"] = scoped.get("merged_cited_by_count", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    if "year_int" in scoped.columns:
+        scoped["year_int"] = scoped["year_int"].fillna(scoped.get("year", 0)).fillna(0).astype(int)
+    else:
+        scoped["year_int"] = pd.to_numeric(scoped.get("year", pd.Series(0, index=scoped.index)), errors="coerce").fillna(0).astype(int)
+
+    cat_threshold = scoped.groupby("anchor_category")["paper_importance_score"].quantile(t2_importance_quantile).to_dict()
+    scoped["t2_category_importance_threshold"] = scoped["anchor_category"].map(cat_threshold).fillna(float("inf"))
+
+    is_t1 = scoped["is_core_seed"].copy()
+    t2_base_gate = (
+        (~is_t1)
+        & (scoped["cross_seed_score"] >= t2_min_cross_seed)
+        & (scoped["paper_importance_score"] > scoped["t2_category_importance_threshold"])
+    )
+    t2_structure_gate = (scoped["kcore"] >= t2_min_kcore) & (scoped["in_degree"] >= t2_min_in_degree)
+    t2_strict = t2_base_gate & t2_structure_gate
+
+    strict_t3_ids, strict_t3_diag = _select_t3_ids(
+        scoped=scoped,
+        is_t1=is_t1,
+        is_t2=t2_strict,
+        t3_min_year=t3_min_year,
+        t3_min_citations_per_year=t3_min_citations_per_year,
+        t3_fraction_of_t2=t3_fraction_of_t2,
+        t3_floor_per_topic=t3_floor_per_topic,
+    )
+    strict_union = scoped[
+        is_t1
+        | t2_strict
+        | scoped["canonical_paper_id"].astype(str).isin(strict_t3_ids)
+    ].copy()
+    strict_topic_share = strict_union["primary_topic_code"].value_counts(normalize=True)
+    low_share_topics = sorted(strict_topic_share[strict_topic_share < t2_relax_below_topic_share].index.tolist())
+
+    t2_relax_gate = t2_base_gate & scoped["primary_topic_code"].isin(low_share_topics)
+    t2_final = t2_strict | t2_relax_gate
+
+    t3_ids, t3_diag = _select_t3_ids(
+        scoped=scoped,
+        is_t1=is_t1,
+        is_t2=t2_final,
+        t3_min_year=t3_min_year,
+        t3_min_citations_per_year=t3_min_citations_per_year,
+        t3_fraction_of_t2=t3_fraction_of_t2,
+        t3_floor_per_topic=t3_floor_per_topic,
+    )
+    is_t3 = scoped["canonical_paper_id"].astype(str).isin(t3_ids)
+
+    pre_cap = scoped[is_t1 | t2_final | is_t3].copy()
+    pre_cap["core_selection_tier"] = "T3"
+    pre_cap.loc[t2_final.loc[pre_cap.index], "core_selection_tier"] = "T2"
+    pre_cap.loc[is_t1.loc[pre_cap.index], "core_selection_tier"] = "T1"
+    pre_cap["t2_base_gate"] = t2_base_gate.loc[pre_cap.index].astype(bool)
+    pre_cap["t2_structure_gate"] = t2_structure_gate.loc[pre_cap.index].astype(bool)
+    pre_cap["t2_relax_gate"] = t2_relax_gate.loc[pre_cap.index].astype(bool)
+    pre_cap["t3_selected"] = is_t3.loc[pre_cap.index].astype(bool)
+
+    t3_rank_df = pd.DataFrame({"canonical_paper_id": scoped["canonical_paper_id"].astype(str), "t3_rank_in_topic": 0, "t3_topic_cap": 0})
+    for topic, group in scoped.groupby("primary_topic_code"):
+        topic_cap = int(t3_diag.get(str(topic), {}).get("t3_cap", 0))
+        elig = group[
+            (~is_t1.loc[group.index])
+            & (~t2_final.loc[group.index])
+            & (scoped.loc[group.index, "year_int"] >= t3_min_year)
+            & (scoped.loc[group.index, "citations_per_year_raw"] >= t3_min_citations_per_year)
+        ].copy()
+        elig = elig.sort_values(["citations_per_year_raw", "paper_importance_score", "merged_cited_by_count"], ascending=False)
+        for rank, (_, row) in enumerate(elig.iterrows(), start=1):
+            pid = str(row["canonical_paper_id"])
+            t3_rank_df.loc[t3_rank_df["canonical_paper_id"] == pid, "t3_rank_in_topic"] = int(rank)
+            t3_rank_df.loc[t3_rank_df["canonical_paper_id"] == pid, "t3_topic_cap"] = int(topic_cap)
+    pre_cap = pre_cap.merge(t3_rank_df, on="canonical_paper_id", how="left")
+    pre_cap["t3_rank_in_topic"] = pre_cap["t3_rank_in_topic"].fillna(0).astype(int)
+    pre_cap["t3_topic_cap"] = pre_cap["t3_topic_cap"].fillna(0).astype(int)
+
+    capped, removed = _apply_topic_cap(pre_cap, max_topic_share=max_topic_share)
+
+    selected_path = graph_dir / "core_corpus_selected.csv"
+    capped.to_csv(selected_path, index=False)
+
+    removed_df = pd.DataFrame(removed)
+    removed_path = graph_dir / "core_corpus_removed_by_topic_cap.csv"
+    if removed_df.empty:
+        removed_df = pd.DataFrame(columns=["canonical_paper_id", "primary_topic_code", "removed_tier", "paper_importance_score"])
+    removed_df.to_csv(removed_path, index=False)
+
+    missing = capped[_is_missing_abstract(capped.get("abstract", pd.Series("", index=capped.index)))]
+    missing_path = graph_dir / "core_corpus_missing_abstracts.csv"
+    missing.to_csv(missing_path, index=False)
+
+    summary = {
+        "input_scoped_rows": int(len(scoped)),
+        "rules": {
+            "t2": {
+                "min_cross_seed_score": t2_min_cross_seed,
+                "min_kcore": t2_min_kcore,
+                "min_in_degree": t2_min_in_degree,
+                "importance_percentile_by_category": t2_importance_pct,
+                "relax_structure_below_topic_share": t2_relax_below_topic_share,
+            },
+            "t3": {
+                "min_year": t3_min_year,
+                "min_citations_per_year": t3_min_citations_per_year,
+                "cap_fraction_of_t2_per_topic": t3_fraction_of_t2,
+                "floor_per_topic": t3_floor_per_topic,
+            },
+            "balance": {"max_topic_share": max_topic_share},
+        },
+        "low_share_topics_for_t2_relaxation": low_share_topics,
+        "strict_pass_counts": {
+            "t1": int(is_t1.sum()),
+            "t2_strict": int(t2_strict.sum()),
+            "t3_strict_selected": int(len(strict_t3_ids)),
+            "union_strict_pre_relax": int(len(strict_union)),
+        },
+        "final_pre_cap_counts": {
+            "t1": int(is_t1.sum()),
+            "t2": int(t2_final.sum()),
+            "t3": int(is_t3.sum()),
+            "union": int(len(pre_cap)),
+        },
+        "final_post_cap_counts": {
+            "union": int(len(capped)),
+            "tier_counts": {str(k): int(v) for k, v in Counter(capped["core_selection_tier"]).items()},
+            "topic_counts": _topic_counts(capped),
+            "max_topic_share_pct": round(100.0 * float(capped["primary_topic_code"].value_counts(normalize=True).max()), 4)
+            if len(capped) > 0
+            else 0.0,
+        },
+        "topic_counts_pre_cap": _topic_counts(pre_cap),
+        "t3_topic_diagnostics": t3_diag,
+        "t3_topic_diagnostics_strict": strict_t3_diag,
+        "topic_cap_removals": {
+            "total_removed": int(len(removed)),
+            "removed_by_topic": {str(k): int(v) for k, v in removed_df["primary_topic_code"].value_counts().items()} if not removed_df.empty else {},
+            "removed_by_tier": {str(k): int(v) for k, v in removed_df["removed_tier"].value_counts().items()} if not removed_df.empty else {},
+        },
+        "missing_abstracts_in_selected": {
+            "count": int(len(missing)),
+            "pct": round(100.0 * float(len(missing)) / float(len(capped)), 4) if len(capped) > 0 else 0.0,
+            "path": str(missing_path),
+        },
+        "artifacts": {
+            "selected_csv": str(selected_path),
+            "removed_csv": str(removed_path),
+            "missing_csv": str(missing_path),
+        },
+    }
+    summary_path = graph_dir / "core_corpus_selection_summary.json"
+    save_json(summary, summary_path)
+
+    print(f"core_corpus_selected.csv: {selected_path}")
+    print(f"core_corpus_selection_summary.json: {summary_path}")
+    print(f"core_corpus_missing_abstracts.csv: {missing_path}")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", default="config.yaml")
+    args = parser.parse_args()
+    run(args.config)

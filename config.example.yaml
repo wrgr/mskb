@@ -11,6 +11,8 @@ retrieval:
   use_seed_channel: true
   use_lexical_channel: true
   use_dataset_channel: true
+  # Pull explicitly curated Tier-4 expert-signal papers by DOI from seeds/t4_expert_signals.csv.
+  use_t4_expert_channel: true
   seed_reference_enrichment:
     enabled: true
     use_crossref: true
@@ -71,6 +73,17 @@ graphs:
 scoring:
   include_if_min_signals: 1
   include_if_score_at_least: 0.15
+  tier_connectivity:
+    # Effective T2 rule:
+    # pass if cross_seed_score >= 2 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)
+    t2_min_cross_seed: 2
+    t2_seed_plus_anchor_min_cross_seed: 1
+    t2_seed_plus_anchor_min_anchor_links: 1
+  tier4_expert:
+    enabled: true
+    # Allow explicitly curated papers even when graph connectivity is low.
+    require_ms_focus: false
+    min_score_field_membership: 0.0
   ms_focus:
     # Major upweight for papers with explicit MS lexical + concept linkage.
     lexical_min_hits: 1
@@ -91,8 +104,7 @@ scoring:
   topic_balance:
     enabled: true
     # Enforced on anchor-based categories during scoring.
-    # Ranges reflect the new orientation-guide seed distribution:
-    # epi=8, path=7, img=6, trial=4, ccm=11 out of 36 total seeds.
+    # Tune these ranges to your active seed mix and desired corpus balance.
     target_ranges:
       pathogenesis_and_immunology: {min_pct: 0.12, max_pct: 0.32}
       imaging_and_biomarkers: {min_pct: 0.12, max_pct: 0.30}
@@ -117,10 +129,45 @@ topics:
   # - clinical_care_and_management: Topics 1, 8A, 9, 10B, 11B, 12A, 14B, 16
   # - epidemiology_and_population_health: Topics 0, 1b, 4B, 10A, 13
 
+core_corpus_selection:
+  # Explicit, provenance-friendly corpus selector applied after scoring + topic assignment.
+  t2:
+    # Established literature gate.
+    min_cross_seed_score: 2
+    min_kcore: 4
+    min_in_degree: 2
+    importance_percentile_by_category: 70.0
+    # Underrepresented topics can relax structural gates (kcore/in_degree) when
+    # their strict-pass topic share falls below this threshold.
+    relax_structure_below_topic_share: 0.02
+  t3:
+    # Emerging literature gate.
+    min_year: 2022
+    min_citations_per_year: 20.0
+    # Topic-specific cap: ceil(fraction * T2_topic_count), with floor_per_topic minimum.
+    cap_fraction_of_t2_per_topic: 0.20
+    floor_per_topic: 5
+  balance:
+    # Hard topic concentration cap across the final selected corpus.
+    max_topic_share: 0.20
+
 distillation:
   provider: "anthropic"
   model: "claude-haiku-4-5-20251001"
-  max_papers_per_run: 500
+  # "importance" (legacy top-N by paper_importance_score) or "tiered_t1_t2_t3".
+  selection_mode: "tiered_t1_t2_t3"
+  max_papers_per_run: 650
+  tiered_selection:
+    # Expert-signal papers selected before T2/T3.
+    t4_max_papers: 120
+    # Keep all seeds, then take top T2 and T3 candidates up to these caps.
+    t2_max_papers: 360
+    t3_max_papers: 220
+    # T3: recent papers accumulating citations in general.
+    t3_min_year: 2022
+    t3_min_citations_per_year: 20.0
+    # Set >0 if you want a structural floor for T3.
+    t3_min_cross_seed_score: 0
   cache_dir: "outputs/distilled/llm_cache"
   batch_size: 10
   qa_sample_size: 25
@@ -142,6 +189,11 @@ abstract_backfill:
   sleep_seconds: 0.03
   request_timeout_seconds: 12
   max_consecutive_errors: 6
+  selected_scope:
+    # When enabled, only backfill abstracts for the selected corpus.
+    enabled: false
+    selected_csv_path: "outputs/graph/core_corpus_selected.csv"
+    selected_id_column: "canonical_paper_id"
 
 site:
   explorer:
@@ -165,8 +217,7 @@ governance:
     fail_on_error: true
     # If true, unresolved DOI metadata will fail seed checks.
     fail_on_unresolved_metadata: false
-    # Quotas reflect the orientation-guide topic map (18 topics × 2 seeds = 36 core seeds).
-    # Distribution: epi=8, path=7, img=6, trial=4, ccm=11.
+    # Quotas should reflect your active seed mix and governance policy.
     category_quotas:
       pathogenesis_and_immunology: {min: 4, max: 12}
       imaging_and_biomarkers: {min: 4, max: 12}
@@ -183,6 +234,8 @@ governance:
     min_ms_focus_pct: 75.0
     max_biology_no_ms_link: 0
     max_missing_abstract_pct: 25.0
+    # "todo" tracks missing abstracts as warnings instead of hard failures.
+    missing_abstract_policy: "todo"
     max_missing_source_link_pct: 5.0
     enforce_category_bounds: true
   landmark_anchors:

@@ -7,7 +7,7 @@ sidebar:
 
 import { Aside, Badge } from '@astrojs/starlight/components';
 
-MSKB is built from a curated corpus of approximately **500 peer-reviewed documents** spanning 18 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
+MSKB is built from a curated corpus of approximately **450–650 peer-reviewed documents** spanning 18 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
 
 The corpus specification lives in [`data/ms_corpus_specification_v1.xlsx`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_specification_v1.xlsx) and the full audit trail in [`data/ms_corpus_design_decisions.md`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_design_decisions.md).
 
@@ -17,14 +17,14 @@ The corpus specification lives in [`data/ms_corpus_specification_v1.xlsx`](https
 
 | Parameter | Value |
 |-----------|-------|
-| Target corpus size | ~500 documents |
+| Target corpus size | ~450–650 documents |
 | Topics | 18 + Topic 1b (Natural History) |
-| T1 seeds | 36 (2 per topic) |
+| T1 seeds | 40 (base 2 per topic; augmented where coverage was thin) |
 | Review anchors | 6 (R1–R6, expansion only) |
-| Total expansion sources | 41 |
+| Total expansion sources | 46 |
 | Expected raw candidates | 5,000–15,000 before filtering |
 
-The 500-document target balances coverage depth (~15–35 documents per topic) against review feasibility (~40 hours at 5 min/document) and RAG retrieval signal-to-noise.
+The target range balances coverage depth (~15–35 documents per topic) against review feasibility and RAG retrieval signal-to-noise.
 
 ---
 
@@ -33,17 +33,27 @@ The 500-document target balances coverage depth (~15–35 documents per topic) a
 Documents are selected through four distinct mechanisms, each appropriate for a different purpose.
 
 ### Tier 1 — Seeds
-**36 hand-curated anchor papers**, 2 per topic. Seeds are the conceptual entry points into each research area. They are chosen for document-type diversity (not only reviews), citation neighborhood size, and geographic/institutional spread. All 36 seeds have status `APPROVED` in the Corpus Registry.
+**40 hand-curated anchor papers**. The baseline remains 2 seeds per topic, with targeted augmentation in thin areas (T09 PROs, T13 Equity/SDOH, T16 Research Priorities). Seeds are conceptual entry points chosen for document-type diversity, citation neighborhood size, and geographic/institutional spread.
 
 See [Seeds](/mskb/corpus/seeds/) for the full list with metadata and rationale.
 
 ### Tier 2 — Cross-seed connected
-**Target ~250–280 documents.** Papers that appear in the one-hop neighborhood (forward citations + backward citations) of **≥ 2 of the 36 seeds**. The cross-seed connectivity score is computed against seeds only — not the review anchors. A paper connected to multiple seeds has demonstrated structural importance in the field's citation network independent of institutional prestige.
+**Established corpus gate.** Tier 2 requires all of:
+- `cross_seed_score >= 2`
+- `kcore >= 4`
+- `in_degree >= 2`
+- `paper_importance_score > P70(anchor_category)` (category-relative importance threshold)
+
+To avoid systematically under-selecting thin topics, structural gates (`kcore`, `in_degree`) are relaxed for topics whose strict-pass share is `<2%` of the provisional corpus. Cross-seed and category-relative importance requirements remain in force.
 
 Additional signal recorded (but not used as a filter): papers whose connected seeds span ≥ 2 topic codes are flagged as **multi-topic bridges** — these are often the highest-value papers for cross-topic queries.
 
 ### Tier 3 — Velocity / emerging
-**Target ~100–120 documents.** Papers published 2022–2026 with `velocity_percentile ≥ 80th` within their assigned topic, plus `cross_seed_score ≥ 1`. The relaxed connectivity floor (1 rather than 2) accommodates genuinely important recent work from non-dominant labs that has not yet accumulated citation mass. A manual check is required — velocity alone is insufficient.
+**Topic-capped emerging gate.** Tier 3 candidates are papers published 2022+ and **accumulating citations in general** (`citations_per_year >= 20`), selected per-topic with:
+
+`t3_cap(topic) = max(5, ceil(0.20 * T2_count(topic)))`
+
+This ties emerging-paper volume to the size of the established literature in each topic while preserving a floor in sparse areas.
 
 ### Tier 4 — Expert signal
 **Target ~50–60 documents.** Selected by explicit expert endorsement only: ECTRIMS/ACTRIMS/AAN best paper awards, NMSS-funded research outputs, Cures Roadmap reference lists, and explicitly non-Western cohort studies. Every T4 document must have its source documented with specific award, year, or rationale. `cross_seed_score = 0` is acceptable for T4 if the expert signal is documented.
@@ -52,7 +62,7 @@ Additional signal recorded (but not used as a filter): papers whose connected se
 
 ## Expansion sources
 
-One-hop expansion runs from all 41 sources (36 seeds + 6 review anchors). Cross-seed scoring uses only the 36 seeds — review anchors expand the candidate pool but are not quality anchors.
+One-hop expansion runs from all 46 sources (40 seeds + 6 review anchors). Cross-seed scoring uses only the 40 seeds; review anchors expand the candidate pool and provide an explicit bridge signal for effective T2 connectivity.
 
 The 6 review anchors (R1–R6) were selected to correct for known structural gaps in the seed citation network:
 
@@ -77,13 +87,17 @@ Equity papers are structurally disconnected from the basic science and clinical 
 
 ## Quality gates
 
-### Cross-seed score
-- T2: `cross_seed_score ≥ 2` (hard floor)
-- T3: `cross_seed_score ≥ 1` (relaxed for recency)
+### Connectivity and recency gates
+- T2 structural gate: `cross_seed_score >= 2`, `kcore >= 4`, `in_degree >= 2`, and `paper_importance_score > P70(anchor_category)`
+- T2 low-share relaxation: for topics `<2%` of strict-pass provisional corpus, drop `kcore`/`in_degree` requirements while keeping `cross_seed` + `importance` gates
+- T3 gate: `year >= 2022` and `citations_per_year >= 20`, topic-capped at `max(5, ceil(0.20 * T2_topic_count))`
 - T4: `cross_seed_score = 0` acceptable with documented expert signal
+- Final balancing rule: no topic may exceed **20%** of the selected corpus (iterative trim from lowest-priority non-seed papers in over-cap topics)
 
 ### Subdomain score
 `subdomain_score = max(citation_percentile, velocity_percentile)` computed **within each assigned topic**, not cross-field.
+
+This remains a ranking and review signal inside topics; it is no longer the hard Tier 3 gate.
 
 Rationale for `max()` over average: a classic paper with high historical citations but low velocity is still valuable (foundational but superseded); a new paper with high velocity but modest total citations is also valuable (emerging and important). The max captures both without requiring both simultaneously.
 

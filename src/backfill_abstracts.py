@@ -69,17 +69,43 @@ def run(config_path: str) -> None:
     if "abstract_backfill_source" not in canonical.columns:
         canonical["abstract_backfill_source"] = ""
 
+    backfill_cfg = cfg.get("abstract_backfill", {}) or {}
+    selected_cfg = backfill_cfg.get("selected_scope", {}) or {}
+    selected_scope_enabled = bool(selected_cfg.get("enabled", False))
+    selected_scope_ids: set[str] = set()
+    selected_scope_mask = pd.Series(True, index=canonical.index)
+    if selected_scope_enabled:
+        selected_path_rel = _clean_text(selected_cfg.get("selected_csv_path", ""))
+        selected_id_column = _clean_text(selected_cfg.get("selected_id_column", "canonical_paper_id")) or "canonical_paper_id"
+        selected_path = (Path(config_path).resolve().parent / selected_path_rel) if selected_path_rel else None
+        if not selected_path or not selected_path.exists():
+            raise FileNotFoundError(
+                "abstract_backfill.selected_scope.enabled=true but selected_csv_path is missing or not found"
+            )
+        selected_df = pd.read_csv(selected_path, usecols=lambda c: c == selected_id_column)
+        if selected_id_column not in selected_df.columns:
+            raise KeyError(
+                f"abstract_backfill.selected_scope.selected_id_column '{selected_id_column}' "
+                f"not found in {selected_path}"
+            )
+        selected_scope_ids = set(selected_df[selected_id_column].dropna().astype(str).tolist())
+        selected_scope_mask = canonical["canonical_paper_id"].astype(str).isin(selected_scope_ids)
+
     missing_before = _is_missing_abstract(canonical["abstract"])
-    missing_ids_before = set(canonical.loc[missing_before, "canonical_paper_id"].astype(str))
+    missing_ids_before = set(canonical.loc[missing_before & selected_scope_mask, "canonical_paper_id"].astype(str))
 
     stats = {
         "total_canonical_papers": int(len(canonical)),
-        "missing_before": int(len(missing_ids_before)),
+        "missing_before_all": int(missing_before.sum()),
+        "missing_before_scope": int(len(missing_ids_before)),
+        "selected_scope_enabled": bool(selected_scope_enabled),
+        "selected_scope_size": int(selected_scope_mask.sum()),
         "filled_from_candidate_versions": 0,
         "attempted_openalex_queries": 0,
         "successful_openalex_backfills": 0,
         "openalex_errors": 0,
-        "missing_after": 0,
+        "missing_after_all": 0,
+        "missing_after_scope": 0,
     }
 
     # Pass 1: recover from any candidate version in local raw output.
@@ -103,13 +129,12 @@ def run(config_path: str) -> None:
             recoverable_map = dict(zip(recoverable["canonical_paper_id"], recoverable["abstract"]))
             selector = canonical["canonical_paper_id"].isin(recoverable_map.keys()) & _is_missing_abstract(
                 canonical["abstract"]
-            )
+            ) & selected_scope_mask
             canonical.loc[selector, "abstract"] = canonical.loc[selector, "canonical_paper_id"].map(recoverable_map)
             canonical.loc[selector, "abstract_backfill_source"] = "candidate_version"
             stats["filled_from_candidate_versions"] = int(selector.sum())
 
     # Pass 2: query OpenAlex for remaining missing abstracts.
-    backfill_cfg = cfg.get("abstract_backfill", {}) or {}
     enabled = bool(backfill_cfg.get("enabled", True))
     max_queries = backfill_cfg.get("max_openalex_queries")
     env_max_queries = _clean_text(os.environ.get("MSKB_MAX_OPENALEX_QUERIES", ""))
@@ -134,7 +159,7 @@ def run(config_path: str) -> None:
             cache_dir=cache_dir,
         )
 
-        remaining_missing = canonical[_is_missing_abstract(canonical["abstract"])].copy()
+        remaining_missing = canonical[_is_missing_abstract(canonical["abstract"]) & selected_scope_mask].copy()
         consecutive_errors = 0
         for idx, row in remaining_missing.iterrows():
             if max_queries is not None and stats["attempted_openalex_queries"] >= max_queries:
@@ -194,8 +219,10 @@ def run(config_path: str) -> None:
                 stats["successful_openalex_backfills"] += 1
 
     missing_after = _is_missing_abstract(canonical["abstract"])
-    stats["missing_after"] = int(missing_after.sum())
-    stats["filled_total"] = int(stats["missing_before"] - stats["missing_after"])
+    missing_after_scope = missing_after & selected_scope_mask
+    stats["missing_after_all"] = int(missing_after.sum())
+    stats["missing_after_scope"] = int(missing_after_scope.sum())
+    stats["filled_total_scope"] = int(stats["missing_before_scope"] - stats["missing_after_scope"])
 
     canonical.to_csv(canonical_path, index=False)
 

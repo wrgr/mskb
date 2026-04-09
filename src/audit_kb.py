@@ -142,6 +142,7 @@ def run(config_path: str) -> None:
     min_ms_focus_pct = _safe_float(gcfg.get("min_ms_focus_pct", 75.0), 75.0)
     max_biology_no_ms_link = _safe_int(gcfg.get("max_biology_no_ms_link", 0), 0)
     max_missing_abstract_pct = _safe_float(gcfg.get("max_missing_abstract_pct", 25.0), 25.0)
+    missing_abstract_policy = str(gcfg.get("missing_abstract_policy", "error") or "error").strip().lower()
     max_missing_source_link_pct = _safe_float(gcfg.get("max_missing_source_link_pct", 5.0), 5.0)
     enforce_category_bounds = bool(gcfg.get("enforce_category_bounds", True))
 
@@ -167,9 +168,11 @@ def run(config_path: str) -> None:
     )
     missing_abstract_pct = float((1.0 - abstract_present.mean()) * 100.0)
     if missing_abstract_pct > max_missing_abstract_pct:
-        errors.append(
-            f"missing abstract rate above threshold: {missing_abstract_pct:.2f}% > {max_missing_abstract_pct:.2f}%"
-        )
+        message = f"missing abstract rate above threshold: {missing_abstract_pct:.2f}% > {max_missing_abstract_pct:.2f}%"
+        if missing_abstract_policy == "todo":
+            warnings.append(f"{message} (tracked as TODO, not a hard failure)")
+        else:
+            errors.append(message)
 
     has_link = final.apply(_has_source_link, axis=1)
     missing_source_link_pct = float((1.0 - has_link.mean()) * 100.0)
@@ -209,6 +212,7 @@ def run(config_path: str) -> None:
             "biology_no_ms_link_count": int(biology_no_ms_link_count),
             "missing_abstract_pct": round(missing_abstract_pct, 4),
             "missing_source_link_pct": round(missing_source_link_pct, 4),
+            "missing_abstract_policy": missing_abstract_policy,
         },
         "category_mix_pct": category_mix_pct,
         "category_entropy": round(category_entropy, 6),

@@ -837,16 +837,155 @@ def _init_api_client(dist_cfg: dict) -> object | None:
     return None
 
 
+def _boolish(value: object) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    text = _clean_text(value).lower()
+    return text in {"1", "true", "yes", "y", "on"}
+
+
+def _select_tiered_distill_corpus(scored: pd.DataFrame, max_papers: int, dist_cfg: dict) -> pd.DataFrame:
+    """Select distillation corpus using explicit T1/T2/T3 priorities with configurable caps."""
+    tier_cfg = (dist_cfg.get("tiered_selection", {}) or {})
+    t4_max = max(0, int(tier_cfg.get("t4_max_papers", max_papers)))
+    t2_max = max(0, int(tier_cfg.get("t2_max_papers", max_papers)))
+    t3_max = max(0, int(tier_cfg.get("t3_max_papers", max_papers)))
+    t3_min_year = int(tier_cfg.get("t3_min_year", 2022))
+    t3_min_citations_per_year = float(tier_cfg.get("t3_min_citations_per_year", 20.0))
+    t3_min_cross_seed = max(0, int(tier_cfg.get("t3_min_cross_seed_score", 0)))
+
+    scored["cross_seed_score"] = pd.to_numeric(scored.get("cross_seed_score"), errors="coerce").fillna(0.0)
+    scored["review_anchor_link_count"] = pd.to_numeric(scored.get("review_anchor_link_count"), errors="coerce").fillna(0.0)
+    scored["paper_importance_score"] = pd.to_numeric(scored.get("paper_importance_score"), errors="coerce").fillna(0.0)
+    scored["citations_per_year_raw"] = pd.to_numeric(scored.get("citations_per_year_raw"), errors="coerce").fillna(0.0)
+    scored["year_int"] = pd.to_numeric(scored.get("year"), errors="coerce").fillna(0.0).astype(int)
+    if "is_core_seed" in scored.columns:
+        scored["is_core_seed"] = scored["is_core_seed"].map(_boolish)
+    else:
+        scored["is_core_seed"] = scored.get("signal_seed", pd.Series(0, index=scored.index)).fillna(0).astype(int) == 1
+    if "signal_t4_expert" in scored.columns:
+        scored["signal_t4_expert"] = pd.to_numeric(scored["signal_t4_expert"], errors="coerce").fillna(0).astype(int)
+    else:
+        scored["signal_t4_expert"] = 0
+    if "meets_t2_effective" not in scored.columns:
+        scored["meets_t2_effective"] = (scored["cross_seed_score"] >= 2).astype(bool)
+    else:
+        scored["meets_t2_effective"] = scored["meets_t2_effective"].map(_boolish)
+
+    selected_rows = []
+    selected_ids: set[str] = set()
+
+    # T1: all seeds retained.
+    seeds = scored[scored["is_core_seed"]].copy()
+    if not seeds.empty:
+        seeds = seeds.sort_values(["cross_seed_score", "paper_importance_score"], ascending=False)
+        for _, row in seeds.iterrows():
+            pid = str(row["canonical_paper_id"])
+            if pid in selected_ids:
+                continue
+            row = row.copy()
+            row["distill_selection_tier"] = "T1"
+            selected_rows.append(row)
+            selected_ids.add(pid)
+
+    # T4: expert-signal inclusions.
+    t4 = scored[(~scored["is_core_seed"]) & (scored["signal_t4_expert"] == 1)].copy()
+    if not t4.empty and t4_max > 0:
+        t4 = t4.sort_values(
+            ["paper_importance_score", "cross_seed_score", "review_anchor_link_count"],
+            ascending=False,
+        )
+        t4_added = 0
+        for _, row in t4.iterrows():
+            if t4_added >= t4_max:
+                break
+            pid = str(row["canonical_paper_id"])
+            if pid in selected_ids:
+                continue
+            row = row.copy()
+            row["distill_selection_tier"] = "T4"
+            selected_rows.append(row)
+            selected_ids.add(pid)
+            t4_added += 1
+
+    # T2: established papers meeting effective connectivity rule.
+    t2 = scored[(~scored["is_core_seed"]) & (scored["meets_t2_effective"])].copy()
+    if not t2.empty and t2_max > 0:
+        t2 = t2.sort_values(
+            ["cross_seed_score", "review_anchor_link_count", "paper_importance_score"],
+            ascending=False,
+        )
+        t2_added = 0
+        for _, row in t2.iterrows():
+            if t2_added >= t2_max:
+                break
+            pid = str(row["canonical_paper_id"])
+            if pid in selected_ids:
+                continue
+            row = row.copy()
+            row["distill_selection_tier"] = "T2"
+            selected_rows.append(row)
+            selected_ids.add(pid)
+            t2_added += 1
+
+    # T3: recent papers accumulating citations in general.
+    t3 = scored[
+        (~scored["is_core_seed"])
+        & (scored["year_int"] >= t3_min_year)
+        & (scored["citations_per_year_raw"] >= t3_min_citations_per_year)
+        & (scored["cross_seed_score"] >= t3_min_cross_seed)
+    ].copy()
+    if not t3.empty and t3_max > 0:
+        t3 = t3.sort_values(["citations_per_year_raw", "paper_importance_score"], ascending=False)
+        t3_added = 0
+        for _, row in t3.iterrows():
+            if t3_added >= t3_max:
+                break
+            pid = str(row["canonical_paper_id"])
+            if pid in selected_ids:
+                continue
+            row = row.copy()
+            row["distill_selection_tier"] = "T3"
+            selected_rows.append(row)
+            selected_ids.add(pid)
+            t3_added += 1
+
+    # Fill remaining capacity by overall importance for completeness.
+    if len(selected_rows) < max_papers:
+        fallback = scored.sort_values("paper_importance_score", ascending=False)
+        for _, row in fallback.iterrows():
+            if len(selected_rows) >= max_papers:
+                break
+            pid = str(row["canonical_paper_id"])
+            if pid in selected_ids:
+                continue
+            row = row.copy()
+            row["distill_selection_tier"] = "fallback_importance"
+            selected_rows.append(row)
+            selected_ids.add(pid)
+
+    if not selected_rows:
+        return scored.sort_values("paper_importance_score", ascending=False).head(max_papers)
+    out = pd.DataFrame(selected_rows)
+    return out.head(max_papers).copy()
+
+
 def _load_distill_corpus(
-    graph_dir: Path, max_papers: int, fulltext_by_id: dict
+    graph_dir: Path, dist_cfg: dict, fulltext_by_id: dict
 ) -> pd.DataFrame:
-    """Load scored papers, filter to those with usable text, and return the top max_papers by importance."""
-    scored = pd.read_csv(graph_dir / "scored_papers.csv")
+    """Load scored papers and return selection based on configured distillation strategy."""
+    max_papers = int(dist_cfg.get("max_papers_per_run", 500))
+    selection_mode = _clean_text(dist_cfg.get("selection_mode", "importance")).lower() or "importance"
+    scored = pd.read_csv(graph_dir / "scored_papers.csv", low_memory=False)
     scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
     scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
     has_abstract = ~(scored["abstract"].isna() | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"]))
     has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))
     scored = scored[has_abstract | has_fulltext].copy()
+    if selection_mode in {"tiered", "t1_t2_t3", "tiered_t1_t2_t3"}:
+        return _select_tiered_distill_corpus(scored, max_papers=max_papers, dist_cfg=dist_cfg)
     return scored.sort_values("paper_importance_score", ascending=False).head(max_papers)
 
 
@@ -971,7 +1110,7 @@ def run(config_path: str) -> None:
     qa_random_seed = int(dist_cfg.get("qa_random_seed", 13))
 
     fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
-    scored = _load_distill_corpus(graph_dir, dist_cfg.get("max_papers_per_run", 500), fulltext_by_id)
+    scored = _load_distill_corpus(graph_dir, dist_cfg, fulltext_by_id)
     topic_clusters, paper_topics, topic_labels, paper_topic_map = _load_topic_lookups(topics_dir)
     api_client = _init_api_client(dist_cfg)
     default_level, active_levels = _configure_reading_levels(dist_cfg)

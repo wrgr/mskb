@@ -7,7 +7,7 @@ sidebar:
 
 import { Badge } from '@astrojs/starlight/components';
 
-The MSKB corpus covers **19 research topics** (18 numbered topics plus Topic 1b — Natural History) organized in three reading layers. Each topic has 2 T1 seed papers and a target document count for the full corpus.
+The MSKB corpus covers **19 research topics** (18 numbered topics plus Topic 1b — Natural History) organized in three reading layers. The baseline is 2 T1 seeds per topic, with targeted seed augmentation where citation-structure coverage was thin (T09, T13, T16).
 
 Read order: Foundation → Clinical → Context/Future. You can enter at any layer but the epistemological dependencies flow in this direction.
 
@@ -171,7 +171,7 @@ EDSS is the primary disability scale in MS but is insensitive to fatigue, cognit
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-019 (Ziemssen et al. 2019 PROs, *MSRD*) · MS-T1-020 (Ontaneda et al. 2019 MSOAC, *Neurology*) |
+| **Seeds** | MS-T1-019 (Ziemssen et al. 2019 PROs, *MSRD*) · MS-T1-020 (Ontaneda et al. 2019 MSOAC, *Neurology*) · MS-T1-037 (Benedict et al. 2017 SDMT validation, *MSJ*) · MS-T1-038 (Hobart et al. 2001 MSIS-29, *Brain*) |
 | **Target** | 20–25 documents |
 | **Primary doc types** | Mechanistic Review · Epidemiological/Burden |
 
@@ -229,11 +229,11 @@ MS in children and adolescents has distinct diagnostic challenges (differential 
 
 Equity research is placed in the Context/Future layer as a reading recommendation, not a value judgment. Its critical function — interrogating assumptions embedded in the clinical literature — is most powerful when read against the Clinical baseline it critiques.
 
-Both seeds are authored by Langer-Gould; this single-author concentration is explicitly acknowledged as a diversity limitation. Named complement papers: Amezcua & McCauley *MSJ* 2020 and Hittle et al. *JAMA Neurol* 2023. The dedicated review anchor R5 (Amezcua et al. 2021) corrects for the structural disconnection between equity literature and the main citation network.
+T13 now uses three complementary seeds: Wallin 2023 (population-based prevalence), Langer-Gould 2022 (current disparities prevalence), and Langer-Gould 2013 (multi-ethnic incidence). The dedicated review anchor R5 (Amezcua et al. 2021) remains the bridge for structurally disconnected equity literature.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-027 (Langer-Gould et al. 2025 structural racism, *Nat Rev Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities, *Neurology*) |
+| **Seeds** | MS-T1-027 (Wallin et al. 2023 prevalence by race/ethnicity, *JAMA Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities prevalence, *Neurology*) · MS-T1-039 (Langer-Gould et al. 2013 incidence across groups, *Neurology*) |
 | **Target** | 20–25 documents |
 | **Primary doc types** | Equity/SDOH |
 
@@ -275,6 +275,6 @@ The NMSS Pathways to Cures Roadmap is the only seed document that: (a) explicitl
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-033 (NMSS Cures Roadmap 2022, *MSJ*) · MS-T1-034 (Refined Roadmap 2024, *MSJ*) |
+| **Seeds** | MS-T1-033 (NMSS Cures Roadmap 2022, *MSJ*) · MS-T1-034 (Refined Roadmap 2024, *MSJ*) · MS-T1-040 (Ontaneda et al. 2016 progressive MS prospects, *Lancet*) |
 | **Target** | 10–15 documents |
 | **Primary doc types** | Patient/Advocacy |

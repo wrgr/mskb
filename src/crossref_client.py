@@ -88,6 +88,8 @@ class CrossrefClient:
 
     def get_work_by_doi(self, doi: str) -> Optional[Dict]:
         doi = str(doi or "").strip()
+        doi = doi.replace("https://doi.org/", "").replace("http://doi.org/", "")
+        doi = doi.replace("doi:", "").strip()
         if not doi:
             return None
         try:
