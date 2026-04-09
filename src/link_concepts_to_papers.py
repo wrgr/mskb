@@ -984,7 +984,11 @@ def main(argv: list[str] | None = None) -> int:
     root = config_path.parent
     _load_dotenv(root)
 
-    concepts = _load_concepts(root)
+    try:
+        concepts = _load_concepts(root)
+    except FileNotFoundError as exc:
+        print(f"error: {exc}", file=__import__("sys").stderr)
+        return 1
     topic_by_paper = _load_primary_topic_per_paper(root)
     topic_label_by_id = _load_topic_labels(root)
     papers = _load_papers(root, topic_by_paper=topic_by_paper, topic_label_by_id=topic_label_by_id)

@@ -80,6 +80,16 @@ CONCEPTS = [
      "EBV as a near-necessary cause of MS, vitamin D, smoking, and the molecular mimicry model.",
      "mechanisms/environmental-risk-factors", "mechanisms"),
 
+    ("ebv_ms",
+     "Epstein-Barr Virus and MS",
+     "EBV as a near-necessary environmental cause — molecular mimicry, EBNA1/GlialCAM, and the prevention agenda.",
+     "mechanisms/ebv-ms", "mechanisms"),
+
+    ("neuroinflammation",
+     "Neuroinflammation Pathways",
+     "From peripheral T/B-cell activation to CNS lesion formation and compartmentalized chronic inflammation.",
+     "mechanisms/neuroinflammation", "mechanisms"),
+
     # ── DIAGNOSIS ───────────────────────────────────────────────────────────
     ("mcdonald_criteria",
      "McDonald Criteria",
@@ -100,6 +110,11 @@ CONCEPTS = [
      "MS Phenotypes and Classification",
      "RRMS, PPMS, SPMS, CIS, and RIS — definitions, clinical course, and treatment implications.",
      "diagnosis/ms-phenotypes", "diagnosis"),
+
+    ("paramagnetic_rim_lesions",
+     "Paramagnetic Rim Lesions",
+     "Chronic active lesions with an iron-laden microglial rim — imaging biomarkers of smoldering neuroinflammation.",
+     "diagnosis/paramagnetic-rim-lesions", "diagnosis"),
 
     # ── THERAPEUTICS ────────────────────────────────────────────────────────
     ("dmt_overview",

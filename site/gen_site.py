@@ -305,7 +305,8 @@ def _structured_takeaways_for_display(candidates: list[str], summary: str, abstr
         seen.add(key)
         seeds.append(text.rstrip("."))
 
-    return [f"{seed}." for seed in seeds[:4]]
+    labels = ["Opportunity", "Challenge", "Action", "Resolution"]
+    return [f"{label}: {seed}." for label, seed in zip(labels, seeds[:4])]
 
 
 def _estimate_summary_language_difficulty(summary: str, takeaways: list[str] | None = None) -> int:
