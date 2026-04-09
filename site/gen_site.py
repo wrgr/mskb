@@ -814,13 +814,20 @@ def _build_explorer_assets(
                 "evidence_strength": int(pd.to_numeric(row.get("evidence_strength", 2), errors="coerce") or 2),
             }
         )
-        # Per-level (basic/advanced) variants. Fall back to the default
+        # Per-level (kid/basic/advanced) variants. Fall back to the default
         # summary/why/takeaways if a level-specific variant is missing so the
         # frontend always has something to render.
+        summary_kid = _clean_text(summary_row.get("summary_kid", "")) or summary
         summary_basic = _clean_text(summary_row.get("summary_basic", "")) or summary
         summary_advanced = _clean_text(summary_row.get("summary_advanced", "")) or summary
+        why_kid = _clean_text(summary_row.get("why_it_matters_kid", "")) or why
         why_basic = _clean_text(summary_row.get("why_it_matters_basic", "")) or why
         why_advanced = _clean_text(summary_row.get("why_it_matters_advanced", "")) or why
+        takeaways_kid = _structured_takeaways_for_display(
+            _parse_json_list(summary_row.get("key_takeaways_kid", [])),
+            summary=summary_kid,
+            abstract=abstract,
+        ) if _parse_json_list(summary_row.get("key_takeaways_kid", [])) else key_takeaways
         takeaways_basic = _structured_takeaways_for_display(
             _parse_json_list(summary_row.get("key_takeaways_basic", [])),
             summary=summary_basic,
@@ -841,10 +848,13 @@ def _build_explorer_assets(
                 "key_takeaways": key_takeaways,
                 "why_it_matters": why,
                 "jargon": _parse_jargon_structured(summary_row.get("jargon", [])),
+                "summary_kid": summary_kid,
                 "summary_basic": summary_basic,
                 "summary_advanced": summary_advanced,
+                "why_it_matters_kid": why_kid,
                 "why_it_matters_basic": why_basic,
                 "why_it_matters_advanced": why_advanced,
+                "key_takeaways_kid": takeaways_kid,
                 "key_takeaways_basic": takeaways_basic,
                 "key_takeaways_advanced": takeaways_advanced,
                 "summary_generated_at_utc": summary_generated_at_utc,
@@ -943,10 +953,13 @@ def _build_explorer_assets(
         "key_takeaways",
         "why_it_matters",
         "jargon",
+        "summary_kid",
         "summary_basic",
         "summary_advanced",
+        "why_it_matters_kid",
         "why_it_matters_basic",
         "why_it_matters_advanced",
+        "key_takeaways_kid",
         "key_takeaways_basic",
         "key_takeaways_advanced",
         "summary_generated_at_utc",
@@ -1509,6 +1522,223 @@ def _legacy_topic_grid_lines(
     return lines
 
 
+def _paper_card_kid(row: dict) -> str:
+    """Render a kid-friendly paper card using the kid-level summary fields."""
+    lines = []
+    title = _clean_text(row.get("title", "Untitled")) or "Untitled"
+    source_url = _source_url_from_row(row)
+    year = _coerce_year(row.get("year", ""))
+    abstract = _clean_text(row.get("abstract", ""))
+
+    # Prefer kid-level summary; fall back to basic, then generic summary.
+    summary = (
+        _clean_text(row.get("summary_kid", ""))
+        or _clean_text(row.get("summary_basic", ""))
+        or _clean_text(row.get("summary", ""))
+    )
+    why = (
+        _clean_text(row.get("why_it_matters_kid", ""))
+        or _clean_text(row.get("why_it_matters_basic", ""))
+        or _clean_text(row.get("why_it_matters", ""))
+    )
+    raw_takeaways = (
+        _parse_json_list(row.get("key_takeaways_kid", []))
+        or _parse_json_list(row.get("key_takeaways_basic", []))
+        or _parse_json_list(row.get("key_takeaways", []))
+    )
+    takeaways = _structured_takeaways_for_display(raw_takeaways, summary=summary, abstract=abstract)
+
+    # Kid-level jargon glossary uses the kid jargon if available, else standard.
+    raw_jargon = row.get("jargon_kid", row.get("jargon", "[]"))
+    if isinstance(raw_jargon, str):
+        try:
+            raw_jargon = json.loads(raw_jargon)
+        except (json.JSONDecodeError, TypeError):
+            raw_jargon = []
+    jargon = [j for j in raw_jargon if isinstance(j, dict)] if raw_jargon else []
+
+    # Plain-language abstract for the paper (original abstract shown under a disclosure).
+    lines.append('<article class="paper-card paper-card--kid">')
+    lines.append(f"<h3>{html.escape(title)}</h3>")
+    lines.append('<div class="paper-meta">')
+    if year is not None:
+        lines.append(f'<span class="kpi-pill">{year}</span>')
+    lines.append("</div>")
+
+    if summary:
+        lines.append("<h4>What did scientists find out?</h4>")
+        lines.append(f'<p class="paper-summary">{html.escape(summary)}</p>')
+
+    if why:
+        lines.append(f'<p class="paper-why"><strong>Why it matters:</strong> {html.escape(why)}</p>')
+
+    if takeaways:
+        lines.append("<h4>Key ideas</h4>")
+        lines.append("<ul>")
+        for t in takeaways:
+            lines.append(f"<li>{html.escape(t)}</li>")
+        lines.append("</ul>")
+
+    if jargon:
+        lines.append("<h4>Words to know</h4>")
+        lines.append("<ul>")
+        for j in jargon:
+            term = html.escape(_clean_text(j.get("term", "")))
+            definition = html.escape(_clean_text(j.get("definition", "")))
+            if term and definition:
+                lines.append(f"<li><strong>{term}</strong>: {definition}</li>")
+        lines.append("</ul>")
+
+    if abstract:
+        lines.append("<details>")
+        lines.append("<summary><strong>Original abstract (for grown-ups)</strong></summary>")
+        lines.append(f"<p>{html.escape(abstract)}</p>")
+        lines.append("</details>")
+
+    if source_url:
+        lines.append(
+            f'<p><a href="{html.escape(source_url)}" target="_blank" rel="noopener">Read the full paper</a></p>'
+        )
+
+    lines.append("</article>")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _generate_kid_journey_page(
+    *,
+    site_docs: Path,
+    topic_clusters: pd.DataFrame,
+    paper_topics: pd.DataFrame,
+    topic_overviews: pd.DataFrame,
+    reading_paths: pd.DataFrame,
+    summaries_map: dict,
+    metadata_map: dict,
+) -> None:
+    """Generate site/src/content/docs/kid-journey.md — the companion learning journey for young readers."""
+    out_path = site_docs / "kid-journey.md"
+
+    overview_map: dict[int, dict] = {}
+    if not topic_overviews.empty:
+        for _, row in topic_overviews.iterrows():
+            overview_map[row["topic_id"]] = row.to_dict()
+
+    # Category display order: foundations first, then clinical, then emerging.
+    category_friendly: dict[str, str] = {
+        "pathogenesis_and_immunology": "How MS works inside the body",
+        "imaging_and_biomarkers": "Seeing MS: scans, tests, and measurements",
+        "clinical_trials_and_therapeutics": "Treatments and clinical trials",
+        "clinical_care_and_management": "Living with MS: care and daily life",
+        "epidemiology_and_population_health": "Who gets MS and why",
+    }
+
+    lines: list[str] = [
+        "---",
+        "title: MS Science for Curious Minds",
+        'description: "A plain-language learning journey through MS research — written for curious 12-year-olds."',
+        "sidebar:",
+        "  label: For Curious Minds",
+        "  order: 5",
+        "---",
+        "",
+        '<div class="kid-journey-hero">',
+        "",
+        "## MS Science for Curious Minds",
+        "",
+        "Multiple sclerosis — or MS — is a condition where the body's own immune system "
+        "accidentally attacks the brain and spinal cord.",
+        "Thousands of scientists around the world are working every day to understand it, "
+        "treat it, and one day cure it.",
+        "",
+        "This page takes you on a tour of what they've discovered, written in plain language "
+        "so anyone can follow along.",
+        "Each section covers a different part of the puzzle.",
+        "",
+        "</div>",
+        "",
+        "---",
+        "",
+    ]
+
+    if topic_clusters.empty:
+        lines.append(
+            "*No topic data available yet. Run the pipeline and re-generate the site to populate this page.*"
+        )
+        out_path.write_text("\n".join(lines), encoding="utf-8")
+        return
+
+    # Group topics by category for a logical narrative flow.
+    category_groups: dict[str, list[dict]] = defaultdict(list)
+    for _, cluster in topic_clusters.iterrows():
+        cat = taxonomy.canonicalize_category(cluster.get("topic_category", ""), taxonomy.CATEGORY_ORDER[0])
+        category_groups[cat].append(cluster.to_dict())
+
+    for cat in taxonomy.CATEGORY_ORDER:
+        clusters = category_groups.get(cat, [])
+        if not clusters:
+            continue
+        friendly_label = category_friendly.get(cat, cat.replace("_", " ").title())
+        lines.append(f"## {html.escape(friendly_label)}")
+        lines.append("")
+
+        for cluster in clusters:
+            tid = cluster["topic_id"]
+            topic_label = _prettify_topic_label(_clean_text(cluster.get("display_label") or cluster.get("auto_label", "")))
+            n_papers = _safe_int(cluster.get("n_papers"), 0)
+            overview_row = overview_map.get(tid, {})
+
+            # Kid overview preferred; fall back to standard overview.
+            kid_overview = (
+                _clean_text(overview_row.get("overview_kid", ""))
+                or _clean_text(overview_row.get("overview", ""))
+            )
+
+            lines.append(f"### {html.escape(topic_label)}")
+            lines.append("")
+            lines.append(f"*{n_papers} research paper{'s' if n_papers != 1 else ''} in this area.*")
+            lines.append("")
+            if kid_overview:
+                lines.append(kid_overview)
+                lines.append("")
+
+            # Include up to 5 papers from the reading path for this topic.
+            topic_paper_data: list[dict] = []
+            if not reading_paths.empty:
+                topic_reading = reading_paths[reading_paths["topic_id"] == tid].sort_values("position")
+                for _, rp in topic_reading.head(5).iterrows():
+                    paper_id = str(rp["canonical_paper_id"])
+                    paper_data = metadata_map.get(paper_id, {}).copy()
+                    paper_data.update(summaries_map.get(paper_id, {}))
+                    if not paper_data:
+                        paper_data = {"title": rp.get("title", "Untitled")}
+                    topic_paper_data.append(paper_data)
+
+            if topic_paper_data:
+                lines.append('<div class="paper-stream paper-stream--kid">')
+                for paper_data in topic_paper_data:
+                    lines.append(_paper_card_kid(paper_data))
+                lines.append("</div>")
+                lines.append("")
+
+    lines.extend([
+        "---",
+        "",
+        "## Want to explore more?",
+        "",
+        "- [Learning Journey](/mskb/journey/) — build your own reading path through the full research graph.",
+        "- [Citation Topics](/mskb/topics/) — browse all research areas by category.",
+        "- [Concept Map](/mskb/concepts/) — explore the big ideas behind MS research.",
+        "",
+        '<p><em>All summaries on this page are generated from peer-reviewed research papers. '
+        'They are simplified for younger readers but remain grounded in the evidence. '
+        'Always check the original papers before drawing scientific conclusions.</em></p>',
+        "",
+    ])
+
+    out_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"Kid journey page written to {out_path}")
+
+
 def generate(config_path: str) -> None:
     """Generate all MkDocs site content from pipeline outputs under the configured output directory."""
     root = Path(config_path).resolve().parent
@@ -1864,6 +2094,16 @@ def generate(config_path: str) -> None:
 
     # Starlight auto-generates the sidebar from directory contents (configured
     # in astro.config.mjs), so there is no nav file to rewrite.
+
+    _generate_kid_journey_page(
+        site_docs=site_docs,
+        topic_clusters=topic_clusters,
+        paper_topics=paper_topics,
+        topic_overviews=topic_overviews,
+        reading_paths=reading_paths,
+        summaries_map=summaries_map,
+        metadata_map=metadata_map,
+    )
 
     pathway_step_count = sum(len(steps) for steps in pathway_steps.values())
     concept_topic_links = sum(len(topics) for topics in concept_to_topics.values())
