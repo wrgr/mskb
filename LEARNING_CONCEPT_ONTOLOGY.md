@@ -1,7 +1,7 @@
 # MS Learning Concept Ontology (MS-LCO)
 
-**Version**: 1.0  
-**Date**: 2026-04-08  
+**Version**: 2.0  
+**Date**: 2026-04-09  
 **Educational Framework**: Bloom's taxonomy + cognitive load theory  
 **Audience**: Undergraduate and early-graduate learners (biology, medicine, neuroscience)
 
@@ -352,6 +352,434 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 - Lanz et al. (2022) *Nature* EBNA1 GlialCAM mimicry mechanistic study
 - HLA-B*05:01 papers (gene-environment interaction)
 - Critical reviews on causality questions (Bradford Hill criteria, confounding)
+
+---
+
+### 6. **MS Epidemiology and Natural History**
+
+**Bloom's Level**: Understand  
+**Learning Objectives**:
+- Describe global prevalence and geographic distribution of MS, including the latitude gradient
+- Explain the female:male ratio shift over time and candidate drivers
+- Summarize what the Lyon cohort (Confavreux) established about disability progression in the pre-DMT era
+- Distinguish incidence from prevalence trends and interpret temporal changes
+
+**Prerequisites**:
+- What is Multiple Sclerosis (basic definition)
+
+**Related Concepts**: Genetic Susceptibility, Equity/SDOH, Disease Course and Prognosis
+
+**Key Questions**:
+- Why is MS more common in women, and has this ratio changed over time?
+- What does pre-treatment natural history tell us about the ceiling on what DMTs can achieve?
+- Why does MS prevalence increase with distance from the equator, and what are the competing explanations?
+
+**Primary Evidence Type**: Registry studies, prevalence surveys, longitudinal cohort studies
+
+**Recommended Papers**: 4–6 foundational
+- Wallin et al. (2019) *Neurology* global MS prevalence atlas [Population baseline]
+- Koch-Henriksen & Sørensen (2010) *Lancet Neurol* changing sex ratio [Temporal trends]
+- Confavreux et al. (2000) *NEJM* Lyon cohort natural history [Pre-DMT baseline]
+- Confavreux & Vukusic (2006) *Brain* disability accumulation patterns [Progression mechanics]
+- GBD 2016 MS Collaborators *Lancet Neurol* (2019) [Global burden]
+
+---
+
+### 7. **The Immune System in MS**
+
+**Bloom's Level**: Understand, Apply  
+**Learning Objectives**:
+- Distinguish innate immunity (microglia, macrophages) from adaptive immunity (T cells, B cells) in the MS context
+- Explain why Th1 and Th17 cell subtypes are implicated in CNS inflammation
+- Describe B cell roles in MS beyond antibody production (antigen presentation, cytokine secretion)
+- Explain CNS immune privilege and how it breaks down to allow lesion formation
+
+**Prerequisites**:
+- What is Multiple Sclerosis (basic definition)
+
+**Related Concepts**: Neuroinflammation Pathways, BBB Dysfunction, B Cell-Targeted Therapies, EBV and MS
+
+**Key Questions**:
+- If MS doesn't have a well-characterised auto-antibody, why are B cells so important therapeutically?
+- What is the difference between peripheral immune activation and CNS-intrinsic inflammation?
+- How does the immune system get past the blood-brain barrier to attack myelin?
+
+**Primary Evidence Type**: Mechanistic reviews, EAE animal models, human immunology studies
+
+**Recommended Papers**: 5–7 foundational
+- Wekerle H (2009) *Curr Opin Neurol* autoimmune T cells in MS [Mechanistic framework]
+- Hemmer et al. (2015) *Nat Rev Neurosci* immunopathogenesis [Comprehensive review]
+- Lanz et al. (2022) *Nature* EBNA1/GlialCAM molecular mimicry [B cell mechanism]
+- von Büdingen et al. (2012) *J Exp Med* intrathecal B cell clones [B cell CNS activity]
+- Sospedra & Martin (2016) *Annu Rev Immunol* T cell specificity [T cell mechanisms]
+
+---
+
+### 8. **Blood-Brain Barrier Dysfunction**
+
+**Bloom's Level**: Understand, Analyze  
+**Learning Objectives**:
+- Describe normal BBB structure: tight junctions, astrocyte end-feet, pericytes
+- Explain how cytokine signalling (TNF-α, IL-17) disrupts tight junctions to permit immune cell infiltration
+- Interpret gadolinium-enhancing lesions on MRI as a marker of active BBB breakdown
+- Analyze BBB integrity as both a therapeutic target and a barrier to CNS-penetrant drugs
+
+**Prerequisites**:
+- Immune System in MS
+- Demyelination and Remyelination
+
+**Related Concepts**: Neuroinflammation, Diagnostic Criteria and MRI, BTK Inhibitors
+
+**Key Questions**:
+- What does a gadolinium-enhancing lesion actually represent at the cellular level?
+- How do inflammatory T cells and monocytes physically cross the BBB?
+- Why does restoring BBB integrity matter separately from suppressing peripheral inflammation?
+
+**Primary Evidence Type**: Mechanistic studies (in vitro, animal), neuroimaging-pathology correlations
+
+**Recommended Papers**: 4–6 foundational
+- Ransohoff & Engelhardt (2012) *Nat Rev Immunol* leukocyte trafficking across the CNS [BBB mechanics]
+- Lassmann H (2014) *JAMA Neurol* mechanisms of tissue injury [BBB-pathology link]
+- Waubant EL (2006) *Neurologist* BBB in MS [Clinical context]
+- Calabrese et al. (2021) *Lancet Neurol* treatment and BBB restoration [Therapeutic angle]
+
+---
+
+### 9. **Genetic Susceptibility**
+
+**Bloom's Level**: Understand, Analyze  
+**Learning Objectives**:
+- Identify HLA-DRB1*15:01 as the primary genetic risk factor for MS and explain the proposed mechanism
+- Summarize the landscape of non-HLA risk loci identified by GWAS (IL-7R, IL-2RA, CLEC16A, and ~200 others)
+- Estimate population attributable risk and explain why genetics alone does not determine MS onset
+- Construct a gene-environment interaction model for MS risk using HLA, EBV, and vitamin D as examples
+
+**Prerequisites**:
+- Immune System in MS (HLA antigen presentation)
+
+**Related Concepts**: Environmental Risk Factors, EBV and MS, MS Epidemiology
+
+**Key Questions**:
+- How much of MS risk is genetic? What do twin studies tell us?
+- Why does HLA-DRB1*15:01 increase risk — what does this allele do immunologically?
+- Why don't all HLA-DRB1*15:01 carriers develop MS?
+
+**Primary Evidence Type**: GWAS studies, familial and twin studies, functional genetics
+
+**Recommended Papers**: 5–7 foundational
+- International MS Genetics Consortium (2011) *Nature* 57 genetic loci [First large GWAS]
+- Sawcer et al. (2011) *Nature* genetic risk landscape [Comprehensive GWAS]
+- IMSGC (2019) *Science* 200+ risk variants [Latest GWAS]
+- Ramagopalan et al. (2009) *PLoS Genet* HLA functional analysis [HLA mechanism]
+- Oksenberg & Barcellos (2005) *Nat Rev Genet* twin/family studies [Heritability baseline]
+
+---
+
+### 10. **Cerebrospinal Fluid (CSF) and Blood Biomarkers**
+
+**Bloom's Level**: Apply, Analyze  
+**Learning Objectives**:
+- Describe the diagnostic role of CSF oligoclonal bands (OCB) and intrathecal IgG synthesis
+- Explain neurofilament light chain (NfL) as a quantitative marker of axonal damage, interpretable in blood or CSF
+- Interpret GFAP as an astrocyte injury marker with distinct kinetics from NfL
+- Analyze limitations of blood-based biomarkers vs. CSF: dilution, clearance, confounders
+
+**Prerequisites**:
+- Diagnostic Criteria and MRI
+- Demyelination and Remyelination (to understand what is being measured)
+
+**Related Concepts**: MS Phenotypes, Prognostic Markers, Treatment Monitoring
+
+**Key Questions**:
+- What does a positive OCB result mean and when is it needed for diagnosis?
+- How does serum NfL change with a relapse, and does it return to baseline?
+- Can we use blood NfL to monitor treatment response instead of MRI?
+
+**Primary Evidence Type**: Biomarker studies, diagnostic accuracy studies, treatment monitoring cohorts
+
+**Recommended Papers**: 5–7 foundational
+- Khalil et al. (2018) *Nat Rev Neurol* NfL in neurological diseases [Comprehensive NfL review]
+- Kuhle et al. (2019) *Lancet Neurol* serum NfL longitudinal validation [Blood NfL clinical use]
+- Disanto et al. (2017) *Ann Neurol* serum NfL in MS [Disease activity correlation]
+- Mattsson-Carlgren et al. (2021) *JAMA Neurol* GFAP as progression marker [GFAP validation]
+- Montalban et al. (2025) *Lancet Neurol* McDonald 2024 criteria [OCB in updated diagnostic criteria]
+
+---
+
+### 11. **MS Phenotypes and Classification**
+
+**Bloom's Level**: Remember, Understand  
+**Learning Objectives**:
+- Define RRMS, SPMS, PPMS, CIS, and RIS using the Lublin 2014 criteria and distinguish their key clinical and MRI features
+- Explain why phenotype classification is required for treatment eligibility and trial enrolment
+- Distinguish activity (relapses, new MRI lesions) from progression as independent disease axes
+- Identify where phenotype boundaries are clinically ambiguous and how that ambiguity is managed
+
+**Prerequisites**:
+- What is Multiple Sclerosis
+- Diagnostic Criteria and MRI
+
+**Related Concepts**: Disease Course and Prognosis, PIRA and Smoldering MS, DMT Overview
+
+**Key Questions**:
+- What is the biological difference between RRMS and SPMS, if any?
+- Why does FDA approval differ between RRMS and PPMS — is this biology or trial design?
+- What is RIS and what do we tell a patient whose MRI looks like MS but who has no symptoms?
+
+**Primary Evidence Type**: Clinical consensus criteria, natural history cohorts, trial enrolment criteria
+
+**Recommended Papers**: 4–6 foundational
+- Lublin et al. (2014) *Neurology* phenotype classification revision [Definitive classification]
+- Thompson et al. (2018) *Lancet* comprehensive MS overview [Phenotype clinical framing]
+- Confavreux & Vukusic (2006) *Brain* [How phenotypes map to natural history]
+- Okuda et al. (2009) *Neurology* RIS diagnostic criteria [RIS definition]
+- Brownlee et al. (2017) *Lancet* CIS to RRMS conversion [CIS clinical management]
+
+---
+
+### 12. **Progression Independent of Relapse Activity (PIRA) and Smoldering MS**
+
+**Bloom's Level**: Understand, Analyze  
+**Learning Objectives**:
+- Define PIRA and distinguish it from relapse-associated worsening (RAW) using formal criteria
+- Describe the smoldering MS hypothesis: chronic active lesions, slowly expanding lesions, and compartmentalised CNS inflammation
+- Explain why paramagnetic rim lesions (PRL) are a candidate imaging biomarker for smoldering pathology
+- Analyze implications of PIRA for the therapeutic goal of "no evidence of disease activity" (NEDA)
+
+**Prerequisites**:
+- MS Phenotypes and Classification
+- Diagnostic Criteria and MRI (paramagnetic rim lesions, slowly expanding lesions)
+- Disease Course and Prognosis
+
+**Related Concepts**: BTK Inhibitors, Prognostic Biomarkers, Smoldering MS / Paramagnetic Rim Lesions
+
+**Key Questions**:
+- If we suppress relapses completely, why does disability still accumulate?
+- What is the difference between smoldering MS and progressive MS as clinical concepts?
+- Can PIRA be prevented by any currently approved therapy?
+
+**Primary Evidence Type**: Post-hoc trial analyses, longitudinal cohort studies, advanced MRI studies
+
+**Recommended Papers**: 5–7 foundational
+- Cagol et al. (2022) *JAMA Neurol* PIRA across the MS spectrum [PIRA definition and prevalence]
+- Absinta et al. (2021) *Nat Commun* paramagnetic rim lesions and chronic active lesions [PRL imaging]
+- Giovannoni et al. (2022) *Mult Scler* smoldering MS framework [Conceptual review]
+- Kappos et al. (2020) *Lancet Neurol* disability outcomes beyond NEDA [PIRA clinical context]
+- Elliott et al. (2019) *Mult Scler* slowly expanding lesions [SEL quantification]
+
+---
+
+### 13. **Disease-Modifying Therapies (DMT) Overview**
+
+**Bloom's Level**: Understand, Apply  
+**Learning Objectives**:
+- Organise DMTs by mechanism class: immunomodulatory (interferons, GA), selective lymphocyte modulators (fingolimod, siponimod), anti-CD20 (ocrelizumab, ofatumumab), cell-depleting agents (alemtuzumab, HSCT)
+- Compare efficacy across classes using annualized relapse rate (ARR) reduction and disability outcomes from pivotal trials
+- Explain the high-efficacy early treatment (HEAT) vs. escalation strategy debate and the evidence for each
+- Apply shared decision-making principles to DMT choice, including patient lifestyle, safety profile, and reproductive plans
+
+**Prerequisites**:
+- Immune System in MS
+- MS Phenotypes and Classification
+
+**Related Concepts**: B Cell-Targeted Therapies, BTK Inhibitors, Treatment Monitoring, Shared Decision-Making, Pregnancy and MS
+
+**Key Questions**:
+- Why have anti-CD20 therapies become the dominant treatment despite not being first-line by label in many countries?
+- Is there evidence that starting high-efficacy therapy early changes long-term outcomes vs. escalation?
+- How do we compare DMTs when there are no head-to-head trials for most pairs?
+
+**Primary Evidence Type**: Phase 3 RCTs, systematic reviews, network meta-analyses, real-world evidence
+
+**Recommended Papers**: 5–7 foundational
+- He et al. (2020) *JAMA Neurol* network meta-analysis of DMT efficacy [Comparative effectiveness]
+- Tramacere et al. (2015) *Cochrane* interferon beta systematic review [Lower-efficacy baseline]
+- Brown et al. (2019) *JAMA Neurol* high-efficacy vs. escalation outcomes [HEAT strategy]
+- ECTRIMS/EAN (2018) *Mult Scler* treatment guidelines [Clinical standard]
+- Hauser et al. (2017) *NEJM* ocrelizumab OPERA I/II [B cell therapy pivotal trial]
+
+---
+
+### 14. **BTK Inhibitors (Emerging CNS-Penetrant Therapies)**
+
+**Bloom's Level**: Understand, Analyze  
+**Learning Objectives**:
+- Explain Bruton's tyrosine kinase (BTK) signalling in B cells and CNS-resident myeloid cells (microglia)
+- Describe why CNS penetrance is the key pharmacological property distinguishing BTK inhibitors from anti-CD20 therapies
+- Analyze phase 3 trial results for tolebrutinib (HERCULES, GEMINI) and fenebrutinib in the context of progressive MS
+- Evaluate BTK inhibitors as a potential treatment for smoldering/PIRA disease activity
+
+**Prerequisites**:
+- B Cell-Targeted Therapies
+- BBB Dysfunction (CNS penetrance concept)
+- PIRA and Smoldering MS
+
+**Related Concepts**: DMT Overview, Neuroinflammation, Paramagnetic Rim Lesions
+
+**Key Questions**:
+- What does BTK inhibition do that anti-CD20 depletion cannot?
+- Why did the tolebrutinib PPMS trial (HERCULES) show a significant effect when anti-CD20 trials for PPMS showed modest effects?
+- What are the hepatotoxicity signals and what monitoring is required?
+
+**Primary Evidence Type**: Phase 2/3 RCTs, mechanistic studies, CNS pharmacokinetics
+
+**Recommended Papers**: 4–6 foundational
+- Montalban et al. (2023) *NEJM* tolebrutinib HERCULES phase 3 [Progressive MS result]
+- Reich et al. (2024) tolebrutinib GEMINI I/II RMS phase 3 [RMS result]
+- BTK signalling mechanistic review (Bouhnik et al. or equivalent) [Mechanism]
+- CNS penetrance pharmacokinetics (preclinical or PK study) [Key pharmacological property]
+
+---
+
+### 15. **Pediatric MS**
+
+**Bloom's Level**: Understand, Apply  
+**Learning Objectives**:
+- Describe how pediatric-onset MS (onset before 18) differs from adult-onset MS in clinical presentation, lesion pattern, and MRI features
+- Explain the specific treatment challenges: neurodevelopmental effects of DMTs, vaccine considerations, school and quality-of-life impact
+- Summarize pivotal evidence for approved pediatric DMTs (fingolimod PARADIGMS, siponimod data)
+- Identify cognitive and psychosocial sequelae of early-onset disease
+
+**Prerequisites**:
+- What is MS (basic definition)
+- DMT Overview
+
+**Related Concepts**: MS Phenotypes, Cognitive Impairment, Equity and SDOH
+
+**Key Questions**:
+- How is the MRI presentation of pediatric MS different from ADEM (acute disseminated encephalomyelitis)?
+- Which DMTs are approved for use in children and what evidence supports them?
+- What are the long-term cognitive outcomes for patients with early-onset MS?
+
+**Primary Evidence Type**: Registry studies (ped MS registries), pediatric RCTs, case series
+
+**Recommended Papers**: 4–6 foundational
+- Waldman et al. (2014) *Lancet Neurol* pediatric MS review [Comprehensive overview]
+- Chitnis et al. (2018) *NEJM* PARADIGMS trial (fingolimod in children) [First ped DMT RCT]
+- Renoux et al. (2007) *NEJM* natural history of pediatric-onset MS [Long-term outcomes]
+- Yeh & Chitnis (2022) *Lancet Neurol* pediatric MS update [Current clinical management]
+
+---
+
+### 16. **Pregnancy and MS**
+
+**Bloom's Level**: Apply, Analyze  
+**Learning Objectives**:
+- Describe the PRIMS study finding: relapse rate reduction during pregnancy and postpartum surge
+- Evaluate safety categories for commonly used DMTs during conception, pregnancy, and breastfeeding
+- Develop a pre-conception counselling framework for a patient on a high-efficacy DMT
+- Identify which DMTs are compatible with planned pregnancy and which require washout
+
+**Prerequisites**:
+- MS Phenotypes and Classification
+- DMT Overview
+
+**Related Concepts**: Sex and Gender Differences, Treatment Monitoring, Shared Decision-Making
+
+**Key Questions**:
+- Why are relapses suppressed during pregnancy — what immunological mechanism explains this?
+- What happens to disease activity in the months after delivery?
+- Can a patient stay on ocrelizumab during pregnancy?
+
+**Primary Evidence Type**: Prospective cohort studies, registry data, pharmacovigilance studies
+
+**Recommended Papers**: 4–6 foundational
+- Vukusic et al. (2004) *Brain* PRIMS study [Definitive pregnancy activity data]
+- Hellwig et al. (2012) *Ther Adv Neurol Disord* DMT safety in pregnancy [Safety review]
+- Lu et al. (2021) *Mult Scler* pregnancy outcomes on B cell therapies [High-efficacy DMT data]
+- Cree et al. (2019) MS and pregnancy guidance [Clinical guidance]
+
+---
+
+### 17. **Cognitive Impairment in MS**
+
+**Bloom's Level**: Understand, Apply  
+**Learning Objectives**:
+- Describe the prevalence (~40–65%) and primary affected domains (information processing speed, memory, attention) of MS-related cognitive dysfunction
+- Explain why the Symbol Digit Modalities Test (SDMT) is the recommended single-item clinical screening tool
+- Differentiate cognitive impairment from depression (which co-occurs and confounds assessment) and fatigue
+- Analyze the neuroimaging correlates of cognitive impairment: cortical gray matter atrophy, thalamic atrophy, lesion burden
+
+**Prerequisites**:
+- What is MS
+- Disease Course and Prognosis
+
+**Related Concepts**: Depression and Anxiety, Fatigue, Rehabilitation, Brain Atrophy and Progression
+
+**Key Questions**:
+- Why is information processing speed the most reliably affected domain in MS?
+- How do we tell apart cognitive impairment from depression in a patient with MS?
+- Does treating MS aggressively improve cognitive outcomes?
+
+**Primary Evidence Type**: Neuropsychological cross-sectional and longitudinal studies, MRI-cognition correlations
+
+**Recommended Papers**: 5–7 foundational
+- Rao et al. (1991) *Neurology* cognitive impairment prevalence [Classic prevalence study]
+- Benedict et al. (2017) *Mult Scler* SDMT validity and norms [Key screening tool]
+- Sumowski et al. (2018) *Neurology* cognitive reserve and MS [Reserve hypothesis]
+- Amato et al. (2013) *Arch Neurol* cognitive trajectories over time [Longitudinal picture]
+- Langdon et al. (2012) *Mult Scler* recommendations for cognitive testing in trials [Outcome standards]
+
+---
+
+### 18. **Depression and Anxiety in MS**
+
+**Bloom's Level**: Understand, Apply  
+**Learning Objectives**:
+- Estimate lifetime prevalence of major depression (~50%) and anxiety disorder in MS and compare to other chronic neurological conditions
+- Distinguish neurobiological depression (driven by demyelination, inflammatory cytokines, hypothalamic–pituitary axis dysregulation) from reactive depression (psychological response to diagnosis/disability)
+- Identify validated screening instruments appropriate for MS (PHQ-9, HADS, CES-D)
+- Evaluate evidence for treatment: CBT, antidepressants, and exercise-based interventions
+
+**Prerequisites**:
+- What is MS (disease burden understanding)
+
+**Related Concepts**: Cognitive Impairment, Quality of Life and Patient-Reported Outcomes, Rehabilitation
+
+**Key Questions**:
+- Is depression in MS primarily a neurological symptom or a psychological reaction — and does the distinction matter for treatment?
+- What screening tools work in MS, and are standard PHQ-9 cut-offs validated in this population?
+- How does untreated depression affect DMT adherence and clinical outcomes?
+
+**Primary Evidence Type**: Epidemiological studies, intervention RCTs, meta-analyses of screening tools
+
+**Recommended Papers**: 5–7 foundational
+- Patten et al. (2003) *Neurology* population-based depression prevalence [T4-007: key epidemiological anchor]
+- Siegert & Abernethy (2005) *J Neurol Neurosurg Psychiatry* depression review [T4-008: mechanism + treatment review]
+- Feinstein et al. (2014) *Lancet Neurol* psychiatric aspects of MS [Comprehensive clinical review]
+- Mohr et al. (2001) *Mult Scler* telephone CBT RCT [Evidence-based treatment]
+- Rickards (2005) *J Neurol Neurosurg Psychiatry* depression in neurological conditions [Comparative context]
+
+---
+
+### 19. **Equity, Social Determinants of Health, and Access**
+
+**Bloom's Level**: Understand, Analyze  
+**Learning Objectives**:
+- Describe racial and ethnic disparities in MS prevalence, diagnosis delay, and treatment access in North America
+- Apply structural racism and social determinants of health (SDOH) frameworks to explain observed disparities
+- Evaluate evidence on disparate outcomes for Black, Hispanic/Latino, and Asian patients with MS
+- Identify methodological challenges in equity research: self-reported race/ethnicity, confounding by SES, representativeness of trial populations
+
+**Prerequisites**:
+- MS Epidemiology and Natural History
+- DMT Overview (to understand what access disparities mean)
+
+**Related Concepts**: Population Health, Healthcare Systems and Access, Patient-Reported Outcomes
+
+**Key Questions**:
+- Why do Black patients in the US have more severe MS on average despite similar disease duration?
+- What are the structural barriers to accessing high-efficacy DMTs for underserved populations?
+- How do we design equity-centered MS research without reproducing the biases we are trying to study?
+
+**Primary Evidence Type**: Epidemiological cohort studies, health systems research, health disparities literature, qualitative research
+
+**Recommended Papers**: 5–7 foundational
+- Amezcua et al. (2021) *JAMA Neurol* disparities in MS [Comprehensive equity review — R5 expansion anchor]
+- Langer-Gould et al. (2013) *Neurology* racial/ethnic incidence [Incidence disparities]
+- Langer-Gould et al. (2022) *Neurology* prevalence disparities update [Updated epidemiology]
+- Wallin et al. (2023) *Neurology* global prevalence by region [Global equity framing]
+- Dastjerdi et al. (2023) structural racism in MS outcomes [SDOH mechanisms — T4-era addition]
 
 ---
 
