@@ -1,0 +1,1790 @@
+version: '1.0'
+generated: '2026-04-09'
+t4_source_type: concept_anchor_signal
+description: 'Papers explicitly nominated by editors as required anchors for MSKB
+  educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
+  concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
+  Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 52 papers — 45
+  not yet in corpus (primary addition targets), 7 already included (signal formalisation
+  only).'
+by_concept:
+  bladder_bowel_dysfunction:
+  - t4_id: T4-001
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: neuroanatomical basis, T02. Concept covers thin-coverage
+      topic area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: The neural control of micturition.
+    authors: Fowler CJ et al
+    year: 2008
+    journal: Nat Rev Neurosci
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-002
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: urology management overview. Concept covers thin-coverage
+      topic area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: Multiple sclerosis and the urologist.
+    authors: Litwiller SE et al
+    year: 1999
+    journal: J Urol
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-003
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: practical management, T10. Concept covers thin-coverage
+      topic area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: Bladder dysfunction in neurological disease.
+    authors: Brookes ME et al
+    year: 2008
+    journal: Pract Neurol
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-004
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: review anchor for T10. Concept covers thin-coverage topic
+      area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: Neurogenic lower urinary tract dysfunction.
+    authors: Panicker JN et al
+    year: 2015
+    journal: Lancet Neurol
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-005
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: bowel arm coverage. Concept covers thin-coverage topic
+      area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: Management of bowel dysfunction in patients with MS.
+    authors: Preziosi G et al
+    year: 2018
+    journal: Nat Rev Gastroenterol Hepatol
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-006
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
+      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
+      documented by editor: contemporary PRO-grounded burden data, T09. Concept covers
+      thin-coverage topic area(s): T10.'
+    concept: bladder_bowel_dysfunction
+    concept_path: concepts/clinical/bladder-bowel-dysfunction
+    title: Substantial burden associated with bladder, bowel and sexual dysfunction
+      in MS.
+    authors: Marrie RA et al
+    year: 2022
+    journal: Mult Scler
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  depression_anxiety_ms:
+  - t4_id: T4-007
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      prevalence anchor, T10. Concept covers thin-coverage topic area(s): T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: 'Major depression in multiple sclerosis: a population-based perspective.'
+    authors: Patten SB et al
+    year: 2003
+    journal: Neurology
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-008
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      mechanisms review. Concept covers thin-coverage topic area(s): T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: 'Depression in multiple sclerosis: a review.'
+    authors: Siegert RJ, Abernethy DA
+    year: 2005
+    journal: J Neurol Neurosurg Psychiatry
+    topic_codes:
+    - T10
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: ee043c45f5376a26956aa4650e6e0be2
+    corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
+    corpus_stats:
+      citation_count: 1438
+      in_degree: 124
+      out_degree: 27
+      pagerank_pct: 97.5
+      kcore: 26
+      core_score: 0.917
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 80
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-009
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      AAN guideline anchor. Concept covers thin-coverage topic area(s): T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: 'Evidence-based guideline: assessment and management of psychiatric disorders
+      in individuals with MS.'
+    authors: Minden SL et al
+    year: 2014
+    journal: Neurology
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-010
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      bidirectional mechanism review. Concept covers thin-coverage topic area(s):
+      T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: The link between multiple sclerosis and depression.
+    authors: Feinstein A et al
+    year: 2014
+    journal: Nat Rev Neurol
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-011
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      protective factors. Concept covers thin-coverage topic area(s): T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: Resilience and depression in multiple sclerosis.
+    authors: Beckner ME et al
+    year: 2010
+    journal: Mult Scler
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-012
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      meta-analysis anchor, T09/T10. Concept covers thin-coverage topic area(s): T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: 'Prevalence of depression and anxiety in MS: a systematic review and meta-analysis.'
+    authors: Boeschoten RE et al
+    year: 2017
+    journal: J Neurol Sci
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-013
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+      non-pharmacological interventions. Concept covers thin-coverage topic area(s):
+      T10.'
+    concept: depression_anxiety_ms
+    concept_path: concepts/clinical/depression-anxiety-ms
+    title: MS quality of life, depression, and fatigue improve after mindfulness training.
+    authors: Grossman P et al
+    year: 2010
+    journal: Neurology
+    topic_codes:
+    - T10
+    corpus_status: not_found
+  equity_sdoh:
+  - t4_id: T4-014
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: review anchor; already in topic_map as R5. Concept covers
+      thin-coverage topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Health disparities and inequities in multiple sclerosis.
+    authors: Amezcua L et al
+    year: 2021
+    journal: JAMA Neurol
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-015
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: prevalence/severity data update. Concept covers thin-coverage
+      topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Multiple sclerosis in Black and White Americans.
+    authors: Langer-Gould A et al
+    year: 2022
+    journal: Lancet Neurol
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-016
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: diversity in MS trials. Concept covers thin-coverage topic
+      area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: The multiple sclerosis outcome assessments consortium.
+    authors: Cutter GR et al
+    year: 2015
+    journal: Mult Scler
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-017
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: DMT access/response disparities. Concept covers thin-coverage
+      topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Immunotherapy for MS in Black Americans.
+    authors: Naismith RT et al
+    year: 2018
+    journal: Neurology
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-018
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: SES-outcomes link. Concept covers thin-coverage topic
+      area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: 'Socioeconomic status and MS: a systematic review.'
+    authors: Marrie RA et al
+    year: 2022
+    journal: Mult Scler
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-019
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: PRO perspective with diverse sample. Concept covers thin-coverage
+      topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: 'Disability milestones in MS: an electronic patient-reporting study.'
+    authors: Kister I et al
+    year: 2013
+    journal: Neurology
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-020
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: structural barriers, T13. Concept covers thin-coverage
+      topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Patient-reported barriers to high-efficacy DMTs in underserved MS populations.
+    authors: Tanner L et al
+    year: 2023
+    journal: Neurol Clin Pract
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  - t4_id: T4-021
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: natural history by race, T1b bridge. Concept covers thin-coverage
+      topic area(s): T13.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Race/ethnicity as a risk factor for disability progression in MS.
+    authors: Nealon N et al
+    year: 2019
+    journal: J Neuroimmunol
+    topic_codes:
+    - T13
+    corpus_status: not_found
+  fatigue_ms:
+  - t4_id: T4-022
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: fatigue epidemiology baseline. Concept covers
+      thin-coverage topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: Prevalence and neurobehavioral correlates of pathological laughing and
+      crying in multiple sclerosis.
+    authors: Feinstein A et al
+    year: 1997
+    journal: Arch Neurol
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-023
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: conceptual framework. Concept covers thin-coverage
+      topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: A medical definition of fatigue in multiple sclerosis.
+    authors: Mills RJ, Young CA
+    year: 2008
+    journal: QJM
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: a602f8bdae65242db35d223d4cf847a7
+    corpus_doi: https://doi.org/10.1093/qjmed/hcm122
+    corpus_stats:
+      citation_count: 364
+      in_degree: 40
+      out_degree: 3
+      pagerank_pct: 85.8
+      kcore: 22
+      core_score: 0.808
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 50
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-024
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: fatigue-depression overlap, T10. Concept covers
+      thin-coverage topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: Prevalence of fatigue and its correlation to depression in MS.
+    authors: Putzki N et al
+    year: 2008
+    journal: Eur J Neurol
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-025
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: sleep-fatigue relationship. Concept covers thin-coverage
+      topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
+    authors: Braley TJ, Chervin RD
+    year: 2010
+    journal: Sleep
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-026
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: review anchor for T09. Concept covers thin-coverage
+      topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: Fatigue in multiple sclerosis — a brief review.
+    authors: Induruwa I et al
+    year: 2012
+    journal: J Neurol Sci
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-027
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: T00/T09 epidemiology of fatigue. Concept covers
+      thin-coverage topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: Systematic review of the incidence and prevalence of fatigue in MS.
+    authors: Marrie RA et al
+    year: 2005
+    journal: Mult Scler
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  - t4_id: T4-028
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+      Relevance documented by editor: exercise/rehabilitation evidence. Concept covers
+      thin-coverage topic area(s): T09, T10.'
+    concept: fatigue_ms
+    concept_path: concepts/clinical/fatigue-ms
+    title: Meta-analysis of three different types of fatigue management interventions.
+    authors: Asano M, Finlayson ML
+    year: 2014
+    journal: Mult Scler Int
+    topic_codes:
+    - T09
+    - T10
+    corpus_status: not_found
+  pediatric_ms:
+  - t4_id: T4-029
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      T12 foundational epidemiology. Concept covers thin-coverage topic area(s): T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: Clinical features and viral serologies in children with multiple sclerosis.
+    authors: Banwell B et al
+    year: 2007
+    journal: Lancet Neurol
+    topic_codes:
+    - T12
+    corpus_status: not_found
+  - t4_id: T4-030
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: Multiple sclerosis and related disorders in children.
+    authors: Pohl D et al
+    year: 2007
+    journal: Curr Opin Neurol
+    topic_codes:
+    - T12
+    corpus_status: not_found
+  - t4_id: T4-031
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      RCT anchor for T12. Concept covers thin-coverage topic area(s): T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
+    authors: Chitnis T et al
+    year: 2018
+    journal: NEJM
+    topic_codes:
+    - T12
+    corpus_status: title_fuzzy(0.88)
+    corpus_id: 5081658b1336498af7327d2e2b5cda6f
+    corpus_doi: https://doi.org/10.1056/nejmoa1800149
+    corpus_stats:
+      citation_count: 1280
+      in_degree: 311
+      out_degree: 24
+      pagerank_pct: 98.6
+      kcore: 32
+      core_score: 0.98
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 99
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-032
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      neurodevelopmental consequences. Concept covers thin-coverage topic area(s):
+      T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: Cognitive and psychosocial features of pediatric MS.
+    authors: Amato MP et al
+    year: 2010
+    journal: Ann Neurol
+    topic_codes:
+    - T12
+    corpus_status: not_found
+  - t4_id: T4-033
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      comprehensive review anchor. Concept covers thin-coverage topic area(s): T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: Pediatric multiple sclerosis.
+    authors: Waldman A et al
+    year: 2014
+    journal: Nat Rev Neurol
+    topic_codes:
+    - T12
+    corpus_status: title_fuzzy(0.98)
+    corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
+    corpus_doi: https://doi.org/10.1055/s-0036-1579738
+    corpus_stats:
+      citation_count: 56
+      in_degree: 10
+      out_degree: 14
+      pagerank_pct: 72.8
+      kcore: 19
+      core_score: 0.665
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 52
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-034
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+      natural history, T1b bridge. Concept covers thin-coverage topic area(s): T12.'
+    concept: pediatric_ms
+    concept_path: concepts/populations/pediatric-ms
+    title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
+    authors: Huppke P et al
+    year: 2014
+    journal: Semin Neurol
+    topic_codes:
+    - T12
+    corpus_status: not_found
+  rehabilitation_exercise:
+  - t4_id: T4-035
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: editorial framing, T09. Concept covers thin-coverage topic area(s):
+      T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: Exercise as medicine in MS — time to act.
+    authors: Dalgas U et al
+    year: 2019
+    journal: JAMA Neurol
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-036
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: fatigue and walking RCT summary. Concept covers thin-coverage topic
+      area(s): T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: 'Exercise and MS: a systematic review with meta-analysis.'
+    authors: Motl RW et al
+    year: 2017
+    journal: Neurorehabil Neural Repair
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-037
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: resistance training RCT. Concept covers thin-coverage topic area(s):
+      T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: 'Progressive resistance training and MS: effects on physical fitness and
+      quality of life.'
+    authors: Kjolhede T et al
+    year: 2012
+    journal: Mult Scler
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-038
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: cognitive rehabilitation bridge to T09. Concept covers thin-coverage
+      topic area(s): T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: Exercise and cognitive impairment in MS.
+    authors: Sandroff BM et al
+    year: 2018
+    journal: Nat Rev Neurol
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-039
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: umbrella review for multidisciplinary care (JLA #3). Concept covers
+      thin-coverage topic area(s): T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
+    authors: Khan F, Amatya B
+    year: 2017
+    journal: Arch Phys Med Rehabil
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-040
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: comprehensive outcomes review. Concept covers thin-coverage topic area(s):
+      T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: 'Effects of exercise training on fitness, mobility, fatigue, depression
+      in adults with MS: a systematic review.'
+    authors: Latimer-Cheung AE et al
+    year: 2013
+    journal: Arch Phys Med Rehabil
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  - t4_id: T4-041
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
+      editor: adapted exercise modality. Concept covers thin-coverage topic area(s):
+      T09.'
+    concept: rehabilitation_exercise
+    concept_path: concepts/clinical/rehabilitation-exercise
+    title: 'Efficacy of aquatic therapy for MS: a systematic review.'
+    authors: Corvillo I et al
+    year: 2017
+    journal: Eur J Phys Rehabil Med
+    topic_codes:
+    - T09
+    corpus_status: not_found
+  sex_gender_ms:
+  - t4_id: T4-042
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+      ratio temporal trend anchor. Concept covers thin-coverage topic area(s): T00,
+      T11.'
+    concept: sex_gender_ms
+    concept_path: concepts/populations/sex-gender-ms
+    title: 'Sex ratio of multiple sclerosis in Canada: cohort effect.'
+    authors: Orton SM et al
+    year: 2006
+    journal: Lancet Neurol
+    topic_codes:
+    - T00
+    - T11
+    corpus_status: not_found
+  - t4_id: T4-043
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+      hormonal bridge to T11. Concept covers thin-coverage topic area(s): T00, T11.'
+    concept: sex_gender_ms
+    concept_path: concepts/populations/sex-gender-ms
+    title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and
+      breastfeeding.'
+    authors: Voskuhl R, Momtazee C
+    year: 2017
+    journal: Neurotherapeutics
+    topic_codes:
+    - T00
+    - T11
+    corpus_status: not_found
+  - t4_id: T4-044
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+      sex-specific natural history. Concept covers thin-coverage topic area(s): T00,
+      T11.'
+    concept: sex_gender_ms
+    concept_path: concepts/populations/sex-gender-ms
+    title: Sex as a determinant of relapse incidence and progressive course of MS.
+    authors: Kalincik T et al
+    year: 2013
+    journal: Brain
+    topic_codes:
+    - T00
+    - T11
+    corpus_status: title_fuzzy(0.89)
+    corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
+    corpus_doi: https://doi.org/10.1093/brain/awt281
+    corpus_stats:
+      citation_count: 570
+      in_degree: 92
+      out_degree: 19
+      pagerank_pct: 93.5
+      kcore: 32
+      core_score: 0.95
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 91
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-045
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+      hormonal mechanisms. Concept covers thin-coverage topic area(s): T00, T11.'
+    concept: sex_gender_ms
+    concept_path: concepts/populations/sex-gender-ms
+    title: Impact of sex hormones on immune function and multiple sclerosis development.
+    authors: Ysrraelit MC, Correale J
+    year: 2019
+    journal: Immunology
+    topic_codes:
+    - T00
+    - T11
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: 5dd210f9b1214a715e30bd027cf459ba
+    corpus_doi: https://doi.org/10.1111/imm.13004
+    corpus_stats:
+      citation_count: 486
+      in_degree: 62
+      out_degree: 68
+      pagerank_pct: 81.3
+      kcore: 30
+      core_score: 0.86
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 77
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+  - t4_id: T4-046
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+      general overview. Concept covers thin-coverage topic area(s): T00, T11.'
+    concept: sex_gender_ms
+    concept_path: concepts/populations/sex-gender-ms
+    title: The impact of gender on multiple sclerosis.
+    authors: Rottlaender A et al
+    year: 2014
+    journal: Open Neurol J
+    topic_codes:
+    - T00
+    - T11
+    corpus_status: not_found
+  shared_decision_making:
+  - t4_id: T4-047
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: SDM framework anchor. Concept covers thin-coverage topic
+      area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: 'Shared decision making: a model for clinical practice.'
+    authors: Elwyn G et al
+    year: 2012
+    journal: J Gen Intern Med
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: not_found
+  - t4_id: T4-048
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
+      area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: Shared decision making and self-management in MS — a consequence of evidence
+      based medicine.
+    authors: Heesen C et al
+    year: 2012
+    journal: J Neurol
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: not_found
+  - t4_id: T4-049
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: patient voice, T09. Concept covers thin-coverage topic
+      area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: Patients' experiences and perceived impact of shared decision-making in
+      MS.
+    authors: Berger B et al
+    year: 2017
+    journal: Patient Educ Couns
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: not_found
+  - t4_id: T4-050
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: decision aid development. Concept covers thin-coverage
+      topic area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: Development and validation of a decision aid for people with multiple sclerosis.
+    authors: Solari A et al
+    year: 2017
+    journal: J Neurol
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: not_found
+  - t4_id: T4-051
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: preference-weighting evidence. Concept covers thin-coverage
+      topic area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: 'Preferences of MS patients for DMT characteristics: a discrete choice
+      experiment.'
+    authors: Visser LH et al
+    year: 2020
+    journal: Mult Scler
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: not_found
+  - t4_id: T4-052
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+      documented by editor: contemporary review, T16. Concept covers thin-coverage
+      topic area(s): T09, T16.'
+    concept: shared_decision_making
+    concept_path: concepts/clinical/shared-decision-making
+    title: Shared decision making in multiple sclerosis.
+    authors: Grácio S et al
+    year: 2021
+    journal: Mult Scler
+    topic_codes:
+    - T09
+    - T16
+    corpus_status: title_fuzzy(0.83)
+    corpus_id: bc4457f660ecfc779461a3dc1b1dabec
+    corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
+    corpus_stats:
+      citation_count: 38
+      in_degree: 7
+      out_degree: 11
+      pagerank_pct: 62.2
+      kcore: 13
+      core_score: 0.538
+      existing_tier: included
+      seed_hops: 1
+      cocite_seeds: 33
+    t4_note: Paper is already structurally included in corpus (tier=included). T4
+      designation formalises the concept-anchor expert signal and links this paper
+      to its educational concept page.
+flat_list:
+- t4_id: T4-001
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: neuroanatomical basis, T02. Concept covers thin-coverage topic area(s):
+    T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: The neural control of micturition.
+  authors: Fowler CJ et al
+  year: 2008
+  journal: Nat Rev Neurosci
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-002
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: urology management overview. Concept covers thin-coverage topic area(s):
+    T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: Multiple sclerosis and the urologist.
+  authors: Litwiller SE et al
+  year: 1999
+  journal: J Urol
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-003
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: practical management, T10. Concept covers thin-coverage topic area(s):
+    T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: Bladder dysfunction in neurological disease.
+  authors: Brookes ME et al
+  year: 2008
+  journal: Pract Neurol
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-004
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: review anchor for T10. Concept covers thin-coverage topic area(s): T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: Neurogenic lower urinary tract dysfunction.
+  authors: Panicker JN et al
+  year: 2015
+  journal: Lancet Neurol
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-005
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: bowel arm coverage. Concept covers thin-coverage topic area(s): T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: Management of bowel dysfunction in patients with MS.
+  authors: Preziosi G et al
+  year: 2018
+  journal: Nat Rev Gastroenterol Hepatol
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-006
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
+    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
+    editor: contemporary PRO-grounded burden data, T09. Concept covers thin-coverage
+    topic area(s): T10.'
+  concept: bladder_bowel_dysfunction
+  concept_path: concepts/clinical/bladder-bowel-dysfunction
+  title: Substantial burden associated with bladder, bowel and sexual dysfunction
+    in MS.
+  authors: Marrie RA et al
+  year: 2022
+  journal: Mult Scler
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-007
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    prevalence anchor, T10. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: 'Major depression in multiple sclerosis: a population-based perspective.'
+  authors: Patten SB et al
+  year: 2003
+  journal: Neurology
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-008
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    mechanisms review. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: 'Depression in multiple sclerosis: a review.'
+  authors: Siegert RJ, Abernethy DA
+  year: 2005
+  journal: J Neurol Neurosurg Psychiatry
+  topic_codes:
+  - T10
+  corpus_status: title_fuzzy(0.99)
+  corpus_id: ee043c45f5376a26956aa4650e6e0be2
+  corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
+  corpus_stats:
+    citation_count: 1438
+    in_degree: 124
+    out_degree: 27
+    pagerank_pct: 97.5
+    kcore: 26
+    core_score: 0.917
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 80
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-009
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    AAN guideline anchor. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: 'Evidence-based guideline: assessment and management of psychiatric disorders
+    in individuals with MS.'
+  authors: Minden SL et al
+  year: 2014
+  journal: Neurology
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-010
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    bidirectional mechanism review. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: The link between multiple sclerosis and depression.
+  authors: Feinstein A et al
+  year: 2014
+  journal: Nat Rev Neurol
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-011
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    protective factors. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: Resilience and depression in multiple sclerosis.
+  authors: Beckner ME et al
+  year: 2010
+  journal: Mult Scler
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-012
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    meta-analysis anchor, T09/T10. Concept covers thin-coverage topic area(s): T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: 'Prevalence of depression and anxiety in MS: a systematic review and meta-analysis.'
+  authors: Boeschoten RE et al
+  year: 2017
+  journal: J Neurol Sci
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-013
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
+    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
+    non-pharmacological interventions. Concept covers thin-coverage topic area(s):
+    T10.'
+  concept: depression_anxiety_ms
+  concept_path: concepts/clinical/depression-anxiety-ms
+  title: MS quality of life, depression, and fatigue improve after mindfulness training.
+  authors: Grossman P et al
+  year: 2010
+  journal: Neurology
+  topic_codes:
+  - T10
+  corpus_status: not_found
+- t4_id: T4-014
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: review anchor; already in topic_map as R5. Concept covers thin-coverage
+    topic area(s): T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: Health disparities and inequities in multiple sclerosis.
+  authors: Amezcua L et al
+  year: 2021
+  journal: JAMA Neurol
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-015
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: prevalence/severity data update. Concept covers thin-coverage topic area(s):
+    T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: Multiple sclerosis in Black and White Americans.
+  authors: Langer-Gould A et al
+  year: 2022
+  journal: Lancet Neurol
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-016
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: diversity in MS trials. Concept covers thin-coverage topic area(s): T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: The multiple sclerosis outcome assessments consortium.
+  authors: Cutter GR et al
+  year: 2015
+  journal: Mult Scler
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-017
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: DMT access/response disparities. Concept covers thin-coverage topic area(s):
+    T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: Immunotherapy for MS in Black Americans.
+  authors: Naismith RT et al
+  year: 2018
+  journal: Neurology
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-018
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: SES-outcomes link. Concept covers thin-coverage topic area(s): T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: 'Socioeconomic status and MS: a systematic review.'
+  authors: Marrie RA et al
+  year: 2022
+  journal: Mult Scler
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-019
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: PRO perspective with diverse sample. Concept covers thin-coverage topic
+    area(s): T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: 'Disability milestones in MS: an electronic patient-reporting study.'
+  authors: Kister I et al
+  year: 2013
+  journal: Neurology
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-020
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: structural barriers, T13. Concept covers thin-coverage topic area(s):
+    T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: Patient-reported barriers to high-efficacy DMTs in underserved MS populations.
+  authors: Tanner L et al
+  year: 2023
+  journal: Neurol Clin Pract
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-021
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
+    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
+    editor: natural history by race, T1b bridge. Concept covers thin-coverage topic
+    area(s): T13.'
+  concept: equity_sdoh
+  concept_path: concepts/populations/equity-sdoh
+  title: Race/ethnicity as a risk factor for disability progression in MS.
+  authors: Nealon N et al
+  year: 2019
+  journal: J Neuroimmunol
+  topic_codes:
+  - T13
+  corpus_status: not_found
+- t4_id: T4-022
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: fatigue epidemiology baseline. Concept covers
+    thin-coverage topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: Prevalence and neurobehavioral correlates of pathological laughing and crying
+    in multiple sclerosis.
+  authors: Feinstein A et al
+  year: 1997
+  journal: Arch Neurol
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-023
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: conceptual framework. Concept covers thin-coverage
+    topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: A medical definition of fatigue in multiple sclerosis.
+  authors: Mills RJ, Young CA
+  year: 2008
+  journal: QJM
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: title_fuzzy(0.99)
+  corpus_id: a602f8bdae65242db35d223d4cf847a7
+  corpus_doi: https://doi.org/10.1093/qjmed/hcm122
+  corpus_stats:
+    citation_count: 364
+    in_degree: 40
+    out_degree: 3
+    pagerank_pct: 85.8
+    kcore: 22
+    core_score: 0.808
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 50
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-024
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: fatigue-depression overlap, T10. Concept covers
+    thin-coverage topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: Prevalence of fatigue and its correlation to depression in MS.
+  authors: Putzki N et al
+  year: 2008
+  journal: Eur J Neurol
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-025
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: sleep-fatigue relationship. Concept covers thin-coverage
+    topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
+  authors: Braley TJ, Chervin RD
+  year: 2010
+  journal: Sleep
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-026
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: review anchor for T09. Concept covers thin-coverage
+    topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: Fatigue in multiple sclerosis — a brief review.
+  authors: Induruwa I et al
+  year: 2012
+  journal: J Neurol Sci
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-027
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: T00/T09 epidemiology of fatigue. Concept covers
+    thin-coverage topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: Systematic review of the incidence and prevalence of fatigue in MS.
+  authors: Marrie RA et al
+  year: 2005
+  journal: Mult Scler
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-028
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
+    Relevance documented by editor: exercise/rehabilitation evidence. Concept covers
+    thin-coverage topic area(s): T09, T10.'
+  concept: fatigue_ms
+  concept_path: concepts/clinical/fatigue-ms
+  title: Meta-analysis of three different types of fatigue management interventions.
+  authors: Asano M, Finlayson ML
+  year: 2014
+  journal: Mult Scler Int
+  topic_codes:
+  - T09
+  - T10
+  corpus_status: not_found
+- t4_id: T4-029
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    T12 foundational epidemiology. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: Clinical features and viral serologies in children with multiple sclerosis.
+  authors: Banwell B et al
+  year: 2007
+  journal: Lancet Neurol
+  topic_codes:
+  - T12
+  corpus_status: not_found
+- t4_id: T4-030
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: Multiple sclerosis and related disorders in children.
+  authors: Pohl D et al
+  year: 2007
+  journal: Curr Opin Neurol
+  topic_codes:
+  - T12
+  corpus_status: not_found
+- t4_id: T4-031
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    RCT anchor for T12. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
+  authors: Chitnis T et al
+  year: 2018
+  journal: NEJM
+  topic_codes:
+  - T12
+  corpus_status: title_fuzzy(0.88)
+  corpus_id: 5081658b1336498af7327d2e2b5cda6f
+  corpus_doi: https://doi.org/10.1056/nejmoa1800149
+  corpus_stats:
+    citation_count: 1280
+    in_degree: 311
+    out_degree: 24
+    pagerank_pct: 98.6
+    kcore: 32
+    core_score: 0.98
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 99
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-032
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    neurodevelopmental consequences. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: Cognitive and psychosocial features of pediatric MS.
+  authors: Amato MP et al
+  year: 2010
+  journal: Ann Neurol
+  topic_codes:
+  - T12
+  corpus_status: not_found
+- t4_id: T4-033
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    comprehensive review anchor. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: Pediatric multiple sclerosis.
+  authors: Waldman A et al
+  year: 2014
+  journal: Nat Rev Neurol
+  topic_codes:
+  - T12
+  corpus_status: title_fuzzy(0.98)
+  corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
+  corpus_doi: https://doi.org/10.1055/s-0036-1579738
+  corpus_stats:
+    citation_count: 56
+    in_degree: 10
+    out_degree: 14
+    pagerank_pct: 72.8
+    kcore: 19
+    core_score: 0.665
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 52
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-034
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
+    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
+    natural history, T1b bridge. Concept covers thin-coverage topic area(s): T12.'
+  concept: pediatric_ms
+  concept_path: concepts/populations/pediatric-ms
+  title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
+  authors: Huppke P et al
+  year: 2014
+  journal: Semin Neurol
+  topic_codes:
+  - T12
+  corpus_status: not_found
+- t4_id: T4-035
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    editorial framing, T09. Concept covers thin-coverage topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: Exercise as medicine in MS — time to act.
+  authors: Dalgas U et al
+  year: 2019
+  journal: JAMA Neurol
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-036
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    fatigue and walking RCT summary. Concept covers thin-coverage topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: 'Exercise and MS: a systematic review with meta-analysis.'
+  authors: Motl RW et al
+  year: 2017
+  journal: Neurorehabil Neural Repair
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-037
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    resistance training RCT. Concept covers thin-coverage topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: 'Progressive resistance training and MS: effects on physical fitness and
+    quality of life.'
+  authors: Kjolhede T et al
+  year: 2012
+  journal: Mult Scler
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-038
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    cognitive rehabilitation bridge to T09. Concept covers thin-coverage topic area(s):
+    T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: Exercise and cognitive impairment in MS.
+  authors: Sandroff BM et al
+  year: 2018
+  journal: Nat Rev Neurol
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-039
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    umbrella review for multidisciplinary care (JLA #3). Concept covers thin-coverage
+    topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
+  authors: Khan F, Amatya B
+  year: 2017
+  journal: Arch Phys Med Rehabil
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-040
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    comprehensive outcomes review. Concept covers thin-coverage topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: 'Effects of exercise training on fitness, mobility, fatigue, depression in
+    adults with MS: a systematic review.'
+  authors: Latimer-Cheung AE et al
+  year: 2013
+  journal: Arch Phys Med Rehabil
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-041
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
+    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
+    adapted exercise modality. Concept covers thin-coverage topic area(s): T09.'
+  concept: rehabilitation_exercise
+  concept_path: concepts/clinical/rehabilitation-exercise
+  title: 'Efficacy of aquatic therapy for MS: a systematic review.'
+  authors: Corvillo I et al
+  year: 2017
+  journal: Eur J Phys Rehabil Med
+  topic_codes:
+  - T09
+  corpus_status: not_found
+- t4_id: T4-042
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+    ratio temporal trend anchor. Concept covers thin-coverage topic area(s): T00,
+    T11.'
+  concept: sex_gender_ms
+  concept_path: concepts/populations/sex-gender-ms
+  title: 'Sex ratio of multiple sclerosis in Canada: cohort effect.'
+  authors: Orton SM et al
+  year: 2006
+  journal: Lancet Neurol
+  topic_codes:
+  - T00
+  - T11
+  corpus_status: not_found
+- t4_id: T4-043
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+    hormonal bridge to T11. Concept covers thin-coverage topic area(s): T00, T11.'
+  concept: sex_gender_ms
+  concept_path: concepts/populations/sex-gender-ms
+  title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and breastfeeding.'
+  authors: Voskuhl R, Momtazee C
+  year: 2017
+  journal: Neurotherapeutics
+  topic_codes:
+  - T00
+  - T11
+  corpus_status: not_found
+- t4_id: T4-044
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+    sex-specific natural history. Concept covers thin-coverage topic area(s): T00,
+    T11.'
+  concept: sex_gender_ms
+  concept_path: concepts/populations/sex-gender-ms
+  title: Sex as a determinant of relapse incidence and progressive course of MS.
+  authors: Kalincik T et al
+  year: 2013
+  journal: Brain
+  topic_codes:
+  - T00
+  - T11
+  corpus_status: title_fuzzy(0.89)
+  corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
+  corpus_doi: https://doi.org/10.1093/brain/awt281
+  corpus_stats:
+    citation_count: 570
+    in_degree: 92
+    out_degree: 19
+    pagerank_pct: 93.5
+    kcore: 32
+    core_score: 0.95
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 91
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-045
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+    hormonal mechanisms. Concept covers thin-coverage topic area(s): T00, T11.'
+  concept: sex_gender_ms
+  concept_path: concepts/populations/sex-gender-ms
+  title: Impact of sex hormones on immune function and multiple sclerosis development.
+  authors: Ysrraelit MC, Correale J
+  year: 2019
+  journal: Immunology
+  topic_codes:
+  - T00
+  - T11
+  corpus_status: title_fuzzy(0.99)
+  corpus_id: 5dd210f9b1214a715e30bd027cf459ba
+  corpus_doi: https://doi.org/10.1111/imm.13004
+  corpus_stats:
+    citation_count: 486
+    in_degree: 62
+    out_degree: 68
+    pagerank_pct: 81.3
+    kcore: 30
+    core_score: 0.86
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 77
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
+- t4_id: T4-046
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
+    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
+    general overview. Concept covers thin-coverage topic area(s): T00, T11.'
+  concept: sex_gender_ms
+  concept_path: concepts/populations/sex-gender-ms
+  title: The impact of gender on multiple sclerosis.
+  authors: Rottlaender A et al
+  year: 2014
+  journal: Open Neurol J
+  topic_codes:
+  - T00
+  - T11
+  corpus_status: not_found
+- t4_id: T4-047
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: SDM framework anchor. Concept covers thin-coverage topic
+    area(s): T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: 'Shared decision making: a model for clinical practice.'
+  authors: Elwyn G et al
+  year: 2012
+  journal: J Gen Intern Med
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: not_found
+- t4_id: T4-048
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
+    area(s): T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: Shared decision making and self-management in MS — a consequence of evidence
+    based medicine.
+  authors: Heesen C et al
+  year: 2012
+  journal: J Neurol
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: not_found
+- t4_id: T4-049
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: patient voice, T09. Concept covers thin-coverage topic area(s):
+    T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: Patients' experiences and perceived impact of shared decision-making in MS.
+  authors: Berger B et al
+  year: 2017
+  journal: Patient Educ Couns
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: not_found
+- t4_id: T4-050
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: decision aid development. Concept covers thin-coverage topic
+    area(s): T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: Development and validation of a decision aid for people with multiple sclerosis.
+  authors: Solari A et al
+  year: 2017
+  journal: J Neurol
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: not_found
+- t4_id: T4-051
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: preference-weighting evidence. Concept covers thin-coverage
+    topic area(s): T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: 'Preferences of MS patients for DMT characteristics: a discrete choice experiment.'
+  authors: Visser LH et al
+  year: 2020
+  journal: Mult Scler
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: not_found
+- t4_id: T4-052
+  t4_source_type: concept_anchor_signal
+  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
+    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
+    documented by editor: contemporary review, T16. Concept covers thin-coverage topic
+    area(s): T09, T16.'
+  concept: shared_decision_making
+  concept_path: concepts/clinical/shared-decision-making
+  title: Shared decision making in multiple sclerosis.
+  authors: Grácio S et al
+  year: 2021
+  journal: Mult Scler
+  topic_codes:
+  - T09
+  - T16
+  corpus_status: title_fuzzy(0.83)
+  corpus_id: bc4457f660ecfc779461a3dc1b1dabec
+  corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
+  corpus_stats:
+    citation_count: 38
+    in_degree: 7
+    out_degree: 11
+    pagerank_pct: 62.2
+    kcore: 13
+    core_score: 0.538
+    existing_tier: included
+    seed_hops: 1
+    cocite_seeds: 33
+  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
+    formalises the concept-anchor expert signal and links this paper to its educational
+    concept page.
