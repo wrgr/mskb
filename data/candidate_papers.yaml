@@ -1,0 +1,428 @@
+- concept: bladder_bowel_dysfunction
+  candidates:
+  - title: The neural control of micturition.
+    authors: Fowler CJ et al
+    journal: Nat Rev Neurosci
+    year: 2008
+    relevance: neuroanatomical basis, T02
+    corpus_status: not_found
+  - title: Multiple sclerosis and the urologist.
+    authors: Litwiller SE et al
+    journal: J Urol
+    year: 1999
+    relevance: urology management overview
+    corpus_status: not_found
+  - title: Bladder dysfunction in neurological disease.
+    authors: Brookes ME et al
+    journal: Pract Neurol
+    year: 2008
+    relevance: practical management, T10
+    corpus_status: not_found
+  - title: Neurogenic lower urinary tract dysfunction.
+    authors: Panicker JN et al
+    journal: Lancet Neurol
+    year: 2015
+    relevance: review anchor for T10
+    corpus_status: not_found
+  - title: Management of bowel dysfunction in patients with MS.
+    authors: Preziosi G et al
+    journal: Nat Rev Gastroenterol Hepatol
+    year: 2018
+    relevance: bowel arm coverage
+    corpus_status: not_found
+  - title: Substantial burden associated with bladder, bowel and sexual dysfunction
+      in MS.
+    authors: Marrie RA et al
+    journal: Mult Scler
+    year: 2022
+    relevance: contemporary PRO-grounded burden data, T09
+    corpus_status: not_found
+- concept: depression_anxiety_ms
+  candidates:
+  - title: 'Major depression in multiple sclerosis: a population-based perspective.'
+    authors: Patten SB et al
+    journal: Neurology
+    year: 2003
+    relevance: prevalence anchor, T10
+    corpus_status: not_found
+  - title: 'Depression in multiple sclerosis: a review.'
+    authors: Siegert RJ, Abernethy DA
+    journal: J Neurol Neurosurg Psychiatry
+    year: 2005
+    relevance: mechanisms review
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: ee043c45f5376a26956aa4650e6e0be2
+    corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
+    corpus_stats:
+      citation_count: 1438
+      in_degree: 124
+      out_degree: 27
+      pagerank_pct: 97.5
+      kcore: 26
+      core_score: 0.917
+      tier: included
+      topic_label: Medicine / Multiple Sclerosis Research Studies / Multiple sc
+      seed_hops: 1
+      cocite_seeds: 80
+  - title: 'Evidence-based guideline: assessment and management of psychiatric disorders
+      in individuals with MS.'
+    authors: Minden SL et al
+    journal: Neurology
+    year: 2014
+    relevance: AAN guideline anchor
+    corpus_status: not_found
+  - title: The link between multiple sclerosis and depression.
+    authors: Feinstein A et al
+    journal: Nat Rev Neurol
+    year: 2014
+    relevance: bidirectional mechanism review
+    corpus_status: not_found
+  - title: Resilience and depression in multiple sclerosis.
+    authors: Beckner ME et al
+    journal: Mult Scler
+    year: 2010
+    relevance: protective factors
+    corpus_status: not_found
+  - title: 'Prevalence of depression and anxiety in MS: a systematic review and meta-analysis.'
+    authors: Boeschoten RE et al
+    journal: J Neurol Sci
+    year: 2017
+    relevance: meta-analysis anchor, T09/T10
+    corpus_status: not_found
+  - title: MS quality of life, depression, and fatigue improve after mindfulness training.
+    authors: Grossman P et al
+    journal: Neurology
+    year: 2010
+    relevance: non-pharmacological interventions
+    corpus_status: not_found
+- concept: equity_sdoh
+  candidates:
+  - title: Health disparities and inequities in multiple sclerosis.
+    authors: Amezcua L et al
+    journal: JAMA Neurol
+    year: 2021
+    relevance: review anchor; already in topic_map as R5
+    corpus_status: not_found
+  - title: Multiple sclerosis in Black and White Americans.
+    authors: Langer-Gould A et al
+    journal: Lancet Neurol
+    year: 2022
+    relevance: prevalence/severity data update
+    corpus_status: not_found
+  - title: The multiple sclerosis outcome assessments consortium.
+    authors: Cutter GR et al
+    journal: Mult Scler
+    year: 2015
+    relevance: diversity in MS trials
+    corpus_status: not_found
+  - title: Immunotherapy for MS in Black Americans.
+    authors: Naismith RT et al
+    journal: Neurology
+    year: 2018
+    relevance: DMT access/response disparities
+    corpus_status: not_found
+  - title: 'Socioeconomic status and MS: a systematic review.'
+    authors: Marrie RA et al
+    journal: Mult Scler
+    year: 2022
+    relevance: SES-outcomes link
+    corpus_status: not_found
+  - title: 'Disability milestones in MS: an electronic patient-reporting study.'
+    authors: Kister I et al
+    journal: Neurology
+    year: 2013
+    relevance: PRO perspective with diverse sample
+    corpus_status: not_found
+  - title: Patient-reported barriers to high-efficacy DMTs in underserved MS populations.
+    authors: Tanner L et al
+    journal: Neurol Clin Pract
+    year: 2023
+    relevance: structural barriers, T13
+    corpus_status: not_found
+  - title: Race/ethnicity as a risk factor for disability progression in MS.
+    authors: Nealon N et al
+    journal: J Neuroimmunol
+    year: 2019
+    relevance: natural history by race, T1b bridge
+    corpus_status: not_found
+- concept: fatigue_ms
+  candidates:
+  - title: Prevalence and neurobehavioral correlates of pathological laughing and
+      crying in multiple sclerosis.
+    authors: Feinstein A et al
+    journal: Arch Neurol
+    year: 1997
+    relevance: fatigue epidemiology baseline
+    corpus_status: not_found
+  - title: A medical definition of fatigue in multiple sclerosis.
+    authors: Mills RJ, Young CA
+    journal: QJM
+    year: 2008
+    relevance: conceptual framework
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: a602f8bdae65242db35d223d4cf847a7
+    corpus_doi: https://doi.org/10.1093/qjmed/hcm122
+    corpus_stats:
+      citation_count: 364
+      in_degree: 40
+      out_degree: 3
+      pagerank_pct: 85.8
+      kcore: 22
+      core_score: 0.808
+      tier: included
+      topic_label: Medicine / Multiple sclerosis / Biology
+      seed_hops: 1
+      cocite_seeds: 50
+  - title: Prevalence of fatigue and its correlation to depression in MS.
+    authors: Putzki N et al
+    journal: Eur J Neurol
+    year: 2008
+    relevance: fatigue-depression overlap, T10
+    corpus_status: not_found
+  - title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
+    authors: Braley TJ, Chervin RD
+    journal: Sleep
+    year: 2010
+    relevance: sleep-fatigue relationship
+    corpus_status: not_found
+  - title: Fatigue in multiple sclerosis — a brief review.
+    authors: Induruwa I et al
+    journal: J Neurol Sci
+    year: 2012
+    relevance: review anchor for T09
+    corpus_status: not_found
+  - title: Systematic review of the incidence and prevalence of fatigue in MS.
+    authors: Marrie RA et al
+    journal: Mult Scler
+    year: 2005
+    relevance: T00/T09 epidemiology of fatigue
+    corpus_status: not_found
+  - title: Meta-analysis of three different types of fatigue management interventions.
+    authors: Asano M, Finlayson ML
+    journal: Mult Scler Int
+    year: 2014
+    relevance: exercise/rehabilitation evidence
+    corpus_status: not_found
+- concept: pediatric_ms
+  candidates:
+  - title: Clinical features and viral serologies in children with multiple sclerosis.
+    authors: Banwell B et al
+    journal: Lancet Neurol
+    year: 2007
+    relevance: T12 foundational epidemiology
+    corpus_status: not_found
+  - title: Multiple sclerosis and related disorders in children.
+    authors: Pohl D et al
+    journal: Curr Opin Neurol
+    year: 2007
+    relevance: differential diagnosis review
+    corpus_status: not_found
+  - title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
+    authors: Chitnis T et al
+    journal: NEJM
+    year: 2018
+    relevance: RCT anchor for T12
+    corpus_status: title_fuzzy(0.88)
+    corpus_id: 5081658b1336498af7327d2e2b5cda6f
+    corpus_doi: https://doi.org/10.1056/nejmoa1800149
+    corpus_stats:
+      citation_count: 1280
+      in_degree: 311
+      out_degree: 24
+      pagerank_pct: 98.6
+      kcore: 32
+      core_score: 0.98
+      tier: included
+      topic_label: Medicine / Multiple Sclerosis Research Studies / Multiple sc
+      seed_hops: 1
+      cocite_seeds: 99
+  - title: Cognitive and psychosocial features of pediatric MS.
+    authors: Amato MP et al
+    journal: Ann Neurol
+    year: 2010
+    relevance: neurodevelopmental consequences
+    corpus_status: not_found
+  - title: Pediatric multiple sclerosis.
+    authors: Waldman A et al
+    journal: Nat Rev Neurol
+    year: 2014
+    relevance: comprehensive review anchor
+    corpus_status: title_fuzzy(0.98)
+    corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
+    corpus_doi: https://doi.org/10.1055/s-0036-1579738
+    corpus_stats:
+      citation_count: 56
+      in_degree: 10
+      out_degree: 14
+      pagerank_pct: 72.8
+      kcore: 19
+      core_score: 0.665
+      tier: included
+      topic_label: Medicine / Multiple Sclerosis Research Studies / Multiple sc
+      seed_hops: 1
+      cocite_seeds: 52
+  - title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
+    authors: Huppke P et al
+    journal: Semin Neurol
+    year: 2014
+    relevance: natural history, T1b bridge
+    corpus_status: not_found
+- concept: rehabilitation_exercise
+  candidates:
+  - title: Exercise as medicine in MS — time to act.
+    authors: Dalgas U et al
+    journal: JAMA Neurol
+    year: 2019
+    relevance: editorial framing, T09
+    corpus_status: not_found
+  - title: 'Exercise and MS: a systematic review with meta-analysis.'
+    authors: Motl RW et al
+    journal: Neurorehabil Neural Repair
+    year: 2017
+    relevance: fatigue and walking RCT summary
+    corpus_status: not_found
+  - title: 'Progressive resistance training and MS: effects on physical fitness and
+      quality of life.'
+    authors: Kjolhede T et al
+    journal: Mult Scler
+    year: 2012
+    relevance: resistance training RCT
+    corpus_status: not_found
+  - title: Exercise and cognitive impairment in MS.
+    authors: Sandroff BM et al
+    journal: Nat Rev Neurol
+    year: 2018
+    relevance: cognitive rehabilitation bridge to T09
+    corpus_status: not_found
+  - title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
+    authors: Khan F, Amatya B
+    journal: Arch Phys Med Rehabil
+    year: 2017
+    relevance: 'umbrella review for multidisciplinary care (JLA #3)'
+    corpus_status: not_found
+  - title: 'Effects of exercise training on fitness, mobility, fatigue, depression
+      in adults with MS: a systematic review.'
+    authors: Latimer-Cheung AE et al
+    journal: Arch Phys Med Rehabil
+    year: 2013
+    relevance: comprehensive outcomes review
+    corpus_status: not_found
+  - title: 'Efficacy of aquatic therapy for MS: a systematic review.'
+    authors: Corvillo I et al
+    journal: Eur J Phys Rehabil Med
+    year: 2017
+    relevance: adapted exercise modality
+    corpus_status: not_found
+- concept: sex_gender_ms
+  candidates:
+  - title: 'Sex ratio of multiple sclerosis in Canada: cohort effect.'
+    authors: Orton SM et al
+    journal: Lancet Neurol
+    year: 2006
+    relevance: ratio temporal trend anchor
+    corpus_status: not_found
+  - title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and
+      breastfeeding.'
+    authors: Voskuhl R, Momtazee C
+    journal: Neurotherapeutics
+    year: 2017
+    relevance: hormonal bridge to T11
+    corpus_status: not_found
+  - title: Sex as a determinant of relapse incidence and progressive course of MS.
+    authors: Kalincik T et al
+    journal: Brain
+    year: 2013
+    relevance: sex-specific natural history
+    corpus_status: title_fuzzy(0.89)
+    corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
+    corpus_doi: https://doi.org/10.1093/brain/awt281
+    corpus_stats:
+      citation_count: 570
+      in_degree: 92
+      out_degree: 19
+      pagerank_pct: 93.5
+      kcore: 32
+      core_score: 0.95
+      tier: included
+      topic_label: Medicine / Multiple Sclerosis Research Studies / Multiple sc
+      seed_hops: 1
+      cocite_seeds: 91
+  - title: Impact of sex hormones on immune function and multiple sclerosis development.
+    authors: Ysrraelit MC, Correale J
+    journal: Immunology
+    year: 2019
+    relevance: hormonal mechanisms
+    corpus_status: title_fuzzy(0.99)
+    corpus_id: 5dd210f9b1214a715e30bd027cf459ba
+    corpus_doi: https://doi.org/10.1111/imm.13004
+    corpus_stats:
+      citation_count: 486
+      in_degree: 62
+      out_degree: 68
+      pagerank_pct: 81.3
+      kcore: 30
+      core_score: 0.86
+      tier: included
+      topic_label: 'Medicine / Multiple sclerosis / Multiple Sclerosis Research '
+      seed_hops: 1
+      cocite_seeds: 77
+  - title: The impact of gender on multiple sclerosis.
+    authors: Rottlaender A et al
+    journal: Open Neurol J
+    year: 2014
+    relevance: general overview
+    corpus_status: not_found
+- concept: shared_decision_making
+  candidates:
+  - title: 'Shared decision making: a model for clinical practice.'
+    authors: Elwyn G et al
+    journal: J Gen Intern Med
+    year: 2012
+    relevance: SDM framework anchor
+    corpus_status: not_found
+  - title: Shared decision making and self-management in MS — a consequence of evidence
+      based medicine.
+    authors: Heesen C et al
+    journal: J Neurol
+    year: 2012
+    relevance: MS-specific SDM review
+    corpus_status: not_found
+  - title: Patients' experiences and perceived impact of shared decision-making in
+      MS.
+    authors: Berger B et al
+    journal: Patient Educ Couns
+    year: 2017
+    relevance: patient voice, T09
+    corpus_status: not_found
+  - title: Development and validation of a decision aid for people with multiple sclerosis.
+    authors: Solari A et al
+    journal: J Neurol
+    year: 2017
+    relevance: decision aid development
+    corpus_status: not_found
+  - title: 'Preferences of MS patients for DMT characteristics: a discrete choice
+      experiment.'
+    authors: Visser LH et al
+    journal: Mult Scler
+    year: 2020
+    relevance: preference-weighting evidence
+    corpus_status: not_found
+  - title: Shared decision making in multiple sclerosis.
+    authors: Grácio S et al
+    journal: Mult Scler
+    year: 2021
+    relevance: contemporary review, T16
+    corpus_status: title_fuzzy(0.83)
+    corpus_id: bc4457f660ecfc779461a3dc1b1dabec
+    corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
+    corpus_stats:
+      citation_count: 38
+      in_degree: 7
+      out_degree: 11
+      pagerank_pct: 62.2
+      kcore: 13
+      core_score: 0.538
+      tier: included
+      topic_label: Medicine / Multiple Sclerosis Research Studies / Multiple sc
+      seed_hops: 1
+      cocite_seeds: 33
