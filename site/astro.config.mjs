@@ -20,9 +20,21 @@ export default defineConfig({
       favicon: '/favicon.svg',
       social: [],
       customCss: ['./src/styles/custom.css'],
+      components: {
+        Footer: './src/components/SiteFooter.astro',
+      },
       sidebar: [
         { label: 'Home', link: '/' },
         { label: 'Getting Started', link: '/getting-started/' },
+        {
+          label: 'Pathways',
+          items: [
+            { label: 'Overview', link: '/pathways/' },
+            { label: 'Clinical', link: '/pathways/clinical/' },
+            { label: 'Mechanistic', link: '/pathways/mechanistic/' },
+            { label: 'Emerging frontiers', link: '/pathways/emerging/' },
+          ],
+        },
         {
           label: 'Concepts',
           items: [
@@ -54,25 +66,16 @@ export default defineConfig({
             },
           ],
         },
-        {
-          label: 'Learning Pathways',
-          items: [
-            { label: 'Overview', link: '/pathways/' },
-            { label: 'Clinical pathway', link: '/pathways/clinical/' },
-            { label: 'Mechanistic pathway', link: '/pathways/mechanistic/' },
-            { label: 'Emerging topics', link: '/pathways/emerging/' },
-          ],
-        },
         { label: 'Learning Journey', link: '/journey/' },
+        { label: 'Citation Explorer', link: '/explorer/' },
+        { label: 'Glossary', link: '/glossary/' },
         {
-          label: 'Topics',
+          label: 'Citation Topics',
           collapsed: true,
           autogenerate: { directory: 'topics' },
         },
-        { label: 'Explorer', link: '/explorer/' },
-        { label: 'Glossary', link: '/glossary/' },
         {
-          label: 'Corpus',
+          label: 'Corpus & Docs',
           items: [
             { label: 'Overview', link: '/corpus/' },
             { label: 'Topic Map', link: '/corpus/topics/' },

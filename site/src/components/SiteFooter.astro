@@ -1,0 +1,74 @@
+---
+// SiteFooter.astro — site-wide footer rendered on every page.
+// Registered in astro.config.mjs under starlight({ components: { Footer } }).
+---
+
+<footer class="mskb-site-footer">
+  <div class="mskb-footer-inner">
+
+    <div class="mskb-footer-disclaimer">
+      <strong>Learning engineering experiment.</strong>
+      MSKB is an open educational resource built to support student access to MS research.
+      The corpus was assembled and annotated with AI assistance (bibliometric pipeline + Claude API distillation).
+      Content reflects the peer-reviewed literature as of the corpus build date; verify critical clinical claims
+      against primary sources and current guidelines before applying them.
+    </div>
+
+    <div class="mskb-footer-meta">
+      <span>
+        &copy; 2026 Will Gray &middot;
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license" target="_blank">
+          CC&nbsp;BY-NC&nbsp;4.0
+        </a>
+      </span>
+      <span>
+        Questions, corrections, or comments:
+        <a href="mailto:willgray@jhu.edu">willgray@jhu.edu</a>
+      </span>
+      <span>
+        Source:
+        <a href="https://github.com/wrgr/mskb" target="_blank" rel="noopener">wrgr/mskb</a>
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .mskb-site-footer {
+    border-top: 1px solid var(--sl-color-hairline-light, color-mix(in srgb, currentColor 10%, transparent));
+    padding: 1.4rem var(--sl-content-pad-x, 1rem) 2rem;
+    margin-top: 3rem;
+  }
+
+  .mskb-footer-inner {
+    max-width: 72ch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: color-mix(in srgb, currentColor 55%, transparent);
+  }
+
+  .mskb-footer-disclaimer {
+    /* slightly more prominent than the meta line */
+  }
+
+  .mskb-footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.2rem;
+  }
+
+  .mskb-site-footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
+  .mskb-site-footer a:hover {
+    color: var(--sl-color-accent, #0e8f85);
+  }
+</style>

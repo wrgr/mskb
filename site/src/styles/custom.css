@@ -38,6 +38,12 @@
   max-width: 72ch;
 }
 
+/* The banner image needs to escape the 72ch prose cap. */
+.sl-markdown-content .home-banner-wrap {
+  max-width: none;
+  width: min(100%, 900px);
+}
+
 /* Kill the heavy heading ornament inherited from the old site. */
 .sl-markdown-content h1,
 .sl-markdown-content h2,
@@ -419,8 +425,26 @@
 /* Home / landing                                                         */
 /* ===================================================================== */
 
+.home-banner-wrap {
+  /* Bleed the banner to the full content column width, ignore the 72ch cap. */
+  width: 100%;
+  margin: -0.5rem 0 1.6rem;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.home-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Constrain height on very wide viewports so it doesn't feel too tall. */
+  max-height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .home-hero {
-  margin: 1rem 0 2.2rem;
+  margin: 0 0 2.2rem;
 }
 
 .home-hero h1 {
