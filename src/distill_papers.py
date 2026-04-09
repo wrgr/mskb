@@ -734,35 +734,51 @@ def _sanitize_distill_result(result: dict | None, reading_level: str | None = No
 
 
 class _GeminiClientShim:
-    """Minimal shim around google-generativeai that exposes the same
+    """Calls the Gemini REST API directly (no SDK) to expose the same
     ``client.messages.create(model, max_tokens, messages)`` interface used by
     the Anthropic SDK, so the rest of the distillation pipeline is unchanged."""
 
+    _BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+
     def __init__(self, api_key: str) -> None:
-        import google.generativeai as genai  # type: ignore
-        genai.configure(api_key=api_key)
-        self._genai = genai
+        import requests as _requests  # noqa: F401 — confirm requests is available
+        self._api_key = api_key
 
     class _MessagesNamespace:
-        def __init__(self, genai) -> None:
-            self._genai = genai
+        def __init__(self, api_key: str, base_url: str) -> None:
+            self._api_key = api_key
+            self._base_url = base_url
 
         def create(self, model: str, max_tokens: int, messages: list) -> object:
-            # Extract the user message text from the Anthropic-style messages list.
+            import requests
+
             prompt = ""
             for msg in messages:
                 if msg.get("role") == "user":
                     content = msg.get("content", "")
                     prompt = content if isinstance(content, str) else str(content)
                     break
-            gen_model = self._genai.GenerativeModel(
-                model_name=model,
-                generation_config={"max_output_tokens": max_tokens, "temperature": 0.2},
-            )
-            response = gen_model.generate_content(prompt)
-            text = response.text if hasattr(response, "text") else str(response)
 
-            # Return an object matching the Anthropic response shape.
+            url = f"{self._base_url}/{model}:generateContent"
+            payload = {
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"maxOutputTokens": max_tokens, "temperature": 0.2},
+            }
+            resp = requests.post(
+                url,
+                params={"key": self._api_key},
+                json=payload,
+                timeout=60,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            text = (
+                data.get("candidates", [{}])[0]
+                .get("content", {})
+                .get("parts", [{}])[0]
+                .get("text", "")
+            )
+
             class _Content:
                 def __init__(self, t: str) -> None:
                     self.text = t
@@ -773,7 +789,7 @@ class _GeminiClientShim:
 
     @property
     def messages(self):
-        return self._MessagesNamespace(self._genai)
+        return self._MessagesNamespace(self._api_key, self._BASE_URL)
 
 
 def _init_api_client(dist_cfg: dict) -> object | None:
