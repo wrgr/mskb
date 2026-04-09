@@ -1,14 +1,14 @@
 ---
 title: Learning pathways
-description: Three prebuilt pathways through the concept map — clinical, mechanistic, and emerging topics.
+description: Three prebuilt pathways through the concept map — clinical, mechanistic, and emerging topics grounded in the NMSS Pathways to Cures framework.
 sidebar:
   label: Overview
   order: 0
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 
-A **pathway** is an opinionated sequence through the concept map. Each pathway starts with foundations and ends with the most advanced concepts in that direction. You can of course jump around — pathways are scaffolding, not rails.
+A **pathway** is an opinionated sequence through the concept map. Each pathway starts with foundations and ends with the most advanced concepts in that direction. You can jump around — pathways are scaffolding, not rails.
 
 <CardGrid>
   <LinkCard
@@ -24,10 +24,24 @@ A **pathway** is an opinionated sequence through the concept map. Each pathway s
   <LinkCard
     title="Emerging topics"
     href="/mskb/pathways/emerging/"
-    description="PIRA, smoldering MS, paramagnetic rim lesions, BTK inhibitors. For learners who already have the basics and want the research frontier."
+    description="The NMSS Pathways to Cures framework — smoldering MS, remyelination, EBV prevention. The research frontiers and open questions that need the next generation."
   />
 </CardGrid>
+
+<Aside type="tip" title="Where to start if you're new">
+If you're new to MS, begin with the **Clinical** or **Mechanistic** pathway. Once you have the foundations, the **Emerging topics** pathway frames the biggest open problems — the areas where research is moving fastest and where new investigators are most needed.
+</Aside>
 
 ## How pathways use the concept graph
 
 Each pathway is a curated list of concept references. When you open a pathway, you see the sequence; each step links to its concept page, which in turn links to its prerequisites, papers, and resources. A pathway is the "spine"; concept pages are the "ribs".
+
+## The NMSS Pathways to Cures
+
+The **Emerging topics** pathway is grounded in the National MS Society's [Pathways to Cures Roadmap](https://doi.org/10.1177/13524585241266483) (Bebo et al., 2022 & 2024) — a field-wide strategic agenda developed with input from 300+ people living with MS and endorsed by 30+ MS societies. Its three pillars organize the most important open problems:
+
+| Pillar | Core question |
+|--------|--------------|
+| **Stop MS** | How do we halt smoldering neuroinflammation, especially in progressive MS? |
+| **Restore function** | Can we repair demyelination and protect axons from degeneration? |
+| **End MS forever** | Can we prevent MS — beginning with an EBV vaccine? |
