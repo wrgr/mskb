@@ -1,0 +1,38 @@
+---
+title: PIRA and Smoldering MS
+description: Progression independent of relapse activity, chronic active lesions, slowly expanding lesions, and the emerging model of smoldering neurodegeneration.
+concept:
+  id: pira_smoldering_ms
+  category: clinical
+  papers: []
+---
+
+## Learning objectives
+
+- Define PIRA (progression independent of relapse activity) and explain how it is measured
+- Describe the pathology of chronic active lesions and paramagnetic rim lesions (PRLs)
+- Explain the "smoldering MS" model as a continuously active, compartmentalized inflammatory process
+- Discuss why current DMTs have limited impact on PIRA
+
+## Prerequisites
+
+- [Disease Course](/mskb/concepts/clinical/disease-course/)
+- [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
+- [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
+
+## Key questions
+
+- What is the difference between PIRA and SPMS?
+- How do paramagnetic rim lesions relate to smoldering MS activity?
+- Why might BTK inhibitors address PIRA better than anti-CD20 agents?
+
+## Core idea
+
+PIRA accounts for 40–50% of disability accumulation in RRMS and the majority in progressive MS. It is driven by compartmentalized inflammation — microglia and astrocytes trapped within the CNS independently of peripheral immune surveillance. Chronic active lesions (CALs), visible as paramagnetic rim lesions (PRLs) on susceptibility-weighted MRI, are metabolically active for years and correlate with faster disability accumulation. Slowly expanding lesions (SELs) on serial MRI are a marker of ongoing smoldering pathology. The PIRA/smoldering framework is reshaping trial endpoints and treatment targets.
+
+## Related concepts
+
+- [Disease Course](/mskb/concepts/clinical/disease-course/)
+- [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
+- [BTK Inhibitors](/mskb/concepts/therapeutics/btk-inhibitors/)
+- [CSF Biomarkers](/mskb/concepts/diagnosis/csf-biomarkers/)

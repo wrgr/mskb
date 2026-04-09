@@ -1,0 +1,36 @@
+---
+title: Blood-Brain Barrier Dysfunction
+description: How tight-junction disruption and immune cell transmigration drive CNS inflammation — and why BBB integrity is a biomarker of disease activity.
+concept:
+  id: blood_brain_barrier
+  category: mechanisms
+  papers: []
+---
+
+## Learning objectives
+
+- Describe the structure of the BBB and the role of tight junctions, astrocytes, and pericytes
+- Explain how inflammatory mediators loosen the BBB and permit lymphocyte transmigration
+- Interpret gadolinium enhancement on MRI as a marker of acute BBB disruption
+- Connect BBB dysfunction to the rationale for natalizumab (VLA-4 blockade)
+
+## Prerequisites
+
+- [Immune System Basics for MS](/mskb/concepts/foundations/immune-system-basics/)
+- [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
+
+## Key questions
+
+- Why can T cells cross the BBB when healthy individuals have a sealed barrier?
+- What does a gadolinium-enhancing lesion mean clinically?
+- How does natalizumab prevent lymphocyte entry into the CNS?
+
+## Core idea
+
+The blood-brain barrier is maintained by tight junctions between endothelial cells, backed by astrocytic end-feet and pericytes. Pro-inflammatory cytokines (TNF-α, IL-17) downregulate tight-junction proteins (occludin, claudin-5) and upregulate adhesion molecules (VCAM-1) that capture rolling VLA-4+ lymphocytes for transmigration. Gadolinium enhancement on MRI directly images this breach. Restoration of BBB integrity is an important therapeutic target.
+
+## Related concepts
+
+- [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
+- [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
+- [DMT Overview](/mskb/concepts/therapeutics/dmt-overview/)

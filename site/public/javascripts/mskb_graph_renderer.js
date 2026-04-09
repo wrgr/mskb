@@ -144,19 +144,28 @@
 
   function normalizeNodes(nodes) {
     return (Array.isArray(nodes) ? nodes : [])
-      .map((node, idx) => ({
-        id: String(node && node.id ? node.id : `node:${idx}`),
-        label: String(node && node.label ? node.label : ""),
-        summary: String(node && node.summary ? node.summary : ""),
-        group: String(node && node.group ? node.group : "Other"),
-        href: String(node && node.href ? node.href : ""),
-        paper_ids: Array.isArray(node && node.paper_ids)
+      .map((node, idx) => {
+        const rawPaperIds = Array.isArray(node && node.paper_ids)
           ? node.paper_ids.map((v) => String(v || "")).filter(Boolean)
-          : [],
-        layer: Number.isFinite(Number(node && node.layer)) ? Math.trunc(Number(node.layer)) : 0,
-        x: Number.isFinite(Number(node && node.x)) ? Number(node.x) : idx,
-        y: Number.isFinite(Number(node && node.y)) ? Number(node.y) : 0,
-      }))
+          : [];
+        // paper_count: explicit field beats paper_ids length
+        let paperCount = rawPaperIds.length;
+        if (node && Number.isFinite(Number(node.paper_count)) && Number(node.paper_count) >= 0) {
+          paperCount = Math.trunc(Number(node.paper_count));
+        }
+        return {
+          id: String(node && node.id ? node.id : `node:${idx}`),
+          label: String(node && node.label ? node.label : ""),
+          summary: String(node && node.summary ? node.summary : ""),
+          group: String(node && node.group ? node.group : "Other"),
+          href: String(node && node.href ? node.href : ""),
+          paper_ids: rawPaperIds,
+          paper_count: paperCount,
+          layer: Number.isFinite(Number(node && node.layer)) ? Math.trunc(Number(node.layer)) : 0,
+          x: Number.isFinite(Number(node && node.x)) ? Number(node.x) : idx,
+          y: Number.isFinite(Number(node && node.y)) ? Number(node.y) : 0,
+        };
+      })
       .filter((node) => node.id);
   }
 
@@ -200,11 +209,16 @@
 
   function nodeSize(node) {
     const group = String(node && node.group ? node.group : "");
-    const paperBoost = Math.min(3, Math.log10((node.paper_ids || []).length + 1));
-    if (group === "Pathway") return 10 + paperBoost;
-    if (group === "Category") return 8.6 + paperBoost;
-    if (group === "Concept") return 7.1 + paperBoost;
-    return 7.4 + paperBoost;
+    const count = Number.isFinite(node && node.paper_count) ? Math.max(0, node.paper_count) : 0;
+    // Log-scale boost: 0 for 0 papers, ~3.6 for 1 k papers, ~5.3 for 10 k papers
+    const citationBoost = count > 0 ? Math.min(8, Math.log10(count + 1) * 2.4) : 0;
+    if (group === "Pathway") return 13;
+    if (group === "Category") return 15;
+    // Topic nodes scale with paper / citation count
+    if (group !== "Concept") return 6 + citationBoost;
+    // Concept nodes: modest fixed boost from linked papers
+    const conceptBoost = Math.min(2, Math.log10(count + 1));
+    return 8 + conceptBoost;
   }
 
   function centerOnNode(renderer, nodeId, ratio = 0.35) {
