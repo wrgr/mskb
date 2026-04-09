@@ -82,6 +82,29 @@ Concepts, citations, and resources are kept **separate** on purpose. The citatio
 
 ## How this was built
 
-MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology grounded in Bloom's taxonomy and cognitive load theory. The full architecture, governance checklist, and curation rubric are documented in [`EDUCATOR_INTEGRATION_GUIDE.md`](https://github.com/wrgr/mskb/blob/main/EDUCATOR_INTEGRATION_GUIDE.md).
+MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology grounded in Bloom's taxonomy and cognitive load theory. The corpus starts from **36 hand-curated seed papers** across 18 MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity and within-subdomain citation scores. Every design decision is documented.
+
+<CardGrid>
+  <LinkCard
+    title="Corpus overview"
+    href="/mskb/corpus/"
+    description="Target size, four-tier architecture, expansion sources, and quality gates."
+  />
+  <LinkCard
+    title="Design decisions"
+    href="/mskb/corpus/design-decisions/"
+    description="Audit trail — every significant design decision with explicit rationale."
+  />
+  <LinkCard
+    title="Topic map"
+    href="/mskb/corpus/topics/"
+    description="18 topics + Natural History across Foundation, Clinical, and Context/Future layers."
+  />
+  <LinkCard
+    title="Gap tracker"
+    href="/mskb/corpus/gaps/"
+    description="10 known coverage gaps tracked publicly — Global South, equity, digital biomarkers, and more."
+  />
+</CardGrid>
 
 Pipeline source: [wrgr/mskb](https://github.com/wrgr/mskb). Derived from [connectome-kb](https://github.com/wrgr/connectome-kb).

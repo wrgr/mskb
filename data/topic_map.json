@@ -1,0 +1,242 @@
+{
+  "version": "1.0",
+  "generated_from": "ms_corpus_specification_v1.xlsx — Topic Map sheet",
+  "description": "18 topics + Topic 1b organised into three layers (Foundation, Clinical, Context/Future). Each topic has 2 T1 seeds and a target document count for the full corpus.",
+  "layers": {
+    "Foundation": "Topics T00, T01, T1b, T02–T04 — biological vocabulary and disease framing. Read first.",
+    "Clinical": "Topics T05–T11 — diagnosis, treatment, management. Presuppose Foundation layer.",
+    "Context/Future": "Topics T12–T16 — equity, pediatric, AI, frontiers. Most meaningful after Clinical layer."
+  },
+  "topics": [
+    {
+      "topic_code": "T00",
+      "layer": "Foundation",
+      "topic_name": "Epidemiology & Global Burden",
+      "why_it_matters": "Quantitative global frame; geographic diversity; disease scale worldwide",
+      "seed_A": "MS-T1-035",
+      "seed_B": "MS-T1-036",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T01",
+      "layer": "Foundation",
+      "topic_name": "Disease Overview & Phenotypes",
+      "why_it_matters": "RRMS/SPMS/PPMS/CIS/RIS taxonomy; diagnostic criteria; prerequisite vocabulary for all other topics",
+      "seed_A": "MS-T1-001",
+      "seed_B": "MS-T1-002",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T1b",
+      "layer": "Foundation",
+      "topic_name": "Natural History",
+      "why_it_matters": "Pre-DMT disease trajectory; disability progression independent of relapses; baseline for treatment effect measurement",
+      "seed_A": "MS-T1-003",
+      "seed_B": "MS-T1-004",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T02",
+      "layer": "Foundation",
+      "topic_name": "Pathophysiology",
+      "why_it_matters": "Demyelination vs neurodegeneration duality; lesion biology; why peripheral immune drugs fail in progressive MS",
+      "seed_A": "MS-T1-005",
+      "seed_B": "MS-T1-006",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T03",
+      "layer": "Foundation",
+      "topic_name": "Genetics",
+      "why_it_matters": "HLA architecture; 200+ GWAS loci; polygenic risk; why MS is an immune-dysregulation disease",
+      "seed_A": "MS-T1-007",
+      "seed_B": "MS-T1-008",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T04",
+      "layer": "Foundation",
+      "topic_name": "Risk Factors & Etiology",
+      "why_it_matters": "EBV; vitamin D; smoking; latitude; multi-factor model; emerging vs settled science",
+      "seed_A": "MS-T1-009",
+      "seed_B": "MS-T1-010",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T05",
+      "layer": "Clinical",
+      "topic_name": "Diagnosis & Monitoring",
+      "why_it_matters": "MRI criteria; gadolinium; PRL; central vein sign; evolving McDonald criteria",
+      "seed_A": "MS-T1-011",
+      "seed_B": "MS-T1-012",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T06",
+      "layer": "Clinical",
+      "topic_name": "Biomarkers",
+      "why_it_matters": "NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use",
+      "seed_A": "MS-T1-013",
+      "seed_B": "MS-T1-014",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T07",
+      "layer": "Clinical",
+      "topic_name": "Disease-Modifying Therapies",
+      "why_it_matters": "DMT classes; escalation vs treat-to-target; B-cell depletion paradigm; progressive MS treatment",
+      "seed_A": "MS-T1-015",
+      "seed_B": "MS-T1-016",
+      "target_n": "30-35"
+    },
+    {
+      "topic_code": "T08",
+      "layer": "Clinical",
+      "topic_name": "Progressive MS & Smoldering",
+      "why_it_matters": "PIRA; smoldering inflammation; why relapse suppression ≠ disability prevention; biggest unmet need",
+      "seed_A": "MS-T1-017",
+      "seed_B": "MS-T1-018",
+      "target_n": "25-30"
+    },
+    {
+      "topic_code": "T09",
+      "layer": "Clinical",
+      "topic_name": "Patient-Reported Outcomes",
+      "why_it_matters": "EDSS limitations; fatigue; cognition; PRO instruments; trial endpoint gaps; digital health",
+      "seed_A": "MS-T1-019",
+      "seed_B": "MS-T1-020",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T10",
+      "layer": "Clinical",
+      "topic_name": "Comorbidities",
+      "why_it_matters": "Depression; anxiety; cognitive impairment; bladder dysfunction; interaction with disability",
+      "seed_A": "MS-T1-021",
+      "seed_B": "MS-T1-022",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T11",
+      "layer": "Clinical",
+      "topic_name": "Pregnancy & MS",
+      "why_it_matters": "Relapse-rebound risk; DMT teratogenicity; washout; post-partum; breastfeeding",
+      "seed_A": "MS-T1-023",
+      "seed_B": "MS-T1-024",
+      "target_n": "15-20"
+    },
+    {
+      "topic_code": "T12",
+      "layer": "Context/Future",
+      "topic_name": "Pediatric MS",
+      "why_it_matters": "ADEM differential; neurodevelopmental stakes; IPMSSG criteria; pediatric EBV data",
+      "seed_A": "MS-T1-025",
+      "seed_B": "MS-T1-026",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T13",
+      "layer": "Context/Future",
+      "topic_name": "Equity & SDOH",
+      "why_it_matters": "Structural racism; Black/Hispanic disparities; diagnostic delay; access to high-efficacy DMTs",
+      "seed_A": "MS-T1-027",
+      "seed_B": "MS-T1-028",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T14",
+      "layer": "Context/Future",
+      "topic_name": "Clinical AI & Learning Systems",
+      "why_it_matters": "Lesion segmentation; progression prediction; treatment recommendation; implementation gap; explainability",
+      "seed_A": "MS-T1-029",
+      "seed_B": "MS-T1-030",
+      "target_n": "20-25"
+    },
+    {
+      "topic_code": "T15",
+      "layer": "Context/Future",
+      "topic_name": "Emerging Frontiers",
+      "why_it_matters": "Data-driven reclassification; remyelination; neuroprotection; EBV vaccine prevention",
+      "seed_A": "MS-T1-031",
+      "seed_B": "MS-T1-032",
+      "target_n": "15-20"
+    },
+    {
+      "topic_code": "T16",
+      "layer": "Context/Future",
+      "topic_name": "Research Priorities & Cures Roadmap",
+      "why_it_matters": "Stop/Restore/End pathways; patient-informed priorities; field-wide strategic agenda; funding alignment",
+      "seed_A": "MS-T1-033",
+      "seed_B": "MS-T1-034",
+      "target_n": "10-15"
+    }
+  ],
+  "review_anchors": [
+    {
+      "source_id": "R1",
+      "title": "Multiple sclerosis",
+      "authors": "Reich DS, Lucchinetti CF, Calabresi PA",
+      "year": 2018,
+      "journal": "NEJM",
+      "doi": "https://doi.org/10.1056/NEJMra1401483",
+      "pmid": "29320652",
+      "topics_covered": ["T01", "T02", "T05", "T06", "T07"],
+      "anchor_role": "bridge"
+    },
+    {
+      "source_id": "R2",
+      "title": "Multiple sclerosis (Lancet Seminar 2024)",
+      "authors": "Jakimovski D et al.",
+      "year": 2024,
+      "journal": "The Lancet",
+      "doi": "https://doi.org/10.1016/S0140-6736(23)01473-3",
+      "pmid": "37949093",
+      "topics_covered": ["T01", "T02", "T03", "T04", "T05", "T07", "T08"],
+      "anchor_role": "current-overview"
+    },
+    {
+      "source_id": "R3",
+      "title": "MS progression: new mechanism-driven framework",
+      "authors": "Kuhlmann T, Moccia M, Cohen JA, Mowry EM et al.",
+      "year": 2023,
+      "journal": "Lancet Neurology",
+      "doi": "https://doi.org/10.1016/S1474-4422(22)00289-7",
+      "pmid": "36410373",
+      "topics_covered": ["T08", "T1b", "T02", "T06"],
+      "anchor_role": "diversity"
+    },
+    {
+      "source_id": "R4",
+      "title": "Blood and CSF biomarkers for MS: emerging clinical applications",
+      "authors": "(Lancet Neurology 2025 biomarker review)",
+      "year": 2025,
+      "journal": "Lancet Neurology",
+      "doi": "https://doi.org/10.1016/S1474-4422(25)00249-2",
+      "pmid": null,
+      "topics_covered": ["T06", "T05", "T08"],
+      "anchor_role": "emerging"
+    },
+    {
+      "source_id": "R5",
+      "title": "Health disparities and inequities in MS and related disorders",
+      "authors": "Amezcua L et al.",
+      "year": 2021,
+      "journal": "JAMA Neurology",
+      "doi": "https://doi.org/10.1001/jamaneurol.2021.3416",
+      "pmid": "34605862",
+      "topics_covered": ["T13"],
+      "anchor_role": "equity"
+    },
+    {
+      "source_id": "R6",
+      "title": "Diagnosis of MS: 2024 revisions of McDonald criteria",
+      "authors": "Montalban X, Oh J, Banwell B et al.",
+      "year": 2025,
+      "journal": "Lancet Neurology",
+      "doi": "https://doi.org/10.1016/S1474-4422(25)00270-4",
+      "pmid": "40975101",
+      "topics_covered": ["T01", "T05", "T06", "T12"],
+      "anchor_role": "global"
+    }
+  ]
+}

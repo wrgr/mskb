@@ -14,6 +14,13 @@ try:
 except Exception:
     community_louvain = None
 
+try:
+    import igraph as ig
+    import leidenalg
+    _LEIDEN_AVAILABLE = True
+except Exception:
+    _LEIDEN_AVAILABLE = False
+
 
 def _pagerank(graph: nx.DiGraph, alpha: float = 0.85, max_iter: int = 100, tol: float = 1.0e-6) -> dict:
     if graph.number_of_nodes() == 0:
@@ -42,9 +49,25 @@ def _pagerank(graph: nx.DiGraph, alpha: float = 0.85, max_iter: int = 100, tol: 
 
 
 def _louvain_partition(graph: nx.Graph) -> dict:
-    if community_louvain is None or graph.number_of_nodes() == 0:
-        return {n: 0 for n in graph.nodes()}
-    return community_louvain.best_partition(graph)
+    """Return a {node: community_id} partition using Louvain or Leiden as fallback."""
+    if graph.number_of_nodes() == 0:
+        return {}
+
+    # Preferred: python-louvain
+    if community_louvain is not None:
+        return community_louvain.best_partition(graph)
+
+    # Fallback: leidenalg (Leiden algorithm — comparable quality to Louvain)
+    if _LEIDEN_AVAILABLE:
+        nodes = list(graph.nodes())
+        node_index = {n: i for i, n in enumerate(nodes)}
+        edges = [(node_index[u], node_index[v]) for u, v in graph.edges() if u in node_index and v in node_index]
+        ig_graph = ig.Graph(n=len(nodes), edges=edges, directed=False)
+        partition = leidenalg.find_partition(ig_graph, leidenalg.ModularityVertexPartition)
+        return {nodes[i]: cid for cid, members in enumerate(partition) for i in members}
+
+    # Last resort: assign every node to community 0
+    return {n: 0 for n in graph.nodes()}
 
 
 def _iter_cached_works(cache_dir: Path):

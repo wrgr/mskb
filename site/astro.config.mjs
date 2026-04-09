@@ -71,6 +71,16 @@ export default defineConfig({
         },
         { label: 'Explorer', link: '/explorer/' },
         { label: 'Glossary', link: '/glossary/' },
+        {
+          label: 'Corpus',
+          items: [
+            { label: 'Overview', link: '/corpus/' },
+            { label: 'Topic Map', link: '/corpus/topics/' },
+            { label: 'Seeds & Anchors', link: '/corpus/seeds/' },
+            { label: 'Design Decisions', link: '/corpus/design-decisions/' },
+            { label: 'Gap Tracker', link: '/corpus/gaps/' },
+          ],
+        },
       ],
       pagination: false,
       lastUpdated: true,

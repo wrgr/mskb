@@ -733,20 +733,108 @@ def _sanitize_distill_result(result: dict | None, reading_level: str | None = No
     }
 
 
+class _GeminiClientShim:
+    """Calls the Gemini REST API directly (no SDK) to expose the same
+    ``client.messages.create(model, max_tokens, messages)`` interface used by
+    the Anthropic SDK, so the rest of the distillation pipeline is unchanged."""
+
+    _BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+
+    def __init__(self, api_key: str) -> None:
+        import requests as _requests  # noqa: F401 — confirm requests is available
+        self._api_key = api_key
+
+    class _MessagesNamespace:
+        def __init__(self, api_key: str, base_url: str) -> None:
+            self._api_key = api_key
+            self._base_url = base_url
+
+        def create(self, model: str, max_tokens: int, messages: list) -> object:
+            import requests
+
+            prompt = ""
+            for msg in messages:
+                if msg.get("role") == "user":
+                    content = msg.get("content", "")
+                    prompt = content if isinstance(content, str) else str(content)
+                    break
+
+            url = f"{self._base_url}/{model}:generateContent"
+            payload = {
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"maxOutputTokens": max_tokens, "temperature": 0.2},
+            }
+            resp = requests.post(
+                url,
+                params={"key": self._api_key},
+                json=payload,
+                timeout=60,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            text = (
+                data.get("candidates", [{}])[0]
+                .get("content", {})
+                .get("parts", [{}])[0]
+                .get("text", "")
+            )
+
+            class _Content:
+                def __init__(self, t: str) -> None:
+                    self.text = t
+            class _Msg:
+                def __init__(self, t: str) -> None:
+                    self.content = [_Content(t)]
+            return _Msg(text)
+
+    @property
+    def messages(self):
+        return self._MessagesNamespace(self._api_key, self._BASE_URL)
+
+
 def _init_api_client(dist_cfg: dict) -> object | None:
-    """Return an initialised Anthropic client if configured and credentials are available, else None."""
-    if dist_cfg.get("provider") != "anthropic":
-        return None
-    try:
-        import anthropic
-        if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
+    """Return an initialised API client for distillation, or None (rules-based fallback).
+
+    Priority:
+      1. provider=anthropic  — uses ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN
+      2. provider=gemini     — uses GEMINI_API_KEY or GOOGLE_API_KEY
+      3. provider unset/other — try Anthropic, then Gemini, then fall back
+    """
+    provider = (dist_cfg.get("provider") or "").lower()
+
+    # --- Anthropic ---
+    if provider in ("anthropic", ""):
+        try:
+            import anthropic
+            if os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"):
+                print("Using Claude API for paper distillation.")
+                return anthropic.Anthropic()
+        except Exception as exc:
+            print(f"Could not initialize Anthropic client ({exc}).")
+        if provider == "anthropic":
             print("Anthropic credentials not found. Falling back to rules-based distillation.")
             return None
-        print("Using Claude API for paper distillation.")
-        return anthropic.Anthropic()
-    except Exception as exc:
-        print(f"Could not initialize Anthropic client ({exc}). Falling back to rules-based distillation.")
-        return None
+
+    # --- Gemini ---
+    if provider in ("gemini", ""):
+        gemini_key = (
+            os.environ.get("GEMINI_API_KEY")
+            or os.environ.get("GOOGLE_API_KEY")
+            or os.environ.get("GOOGLE_GEMINI_API_KEY")
+        )
+        if gemini_key:
+            try:
+                client = _GeminiClientShim(gemini_key)
+                print("Using Gemini API for paper distillation.")
+                return client
+            except Exception as exc:
+                print(f"Could not initialize Gemini client ({exc}).")
+        if provider == "gemini":
+            print("Gemini credentials not found. Falling back to rules-based distillation.")
+            return None
+
+    print("No LLM credentials found. Falling back to rules-based distillation.")
+    return None
 
 
 def _load_distill_corpus(
@@ -832,8 +920,8 @@ def _generate_topic_overviews(
                 paper_summaries=paper_summaries_text,
             )
             try:
-                message = api_client.messages.create(model=model, max_tokens=LLM_MAX_TOKENS, messages=[{"role": "user", "content": prompt}])
-                overview_text = message.content[0].text
+                resp = api_client.messages.create(model=model, max_tokens=LLM_MAX_TOKENS, messages=[{"role": "user", "content": prompt}])
+                overview_text = resp.content[0].text
             except Exception:
                 overview_text = f"This topic cluster covers {cluster['auto_label']} and contains {cluster['n_papers']} papers."
         else:
@@ -946,7 +1034,7 @@ def run(config_path: str) -> None:
                 distill_method = "rules_based"
             else:
                 result = api_result
-                distill_method = "claude_api"
+                distill_method = "gemini_api" if isinstance(api_client, _GeminiClientShim) else "claude_api"
         else:
             result = _rules_based_distill(paper_row, source_text=source_text, reading_level=level)
             distill_method = "rules_based"
