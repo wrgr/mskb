@@ -1,1 +1,125 @@
-{}
+{
+  "version": 1,
+  "concepts": {
+    "b_cell_therapies": {
+      "foundational": [],
+      "advanced": []
+    },
+    "bladder_bowel_dysfunction": {
+      "foundational": [],
+      "advanced": []
+    },
+    "blood_brain_barrier": {
+      "foundational": [],
+      "advanced": []
+    },
+    "btk_inhibitors": {
+      "foundational": [],
+      "advanced": []
+    },
+    "cognition_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "csf_biomarkers": {
+      "foundational": [],
+      "advanced": []
+    },
+    "demyelination_remyelination": {
+      "foundational": [],
+      "advanced": []
+    },
+    "depression_anxiety_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "disease_course": {
+      "foundational": [],
+      "advanced": []
+    },
+    "dmt_overview": {
+      "foundational": [],
+      "advanced": []
+    },
+    "ebv_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "environmental_risk_factors": {
+      "foundational": [],
+      "advanced": []
+    },
+    "equity_sdoh": {
+      "foundational": [],
+      "advanced": []
+    },
+    "fatigue_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "genetic_susceptibility": {
+      "foundational": [],
+      "advanced": []
+    },
+    "immune_system_basics": {
+      "foundational": [],
+      "advanced": []
+    },
+    "mcdonald_criteria": {
+      "foundational": [],
+      "advanced": []
+    },
+    "mri_patterns": {
+      "foundational": [],
+      "advanced": []
+    },
+    "ms_epidemiology": {
+      "foundational": [],
+      "advanced": []
+    },
+    "ms_phenotypes": {
+      "foundational": [],
+      "advanced": []
+    },
+    "neuroinflammation": {
+      "foundational": [],
+      "advanced": []
+    },
+    "paramagnetic_rim_lesions": {
+      "foundational": [],
+      "advanced": []
+    },
+    "pediatric_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "pira_smoldering_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "pregnancy_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "rehabilitation_exercise": {
+      "foundational": [],
+      "advanced": []
+    },
+    "sex_gender_ms": {
+      "foundational": [],
+      "advanced": []
+    },
+    "shared_decision_making": {
+      "foundational": [],
+      "advanced": []
+    },
+    "treatment_monitoring": {
+      "foundational": [],
+      "advanced": []
+    },
+    "what_is_ms": {
+      "foundational": [],
+      "advanced": []
+    }
+  }
+}

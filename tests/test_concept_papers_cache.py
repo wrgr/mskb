@@ -56,6 +56,9 @@ def test_concept_papers_cache_schema_and_set_equality() -> None:
 
 
 def test_all_cached_paper_ids_exist_in_corpus() -> None:
+    if not SCORED_PAPERS_PATH.exists():
+        import pytest
+        pytest.skip(f"pipeline output not present: {SCORED_PAPERS_PATH}")
     payload = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
     concepts = payload.get("concepts") or {}
     valid_paper_ids = _load_valid_paper_ids()
