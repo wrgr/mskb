@@ -189,7 +189,13 @@ def _load_cached_works(cache_dir: Path) -> dict[str, dict[str, Any]]:
     return works
 
 
-def run(config_path: str, scope: str, max_papers: int | None, max_openalex_lookups: int) -> None:
+def run(
+    config_path: str,
+    scope: str,
+    max_papers: int | None,
+    max_openalex_lookups: int,
+    retry_failed: bool,
+) -> None:
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     outdir = root / cfg["output_dir"]
@@ -203,6 +209,10 @@ def run(config_path: str, scope: str, max_papers: int | None, max_openalex_looku
 
     if scope == "selected":
         papers_path = graph_dir / "core_corpus_selected.csv"
+        if not papers_path.exists():
+            raise FileNotFoundError(f"Missing {papers_path}")
+    elif scope in {"tracked_t4", "tracked"}:
+        papers_path = graph_dir / "core_corpus_tracked_with_t4.csv"
         if not papers_path.exists():
             raise FileNotFoundError(f"Missing {papers_path}")
     else:
@@ -223,7 +233,8 @@ def run(config_path: str, scope: str, max_papers: int | None, max_openalex_looku
                 try:
                     row = json.loads(line)
                     pid = _clean_text(row.get("canonical_paper_id", ""))
-                    if pid:
+                    status = _clean_text(row.get("status", ""))
+                    if pid and (not retry_failed or status == "ok"):
                         done_ids.add(pid)
                 except Exception:
                     continue
@@ -247,6 +258,7 @@ def run(config_path: str, scope: str, max_papers: int | None, max_openalex_looku
 
     stats = {
         "scope": scope,
+        "retry_failed": bool(retry_failed),
         "total_input_papers": int(len(papers)),
         "skipped_already_done": 0,
         "openalex_cache_hits": 0,
@@ -356,9 +368,18 @@ def run(config_path: str, scope: str, max_papers: int | None, max_openalex_looku
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config.yaml")
-    parser.add_argument("--scope", choices=["canonical", "selected"], default="canonical")
+    parser.add_argument(
+        "--scope",
+        choices=["canonical", "selected", "tracked_t4", "tracked"],
+        default="canonical",
+    )
     parser.add_argument("--max-papers", type=int, default=0)
     parser.add_argument("--max-openalex-lookups", type=int, default=9000)
+    parser.add_argument(
+        "--retry-failed",
+        action="store_true",
+        help="Retry papers that exist in JSONL but have non-ok status; only skip prior ok rows.",
+    )
     args = parser.parse_args()
     max_papers = args.max_papers if args.max_papers > 0 else None
     run(
@@ -366,4 +387,5 @@ if __name__ == "__main__":
         scope=args.scope,
         max_papers=max_papers,
         max_openalex_lookups=max(0, int(args.max_openalex_lookups)),
+        retry_failed=bool(args.retry_failed),
     )
