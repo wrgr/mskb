@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 from .utils import ensure_dir, load_config, save_json
 
@@ -26,6 +27,85 @@ def _is_missing_abstract(series: pd.Series) -> pd.Series:
 
 def _topic_counts(frame: pd.DataFrame) -> dict[str, int]:
     return {str(k): int(v) for k, v in frame["primary_topic_code"].value_counts().sort_index().items()}
+
+
+def _normalize_doi(value: object) -> str:
+    text = str(value or "").strip().lower()
+    for prefix in ("https://doi.org/", "http://doi.org/", "doi:"):
+        if text.startswith(prefix):
+            text = text[len(prefix):]
+    return text.strip()
+
+
+def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
+    path = root / "data" / "t4_expert_signal.yaml"
+    if not path.exists():
+        return pd.DataFrame(
+            columns=[
+                "t4_id",
+                "t4_concept",
+                "title",
+                "authors",
+                "year",
+                "journal",
+                "topic_codes",
+                "corpus_status",
+                "corpus_id",
+                "corpus_doi",
+                "mapped_canonical_paper_id",
+            ]
+        )
+    payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    by_concept = payload.get("by_concept", {}) if isinstance(payload, dict) else {}
+    rows: list[dict] = []
+    for concept, items in by_concept.items():
+        for item in items or []:
+            topic_codes = item.get("topic_codes", [])
+            if not isinstance(topic_codes, list):
+                topic_codes = []
+            rows.append(
+                {
+                    "t4_id": str(item.get("t4_id", "")).strip(),
+                    "t4_concept": str(concept or "").strip(),
+                    "title": str(item.get("title", "")).strip(),
+                    "authors": str(item.get("authors", "")).strip(),
+                    "year": pd.to_numeric(item.get("year"), errors="coerce"),
+                    "journal": str(item.get("journal", "")).strip(),
+                    "topic_codes": ",".join(str(code).strip() for code in topic_codes if str(code).strip()),
+                    "corpus_status": str(item.get("corpus_status", "")).strip(),
+                    "corpus_id": str(item.get("corpus_id", "")).strip(),
+                    "corpus_doi": str(item.get("corpus_doi", "")).strip(),
+                }
+            )
+    t4 = pd.DataFrame(rows)
+    if t4.empty:
+        t4["mapped_canonical_paper_id"] = ""
+        return t4
+
+    scored_ref = scored[["canonical_paper_id", "doi"]].copy()
+    scored_ref["canonical_paper_id"] = scored_ref["canonical_paper_id"].astype(str)
+    scored_ref["doi_norm"] = scored_ref["doi"].map(_normalize_doi)
+    known_ids = set(scored_ref["canonical_paper_id"])
+    doi_to_id = dict(
+        zip(
+            scored_ref.loc[scored_ref["doi_norm"].astype(str) != "", "doi_norm"],
+            scored_ref.loc[scored_ref["doi_norm"].astype(str) != "", "canonical_paper_id"],
+        )
+    )
+
+    mapped: list[str] = []
+    for _, row in t4.iterrows():
+        cid = ""
+        corpus_id = str(row.get("corpus_id", "") or "").strip()
+        if corpus_id and corpus_id in known_ids:
+            cid = corpus_id
+        else:
+            doi_norm = _normalize_doi(row.get("corpus_doi", ""))
+            if doi_norm and doi_norm in doi_to_id:
+                cid = str(doi_to_id[doi_norm])
+        mapped.append(cid)
+    t4["mapped_canonical_paper_id"] = mapped
+    return t4
 
 
 def _select_t3_ids(
@@ -265,6 +345,147 @@ def run(config_path: str) -> None:
     missing_path = graph_dir / "core_corpus_missing_abstracts.csv"
     missing.to_csv(missing_path, index=False)
 
+    t4_rows = _load_t4_signal_rows(root, scored)
+    t4_meta_cols = ["t4_id", "t4_concept", "t4_source_type", "t4_topic_codes", "t4_corpus_status"]
+    tracked = capped.copy()
+    tracked["tracked_source"] = "T1_T2_T3"
+    for col in t4_meta_cols:
+        tracked[col] = ""
+
+    mapped_rows = t4_rows[t4_rows["mapped_canonical_paper_id"].astype(str) != ""].copy() if not t4_rows.empty else pd.DataFrame()
+    mapped_rows_df = pd.DataFrame(
+        columns=["canonical_paper_id", "t4_id", "t4_concept", "t4_source_type", "t4_topic_codes", "t4_corpus_status"]
+    )
+    if not mapped_rows.empty:
+        mapped_rows_df = mapped_rows.rename(columns={"mapped_canonical_paper_id": "canonical_paper_id"})[
+            ["canonical_paper_id", "t4_id", "t4_concept", "topic_codes", "corpus_status"]
+        ].copy()
+        mapped_rows_df["canonical_paper_id"] = mapped_rows_df["canonical_paper_id"].astype(str)
+        mapped_rows_df["t4_source_type"] = "concept_anchor_signal"
+        mapped_rows_df = mapped_rows_df.rename(
+            columns={"topic_codes": "t4_topic_codes", "corpus_status": "t4_corpus_status"}
+        ).drop_duplicates(subset=["canonical_paper_id"])
+        tracked = tracked.drop(columns=t4_meta_cols, errors="ignore").merge(
+            mapped_rows_df, on="canonical_paper_id", how="left"
+        )
+        for col in t4_meta_cols:
+            tracked[col] = tracked[col].fillna("")
+        tracked.loc[tracked["t4_id"].astype(str) != "", "tracked_source"] = "T1_T2_T3_plus_T4"
+
+    selected_ids = set(tracked["canonical_paper_id"].astype(str))
+    t4_mapped_ids = set(mapped_rows_df["canonical_paper_id"].astype(str)) if not mapped_rows_df.empty else set()
+    t4_mapped_add_ids = sorted(t4_mapped_ids - selected_ids)
+
+    scored_with_topic = scored.merge(topic_evidence, on="canonical_paper_id", how="left")
+    scored_with_topic["primary_topic_code"] = scored_with_topic["primary_topic_code"].fillna("UNMAPPED").astype(str)
+
+    t4_mapped_add_df = pd.DataFrame(columns=tracked.columns)
+    if t4_mapped_add_ids:
+        t4_mapped_add_df = scored_with_topic[
+            scored_with_topic["canonical_paper_id"].astype(str).isin(t4_mapped_add_ids)
+        ].copy()
+        for col in tracked.columns:
+            if col not in t4_mapped_add_df.columns:
+                t4_mapped_add_df[col] = pd.NA
+        t4_mapped_add_df = t4_mapped_add_df[tracked.columns].copy()
+        t4_mapped_add_df["core_selection_tier"] = "T4"
+        t4_mapped_add_df["tracked_source"] = "T4_mapped"
+        for flag_col, val in (
+            ("t2_base_gate", False),
+            ("t2_structure_gate", False),
+            ("t2_relax_gate", False),
+            ("t3_selected", False),
+            ("t3_rank_in_topic", 0),
+            ("t3_topic_cap", 0),
+        ):
+            if flag_col in t4_mapped_add_df.columns:
+                t4_mapped_add_df[flag_col] = val
+        t4_mapped_add_df = t4_mapped_add_df.drop(columns=t4_meta_cols, errors="ignore").merge(
+            mapped_rows_df, on="canonical_paper_id", how="left"
+        )
+        for col in t4_meta_cols:
+            t4_mapped_add_df[col] = t4_mapped_add_df[col].fillna("")
+        tracked = pd.concat([tracked, t4_mapped_add_df[tracked.columns]], ignore_index=True)
+
+    forced_rows = (
+        t4_rows[t4_rows["mapped_canonical_paper_id"].astype(str) == ""].copy() if not t4_rows.empty else pd.DataFrame()
+    )
+    forced_rows = forced_rows[
+        forced_rows["corpus_status"].astype(str).str.lower().str.startswith("not_found")
+    ].copy() if not forced_rows.empty else forced_rows
+
+    forced_df = pd.DataFrame(columns=tracked.columns)
+    if not forced_rows.empty:
+        forced_records: list[dict] = []
+        for _, row in forced_rows.iterrows():
+            t4_id = str(row.get("t4_id", "")).strip()
+            pid = f"t4::{t4_id.lower()}" if t4_id else f"t4::{len(forced_records) + 1}"
+            topic_codes = [part.strip() for part in str(row.get("topic_codes", "")).split(",") if part.strip()]
+            primary_topic = topic_codes[0] if topic_codes else "UNMAPPED"
+            year_value = int(row["year"]) if not pd.isna(row.get("year")) else pd.NA
+            forced_records.append(
+                {
+                    "canonical_paper_id": pid,
+                    "title": str(row.get("title", "")).strip(),
+                    "year": year_value,
+                    "year_int": year_value if year_value is not pd.NA else 0,
+                    "doi": _normalize_doi(row.get("corpus_doi", "")),
+                    "venue": str(row.get("journal", "")).strip(),
+                    "first_author": str(row.get("authors", "")).strip(),
+                    "openalex_id": "",
+                    "all_openalex_ids": "",
+                    "abstract": "",
+                    "tier": "included",
+                    "core_selection_tier": "T4",
+                    "primary_topic_code": primary_topic,
+                    "paper_importance_score": 0.0,
+                    "age_normalized_importance_score": 0.0,
+                    "rank_age_normalized_importance": 0.0,
+                    "citations_per_year_raw": 0.0,
+                    "paper_age_years": 0.0,
+                    "merged_cited_by_count": 0,
+                    "pagerank": 0.0,
+                    "kcore": 0,
+                    "in_degree": 0,
+                    "out_degree": 0,
+                    "cross_seed_score": 0.0,
+                    "is_core_seed": False,
+                    "t2_base_gate": False,
+                    "t2_structure_gate": False,
+                    "t2_relax_gate": False,
+                    "t3_selected": False,
+                    "t3_rank_in_topic": 0,
+                    "t3_topic_cap": 0,
+                    "tracked_source": "T4_forced_not_found",
+                    "t4_id": t4_id,
+                    "t4_concept": str(row.get("t4_concept", "")).strip(),
+                    "t4_source_type": "concept_anchor_signal",
+                    "t4_topic_codes": str(row.get("topic_codes", "")).strip(),
+                    "t4_corpus_status": str(row.get("corpus_status", "")).strip(),
+                    "evidence_type": "expert_pick",
+                    "evidence_strength": 1,
+                }
+            )
+        forced_df = pd.DataFrame(forced_records)
+        for col in tracked.columns:
+            if col not in forced_df.columns:
+                forced_df[col] = pd.NA
+        forced_df = forced_df[tracked.columns].copy()
+        tracked = pd.concat([tracked, forced_df], ignore_index=True)
+
+    tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
+    tracked.to_csv(tracked_path, index=False)
+    t4_additions_path = graph_dir / "t4_mapped_additions_not_in_t1_t3.csv"
+    if t4_mapped_add_df.empty:
+        pd.DataFrame(columns=tracked.columns).to_csv(t4_additions_path, index=False)
+    else:
+        t4_mapped_add_df.to_csv(t4_additions_path, index=False)
+    t4_forced_path = graph_dir / "t4_forced_not_found.csv"
+    if forced_df.empty:
+        pd.DataFrame(columns=tracked.columns).to_csv(t4_forced_path, index=False)
+    else:
+        forced_df.to_csv(t4_forced_path, index=False)
+
     summary = {
         "input_scoped_rows": int(len(scoped)),
         "rules": {
@@ -317,10 +538,20 @@ def run(config_path: str) -> None:
             "pct": round(100.0 * float(len(missing)) / float(len(capped)), 4) if len(capped) > 0 else 0.0,
             "path": str(missing_path),
         },
+        "t4": {
+            "yaml_rows_total": int(len(t4_rows)),
+            "mapped_to_existing_corpus": int(len(t4_mapped_ids)),
+            "mapped_additions_not_in_t1_t2_t3": int(len(t4_mapped_add_df)),
+            "forced_not_found_added": int(len(forced_df)),
+            "tracked_total_with_t4": int(len(tracked)),
+        },
         "artifacts": {
             "selected_csv": str(selected_path),
             "removed_csv": str(removed_path),
             "missing_csv": str(missing_path),
+            "tracked_with_t4_csv": str(tracked_path),
+            "t4_mapped_additions_csv": str(t4_additions_path),
+            "t4_forced_not_found_csv": str(t4_forced_path),
         },
     }
     summary_path = graph_dir / "core_corpus_selection_summary.json"

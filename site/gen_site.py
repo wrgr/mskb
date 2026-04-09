@@ -623,9 +623,22 @@ def _build_explorer_assets(
     topic_clusters: pd.DataFrame,
 ) -> None:
     graph_dir = root / cfg["output_dir"] / "graph"
-    scored_path = graph_dir / "scored_papers.csv"
+    explorer_cfg = (cfg.get("site", {}) or {}).get("explorer", {}) or {}
+    source_csv = _clean_text(explorer_cfg.get("source_csv", ""))
+    source_candidates: list[Path] = []
+    if source_csv:
+        source_path = Path(source_csv)
+        source_candidates.append(source_path if source_path.is_absolute() else (root / source_path))
+    source_candidates.extend(
+        [
+            graph_dir / "core_corpus_tracked_with_t4.csv",
+            graph_dir / "core_corpus_selected.csv",
+            graph_dir / "scored_papers.csv",
+        ]
+    )
+    scored_path = next((path for path in source_candidates if path.exists()), None)
     edges_path = graph_dir / "corpus_citation_edges.csv"
-    if not scored_path.exists() or not edges_path.exists():
+    if scored_path is None or not edges_path.exists():
         return
 
     scored_cols = {
@@ -654,6 +667,32 @@ def _build_explorer_assets(
         "abstract",
     }
     scored = pd.read_csv(scored_path, usecols=lambda c: c in scored_cols)
+    for col, default in (
+        ("canonical_paper_id", ""),
+        ("title", ""),
+        ("year", pd.NA),
+        ("doi", ""),
+        ("openalex_id", ""),
+        ("all_openalex_ids", ""),
+        ("venue", ""),
+        ("first_author", ""),
+        ("merged_cited_by_count", 0),
+        ("paper_importance_score", 0.0),
+        ("age_normalized_importance_score", 0.0),
+        ("rank_age_normalized_importance", 0.0),
+        ("citations_per_year_raw", 0.0),
+        ("paper_age_years", 0.0),
+        ("pagerank", 0.0),
+        ("kcore", 0),
+        ("in_degree", 0),
+        ("out_degree", 0),
+        ("evidence_type", "other"),
+        ("evidence_strength", 2),
+        ("tier", "included"),
+        ("abstract", ""),
+    ):
+        if col not in scored.columns:
+            scored[col] = default
     scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
     scored["paper_importance_score"] = pd.to_numeric(scored["paper_importance_score"], errors="coerce").fillna(0.0)
     if "age_normalized_importance_score" in scored.columns:
@@ -687,9 +726,8 @@ def _build_explorer_assets(
         candidates["abstract"].isna()
         | candidates["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"])
     )
-    # Explorer payload can be full corpus (configurable via structural thresholds/start_nodes).
-    with_abstract = candidates[candidates["has_abstract"]].copy()
-    explorer_cfg = (cfg.get("site", {}) or {}).get("explorer", {}) or {}
+    require_abstract = str(explorer_cfg.get("require_abstract", "false")).strip().lower() in {"1", "true", "yes", "y", "on"}
+    candidate_pool = candidates[candidates["has_abstract"]].copy() if require_abstract else candidates.copy()
     start_metric = _clean_text(explorer_cfg.get("start_metric", "pagerank")).lower()
     if start_metric not in {"pagerank", "kcore", "in_degree", "paper_importance_score"}:
         start_metric = "pagerank"
@@ -701,21 +739,22 @@ def _build_explorer_assets(
     start_nodes = max(0, start_nodes)
 
     # Apply structural relevance thresholds before top-N truncation.
-    candidates = with_abstract[
-        (with_abstract["in_degree"] >= min_in_degree)
-        & (with_abstract["out_degree"] >= min_out_degree)
-        & (with_abstract["kcore"] >= min_kcore)
+    candidates = candidate_pool[
+        (candidate_pool["in_degree"] >= min_in_degree)
+        & (candidate_pool["out_degree"] >= min_out_degree)
+        & (candidate_pool["kcore"] >= min_kcore)
     ].copy()
     if candidates.empty:
         print(
             f"Explorer prefilter empty with min_in_degree={min_in_degree}, min_out_degree={min_out_degree}, min_kcore={min_kcore}; "
-            "falling back to abstract-only pool."
+            f"falling back to {'abstract-filtered' if require_abstract else 'full'} pool."
         )
-        candidates = with_abstract.copy()
+        candidates = candidate_pool.copy()
 
     candidates = candidates.sort_values(start_metric, ascending=False)
     if start_nodes > 0:
         candidates = candidates.head(start_nodes)
+    print(f"Explorer source CSV: {scored_path}")
 
     for metric in ["pagerank", "kcore", "in_degree"]:
         values = pd.to_numeric(candidates[metric], errors="coerce").fillna(0.0)

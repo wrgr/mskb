@@ -41,3 +41,11 @@ Demyelination begins when autoreactive lymphocytes and macrophages invade CNS wh
 - [McDonald Criteria](/mskb/concepts/diagnosis/mcdonald-criteria/)
 - [MRI Patterns](/mskb/concepts/diagnosis/mri-patterns/)
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

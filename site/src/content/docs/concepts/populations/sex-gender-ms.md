@@ -52,3 +52,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [MS Epidemiology](/mskb/concepts/foundations/ms-epidemiology/)
 - [Pregnancy and MS](/mskb/concepts/clinical/pregnancy-ms/)
 - [Equity and Social Determinants](/mskb/concepts/populations/equity-sdoh/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

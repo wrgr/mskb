@@ -42,3 +42,11 @@ MS lesions show a predilection for periventricular, juxtacortical, infratentoria
 - [CSF Biomarkers](/mskb/concepts/diagnosis/csf-biomarkers/)
 - [Blood-Brain Barrier Dysfunction](/mskb/concepts/mechanisms/blood-brain-barrier/)
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

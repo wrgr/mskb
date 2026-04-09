@@ -30,29 +30,24 @@ const Resource = z.object({
 
 const ConceptBlock = z.object({
   id: z.string(),
-  category: z.enum([
-    'foundations',
-    'mechanisms',
-    'diagnosis',
-    'therapeutics',
-    'clinical',
-  ]),
-  difficulty: z.number().int().min(1).max(5),
+  // Ontology categories used in concept pages (snake_case descriptive labels).
+  category: z.string(),
+  difficulty: z.number().int().min(1).max(5).optional(),
   prerequisites: z.array(ConceptRef).default([]),
   specializes: z.array(ConceptRef).default([]),
   related: z.array(ConceptRef).default([]),
   objectives: z.array(z.string()).default([]),
   papers: z.array(z.string()).default([]),
   resources: z.array(Resource).default([]),
-});
+}).passthrough(); // allow extra frontmatter fields (anchors, bloom_level, etc.)
 
 const TopicBlock = z.object({
   id: z.union([z.string(), z.number()]),
   category: z.string(),
-  difficulty: z.number().int().min(1).max(5),
-  paperCount: z.number().int().min(0),
+  difficulty: z.number().int().min(1).max(5).optional(),
+  paperCount: z.number().int().min(0).optional(),
   concepts: z.array(ConceptRef).default([]),
-});
+}).passthrough();
 
 export const collections = {
   docs: defineCollection({

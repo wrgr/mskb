@@ -202,6 +202,11 @@ abstract_backfill:
 
 site:
   explorer:
+    # Optional explicit CSV source for explorer nodes.
+    # Defaults to core_corpus_tracked_with_t4.csv -> core_corpus_selected.csv -> scored_papers.csv.
+    source_csv: "outputs/graph/core_corpus_tracked_with_t4.csv"
+    # If true, only include papers with non-empty abstracts.
+    require_abstract: false
     # Optional top-N truncation metric; ignored when start_nodes = 0.
     start_metric: "pagerank"
     # Structural relevance gates applied before top-N cutoff.

@@ -56,3 +56,11 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [Fatigue in MS](/mskb/concepts/clinical/fatigue-ms/)
 - [Shared Decision-Making](/mskb/concepts/clinical/shared-decision-making/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

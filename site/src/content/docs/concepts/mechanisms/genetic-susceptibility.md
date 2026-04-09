@@ -40,3 +40,11 @@ The strongest genetic risk factor for MS is HLA-DRB1*15:01 (OR ~3), which encode
 - [Environmental Risk Factors](/mskb/concepts/mechanisms/environmental-risk-factors/)
 - [Immune System Basics for MS](/mskb/concepts/foundations/immune-system-basics/)
 - [MS Epidemiology](/mskb/concepts/foundations/ms-epidemiology/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

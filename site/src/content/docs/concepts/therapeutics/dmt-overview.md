@@ -42,3 +42,11 @@ More than 20 DMTs are now approved for relapsing MS, spanning from modest-effica
 - [BTK Inhibitors](/mskb/concepts/therapeutics/btk-inhibitors/)
 - [Treatment Monitoring](/mskb/concepts/therapeutics/treatment-monitoring/)
 - [MS Phenotypes](/mskb/concepts/diagnosis/ms-phenotypes/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

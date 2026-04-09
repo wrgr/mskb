@@ -161,6 +161,11 @@ def test_all_real_pathway_steps_resolve_to_known_concepts() -> None:
 
 
 def test_real_topic_categories_and_concept_topic_coverage() -> None:
+    paper_topics_path = REPO_ROOT / "outputs" / "topics" / "paper_topics.csv"
+    topic_clusters_path = REPO_ROOT / "outputs" / "topics" / "topic_clusters.csv"
+    if not paper_topics_path.exists() or not topic_clusters_path.exists():
+        import pytest
+        pytest.skip("pipeline outputs not present (run pipeline to generate outputs/topics/)")
     concepts_root = REPO_ROOT / "site" / "src" / "content" / "docs" / "concepts"
     concept_index = taxonomy.load_concept_index(concepts_root)
     concept_ids = [cid for cid in concept_index.keys() if not cid.startswith("__")]

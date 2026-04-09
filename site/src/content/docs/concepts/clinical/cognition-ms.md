@@ -41,3 +41,11 @@ Cognitive impairment affects 40–70% of MS patients across all phenotypes and o
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [PIRA and Smoldering MS](/mskb/concepts/clinical/pira-smoldering-ms/)
 - [Demyelination and Remyelination](/mskb/concepts/mechanisms/demyelination-remyelination/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

@@ -41,3 +41,11 @@ Pregnancy exerts an immunomodulatory effect — Th1 immunity is suppressed in th
 - [DMT Overview](/mskb/concepts/therapeutics/dmt-overview/)
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
 - [MS Epidemiology](/mskb/concepts/foundations/ms-epidemiology/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)

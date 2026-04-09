@@ -42,3 +42,11 @@ The treat-to-target framework uses NEDA (No Evidence of Disease Activity) as a t
 - [B Cell–Targeted Therapies](/mskb/concepts/therapeutics/b-cell-therapies/)
 - [CSF Biomarkers](/mskb/concepts/diagnosis/csf-biomarkers/)
 - [Disease Course](/mskb/concepts/clinical/disease-course/)
+
+[//]: # (mskb:topic-links:start)
+
+## Citation topics that feed this concept
+
+<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+
+[//]: # (mskb:topic-links:end)
