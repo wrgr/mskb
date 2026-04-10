@@ -383,29 +383,34 @@ def _load_t4_registry(root: Path) -> pd.DataFrame:
             payload = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
         except Exception:
             payload = {}
-        entries = payload.get("flat_list", []) if isinstance(payload, dict) else []
-        if not entries and isinstance(payload, dict):
-            by_concept = payload.get("by_concept", {}) or {}
-            for items in by_concept.values():
-                entries.extend(items or [])
-        for entry in entries:
-            if not isinstance(entry, dict):
-                continue
-            topic_codes = entry.get("topic_codes", [])
-            if isinstance(topic_codes, list):
-                topic_code = ",".join(str(c).strip() for c in topic_codes if str(c).strip())
+        by_concept = payload.get("by_concept", {}) if isinstance(payload, dict) else {}
+        for concept_id, concept_block in by_concept.items():
+            # v2 format: {concept_path: str, papers: [...]}
+            # v1 fallback: list of entries directly under the concept key
+            if isinstance(concept_block, dict):
+                concept_path = str(concept_block.get("concept_path", "") or concept_id)
+                entries = concept_block.get("papers", []) or []
             else:
-                topic_code = str(topic_codes or "").strip()
-            rows.append(
-                {
-                    "doi_norm": _normalize_doi(entry.get("corpus_doi", "") or entry.get("doi", "")),
-                    "title_norm": normalize_title(str(entry.get("title", "") or "")),
-                    "selection_source": str(entry.get("concept_path", "") or entry.get("concept", "") or ""),
-                    "signal_type": str(entry.get("t4_source_type", "concept_anchor_signal") or "concept_anchor_signal"),
-                    "topic_code": topic_code,
-                    "rationale": str(entry.get("t4_signal", "") or ""),
-                }
-            )
+                concept_path = str(concept_id)
+                entries = concept_block or []
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    continue
+                topic_codes = entry.get("topic_codes", [])
+                if isinstance(topic_codes, list):
+                    topic_code = ",".join(str(c).strip() for c in topic_codes if str(c).strip())
+                else:
+                    topic_code = str(topic_codes or "").strip()
+                rows.append(
+                    {
+                        "doi_norm": _normalize_doi(entry.get("doi", "") or entry.get("corpus_doi", "")),
+                        "title_norm": normalize_title(str(entry.get("title", "") or "")),
+                        "selection_source": concept_path,
+                        "signal_type": "concept_anchor_signal",
+                        "topic_code": topic_code,
+                        "rationale": str(entry.get("relevance", "") or entry.get("t4_signal", "") or ""),
+                    }
+                )
 
     df = pd.DataFrame(rows)
     if df.empty:
