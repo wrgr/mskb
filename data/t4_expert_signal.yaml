@@ -5,12 +5,13 @@ description: 'Papers explicitly nominated by editors as required anchors for MSK
   educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
   concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
   Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
-  expert signal documented; cross_seed_score = 0 acceptable. Total: 63 papers — 56
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 64 papers — 57
   not yet in corpus (primary addition targets), 7 already included (signal formalisation
   only). v1.2: full DOI audit and corrections; 8 papers replaced with verified alternatives;
   10 Global South/equity papers added (T4-053–T4-062). v1.3: T4-033 replaced (Waldman
   2014 → Fadda 2021 IPMSSG Lancet Neurol); T4-063 added (Wang/Marrie 2016 Neurology
-  DMT access/insurance, TOPIC-15 structural access anchor).'
+  DMT access/insurance); T4-064 added (Geiger 2023 Drugs Real World Outcomes race-
+  stratified DMT initiation). Total: 64 papers.'
 by_concept:
   bladder_bowel_dysfunction:
   - t4_id: T4-001
@@ -628,6 +629,34 @@ by_concept:
       Opens the NARCOMS + DMT-access equity citation neighborhood not reached by
       the current TOPIC-15 seeds, which anchor prevalence/incidence and outcomes
       but not access. Added v1.3.'
+  - &id012
+    t4_id: T4-064
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: race/ethnicity-stratified DMT initiation patterns in
+      a large US claims/EHR database — documents that high-efficacy DMT uptake stalled
+      for Hispanic patients while rising for Black and White patients. Concept covers
+      thin-coverage topic area(s): TOPIC-15.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Treatment patterns by race and ethnicity in newly diagnosed persons with
+      multiple sclerosis.
+    authors: Geiger CK et al
+    year: 2023
+    journal: Drugs Real World Outcomes
+    pmid: '37733192'
+    topic_codes:
+    - TOPIC-15
+    corpus_status: not_found
+    corpus_doi: https://doi.org/10.1007/s40801-023-00387-x
+    t4_note: 'Geiger CK, Sheinson D, To TM et al. Optum Market Clarity claims/EHR
+      database (US, 2015–2020); newly diagnosed MS patients initiating any DMT within
+      2 years. Documents high-efficacy DMT use of 11–29% across all race/ethnicity
+      groups, with uptake increasing for non-Hispanic Black and White but stalling
+      for Hispanic patients. Race-stratified DMT initiation companion to T4-063
+      (Wang/Marrie 2016 insurance access). Together they anchor both the structural
+      access mechanism and the observed race-stratified utilization gap. Added v1.3.'
   fatigue_ms:
   - t4_id: T4-022
     t4_source_type: concept_anchor_signal
@@ -2317,3 +2346,4 @@ flat_list:
 - *id009
 - *id010
 - *id011
+- *id012
