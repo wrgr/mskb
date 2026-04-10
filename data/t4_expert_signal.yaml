@@ -407,6 +407,184 @@ by_concept:
       Nealon N is not a first author on any J Neuroimmunol disability progression
       paper). Marrie 2006 is the foundational race-disability paper in Neurology covering
       this functional role (confirmed, ~181 citations).
+  - &id001
+    t4_id: T4-053
+    title: 'Multiple sclerosis in the Middle East and North Africa: a systematic review
+      of epidemiological studies'
+    authors: Heydarpour P et al.
+    year: 2015
+    journal: Neuroepidemiology
+    doi: 10.1159/000431042
+    pmid: '26227247'
+    topics:
+    - T13
+    rationale: Systematic review of MS epidemiology in MENA region; fills Global South
+      gap (G-001); only synthesis covering Arab countries and Iran.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-001 gap resolution v1.2
+  - &id002
+    t4_id: T4-054
+    title: 'Epidemiology of multiple sclerosis in Asia: a systematic review'
+    authors: Eskandarieh S et al.
+    year: 2016
+    journal: Neuroepidemiology
+    doi: 10.1159/000444019
+    pmid: '26960128'
+    topics:
+    - T13
+    rationale: Systematic review of MS epidemiology in Asia; fills Global South gap
+      (G-001); covers South and Southeast Asian populations absent from main citation
+      network.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-001 gap resolution v1.2
+  - &id003
+    t4_id: T4-055
+    title: Multiple sclerosis in Latin America
+    authors: Cristiano E et al.
+    year: 2016
+    journal: Multiple Sclerosis and Related Disorders
+    doi: 10.1016/j.msard.2016.07.007
+    pmid: '27586337'
+    topics:
+    - T13
+    rationale: Narrative review of MS in Latin America including Buenos Aires cohort
+      data; fills Global South gap (G-001); covers region absent from main citation
+      network.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-001 gap resolution v1.2
+  - &id004
+    t4_id: T4-056
+    title: 'Multiple sclerosis in sub-Saharan Africa: a scoping review'
+    authors: Heine M et al.
+    year: 2020
+    journal: Multiple Sclerosis and Related Disorders
+    doi: 10.1016/j.msard.2020.102133
+    pmid: '32380437'
+    topics:
+    - T13
+    rationale: Scoping review of MS in sub-Saharan Africa; fills the only major global
+      region entirely absent from the corpus (G-001); documents extreme evidence thinness.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-001 gap resolution v1.2
+  - &id005
+    t4_id: T4-057
+    title: 'Race and ethnicity in multiple sclerosis: a review in United States minority
+      populations'
+    authors: Amezcua L, McCauley JL
+    year: 2020
+    journal: Multiple Sclerosis Journal
+    doi: 10.1177/1352458519887328
+    pmid: '31790329'
+    topics:
+    - T13
+    rationale: Comprehensive review of MS in US racial/ethnic minority populations;
+      fills G-002 Hispanic and Asian gap; Amezcua is leading voice in this underrepresented
+      area.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
+  - &id006
+    t4_id: T4-058
+    title: Prevalence of multiple sclerosis by race and ethnicity in the United States
+    authors: Hittle M et al.
+    year: 2023
+    journal: JAMA Neurology
+    doi: 10.1001/jamaneurol.2023.1135
+    pmid: '37213118'
+    topics:
+    - T13
+    rationale: National prevalence estimates by race/ethnicity/region; first large-scale
+      US race-stratified prevalence study; fills G-002; recommended in gaps.mdx.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
+  - &id007
+    t4_id: T4-059
+    title: Multiple sclerosis in Latino Americans
+    authors: Aguirre-Cruz L et al.
+    year: 2011
+    journal: Autoimmunity
+    doi: 10.3109/08916934.2011.592887
+    pmid: '21660908'
+    topics:
+    - T13
+    rationale: Review of MS in Latino/Hispanic Americans; fills G-002; documents distinct
+      clinical and genetic features in this underrepresented population.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
+  - &id008
+    t4_id: T4-060
+    title: 'Clinical and epidemiological characteristics of multiple sclerosis in
+      Mexico: the REMEMBer cohort'
+    authors: Bertado-Cortés B et al.
+    year: 2020
+    journal: Multiple Sclerosis and Related Disorders
+    doi: 10.1016/j.msard.2020.102575
+    pmid: '33197756'
+    topics:
+    - T13
+    rationale: First large Mexican MS registry cohort (REMEMBer); fills G-002 Latin
+      American gap outside Southern California; provides primary cohort data for Central
+      America region.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
+  - &id009
+    t4_id: T4-061
+    title: 'Increasing prevalence and incidence of multiple sclerosis in northern
+      Japan: a 20-year population-based study'
+    authors: Houzen H et al.
+    year: 2023
+    journal: Multiple Sclerosis and Related Disorders
+    doi: 10.1016/j.msard.2023.104696
+    pmid: '36924660'
+    topics:
+    - T13
+    rationale: 20-year longitudinal MS epidemiology in Japan; fills G-002 Asian population
+      gap; documents rising incidence in East Asian population.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
+  - &id010
+    t4_id: T4-062
+    title: Prevalence of multiple sclerosis in Korea
+    authors: Kim N-H et al.
+    year: 2010
+    journal: Neurology
+    doi: 10.1212/WNL.0b013e3181f88191
+    pmid: '20826714'
+    topics:
+    - T13
+    rationale: National Korean MS prevalence study; fills G-002 Asian population gap;
+      one of few population-level East Asian MS epidemiology papers.
+    functional_role: epidemiology
+    cross_seed_score: 0
+    corpus_status: active
+    doi_verification_status: verified
+    selection_source: G-002 gap resolution v1.2
   fatigue_ms:
   - t4_id: T4-022
     t4_source_type: concept_anchor_signal
@@ -2051,3 +2229,13 @@ flat_list:
   t4_note: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus fuzzy-match
     record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers in Neurology
     — the Mult Scler attribution in v1.1 was incorrect.'
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
