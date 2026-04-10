@@ -1,13 +1,14 @@
-version: '1.0'
-generated: '2026-04-09'
+version: '1.2'
+generated: '2026-04-10'
 t4_source_type: concept_anchor_signal
 description: 'Papers explicitly nominated by editors as required anchors for MSKB
   educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
   concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
   Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
-  expert signal documented; cross_seed_score = 0 acceptable. Total: 52 papers — 45
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 62 papers — 55
   not yet in corpus (primary addition targets), 7 already included (signal formalisation
-  only).'
+  only). v1.2: full DOI audit and corrections; 8 papers replaced with verified alternatives;
+  10 Global South/equity papers added (T4-053–T4-062).'
 by_concept:
   bladder_bowel_dysfunction:
   - t4_id: T4-001
@@ -25,6 +26,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1038/nrn2401
   - t4_id: T4-002
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -40,6 +42,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1016/s0022-5347(01)61760-9
   - t4_id: T4-003
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -48,13 +51,18 @@ by_concept:
       topic area(s): T10.'
     concept: bladder_bowel_dysfunction
     concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Bladder dysfunction in neurological disease.
-    authors: Brookes ME et al
-    year: 2008
-    journal: Pract Neurol
+    title: A UK consensus on the management of the bladder in multiple sclerosis.
+    authors: Fowler CJ et al
+    year: 2009
+    journal: J Neurol Neurosurg Psychiatry
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1136/jnnp.2008.159178
+    t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
+      in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
+      on bladder management in MS published in JNNP (~307 citations), filling the
+      practical-management role with verified metadata.
   - t4_id: T4-004
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -70,6 +78,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1016/S1474-4422(15)00070-8
   - t4_id: T4-005
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -78,13 +87,18 @@ by_concept:
       area(s): T10.'
     concept: bladder_bowel_dysfunction
     concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Management of bowel dysfunction in patients with MS.
+    title: 'Neurogenic bowel dysfunction in patients with multiple sclerosis: prevalence,
+      impact, and management strategies.'
     authors: Preziosi G et al
     year: 2018
-    journal: Nat Rev Gastroenterol Hepatol
+    journal: Degenerative Neurol Neuromuscul Dis
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.2147/DNND.S138835
+    t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev
+      Gastroenterol Hepatol — confirmed paper is in Degenerative Neurological and
+      Neuromuscular Disease 2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
   - t4_id: T4-006
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -93,14 +107,20 @@ by_concept:
       thin-coverage topic area(s): T10.'
     concept: bladder_bowel_dysfunction
     concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Substantial burden associated with bladder, bowel and sexual dysfunction
-      in MS.
-    authors: Marrie RA et al
-    year: 2022
-    journal: Mult Scler
+    title: Treatment satisfaction and bothersome bladder, bowel, sexual symptoms in
+      multiple sclerosis.
+    authors: Wang G et al
+    year: 2017
+    journal: Mult Scler Relat Disord
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1016/j.msard.2017.12.006
+    t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
+      no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
+      search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
+      role with verified metadata (~42 citations). First author Wang G; Marrie RA
+      is co-author.
   depression_anxiety_ms:
   - t4_id: T4-007
     t4_source_type: concept_anchor_signal
@@ -116,6 +136,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1212/01.wnl.0000095964.34294.b4
   - t4_id: T4-008
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -160,6 +181,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1212/wnl.0000000000000013
   - t4_id: T4-010
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -175,6 +197,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1038/nrneurol.2014.139
   - t4_id: T4-011
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -925,6 +948,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1038/nrn2401
 - t4_id: T4-002
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -940,6 +964,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1016/s0022-5347(01)61760-9
 - t4_id: T4-003
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -948,13 +973,18 @@ flat_list:
     T10.'
   concept: bladder_bowel_dysfunction
   concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Bladder dysfunction in neurological disease.
-  authors: Brookes ME et al
-  year: 2008
-  journal: Pract Neurol
+  title: A UK consensus on the management of the bladder in multiple sclerosis.
+  authors: Fowler CJ et al
+  year: 2009
+  journal: J Neurol Neurosurg Psychiatry
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1136/jnnp.2008.159178
+  t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
+    in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
+    on bladder management in MS published in JNNP (~307 citations), filling the practical-management
+    role with verified metadata.
 - t4_id: T4-004
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -969,6 +999,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1016/S1474-4422(15)00070-8
 - t4_id: T4-005
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -976,13 +1007,18 @@ flat_list:
     editor: bowel arm coverage. Concept covers thin-coverage topic area(s): T10.'
   concept: bladder_bowel_dysfunction
   concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Management of bowel dysfunction in patients with MS.
+  title: 'Neurogenic bowel dysfunction in patients with multiple sclerosis: prevalence,
+    impact, and management strategies.'
   authors: Preziosi G et al
   year: 2018
-  journal: Nat Rev Gastroenterol Hepatol
+  journal: Degenerative Neurol Neuromuscul Dis
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.2147/DNND.S138835
+  t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev Gastroenterol
+    Hepatol — confirmed paper is in Degenerative Neurological and Neuromuscular Disease
+    2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
 - t4_id: T4-006
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -991,14 +1027,20 @@ flat_list:
     topic area(s): T10.'
   concept: bladder_bowel_dysfunction
   concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Substantial burden associated with bladder, bowel and sexual dysfunction
-    in MS.
-  authors: Marrie RA et al
-  year: 2022
-  journal: Mult Scler
+  title: Treatment satisfaction and bothersome bladder, bowel, sexual symptoms in
+    multiple sclerosis.
+  authors: Wang G et al
+  year: 2017
+  journal: Mult Scler Relat Disord
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1016/j.msard.2017.12.006
+  t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
+    no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
+    search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
+    role with verified metadata (~42 citations). First author Wang G; Marrie RA is
+    co-author.
 - t4_id: T4-007
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1013,6 +1055,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1212/01.wnl.0000095964.34294.b4
 - t4_id: T4-008
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1057,6 +1100,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1212/wnl.0000000000000013
 - t4_id: T4-010
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1071,6 +1115,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1038/nrneurol.2014.139
 - t4_id: T4-011
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
