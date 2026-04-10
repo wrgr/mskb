@@ -1,20 +1,20 @@
 ---
 title: Topic Map
-description: 17 topics + Topic 1b organized into three layers — Foundation, Clinical, and Context/Future — with seed assignments and target document counts.
+description: 18 topics + Topic 1b organized into three layers — Foundation, Clinical, and Context/Future — with seed assignments and target document counts.
 sidebar:
   order: 2
 ---
 
 import { Badge, Aside } from '@astrojs/starlight/components';
 
-The MSKB corpus covers **18 research topics** (17 numbered topics plus TOPIC-1b — Natural History) organized in three reading layers. The baseline is 2 T1 seeds per topic, with targeted seed augmentation where citation-structure coverage is thin (TOPIC-09, TOPIC-13) or where a third anchor redistributed from a retired topic improves coverage (TOPIC-08).
+The MSKB corpus covers **19 research topics** (18 numbered topics plus TOPIC-1b — Natural History) organized in three reading layers. The baseline is 2 T1 seeds per topic, with targeted seed augmentation where citation-structure coverage is thin or mechanistically distinct sub-areas need dedicated anchors.
 
 Read order: Foundation → Clinical → Context/Future. You can enter at any layer but the epistemological dependencies flow in this direction.
 
 <Aside type="note" title="TOPIC-## codes vs tier codes (T1–T4)">
 MSKB uses two separate code systems that previously shared the "T" prefix — now disambiguated:
 
-- **TOPIC-## codes** (this page) — the primary corpus taxonomy used for selection and balance. TOPIC-00 through TOPIC-15, plus TOPIC-1b.
+- **TOPIC-## codes** (this page) — the primary corpus taxonomy used for selection and balance. TOPIC-00 through TOPIC-16, plus TOPIC-1b.
 - **Tier codes T1–T4** — corpus tiers by selection mechanism (T1 seeds, T2 cross-seed connected, T3 velocity/emerging, T4 expert signal).
 
 The other classification system — **Leiden citation clusters** (9 clusters, bibliometric) — is available in the [Citation Topics](/mskb/topics/) sidebar and `explorer_graph.json` as an alternative view; not used in selection or balance.
@@ -134,27 +134,28 @@ MRI is the primary diagnostic and monitoring tool in MS. The MAGNIMS-CMSC-NAIMS 
 
 ### TOPIC-06 — Biomarkers <Badge text="Clinical" variant="tip" />
 
-**Why it matters:** NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use.
+**Why it matters:** NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use; 2024 biomarker-integrated McDonald criteria.
 
-Neurofilament light chain (NfL) is the first blood biomarker to enter routine MS clinical practice for treatment monitoring. The Khalil 2018 *Nat Rev Neurology* review is cited by virtually every subsequent NfL paper and generates the largest forward citation neighborhood of any seed in this topic. Both seeds are NfL-focused — the framing anchor R4 (Lancet Neurology 2025 biomarker review) provides expansion coverage for GFAP, CHI3L1, and multi-analyte panels.
+Neurofilament light chain (NfL) is the first blood biomarker to enter routine MS clinical practice for treatment monitoring. The Khalil 2018 *Nat Rev Neurology* review anchors the NfL literature; v1.3 adds GFAP (Abdelhak 2022) to address the broader glial damage biomarker class and the 2024 McDonald criteria update (Montalban 2025) as the authoritative integration of serum biomarkers into diagnosis. The prior second NfL seed (Bittner 2021 *Brain*) was retired — it extensively overlapped with Khalil 2018 and biased expansion toward NfL at the expense of GFAP and CHI3L1. The framing anchor R4 (Lancet Neurology 2025 biomarker review) provides additional coverage for CHI3L1 and multi-analyte panels.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-013 (Khalil et al. 2018 NfL, *Nat Rev Neurol*) · MS-T1-014 (Bittner et al. 2021 serum NfL, *Brain*) |
+| **Seeds** | MS-T1-013 (Khalil et al. 2018 NfL, *Nat Rev Neurol*) · MS-T1-044 (Abdelhak et al. 2022 GFAP, *Nat Rev Neurol*) · MS-T1-045 (Montalban et al. 2025 McDonald criteria 2024, *Lancet Neurol*) |
 | **Target** | 25–30 documents |
-| **Primary doc types** | Mechanistic Review |
+| **Primary doc types** | Mechanistic Review · Consensus/Guideline |
+| **Retired seed** | MS-T1-014 (Bittner 2021 serum NfL, *Brain*) — retired v1.3; citation neighborhood overlapped >80% with MS-T1-013 |
 
 ---
 
 ### TOPIC-07 — Disease-Modifying Therapies <Badge text="Clinical" variant="tip" />
 
-**Why it matters:** DMT classes; escalation vs treat-to-target; B-cell depletion paradigm; progressive MS treatment.
+**Why it matters:** DMT classes; escalation vs treat-to-target; mechanism diversity across anti-CD20, VLA-4, and S1P; BTK inhibitors emerging.
 
-The OPERA (RRMS) and ORATORIO (PPMS) trials established ocrelizumab as the standard of care for both relapsing and primary progressive MS, cementing the B-cell depletion paradigm. Both seeds are 2017 ocrelizumab trials from the same program — expansion bias toward B-cell depletion literature is expected. The escalation vs. treat-to-target debate, natalizumab, alemtuzumab, BTK inhibitor, and SPMS treatment neighborhoods are expected to appear via T2 expansion from R1/R2 framing anchors; verify coverage after next pipeline rerun.
+v1.3 rebalanced: ORATORIO (MS-T1-016, PPMS trial) redistributed to TOPIC-08 where it belongs mechanistically. Seeds now span three drug mechanisms: OPERA (ocrelizumab, anti-CD20 B-cell depletion, RRMS), AFFIRM (natalizumab, VLA-4 integrin, RRMS), and EXPAND (siponimod, S1P modulation, SPMS). This ensures the T2 expansion reaches the natalizumab, S1P modulator, and SPMS treatment literature, not just the B-cell depletion cluster. BTK inhibitors (tolebrutinib, fenebrutinib — Phase 3 ongoing) and alemtuzumab are not yet seeded; monitor via T3 velocity filter.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-015 (Hauser et al. 2017 OPERA, *NEJM*) · MS-T1-016 (Montalban et al. 2017 ORATORIO, *NEJM*) |
+| **Seeds** | MS-T1-015 (Hauser et al. 2017 OPERA, *NEJM*) · MS-T1-042 (Polman et al. 2006 AFFIRM, *NEJM*) · MS-T1-043 (Kappos et al. 2018 EXPAND, *Lancet*) |
 | **Target** | 30–35 documents |
 | **Primary doc types** | Landmark RCT |
 
@@ -164,13 +165,13 @@ The OPERA (RRMS) and ORATORIO (PPMS) trials established ocrelizumab as the stand
 
 **Why it matters:** PIRA; smoldering inflammation; why relapse suppression ≠ disability prevention; biggest unmet need.
 
-Progression independent of relapse activity (PIRA) is the primary driver of long-term disability in MS. The smoldering MS framework (Giovannoni et al. 2022) argues that chronic, low-grade CNS inflammation persists even when peripheral inflammation is suppressed — explaining why highly effective DMTs fail to fully prevent disability accumulation. Ontaneda et al. 2016 (*Lancet*) provides the research-agenda bridge across progressive disease biology, trial strategy, and repair — redistributed here from retired TOPIC-16 in v1.3.
+Progression independent of relapse activity (PIRA) is the primary driver of long-term disability in MS. The smoldering MS framework (Giovannoni et al. 2022) argues that chronic, low-grade CNS inflammation persists even when peripheral inflammation is suppressed — explaining why highly effective DMTs fail to fully prevent disability accumulation. Ontaneda et al. 2016 (*Lancet*) provides the research-agenda bridge across progressive disease biology, trial strategy, and repair. ORATORIO (Montalban 2017 *NEJM*) redistributed here from TOPIC-07 v1.3 — as the pivotal PPMS trial its citation neighborhood is progressive-MS-specific, not RRMS-specific.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-017 (Lublin et al. 2014 phenotype definitions, *Neurology*) · MS-T1-018 (Giovannoni et al. 2022 smoldering MS, *TAND*) · MS-T1-040 (Ontaneda et al. 2016 progressive MS prospects, *Lancet*) |
+| **Seeds** | MS-T1-017 (Lublin et al. 2014 phenotype definitions, *Neurology*) · MS-T1-018 (Giovannoni et al. 2022 smoldering MS, *TAND*) · MS-T1-040 (Ontaneda et al. 2016 progressive MS prospects, *Lancet*) · MS-T1-016 (Montalban et al. 2017 ORATORIO PPMS, *NEJM*) |
 | **Target** | 25–30 documents |
-| **Primary doc types** | Consensus/Guideline · Mechanistic Review |
+| **Primary doc types** | Consensus/Guideline · Mechanistic Review · Landmark RCT |
 
 ---
 
@@ -240,11 +241,11 @@ MS in children and adolescents has distinct diagnostic challenges (differential 
 
 Equity research is placed in the Context/Future layer as a reading recommendation, not a value judgment. Its critical function — interrogating assumptions embedded in the clinical literature — is most powerful when read against the Clinical baseline it critiques.
 
-TOPIC-13 uses four complementary seeds spanning prevalence (Wallin 2023, Langer-Gould 2022), incidence (Langer-Gould 2013), and SES-severity outcomes (Gray-Roncal 2021). The dedicated review anchor R5 (Amezcua et al. 2021) remains the bridge for structurally disconnected equity literature.
+TOPIC-13 uses five complementary seeds spanning prevalence (Wallin 2023, Langer-Gould 2022), incidence (Langer-Gould 2013), SES-severity outcomes (Gray-Roncal 2021), and DMT access/response disparities for African American patients (Okai 2022 — promoted from T4-017 expert signal in v1.3). The dedicated review anchor R5 (Amezcua et al. 2021) remains the bridge for structurally disconnected equity literature.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-027 (Wallin et al. 2023 prevalence by race/ethnicity, *JAMA Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities prevalence, *Neurology*) · MS-T1-039 (Langer-Gould et al. 2013 incidence across groups, *Neurology*) · MS-T1-041 (Gray-Roncal et al. 2021 SES-severity, *Neurology*) |
+| **Seeds** | MS-T1-027 (Wallin et al. 2023 prevalence by race/ethnicity, *JAMA Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities prevalence, *Neurology*) · MS-T1-039 (Langer-Gould et al. 2013 incidence across groups, *Neurology*) · MS-T1-041 (Gray-Roncal et al. 2021 SES-severity, *Neurology*) · MS-T1-046 (Okai et al. 2022 African American DMT outcomes, *Neurology*) |
 | **Target** | 20–25 documents |
 | **Primary doc types** | Equity/SDOH |
 
@@ -252,34 +253,46 @@ TOPIC-13 uses four complementary seeds spanning prevalence (Wallin 2023, Langer-
 
 ### TOPIC-14 — Clinical AI & Learning Systems <Badge text="Context/Future" variant="caution" />
 
-**Why it matters:** Lesion segmentation; progression prediction; treatment recommendation; implementation gap; explainability.
+**Why it matters:** Lesion segmentation; progression prediction; treatment recommendation; data-driven disease reclassification; implementation gap; explainability.
 
-Clinical AI in MS spans lesion segmentation (mature, deployed), progression prediction (active research), and treatment recommendation (early stage). The implementation gap — between what AI can do in controlled settings and what is deployed in clinical practice — is the primary open problem.
+Clinical AI in MS spans lesion segmentation (mature, deployed), progression prediction (active research), treatment recommendation (early stage), and data-driven phenotype reclassification (emerging). Louapre 2025 *Nature Medicine* (MS-T1-031) added v1.3 — redistributed from TOPIC-15, where it was structurally incompatible with the remyelination biology seeds. AI-based reclassification uses longitudinal clinical data to challenge the traditional RRMS/SPMS/PPMS taxonomy and belongs in the Clinical AI topic.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-029 (Prados et al. 2024 AI review, *Curr Neurol Neurosci Rep*) · MS-T1-030 (Noteboom et al. 2025 big data, *J NeuroEng Rehab*) |
+| **Seeds** | MS-T1-029 (Prados et al. 2024 AI review, *Curr Neurol Neurosci Rep*) · MS-T1-030 (Noteboom et al. 2025 big data, *J NeuroEng Rehab*) · MS-T1-031 (Louapre et al. 2025 AI reclassification, *Nat Med*) |
 | **Target** | 20–25 documents |
+| **Primary doc types** | Mechanistic Review · Epidemiological/Burden |
+
+---
+
+### TOPIC-15 — Remyelination & Neuroprotection <Badge text="Context/Future" variant="caution" />
+
+**Why it matters:** Remyelination biology; neuroprotection strategies; repair beyond inflammation suppression; EBV vaccine prevention; biggest scientific frontier.
+
+v1.3 renamed from "Emerging Frontiers" for clean, coherent scope. AI reclassification (Louapre 2025) redistributed to TOPIC-14 — it belongs with Clinical AI, not with repair biology. Seeds now both anchor the remyelination-to-clinic pipeline: Franklin & Ffrench-Constant 2008 (*Nat Rev Neurosci*) is the foundational remyelination biology review; Lubetzki et al. 2020 (*Lancet Neurol*) covers the basic-science-to-clinical-translation pipeline for remyelination therapies specifically. EBV vaccine prevention (G-005) remains a future gap — no Phase 2/3 efficacy data yet.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-032 (Franklin & Ffrench-Constant 2008 remyelination, *Nat Rev Neurosci*) · MS-T1-049 (Lubetzki et al. 2020 remyelination to clinic, *Lancet Neurol*) |
+| **Target** | 15–20 documents |
 | **Primary doc types** | Mechanistic Review |
 
 ---
 
-### TOPIC-15 — Emerging Frontiers <Badge text="Context/Future" variant="caution" />
+### TOPIC-16 — Symptom Management & Multidisciplinary Care <Badge text="Clinical" variant="tip" />
 
-**Why it matters:** Data-driven reclassification; remyelination; neuroprotection; EBV vaccine prevention.
+**Why it matters:** Exercise as therapy; multidisciplinary rehabilitation; fatigue management; bladder/bowel; non-pharmacological care; implementation into MS programs.
 
-The Louapre 2025 *Nature Medicine* paper exemplifies the emerging frontier: data-driven reclassification of MS that challenges the traditional phenotype taxonomy using large-scale longitudinal data. The Franklin & Ffrench-Constant 2008 remyelination review provides the mechanistic foundation for therapeutic remyelination programs in clinical development.
-
-Note: these two seeds have structurally distinct citation neighborhoods (AI/ML methods vs. remyelination biology). Review corpus composition post-rerun — if clusters are non-overlapping, consider splitting or folding remyelination into TOPIC-08.
+Symptom management and multidisciplinary rehabilitation address the aspects of MS burden most important to patients — fatigue, mobility, bladder/bowel function, cognitive difficulties — that are incompletely addressed by DMTs alone. This literature was previously distributed across TOPIC-09 (PROs) and TOPIC-10 (comorbidities); TOPIC-16 creates a dedicated home for the intervention evidence. The Dalgas 2019 *JAMA Neurol* editorial frames exercise as disease-modifying; Khan & Amatya 2017 is the most comprehensive umbrella review of multidisciplinary rehabilitation evidence. T4 entries T4-035 through T4-041 (rehabilitation/exercise expert signal) naturally anchor the T2 expansion here.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-031 (Louapre et al. 2025 AI reclassification, *Nat Med*) · MS-T1-032 (Franklin & Ffrench-Constant 2008 remyelination, *Nat Rev Neurosci*) |
+| **Seeds** | MS-T1-047 (Dalgas et al. 2019 exercise as medicine, *JAMA Neurol*) · MS-T1-048 (Khan & Amatya 2017 rehabilitation systematic review, *Arch Phys Med Rehabil*) |
 | **Target** | 15–20 documents |
-| **Primary doc types** | Epidemiological/Burden · Mechanistic Review |
+| **Primary doc types** | Mechanistic Review · Systematic Review/Meta-Analysis |
 
 ---
 
-<Aside type="note" title="TOPIC-16 retired in v1.3">
-**Research Priorities & Cures Roadmap** (formerly TOPIC-16) was retired in v1.3. The Roadmap papers (MS-T1-033 Bebo 2022 and MS-T1-034 Bebo 2024) are now framing seeds R7 and R8, unlocking reference-list expansion algorithmically across all topics rather than generating a narrow standalone cluster. Ontaneda et al. 2016 (*Lancet*) was redistributed to TOPIC-08. Shared-decision-making T4 entries (T4-047–T4-052) re-mapped to TOPIC-09.
+<Aside type="note" title="Research Priorities topic retired in v1.3">
+**Research Priorities & Cures Roadmap** (formerly TOPIC-16 in v1.2) was retired in v1.3. The Roadmap papers (MS-T1-033 Bebo 2022 and MS-T1-034 Bebo 2024) are now framing seeds R7 and R8, unlocking reference-list expansion algorithmically across all topics rather than generating a narrow standalone cluster. Ontaneda et al. 2016 (*Lancet*) was redistributed to TOPIC-08. Shared-decision-making T4 entries (T4-047–T4-052) re-mapped to TOPIC-09. The TOPIC-16 code is now assigned to Symptom Management & Multidisciplinary Care (see above).
 </Aside>

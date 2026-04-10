@@ -9,7 +9,7 @@ import { Aside, Badge } from '@astrojs/starlight/components';
 
 Known gaps are tracked here and updated as the corpus grows. Documentation requirements are not relaxed because of gaps — we document what we have and flag what is missing.
 
-12 gaps tracked as of version 1.3 (April 2026).
+12 gaps tracked as of version 1.3 (April 2026). G-006 partially addressed by seed rebalancing; G-007 addressed by framing seed promotion.
 
 ---
 
@@ -94,18 +94,18 @@ Gaps are a feature of honest corpus documentation, not a failure of the pipeline
 
 ---
 
-## G-006 — DMT Seeds Are Aging (2017)
-<Badge text="Medium severity" variant="caution" />
+## G-006 — DMT Seeds Lacked Mechanism Diversity (2017)
+<Badge text="Partially addressed" variant="tip" />
 
 **Topics:** TOPIC-07
 
-**Gap:** Both DMT seeds (OPERA, ORATORIO) are 2017. The escalation vs. early high-efficacy debate, tolebrutinib/BTK inhibitor trials, and ofatumumab data are not represented in seeds.
+**Gap:** Both DMT seeds (OPERA, ORATORIO) were 2017 ocrelizumab trials from the same program. Single-mechanism seeding biased T2 expansion toward B-cell depletion literature; natalizumab, S1P modulator, alemtuzumab, and BTK inhibitor neighborhoods were underrepresented.
 
-**Why this matters:** The B-cell depletion paradigm established by the 2017 OPERA/ORATORIO trials remains current, but the treatment landscape has evolved substantially. The question of when to start high-efficacy therapy vs. escalating from platform therapies, the emergence of BTK inhibitors targeting smoldering disease, and newer agents like ofatumumab and ublituximab require coverage.
+**Why this matters:** The B-cell depletion paradigm established by the 2017 OPERA/ORATORIO trials remains current, but the treatment landscape includes multiple mechanisms. VLA-4 (natalizumab), S1P modulation (siponimod, ozanimod, fingolimod), BTK inhibitors (tolebrutinib, fenebrutinib — Phase 3), and alemtuzumab all generate distinct citation neighborhoods not reachable from B-cell-depletion seeds alone.
 
-**Recommended action:** The T2/T3 pipeline should surface post-2017 DMT literature through forward citation expansion from OPERA/ORATORIO. Manually verify that tolebrutinib and BTK inhibitor papers reach the Tier 3 velocity threshold. If not, add as Tier 4 with conference award documentation.
+**Recommended action (updated v1.3):** Seed rebalancing is now the primary fix. Verify BTK inhibitor and ofatumumab T3 emergence after pipeline rerun.
 
-**Status:** Open — monitor pipeline. v1.3 activates full framing seed expansion (R1–R8), including R2 (Jakimovski 2024 *Lancet* comprehensive review) and R1 (Reich 2018 *NEJM*). Forward citation expansion from these anchors should surface post-2017 DMT literature including BTK inhibitor and ofatumumab papers. Assess coverage after next pipeline rerun.
+**Status:** Partially addressed — v1.3. TOPIC-07 seed set rebalanced: ORATORIO redistributed to TOPIC-08 (progressive MS trial); AFFIRM (MS-T1-042, Polman 2006 natalizumab *NEJM*) and EXPAND (MS-T1-043, Kappos 2018 siponimod *Lancet*) added. Seeds now span three mechanisms: anti-CD20, VLA-4, S1P modulation. v1.3 also activates framing seed expansion R1–R8, including R2 (Jakimovski 2024 *Lancet*) and R1 (Reich 2018 *NEJM*). BTK inhibitors (Phase 3 ongoing), alemtuzumab, and ofatumumab remain unanchored in seeds — monitor via T3 velocity filter once Phase 3 data mature.
 
 ---
 

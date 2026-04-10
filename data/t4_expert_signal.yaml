@@ -337,10 +337,12 @@ by_concept:
     topic_codes:
     - TOPIC-13
     corpus_status: not_found
-    t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
-      had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
-      search). Okai 2022 directly covers DMT access and outcomes for African American
-      patients in Neurology (PMID 35470139, confirmed).
+    t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-046
+      in seeds/core_seeds.csv (TOPIC-13 Equity & SDOH). T4 record retained for audit
+      continuity. Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found;
+      Naismith had no such 2018 Neurology paper on immunotherapy in Black Americans
+      after exhaustive search). Okai 2022 directly covers DMT access and outcomes
+      for African American patients in Neurology (PMID 35470139, confirmed).'
     corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
   - t4_id: T4-018
     t4_source_type: concept_anchor_signal
@@ -836,7 +838,7 @@ by_concept:
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
       Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      comprehensive review anchor. Concept covers thin-coverage topic area(s): T12.'
+      comprehensive review anchor. Concept covers thin-coverage topic area(s): TOPIC-12.'
     concept: pediatric_ms
     concept_path: concepts/populations/pediatric-ms
     title: Pediatric multiple sclerosis.
@@ -848,6 +850,12 @@ by_concept:
     corpus_status: title_fuzzy(0.98)
     corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
     corpus_doi: https://doi.org/10.1055/s-0036-1579738
+    t4_note: 'FLAGGED FOR REPLACEMENT (v1.3). Waldman 2014 Semin Neurol has only 56
+      citations — weak for a concept anchor. Replace with a comprehensive 2020+ IPMSSG
+      or ECTRIMS pediatric MS review. Target: Chitnis T or Banwell B group, published
+      in Ann Neurol, Neurology, or Lancet Neurol 2019–2023, >200 citations. Verify
+      DOI before adding. Candidate: Chitnis T et al. (2021/2022) pediatric MS review
+      or updated IPMSSG treatment recommendations.'
     corpus_stats:
       citation_count: 56
       in_degree: 10
@@ -891,8 +899,12 @@ by_concept:
     year: 2019
     journal: JAMA Neurol
     topic_codes:
-    - TOPIC-09
+    - TOPIC-16
     corpus_status: not_found
+    t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-047
+      in seeds/core_seeds.csv (TOPIC-16 Symptom Management & Multidisciplinary Care).
+      topic_codes updated from TOPIC-09 to TOPIC-16 to reflect new topic assignment.
+      T4 record retained for audit continuity.'
     corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
   - t4_id: T4-036
     t4_source_type: concept_anchor_signal
@@ -959,8 +971,12 @@ by_concept:
     year: 2017
     journal: Arch Phys Med Rehabil
     topic_codes:
-    - TOPIC-09
+    - TOPIC-16
     corpus_status: not_found
+    t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-048
+      in seeds/core_seeds.csv (TOPIC-16 Symptom Management & Multidisciplinary Care).
+      topic_codes updated from TOPIC-09 to TOPIC-16 to reflect new topic assignment.
+      T4 record retained for audit continuity.'
     corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
   - t4_id: T4-040
     t4_source_type: concept_anchor_signal
@@ -1554,10 +1570,12 @@ flat_list:
   topic_codes:
   - TOPIC-13
   corpus_status: not_found
-  t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
-    had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
-    search). Okai 2022 directly covers DMT access and outcomes for African American
-    patients in Neurology (PMID 35470139, confirmed).
+  t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-046
+    in seeds/core_seeds.csv (TOPIC-13 Equity & SDOH). T4 record retained for audit
+    continuity. Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found;
+    Naismith had no such 2018 Neurology paper on immunotherapy in Black Americans
+    after exhaustive search). Okai 2022 directly covers DMT access and outcomes for
+    African American patients in Neurology (PMID 35470139, confirmed).'
   corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
 - t4_id: T4-018
   t4_source_type: concept_anchor_signal
@@ -1892,10 +1910,13 @@ flat_list:
     existing_tier: included
     seed_hops: 1
     cocite_seeds: 52
-  t4_note: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The corpus
-    fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to a Thieme journal
-    (Seminars in Neurology), consistent with citation count of 56. The Nat Rev Neurol
-    attribution in v1.1 was incorrect.'
+  t4_note: 'FLAGGED FOR REPLACEMENT (v1.3). Waldman 2014 Semin Neurol has only 56
+    citations — weak for a concept anchor. Replace with a comprehensive 2020+ IPMSSG
+    or ECTRIMS pediatric MS review. Target: Chitnis T or Banwell B group, published
+    in Ann Neurol, Neurology, or Lancet Neurol 2019–2023, >200 citations. Verify
+    DOI before adding. Candidate: Chitnis T et al. (2021/2022) pediatric MS review
+    or updated IPMSSG treatment recommendations. Journal corrected from v1.1: Nat
+    Rev Neurol → Semin Neurol (Thieme journal, consistent with 56-citation count).'
 - t4_id: T4-034
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1923,8 +1944,12 @@ flat_list:
   year: 2019
   journal: JAMA Neurol
   topic_codes:
-  - TOPIC-09
+  - TOPIC-16
   corpus_status: not_found
+  t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-047
+    in seeds/core_seeds.csv (TOPIC-16 Symptom Management & Multidisciplinary Care).
+    topic_codes updated from TOPIC-09 to TOPIC-16 to reflect new topic assignment.
+    T4 record retained for audit continuity.'
   corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
 - t4_id: T4-036
   t4_source_type: concept_anchor_signal
@@ -1989,8 +2014,12 @@ flat_list:
   year: 2017
   journal: Arch Phys Med Rehabil
   topic_codes:
-  - TOPIC-09
+  - TOPIC-16
   corpus_status: not_found
+  t4_note: 'PROMOTED TO CORE SEED (v1.3): This paper is now registered as MS-T1-048
+    in seeds/core_seeds.csv (TOPIC-16 Symptom Management & Multidisciplinary Care).
+    topic_codes updated from TOPIC-09 to TOPIC-16 to reflect new topic assignment.
+    T4 record retained for audit continuity.'
   corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
 - t4_id: T4-040
   t4_source_type: concept_anchor_signal

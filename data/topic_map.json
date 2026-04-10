@@ -1,7 +1,7 @@
 {
   "version": "1.3",
   "generated_from": "ms_corpus_specification_v1.xlsx — Topic Map sheet",
-  "description": "17 topics + Topic 1b organised into three layers (Foundation, Clinical, Context/Future). Baseline is 2 T1 seeds per topic, with targeted augmentation where citation-structure coverage is thin (TOPIC-09, TOPIC-13). Topics use TOPIC-## prefix to distinguish from corpus tier codes (T1–T4). TOPIC-16 (Research Priorities) retired in v1.3 — Roadmap papers promoted to framing seeds R7/R8; Ontaneda 2016 redistributed to TOPIC-08.",
+  "description": "18 topics + Topic 1b organised into three layers (Foundation, Clinical, Context/Future). Baseline is 2 T1 seeds per topic, with targeted augmentation where citation-structure coverage is thin. Topics use TOPIC-## prefix to distinguish from corpus tier codes (T1–T4). v1.3 changes: (1) TOPIC-16 Research Priorities retired — Roadmap papers promoted to framing seeds R7/R8; (2) New TOPIC-16 Symptom Management & Multidisciplinary Care added with seeds MS-T1-047/MS-T1-048; (3) TOPIC-06 rebalanced (GFAP + McDonald 2024 added, Bittner NfL retired); (4) TOPIC-07 rebalanced (AFFIRM + EXPAND added, ORATORIO redistributed to TOPIC-08); (5) TOPIC-14 gains MS-T1-031 (AI reclassification); (6) TOPIC-15 renamed Remyelination & Neuroprotection, gains Lubetzki 2020; (7) TOPIC-13 gains Okai 2022 as fifth seed.",
   "layers": {
     "Foundation": "Topics TOPIC-00, TOPIC-01, TOPIC-1b, TOPIC-02–TOPIC-04 — biological vocabulary and disease framing. Read first.",
     "Clinical": "Topics TOPIC-05–TOPIC-11 — diagnosis, treatment, management. Presuppose Foundation layer.",
@@ -76,20 +76,25 @@
       "topic_code": "TOPIC-06",
       "layer": "Clinical",
       "topic_name": "Biomarkers",
-      "why_it_matters": "NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use",
+      "why_it_matters": "NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use; 2024 biomarker-integrated McDonald criteria",
       "seed_A": "MS-T1-013",
-      "seed_B": "MS-T1-014",
-      "target_n": "25-30"
+      "seed_B": "MS-T1-044",
+      "seed_C": "MS-T1-045",
+      "target_n": "25-30",
+      "coverage_note": "v1.3 rebalanced: Bittner 2021 NfL (MS-T1-014) retired (overlapped extensively with Khalil 2018 NfL seed). Added GFAP seed (Abdelhak 2022 Nat Rev Neurol, MS-T1-044) to expand beyond NfL-only coverage, and McDonald 2024 biomarker criteria (Montalban 2025 Lancet Neurol, MS-T1-045) as the authoritative integration of serum biomarkers into diagnosis. CHI3L1 and multi-analyte panel literature will surface via R4 (2025 biomarker review anchor).",
+      "retired_seed_note": "MS-T1-014 (Bittner 2021 Nat Rev Neurol, NfL review) retired to seed-retired-v1.3 in core_seeds.csv. Cross-seed connectivity with Khalil 2018 (MS-T1-013) was high; two NfL seeds produced expansion bias toward NfL literature at the expense of GFAP and CHI3L1 coverage."
     },
     {
       "topic_code": "TOPIC-07",
       "layer": "Clinical",
       "topic_name": "Disease-Modifying Therapies",
-      "why_it_matters": "DMT classes; escalation vs treat-to-target; B-cell depletion paradigm; progressive MS treatment",
+      "why_it_matters": "DMT classes; escalation vs treat-to-target; mechanism diversity across anti-CD20, VLA-4, S1P; BTK inhibitors emerging",
       "seed_A": "MS-T1-015",
-      "seed_B": "MS-T1-016",
+      "seed_B": "MS-T1-042",
+      "seed_C": "MS-T1-043",
       "target_n": "30-35",
-      "coverage_note": "Both seeds are 2017 ocrelizumab trials from the same program (OPERA/ORATORIO). Expansion bias toward B-cell depletion literature expected. BTK inhibitors, natalizumab, alemtuzumab neighborhoods may be underrepresented. Monitor after pipeline rerun."
+      "coverage_note": "v1.3 rebalanced: ORATORIO (MS-T1-016) redistributed to TOPIC-08 (progressive MS trial). Seeds now span three mechanisms: OPERA (MS-T1-015, ocrelizumab anti-CD20, RRMS), AFFIRM (MS-T1-042, natalizumab VLA-4 integrin, RRMS), EXPAND (MS-T1-043, siponimod S1P modulation, SPMS). BTK inhibitors (tolebrutinib, fenebrutinib) and alemtuzumab not yet seeded — monitor via T3 velocity filter once Phase 3 data mature.",
+      "seed_C_note": "MS-T1-043 (Kappos 2018 EXPAND Lancet) added v1.3. Siponimod is the first S1P modulator with an SPMS indication, bridging TOPIC-07 and TOPIC-08. Provides mechanism diversity absent from the B-cell-depletion-only prior seed set."
     },
     {
       "topic_code": "TOPIC-08",
@@ -99,8 +104,10 @@
       "seed_A": "MS-T1-017",
       "seed_B": "MS-T1-018",
       "seed_C": "MS-T1-040",
+      "seed_D": "MS-T1-016",
       "target_n": "25-30",
-      "seed_C_note": "MS-T1-040 (Ontaneda et al. 2016 Lancet) redistributed from retired TOPIC-16; covers progressive disease biology, trial strategy, and repair agendas — fits TOPIC-08 mechanistically."
+      "seed_C_note": "MS-T1-040 (Ontaneda et al. 2016 Lancet) redistributed from retired TOPIC-16; covers progressive disease biology, trial strategy, and repair agendas — fits TOPIC-08 mechanistically.",
+      "seed_D_note": "MS-T1-016 (Montalban 2017 NEJM, ORATORIO trial) redistributed from TOPIC-07 v1.3. ORATORIO is the pivotal PPMS trial — its citation neighborhood is progressive MS-specific, not RRMS-specific. Progressive MS framing belongs in TOPIC-08 rather than widening TOPIC-07 toward a single drug class."
     },
     {
       "topic_code": "TOPIC-09",
@@ -149,26 +156,42 @@
       "seed_B": "MS-T1-028",
       "seed_C": "MS-T1-039",
       "seed_D": "MS-T1-041",
-      "target_n": "20-25"
+      "seed_E": "MS-T1-046",
+      "target_n": "20-25",
+      "seed_E_note": "MS-T1-046 (Okai et al. 2022 Neurology) promoted from T4-017 expert signal to core seed v1.3. Covers DMT access and clinical outcomes disparities for African American patients specifically — fills a gap between epidemiological disparities papers (seeds A-D) and care-access mechanisms."
     },
     {
       "topic_code": "TOPIC-14",
       "layer": "Context/Future",
       "topic_name": "Clinical AI & Learning Systems",
-      "why_it_matters": "Lesion segmentation; progression prediction; treatment recommendation; implementation gap; explainability",
+      "why_it_matters": "Lesion segmentation; progression prediction; treatment recommendation; data-driven disease reclassification; implementation gap; explainability",
       "seed_A": "MS-T1-029",
       "seed_B": "MS-T1-030",
-      "target_n": "20-25"
+      "seed_C": "MS-T1-031",
+      "target_n": "20-25",
+      "seed_C_note": "MS-T1-031 (Louapre 2025, AI-driven MS reclassification) redistributed from TOPIC-15 v1.3. AI-based reclassification belongs in the Clinical AI topic; remyelination/neuroprotection is the distinct scientific frontier that TOPIC-15 now anchors exclusively."
     },
     {
       "topic_code": "TOPIC-15",
       "layer": "Context/Future",
-      "topic_name": "Emerging Frontiers",
-      "why_it_matters": "Data-driven reclassification; remyelination; neuroprotection; EBV vaccine prevention",
-      "seed_A": "MS-T1-031",
-      "seed_B": "MS-T1-032",
+      "topic_name": "Remyelination & Neuroprotection",
+      "why_it_matters": "Remyelination biology; neuroprotection strategies; repair beyond inflammation suppression; EBV vaccine prevention; biggest scientific frontier",
+      "seed_A": "MS-T1-032",
+      "seed_B": "MS-T1-049",
       "target_n": "15-20",
-      "coverage_note": "MS-T1-031 (Louapre 2025, AI-driven reclassification) and MS-T1-032 (Franklin 2008, remyelination) have distinct citation neighborhoods. Consider splitting into TOPIC-14b (repair/remyelination, folded into TOPIC-08) and retaining AI reclassification under TOPIC-15, or consolidating. Review post-pipeline-rerun."
+      "coverage_note": "v1.3 renamed from 'Emerging Frontiers' to 'Remyelination & Neuroprotection' for clean scope. AI reclassification (Louapre 2025, MS-T1-031) redistributed to TOPIC-14 where it belongs mechanistically. Lubetzki 2020 Lancet Neurol review (MS-T1-049) added as second seed to anchor remyelination-to-clinical-translation pipeline. Franklin 2008 (MS-T1-032) remains as foundational remyelination biology anchor."
+    },
+    {
+      "topic_code": "TOPIC-16",
+      "layer": "Clinical",
+      "topic_name": "Symptom Management & Multidisciplinary Care",
+      "why_it_matters": "Exercise as therapy; multidisciplinary rehabilitation; fatigue management; bladder/bowel; non-pharmacological care; implementation into MS programs",
+      "seed_A": "MS-T1-047",
+      "seed_B": "MS-T1-048",
+      "target_n": "15-20",
+      "seed_A_note": "MS-T1-047 (Dalgas et al. 2019 JAMA Neurol, 'Exercise as medicine in MS') promoted from T4-035 expert signal v1.3. High-impact editorial framing exercise as disease-modifying therapy; JAMA Neurol positioning signals field-level importance shift.",
+      "seed_B_note": "MS-T1-048 (Khan & Amatya 2017 Arch Phys Med Rehabil) promoted from T4-039 expert signal v1.3. Umbrella review of systematic reviews on MS rehabilitation; most comprehensive evidence synthesis for multidisciplinary care.",
+      "rationale": "TOPIC-16 added v1.3 to accommodate symptom management, rehabilitation, and multidisciplinary care literature that was previously floating across TOPIC-09 (PROs) and TOPIC-10 (Comorbidities) without a dedicated anchor. This literature addresses JLA Priority #3 (quality of life and symptom management) and is structurally distinct from PRO measurement instruments (TOPIC-09) and comorbidity epidemiology (TOPIC-10). T4 entries T4-035 through T4-041 (rehabilitation/exercise) naturally anchor this topic."
     }
   ],
   "retired_topics": [
