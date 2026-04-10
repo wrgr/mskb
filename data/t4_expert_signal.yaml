@@ -798,6 +798,11 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.23736/S1973-9087.17.04570-1
+    doi_verification_status: needs_manual_verification
+    t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
+      Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex
+      — API confirmation not possible. Verify via journal website or PubMed.
   sex_gender_ms:
   - t4_id: T4-042
     t4_source_type: concept_anchor_signal
@@ -807,7 +812,7 @@ by_concept:
       T11.'
     concept: sex_gender_ms
     concept_path: concepts/populations/sex-gender-ms
-    title: 'Sex ratio of multiple sclerosis in Canada: cohort effect.'
+    title: 'Sex ratio of multiple sclerosis in Canada: a longitudinal study.'
     authors: Orton SM et al
     year: 2006
     journal: Lancet Neurol
@@ -815,6 +820,9 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
+    doi: 10.1016/s1474-4422(06)70581-6
+    t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
+      "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
   - t4_id: T4-043
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -831,6 +839,7 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
+    doi: 10.1007/s13311-017-0562-7
   - t4_id: T4-044
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -862,6 +871,7 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
+    doi: 10.1093/brain/awt281
   - t4_id: T4-045
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -892,6 +902,7 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
+    doi: 10.1111/imm.13004
   - t4_id: T4-046
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -907,6 +918,10 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
+    doi: 10.2174/1874205X01408010037
+    t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
+      Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
+      Open Neurol J confirmed.
   shared_decision_making:
   - t4_id: T4-047
     t4_source_type: concept_anchor_signal
@@ -924,6 +939,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
+    doi: 10.1007/s11606-012-2077-6
   - t4_id: T4-048
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -941,6 +957,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
+    doi: 10.1007/s00415-012-6531-x
   - t4_id: T4-049
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -958,6 +975,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
+    doi: 10.1016/j.pec.2016.12.009
   - t4_id: T4-050
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -974,6 +992,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
+    doi: 10.1007/s00415-016-8333-9
   - t4_id: T4-051
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -991,6 +1010,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
+    doi: 10.1177/1352458519838941
   - t4_id: T4-052
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1002,7 +1022,7 @@ by_concept:
     title: Shared decision making in multiple sclerosis.
     authors: Grácio S et al
     year: 2021
-    journal: Mult Scler
+    journal: Front Neurol
     topic_codes:
     - T09
     - T16
@@ -1019,9 +1039,9 @@ by_concept:
       existing_tier: included
       seed_hops: 1
       cocite_seeds: 33
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
+    t4_note: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus fuzzy-match
+      record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers in Neurology
+      — the Mult Scler attribution in v1.1 was incorrect.'
 flat_list:
 - t4_id: T4-001
   t4_source_type: concept_anchor_signal
@@ -1792,6 +1812,11 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.23736/S1973-9087.17.04570-1
+  doi_verification_status: needs_manual_verification
+  t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
+    Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex —
+    API confirmation not possible. Verify via journal website or PubMed.
 - t4_id: T4-042
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1800,7 +1825,7 @@ flat_list:
     T11.'
   concept: sex_gender_ms
   concept_path: concepts/populations/sex-gender-ms
-  title: 'Sex ratio of multiple sclerosis in Canada: cohort effect.'
+  title: 'Sex ratio of multiple sclerosis in Canada: a longitudinal study.'
   authors: Orton SM et al
   year: 2006
   journal: Lancet Neurol
@@ -1808,6 +1833,9 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
+  doi: 10.1016/s1474-4422(06)70581-6
+  t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
+    "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
 - t4_id: T4-043
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1823,6 +1851,7 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
+  doi: 10.1007/s13311-017-0562-7
 - t4_id: T4-044
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1854,6 +1883,7 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
+  doi: 10.1093/brain/awt281
 - t4_id: T4-045
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1884,6 +1914,7 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
+  doi: 10.1111/imm.13004
 - t4_id: T4-046
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1899,6 +1930,10 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
+  doi: 10.2174/1874205X01408010037
+  t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
+    Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
+    Open Neurol J confirmed.
 - t4_id: T4-047
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1915,6 +1950,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
+  doi: 10.1007/s11606-012-2077-6
 - t4_id: T4-048
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1932,6 +1968,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
+  doi: 10.1007/s00415-012-6531-x
 - t4_id: T4-049
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1948,6 +1985,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
+  doi: 10.1016/j.pec.2016.12.009
 - t4_id: T4-050
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1964,6 +2002,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
+  doi: 10.1007/s00415-016-8333-9
 - t4_id: T4-051
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1980,6 +2019,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
+  doi: 10.1177/1352458519838941
 - t4_id: T4-052
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1991,7 +2031,7 @@ flat_list:
   title: Shared decision making in multiple sclerosis.
   authors: Grácio S et al
   year: 2021
-  journal: Mult Scler
+  journal: Front Neurol
   topic_codes:
   - T09
   - T16
@@ -2008,6 +2048,6 @@ flat_list:
     existing_tier: included
     seed_hops: 1
     cocite_seeds: 33
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
+  t4_note: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus fuzzy-match
+    record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers in Neurology
+    — the Mult Scler attribution in v1.1 was incorrect.'
