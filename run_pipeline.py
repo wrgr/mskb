@@ -11,6 +11,7 @@ from src.build_graphs import run as run_graphs
 from src.build_knowledge_graph import run as run_kg
 from src.build_learner_journey import run as run_learner_journey
 from src.compute_scores import run as run_scores
+from src.compute_viz_metrics import run as run_viz_metrics
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
@@ -92,6 +93,9 @@ def main(config_path: str) -> None:
 
     print("Stage 9/10: Running KB audit gates...")
     run_audit(config_path)
+
+    print("Stage 9b/10: Computing visualization metrics...")
+    run_viz_metrics(config_path)
 
     print("Stage 10/10: Generating expert comms review packet...")
     run_expert_comms(config_path)
