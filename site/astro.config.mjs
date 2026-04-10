@@ -68,6 +68,8 @@ export default defineConfig({
         },
         { label: 'Learning Journey', link: '/journey/' },
         { label: 'Citation Explorer', link: '/explorer/' },
+        { label: 'Citation Lineage', link: '/lineage/' },
+        { label: 'Field Development', link: '/field-development/' },
         { label: 'Glossary', link: '/glossary/' },
         {
           label: 'Citation Topics',

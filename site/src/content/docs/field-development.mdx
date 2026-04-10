@@ -1,0 +1,59 @@
+---
+title: Field Development
+description: Track how MS research output has grown over time — annual paper volume by domain, and a research landscape map of every paper by year and importance.
+template: splash
+hero:
+  tagline: Track how the MS research landscape has evolved across decades, domains, and citation importance.
+sidebar:
+  label: Field Development
+  order: 7
+---
+
+import '../../styles/custom.css';
+
+<div class="field-dev-shell">
+
+<p>
+  Two complementary views of how MS research has developed. The <strong>annual output</strong> chart shows paper volume by year and domain. The <strong>research landscape</strong> plots every paper by publication year and importance score, with circle size proportional to total citations — revealing the density and weight of work in each era.
+</p>
+
+<div class="field-dev-controls">
+  <fieldset class="lineage-filter-group fd-domain-filter">
+    <legend>Domain filter</legend>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="pathogenesis_and_immunology" checked /><span class="legend-dot" style="background:#1f77b4"></span> Pathogenesis &amp; Immunology</label>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="imaging_and_biomarkers" checked /><span class="legend-dot" style="background:#17a2b8"></span> Imaging &amp; Biomarkers</label>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="clinical_trials_and_therapeutics" checked /><span class="legend-dot" style="background:#d62728"></span> Therapeutics</label>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="clinical_care_and_management" checked /><span class="legend-dot" style="background:#2ca02c"></span> Clinical Care</label>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="epidemiology_and_population_health" checked /><span class="legend-dot" style="background:#9467bd"></span> Epidemiology</label>
+    <label class="lineage-check"><input type="checkbox" class="fd-cat-filter" value="unknown" checked /><span class="legend-dot" style="background:#aaa"></span> Other</label>
+  </fieldset>
+</div>
+
+<div id="fd-stats" class="fd-stats-row" aria-label="Corpus summary statistics"></div>
+
+<div class="field-dev-charts">
+
+  <section class="chart-card">
+    <h3>Annual output by domain</h3>
+    <p class="chart-hint">Papers published per year, stacked by research domain. Click a bar segment to filter the landscape below.</p>
+    <div id="fd-timeline" class="chart-container" role="img" aria-label="Annual paper output chart">
+      <div class="chart-loading">Loading…</div>
+    </div>
+  </section>
+
+  <section class="chart-card">
+    <h3>Research landscape</h3>
+    <p class="chart-hint">Each circle is a paper — X = year, Y = importance score, size = citation count. Hover to see title and key metrics.</p>
+    <div class="chart-scatter-wrap">
+      <div id="fd-scatter" class="chart-container scatter-container" role="img" aria-label="Research landscape scatter plot">
+        <div class="chart-loading">Loading…</div>
+      </div>
+      <div id="fd-tooltip" class="fd-tooltip" hidden role="tooltip"></div>
+    </div>
+  </section>
+
+</div>
+
+</div>
+
+<script is:inline src="/mskb/javascripts/field_development.js"></script>

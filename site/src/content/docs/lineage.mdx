@@ -1,0 +1,85 @@
+---
+title: Citation Lineage
+description: Explore how MS research builds across generations — from foundational papers through decades of accumulated evidence to the current research frontier.
+template: splash
+hero:
+  tagline: See how MS research builds on itself across generations of citation — foundational papers to the current frontier.
+sidebar:
+  label: Citation Lineage
+  order: 6
+---
+
+import '../../styles/custom.css';
+
+<div class="lineage-shell">
+
+<p>
+  Papers are arranged by <strong>publication year</strong> (left = oldest, right = newest). <strong>Generation 0</strong> contains foundational work with no outgoing citations to other corpus papers; higher generations cite earlier ones, building the research frontier forward. Node size reflects importance score; color shows MS research domain.
+</p>
+
+<div class="lineage-layout">
+
+  <aside class="lineage-controls">
+
+    <fieldset class="lineage-filter-group">
+      <legend>Domain</legend>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="pathogenesis_and_immunology" checked /><span class="legend-dot" style="background:#1f77b4"></span> Pathogenesis &amp; Immunology</label>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="imaging_and_biomarkers" checked /><span class="legend-dot" style="background:#17a2b8"></span> Imaging &amp; Biomarkers</label>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="clinical_trials_and_therapeutics" checked /><span class="legend-dot" style="background:#d62728"></span> Therapeutics</label>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="clinical_care_and_management" checked /><span class="legend-dot" style="background:#2ca02c"></span> Clinical Care</label>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="epidemiology_and_population_health" checked /><span class="legend-dot" style="background:#9467bd"></span> Epidemiology</label>
+      <label class="lineage-check"><input type="checkbox" class="cat-filter" value="unknown" checked /><span class="legend-dot" style="background:#aaa"></span> Other</label>
+    </fieldset>
+
+    <div class="lineage-filter-row">
+      <label class="lineage-label">Year range</label>
+      <div class="lineage-year-pair">
+        <input id="lineage-year-min" type="number" min="1960" max="2026" step="1" value="1980" />
+        <span>–</span>
+        <input id="lineage-year-max" type="number" min="1960" max="2026" step="1" value="2026" />
+      </div>
+    </div>
+
+    <div class="lineage-filter-row">
+      <label class="lineage-label" for="lineage-gen-max">Max generation <span id="lineage-gen-label" class="lineage-gen-badge">all</span></label>
+      <input id="lineage-gen-max" type="range" min="0" max="20" step="1" value="20" class="lineage-range" />
+    </div>
+
+    <div class="lineage-filter-row">
+      <label class="lineage-check"><input id="lineage-show-edges" type="checkbox" checked /> Show citations</label>
+    </div>
+
+    <div class="lineage-actions">
+      <button id="lineage-reset" type="button" class="lineage-btn">Reset view</button>
+      <button id="lineage-fit" type="button" class="lineage-btn">Fit all</button>
+    </div>
+
+    <div id="lineage-status" class="lineage-status" aria-live="polite"></div>
+
+  </aside>
+
+  <div class="lineage-main">
+    <div id="lineage-stage" class="lineage-stage" role="img" aria-label="Citation lineage graph">
+      <div id="lineage-loading" class="lineage-loading" aria-busy="true">Loading lineage data…</div>
+    </div>
+
+    <section id="lineage-paper-panel" class="lineage-paper-panel" hidden aria-label="Selected paper details">
+      <header class="lineage-panel-head">
+        <h3>Selected paper</h3>
+        <button id="lineage-panel-close" type="button" class="lineage-close-btn" aria-label="Close paper panel">✕</button>
+      </header>
+      <div id="lineage-paper-details" class="lineage-paper-details"></div>
+    </section>
+  </div>
+
+</div>
+
+<p class="lineage-help">
+  <strong>Tip:</strong> Hover a node to highlight its citation neighborhood. Click to open the paper detail panel. Use the year inputs and domain checkboxes to focus on a region of the graph. Scroll or pinch to zoom; drag the canvas to pan.
+</p>
+
+</div>
+
+<script is:inline src="/mskb/javascripts/vendor/graphology.umd.min.js"></script>
+<script is:inline src="/mskb/javascripts/vendor/sigma.min.js"></script>
+<script is:inline src="/mskb/javascripts/lineage.js"></script>
