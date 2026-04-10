@@ -205,13 +205,19 @@ by_concept:
       protective factors. Concept covers thin-coverage topic area(s): T10.'
     concept: depression_anxiety_ms
     concept_path: concepts/clinical/depression-anxiety-ms
-    title: Resilience and depression in multiple sclerosis.
-    authors: Beckner ME et al
-    year: 2010
-    journal: Mult Scler
+    title: Resilience mediates the longitudinal relationships between social support
+      and mental health outcomes in multiple sclerosis.
+    authors: Koelmel E et al
+    year: 2017
+    journal: Arch Phys Med Rehabil
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1016/j.apmr.2016.09.127
+    t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in
+      PubMed or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
+      MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
+      role with verified metadata (~140 citations).
   - t4_id: T4-012
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -226,6 +232,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1016/j.jns.2016.11.067
   - t4_id: T4-013
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -241,6 +248,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
+    doi: 10.1212/wnl.0b013e3181f4d80d
   equity_sdoh:
   - t4_id: T4-014
     t4_source_type: concept_anchor_signal
@@ -257,6 +265,7 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1001/jamaneurol.2021.3416
   - t4_id: T4-015
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -265,13 +274,19 @@ by_concept:
       topic area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: Multiple sclerosis in Black and White Americans.
+    title: Racial and ethnic disparities in multiple sclerosis prevalence.
     authors: Langer-Gould A et al
     year: 2022
-    journal: Lancet Neurol
+    journal: Neurology
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/WNL.0000000000200151
+    t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis
+      in Black and White Americans" — actual title confirmed; (2) journal was Lancet
+      Neurol — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 —
+      corrected to Langer-Gould 2022. This paper is also added as core seed MS-T1-028.
+      T4 designation formalises concept-anchor signal for concepts/populations/equity-sdoh.'
   - t4_id: T4-016
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -280,13 +295,20 @@ by_concept:
       area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: The multiple sclerosis outcome assessments consortium.
-    authors: Cutter GR et al
-    year: 2015
+    title: 'Multiple Sclerosis Outcome Assessments Consortium: genesis and initial
+      project plan.'
+    authors: Rudick RA et al
+    year: 2014
     journal: Mult Scler
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1177/1352458513503392
+    t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
+      Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves
+      to a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
+      2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG,
+      Hudson LD 2014 (PMID 24057430, ~100 citations).
   - t4_id: T4-017
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -295,13 +317,19 @@ by_concept:
       topic area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: Immunotherapy for MS in Black Americans.
-    authors: Naismith RT et al
-    year: 2018
+    title: Advancing care and outcomes for African American patients with multiple
+      sclerosis.
+    authors: Okai AF et al
+    year: 2022
     journal: Neurology
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/WNL.0000000000200791
+    t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
+      had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
+      search). Okai 2022 directly covers DMT access and outcomes for African American
+      patients in Neurology (PMID 35470139, confirmed).
   - t4_id: T4-018
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -310,13 +338,19 @@ by_concept:
       area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: 'Socioeconomic status and MS: a systematic review.'
-    authors: Marrie RA et al
-    year: 2022
-    journal: Mult Scler
+    title: 'Socioeconomic status and disability progression in multiple sclerosis:
+      a multinational study.'
+    authors: Harding KE et al
+    year: 2019
+    journal: Neurology
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/WNL.0000000000007190
+    t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic
+      review — not found; no such paper confirmed in PubMed or OpenAlex). Harding
+      2019 covers the SES-disability link with multinational MSBase data in Neurology
+      (PMID 30796140, ~100 citations, confirmed).
   - t4_id: T4-019
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -332,6 +366,7 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/WNL.0b013e3182872855
   - t4_id: T4-020
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -340,13 +375,18 @@ by_concept:
       topic area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: Patient-reported barriers to high-efficacy DMTs in underserved MS populations.
-    authors: Tanner L et al
-    year: 2023
+    title: 'Multiple sclerosis in US minority populations: clinical practice insights.'
+    authors: Khan O et al
+    year: 2015
     journal: Neurol Clin Pract
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/CPJ.0000000000000112
+    t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
+      no such paper confirmed in PubMed or web search). Khan 2015 covers structural
+      barriers and clinical practice for MS in minority populations in Neurol Clin
+      Pract (confirmed, ~114 citations).
   - t4_id: T4-021
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -1123,13 +1163,19 @@ flat_list:
     protective factors. Concept covers thin-coverage topic area(s): T10.'
   concept: depression_anxiety_ms
   concept_path: concepts/clinical/depression-anxiety-ms
-  title: Resilience and depression in multiple sclerosis.
-  authors: Beckner ME et al
-  year: 2010
-  journal: Mult Scler
+  title: Resilience mediates the longitudinal relationships between social support
+    and mental health outcomes in multiple sclerosis.
+  authors: Koelmel E et al
+  year: 2017
+  journal: Arch Phys Med Rehabil
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1016/j.apmr.2016.09.127
+  t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in PubMed
+    or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
+    MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
+    role with verified metadata (~140 citations).
 - t4_id: T4-012
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1144,6 +1190,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1016/j.jns.2016.11.067
 - t4_id: T4-013
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1159,6 +1206,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
+  doi: 10.1212/wnl.0b013e3181f4d80d
 - t4_id: T4-014
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1174,6 +1222,7 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1001/jamaneurol.2021.3416
 - t4_id: T4-015
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1182,13 +1231,19 @@ flat_list:
     T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: Multiple sclerosis in Black and White Americans.
+  title: Racial and ethnic disparities in multiple sclerosis prevalence.
   authors: Langer-Gould A et al
   year: 2022
-  journal: Lancet Neurol
+  journal: Neurology
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/WNL.0000000000200151
+  t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis in
+    Black and White Americans" — actual title confirmed; (2) journal was Lancet Neurol
+    — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 — corrected
+    to Langer-Gould 2022. This paper is also added as core seed MS-T1-028. T4 designation
+    formalises concept-anchor signal for concepts/populations/equity-sdoh.'
 - t4_id: T4-016
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1196,13 +1251,20 @@ flat_list:
     editor: diversity in MS trials. Concept covers thin-coverage topic area(s): T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: The multiple sclerosis outcome assessments consortium.
-  authors: Cutter GR et al
-  year: 2015
+  title: 'Multiple Sclerosis Outcome Assessments Consortium: genesis and initial project
+    plan.'
+  authors: Rudick RA et al
+  year: 2014
   journal: Mult Scler
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1177/1352458513503392
+  t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
+    Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves to
+    a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
+    2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG, Hudson
+    LD 2014 (PMID 24057430, ~100 citations).
 - t4_id: T4-017
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1211,13 +1273,18 @@ flat_list:
     T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: Immunotherapy for MS in Black Americans.
-  authors: Naismith RT et al
-  year: 2018
+  title: Advancing care and outcomes for African American patients with multiple sclerosis.
+  authors: Okai AF et al
+  year: 2022
   journal: Neurology
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/WNL.0000000000200791
+  t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
+    had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
+    search). Okai 2022 directly covers DMT access and outcomes for African American
+    patients in Neurology (PMID 35470139, confirmed).
 - t4_id: T4-018
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1225,13 +1292,19 @@ flat_list:
     editor: SES-outcomes link. Concept covers thin-coverage topic area(s): T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: 'Socioeconomic status and MS: a systematic review.'
-  authors: Marrie RA et al
-  year: 2022
-  journal: Mult Scler
+  title: 'Socioeconomic status and disability progression in multiple sclerosis: a
+    multinational study.'
+  authors: Harding KE et al
+  year: 2019
+  journal: Neurology
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/WNL.0000000000007190
+  t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic review
+    — not found; no such paper confirmed in PubMed or OpenAlex). Harding 2019 covers
+    the SES-disability link with multinational MSBase data in Neurology (PMID 30796140,
+    ~100 citations, confirmed).
 - t4_id: T4-019
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1247,6 +1320,7 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/WNL.0b013e3182872855
 - t4_id: T4-020
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1255,13 +1329,18 @@ flat_list:
     T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: Patient-reported barriers to high-efficacy DMTs in underserved MS populations.
-  authors: Tanner L et al
-  year: 2023
+  title: 'Multiple sclerosis in US minority populations: clinical practice insights.'
+  authors: Khan O et al
+  year: 2015
   journal: Neurol Clin Pract
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/CPJ.0000000000000112
+  t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
+    no such paper confirmed in PubMed or web search). Khan 2015 covers structural
+    barriers and clinical practice for MS in minority populations in Neurol Clin Pract
+    (confirmed, ~114 citations).
 - t4_id: T4-021
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
