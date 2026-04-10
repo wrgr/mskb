@@ -616,6 +616,7 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
+    doi: 10.1056/nejmoa1800149
   - t4_id: T4-032
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -627,10 +628,14 @@ by_concept:
     title: Cognitive and psychosocial features of pediatric MS.
     authors: Amato MP et al
     year: 2010
-    journal: Ann Neurol
+    journal: Neurology
     topic_codes:
     - T12
     corpus_status: not_found
+    doi: 10.1212/WNL.0b013e3181f4d821
+    t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID
+      20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
+      features in pediatric MS.'
   - t4_id: T4-033
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -641,7 +646,7 @@ by_concept:
     title: Pediatric multiple sclerosis.
     authors: Waldman A et al
     year: 2014
-    journal: Nat Rev Neurol
+    journal: Semin Neurol
     topic_codes:
     - T12
     corpus_status: title_fuzzy(0.98)
@@ -657,9 +662,10 @@ by_concept:
       existing_tier: included
       seed_hops: 1
       cocite_seeds: 52
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
+    t4_note: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The corpus
+      fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to a Thieme
+      journal (Seminars in Neurology), consistent with citation count of 56. The Nat
+      Rev Neurol attribution in v1.1 was incorrect.'
   - t4_id: T4-034
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -674,6 +680,7 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
+    doi: 10.1055/s-0034-1381742
   rehabilitation_exercise:
   - t4_id: T4-035
     t4_source_type: concept_anchor_signal
@@ -690,6 +697,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1001/jamaneurol.2018.4042
   - t4_id: T4-036
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -705,6 +713,10 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1177/1545968316680592
+    t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
+      Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl
+      RW et al 2017 Neurorehabil Neural Repair confirmed.
   - t4_id: T4-037
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -721,6 +733,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1177/1352458512437864
   - t4_id: T4-038
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -736,6 +749,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1038/s41582-018-0027-9
   - t4_id: T4-039
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -751,6 +765,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1016/j.apmr.2016.04.016
   - t4_id: T4-040
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -767,6 +782,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
+    doi: 10.1016/j.apmr.2013.01.016
   - t4_id: T4-041
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1601,6 +1617,7 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
+  doi: 10.1056/nejmoa1800149
 - t4_id: T4-032
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1611,10 +1628,14 @@ flat_list:
   title: Cognitive and psychosocial features of pediatric MS.
   authors: Amato MP et al
   year: 2010
-  journal: Ann Neurol
+  journal: Neurology
   topic_codes:
   - T12
   corpus_status: not_found
+  doi: 10.1212/WNL.0b013e3181f4d821
+  t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID 20876467).
+    Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
+    features in pediatric MS.'
 - t4_id: T4-033
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1625,7 +1646,7 @@ flat_list:
   title: Pediatric multiple sclerosis.
   authors: Waldman A et al
   year: 2014
-  journal: Nat Rev Neurol
+  journal: Semin Neurol
   topic_codes:
   - T12
   corpus_status: title_fuzzy(0.98)
@@ -1641,9 +1662,10 @@ flat_list:
     existing_tier: included
     seed_hops: 1
     cocite_seeds: 52
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
+  t4_note: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The corpus
+    fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to a Thieme journal
+    (Seminars in Neurology), consistent with citation count of 56. The Nat Rev Neurol
+    attribution in v1.1 was incorrect.'
 - t4_id: T4-034
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1658,6 +1680,7 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
+  doi: 10.1055/s-0034-1381742
 - t4_id: T4-035
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1672,6 +1695,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1001/jamaneurol.2018.4042
 - t4_id: T4-036
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1686,6 +1710,10 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1177/1545968316680592
+  t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
+    Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl RW
+    et al 2017 Neurorehabil Neural Repair confirmed.
 - t4_id: T4-037
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1701,6 +1729,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1177/1352458512437864
 - t4_id: T4-038
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1716,6 +1745,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1038/s41582-018-0027-9
 - t4_id: T4-039
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1731,6 +1761,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1016/j.apmr.2016.04.016
 - t4_id: T4-040
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1746,6 +1777,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
+  doi: 10.1016/j.apmr.2013.01.016
 - t4_id: T4-041
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
