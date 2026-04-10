@@ -1,2281 +1,895 @@
-version: '1.2'
+version: '2.0'
 generated: '2026-04-10'
 t4_source_type: concept_anchor_signal
 description: 'Papers explicitly nominated by editors as required anchors for MSKB
   educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
   concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
   Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
-  expert signal documented; cross_seed_score = 0 acceptable. Total: 62 papers — 55
-  not yet in corpus (primary addition targets), 7 already included (signal formalisation
-  only). v1.2: full DOI audit and corrections; 8 papers replaced with verified alternatives;
-  10 Global South/equity papers added (T4-053–T4-062).'
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 62 papers — 45
+  not yet in corpus (primary addition targets), 17 already included (signal formalisation
+  only).'
 by_concept:
   bladder_bowel_dysfunction:
-  - t4_id: T4-001
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: neuroanatomical basis, T02. Concept covers thin-coverage
-      topic area(s): T10.'
-    concept: bladder_bowel_dysfunction
     concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: The neural control of micturition.
-    authors: Fowler CJ et al
-    year: 2008
-    journal: Nat Rev Neurosci
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1038/nrn2401
-    corpus_openalex_id: https://openalex.org/W2008969125
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-002
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: urology management overview. Concept covers thin-coverage
-      topic area(s): T10.'
-    concept: bladder_bowel_dysfunction
-    concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Multiple sclerosis and the urologist.
-    authors: Litwiller SE et al
-    year: 1999
-    journal: J Urol
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
-    corpus_openalex_id: https://openalex.org/W2055534266
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-003
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: practical management, T10. Concept covers thin-coverage
-      topic area(s): T10.'
-    concept: bladder_bowel_dysfunction
-    concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: A UK consensus on the management of the bladder in multiple sclerosis.
-    authors: Fowler CJ et al
-    year: 2009
-    journal: J Neurol Neurosurg Psychiatry
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
-      in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
-      on bladder management in MS published in JNNP (~307 citations), filling the
-      practical-management role with verified metadata.
-    corpus_doi: https://doi.org/10.1136/jnnp.2008.159178
-  - t4_id: T4-004
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: review anchor for T10. Concept covers thin-coverage topic
-      area(s): T10.'
-    concept: bladder_bowel_dysfunction
-    concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Neurogenic lower urinary tract dysfunction.
-    authors: Panicker JN et al
-    year: 2015
-    journal: Lancet Neurol
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
-  - t4_id: T4-005
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: bowel arm coverage. Concept covers thin-coverage topic
-      area(s): T10.'
-    concept: bladder_bowel_dysfunction
-    concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: 'Neurogenic bowel dysfunction in patients with multiple sclerosis: prevalence,
-      impact, and management strategies.'
-    authors: Preziosi G et al
-    year: 2018
-    journal: Degenerative Neurol Neuromuscul Dis
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev
-      Gastroenterol Hepatol — confirmed paper is in Degenerative Neurological and
-      Neuromuscular Disease 2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
-    corpus_doi: https://doi.org/10.2147/dnnd.s138835
-  - t4_id: T4-006
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
-      Dysfunction in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance
-      documented by editor: contemporary PRO-grounded burden data, T09. Concept covers
-      thin-coverage topic area(s): T10.'
-    concept: bladder_bowel_dysfunction
-    concept_path: concepts/clinical/bladder-bowel-dysfunction
-    title: Treatment satisfaction and bothersome bladder, bowel, sexual symptoms in
-      multiple sclerosis.
-    authors: Wang G et al
-    year: 2017
-    journal: Mult Scler Relat Disord
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
-      no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
-      search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
-      role with verified metadata (~42 citations). First author Wang G; Marrie RA
-      is co-author.
-    corpus_doi: https://doi.org/10.1016/j.msard.2017.12.006
+    papers:
+    - t4_id: T4-001
+      title: The neural control of micturition.
+      authors: Fowler CJ et al
+      year: 2008
+      journal: Nat Rev Neurosci
+      topic_codes:
+      - T10
+      relevance: neuroanatomical basis, T02
+      corpus_status: not_found
+      doi: https://doi.org/10.1038/nrn2401
+      openalex_id: https://openalex.org/W2008969125
+    - t4_id: T4-002
+      title: Multiple sclerosis and the urologist.
+      authors: Litwiller SE et al
+      year: 1999
+      journal: J Urol
+      topic_codes:
+      - T10
+      relevance: urology management overview
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/s0022-5347(01)61760-9
+      openalex_id: https://openalex.org/W2055534266
+    - t4_id: T4-003
+      title: A UK consensus on the management of the bladder in multiple sclerosis.
+      authors: Fowler CJ et al
+      year: 2009
+      journal: J Neurol Neurosurg Psychiatry
+      topic_codes:
+      - T10
+      relevance: practical management, T10
+      corpus_status: not_found
+      doi: https://doi.org/10.1136/jnnp.2008.159178
+      provenance: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
+        in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
+        on bladder management in MS published in JNNP (~307 citations), filling the
+        practical-management role with verified metadata.
+    - t4_id: T4-004
+      title: Neurogenic lower urinary tract dysfunction.
+      authors: Panicker JN et al
+      year: 2015
+      journal: Lancet Neurol
+      topic_codes:
+      - T10
+      relevance: review anchor for T10
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/s1474-4422(15)00070-8
+    - t4_id: T4-005
+      title: 'Neurogenic bowel dysfunction in patients with multiple sclerosis: prevalence,
+        impact, and management strategies.'
+      authors: Preziosi G et al
+      year: 2018
+      journal: Degenerative Neurol Neuromuscul Dis
+      topic_codes:
+      - T10
+      relevance: bowel arm coverage
+      corpus_status: not_found
+      doi: https://doi.org/10.2147/dnnd.s138835
+      provenance: 'Title and journal corrected from v1.1. Original entry listed Nat
+        Rev Gastroenterol Hepatol — confirmed paper is in Degenerative Neurological
+        and Neuromuscular Disease 2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel
+        A.'
+    - t4_id: T4-006
+      title: Treatment satisfaction and bothersome bladder, bowel, sexual symptoms
+        in multiple sclerosis.
+      authors: Wang G et al
+      year: 2017
+      journal: Mult Scler Relat Disord
+      topic_codes:
+      - T10
+      relevance: contemporary PRO-grounded burden data, T09
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.msard.2017.12.006
+      provenance: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
+        no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
+        search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual
+        burden role with verified metadata (~42 citations). First author Wang G; Marrie
+        RA is co-author.
   depression_anxiety_ms:
-  - t4_id: T4-007
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      prevalence anchor, T10. Concept covers thin-coverage topic area(s): T10.'
-    concept: depression_anxiety_ms
     concept_path: concepts/clinical/depression-anxiety-ms
-    title: 'Major depression in multiple sclerosis: a population-based perspective.'
-    authors: Patten SB et al
-    year: 2003
-    journal: Neurology
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
-  - t4_id: T4-008
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      mechanisms review. Concept covers thin-coverage topic area(s): T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: 'Depression in multiple sclerosis: a review.'
-    authors: Siegert RJ, Abernethy DA
-    year: 2005
-    journal: J Neurol Neurosurg Psychiatry
-    topic_codes:
-    - T10
-    corpus_status: title_fuzzy(0.99)
-    corpus_id: ee043c45f5376a26956aa4650e6e0be2
-    corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
-    corpus_stats:
-      citation_count: 1438
-      in_degree: 124
-      out_degree: 27
-      pagerank_pct: 97.5
-      kcore: 26
-      core_score: 0.917
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 80
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
-  - t4_id: T4-009
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      AAN guideline anchor. Concept covers thin-coverage topic area(s): T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: 'Evidence-based guideline: assessment and management of psychiatric disorders
-      in individuals with MS.'
-    authors: Minden SL et al
-    year: 2014
-    journal: Neurology
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
-    corpus_openalex_id: https://openalex.org/W2026795289
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=1)
-  - t4_id: T4-010
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      bidirectional mechanism review. Concept covers thin-coverage topic area(s):
-      T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: The link between multiple sclerosis and depression.
-    authors: Feinstein A et al
-    year: 2014
-    journal: Nat Rev Neurol
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
-    corpus_openalex_id: https://openalex.org/W1994216586
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-011
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      protective factors. Concept covers thin-coverage topic area(s): T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: Resilience mediates the longitudinal relationships between social support
-      and mental health outcomes in multiple sclerosis.
-    authors: Koelmel E et al
-    year: 2017
-    journal: Arch Phys Med Rehabil
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in
-      PubMed or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
-      MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
-      role with verified metadata (~140 citations).
-    corpus_doi: https://doi.org/10.1016/j.apmr.2016.09.127
-  - t4_id: T4-012
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      meta-analysis anchor, T09/T10. Concept covers thin-coverage topic area(s): T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: 'Prevalence of depression and anxiety in MS: a systematic review and meta-analysis.'
-    authors: Boeschoten RE et al
-    year: 2017
-    journal: J Neurol Sci
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
-  - t4_id: T4-013
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-      in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-      non-pharmacological interventions. Concept covers thin-coverage topic area(s):
-      T10.'
-    concept: depression_anxiety_ms
-    concept_path: concepts/clinical/depression-anxiety-ms
-    title: MS quality of life, depression, and fatigue improve after mindfulness training.
-    authors: Grossman P et al
-    year: 2010
-    journal: Neurology
-    topic_codes:
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
-    corpus_openalex_id: https://openalex.org/W2157656577
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
+    papers:
+    - t4_id: T4-007
+      title: 'Major depression in multiple sclerosis: a population-based perspective.'
+      authors: Patten SB et al
+      year: 2003
+      journal: Neurology
+      topic_codes:
+      - T10
+      relevance: prevalence anchor, T10
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
+    - t4_id: T4-008
+      title: 'Depression in multiple sclerosis: a review.'
+      authors: Siegert RJ, Abernethy DA
+      year: 2005
+      journal: J Neurol Neurosurg Psychiatry
+      topic_codes:
+      - T10
+      relevance: mechanisms review
+      corpus_status: title_fuzzy(0.99)
+      corpus_id: ee043c45f5376a26956aa4650e6e0be2
+      corpus_stats:
+        citation_count: 1438
+        in_degree: 124
+        out_degree: 27
+        pagerank_pct: 97.5
+        kcore: 26
+        core_score: 0.917
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 80
+      doi: https://doi.org/10.1136/jnnp.2004.054635
+    - t4_id: T4-009
+      title: 'Evidence-based guideline: assessment and management of psychiatric disorders
+        in individuals with MS.'
+      authors: Minden SL et al
+      year: 2014
+      journal: Neurology
+      topic_codes:
+      - T10
+      relevance: AAN guideline anchor
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0000000000000013
+      openalex_id: https://openalex.org/W2026795289
+    - t4_id: T4-010
+      title: The link between multiple sclerosis and depression.
+      authors: Feinstein A et al
+      year: 2014
+      journal: Nat Rev Neurol
+      topic_codes:
+      - T10
+      relevance: bidirectional mechanism review
+      corpus_status: not_found
+      doi: https://doi.org/10.1038/nrneurol.2014.139
+      openalex_id: https://openalex.org/W1994216586
+    - t4_id: T4-011
+      title: Resilience mediates the longitudinal relationships between social support
+        and mental health outcomes in multiple sclerosis.
+      authors: Koelmel E et al
+      year: 2017
+      journal: Arch Phys Med Rehabil
+      topic_codes:
+      - T10
+      relevance: protective factors
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.apmr.2016.09.127
+      provenance: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found
+        in PubMed or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
+        MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
+        role with verified metadata (~140 citations).
+    - t4_id: T4-012
+      title: 'Prevalence of depression and anxiety in MS: a systematic review and
+        meta-analysis.'
+      authors: Boeschoten RE et al
+      year: 2017
+      journal: J Neurol Sci
+      topic_codes:
+      - T10
+      relevance: meta-analysis anchor, T09/T10
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.jns.2016.11.067
+    - t4_id: T4-013
+      title: MS quality of life, depression, and fatigue improve after mindfulness
+        training.
+      authors: Grossman P et al
+      year: 2010
+      journal: Neurology
+      topic_codes:
+      - T10
+      relevance: non-pharmacological interventions
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
+      openalex_id: https://openalex.org/W2157656577
   equity_sdoh:
-  - t4_id: T4-014
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: review anchor; already in topic_map as R5. Concept covers
-      thin-coverage topic area(s): T13.'
-    concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: Health disparities and inequities in multiple sclerosis.
-    authors: Amezcua L et al
-    year: 2021
-    journal: JAMA Neurol
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
-    corpus_openalex_id: https://openalex.org/W3201965895
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-015
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: prevalence/severity data update. Concept covers thin-coverage
-      topic area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: Racial and ethnic disparities in multiple sclerosis prevalence.
-    authors: Langer-Gould A et al
-    year: 2022
-    journal: Neurology
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis
-      in Black and White Americans" — actual title confirmed; (2) journal was Lancet
-      Neurol — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 —
-      corrected to Langer-Gould 2022. This paper is also added as core seed MS-T1-028.
-      T4 designation formalises concept-anchor signal for concepts/populations/equity-sdoh.'
-    corpus_doi: https://doi.org/10.1212/wnl.0000000000200151
-  - t4_id: T4-016
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: diversity in MS trials. Concept covers thin-coverage topic
-      area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: 'Multiple Sclerosis Outcome Assessments Consortium: genesis and initial
-      project plan.'
-    authors: Rudick RA et al
-    year: 2014
-    journal: Mult Scler
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
-      Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves
-      to a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
-      2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG,
-      Hudson LD 2014 (PMID 24057430, ~100 citations).
-    corpus_doi: https://doi.org/10.1177/1352458513503392
-  - t4_id: T4-017
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: DMT access/response disparities. Concept covers thin-coverage
-      topic area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: Advancing care and outcomes for African American patients with multiple
-      sclerosis.
-    authors: Okai AF et al
-    year: 2022
-    journal: Neurology
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
-      had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
-      search). Okai 2022 directly covers DMT access and outcomes for African American
-      patients in Neurology (PMID 35470139, confirmed).
-    corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
-  - t4_id: T4-018
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: SES-outcomes link. Concept covers thin-coverage topic
-      area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: 'Socioeconomic status and disability progression in multiple sclerosis:
-      a multinational study.'
-    authors: Harding KE et al
-    year: 2019
-    journal: Neurology
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic
-      review — not found; no such paper confirmed in PubMed or OpenAlex). Harding
-      2019 covers the SES-disability link with multinational MSBase data in Neurology
-      (PMID 30796140, ~100 citations, confirmed).
-    corpus_doi: https://doi.org/10.1212/wnl.0000000000007190
-  - t4_id: T4-019
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: PRO perspective with diverse sample. Concept covers thin-coverage
-      topic area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: 'Disability milestones in MS: an electronic patient-reporting study.'
-    authors: Kister I et al
-    year: 2013
-    journal: Neurology
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
-  - t4_id: T4-020
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: structural barriers, T13. Concept covers thin-coverage
-      topic area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: 'Multiple sclerosis in US minority populations: clinical practice insights.'
-    authors: Khan O et al
-    year: 2015
-    journal: Neurol Clin Pract
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
-      no such paper confirmed in PubMed or web search). Khan 2015 covers structural
-      barriers and clinical practice for MS in minority populations in Neurol Clin
-      Pract (confirmed, ~114 citations).
-    corpus_doi: https://doi.org/10.1212/cpj.0000000000000112
-  - t4_id: T4-021
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
-      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
-      documented by editor: natural history by race, T1b bridge. Concept covers thin-coverage
-      topic area(s): T13.'
-    concept: equity_sdoh
-    concept_path: concepts/populations/equity-sdoh
-    title: Does multiple sclerosis-associated disability differ between races?
-    authors: Marrie RA et al
-    year: 2006
-    journal: Neurology
-    topic_codes:
-    - T13
-    corpus_status: not_found
-    t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found;
-      Nealon N is not a first author on any J Neuroimmunol disability progression
-      paper). Marrie 2006 is the foundational race-disability paper in Neurology covering
-      this functional role (confirmed, ~181 citations).
-    corpus_doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
-  - &id001
-    t4_id: T4-053
-    title: 'Multiple sclerosis in the Middle East and North Africa: a systematic review
-      of epidemiological studies'
-    authors: Heydarpour P et al.
-    year: 2015
-    journal: Neuroepidemiology
-    pmid: '26227247'
-    topics:
-    - T13
-    rationale: Systematic review of MS epidemiology in MENA region; fills Global South
-      gap (G-001); only synthesis covering Arab countries and Iran.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-001 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1159/000431042
-  - &id002
-    t4_id: T4-054
-    title: 'Epidemiology of multiple sclerosis in Asia: a systematic review'
-    authors: Eskandarieh S et al.
-    year: 2016
-    journal: Neuroepidemiology
-    pmid: '26960128'
-    topics:
-    - T13
-    rationale: Systematic review of MS epidemiology in Asia; fills Global South gap
-      (G-001); covers South and Southeast Asian populations absent from main citation
-      network.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-001 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1159/000444019
-  - &id003
-    t4_id: T4-055
-    title: Multiple sclerosis in Latin America
-    authors: Cristiano E et al.
-    year: 2016
-    journal: Multiple Sclerosis and Related Disorders
-    pmid: '27586337'
-    topics:
-    - T13
-    rationale: Narrative review of MS in Latin America including Buenos Aires cohort
-      data; fills Global South gap (G-001); covers region absent from main citation
-      network.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-001 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1016/j.msard.2016.07.007
-  - &id004
-    t4_id: T4-056
-    title: 'Multiple sclerosis in sub-Saharan Africa: a scoping review'
-    authors: Heine M et al.
-    year: 2020
-    journal: Multiple Sclerosis and Related Disorders
-    pmid: '32380437'
-    topics:
-    - T13
-    rationale: Scoping review of MS in sub-Saharan Africa; fills the only major global
-      region entirely absent from the corpus (G-001); documents extreme evidence thinness.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-001 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1016/j.msard.2020.102133
-  - &id005
-    t4_id: T4-057
-    title: 'Race and ethnicity in multiple sclerosis: a review in United States minority
-      populations'
-    authors: Amezcua L, McCauley JL
-    year: 2020
-    journal: Multiple Sclerosis Journal
-    pmid: '31790329'
-    topics:
-    - T13
-    rationale: Comprehensive review of MS in US racial/ethnic minority populations;
-      fills G-002 Hispanic and Asian gap; Amezcua is leading voice in this underrepresented
-      area.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1177/1352458519887328
-  - &id006
-    t4_id: T4-058
-    title: Prevalence of multiple sclerosis by race and ethnicity in the United States
-    authors: Hittle M et al.
-    year: 2023
-    journal: JAMA Neurology
-    pmid: '37213118'
-    topics:
-    - T13
-    rationale: National prevalence estimates by race/ethnicity/region; first large-scale
-      US race-stratified prevalence study; fills G-002; recommended in gaps.mdx.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1001/jamaneurol.2023.1135
-  - &id007
-    t4_id: T4-059
-    title: Multiple sclerosis in Latino Americans
-    authors: Aguirre-Cruz L et al.
-    year: 2011
-    journal: Autoimmunity
-    pmid: '21660908'
-    topics:
-    - T13
-    rationale: Review of MS in Latino/Hispanic Americans; fills G-002; documents distinct
-      clinical and genetic features in this underrepresented population.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.3109/08916934.2011.592887
-  - &id008
-    t4_id: T4-060
-    title: 'Clinical and epidemiological characteristics of multiple sclerosis in
-      Mexico: the REMEMBer cohort'
-    authors: Bertado-Cortés B et al.
-    year: 2020
-    journal: Multiple Sclerosis and Related Disorders
-    pmid: '33197756'
-    topics:
-    - T13
-    rationale: First large Mexican MS registry cohort (REMEMBer); fills G-002 Latin
-      American gap outside Southern California; provides primary cohort data for Central
-      America region.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1016/j.msard.2020.102575
-  - &id009
-    t4_id: T4-061
-    title: 'Increasing prevalence and incidence of multiple sclerosis in northern
-      Japan: a 20-year population-based study'
-    authors: Houzen H et al.
-    year: 2023
-    journal: Multiple Sclerosis and Related Disorders
-    pmid: '36924660'
-    topics:
-    - T13
-    rationale: 20-year longitudinal MS epidemiology in Japan; fills G-002 Asian population
-      gap; documents rising incidence in East Asian population.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1016/j.msard.2023.104696
-  - &id010
-    t4_id: T4-062
-    title: Prevalence of multiple sclerosis in Korea
-    authors: Kim N-H et al.
-    year: 2010
-    journal: Neurology
-    pmid: '20826714'
-    topics:
-    - T13
-    rationale: National Korean MS prevalence study; fills G-002 Asian population gap;
-      one of few population-level East Asian MS epidemiology papers.
-    functional_role: epidemiology
-    cross_seed_score: 0
-    corpus_status: active
-    doi_verification_status: verified
-    selection_source: G-002 gap resolution v1.2
-    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f88191
+    papers:
+    - t4_id: T4-014
+      title: Health disparities and inequities in multiple sclerosis.
+      authors: Amezcua L et al
+      year: 2021
+      journal: JAMA Neurol
+      topic_codes:
+      - T13
+      relevance: review anchor; already in topic_map as R5
+      corpus_status: not_found
+      doi: https://doi.org/10.1001/jamaneurol.2021.3416
+      openalex_id: https://openalex.org/W3201965895
+    - t4_id: T4-015
+      title: Racial and ethnic disparities in multiple sclerosis prevalence.
+      authors: Langer-Gould A et al
+      year: 2022
+      journal: Neurology
+      topic_codes:
+      - T13
+      relevance: prevalence/severity data update
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0000000000200151
+      provenance: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis
+        in Black and White Americans" — actual title confirmed; (2) journal was Lancet
+        Neurol — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021
+        — corrected to Langer-Gould 2022. This paper is also added as core seed MS-T1-028.
+        T4 designation formalises concept-anchor signal for concepts/populations/equity-sdoh.'
+    - t4_id: T4-016
+      title: 'Multiple Sclerosis Outcome Assessments Consortium: genesis and initial
+        project plan.'
+      authors: Rudick RA et al
+      year: 2014
+      journal: Mult Scler
+      topic_codes:
+      - T13
+      relevance: diversity in MS trials
+      corpus_status: not_found
+      doi: https://doi.org/10.1177/1352458513503392
+      provenance: Title, authors, year, and DOI corrected from v1.1. Original entry
+        listed Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which
+        resolves to a different paper in Therapeutic Innovation & Regulatory Science
+        by Woodcock/Rowzee 2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick
+        RA, LaRocca NG, Hudson LD 2014 (PMID 24057430, ~100 citations).
+    - t4_id: T4-017
+      title: Advancing care and outcomes for African American patients with multiple
+        sclerosis.
+      authors: Okai AF et al
+      year: 2022
+      journal: Neurology
+      topic_codes:
+      - T13
+      relevance: DMT access/response disparities
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0000000000200791
+      provenance: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found;
+        Naismith had no such 2018 Neurology paper on immunotherapy in Black Americans
+        after exhaustive search). Okai 2022 directly covers DMT access and outcomes
+        for African American patients in Neurology (PMID 35470139, confirmed).
+    - t4_id: T4-018
+      title: 'Socioeconomic status and disability progression in multiple sclerosis:
+        a multinational study.'
+      authors: Harding KE et al
+      year: 2019
+      journal: Neurology
+      topic_codes:
+      - T13
+      relevance: SES-outcomes link
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0000000000007190
+      provenance: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic
+        review — not found; no such paper confirmed in PubMed or OpenAlex). Harding
+        2019 covers the SES-disability link with multinational MSBase data in Neurology
+        (PMID 30796140, ~100 citations, confirmed).
+    - t4_id: T4-019
+      title: 'Disability milestones in MS: an electronic patient-reporting study.'
+      authors: Kister I et al
+      year: 2013
+      journal: Neurology
+      topic_codes:
+      - T13
+      relevance: PRO perspective with diverse sample
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0b013e3182872855
+    - t4_id: T4-020
+      title: 'Multiple sclerosis in US minority populations: clinical practice insights.'
+      authors: Khan O et al
+      year: 2015
+      journal: Neurol Clin Pract
+      topic_codes:
+      - T13
+      relevance: structural barriers, T13
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/cpj.0000000000000112
+      provenance: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not
+        found; no such paper confirmed in PubMed or web search). Khan 2015 covers
+        structural barriers and clinical practice for MS in minority populations in
+        Neurol Clin Pract (confirmed, ~114 citations).
+    - t4_id: T4-021
+      title: Does multiple sclerosis-associated disability differ between races?
+      authors: Marrie RA et al
+      year: 2006
+      journal: Neurology
+      topic_codes:
+      - T13
+      relevance: natural history by race, T1b bridge
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
+      provenance: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found;
+        Nealon N is not a first author on any J Neuroimmunol disability progression
+        paper). Marrie 2006 is the foundational race-disability paper in Neurology
+        covering this functional role (confirmed, ~181 citations).
+    - t4_id: T4-053
+      title: 'Multiple sclerosis in the Middle East and North Africa: a systematic
+        review of epidemiological studies'
+      authors: Heydarpour P et al.
+      year: 2015
+      journal: Neuroepidemiology
+      pmid: '26227247'
+      topic_codes:
+      - T13
+      relevance: Systematic review of MS epidemiology in MENA region; fills Global
+        South gap (G-001); only synthesis covering Arab countries and Iran.
+      corpus_status: active
+      doi: https://doi.org/10.1159/000431042
+    - t4_id: T4-054
+      title: 'Epidemiology of multiple sclerosis in Asia: a systematic review'
+      authors: Eskandarieh S et al.
+      year: 2016
+      journal: Neuroepidemiology
+      pmid: '26960128'
+      topic_codes:
+      - T13
+      relevance: Systematic review of MS epidemiology in Asia; fills Global South
+        gap (G-001); covers South and Southeast Asian populations absent from main
+        citation network.
+      corpus_status: active
+      doi: https://doi.org/10.1159/000444019
+    - t4_id: T4-055
+      title: Multiple sclerosis in Latin America
+      authors: Cristiano E et al.
+      year: 2016
+      journal: Multiple Sclerosis and Related Disorders
+      pmid: '27586337'
+      topic_codes:
+      - T13
+      relevance: Narrative review of MS in Latin America including Buenos Aires cohort
+        data; fills Global South gap (G-001); covers region absent from main citation
+        network.
+      corpus_status: active
+      doi: https://doi.org/10.1016/j.msard.2016.07.007
+    - t4_id: T4-056
+      title: 'Multiple sclerosis in sub-Saharan Africa: a scoping review'
+      authors: Heine M et al.
+      year: 2020
+      journal: Multiple Sclerosis and Related Disorders
+      pmid: '32380437'
+      topic_codes:
+      - T13
+      relevance: Scoping review of MS in sub-Saharan Africa; fills the only major
+        global region entirely absent from the corpus (G-001); documents extreme evidence
+        thinness.
+      corpus_status: active
+      doi: https://doi.org/10.1016/j.msard.2020.102133
+    - t4_id: T4-057
+      title: 'Race and ethnicity in multiple sclerosis: a review in United States
+        minority populations'
+      authors: Amezcua L, McCauley JL
+      year: 2020
+      journal: Multiple Sclerosis Journal
+      pmid: '31790329'
+      topic_codes:
+      - T13
+      relevance: Comprehensive review of MS in US racial/ethnic minority populations;
+        fills G-002 Hispanic and Asian gap; Amezcua is leading voice in this underrepresented
+        area.
+      corpus_status: active
+      doi: https://doi.org/10.1177/1352458519887328
+    - t4_id: T4-058
+      title: Prevalence of multiple sclerosis by race and ethnicity in the United
+        States
+      authors: Hittle M et al.
+      year: 2023
+      journal: JAMA Neurology
+      pmid: '37213118'
+      topic_codes:
+      - T13
+      relevance: National prevalence estimates by race/ethnicity/region; first large-scale
+        US race-stratified prevalence study; fills G-002; recommended in gaps.mdx.
+      corpus_status: active
+      doi: https://doi.org/10.1001/jamaneurol.2023.1135
+    - t4_id: T4-059
+      title: Multiple sclerosis in Latino Americans
+      authors: Aguirre-Cruz L et al.
+      year: 2011
+      journal: Autoimmunity
+      pmid: '21660908'
+      topic_codes:
+      - T13
+      relevance: Review of MS in Latino/Hispanic Americans; fills G-002; documents
+        distinct clinical and genetic features in this underrepresented population.
+      corpus_status: active
+      doi: https://doi.org/10.3109/08916934.2011.592887
+    - t4_id: T4-060
+      title: 'Clinical and epidemiological characteristics of multiple sclerosis in
+        Mexico: the REMEMBer cohort'
+      authors: Bertado-Cortés B et al.
+      year: 2020
+      journal: Multiple Sclerosis and Related Disorders
+      pmid: '33197756'
+      topic_codes:
+      - T13
+      relevance: First large Mexican MS registry cohort (REMEMBer); fills G-002 Latin
+        American gap outside Southern California; provides primary cohort data for
+        Central America region.
+      corpus_status: active
+      doi: https://doi.org/10.1016/j.msard.2020.102575
+    - t4_id: T4-061
+      title: 'Increasing prevalence and incidence of multiple sclerosis in northern
+        Japan: a 20-year population-based study'
+      authors: Houzen H et al.
+      year: 2023
+      journal: Multiple Sclerosis and Related Disorders
+      pmid: '36924660'
+      topic_codes:
+      - T13
+      relevance: 20-year longitudinal MS epidemiology in Japan; fills G-002 Asian
+        population gap; documents rising incidence in East Asian population.
+      corpus_status: active
+      doi: https://doi.org/10.1016/j.msard.2023.104696
+    - t4_id: T4-062
+      title: Prevalence of multiple sclerosis in Korea
+      authors: Kim N-H et al.
+      year: 2010
+      journal: Neurology
+      pmid: '20826714'
+      topic_codes:
+      - T13
+      relevance: National Korean MS prevalence study; fills G-002 Asian population
+        gap; one of few population-level East Asian MS epidemiology papers.
+      corpus_status: active
+      doi: https://doi.org/10.1212/wnl.0b013e3181f88191
   fatigue_ms:
-  - t4_id: T4-022
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: fatigue epidemiology baseline. Concept covers
-      thin-coverage topic area(s): T09, T10.'
-    concept: fatigue_ms
     concept_path: concepts/clinical/fatigue-ms
-    title: 'Fatigue characteristics in multiple sclerosis: the North American Research
-      Committee on Multiple Sclerosis (NARCOMS) survey.'
-    authors: Hadjimichael O et al
-    year: 2008
-    journal: Health Qual Life Outcomes
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
-      that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
-      largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
-      NARCOMS patients), providing the epidemiology-baseline role intended for this
-      slot (confirmed, ~238 citations).
-    corpus_doi: https://doi.org/10.1186/1477-7525-6-100
-  - t4_id: T4-023
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: conceptual framework. Concept covers thin-coverage
-      topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: A medical definition of fatigue in multiple sclerosis.
-    authors: Mills RJ, Young CA
-    year: 2008
-    journal: QJM
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: title_fuzzy(0.99)
-    corpus_id: a602f8bdae65242db35d223d4cf847a7
-    corpus_doi: https://doi.org/10.1093/qjmed/hcm122
-    corpus_stats:
-      citation_count: 364
-      in_degree: 40
-      out_degree: 3
-      pagerank_pct: 85.8
-      kcore: 22
-      core_score: 0.808
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 50
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
-  - t4_id: T4-024
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: fatigue-depression overlap, T10. Concept covers
-      thin-coverage topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: Prevalence and severity of multiple-sclerosis-associated fatigue in treated
-      and untreated patients.
-    authors: Putzki N et al
-    year: 2008
-    journal: Eur Neurol
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
-      correlation which does not match the actual Putzki 2008 paper (which covers
-      fatigue prevalence/severity in treated vs untreated patients). Journal corrected:
-      Eur J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
-    corpus_doi: https://doi.org/10.1159/000111876
-  - t4_id: T4-025
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: sleep-fatigue relationship. Concept covers thin-coverage
-      topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
-    authors: Braley TJ, Chervin RD
-    year: 2010
-    journal: Sleep
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
-    corpus_openalex_id: https://openalex.org/W185235087
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-026
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: review anchor for T09. Concept covers thin-coverage
-      topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: Fatigue in multiple sclerosis — a brief review.
-    authors: Induruwa I et al
-    year: 2012
-    journal: J Neurol Sci
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
-    corpus_openalex_id: https://openalex.org/W2021962531
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-027
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: T00/T09 epidemiology of fatigue. Concept covers
-      thin-coverage topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: 'Prevalence and burden of multiple sclerosis-related fatigue: a systematic
-      literature review.'
-    authors: Oliva Ramirez A et al
-    year: 2021
-    journal: BMC Neurol
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to
-      be a 2-page NARCOMS validation note, PMID 16193897, not a systematic review
-      of fatigue incidence/prevalence). Oliva Ramirez 2021 is the current systematic
-      review of MS fatigue epidemiology filling the intended role (confirmed, ~217
-      citations).
-    corpus_doi: https://doi.org/10.1186/s12883-021-02396-1
-  - t4_id: T4-028
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-      Relevance documented by editor: exercise/rehabilitation evidence. Concept covers
-      thin-coverage topic area(s): T09, T10.'
-    concept: fatigue_ms
-    concept_path: concepts/clinical/fatigue-ms
-    title: Meta-analysis of three different types of fatigue management interventions.
-    authors: Asano M, Finlayson ML
-    year: 2014
-    journal: Mult Scler Int
-    topic_codes:
-    - T09
-    - T10
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1155/2014/798285
-    corpus_openalex_id: https://openalex.org/W1988210814
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
+    papers:
+    - t4_id: T4-022
+      title: 'Fatigue characteristics in multiple sclerosis: the North American Research
+        Committee on Multiple Sclerosis (NARCOMS) survey.'
+      authors: Hadjimichael O et al
+      year: 2008
+      journal: Health Qual Life Outcomes
+      topic_codes:
+      - T09
+      - T10
+      relevance: fatigue epidemiology baseline
+      corpus_status: not_found
+      doi: https://doi.org/10.1186/1477-7525-6-100
+      provenance: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong
+        paper; that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008
+        is the largest population-based fatigue prevalence study in MS (74% prevalence
+        in 9,077 NARCOMS patients), providing the epidemiology-baseline role intended
+        for this slot (confirmed, ~238 citations).
+    - t4_id: T4-023
+      title: A medical definition of fatigue in multiple sclerosis.
+      authors: Mills RJ, Young CA
+      year: 2008
+      journal: QJM
+      topic_codes:
+      - T09
+      - T10
+      relevance: conceptual framework
+      corpus_status: title_fuzzy(0.99)
+      corpus_id: a602f8bdae65242db35d223d4cf847a7
+      corpus_stats:
+        citation_count: 364
+        in_degree: 40
+        out_degree: 3
+        pagerank_pct: 85.8
+        kcore: 22
+        core_score: 0.808
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 50
+      doi: https://doi.org/10.1093/qjmed/hcm122
+    - t4_id: T4-024
+      title: Prevalence and severity of multiple-sclerosis-associated fatigue in treated
+        and untreated patients.
+      authors: Putzki N et al
+      year: 2008
+      journal: Eur Neurol
+      topic_codes:
+      - T09
+      - T10
+      relevance: fatigue-depression overlap, T10
+      corpus_status: not_found
+      doi: https://doi.org/10.1159/000111876
+      provenance: 'Title and journal corrected from v1.1. Original title described
+        fatigue-depression correlation which does not match the actual Putzki 2008
+        paper (which covers fatigue prevalence/severity in treated vs untreated patients).
+        Journal corrected: Eur J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these
+        are different journals.'
+    - t4_id: T4-025
+      title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
+      authors: Braley TJ, Chervin RD
+      year: 2010
+      journal: Sleep
+      topic_codes:
+      - T09
+      - T10
+      relevance: sleep-fatigue relationship
+      corpus_status: not_found
+      doi: https://doi.org/10.1093/sleep/33.8.1061
+      openalex_id: https://openalex.org/W185235087
+    - t4_id: T4-026
+      title: Fatigue in multiple sclerosis — a brief review.
+      authors: Induruwa I et al
+      year: 2012
+      journal: J Neurol Sci
+      topic_codes:
+      - T09
+      - T10
+      relevance: review anchor for T09
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.jns.2012.08.007
+      openalex_id: https://openalex.org/W2021962531
+    - t4_id: T4-027
+      title: 'Prevalence and burden of multiple sclerosis-related fatigue: a systematic
+        literature review.'
+      authors: Oliva Ramirez A et al
+      year: 2021
+      journal: BMC Neurol
+      topic_codes:
+      - T09
+      - T10
+      relevance: T00/T09 epidemiology of fatigue
+      corpus_status: not_found
+      doi: https://doi.org/10.1186/s12883-021-02396-1
+      provenance: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed
+        to be a 2-page NARCOMS validation note, PMID 16193897, not a systematic review
+        of fatigue incidence/prevalence). Oliva Ramirez 2021 is the current systematic
+        review of MS fatigue epidemiology filling the intended role (confirmed, ~217
+        citations).
+    - t4_id: T4-028
+      title: Meta-analysis of three different types of fatigue management interventions.
+      authors: Asano M, Finlayson ML
+      year: 2014
+      journal: Mult Scler Int
+      topic_codes:
+      - T09
+      - T10
+      relevance: exercise/rehabilitation evidence
+      corpus_status: not_found
+      doi: https://doi.org/10.1155/2014/798285
+      openalex_id: https://openalex.org/W1988210814
   pediatric_ms:
-  - t4_id: T4-029
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      T12 foundational epidemiology. Concept covers thin-coverage topic area(s): T12.'
-    concept: pediatric_ms
     concept_path: concepts/populations/pediatric-ms
-    title: Clinical features and viral serologies in children with multiple sclerosis.
-    authors: Banwell B et al
-    year: 2007
-    journal: Lancet Neurol
-    topic_codes:
-    - T12
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
-    corpus_openalex_id: https://openalex.org/W2124413251
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-030
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
-    concept: pediatric_ms
-    concept_path: concepts/populations/pediatric-ms
-    title: Epidemiology, immunopathogenesis and management of pediatric central nervous
-      system inflammatory demyelinating conditions.
-    authors: Pohl D et al
-    year: 2008
-    journal: Curr Opin Neurol
-    topic_codes:
-    - T12
-    corpus_status: not_found
-    t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to
-      match actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating
-      conditions, not only MS).
-    corpus_doi: https://doi.org/10.1097/wco.0b013e3282fd172b
-  - t4_id: T4-031
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      RCT anchor for T12. Concept covers thin-coverage topic area(s): T12.'
-    concept: pediatric_ms
-    concept_path: concepts/populations/pediatric-ms
-    title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
-    authors: Chitnis T et al
-    year: 2018
-    journal: NEJM
-    topic_codes:
-    - T12
-    corpus_status: title_fuzzy(0.88)
-    corpus_id: 5081658b1336498af7327d2e2b5cda6f
-    corpus_doi: https://doi.org/10.1056/nejmoa1800149
-    corpus_stats:
-      citation_count: 1280
-      in_degree: 311
-      out_degree: 24
-      pagerank_pct: 98.6
-      kcore: 32
-      core_score: 0.98
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 99
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
-  - t4_id: T4-032
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      neurodevelopmental consequences. Concept covers thin-coverage topic area(s):
-      T12.'
-    concept: pediatric_ms
-    concept_path: concepts/populations/pediatric-ms
-    title: Cognitive and psychosocial features of pediatric MS.
-    authors: Amato MP et al
-    year: 2010
-    journal: Neurology
-    topic_codes:
-    - T12
-    corpus_status: not_found
-    t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID
-      20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
-      features in pediatric MS.'
-    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
-  - t4_id: T4-033
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      comprehensive review anchor. Concept covers thin-coverage topic area(s): T12.'
-    concept: pediatric_ms
-    concept_path: concepts/populations/pediatric-ms
-    title: Pediatric multiple sclerosis.
-    authors: Waldman A et al
-    year: 2014
-    journal: Semin Neurol
-    topic_codes:
-    - T12
-    corpus_status: title_fuzzy(0.98)
-    corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
-    corpus_doi: https://doi.org/10.1055/s-0036-1579738
-    corpus_stats:
-      citation_count: 56
-      in_degree: 10
-      out_degree: 14
-      pagerank_pct: 72.8
-      kcore: 19
-      core_score: 0.665
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 52
-    t4_note: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The corpus
-      fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to a Thieme
-      journal (Seminars in Neurology), consistent with citation count of 56. The Nat
-      Rev Neurol attribution in v1.1 was incorrect.'
-  - t4_id: T4-034
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-      Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-      natural history, T1b bridge. Concept covers thin-coverage topic area(s): T12.'
-    concept: pediatric_ms
-    concept_path: concepts/populations/pediatric-ms
-    title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
-    authors: Huppke P et al
-    year: 2014
-    journal: Semin Neurol
-    topic_codes:
-    - T12
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1055/s-0034-1381742
+    papers:
+    - t4_id: T4-029
+      title: Clinical features and viral serologies in children with multiple sclerosis.
+      authors: Banwell B et al
+      year: 2007
+      journal: Lancet Neurol
+      topic_codes:
+      - T12
+      relevance: T12 foundational epidemiology
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/s1474-4422(07)70196-5
+      openalex_id: https://openalex.org/W2124413251
+    - t4_id: T4-030
+      title: Epidemiology, immunopathogenesis and management of pediatric central
+        nervous system inflammatory demyelinating conditions.
+      authors: Pohl D et al
+      year: 2008
+      journal: Curr Opin Neurol
+      topic_codes:
+      - T12
+      relevance: differential diagnosis review
+      corpus_status: not_found
+      doi: https://doi.org/10.1097/wco.0b013e3282fd172b
+      provenance: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated
+        to match actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating
+        conditions, not only MS).
+    - t4_id: T4-031
+      title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
+      authors: Chitnis T et al
+      year: 2018
+      journal: NEJM
+      topic_codes:
+      - T12
+      relevance: RCT anchor for T12
+      corpus_status: title_fuzzy(0.88)
+      corpus_id: 5081658b1336498af7327d2e2b5cda6f
+      corpus_stats:
+        citation_count: 1280
+        in_degree: 311
+        out_degree: 24
+        pagerank_pct: 98.6
+        kcore: 32
+        core_score: 0.98
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 99
+      doi: https://doi.org/10.1056/nejmoa1800149
+    - t4_id: T4-032
+      title: Cognitive and psychosocial features of pediatric MS.
+      authors: Amato MP et al
+      year: 2010
+      journal: Neurology
+      topic_codes:
+      - T12
+      relevance: neurodevelopmental consequences
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
+      provenance: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed
+        PMID 20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
+        features in pediatric MS.'
+    - t4_id: T4-033
+      title: Pediatric multiple sclerosis.
+      authors: Waldman A et al
+      year: 2014
+      journal: Semin Neurol
+      topic_codes:
+      - T12
+      relevance: comprehensive review anchor
+      corpus_status: title_fuzzy(0.98)
+      corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
+      corpus_stats:
+        citation_count: 56
+        in_degree: 10
+        out_degree: 14
+        pagerank_pct: 72.8
+        kcore: 19
+        core_score: 0.665
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 52
+      doi: https://doi.org/10.1055/s-0036-1579738
+      provenance: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The
+        corpus fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to
+        a Thieme journal (Seminars in Neurology), consistent with citation count of
+        56. The Nat Rev Neurol attribution in v1.1 was incorrect.'
+    - t4_id: T4-034
+      title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
+      authors: Huppke P et al
+      year: 2014
+      journal: Semin Neurol
+      topic_codes:
+      - T12
+      relevance: natural history, T1b bridge
+      corpus_status: not_found
+      doi: https://doi.org/10.1055/s-0034-1381742
   rehabilitation_exercise:
-  - t4_id: T4-035
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: editorial framing, T09. Concept covers thin-coverage topic area(s):
-      T09.'
-    concept: rehabilitation_exercise
     concept_path: concepts/clinical/rehabilitation-exercise
-    title: Exercise as medicine in MS — time to act.
-    authors: Dalgas U et al
-    year: 2019
-    journal: JAMA Neurol
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
-  - t4_id: T4-036
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: fatigue and walking RCT summary. Concept covers thin-coverage topic
-      area(s): T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: 'Exercise and MS: a systematic review with meta-analysis.'
-    authors: Motl RW et al
-    year: 2017
-    journal: Neurorehabil Neural Repair
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
-      Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl
-      RW et al 2017 Neurorehabil Neural Repair confirmed.
-    corpus_doi: https://doi.org/10.1177/1545968316680592
-  - t4_id: T4-037
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: resistance training RCT. Concept covers thin-coverage topic area(s):
-      T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: 'Progressive resistance training and MS: effects on physical fitness and
-      quality of life.'
-    authors: Kjolhede T et al
-    year: 2012
-    journal: Mult Scler
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1177/1352458512437864
-  - t4_id: T4-038
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: cognitive rehabilitation bridge to T09. Concept covers thin-coverage
-      topic area(s): T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: Exercise and cognitive impairment in MS.
-    authors: Sandroff BM et al
-    year: 2018
-    journal: Nat Rev Neurol
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
-  - t4_id: T4-039
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: umbrella review for multidisciplinary care (JLA #3). Concept covers
-      thin-coverage topic area(s): T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
-    authors: Khan F, Amatya B
-    year: 2017
-    journal: Arch Phys Med Rehabil
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
-  - t4_id: T4-040
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: comprehensive outcomes review. Concept covers thin-coverage topic area(s):
-      T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: 'Effects of exercise training on fitness, mobility, fatigue, depression
-      in adults with MS: a systematic review.'
-    authors: Latimer-Cheung AE et al
-    year: 2013
-    journal: Arch Phys Med Rehabil
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
-  - t4_id: T4-041
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-      in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by
-      editor: adapted exercise modality. Concept covers thin-coverage topic area(s):
-      T09.'
-    concept: rehabilitation_exercise
-    concept_path: concepts/clinical/rehabilitation-exercise
-    title: 'Efficacy of aquatic therapy for MS: a systematic review.'
-    authors: Corvillo I et al
-    year: 2017
-    journal: Eur J Phys Rehabil Med
-    topic_codes:
-    - T09
-    corpus_status: not_found
-    doi_verification_status: needs_manual_verification
-    t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
-      Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex
-      — API confirmation not possible. Verify via journal website or PubMed.
-    corpus_doi: https://doi.org/10.23736/s1973-9087.17.04570-1
+    papers:
+    - t4_id: T4-035
+      title: Exercise as medicine in MS — time to act.
+      authors: Dalgas U et al
+      year: 2019
+      journal: JAMA Neurol
+      topic_codes:
+      - T09
+      relevance: editorial framing, T09
+      corpus_status: not_found
+      doi: https://doi.org/10.1001/jamaneurol.2018.4042
+    - t4_id: T4-036
+      title: 'Exercise and MS: a systematic review with meta-analysis.'
+      authors: Motl RW et al
+      year: 2017
+      journal: Neurorehabil Neural Repair
+      topic_codes:
+      - T09
+      relevance: fatigue and walking RCT summary
+      corpus_status: not_found
+      doi: https://doi.org/10.1177/1545968316680592
+      provenance: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to
+        Behaviour Research and Therapy 2019 — wrong journal, wrong year). Correct
+        DOI for Motl RW et al 2017 Neurorehabil Neural Repair confirmed.
+    - t4_id: T4-037
+      title: 'Progressive resistance training and MS: effects on physical fitness
+        and quality of life.'
+      authors: Kjolhede T et al
+      year: 2012
+      journal: Mult Scler
+      topic_codes:
+      - T09
+      relevance: resistance training RCT
+      corpus_status: not_found
+      doi: https://doi.org/10.1177/1352458512437864
+    - t4_id: T4-038
+      title: Exercise and cognitive impairment in MS.
+      authors: Sandroff BM et al
+      year: 2018
+      journal: Nat Rev Neurol
+      topic_codes:
+      - T09
+      relevance: cognitive rehabilitation bridge to T09
+      corpus_status: not_found
+      doi: https://doi.org/10.1038/s41582-018-0027-9
+    - t4_id: T4-039
+      title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
+      authors: Khan F, Amatya B
+      year: 2017
+      journal: Arch Phys Med Rehabil
+      topic_codes:
+      - T09
+      relevance: 'umbrella review for multidisciplinary care (JLA #3)'
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.apmr.2016.04.016
+    - t4_id: T4-040
+      title: 'Effects of exercise training on fitness, mobility, fatigue, depression
+        in adults with MS: a systematic review.'
+      authors: Latimer-Cheung AE et al
+      year: 2013
+      journal: Arch Phys Med Rehabil
+      topic_codes:
+      - T09
+      relevance: comprehensive outcomes review
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.apmr.2013.01.016
+    - t4_id: T4-041
+      title: 'Efficacy of aquatic therapy for MS: a systematic review.'
+      authors: Corvillo I et al
+      year: 2017
+      journal: Eur J Phys Rehabil Med
+      topic_codes:
+      - T09
+      relevance: adapted exercise modality
+      corpus_status: not_found
+      doi: https://doi.org/10.23736/s1973-9087.17.04570-1
+      provenance: DOI from prior session research; European Journal of Physical and
+        Rehabilitation Medicine (Edizioni Minerva Medica) papers are not fully indexed
+        in OpenAlex — API confirmation not possible. Verify via journal website or
+        PubMed.
   sex_gender_ms:
-  - t4_id: T4-042
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-      ratio temporal trend anchor. Concept covers thin-coverage topic area(s): T00,
-      T11.'
-    concept: sex_gender_ms
     concept_path: concepts/populations/sex-gender-ms
-    title: 'Sex ratio of multiple sclerosis in Canada: a longitudinal study.'
-    authors: Orton SM et al
-    year: 2006
-    journal: Lancet Neurol
-    topic_codes:
-    - T00
-    - T11
-    corpus_status: not_found
-    t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
-      "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
-    corpus_doi: https://doi.org/10.1016/s1474-4422(06)70581-6
-  - t4_id: T4-043
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-      hormonal bridge to T11. Concept covers thin-coverage topic area(s): T00, T11.'
-    concept: sex_gender_ms
-    concept_path: concepts/populations/sex-gender-ms
-    title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and
-      breastfeeding.'
-    authors: Voskuhl R, Momtazee C
-    year: 2017
-    journal: Neurotherapeutics
-    topic_codes:
-    - T00
-    - T11
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
-    corpus_openalex_id: https://openalex.org/W2741378031
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-044
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-      sex-specific natural history. Concept covers thin-coverage topic area(s): T00,
-      T11.'
-    concept: sex_gender_ms
-    concept_path: concepts/populations/sex-gender-ms
-    title: Sex as a determinant of relapse incidence and progressive course of MS.
-    authors: Kalincik T et al
-    year: 2013
-    journal: Brain
-    topic_codes:
-    - T00
-    - T11
-    corpus_status: title_fuzzy(0.89)
-    corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
-    corpus_doi: https://doi.org/10.1093/brain/awt281
-    corpus_stats:
-      citation_count: 570
-      in_degree: 92
-      out_degree: 19
-      pagerank_pct: 93.5
-      kcore: 32
-      core_score: 0.95
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 91
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
-  - t4_id: T4-045
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-      hormonal mechanisms. Concept covers thin-coverage topic area(s): T00, T11.'
-    concept: sex_gender_ms
-    concept_path: concepts/populations/sex-gender-ms
-    title: Impact of sex hormones on immune function and multiple sclerosis development.
-    authors: Ysrraelit MC, Correale J
-    year: 2019
-    journal: Immunology
-    topic_codes:
-    - T00
-    - T11
-    corpus_status: title_fuzzy(0.99)
-    corpus_id: 5dd210f9b1214a715e30bd027cf459ba
-    corpus_doi: https://doi.org/10.1111/imm.13004
-    corpus_stats:
-      citation_count: 486
-      in_degree: 62
-      out_degree: 68
-      pagerank_pct: 81.3
-      kcore: 30
-      core_score: 0.86
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 77
-    t4_note: Paper is already structurally included in corpus (tier=included). T4
-      designation formalises the concept-anchor expert signal and links this paper
-      to its educational concept page.
-  - t4_id: T4-046
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-      in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-      general overview. Concept covers thin-coverage topic area(s): T00, T11.'
-    concept: sex_gender_ms
-    concept_path: concepts/populations/sex-gender-ms
-    title: The impact of gender on multiple sclerosis.
-    authors: Rottlaender A et al
-    year: 2014
-    journal: Open Neurol J
-    topic_codes:
-    - T00
-    - T11
-    corpus_status: not_found
-    t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
-      Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
-      Open Neurol J confirmed.
-    corpus_doi: https://doi.org/10.2174/1874205x01408010037
+    papers:
+    - t4_id: T4-042
+      title: 'Sex ratio of multiple sclerosis in Canada: a longitudinal study.'
+      authors: Orton SM et al
+      year: 2006
+      journal: Lancet Neurol
+      topic_codes:
+      - T00
+      - T11
+      relevance: ratio temporal trend anchor
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/s1474-4422(06)70581-6
+      provenance: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study"
+        not "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
+    - t4_id: T4-043
+      title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and
+        breastfeeding.'
+      authors: Voskuhl R, Momtazee C
+      year: 2017
+      journal: Neurotherapeutics
+      topic_codes:
+      - T00
+      - T11
+      relevance: hormonal bridge to T11
+      corpus_status: not_found
+      doi: https://doi.org/10.1007/s13311-017-0562-7
+      openalex_id: https://openalex.org/W2741378031
+    - t4_id: T4-044
+      title: Sex as a determinant of relapse incidence and progressive course of MS.
+      authors: Kalincik T et al
+      year: 2013
+      journal: Brain
+      topic_codes:
+      - T00
+      - T11
+      relevance: sex-specific natural history
+      corpus_status: title_fuzzy(0.89)
+      corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
+      corpus_stats:
+        citation_count: 570
+        in_degree: 92
+        out_degree: 19
+        pagerank_pct: 93.5
+        kcore: 32
+        core_score: 0.95
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 91
+      doi: https://doi.org/10.1093/brain/awt281
+    - t4_id: T4-045
+      title: Impact of sex hormones on immune function and multiple sclerosis development.
+      authors: Ysrraelit MC, Correale J
+      year: 2019
+      journal: Immunology
+      topic_codes:
+      - T00
+      - T11
+      relevance: hormonal mechanisms
+      corpus_status: title_fuzzy(0.99)
+      corpus_id: 5dd210f9b1214a715e30bd027cf459ba
+      corpus_stats:
+        citation_count: 486
+        in_degree: 62
+        out_degree: 68
+        pagerank_pct: 81.3
+        kcore: 30
+        core_score: 0.86
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 77
+      doi: https://doi.org/10.1111/imm.13004
+    - t4_id: T4-046
+      title: The impact of gender on multiple sclerosis.
+      authors: Rottlaender A et al
+      year: 2014
+      journal: Open Neurol J
+      topic_codes:
+      - T00
+      - T11
+      relevance: general overview
+      corpus_status: not_found
+      doi: https://doi.org/10.2174/1874205x01408010037
+      provenance: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J
+        Neurol Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender
+        A et al 2014 Open Neurol J confirmed.
   shared_decision_making:
-  - t4_id: T4-047
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: SDM framework anchor. Concept covers thin-coverage topic
-      area(s): T09, T16.'
-    concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
-    title: 'Shared decision making: a model for clinical practice.'
-    authors: Elwyn G et al
-    year: 2012
-    journal: J Gen Intern Med
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
-    corpus_openalex_id: https://openalex.org/W2041927436
-    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-  - t4_id: T4-048
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
-      area(s): T09, T16.'
-    concept: shared_decision_making
-    concept_path: concepts/clinical/shared-decision-making
-    title: Shared decision making and self-management in MS — a consequence of evidence
-      based medicine.
-    authors: Heesen C et al
-    year: 2012
-    journal: J Neurol
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
-  - t4_id: T4-049
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: patient voice, T09. Concept covers thin-coverage topic
-      area(s): T09, T16.'
-    concept: shared_decision_making
-    concept_path: concepts/clinical/shared-decision-making
-    title: Patients' experiences and perceived impact of shared decision-making in
-      MS.
-    authors: Berger B et al
-    year: 2017
-    journal: Patient Educ Couns
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
-  - t4_id: T4-050
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: decision aid development. Concept covers thin-coverage
-      topic area(s): T09, T16.'
-    concept: shared_decision_making
-    concept_path: concepts/clinical/shared-decision-making
-    title: Development and validation of a decision aid for people with multiple sclerosis.
-    authors: Solari A et al
-    year: 2017
-    journal: J Neurol
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
-  - t4_id: T4-051
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: preference-weighting evidence. Concept covers thin-coverage
-      topic area(s): T09, T16.'
-    concept: shared_decision_making
-    concept_path: concepts/clinical/shared-decision-making
-    title: 'Preferences of MS patients for DMT characteristics: a discrete choice
-      experiment.'
-    authors: Visser LH et al
-    year: 2020
-    journal: Mult Scler
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: not_found
-    corpus_doi: https://doi.org/10.1177/1352458519838941
-  - t4_id: T4-052
-    t4_source_type: concept_anchor_signal
-    t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-      and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: contemporary review, T16. Concept covers thin-coverage
-      topic area(s): T09, T16.'
-    concept: shared_decision_making
-    concept_path: concepts/clinical/shared-decision-making
-    title: Shared decision making in multiple sclerosis.
-    authors: Grácio S et al
-    year: 2021
-    journal: Front Neurol
-    topic_codes:
-    - T09
-    - T16
-    corpus_status: title_fuzzy(0.83)
-    corpus_id: bc4457f660ecfc779461a3dc1b1dabec
-    corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
-    corpus_stats:
-      citation_count: 38
-      in_degree: 7
-      out_degree: 11
-      pagerank_pct: 62.2
-      kcore: 13
-      core_score: 0.538
-      existing_tier: included
-      seed_hops: 1
-      cocite_seeds: 33
-    t4_note: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus fuzzy-match
-      record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers in Neurology
-      — the Mult Scler attribution in v1.1 was incorrect.'
-flat_list:
-- t4_id: T4-001
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: neuroanatomical basis, T02. Concept covers thin-coverage topic area(s):
-    T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: The neural control of micturition.
-  authors: Fowler CJ et al
-  year: 2008
-  journal: Nat Rev Neurosci
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1038/nrn2401
-  corpus_openalex_id: https://openalex.org/W2008969125
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-002
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: urology management overview. Concept covers thin-coverage topic area(s):
-    T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Multiple sclerosis and the urologist.
-  authors: Litwiller SE et al
-  year: 1999
-  journal: J Urol
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
-  corpus_openalex_id: https://openalex.org/W2055534266
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-003
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: practical management, T10. Concept covers thin-coverage topic area(s):
-    T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: A UK consensus on the management of the bladder in multiple sclerosis.
-  authors: Fowler CJ et al
-  year: 2009
-  journal: J Neurol Neurosurg Psychiatry
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
-    in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
-    on bladder management in MS published in JNNP (~307 citations), filling the practical-management
-    role with verified metadata.
-  corpus_doi: https://doi.org/10.1136/jnnp.2008.159178
-- t4_id: T4-004
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: review anchor for T10. Concept covers thin-coverage topic area(s): T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Neurogenic lower urinary tract dysfunction.
-  authors: Panicker JN et al
-  year: 2015
-  journal: Lancet Neurol
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
-- t4_id: T4-005
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: bowel arm coverage. Concept covers thin-coverage topic area(s): T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: 'Neurogenic bowel dysfunction in patients with multiple sclerosis: prevalence,
-    impact, and management strategies.'
-  authors: Preziosi G et al
-  year: 2018
-  journal: Degenerative Neurol Neuromuscul Dis
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev Gastroenterol
-    Hepatol — confirmed paper is in Degenerative Neurological and Neuromuscular Disease
-    2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
-  corpus_doi: https://doi.org/10.2147/dnnd.s138835
-- t4_id: T4-006
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
-    in MS'' (concepts/clinical/bladder-bowel-dysfunction). Relevance documented by
-    editor: contemporary PRO-grounded burden data, T09. Concept covers thin-coverage
-    topic area(s): T10.'
-  concept: bladder_bowel_dysfunction
-  concept_path: concepts/clinical/bladder-bowel-dysfunction
-  title: Treatment satisfaction and bothersome bladder, bowel, sexual symptoms in
-    multiple sclerosis.
-  authors: Wang G et al
-  year: 2017
-  journal: Mult Scler Relat Disord
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
-    no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
-    search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
-    role with verified metadata (~42 citations). First author Wang G; Marrie RA is
-    co-author.
-  corpus_doi: https://doi.org/10.1016/j.msard.2017.12.006
-- t4_id: T4-007
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    prevalence anchor, T10. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: 'Major depression in multiple sclerosis: a population-based perspective.'
-  authors: Patten SB et al
-  year: 2003
-  journal: Neurology
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
-- t4_id: T4-008
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    mechanisms review. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: 'Depression in multiple sclerosis: a review.'
-  authors: Siegert RJ, Abernethy DA
-  year: 2005
-  journal: J Neurol Neurosurg Psychiatry
-  topic_codes:
-  - T10
-  corpus_status: title_fuzzy(0.99)
-  corpus_id: ee043c45f5376a26956aa4650e6e0be2
-  corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
-  corpus_stats:
-    citation_count: 1438
-    in_degree: 124
-    out_degree: 27
-    pagerank_pct: 97.5
-    kcore: 26
-    core_score: 0.917
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 80
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
-- t4_id: T4-009
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    AAN guideline anchor. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: 'Evidence-based guideline: assessment and management of psychiatric disorders
-    in individuals with MS.'
-  authors: Minden SL et al
-  year: 2014
-  journal: Neurology
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
-  corpus_openalex_id: https://openalex.org/W2026795289
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=1)
-- t4_id: T4-010
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    bidirectional mechanism review. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: The link between multiple sclerosis and depression.
-  authors: Feinstein A et al
-  year: 2014
-  journal: Nat Rev Neurol
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
-  corpus_openalex_id: https://openalex.org/W1994216586
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-011
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    protective factors. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: Resilience mediates the longitudinal relationships between social support
-    and mental health outcomes in multiple sclerosis.
-  authors: Koelmel E et al
-  year: 2017
-  journal: Arch Phys Med Rehabil
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in PubMed
-    or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
-    MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
-    role with verified metadata (~140 citations).
-  corpus_doi: https://doi.org/10.1016/j.apmr.2016.09.127
-- t4_id: T4-012
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    meta-analysis anchor, T09/T10. Concept covers thin-coverage topic area(s): T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: 'Prevalence of depression and anxiety in MS: a systematic review and meta-analysis.'
-  authors: Boeschoten RE et al
-  year: 2017
-  journal: J Neurol Sci
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
-- t4_id: T4-013
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
-    in MS'' (concepts/clinical/depression-anxiety-ms). Relevance documented by editor:
-    non-pharmacological interventions. Concept covers thin-coverage topic area(s):
-    T10.'
-  concept: depression_anxiety_ms
-  concept_path: concepts/clinical/depression-anxiety-ms
-  title: MS quality of life, depression, and fatigue improve after mindfulness training.
-  authors: Grossman P et al
-  year: 2010
-  journal: Neurology
-  topic_codes:
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
-  corpus_openalex_id: https://openalex.org/W2157656577
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-014
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: review anchor; already in topic_map as R5. Concept covers thin-coverage
-    topic area(s): T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: Health disparities and inequities in multiple sclerosis.
-  authors: Amezcua L et al
-  year: 2021
-  journal: JAMA Neurol
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
-  corpus_openalex_id: https://openalex.org/W3201965895
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-015
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: prevalence/severity data update. Concept covers thin-coverage topic area(s):
-    T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: Racial and ethnic disparities in multiple sclerosis prevalence.
-  authors: Langer-Gould A et al
-  year: 2022
-  journal: Neurology
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis in
-    Black and White Americans" — actual title confirmed; (2) journal was Lancet Neurol
-    — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 — corrected
-    to Langer-Gould 2022. This paper is also added as core seed MS-T1-028. T4 designation
-    formalises concept-anchor signal for concepts/populations/equity-sdoh.'
-  corpus_doi: https://doi.org/10.1212/wnl.0000000000200151
-- t4_id: T4-016
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: diversity in MS trials. Concept covers thin-coverage topic area(s): T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: 'Multiple Sclerosis Outcome Assessments Consortium: genesis and initial project
-    plan.'
-  authors: Rudick RA et al
-  year: 2014
-  journal: Mult Scler
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
-    Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves to
-    a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
-    2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG, Hudson
-    LD 2014 (PMID 24057430, ~100 citations).
-  corpus_doi: https://doi.org/10.1177/1352458513503392
-- t4_id: T4-017
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: DMT access/response disparities. Concept covers thin-coverage topic area(s):
-    T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: Advancing care and outcomes for African American patients with multiple sclerosis.
-  authors: Okai AF et al
-  year: 2022
-  journal: Neurology
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
-    had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
-    search). Okai 2022 directly covers DMT access and outcomes for African American
-    patients in Neurology (PMID 35470139, confirmed).
-  corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
-- t4_id: T4-018
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: SES-outcomes link. Concept covers thin-coverage topic area(s): T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: 'Socioeconomic status and disability progression in multiple sclerosis: a
-    multinational study.'
-  authors: Harding KE et al
-  year: 2019
-  journal: Neurology
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic review
-    — not found; no such paper confirmed in PubMed or OpenAlex). Harding 2019 covers
-    the SES-disability link with multinational MSBase data in Neurology (PMID 30796140,
-    ~100 citations, confirmed).
-  corpus_doi: https://doi.org/10.1212/wnl.0000000000007190
-- t4_id: T4-019
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: PRO perspective with diverse sample. Concept covers thin-coverage topic
-    area(s): T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: 'Disability milestones in MS: an electronic patient-reporting study.'
-  authors: Kister I et al
-  year: 2013
-  journal: Neurology
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
-- t4_id: T4-020
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: structural barriers, T13. Concept covers thin-coverage topic area(s):
-    T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: 'Multiple sclerosis in US minority populations: clinical practice insights.'
-  authors: Khan O et al
-  year: 2015
-  journal: Neurol Clin Pract
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
-    no such paper confirmed in PubMed or web search). Khan 2015 covers structural
-    barriers and clinical practice for MS in minority populations in Neurol Clin Pract
-    (confirmed, ~114 citations).
-  corpus_doi: https://doi.org/10.1212/cpj.0000000000000112
-- t4_id: T4-021
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
-    of Health in MS'' (concepts/populations/equity-sdoh). Relevance documented by
-    editor: natural history by race, T1b bridge. Concept covers thin-coverage topic
-    area(s): T13.'
-  concept: equity_sdoh
-  concept_path: concepts/populations/equity-sdoh
-  title: Does multiple sclerosis-associated disability differ between races?
-  authors: Marrie RA et al
-  year: 2006
-  journal: Neurology
-  topic_codes:
-  - T13
-  corpus_status: not_found
-  t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found; Nealon
-    N is not a first author on any J Neuroimmunol disability progression paper). Marrie
-    2006 is the foundational race-disability paper in Neurology covering this functional
-    role (confirmed, ~181 citations).
-  corpus_doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
-- t4_id: T4-022
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: fatigue epidemiology baseline. Concept covers
-    thin-coverage topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: 'Fatigue characteristics in multiple sclerosis: the North American Research
-    Committee on Multiple Sclerosis (NARCOMS) survey.'
-  authors: Hadjimichael O et al
-  year: 2008
-  journal: Health Qual Life Outcomes
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
-    that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
-    largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
-    NARCOMS patients), providing the epidemiology-baseline role intended for this
-    slot (confirmed, ~238 citations).
-  corpus_doi: https://doi.org/10.1186/1477-7525-6-100
-- t4_id: T4-023
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: conceptual framework. Concept covers thin-coverage
-    topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: A medical definition of fatigue in multiple sclerosis.
-  authors: Mills RJ, Young CA
-  year: 2008
-  journal: QJM
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: title_fuzzy(0.99)
-  corpus_id: a602f8bdae65242db35d223d4cf847a7
-  corpus_doi: https://doi.org/10.1093/qjmed/hcm122
-  corpus_stats:
-    citation_count: 364
-    in_degree: 40
-    out_degree: 3
-    pagerank_pct: 85.8
-    kcore: 22
-    core_score: 0.808
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 50
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
-- t4_id: T4-024
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: fatigue-depression overlap, T10. Concept covers
-    thin-coverage topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: Prevalence and severity of multiple-sclerosis-associated fatigue in treated
-    and untreated patients.
-  authors: Putzki N et al
-  year: 2008
-  journal: Eur Neurol
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
-    correlation which does not match the actual Putzki 2008 paper (which covers fatigue
-    prevalence/severity in treated vs untreated patients). Journal corrected: Eur
-    J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
-  corpus_doi: https://doi.org/10.1159/000111876
-- t4_id: T4-025
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: sleep-fatigue relationship. Concept covers thin-coverage
-    topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: 'Fatigue in multiple sclerosis: mechanisms, evaluation, and treatment.'
-  authors: Braley TJ, Chervin RD
-  year: 2010
-  journal: Sleep
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
-  corpus_openalex_id: https://openalex.org/W185235087
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-026
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: review anchor for T09. Concept covers thin-coverage
-    topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: Fatigue in multiple sclerosis — a brief review.
-  authors: Induruwa I et al
-  year: 2012
-  journal: J Neurol Sci
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
-  corpus_openalex_id: https://openalex.org/W2021962531
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-027
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: T00/T09 epidemiology of fatigue. Concept covers
-    thin-coverage topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: 'Prevalence and burden of multiple sclerosis-related fatigue: a systematic
-    literature review.'
-  authors: Oliva Ramirez A et al
-  year: 2021
-  journal: BMC Neurol
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to be
-    a 2-page NARCOMS validation note, PMID 16193897, not a systematic review of fatigue
-    incidence/prevalence). Oliva Ramirez 2021 is the current systematic review of
-    MS fatigue epidemiology filling the intended role (confirmed, ~217 citations).
-  corpus_doi: https://doi.org/10.1186/s12883-021-02396-1
-- t4_id: T4-028
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
-    Relevance documented by editor: exercise/rehabilitation evidence. Concept covers
-    thin-coverage topic area(s): T09, T10.'
-  concept: fatigue_ms
-  concept_path: concepts/clinical/fatigue-ms
-  title: Meta-analysis of three different types of fatigue management interventions.
-  authors: Asano M, Finlayson ML
-  year: 2014
-  journal: Mult Scler Int
-  topic_codes:
-  - T09
-  - T10
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1155/2014/798285
-  corpus_openalex_id: https://openalex.org/W1988210814
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-029
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    T12 foundational epidemiology. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: Clinical features and viral serologies in children with multiple sclerosis.
-  authors: Banwell B et al
-  year: 2007
-  journal: Lancet Neurol
-  topic_codes:
-  - T12
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
-  corpus_openalex_id: https://openalex.org/W2124413251
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-030
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: Epidemiology, immunopathogenesis and management of pediatric central nervous
-    system inflammatory demyelinating conditions.
-  authors: Pohl D et al
-  year: 2008
-  journal: Curr Opin Neurol
-  topic_codes:
-  - T12
-  corpus_status: not_found
-  t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to match
-    actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating conditions,
-    not only MS).
-  corpus_doi: https://doi.org/10.1097/wco.0b013e3282fd172b
-- t4_id: T4-031
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    RCT anchor for T12. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: Trial of fingolimod versus interferon beta-1a in pediatric MS.
-  authors: Chitnis T et al
-  year: 2018
-  journal: NEJM
-  topic_codes:
-  - T12
-  corpus_status: title_fuzzy(0.88)
-  corpus_id: 5081658b1336498af7327d2e2b5cda6f
-  corpus_doi: https://doi.org/10.1056/nejmoa1800149
-  corpus_stats:
-    citation_count: 1280
-    in_degree: 311
-    out_degree: 24
-    pagerank_pct: 98.6
-    kcore: 32
-    core_score: 0.98
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 99
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
-- t4_id: T4-032
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    neurodevelopmental consequences. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: Cognitive and psychosocial features of pediatric MS.
-  authors: Amato MP et al
-  year: 2010
-  journal: Neurology
-  topic_codes:
-  - T12
-  corpus_status: not_found
-  t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID 20876467).
-    Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
-    features in pediatric MS.'
-  corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
-- t4_id: T4-033
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    comprehensive review anchor. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: Pediatric multiple sclerosis.
-  authors: Waldman A et al
-  year: 2014
-  journal: Semin Neurol
-  topic_codes:
-  - T12
-  corpus_status: title_fuzzy(0.98)
-  corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
-  corpus_doi: https://doi.org/10.1055/s-0036-1579738
-  corpus_stats:
-    citation_count: 56
-    in_degree: 10
-    out_degree: 14
-    pagerank_pct: 72.8
-    kcore: 19
-    core_score: 0.665
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 52
-  t4_note: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The corpus
-    fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to a Thieme journal
-    (Seminars in Neurology), consistent with citation count of 56. The Nat Rev Neurol
-    attribution in v1.1 was incorrect.'
-- t4_id: T4-034
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
-    Sclerosis'' (concepts/populations/pediatric-ms). Relevance documented by editor:
-    natural history, T1b bridge. Concept covers thin-coverage topic area(s): T12.'
-  concept: pediatric_ms
-  concept_path: concepts/populations/pediatric-ms
-  title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
-  authors: Huppke P et al
-  year: 2014
-  journal: Semin Neurol
-  topic_codes:
-  - T12
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1055/s-0034-1381742
-- t4_id: T4-035
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    editorial framing, T09. Concept covers thin-coverage topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: Exercise as medicine in MS — time to act.
-  authors: Dalgas U et al
-  year: 2019
-  journal: JAMA Neurol
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
-- t4_id: T4-036
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    fatigue and walking RCT summary. Concept covers thin-coverage topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: 'Exercise and MS: a systematic review with meta-analysis.'
-  authors: Motl RW et al
-  year: 2017
-  journal: Neurorehabil Neural Repair
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
-    Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl RW
-    et al 2017 Neurorehabil Neural Repair confirmed.
-  corpus_doi: https://doi.org/10.1177/1545968316680592
-- t4_id: T4-037
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    resistance training RCT. Concept covers thin-coverage topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: 'Progressive resistance training and MS: effects on physical fitness and
-    quality of life.'
-  authors: Kjolhede T et al
-  year: 2012
-  journal: Mult Scler
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1177/1352458512437864
-- t4_id: T4-038
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    cognitive rehabilitation bridge to T09. Concept covers thin-coverage topic area(s):
-    T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: Exercise and cognitive impairment in MS.
-  authors: Sandroff BM et al
-  year: 2018
-  journal: Nat Rev Neurol
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
-- t4_id: T4-039
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    umbrella review for multidisciplinary care (JLA #3). Concept covers thin-coverage
-    topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
-  authors: Khan F, Amatya B
-  year: 2017
-  journal: Arch Phys Med Rehabil
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
-- t4_id: T4-040
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    comprehensive outcomes review. Concept covers thin-coverage topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: 'Effects of exercise training on fitness, mobility, fatigue, depression in
-    adults with MS: a systematic review.'
-  authors: Latimer-Cheung AE et al
-  year: 2013
-  journal: Arch Phys Med Rehabil
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
-- t4_id: T4-041
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
-    in MS'' (concepts/clinical/rehabilitation-exercise). Relevance documented by editor:
-    adapted exercise modality. Concept covers thin-coverage topic area(s): T09.'
-  concept: rehabilitation_exercise
-  concept_path: concepts/clinical/rehabilitation-exercise
-  title: 'Efficacy of aquatic therapy for MS: a systematic review.'
-  authors: Corvillo I et al
-  year: 2017
-  journal: Eur J Phys Rehabil Med
-  topic_codes:
-  - T09
-  corpus_status: not_found
-  doi_verification_status: needs_manual_verification
-  t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
-    Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex —
-    API confirmation not possible. Verify via journal website or PubMed.
-  corpus_doi: https://doi.org/10.23736/s1973-9087.17.04570-1
-- t4_id: T4-042
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-    ratio temporal trend anchor. Concept covers thin-coverage topic area(s): T00,
-    T11.'
-  concept: sex_gender_ms
-  concept_path: concepts/populations/sex-gender-ms
-  title: 'Sex ratio of multiple sclerosis in Canada: a longitudinal study.'
-  authors: Orton SM et al
-  year: 2006
-  journal: Lancet Neurol
-  topic_codes:
-  - T00
-  - T11
-  corpus_status: not_found
-  t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
-    "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
-  corpus_doi: https://doi.org/10.1016/s1474-4422(06)70581-6
-- t4_id: T4-043
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-    hormonal bridge to T11. Concept covers thin-coverage topic area(s): T00, T11.'
-  concept: sex_gender_ms
-  concept_path: concepts/populations/sex-gender-ms
-  title: 'Pregnancy: effect on multiple sclerosis, treatment considerations, and breastfeeding.'
-  authors: Voskuhl R, Momtazee C
-  year: 2017
-  journal: Neurotherapeutics
-  topic_codes:
-  - T00
-  - T11
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
-  corpus_openalex_id: https://openalex.org/W2741378031
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-044
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-    sex-specific natural history. Concept covers thin-coverage topic area(s): T00,
-    T11.'
-  concept: sex_gender_ms
-  concept_path: concepts/populations/sex-gender-ms
-  title: Sex as a determinant of relapse incidence and progressive course of MS.
-  authors: Kalincik T et al
-  year: 2013
-  journal: Brain
-  topic_codes:
-  - T00
-  - T11
-  corpus_status: title_fuzzy(0.89)
-  corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
-  corpus_doi: https://doi.org/10.1093/brain/awt281
-  corpus_stats:
-    citation_count: 570
-    in_degree: 92
-    out_degree: 19
-    pagerank_pct: 93.5
-    kcore: 32
-    core_score: 0.95
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 91
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
-- t4_id: T4-045
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-    hormonal mechanisms. Concept covers thin-coverage topic area(s): T00, T11.'
-  concept: sex_gender_ms
-  concept_path: concepts/populations/sex-gender-ms
-  title: Impact of sex hormones on immune function and multiple sclerosis development.
-  authors: Ysrraelit MC, Correale J
-  year: 2019
-  journal: Immunology
-  topic_codes:
-  - T00
-  - T11
-  corpus_status: title_fuzzy(0.99)
-  corpus_id: 5dd210f9b1214a715e30bd027cf459ba
-  corpus_doi: https://doi.org/10.1111/imm.13004
-  corpus_stats:
-    citation_count: 486
-    in_degree: 62
-    out_degree: 68
-    pagerank_pct: 81.3
-    kcore: 30
-    core_score: 0.86
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 77
-  t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
-    formalises the concept-anchor expert signal and links this paper to its educational
-    concept page.
-- t4_id: T4-046
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
-    in MS'' (concepts/populations/sex-gender-ms). Relevance documented by editor:
-    general overview. Concept covers thin-coverage topic area(s): T00, T11.'
-  concept: sex_gender_ms
-  concept_path: concepts/populations/sex-gender-ms
-  title: The impact of gender on multiple sclerosis.
-  authors: Rottlaender A et al
-  year: 2014
-  journal: Open Neurol J
-  topic_codes:
-  - T00
-  - T11
-  corpus_status: not_found
-  t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
-    Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
-    Open Neurol J confirmed.
-  corpus_doi: https://doi.org/10.2174/1874205x01408010037
-- t4_id: T4-047
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: SDM framework anchor. Concept covers thin-coverage topic
-    area(s): T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: 'Shared decision making: a model for clinical practice.'
-  authors: Elwyn G et al
-  year: 2012
-  journal: J Gen Intern Med
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
-  corpus_openalex_id: https://openalex.org/W2041927436
-  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
-- t4_id: T4-048
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
-    area(s): T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: Shared decision making and self-management in MS — a consequence of evidence
-    based medicine.
-  authors: Heesen C et al
-  year: 2012
-  journal: J Neurol
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
-- t4_id: T4-049
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: patient voice, T09. Concept covers thin-coverage topic area(s):
-    T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: Patients' experiences and perceived impact of shared decision-making in MS.
-  authors: Berger B et al
-  year: 2017
-  journal: Patient Educ Couns
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
-- t4_id: T4-050
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: decision aid development. Concept covers thin-coverage topic
-    area(s): T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: Development and validation of a decision aid for people with multiple sclerosis.
-  authors: Solari A et al
-  year: 2017
-  journal: J Neurol
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
-- t4_id: T4-051
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: preference-weighting evidence. Concept covers thin-coverage
-    topic area(s): T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: 'Preferences of MS patients for DMT characteristics: a discrete choice experiment.'
-  authors: Visser LH et al
-  year: 2020
-  journal: Mult Scler
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: not_found
-  corpus_doi: https://doi.org/10.1177/1352458519838941
-- t4_id: T4-052
-  t4_source_type: concept_anchor_signal
-  t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
-    and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: contemporary review, T16. Concept covers thin-coverage topic
-    area(s): T09, T16.'
-  concept: shared_decision_making
-  concept_path: concepts/clinical/shared-decision-making
-  title: Shared decision making in multiple sclerosis.
-  authors: Grácio S et al
-  year: 2021
-  journal: Front Neurol
-  topic_codes:
-  - T09
-  - T16
-  corpus_status: title_fuzzy(0.83)
-  corpus_id: bc4457f660ecfc779461a3dc1b1dabec
-  corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
-  corpus_stats:
-    citation_count: 38
-    in_degree: 7
-    out_degree: 11
-    pagerank_pct: 62.2
-    kcore: 13
-    core_score: 0.538
-    existing_tier: included
-    seed_hops: 1
-    cocite_seeds: 33
-  t4_note: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus fuzzy-match
-    record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers in Neurology
-    — the Mult Scler attribution in v1.1 was incorrect.'
-- *id001
-- *id002
-- *id003
-- *id004
-- *id005
-- *id006
-- *id007
-- *id008
-- *id009
-- *id010
+    papers:
+    - t4_id: T4-047
+      title: 'Shared decision making: a model for clinical practice.'
+      authors: Elwyn G et al
+      year: 2012
+      journal: J Gen Intern Med
+      topic_codes:
+      - T09
+      - T16
+      relevance: SDM framework anchor
+      corpus_status: not_found
+      doi: https://doi.org/10.1007/s11606-012-2077-6
+      openalex_id: https://openalex.org/W2041927436
+    - t4_id: T4-048
+      title: Shared decision making and self-management in MS — a consequence of evidence
+        based medicine.
+      authors: Heesen C et al
+      year: 2012
+      journal: J Neurol
+      topic_codes:
+      - T09
+      - T16
+      relevance: MS-specific SDM review
+      corpus_status: not_found
+      doi: https://doi.org/10.1007/s00415-012-6531-x
+    - t4_id: T4-049
+      title: Patients' experiences and perceived impact of shared decision-making
+        in MS.
+      authors: Berger B et al
+      year: 2017
+      journal: Patient Educ Couns
+      topic_codes:
+      - T09
+      - T16
+      relevance: patient voice, T09
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/j.pec.2016.12.009
+    - t4_id: T4-050
+      title: Development and validation of a decision aid for people with multiple
+        sclerosis.
+      authors: Solari A et al
+      year: 2017
+      journal: J Neurol
+      topic_codes:
+      - T09
+      - T16
+      relevance: decision aid development
+      corpus_status: not_found
+      doi: https://doi.org/10.1007/s00415-016-8333-9
+    - t4_id: T4-051
+      title: 'Preferences of MS patients for DMT characteristics: a discrete choice
+        experiment.'
+      authors: Visser LH et al
+      year: 2020
+      journal: Mult Scler
+      topic_codes:
+      - T09
+      - T16
+      relevance: preference-weighting evidence
+      corpus_status: not_found
+      doi: https://doi.org/10.1177/1352458519838941
+    - t4_id: T4-052
+      title: Shared decision making in multiple sclerosis.
+      authors: Grácio S et al
+      year: 2021
+      journal: Front Neurol
+      topic_codes:
+      - T09
+      - T16
+      relevance: contemporary review, T16
+      corpus_status: title_fuzzy(0.83)
+      corpus_id: bc4457f660ecfc779461a3dc1b1dabec
+      corpus_stats:
+        citation_count: 38
+        in_degree: 7
+        out_degree: 11
+        pagerank_pct: 62.2
+        kcore: 13
+        core_score: 0.538
+        existing_tier: included
+        seed_hops: 1
+        cocite_seeds: 33
+      doi: https://doi.org/10.3389/fneur.2022.1063904
+      provenance: 'Journal corrected from v1.1: Mult Scler → Front Neurol. The corpus
+        fuzzy-match record (corpus_doi 10.3389/fneur.2022.1063904) resolves to Frontiers
+        in Neurology — the Mult Scler attribution in v1.1 was incorrect.'
