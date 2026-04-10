@@ -16,7 +16,7 @@ MSKB uses three distinct classification systems. It is important not to conflate
 
 | System | Source | Role |
 |--------|--------|------|
-| **T-codes** (T00–T16 + T1b) | Manually defined; assigned via seed propagation | Drives corpus selection and balance — the authoritative taxonomy |
+| **T-codes** (TOPIC-03–TOPIC-11 + TOPIC-04) | Manually defined; assigned via seed propagation | Drives corpus selection and balance — the authoritative taxonomy |
 | **Leiden citation clusters** (9 clusters) | Algorithmic; Louvain community detection | Available in graph explorer and Citation Topics sidebar; **not** used in selection |
 | **Learner concepts** (~30 pages) | Pedagogical; authored for site navigation | Powers concept pages and T4 signal nomination; **not** used in selection |
 
@@ -45,7 +45,7 @@ The target range balances coverage depth (~15–35 documents per topic) against 
 Documents are selected through four distinct mechanisms, each appropriate for a different purpose.
 
 ### Tier 1 — Seeds
-**40 hand-curated anchor papers**. The baseline remains 2 seeds per topic, with targeted augmentation in thin areas (T09 PROs, T13 Equity/SDOH, T16 Research Priorities). Seeds are conceptual entry points chosen for document-type diversity, citation neighborhood size, and geographic/institutional spread.
+**40 hand-curated anchor papers**. The baseline remains 2 seeds per topic, with targeted augmentation in thin areas (TOPIC-10 PROs, TOPIC-15 Equity/SDOH, TOPIC-11 Research Priorities). Seeds are conceptual entry points chosen for document-type diversity, citation neighborhood size, and geographic/institutional spread.
 
 See [Seeds](/mskb/corpus/seeds/) for the full list with metadata and rationale.
 
@@ -130,13 +130,13 @@ overlap_pct = papers_in_anchor_references_also_in_final_corpus / total_anchor_re
 
 ## Topic organization
 
-19 topics (18 + T1b Natural History) organized in three layers:
+19 topics (18 + TOPIC-04 Natural History) organized in three layers:
 
-- **Foundation** (T00–T04) — biological vocabulary and disease framing
-- **Clinical** (T05–T11) — diagnosis, treatment, management
-- **Context/Future** (T12–T16) — equity, pediatrics, AI, frontiers
+- **Foundation** (TOPIC-03–TOPIC-05) — biological vocabulary and disease framing
+- **Clinical** (TOPIC-06–TOPIC-13) — diagnosis, treatment, management
+- **Context/Future** (TOPIC-14–TOPIC-11) — equity, pediatrics, AI, frontiers
 
-The layering reflects epistemological dependencies, not value judgments. Equity research (T13) is in the Context/Future layer because its critical function — interrogating assumptions embedded in the clinical literature — is most meaningful after the Clinical baseline has been established.
+The layering reflects epistemological dependencies, not value judgments. Equity research (TOPIC-15) is in the Context/Future layer because its critical function — interrogating assumptions embedded in the clinical literature — is most meaningful after the Clinical baseline has been established.
 
 See [Topic Map](/mskb/corpus/topics/) for all 19 topics with seed assignments and document targets.
 

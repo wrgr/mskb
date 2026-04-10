@@ -354,4 +354,92 @@ This register lists every decision in the corpus construction methodology that w
 
 ---
 
-*Document version 1.2 — April 2026. Update version number and Update Log in the corpus specification workbook when methodology changes.*
+---
+
+## 17. v1.3 Structural Changes (April 2026)
+
+*Version 1.3 is the pre-corpus-run release. All decisions below were made before the first pipeline execution against the updated seed set.*
+
+### 17.1 Topic Taxonomy Rename: T## → TOPIC-##
+
+**Decision:** Rename all topic taxonomy codes from T00–T16 to TOPIC-03–TOPIC-11 across all files.
+
+**Rationale:** The prior T-prefix was shared with corpus tier codes (T1–T4), creating persistent ambiguity in documentation and tooling. A reader encountering "T09" could not determine whether this referred to TOPIC-10 (Patient-Reported Outcomes) or a near-synonym for Tier 1. The TOPIC-## prefix is unambiguous. The Leiden citation cluster IDs (numeric, 0–8) and the corpus tier codes (T1–T4) are unaffected — they use different formats and different scripts.
+
+**Files updated:** `data/topic_map.json`, `data/t4_expert_signal.yaml`, `seeds/core_seeds.csv`, `seeds/framing_seeds.csv`, `site/src/content/docs/corpus/topics.mdx`, `site/src/content/docs/corpus/gaps.mdx`, `site/src/content/docs/corpus/design-decisions.mdx`, `site/src/content/docs/corpus/seeds.mdx`, `site/src/content/docs/index.mdx`.
+
+> **⚑ ENGINEERING JUDGMENT:** The rename is backward-compatible for all files that are pipeline-generated (they read from the YAML/JSON source of truth). It is not backward-compatible for any hardcoded T## string in scripts not updated in this pass. Search for remaining T## patterns before the next pipeline run: `grep -rn '\bT0[0-9]\b\|\bT1[0-6]\b' scripts/`.
+
+### 17.2 TOPIC-11 (Research Priorities) Retired → Framing Seeds R7/R8
+
+**Decision:** Retire TOPIC-11 (Research Priorities & Cures Roadmap) as a standalone topic. Promote both Roadmap papers (MS-T1-033, MS-T1-034) to framing seeds R7/R8.
+
+**Rationale:** The Roadmap papers generate their primary value as reference-list expansion sources, not as a standalone citation cluster. As a standalone topic they would produce a thin, disconnected corpus cluster with no natural T2 expansion. As framing seeds they unlock the entire reference list algorithmically, benefiting all topics the Roadmap cites — a far more valuable use of the same papers. Ontaneda 2016 redistributed to TOPIC-09 (mechanistic fit). Shared-decision-making T4 entries (T4-047–T4-052) re-mapped to TOPIC-10.
+
+### 17.3 New TOPIC-11: Symptom Management & Multidisciplinary Care
+
+**Decision:** Add TOPIC-11 (Symptom Management & Multidisciplinary Care) with seeds MS-T1-047 (Dalgas 2019 *JAMA Neurol* — exercise as medicine) and MS-T1-048 (Khan & Amatya 2017 *Arch Phys Med Rehabil* — rehabilitation systematic review).
+
+**Rationale:** Symptom management and multidisciplinary rehabilitation are the aspects of MS care most important to patients (JLA Priority #3) and were distributed without a dedicated anchor across TOPIC-10 (PROs, which focuses on measurement instruments) and TOPIC-12 (comorbidities, which focuses on epidemiology). The 7 T4 expert-signal entries (T4-035–T4-041) already curated for rehabilitation/exercise constitute the natural T2 expansion neighborhood for this topic. A dedicated topic allows targeted T2 selection with appropriate thresholds rather than competing against clinical trial neighborhoods in TOPIC-10.
+
+**Seeds promoted from T4:** T4-035 (Dalgas 2019 → MS-T1-047) and T4-039 (Khan & Amatya 2017 → MS-T1-048). T4 records retained for audit continuity; topic_codes updated to TOPIC-11.
+
+### 17.4 TOPIC-07 Biomarker Seed Rebalancing
+
+**Decision:** Retire Bittner 2021 NfL (MS-T1-014, *Brain*) as a seed; add GFAP (MS-T1-044, Abdelhak 2022 *Nat Rev Neurol*) and McDonald 2024 biomarker criteria (MS-T1-045, Montalban 2025 *Lancet Neurol*).
+
+**Rationale:** Two NfL seeds (Khalil 2018 and Bittner 2021) produced expansion bias toward the NfL literature at the expense of GFAP and CHI3L1, despite GFAP emerging as the second major serum biomarker in clinical translation. The 2024 McDonald criteria revisions are the authoritative integration of serum biomarkers into MS diagnosis — not including them as a seed would leave a gap in diagnostic biomarker coverage. Bittner 2021 citation neighborhood overlaps substantially with Khalil 2018 (both are NfL reviews); retiring it frees a seed slot for mechanistic diversity.
+
+> **⚑ ENGINEERING JUDGMENT:** Seed retirement is difficult to reverse if the Bittner 2021 citation neighborhood proves unexpectedly distinct post-rerun. If TOPIC-07 coverage for NfL-as-treatment-monitoring-tool degrades, restore MS-T1-014 or add as T4.
+
+### 17.5 TOPIC-08 DMT Seed Rebalancing
+
+**Decision:** Redistribute ORATORIO (MS-T1-016) to TOPIC-09; add AFFIRM (MS-T1-042, Polman 2006 natalizumab *NEJM*) and EXPAND (MS-T1-043, Kappos 2018 siponimod *Lancet*) as TOPIC-08 seeds.
+
+**Rationale:** ORATORIO is a PPMS trial — its citation neighborhood is progressive MS-specific, not RRMS DMT-specific. Keeping it in TOPIC-08 biased expansion toward B-cell depletion literature and created redundancy with OPERA. AFFIRM and EXPAND provide natalizumab (VLA-4 mechanism, RRMS) and siponimod (S1P mechanism, SPMS) citation neighborhoods respectively, achieving mechanism diversity across three distinct pharmacological classes. EXPAND also bridges TOPIC-08 and TOPIC-09 via its SPMS population.
+
+**Outstanding gap:** BTK inhibitors (tolebrutinib Phase 3 — HERCULES completed 2025) and alemtuzumab (CARE-MS trials) are not yet seeded. BTK inhibitor data should surface via T3 velocity filter; if not, add as T4 with Phase 3 citation documentation. Ofatumumab (ASCLEPIOS) should surface via T2 expansion from OPERA (B-cell depletion neighborhood) but verify post-rerun.
+
+### 17.6 TOPIC-09 Progressive MS Gains ORATORIO Seed
+
+**Decision:** Add ORATORIO (MS-T1-016) as seed_D in TOPIC-09 alongside the three existing seeds.
+
+**Rationale:** See §17.5. ORATORIO is the pivotal PPMS trial and its citation neighborhood is TOPIC-09's core domain. Its presence as a seed will improve coverage of PPMS treatment literature, ocrelizumab/BTK inhibitor progressive MS trials, and the smoldering disease treatment evidence base.
+
+### 17.7 TOPIC-15 Equity: Okai 2022 Promoted to Seed
+
+**Decision:** Promote T4-017 (Okai et al. 2022 *Neurology* — Advancing care and outcomes for African American patients) to core seed MS-T1-046.
+
+**Rationale:** The existing TOPIC-15 seeds cover prevalence epidemiology (Wallin 2023, Langer-Gould 2022, 2013) and SES-severity outcomes (Gray-Roncal 2021) but not the mechanism of DMT access and treatment response disparities in clinical practice. Okai 2022 fills this gap and is published in a high-impact venue (Neurology) with a clear equity focus. Promoting it to a seed ensures T2 expansion reaches the clinical-disparities-in-practice literature, not only the epidemiological literature.
+
+### 17.8 TOPIC-16 Clinical AI Gains Louapre 2025
+
+**Decision:** Move MS-T1-031 (Louapre et al. 2025 AI-driven reclassification, *Nat Med*) from TOPIC-17 to TOPIC-16 as seed_C.
+
+**Rationale:** AI-driven MS reclassification is methodologically a clinical AI paper, not a remyelination/neuroprotection paper. In TOPIC-17 it produced structural incompatibility: the Louapre 2025 citation neighborhood (ML, unsupervised phenotyping) and the Franklin 2008 neighborhood (remyelination biology, OPC, repair mechanisms) have minimal overlap. Moving it to TOPIC-16 creates a coherent Clinical AI topic spanning lesion segmentation, progression prediction, and data-driven reclassification.
+
+### 17.9 TOPIC-17 Renamed: Remyelination & Neuroprotection
+
+**Decision:** Rename TOPIC-17 from "Emerging Frontiers" to "Remyelination & Neuroprotection"; add Lubetzki et al. 2020 *Lancet Neurol* (MS-T1-049) as second seed alongside Franklin 2008.
+
+**Rationale:** "Emerging Frontiers" was too broad and masked the topic's actual content — repair biology and translation of remyelination science to clinical programs. The rename makes the scope explicit. Lubetzki 2020 specifically covers the basic-science-to-clinical-translation pipeline for remyelination therapies, complementing Franklin 2008's foundational biology framing. Together they bracket the remyelination science from mechanism (oligodendrocyte precursors, OPC activation) to clinic (drug targets, Phase 2 programs).
+
+### 17.10 T2 Per-Topic Hard Cap: 100 Papers
+
+**Decision:** Impose a per-topic hard cap of 100 T2 papers in selection. Near the cap, selection should shift toward neighborhood coverage — papers in underrepresented citation clusters are preferred over next-highest-importance papers in already-represented clusters.
+
+**Rationale:** Without a per-topic cap, large foundational topics (Disease Overview, DMTs) dominate T2 counts, producing imbalanced corpora. The 100-paper cap ensures meaningful representation across all 19 topics at a 450–650 document corpus target. Near-cap neighborhood-coverage selection corrects for a known structural bias: the most-connected papers accumulate cross-seed scores efficiently, but the field contains distinct mechanistic sub-areas (e.g., in TOPIC-06, gadolinium-free monitoring vs. paramagnetic rim lesion tracking) where lower-cited but important papers cluster separately. Near the cap, these underrepresented clusters should be preferred.
+
+**Implementation:** The near-cap neighborhood selection (last 20 papers of each topic's T2 quota) should prioritize papers from Leiden sub-clusters with fewer than 3 already-selected papers, regardless of individual paper importance scores. Full implementation in `select_core_corpus.py` is deferred to v1.4 pipeline; the decision is documented here for the next engineering pass.
+
+> **⚑ ENGINEERING JUDGMENT:** The 100-paper cap was set by inspection: 19 topics × ~30 average T2 papers per topic ≈ 570 papers, roughly within the 450–650 corpus target. The specific 100-paper ceiling may need revision if the topic-specific targets in `topic_map.json` sum to more than 650 after T3/T4 additions. The near-cap neighborhood-coverage logic is described qualitatively here — the Leiden sub-cluster threshold (fewer than 3 papers) and the transition point (last 20 of 100) are initial proposals requiring empirical calibration.
+
+### 17.11 Framing Seeds Expanded: R7 and R8
+
+**Decision:** Add NMSS Pathways to Cures Roadmap (Bebo 2022, R7) and Refined Pathways to Cures (Bebo 2024, R8) as framing seeds.
+
+**Rationale:** The Roadmap reference lists represent the field's own collective assessment of foundational literature across TOPIC-08–TOPIC-17. Using them as framing seeds enables algorithmic extraction of all papers the field's strategic document treats as canonical — a higher-quality signal for those topics than individual expert judgment. The 2024 update (R8) adds recency signal especially for smoldering MS and progressive MS treatments.
+
+---
+
+*Document version 1.3 — April 2026. All §17 decisions apply to the v1.3 corpus run.*

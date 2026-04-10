@@ -114,6 +114,83 @@ def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
     return t4
 
 
+def _apply_t2_per_topic_cap(
+    scoped: pd.DataFrame,
+    is_t1: pd.Series,
+    is_t2: pd.Series,
+    max_t2_per_topic: int,
+    diversity_fraction: float = 0.20,
+) -> pd.Series:
+    """Cap T2 papers per topic, using Leiden-cluster diversity for the final slot allocation.
+
+    For oversubscribed topics, selection is two-phase:
+      Phase 1 — keep top (1 - diversity_fraction) * cap papers by importance score.
+      Phase 2 — fill remaining slots by preferring papers from Leiden clusters
+                 least represented in Phase 1, breaking ties by importance score.
+                 Falls back to pure importance order when community_id is absent.
+
+    Seeds (T1) are never dropped. Papers excluded by the cap may still qualify
+    for T3 if they meet the velocity threshold.
+
+    # TODO: revisit diversity_fraction tuning in v1.4+ once corpus runs are stable.
+    # The 0.20 default is a reasonable starting point but has not been empirically
+    # validated against topic-coverage or retrieval-diversity metrics.
+    """
+    if max_t2_per_topic <= 0:
+        return is_t2.copy()
+
+    community_col = next(
+        (c for c in ("dominant_community_id", "community_id") if c in scoped.columns),
+        None,
+    )
+
+    capped = is_t2.copy()
+    for topic, group in scoped.groupby("primary_topic_code"):
+        topic_t2 = group[is_t2.loc[group.index] & ~is_t1.loc[group.index]].copy()
+        if len(topic_t2) <= max_t2_per_topic:
+            continue
+
+        by_importance = topic_t2.sort_values("paper_importance_score", ascending=False)
+
+        # Phase 1: importance-ranked core
+        phase1_n = max(1, round((1.0 - diversity_fraction) * max_t2_per_topic))
+        phase2_n = max_t2_per_topic - phase1_n
+        keep_ids: set[str] = set(
+            by_importance.iloc[:phase1_n]["canonical_paper_id"].astype(str)
+        )
+
+        # Phase 2: diversity fill from underrepresented Leiden clusters
+        if phase2_n > 0 and community_col is not None:
+            phase1_rows = by_importance.iloc[:phase1_n]
+            cluster_counts: Counter = Counter(
+                phase1_rows[community_col].dropna().astype(str)
+            )
+            remaining = by_importance.iloc[phase1_n:].copy()
+            remaining["_cluster_str"] = remaining[community_col].fillna("").astype(str)
+            # Lower count = underrepresented = preferred
+            remaining["_cluster_count"] = remaining["_cluster_str"].map(
+                lambda c: cluster_counts.get(c, 0)
+            )
+            diversity_sorted = remaining.sort_values(
+                ["_cluster_count", "paper_importance_score"], ascending=[True, False]
+            )
+            keep_ids.update(
+                diversity_sorted.iloc[:phase2_n]["canonical_paper_id"].astype(str)
+            )
+        elif phase2_n > 0:
+            # Fallback: no community_id column; extend importance selection
+            keep_ids.update(
+                by_importance.iloc[phase1_n : phase1_n + phase2_n][
+                    "canonical_paper_id"
+                ].astype(str)
+            )
+
+        drop_ids = set(topic_t2["canonical_paper_id"].astype(str)) - keep_ids
+        capped.loc[scoped["canonical_paper_id"].astype(str).isin(drop_ids)] = False
+
+    return capped
+
+
 def _select_t3_ids(
     scoped: pd.DataFrame,
     is_t1: pd.Series,
@@ -219,6 +296,8 @@ def run(config_path: str) -> None:
     t2_importance_pct = float(t2_cfg.get("importance_percentile_by_category", 70.0))
     t2_importance_quantile = min(0.999, max(0.0, t2_importance_pct / 100.0))
     t2_relax_below_topic_share = min(1.0, max(0.0, float(t2_cfg.get("relax_structure_below_topic_share", 0.02))))
+    t2_max_per_topic = int(t2_cfg.get("max_per_topic", 100))
+    t2_diversity_fraction = float(t2_cfg.get("diversity_fraction", 0.20))
 
     t3_min_year = int(t3_cfg.get("min_year", 2022))
     t3_min_citations_per_year = float(t3_cfg.get("min_citations_per_year", 20.0))
@@ -297,6 +376,15 @@ def run(config_path: str) -> None:
 
     t2_relax_gate = t2_base_gate & scoped["primary_topic_code"].isin(low_share_topics)
     t2_final = t2_strict | t2_relax_gate
+    # Hard per-topic cap with Leiden-cluster diversity fill (Option A).
+    # Seeds excluded; papers dropped here may still qualify for T3.
+    t2_final = _apply_t2_per_topic_cap(
+        scoped,
+        is_t1=is_t1,
+        is_t2=t2_final,
+        max_t2_per_topic=t2_max_per_topic,
+        diversity_fraction=t2_diversity_fraction,
+    )
 
     t3_ids, t3_diag = _select_t3_ids(
         scoped=scoped,

@@ -1,23 +1,25 @@
 ---
 title: Topic Map
-description: 18 topics + Topic 1b organized into three layers — Foundation, Clinical, and Context/Future — with seed assignments and target document counts.
+description: 18 numbered topics (TOPIC-00 through TOPIC-17) organized into three layers — Foundation, Clinical, and Context/Future — with seed assignments and target document counts.
 sidebar:
   order: 2
 ---
 
-import { Badge } from '@astrojs/starlight/components';
+import { Badge, Aside } from '@astrojs/starlight/components';
 
-The MSKB corpus covers **19 research topics** (18 numbered topics plus Topic 1b — Natural History) organized in three reading layers. The baseline is 2 T1 seeds per topic, with targeted seed augmentation where citation-structure coverage was thin (T09, T13, T16).
+The MSKB corpus covers **18 research topics** (TOPIC-00 through TOPIC-17) organized in three reading layers. The baseline is 2 T1 seeds per topic, with targeted seed augmentation where citation-structure coverage is thin or mechanistically distinct sub-areas need dedicated anchors.
 
 Read order: Foundation → Clinical → Context/Future. You can enter at any layer but the epistemological dependencies flow in this direction.
 
-<Aside type="note" title="This is the T-code taxonomy — one of three classification systems">
-MSKB uses three distinct classification systems. **This page documents T-codes** (the primary corpus taxonomy, used for selection and balance). The other two are:
+<Aside type="note" title="TOPIC-## codes vs tier codes (T1–T4)">
+MSKB uses two separate code systems that previously shared the "T" prefix — now disambiguated:
 
-- **Leiden citation clusters** (9 clusters, bibliometric) — available in the [Citation Topics](/mskb/topics/) sidebar and `explorer_graph.json` as an alternative view; not used in selection or balance
-- **Learner concepts** (~30 pages, pedagogical) — drive site navigation and T4 expert signal nomination; not used in selection or balance
+- **TOPIC-## codes** (this page) — the primary corpus taxonomy used for selection and balance. TOPIC-00 through TOPIC-17.
+- **Tier codes T1–T4** — corpus tiers by selection mechanism (T1 seeds, T2 cross-seed connected, T3 velocity/emerging, T4 expert signal).
 
-See [Methodology](/mskb/corpus/methodology/#classification-systems) for a full explanation of the role of each system.
+The other classification system — **Leiden citation clusters** (9 clusters, bibliometric) — is available in the [Citation Topics](/mskb/topics/) sidebar and `explorer_graph.json` as an alternative view; not used in selection or balance.
+
+See [Methodology](/mskb/corpus/methodology/#classification-systems) for a full explanation.
 </Aside>
 
 ---
@@ -26,21 +28,7 @@ See [Methodology](/mskb/corpus/methodology/#classification-systems) for a full e
 
 Topics that establish the biological vocabulary and disease framing prerequisite to all subsequent topics.
 
-### T00 — Epidemiology & Global Burden <Badge text="Foundation" variant="note" />
-
-**Why it matters:** Quantitative global frame; geographic diversity; disease scale worldwide.
-
-The global burden framing establishes scale (2.8 million people with MS worldwide), geographic distribution, incidence and prevalence trends, and mortality patterns. It is the context within which all clinical and mechanistic topics operate and provides the baseline against which intervention effects are measured at population level.
-
-| | |
-|---|---|
-| **Seeds** | MS-T1-035 (Atlas of MS 3rd ed, Walton/MSIF 2020) · MS-T1-036 (GBD 2016, Lancet Neurol 2019) |
-| **Target** | 25–30 documents |
-| **Primary doc types** | Epidemiological/Burden · Systematic Review/Meta-Analysis |
-
----
-
-### T01 — Disease Overview & Phenotypes <Badge text="Foundation" variant="note" />
+### TOPIC-00 — Disease Overview & Phenotypes <Badge text="Foundation" variant="note" />
 
 **Why it matters:** RRMS/SPMS/PPMS/CIS/RIS taxonomy; diagnostic criteria; prerequisite vocabulary for all other topics.
 
@@ -54,37 +42,7 @@ Every other topic in the corpus presupposes the phenotype vocabulary and diagnos
 
 ---
 
-### T1b — Natural History <Badge text="Foundation" variant="note" />
-
-**Why it matters:** Pre-DMT disease trajectory; disability progression independent of relapses; baseline for treatment effect measurement.
-
-The Lyon cohort (Confavreux et al. 2000, *NEJM*) established that disability progression, once underway, proceeds independently of prior or concurrent relapse activity. This finding is the conceptual foundation for the entire progressive MS and smoldering disease research agenda — it directly challenged the assumption that suppressing relapses would prevent long-term disability.
-
-Topic 1b is numbered 1b (not a new integer) for backward compatibility with earlier versions of the orientation guide.
-
-| | |
-|---|---|
-| **Seeds** | MS-T1-003 (Confavreux et al. 2000 Lyon cohort, *NEJM*) · MS-T1-004 (Confavreux & Vukusic 2006, *Brain*) |
-| **Target** | 20–25 documents |
-| **Primary doc types** | Natural History/Registry |
-
----
-
-### T02 — Pathophysiology <Badge text="Foundation" variant="note" />
-
-**Why it matters:** Demyelination vs neurodegeneration duality; lesion biology; why peripheral immune drugs fail in progressive MS.
-
-The immune-vs-neurodegeneration framing (Trapp & Nave 2008) explains why treatments that suppress peripheral inflammation can control relapses but fail to prevent disability progression. Understanding lesion heterogeneity (Lassmann 2018) explains why imaging correlates imperfectly with disability.
-
-| | |
-|---|---|
-| **Seeds** | MS-T1-005 (Lassmann 2018, *CSHP Med*) · MS-T1-006 (Trapp & Nave 2008, *Ann Rev Neurosci*) |
-| **Target** | 25–30 documents |
-| **Primary doc types** | Mechanistic Review |
-
----
-
-### T03 — Genetics <Badge text="Foundation" variant="note" />
+### TOPIC-01 — Immunology & Genetics <Badge text="Foundation" variant="note" />
 
 **Why it matters:** HLA architecture; 200+ GWAS loci; polygenic risk; why MS is an immune-dysregulation disease.
 
@@ -98,7 +56,51 @@ The IMSGC GWAS (2019) identified 233 risk variants and established that MS is ge
 
 ---
 
-### T04 — Risk Factors & Etiology <Badge text="Foundation" variant="note" />
+### TOPIC-02 — Pathophysiology <Badge text="Foundation" variant="note" />
+
+**Why it matters:** Demyelination vs neurodegeneration duality; lesion biology; why peripheral immune drugs fail in progressive MS.
+
+The immune-vs-neurodegeneration framing (Trapp & Nave 2008) explains why treatments that suppress peripheral inflammation can control relapses but fail to prevent disability progression. Understanding lesion heterogeneity (Lassmann 2018) explains why imaging correlates imperfectly with disability.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-005 (Lassmann 2018, *CSHP Med*) · MS-T1-006 (Trapp & Nave 2008, *Ann Rev Neurosci*) |
+| **Target** | 25–30 documents |
+| **Primary doc types** | Mechanistic Review |
+
+---
+
+### TOPIC-03 — Epidemiology & Global Burden <Badge text="Foundation" variant="note" />
+
+**Why it matters:** Quantitative global frame; geographic diversity; disease scale worldwide.
+
+The global burden framing establishes scale (2.8 million people with MS worldwide), geographic distribution, incidence and prevalence trends, and mortality patterns. It is the context within which all clinical and mechanistic topics operate and provides the baseline against which intervention effects are measured at population level.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-035 (Atlas of MS 3rd ed, Walton/MSIF 2020) · MS-T1-036 (GBD 2016, Lancet Neurol 2019) |
+| **Target** | 25–30 documents |
+| **Primary doc types** | Epidemiological/Burden · Systematic Review/Meta-Analysis |
+
+---
+
+### TOPIC-04 — Natural History <Badge text="Foundation" variant="note" />
+
+**Why it matters:** Pre-DMT disease trajectory; disability progression independent of relapses; baseline for treatment effect measurement.
+
+The Lyon cohort (Confavreux et al. 2000, *NEJM*) established that disability progression, once underway, proceeds independently of prior or concurrent relapse activity. This finding is the conceptual foundation for the entire progressive MS and smoldering disease research agenda — it directly challenged the assumption that suppressing relapses would prevent long-term disability.
+
+Post-rerun monitoring: verify that TOPIC-04 generates a distinct corpus from TOPIC-09 — the Lyon cohort citation neighborhood overlaps substantially with progressive MS literature.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-003 (Confavreux et al. 2000 Lyon cohort, *NEJM*) · MS-T1-004 (Confavreux & Vukusic 2006, *Brain*) |
+| **Target** | 20–25 documents |
+| **Primary doc types** | Natural History/Registry |
+
+---
+
+### TOPIC-05 — Risk Factors & Etiology <Badge text="Foundation" variant="note" />
 
 **Why it matters:** EBV; vitamin D; smoking; latitude; multi-factor model; emerging vs settled science.
 
@@ -116,11 +118,11 @@ The Bjornevik 2022 *Science* paper (10 million US military serum samples) establ
 
 Topics presupposing the Foundation vocabulary — diagnosis, treatment, and management.
 
-### T05 — Diagnosis & Monitoring <Badge text="Clinical" variant="tip" />
+### TOPIC-06 — Diagnosis & Monitoring <Badge text="Clinical" variant="tip" />
 
 **Why it matters:** MRI criteria; gadolinium; PRL; central vein sign; evolving McDonald criteria.
 
-MRI is the primary diagnostic and monitoring tool in MS. The MAGNIMS-CMSC-NAIMS consensus (2021) governs MRI monitoring in clinical practice. The Absinta 2019 paramagnetic rim lesion (PRL) paper connects imaging to the smoldering disease mechanism and bridges T05 and T08.
+MRI is the primary diagnostic and monitoring tool in MS. The MAGNIMS-CMSC-NAIMS consensus (2021) governs MRI monitoring in clinical practice. The Absinta 2019 paramagnetic rim lesion (PRL) paper connects imaging to the smoldering disease mechanism and bridges TOPIC-06 and TOPIC-09.
 
 | | |
 |---|---|
@@ -130,49 +132,50 @@ MRI is the primary diagnostic and monitoring tool in MS. The MAGNIMS-CMSC-NAIMS 
 
 ---
 
-### T06 — Biomarkers <Badge text="Clinical" variant="tip" />
+### TOPIC-07 — Biomarkers <Badge text="Clinical" variant="tip" />
 
-**Why it matters:** NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use.
+**Why it matters:** NfL; GFAP; CHI3L1; serum vs CSF; treatment monitoring; prognostic use; 2024 biomarker-integrated McDonald criteria.
 
-Neurofilament light chain (NfL) is the first blood biomarker to enter routine MS clinical practice for treatment monitoring. The Khalil 2018 *Nat Rev Neurology* review is cited by virtually every subsequent NfL paper and generates the largest forward citation neighborhood of any seed in this topic.
+Neurofilament light chain (NfL) is the first blood biomarker to enter routine MS clinical practice for treatment monitoring. The Khalil 2018 *Nat Rev Neurology* review anchors the NfL literature; v1.3 adds GFAP (Abdelhak 2022) to address the broader glial damage biomarker class and the 2024 McDonald criteria update (Montalban 2025) as the authoritative integration of serum biomarkers into diagnosis. The prior second NfL seed (Bittner 2021 *Brain*) was retired — it extensively overlapped with Khalil 2018 and biased expansion toward NfL at the expense of GFAP and CHI3L1. The framing anchor R4 (Lancet Neurology 2025 biomarker review) provides additional coverage for CHI3L1 and multi-analyte panels.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-013 (Khalil et al. 2018 NfL, *Nat Rev Neurol*) · MS-T1-014 (Bittner et al. 2021 serum NfL, *Brain*) |
+| **Seeds** | MS-T1-013 (Khalil et al. 2018 NfL, *Nat Rev Neurol*) · MS-T1-044 (Abdelhak et al. 2022 GFAP, *Nat Rev Neurol*) · MS-T1-045 (Montalban et al. 2025 McDonald criteria 2024, *Lancet Neurol*) |
 | **Target** | 25–30 documents |
-| **Primary doc types** | Mechanistic Review |
+| **Primary doc types** | Mechanistic Review · Consensus/Guideline |
+| **Retired seed** | MS-T1-014 (Bittner 2021 serum NfL, *Brain*) — retired v1.3; citation neighborhood overlapped >80% with MS-T1-013 |
 
 ---
 
-### T07 — Disease-Modifying Therapies <Badge text="Clinical" variant="tip" />
+### TOPIC-08 — Disease-Modifying Therapies <Badge text="Clinical" variant="tip" />
 
-**Why it matters:** DMT classes; escalation vs treat-to-target; B-cell depletion paradigm; progressive MS treatment.
+**Why it matters:** DMT classes; escalation vs treat-to-target; mechanism diversity across anti-CD20, VLA-4, and S1P; BTK inhibitors emerging.
 
-The OPERA (RRMS) and ORATORIO (PPMS) trials established ocrelizumab as the standard of care for both relapsing and primary progressive MS, cementing the B-cell depletion paradigm. Both seeds are 2017 and flagged ⚠️ aging — the T2/T3 pipeline is expected to surface post-2017 DMT literature including BTK inhibitor trials.
+v1.3 rebalanced: ORATORIO (MS-T1-016, PPMS trial) redistributed to TOPIC-09 where it belongs mechanistically. Seeds now span three drug mechanisms: OPERA (ocrelizumab, anti-CD20 B-cell depletion, RRMS), AFFIRM (natalizumab, VLA-4 integrin, RRMS), and EXPAND (siponimod, S1P modulation, SPMS). This ensures the T2 expansion reaches the natalizumab, S1P modulator, and SPMS treatment literature, not just the B-cell depletion cluster. BTK inhibitors (tolebrutinib, fenebrutinib — Phase 3 ongoing) and alemtuzumab are not yet seeded; monitor via T3 velocity filter.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-015 (Hauser et al. 2017 OPERA, *NEJM*) · MS-T1-016 (Montalban et al. 2017 ORATORIO, *NEJM*) |
+| **Seeds** | MS-T1-015 (Hauser et al. 2017 OPERA, *NEJM*) · MS-T1-042 (Polman et al. 2006 AFFIRM, *NEJM*) · MS-T1-043 (Kappos et al. 2018 EXPAND, *Lancet*) |
 | **Target** | 30–35 documents |
 | **Primary doc types** | Landmark RCT |
 
 ---
 
-### T08 — Progressive MS & Smoldering <Badge text="Clinical" variant="tip" />
+### TOPIC-09 — Progressive MS & Smoldering <Badge text="Clinical" variant="tip" />
 
 **Why it matters:** PIRA; smoldering inflammation; why relapse suppression ≠ disability prevention; biggest unmet need.
 
-Progression independent of relapse activity (PIRA) is the primary driver of long-term disability in MS. The smoldering MS framework (Giovannoni et al. 2022) argues that chronic, low-grade CNS inflammation persists even when peripheral inflammation is suppressed — explaining why highly effective DMTs fail to fully prevent disability accumulation.
+Progression independent of relapse activity (PIRA) is the primary driver of long-term disability in MS. The smoldering MS framework (Giovannoni et al. 2022) argues that chronic, low-grade CNS inflammation persists even when peripheral inflammation is suppressed — explaining why highly effective DMTs fail to fully prevent disability accumulation. Ontaneda et al. 2016 (*Lancet*) provides the research-agenda bridge across progressive disease biology, trial strategy, and repair. ORATORIO (Montalban 2017 *NEJM*) redistributed here from TOPIC-08 v1.3 — as the pivotal PPMS trial its citation neighborhood is progressive-MS-specific, not RRMS-specific.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-017 (Lublin et al. 2014 phenotype definitions, *Neurology*) · MS-T1-018 (Giovannoni et al. 2022 smoldering MS, *TAND*) |
+| **Seeds** | MS-T1-017 (Lublin et al. 2014 phenotype definitions, *Neurology*) · MS-T1-018 (Giovannoni et al. 2022 smoldering MS, *TAND*) · MS-T1-040 (Ontaneda et al. 2016 progressive MS prospects, *Lancet*) · MS-T1-016 (Montalban et al. 2017 ORATORIO PPMS, *NEJM*) |
 | **Target** | 25–30 documents |
-| **Primary doc types** | Consensus/Guideline · Mechanistic Review |
+| **Primary doc types** | Consensus/Guideline · Mechanistic Review · Landmark RCT |
 
 ---
 
-### T09 — Patient-Reported Outcomes <Badge text="Clinical" variant="tip" />
+### TOPIC-10 — Patient-Reported Outcomes <Badge text="Clinical" variant="tip" />
 
 **Why it matters:** EDSS limitations; fatigue; cognition; PRO instruments; trial endpoint gaps; digital health.
 
@@ -186,7 +189,21 @@ EDSS is the primary disability scale in MS but is insensitive to fatigue, cognit
 
 ---
 
-### T10 — Comorbidities <Badge text="Clinical" variant="tip" />
+### TOPIC-11 — Symptom Management & Multidisciplinary Care <Badge text="Clinical" variant="tip" />
+
+**Why it matters:** Exercise as therapy; multidisciplinary rehabilitation; fatigue management; bladder/bowel; non-pharmacological care; implementation into MS programs.
+
+Symptom management and multidisciplinary rehabilitation address the aspects of MS burden most important to patients — fatigue, mobility, bladder/bowel function, cognitive difficulties — that are incompletely addressed by DMTs alone. This literature was previously distributed across TOPIC-10 (PROs) and TOPIC-12 (comorbidities); TOPIC-11 creates a dedicated home for the intervention evidence. The Dalgas 2019 *JAMA Neurol* editorial frames exercise as disease-modifying; Khan & Amatya 2017 is the most comprehensive umbrella review of multidisciplinary rehabilitation evidence. T4 entries T4-035 through T4-041 (rehabilitation/exercise expert signal) naturally anchor the T2 expansion here.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-047 (Dalgas et al. 2019 exercise as medicine, *JAMA Neurol*) · MS-T1-048 (Khan & Amatya 2017 rehabilitation systematic review, *Arch Phys Med Rehabil*) |
+| **Target** | 15–20 documents |
+| **Primary doc types** | Mechanistic Review · Systematic Review/Meta-Analysis |
+
+---
+
+### TOPIC-12 — Comorbidities <Badge text="Clinical" variant="tip" />
 
 **Why it matters:** Depression; anxiety; cognitive impairment; bladder dysfunction; interaction with disability.
 
@@ -200,7 +217,7 @@ Psychiatric comorbidity affects ~50% of people with MS and amplifies disability,
 
 ---
 
-### T11 — Pregnancy & MS <Badge text="Clinical" variant="tip" />
+### TOPIC-13 — Pregnancy & MS <Badge text="Clinical" variant="tip" />
 
 **Why it matters:** Relapse-rebound risk; DMT teratogenicity; washout; post-partum; breastfeeding.
 
@@ -218,7 +235,7 @@ The PRIMS cohort (Confavreux et al. 1998, *NEJM*) established the pregnancy rela
 
 Topics most meaningful after establishing the Clinical baseline.
 
-### T12 — Pediatric MS <Badge text="Context/Future" variant="caution" />
+### TOPIC-14 — Pediatric MS <Badge text="Context/Future" variant="caution" />
 
 **Why it matters:** ADEM differential; neurodevelopmental stakes; IPMSSG criteria; pediatric EBV data.
 
@@ -232,58 +249,50 @@ MS in children and adolescents has distinct diagnostic challenges (differential 
 
 ---
 
-### T13 — Equity & SDOH <Badge text="Context/Future" variant="caution" />
+### TOPIC-15 — Equity & SDOH <Badge text="Context/Future" variant="caution" />
 
 **Why it matters:** Structural racism; Black/Hispanic disparities; diagnostic delay; access to high-efficacy DMTs.
 
 Equity research is placed in the Context/Future layer as a reading recommendation, not a value judgment. Its critical function — interrogating assumptions embedded in the clinical literature — is most powerful when read against the Clinical baseline it critiques.
 
-T13 now uses three complementary seeds: Wallin 2023 (population-based prevalence), Langer-Gould 2022 (current disparities prevalence), and Langer-Gould 2013 (multi-ethnic incidence). The dedicated review anchor R5 (Amezcua et al. 2021) remains the bridge for structurally disconnected equity literature.
+TOPIC-15 uses five complementary seeds spanning prevalence (Wallin 2023, Langer-Gould 2022), incidence (Langer-Gould 2013), SES-severity outcomes (Gray-Roncal 2021), and DMT access/response disparities for African American patients (Okai 2022 — promoted from T4-017 expert signal in v1.3). The dedicated review anchor R5 (Amezcua et al. 2021) remains the bridge for structurally disconnected equity literature.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-027 (Wallin et al. 2023 prevalence by race/ethnicity, *JAMA Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities prevalence, *Neurology*) · MS-T1-039 (Langer-Gould et al. 2013 incidence across groups, *Neurology*) |
+| **Seeds** | MS-T1-027 (Wallin et al. 2023 prevalence by race/ethnicity, *JAMA Neurol*) · MS-T1-028 (Langer-Gould et al. 2022 disparities prevalence, *Neurology*) · MS-T1-039 (Langer-Gould et al. 2013 incidence across groups, *Neurology*) · MS-T1-041 (Gray-Roncal et al. 2021 SES-severity, *Neurology*) · MS-T1-046 (Okai et al. 2022 African American DMT outcomes, *Neurology*) |
 | **Target** | 20–25 documents |
 | **Primary doc types** | Equity/SDOH |
 
 ---
 
-### T14 — Clinical AI & Learning Systems <Badge text="Context/Future" variant="caution" />
+### TOPIC-16 — Clinical AI & Learning Systems <Badge text="Context/Future" variant="caution" />
 
-**Why it matters:** Lesion segmentation; progression prediction; treatment recommendation; implementation gap; explainability.
+**Why it matters:** Lesion segmentation; progression prediction; treatment recommendation; data-driven disease reclassification; implementation gap; explainability.
 
-Clinical AI in MS spans lesion segmentation (mature, deployed), progression prediction (active research), and treatment recommendation (early stage). The implementation gap — between what AI can do in controlled settings and what is deployed in clinical practice — is the primary open problem.
+Clinical AI in MS spans lesion segmentation (mature, deployed), progression prediction (active research), treatment recommendation (early stage), and data-driven phenotype reclassification (emerging). Louapre 2025 *Nature Medicine* (MS-T1-031) added v1.3 — redistributed from TOPIC-17, where it was structurally incompatible with the remyelination biology seeds. AI-based reclassification uses longitudinal clinical data to challenge the traditional RRMS/SPMS/PPMS taxonomy and belongs in the Clinical AI topic.
 
 | | |
 |---|---|
-| **Seeds** | MS-T1-029 (Prados et al. 2024 AI review, *Curr Neurol Neurosci Rep*) · MS-T1-030 (Noteboom et al. 2025 big data, *J NeuroEng Rehab*) |
+| **Seeds** | MS-T1-029 (Prados et al. 2024 AI review, *Curr Neurol Neurosci Rep*) · MS-T1-030 (Noteboom et al. 2025 big data, *J NeuroEng Rehab*) · MS-T1-031 (Louapre et al. 2025 AI reclassification, *Nat Med*) |
 | **Target** | 20–25 documents |
+| **Primary doc types** | Mechanistic Review · Epidemiological/Burden |
+
+---
+
+### TOPIC-17 — Remyelination & Neuroprotection <Badge text="Context/Future" variant="caution" />
+
+**Why it matters:** Remyelination biology; neuroprotection strategies; repair beyond inflammation suppression; EBV vaccine prevention; biggest scientific frontier.
+
+v1.3 renamed from "Emerging Frontiers" for clean, coherent scope. AI reclassification (Louapre 2025) redistributed to TOPIC-16 — it belongs with Clinical AI, not with repair biology. Seeds now both anchor the remyelination-to-clinic pipeline: Franklin & Ffrench-Constant 2008 (*Nat Rev Neurosci*) is the foundational remyelination biology review; Lubetzki et al. 2020 (*Lancet Neurol*) covers the basic-science-to-clinical-translation pipeline for remyelination therapies specifically. EBV vaccine prevention (G-005) remains a future gap — no Phase 2/3 efficacy data yet.
+
+| | |
+|---|---|
+| **Seeds** | MS-T1-032 (Franklin & Ffrench-Constant 2008 remyelination, *Nat Rev Neurosci*) · MS-T1-049 (Lubetzki et al. 2020 remyelination to clinic, *Lancet Neurol*) |
+| **Target** | 15–20 documents |
 | **Primary doc types** | Mechanistic Review |
 
 ---
 
-### T15 — Emerging Frontiers <Badge text="Context/Future" variant="caution" />
-
-**Why it matters:** Data-driven reclassification; remyelination; neuroprotection; EBV vaccine prevention.
-
-The Louapre 2025 *Nature Medicine* paper exemplifies the emerging frontier: data-driven reclassification of MS that challenges the traditional phenotype taxonomy using large-scale longitudinal data. The Franklin & Ffrench-Constant 2008 remyelination review provides the mechanistic foundation for therapeutic remyelination programs in clinical development.
-
-| | |
-|---|---|
-| **Seeds** | MS-T1-031 (Louapre et al. 2025 AI reclassification, *Nat Med*) · MS-T1-032 (Franklin & Ffrench-Constant 2008 remyelination, *Nat Rev Neurosci*) |
-| **Target** | 15–20 documents |
-| **Primary doc types** | Epidemiological/Burden · Mechanistic Review |
-
----
-
-### T16 — Research Priorities & Cures Roadmap <Badge text="Context/Future" variant="caution" />
-
-**Why it matters:** Stop/Restore/End pathways; patient-informed priorities; field-wide strategic agenda; funding alignment.
-
-The NMSS Pathways to Cures Roadmap is the only seed document that: (a) explicitly incorporates patient priorities (input from 300+ people living with MS), (b) provides a cross-cutting research agenda rather than domain-specific evidence, and (c) has been endorsed by 30+ MS societies globally. The Roadmap's reference list is a Tier 4 source — papers the field's own strategic document treats as foundational.
-
-| | |
-|---|---|
-| **Seeds** | MS-T1-033 (NMSS Cures Roadmap 2022, *MSJ*) · MS-T1-034 (Refined Roadmap 2024, *MSJ*) · MS-T1-040 (Ontaneda et al. 2016 progressive MS prospects, *Lancet*) |
-| **Target** | 10–15 documents |
-| **Primary doc types** | Patient/Advocacy |
+<Aside type="note" title="Research Priorities topic retired in v1.3">
+**Research Priorities & Cures Roadmap** (formerly TOPIC-16 (pre-v1.3 numbering)) was retired in v1.3. The Roadmap papers (MS-T1-033 Bebo 2022 and MS-T1-034 Bebo 2024) are now framing seeds R7 and R8, unlocking reference-list expansion algorithmically across all topics rather than generating a narrow standalone cluster. Ontaneda et al. 2016 (*Lancet*) was redistributed to TOPIC-09. Shared-decision-making T4 entries (T4-047–T4-052) re-mapped to TOPIC-10. The TOPIC-11 code is now assigned to Symptom Management & Multidisciplinary Care (see above).
+</Aside>

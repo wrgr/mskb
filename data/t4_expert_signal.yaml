@@ -5,9 +5,12 @@ description: 'Papers explicitly nominated by editors as required anchors for MSK
   educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
   concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
   Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
-  expert signal documented; cross_seed_score = 0 acceptable. Total: 62 papers — 45
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 64 papers — 47
   not yet in corpus (primary addition targets), 17 already included (signal formalisation
-  only).'
+  only). v1.3: T4-033 replaced (Waldman 2014 Semin Neurol → Fadda 2021 Lancet Neurol
+  IPMSSG consensus); T4-063 added (Wang/Marrie 2016 Neurology DMT access/insurance);
+  T4-064 added (Geiger 2023 Drugs Real World Outcomes race-stratified DMT initiation).
+  Topic codes updated to TOPIC-## format (v1.3 sequential renaming).'
 by_concept:
   bladder_bowel_dysfunction:
     concept_path: concepts/clinical/bladder-bowel-dysfunction
@@ -18,7 +21,7 @@ by_concept:
       year: 2008
       journal: Nat Rev Neurosci
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: neuroanatomical basis, T02
       corpus_status: not_found
       doi: https://doi.org/10.1038/nrn2401
@@ -29,7 +32,7 @@ by_concept:
       year: 1999
       journal: J Urol
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: urology management overview
       corpus_status: not_found
       doi: https://doi.org/10.1016/s0022-5347(01)61760-9
@@ -40,7 +43,7 @@ by_concept:
       year: 2009
       journal: J Neurol Neurosurg Psychiatry
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: practical management, T10
       corpus_status: not_found
       doi: https://doi.org/10.1136/jnnp.2008.159178
@@ -54,7 +57,7 @@ by_concept:
       year: 2015
       journal: Lancet Neurol
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: review anchor for T10
       corpus_status: not_found
       doi: https://doi.org/10.1016/s1474-4422(15)00070-8
@@ -65,7 +68,7 @@ by_concept:
       year: 2018
       journal: Degenerative Neurol Neuromuscul Dis
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: bowel arm coverage
       corpus_status: not_found
       doi: https://doi.org/10.2147/dnnd.s138835
@@ -80,7 +83,7 @@ by_concept:
       year: 2017
       journal: Mult Scler Relat Disord
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: contemporary PRO-grounded burden data, T09
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.msard.2017.12.006
@@ -98,7 +101,7 @@ by_concept:
       year: 2003
       journal: Neurology
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: prevalence anchor, T10
       corpus_status: not_found
       doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
@@ -108,7 +111,7 @@ by_concept:
       year: 2005
       journal: J Neurol Neurosurg Psychiatry
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: mechanisms review
       corpus_status: title_fuzzy(0.99)
       corpus_id: ee043c45f5376a26956aa4650e6e0be2
@@ -130,7 +133,7 @@ by_concept:
       year: 2014
       journal: Neurology
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: AAN guideline anchor
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0000000000000013
@@ -141,7 +144,7 @@ by_concept:
       year: 2014
       journal: Nat Rev Neurol
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: bidirectional mechanism review
       corpus_status: not_found
       doi: https://doi.org/10.1038/nrneurol.2014.139
@@ -153,7 +156,7 @@ by_concept:
       year: 2017
       journal: Arch Phys Med Rehabil
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: protective factors
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.apmr.2016.09.127
@@ -168,7 +171,7 @@ by_concept:
       year: 2017
       journal: J Neurol Sci
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: meta-analysis anchor, T09/T10
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.jns.2016.11.067
@@ -179,7 +182,7 @@ by_concept:
       year: 2010
       journal: Neurology
       topic_codes:
-      - T10
+      - TOPIC-12
       relevance: non-pharmacological interventions
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
@@ -193,7 +196,7 @@ by_concept:
       year: 2021
       journal: JAMA Neurol
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: review anchor; already in topic_map as R5
       corpus_status: not_found
       doi: https://doi.org/10.1001/jamaneurol.2021.3416
@@ -204,7 +207,7 @@ by_concept:
       year: 2022
       journal: Neurology
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: prevalence/severity data update
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0000000000200151
@@ -220,7 +223,7 @@ by_concept:
       year: 2014
       journal: Mult Scler
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: diversity in MS trials
       corpus_status: not_found
       doi: https://doi.org/10.1177/1352458513503392
@@ -236,7 +239,7 @@ by_concept:
       year: 2022
       journal: Neurology
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: DMT access/response disparities
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0000000000200791
@@ -251,7 +254,7 @@ by_concept:
       year: 2019
       journal: Neurology
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: SES-outcomes link
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0000000000007190
@@ -265,7 +268,7 @@ by_concept:
       year: 2013
       journal: Neurology
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: PRO perspective with diverse sample
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0b013e3182872855
@@ -275,7 +278,7 @@ by_concept:
       year: 2015
       journal: Neurol Clin Pract
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: structural barriers, T13
       corpus_status: not_found
       doi: https://doi.org/10.1212/cpj.0000000000000112
@@ -289,7 +292,7 @@ by_concept:
       year: 2006
       journal: Neurology
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: natural history by race, T1b bridge
       corpus_status: not_found
       doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
@@ -305,7 +308,7 @@ by_concept:
       journal: Neuroepidemiology
       pmid: '26227247'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Systematic review of MS epidemiology in MENA region; fills Global
         South gap (G-001); only synthesis covering Arab countries and Iran.
       corpus_status: active
@@ -317,7 +320,7 @@ by_concept:
       journal: Neuroepidemiology
       pmid: '26960128'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Systematic review of MS epidemiology in Asia; fills Global South
         gap (G-001); covers South and Southeast Asian populations absent from main
         citation network.
@@ -330,7 +333,7 @@ by_concept:
       journal: Multiple Sclerosis and Related Disorders
       pmid: '27586337'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Narrative review of MS in Latin America including Buenos Aires cohort
         data; fills Global South gap (G-001); covers region absent from main citation
         network.
@@ -343,7 +346,7 @@ by_concept:
       journal: Multiple Sclerosis and Related Disorders
       pmid: '32380437'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Scoping review of MS in sub-Saharan Africa; fills the only major
         global region entirely absent from the corpus (G-001); documents extreme evidence
         thinness.
@@ -357,7 +360,7 @@ by_concept:
       journal: Multiple Sclerosis Journal
       pmid: '31790329'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Comprehensive review of MS in US racial/ethnic minority populations;
         fills G-002 Hispanic and Asian gap; Amezcua is leading voice in this underrepresented
         area.
@@ -371,7 +374,7 @@ by_concept:
       journal: JAMA Neurology
       pmid: '37213118'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: National prevalence estimates by race/ethnicity/region; first large-scale
         US race-stratified prevalence study; fills G-002; recommended in gaps.mdx.
       corpus_status: active
@@ -383,7 +386,7 @@ by_concept:
       journal: Autoimmunity
       pmid: '21660908'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: Review of MS in Latino/Hispanic Americans; fills G-002; documents
         distinct clinical and genetic features in this underrepresented population.
       corpus_status: active
@@ -396,7 +399,7 @@ by_concept:
       journal: Multiple Sclerosis and Related Disorders
       pmid: '33197756'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: First large Mexican MS registry cohort (REMEMBer); fills G-002 Latin
         American gap outside Southern California; provides primary cohort data for
         Central America region.
@@ -410,7 +413,7 @@ by_concept:
       journal: Multiple Sclerosis and Related Disorders
       pmid: '36924660'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: 20-year longitudinal MS epidemiology in Japan; fills G-002 Asian
         population gap; documents rising incidence in East Asian population.
       corpus_status: active
@@ -422,11 +425,43 @@ by_concept:
       journal: Neurology
       pmid: '20826714'
       topic_codes:
-      - T13
+      - TOPIC-15
       relevance: National Korean MS prevalence study; fills G-002 Asian population
         gap; one of few population-level East Asian MS epidemiology papers.
       corpus_status: active
       doi: https://doi.org/10.1212/wnl.0b013e3181f88191
+    - t4_id: T4-063
+      title: Health insurance affects the use of disease-modifying therapy in multiple
+        sclerosis.
+      authors: Wang G, Marrie RA et al
+      year: 2016
+      journal: Neurology
+      pmid: '27358338'
+      topic_codes:
+      - TOPIC-15
+      relevance: structural DMT access barrier — insurance is the US-specific mechanism
+        linking race/SES to DMT uptake; opens NARCOMS + DMT-access equity citation neighborhood
+      corpus_status: not_found
+      doi: https://doi.org/10.1212/WNL.0000000000002887
+      provenance: Added v1.3. NARCOMS registry study (N~8,000). Wang G, Marrie RA,
+        Salter AR, Fox R, Cofield SS, Tyry T, Cutter GR. Structural-access anchor
+        for TOPIC-15 not reached by existing prevalence/incidence/outcomes seeds.
+    - t4_id: T4-064
+      title: Treatment patterns by race and ethnicity in newly diagnosed persons with
+        multiple sclerosis.
+      authors: Geiger CK et al
+      year: 2023
+      journal: Drugs Real World Outcomes
+      pmid: '37733192'
+      topic_codes:
+      - TOPIC-15
+      relevance: race-stratified DMT initiation rates (Optum claims/EHR); high-efficacy
+        DMT uptake stalled for Hispanic patients while rising for Black and White patients
+      corpus_status: not_found
+      doi: https://doi.org/10.1007/s40801-023-00387-x
+      provenance: Added v1.3. Geiger CK, Sheinson D, To TM et al. Companion to T4-063
+        (insurance access mechanism). Optum Market Clarity US claims/EHR 2015-2020,
+        newly diagnosed MS patients initiating any DMT. PMC10730787.
   fatigue_ms:
     concept_path: concepts/clinical/fatigue-ms
     papers:
@@ -437,8 +472,8 @@ by_concept:
       year: 2008
       journal: Health Qual Life Outcomes
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: fatigue epidemiology baseline
       corpus_status: not_found
       doi: https://doi.org/10.1186/1477-7525-6-100
@@ -453,8 +488,8 @@ by_concept:
       year: 2008
       journal: QJM
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: conceptual framework
       corpus_status: title_fuzzy(0.99)
       corpus_id: a602f8bdae65242db35d223d4cf847a7
@@ -476,8 +511,8 @@ by_concept:
       year: 2008
       journal: Eur Neurol
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: fatigue-depression overlap, T10
       corpus_status: not_found
       doi: https://doi.org/10.1159/000111876
@@ -492,8 +527,8 @@ by_concept:
       year: 2010
       journal: Sleep
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: sleep-fatigue relationship
       corpus_status: not_found
       doi: https://doi.org/10.1093/sleep/33.8.1061
@@ -504,8 +539,8 @@ by_concept:
       year: 2012
       journal: J Neurol Sci
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: review anchor for T09
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.jns.2012.08.007
@@ -517,8 +552,8 @@ by_concept:
       year: 2021
       journal: BMC Neurol
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: T00/T09 epidemiology of fatigue
       corpus_status: not_found
       doi: https://doi.org/10.1186/s12883-021-02396-1
@@ -533,8 +568,8 @@ by_concept:
       year: 2014
       journal: Mult Scler Int
       topic_codes:
-      - T09
-      - T10
+      - TOPIC-10
+      - TOPIC-12
       relevance: exercise/rehabilitation evidence
       corpus_status: not_found
       doi: https://doi.org/10.1155/2014/798285
@@ -548,7 +583,7 @@ by_concept:
       year: 2007
       journal: Lancet Neurol
       topic_codes:
-      - T12
+      - TOPIC-14
       relevance: T12 foundational epidemiology
       corpus_status: not_found
       doi: https://doi.org/10.1016/s1474-4422(07)70196-5
@@ -560,7 +595,7 @@ by_concept:
       year: 2008
       journal: Curr Opin Neurol
       topic_codes:
-      - T12
+      - TOPIC-14
       relevance: differential diagnosis review
       corpus_status: not_found
       doi: https://doi.org/10.1097/wco.0b013e3282fd172b
@@ -573,7 +608,7 @@ by_concept:
       year: 2018
       journal: NEJM
       topic_codes:
-      - T12
+      - TOPIC-14
       relevance: RCT anchor for T12
       corpus_status: title_fuzzy(0.88)
       corpus_id: 5081658b1336498af7327d2e2b5cda6f
@@ -594,7 +629,7 @@ by_concept:
       year: 2010
       journal: Neurology
       topic_codes:
-      - T12
+      - TOPIC-14
       relevance: neurodevelopmental consequences
       corpus_status: not_found
       doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
@@ -602,37 +637,30 @@ by_concept:
         PMID 20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
         features in pediatric MS.'
     - t4_id: T4-033
-      title: Pediatric multiple sclerosis.
-      authors: Waldman A et al
-      year: 2014
-      journal: Semin Neurol
+      title: 'Diagnosis and management of multiple sclerosis in children and adolescents:
+        a consensus statement from the International Pediatric Multiple Sclerosis Study
+        Group.'
+      authors: Fadda G et al
+      year: 2021
+      journal: Lancet Neurol
+      pmid: '33484648'
       topic_codes:
-      - T12
-      relevance: comprehensive review anchor
-      corpus_status: title_fuzzy(0.98)
-      corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
-      corpus_stats:
-        citation_count: 56
-        in_degree: 10
-        out_degree: 14
-        pagerank_pct: 72.8
-        kcore: 19
-        core_score: 0.665
-        existing_tier: included
-        seed_hops: 1
-        cocite_seeds: 52
-      doi: https://doi.org/10.1055/s-0036-1579738
-      provenance: 'Journal corrected from v1.1: Nat Rev Neurol → Semin Neurol. The
-        corpus fuzzy-match record (corpus_doi 10.1055/s-0036-1579738) resolves to
-        a Thieme journal (Seminars in Neurology), consistent with citation count of
-        56. The Nat Rev Neurol attribution in v1.1 was incorrect.'
+      - TOPIC-14
+      relevance: current IPMSSG consensus — diagnosis, DMT selection, monitoring for pediatric MS
+      corpus_status: not_found
+      doi: https://doi.org/10.1016/S1474-4422(20)30432-4
+      provenance: Replaces Waldman 2014 (Semin Neurol, 56 citations — weak anchor).
+        Fadda 2021 is the current IPMSSG consensus statement in Lancet Neurology
+        (PMID 33484648). Covers McDonald 2017 criteria application in pediatric
+        populations, DMT selection, and monitoring. Verified DOI resolves to
+        Lancet Neurol 20(1):92-105. Replaced in v1.3.
     - t4_id: T4-034
       title: 'Pediatric MS: clinical course, prognosis, and outcomes.'
       authors: Huppke P et al
       year: 2014
       journal: Semin Neurol
       topic_codes:
-      - T12
+      - TOPIC-14
       relevance: natural history, T1b bridge
       corpus_status: not_found
       doi: https://doi.org/10.1055/s-0034-1381742
@@ -645,7 +673,7 @@ by_concept:
       year: 2019
       journal: JAMA Neurol
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: editorial framing, T09
       corpus_status: not_found
       doi: https://doi.org/10.1001/jamaneurol.2018.4042
@@ -655,7 +683,7 @@ by_concept:
       year: 2017
       journal: Neurorehabil Neural Repair
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: fatigue and walking RCT summary
       corpus_status: not_found
       doi: https://doi.org/10.1177/1545968316680592
@@ -669,7 +697,7 @@ by_concept:
       year: 2012
       journal: Mult Scler
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: resistance training RCT
       corpus_status: not_found
       doi: https://doi.org/10.1177/1352458512437864
@@ -679,7 +707,7 @@ by_concept:
       year: 2018
       journal: Nat Rev Neurol
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: cognitive rehabilitation bridge to T09
       corpus_status: not_found
       doi: https://doi.org/10.1038/s41582-018-0027-9
@@ -689,7 +717,7 @@ by_concept:
       year: 2017
       journal: Arch Phys Med Rehabil
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: 'umbrella review for multidisciplinary care (JLA #3)'
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.apmr.2016.04.016
@@ -700,7 +728,7 @@ by_concept:
       year: 2013
       journal: Arch Phys Med Rehabil
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: comprehensive outcomes review
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.apmr.2013.01.016
@@ -710,7 +738,7 @@ by_concept:
       year: 2017
       journal: Eur J Phys Rehabil Med
       topic_codes:
-      - T09
+      - TOPIC-10
       relevance: adapted exercise modality
       corpus_status: not_found
       doi: https://doi.org/10.23736/s1973-9087.17.04570-1
@@ -727,8 +755,8 @@ by_concept:
       year: 2006
       journal: Lancet Neurol
       topic_codes:
-      - T00
-      - T11
+      - TOPIC-03
+      - TOPIC-13
       relevance: ratio temporal trend anchor
       corpus_status: not_found
       doi: https://doi.org/10.1016/s1474-4422(06)70581-6
@@ -741,8 +769,8 @@ by_concept:
       year: 2017
       journal: Neurotherapeutics
       topic_codes:
-      - T00
-      - T11
+      - TOPIC-03
+      - TOPIC-13
       relevance: hormonal bridge to T11
       corpus_status: not_found
       doi: https://doi.org/10.1007/s13311-017-0562-7
@@ -753,8 +781,8 @@ by_concept:
       year: 2013
       journal: Brain
       topic_codes:
-      - T00
-      - T11
+      - TOPIC-03
+      - TOPIC-13
       relevance: sex-specific natural history
       corpus_status: title_fuzzy(0.89)
       corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
@@ -775,8 +803,8 @@ by_concept:
       year: 2019
       journal: Immunology
       topic_codes:
-      - T00
-      - T11
+      - TOPIC-03
+      - TOPIC-13
       relevance: hormonal mechanisms
       corpus_status: title_fuzzy(0.99)
       corpus_id: 5dd210f9b1214a715e30bd027cf459ba
@@ -797,8 +825,8 @@ by_concept:
       year: 2014
       journal: Open Neurol J
       topic_codes:
-      - T00
-      - T11
+      - TOPIC-03
+      - TOPIC-13
       relevance: general overview
       corpus_status: not_found
       doi: https://doi.org/10.2174/1874205x01408010037
@@ -814,8 +842,8 @@ by_concept:
       year: 2012
       journal: J Gen Intern Med
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: SDM framework anchor
       corpus_status: not_found
       doi: https://doi.org/10.1007/s11606-012-2077-6
@@ -827,8 +855,8 @@ by_concept:
       year: 2012
       journal: J Neurol
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: MS-specific SDM review
       corpus_status: not_found
       doi: https://doi.org/10.1007/s00415-012-6531-x
@@ -839,8 +867,8 @@ by_concept:
       year: 2017
       journal: Patient Educ Couns
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: patient voice, T09
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.pec.2016.12.009
@@ -851,8 +879,8 @@ by_concept:
       year: 2017
       journal: J Neurol
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: decision aid development
       corpus_status: not_found
       doi: https://doi.org/10.1007/s00415-016-8333-9
@@ -863,8 +891,8 @@ by_concept:
       year: 2020
       journal: Mult Scler
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: preference-weighting evidence
       corpus_status: not_found
       doi: https://doi.org/10.1177/1352458519838941
@@ -874,8 +902,8 @@ by_concept:
       year: 2021
       journal: Front Neurol
       topic_codes:
-      - T09
-      - T16
+      - TOPIC-10
+      - TOPIC-11
       relevance: contemporary review, T16
       corpus_status: title_fuzzy(0.83)
       corpus_id: bc4457f660ecfc779461a3dc1b1dabec
