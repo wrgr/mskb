@@ -60,6 +60,13 @@ def _has_source_link(row: pd.Series) -> bool:
     return bool(all_openalex and all_openalex.lower() != "nan")
 
 
+def _is_unmapped_topic(value: object) -> bool:
+    text = str(value or "").strip()
+    if not text or text.lower() == "nan":
+        return True
+    return text.upper() == "UNMAPPED"
+
+
 def _top_records(df: pd.DataFrame, score_col: str, k: int = 15) -> list[dict]:
     if score_col not in df.columns or df.empty:
         return []
@@ -93,9 +100,18 @@ def _build_markdown_report(report: dict) -> str:
     lines.append("## Gate Metrics")
     gm = report.get("gate_metrics", {})
     lines.append(f"- `% has_ms_focus`: `{gm.get('ms_focus_pct', 0):.2f}%`")
+    lines.append(
+        f"- `ms_focus` denominator: `{gm.get('ms_focus_eval_count', 0)}` "
+        f"(T4-exempt count: `{gm.get('ms_focus_exempt_t4_count', 0)}`)"
+    )
     lines.append(f"- `biology_no_ms_link` (final count): `{gm.get('biology_no_ms_link_count', 0)}`")
     lines.append(f"- Missing abstract rate: `{gm.get('missing_abstract_pct', 0):.2f}%`")
     lines.append(f"- Missing source-link rate: `{gm.get('missing_source_link_pct', 0):.2f}%`")
+    lines.append(
+        f"- Missing topic assignment (screened corpus): "
+        f"`{gm.get('unmapped_topic_count', 0)}` "
+        f"(`{gm.get('unmapped_topic_pct', 0):.2f}%`)"
+    )
     lines.append("")
     lines.append("## Category Mix")
     lines.append(f"- Normalized entropy: `{report.get('category_entropy_normalized', 0):.4f}`")
@@ -149,10 +165,20 @@ def run(config_path: str) -> None:
     errors: list[str] = []
     warnings: list[str] = []
 
-    has_ms_focus = final.get("has_ms_focus", pd.Series(False, index=final.index)).fillna(False).astype(bool)
-    ms_focus_pct = float(has_ms_focus.mean() * 100.0)
+    t4_exempt_mask = final.get("ms_focus_exempt_t4", pd.Series(False, index=final.index)).fillna(False).astype(bool)
+    if not t4_exempt_mask.any() and "in_t4_expert_signal" in final.columns:
+        t4_exempt_mask = final["in_t4_expert_signal"].fillna(False).astype(bool)
+
+    focus_eval = final[~t4_exempt_mask].copy()
+    has_ms_focus = focus_eval.get("has_ms_focus", pd.Series(False, index=focus_eval.index)).fillna(False).astype(bool)
+    ms_focus_eval_count = int(len(focus_eval))
+    ms_focus_exempt_count = int(t4_exempt_mask.sum())
+    ms_focus_pct = float(has_ms_focus.mean() * 100.0) if ms_focus_eval_count > 0 else 100.0
     if ms_focus_pct < min_ms_focus_pct:
-        errors.append(f"ms_focus_pct below threshold: {ms_focus_pct:.2f}% < {min_ms_focus_pct:.2f}%")
+        errors.append(
+            f"ms_focus_pct below threshold: {ms_focus_pct:.2f}% < {min_ms_focus_pct:.2f}% "
+            f"(evaluated on non-exempt papers: {ms_focus_eval_count}, exempt_t4={ms_focus_exempt_count})"
+        )
 
     biology_no_ms_link_count = int(
         final.get("biology_no_ms_link", pd.Series(False, index=final.index)).fillna(False).astype(bool).sum()
@@ -187,6 +213,69 @@ def run(config_path: str) -> None:
     category_entropy = _shannon_entropy(category_counts)
     category_entropy_normalized = _normalized_entropy(category_counts)
 
+    topic_evidence_path = root / cfg["output_dir"] / "topics" / "paper_topic_evidence.csv"
+    unmapped_topic_count = 0
+    unmapped_topic_pct = 0.0
+    unmapped_topic_sample: list[dict] = []
+    unmapped_path = outdir / "final_corpus_unmapped_topics.csv"
+    if topic_evidence_path.exists():
+        topic_evidence = pd.read_csv(
+            topic_evidence_path,
+            usecols=["canonical_paper_id", "primary_topic_code", "topic_assignment_method"],
+            low_memory=False,
+        )
+        topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
+
+        final_topic = final.copy()
+        final_topic["canonical_paper_id"] = final_topic["canonical_paper_id"].astype(str)
+        final_topic = final_topic.merge(topic_evidence, on="canonical_paper_id", how="left")
+        topic_series = final_topic.get("primary_topic_code", pd.Series("", index=final_topic.index))
+        unmapped_mask = topic_series.map(_is_unmapped_topic)
+        unmapped = final_topic[unmapped_mask].copy()
+        unmapped_topic_count = int(len(unmapped))
+        unmapped_topic_pct = float((unmapped_topic_count / max(1, len(final_topic))) * 100.0)
+        if not unmapped.empty:
+            keep_cols = [
+                "canonical_paper_id",
+                "title",
+                "year",
+                "doi",
+                "openalex_id",
+                "topic_assignment_method",
+                "anchor_category",
+                "paper_importance_score",
+            ]
+            existing_cols = [c for c in keep_cols if c in unmapped.columns]
+            unmapped[existing_cols].to_csv(unmapped_path, index=False)
+            unmapped_topic_sample = [
+                {
+                    "canonical_paper_id": str(row.get("canonical_paper_id", "")),
+                    "title": str(row.get("title", "") or ""),
+                    "topic_assignment_method": str(row.get("topic_assignment_method", "") or ""),
+                }
+                for _, row in unmapped.head(15).iterrows()
+            ]
+            warnings.append(
+                "papers pass screening but are missing topic assignment: "
+                f"{unmapped_topic_count} / {len(final_topic)} ({unmapped_topic_pct:.2f}%). "
+                f"See {unmapped_path}"
+            )
+        else:
+            pd.DataFrame(
+                columns=[
+                    "canonical_paper_id",
+                    "title",
+                    "year",
+                    "doi",
+                    "openalex_id",
+                    "topic_assignment_method",
+                    "anchor_category",
+                    "paper_importance_score",
+                ]
+            ).to_csv(unmapped_path, index=False)
+    else:
+        warnings.append(f"topic evidence missing: {topic_evidence_path} (cannot check unmapped topic assignments)")
+
     target_ranges = (((cfg.get("scoring", {}) or {}).get("topic_balance", {}) or {}).get("target_ranges", {}) or {})
     if enforce_category_bounds and target_ranges:
         total = max(1, len(final))
@@ -209,14 +298,19 @@ def run(config_path: str) -> None:
         "n_final_corpus": int(len(final)),
         "gate_metrics": {
             "ms_focus_pct": round(ms_focus_pct, 4),
+            "ms_focus_eval_count": ms_focus_eval_count,
+            "ms_focus_exempt_t4_count": ms_focus_exempt_count,
             "biology_no_ms_link_count": int(biology_no_ms_link_count),
             "missing_abstract_pct": round(missing_abstract_pct, 4),
             "missing_source_link_pct": round(missing_source_link_pct, 4),
+            "unmapped_topic_count": int(unmapped_topic_count),
+            "unmapped_topic_pct": round(unmapped_topic_pct, 4),
             "missing_abstract_policy": missing_abstract_policy,
         },
         "category_mix_pct": category_mix_pct,
         "category_entropy": round(category_entropy, 6),
         "category_entropy_normalized": round(category_entropy_normalized, 6),
+        "unmapped_topic_sample": unmapped_topic_sample,
         "top_by_paper_importance": _top_records(final, "paper_importance_score", k=15),
         "top_by_age_normalized_importance": _top_records(final, "age_normalized_importance_score", k=15),
         "errors": errors,

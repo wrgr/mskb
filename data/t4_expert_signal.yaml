@@ -26,7 +26,9 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1038/nrn2401
+    corpus_doi: https://doi.org/10.1038/nrn2401
+    corpus_openalex_id: https://openalex.org/W2008969125
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-002
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -42,7 +44,9 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1016/s0022-5347(01)61760-9
+    corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
+    corpus_openalex_id: https://openalex.org/W2055534266
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-003
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -58,11 +62,11 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1136/jnnp.2008.159178
     t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
       in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
       on bladder management in MS published in JNNP (~307 citations), filling the
       practical-management role with verified metadata.
+    corpus_doi: https://doi.org/10.1136/jnnp.2008.159178
   - t4_id: T4-004
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -78,7 +82,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1016/S1474-4422(15)00070-8
+    corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
   - t4_id: T4-005
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -95,10 +99,10 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.2147/DNND.S138835
     t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev
       Gastroenterol Hepatol — confirmed paper is in Degenerative Neurological and
       Neuromuscular Disease 2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
+    corpus_doi: https://doi.org/10.2147/dnnd.s138835
   - t4_id: T4-006
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel
@@ -115,12 +119,12 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1016/j.msard.2017.12.006
     t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
       no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
       search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
       role with verified metadata (~42 citations). First author Wang G; Marrie RA
       is co-author.
+    corpus_doi: https://doi.org/10.1016/j.msard.2017.12.006
   depression_anxiety_ms:
   - t4_id: T4-007
     t4_source_type: concept_anchor_signal
@@ -136,7 +140,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1212/01.wnl.0000095964.34294.b4
+    corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
   - t4_id: T4-008
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -181,7 +185,9 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1212/wnl.0000000000000013
+    corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
+    corpus_openalex_id: https://openalex.org/W2026795289
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=1)
   - t4_id: T4-010
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -197,7 +203,9 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1038/nrneurol.2014.139
+    corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
+    corpus_openalex_id: https://openalex.org/W1994216586
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-011
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -213,11 +221,11 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1016/j.apmr.2016.09.127
     t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in
       PubMed or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
       MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
       role with verified metadata (~140 citations).
+    corpus_doi: https://doi.org/10.1016/j.apmr.2016.09.127
   - t4_id: T4-012
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -232,7 +240,7 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1016/j.jns.2016.11.067
+    corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
   - t4_id: T4-013
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -248,7 +256,9 @@ by_concept:
     topic_codes:
     - T10
     corpus_status: not_found
-    doi: 10.1212/wnl.0b013e3181f4d80d
+    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
+    corpus_openalex_id: https://openalex.org/W2157656577
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   equity_sdoh:
   - t4_id: T4-014
     t4_source_type: concept_anchor_signal
@@ -265,7 +275,9 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1001/jamaneurol.2021.3416
+    corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
+    corpus_openalex_id: https://openalex.org/W3201965895
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-015
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -281,12 +293,12 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/WNL.0000000000200151
     t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis
       in Black and White Americans" — actual title confirmed; (2) journal was Lancet
       Neurol — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 —
       corrected to Langer-Gould 2022. This paper is also added as core seed MS-T1-028.
       T4 designation formalises concept-anchor signal for concepts/populations/equity-sdoh.'
+    corpus_doi: https://doi.org/10.1212/wnl.0000000000200151
   - t4_id: T4-016
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -303,12 +315,12 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1177/1352458513503392
     t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
       Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves
       to a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
       2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG,
       Hudson LD 2014 (PMID 24057430, ~100 citations).
+    corpus_doi: https://doi.org/10.1177/1352458513503392
   - t4_id: T4-017
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -325,11 +337,11 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/WNL.0000000000200791
     t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
       had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
       search). Okai 2022 directly covers DMT access and outcomes for African American
       patients in Neurology (PMID 35470139, confirmed).
+    corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
   - t4_id: T4-018
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -346,11 +358,11 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/WNL.0000000000007190
     t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic
       review — not found; no such paper confirmed in PubMed or OpenAlex). Harding
       2019 covers the SES-disability link with multinational MSBase data in Neurology
       (PMID 30796140, ~100 citations, confirmed).
+    corpus_doi: https://doi.org/10.1212/wnl.0000000000007190
   - t4_id: T4-019
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -366,7 +378,7 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/WNL.0b013e3182872855
+    corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
   - t4_id: T4-020
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -382,11 +394,11 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/CPJ.0000000000000112
     t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
       no such paper confirmed in PubMed or web search). Khan 2015 covers structural
       barriers and clinical practice for MS in minority populations in Neurol Clin
       Pract (confirmed, ~114 citations).
+    corpus_doi: https://doi.org/10.1212/cpj.0000000000000112
   - t4_id: T4-021
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
@@ -402,11 +414,11 @@ by_concept:
     topic_codes:
     - T13
     corpus_status: not_found
-    doi: 10.1212/01.wnl.0000208505.81912.82
     t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found;
       Nealon N is not a first author on any J Neuroimmunol disability progression
       paper). Marrie 2006 is the foundational race-disability paper in Neurology covering
       this functional role (confirmed, ~181 citations).
+    corpus_doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
   - &id001
     t4_id: T4-053
     title: 'Multiple sclerosis in the Middle East and North Africa: a systematic review
@@ -414,7 +426,6 @@ by_concept:
     authors: Heydarpour P et al.
     year: 2015
     journal: Neuroepidemiology
-    doi: 10.1159/000431042
     pmid: '26227247'
     topics:
     - T13
@@ -425,13 +436,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-001 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1159/000431042
   - &id002
     t4_id: T4-054
     title: 'Epidemiology of multiple sclerosis in Asia: a systematic review'
     authors: Eskandarieh S et al.
     year: 2016
     journal: Neuroepidemiology
-    doi: 10.1159/000444019
     pmid: '26960128'
     topics:
     - T13
@@ -443,13 +454,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-001 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1159/000444019
   - &id003
     t4_id: T4-055
     title: Multiple sclerosis in Latin America
     authors: Cristiano E et al.
     year: 2016
     journal: Multiple Sclerosis and Related Disorders
-    doi: 10.1016/j.msard.2016.07.007
     pmid: '27586337'
     topics:
     - T13
@@ -461,13 +472,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-001 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1016/j.msard.2016.07.007
   - &id004
     t4_id: T4-056
     title: 'Multiple sclerosis in sub-Saharan Africa: a scoping review'
     authors: Heine M et al.
     year: 2020
     journal: Multiple Sclerosis and Related Disorders
-    doi: 10.1016/j.msard.2020.102133
     pmid: '32380437'
     topics:
     - T13
@@ -478,6 +489,7 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-001 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1016/j.msard.2020.102133
   - &id005
     t4_id: T4-057
     title: 'Race and ethnicity in multiple sclerosis: a review in United States minority
@@ -485,7 +497,6 @@ by_concept:
     authors: Amezcua L, McCauley JL
     year: 2020
     journal: Multiple Sclerosis Journal
-    doi: 10.1177/1352458519887328
     pmid: '31790329'
     topics:
     - T13
@@ -497,13 +508,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1177/1352458519887328
   - &id006
     t4_id: T4-058
     title: Prevalence of multiple sclerosis by race and ethnicity in the United States
     authors: Hittle M et al.
     year: 2023
     journal: JAMA Neurology
-    doi: 10.1001/jamaneurol.2023.1135
     pmid: '37213118'
     topics:
     - T13
@@ -514,13 +525,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1001/jamaneurol.2023.1135
   - &id007
     t4_id: T4-059
     title: Multiple sclerosis in Latino Americans
     authors: Aguirre-Cruz L et al.
     year: 2011
     journal: Autoimmunity
-    doi: 10.3109/08916934.2011.592887
     pmid: '21660908'
     topics:
     - T13
@@ -531,6 +542,7 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.3109/08916934.2011.592887
   - &id008
     t4_id: T4-060
     title: 'Clinical and epidemiological characteristics of multiple sclerosis in
@@ -538,7 +550,6 @@ by_concept:
     authors: Bertado-Cortés B et al.
     year: 2020
     journal: Multiple Sclerosis and Related Disorders
-    doi: 10.1016/j.msard.2020.102575
     pmid: '33197756'
     topics:
     - T13
@@ -550,6 +561,7 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1016/j.msard.2020.102575
   - &id009
     t4_id: T4-061
     title: 'Increasing prevalence and incidence of multiple sclerosis in northern
@@ -557,7 +569,6 @@ by_concept:
     authors: Houzen H et al.
     year: 2023
     journal: Multiple Sclerosis and Related Disorders
-    doi: 10.1016/j.msard.2023.104696
     pmid: '36924660'
     topics:
     - T13
@@ -568,13 +579,13 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1016/j.msard.2023.104696
   - &id010
     t4_id: T4-062
     title: Prevalence of multiple sclerosis in Korea
     authors: Kim N-H et al.
     year: 2010
     journal: Neurology
-    doi: 10.1212/WNL.0b013e3181f88191
     pmid: '20826714'
     topics:
     - T13
@@ -585,6 +596,7 @@ by_concept:
     corpus_status: active
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
+    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f88191
   fatigue_ms:
   - t4_id: T4-022
     t4_source_type: concept_anchor_signal
@@ -602,12 +614,12 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1186/1477-7525-6-100
     t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
       that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
       largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
       NARCOMS patients), providing the epidemiology-baseline role intended for this
       slot (confirmed, ~238 citations).
+    corpus_doi: https://doi.org/10.1186/1477-7525-6-100
   - t4_id: T4-023
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -638,7 +650,6 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
-    doi: 10.1093/qjmed/hcm122
   - t4_id: T4-024
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -655,11 +666,11 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1159/000111876
     t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
       correlation which does not match the actual Putzki 2008 paper (which covers
       fatigue prevalence/severity in treated vs untreated patients). Journal corrected:
       Eur J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
+    corpus_doi: https://doi.org/10.1159/000111876
   - t4_id: T4-025
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -675,7 +686,9 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1093/sleep/33.8.1061
+    corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
+    corpus_openalex_id: https://openalex.org/W185235087
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-026
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -691,7 +704,9 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1016/j.jns.2012.08.007
+    corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
+    corpus_openalex_id: https://openalex.org/W2021962531
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-027
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -708,12 +723,12 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1186/s12883-021-02396-1
     t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to
       be a 2-page NARCOMS validation note, PMID 16193897, not a systematic review
       of fatigue incidence/prevalence). Oliva Ramirez 2021 is the current systematic
       review of MS fatigue epidemiology filling the intended role (confirmed, ~217
       citations).
+    corpus_doi: https://doi.org/10.1186/s12883-021-02396-1
   - t4_id: T4-028
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -729,7 +744,9 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
-    doi: 10.1155/2014/798285
+    corpus_doi: https://doi.org/10.1155/2014/798285
+    corpus_openalex_id: https://openalex.org/W1988210814
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   pediatric_ms:
   - t4_id: T4-029
     t4_source_type: concept_anchor_signal
@@ -745,7 +762,9 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
-    doi: 10.1016/s1474-4422(07)70196-5
+    corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
+    corpus_openalex_id: https://openalex.org/W2124413251
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-030
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -761,10 +780,10 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
-    doi: 10.1097/WCO.0b013e3282fd172b
     t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to
       match actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating
       conditions, not only MS).
+    corpus_doi: https://doi.org/10.1097/wco.0b013e3282fd172b
   - t4_id: T4-031
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -794,7 +813,6 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
-    doi: 10.1056/nejmoa1800149
   - t4_id: T4-032
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -810,10 +828,10 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
-    doi: 10.1212/WNL.0b013e3181f4d821
     t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID
       20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
       features in pediatric MS.'
+    corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
   - t4_id: T4-033
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -858,7 +876,7 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
-    doi: 10.1055/s-0034-1381742
+    corpus_doi: https://doi.org/10.1055/s-0034-1381742
   rehabilitation_exercise:
   - t4_id: T4-035
     t4_source_type: concept_anchor_signal
@@ -875,7 +893,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1001/jamaneurol.2018.4042
+    corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
   - t4_id: T4-036
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -891,10 +909,10 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1177/1545968316680592
     t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
       Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl
       RW et al 2017 Neurorehabil Neural Repair confirmed.
+    corpus_doi: https://doi.org/10.1177/1545968316680592
   - t4_id: T4-037
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -911,7 +929,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1177/1352458512437864
+    corpus_doi: https://doi.org/10.1177/1352458512437864
   - t4_id: T4-038
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -927,7 +945,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1038/s41582-018-0027-9
+    corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
   - t4_id: T4-039
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -943,7 +961,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1016/j.apmr.2016.04.016
+    corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
   - t4_id: T4-040
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -960,7 +978,7 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.1016/j.apmr.2013.01.016
+    corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
   - t4_id: T4-041
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -976,11 +994,11 @@ by_concept:
     topic_codes:
     - T09
     corpus_status: not_found
-    doi: 10.23736/S1973-9087.17.04570-1
     doi_verification_status: needs_manual_verification
     t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
       Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex
       — API confirmation not possible. Verify via journal website or PubMed.
+    corpus_doi: https://doi.org/10.23736/s1973-9087.17.04570-1
   sex_gender_ms:
   - t4_id: T4-042
     t4_source_type: concept_anchor_signal
@@ -998,9 +1016,9 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
-    doi: 10.1016/s1474-4422(06)70581-6
     t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
       "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
+    corpus_doi: https://doi.org/10.1016/s1474-4422(06)70581-6
   - t4_id: T4-043
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1017,7 +1035,9 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
-    doi: 10.1007/s13311-017-0562-7
+    corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
+    corpus_openalex_id: https://openalex.org/W2741378031
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-044
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1049,7 +1069,6 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
-    doi: 10.1093/brain/awt281
   - t4_id: T4-045
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1080,7 +1099,6 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
-    doi: 10.1111/imm.13004
   - t4_id: T4-046
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -1096,10 +1114,10 @@ by_concept:
     - T00
     - T11
     corpus_status: not_found
-    doi: 10.2174/1874205X01408010037
     t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
       Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
       Open Neurol J confirmed.
+    corpus_doi: https://doi.org/10.2174/1874205x01408010037
   shared_decision_making:
   - t4_id: T4-047
     t4_source_type: concept_anchor_signal
@@ -1117,7 +1135,9 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
-    doi: 10.1007/s11606-012-2077-6
+    corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
+    corpus_openalex_id: https://openalex.org/W2041927436
+    corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
   - t4_id: T4-048
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1135,7 +1155,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
-    doi: 10.1007/s00415-012-6531-x
+    corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
   - t4_id: T4-049
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1153,7 +1173,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
-    doi: 10.1016/j.pec.2016.12.009
+    corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
   - t4_id: T4-050
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1170,7 +1190,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
-    doi: 10.1007/s00415-016-8333-9
+    corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
   - t4_id: T4-051
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1188,7 +1208,7 @@ by_concept:
     - T09
     - T16
     corpus_status: not_found
-    doi: 10.1177/1352458519838941
+    corpus_doi: https://doi.org/10.1177/1352458519838941
   - t4_id: T4-052
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -1236,7 +1256,9 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1038/nrn2401
+  corpus_doi: https://doi.org/10.1038/nrn2401
+  corpus_openalex_id: https://openalex.org/W2008969125
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-002
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -1252,7 +1274,9 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1016/s0022-5347(01)61760-9
+  corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
+  corpus_openalex_id: https://openalex.org/W2055534266
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-003
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -1268,11 +1292,11 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1136/jnnp.2008.159178
   t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
     in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
     on bladder management in MS published in JNNP (~307 citations), filling the practical-management
     role with verified metadata.
+  corpus_doi: https://doi.org/10.1136/jnnp.2008.159178
 - t4_id: T4-004
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -1287,7 +1311,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1016/S1474-4422(15)00070-8
+  corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
 - t4_id: T4-005
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -1303,10 +1327,10 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.2147/DNND.S138835
   t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev Gastroenterol
     Hepatol — confirmed paper is in Degenerative Neurological and Neuromuscular Disease
     2018. Authors: Preziosi G, Gordon-Dixon A, Emmanuel A.'
+  corpus_doi: https://doi.org/10.2147/dnnd.s138835
 - t4_id: T4-006
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Bladder and Bowel Dysfunction
@@ -1323,12 +1347,12 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1016/j.msard.2017.12.006
   t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
     no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
     search). Wang et al 2017 covers the same PRO-grounded bladder/bowel/sexual burden
     role with verified metadata (~42 citations). First author Wang G; Marrie RA is
     co-author.
+  corpus_doi: https://doi.org/10.1016/j.msard.2017.12.006
 - t4_id: T4-007
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1343,7 +1367,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1212/01.wnl.0000095964.34294.b4
+  corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
 - t4_id: T4-008
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1388,7 +1412,9 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1212/wnl.0000000000000013
+  corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
+  corpus_openalex_id: https://openalex.org/W2026795289
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=1)
 - t4_id: T4-010
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1403,7 +1429,9 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1038/nrneurol.2014.139
+  corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
+  corpus_openalex_id: https://openalex.org/W1994216586
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-011
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1419,11 +1447,11 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1016/j.apmr.2016.09.127
   t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in PubMed
     or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
     MS paper exists in Mult Scler 2010). Koelmel 2017 covers the protective-factors/resilience
     role with verified metadata (~140 citations).
+  corpus_doi: https://doi.org/10.1016/j.apmr.2016.09.127
 - t4_id: T4-012
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1438,7 +1466,7 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1016/j.jns.2016.11.067
+  corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
 - t4_id: T4-013
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Depression and Anxiety
@@ -1454,7 +1482,9 @@ flat_list:
   topic_codes:
   - T10
   corpus_status: not_found
-  doi: 10.1212/wnl.0b013e3181f4d80d
+  corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
+  corpus_openalex_id: https://openalex.org/W2157656577
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-014
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1470,7 +1500,9 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1001/jamaneurol.2021.3416
+  corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
+  corpus_openalex_id: https://openalex.org/W3201965895
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-015
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1486,12 +1518,12 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/WNL.0000000000200151
   t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis in
     Black and White Americans" — actual title confirmed; (2) journal was Lancet Neurol
     — actual journal is Neurology; (3) DOI pointed to Gray-Roncal 2021 — corrected
     to Langer-Gould 2022. This paper is also added as core seed MS-T1-028. T4 designation
     formalises concept-anchor signal for concepts/populations/equity-sdoh.'
+  corpus_doi: https://doi.org/10.1212/wnl.0000000000200151
 - t4_id: T4-016
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1507,12 +1539,12 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1177/1352458513503392
   t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
     Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves to
     a different paper in Therapeutic Innovation & Regulatory Science by Woodcock/Rowzee
     2013). Confirmed MSOAC genesis paper in Mult Scler is Rudick RA, LaRocca NG, Hudson
     LD 2014 (PMID 24057430, ~100 citations).
+  corpus_doi: https://doi.org/10.1177/1352458513503392
 - t4_id: T4-017
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1528,11 +1560,11 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/WNL.0000000000200791
   t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
     had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
     search). Okai 2022 directly covers DMT access and outcomes for African American
     patients in Neurology (PMID 35470139, confirmed).
+  corpus_doi: https://doi.org/10.1212/wnl.0000000000200791
 - t4_id: T4-018
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1548,11 +1580,11 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/WNL.0000000000007190
   t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic review
     — not found; no such paper confirmed in PubMed or OpenAlex). Harding 2019 covers
     the SES-disability link with multinational MSBase data in Neurology (PMID 30796140,
     ~100 citations, confirmed).
+  corpus_doi: https://doi.org/10.1212/wnl.0000000000007190
 - t4_id: T4-019
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1568,7 +1600,7 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/WNL.0b013e3182872855
+  corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
 - t4_id: T4-020
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1584,11 +1616,11 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/CPJ.0000000000000112
   t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
     no such paper confirmed in PubMed or web search). Khan 2015 covers structural
     barriers and clinical practice for MS in minority populations in Neurol Clin Pract
     (confirmed, ~114 citations).
+  corpus_doi: https://doi.org/10.1212/cpj.0000000000000112
 - t4_id: T4-021
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Equity and Social Determinants
@@ -1604,11 +1636,11 @@ flat_list:
   topic_codes:
   - T13
   corpus_status: not_found
-  doi: 10.1212/01.wnl.0000208505.81912.82
   t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found; Nealon
     N is not a first author on any J Neuroimmunol disability progression paper). Marrie
     2006 is the foundational race-disability paper in Neurology covering this functional
     role (confirmed, ~181 citations).
+  corpus_doi: https://doi.org/10.1212/01.wnl.0000208505.81912.82
 - t4_id: T4-022
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1625,12 +1657,12 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1186/1477-7525-6-100
   t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
     that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
     largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
     NARCOMS patients), providing the epidemiology-baseline role intended for this
     slot (confirmed, ~238 citations).
+  corpus_doi: https://doi.org/10.1186/1477-7525-6-100
 - t4_id: T4-023
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1661,7 +1693,6 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
-  doi: 10.1093/qjmed/hcm122
 - t4_id: T4-024
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1678,11 +1709,11 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1159/000111876
   t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
     correlation which does not match the actual Putzki 2008 paper (which covers fatigue
     prevalence/severity in treated vs untreated patients). Journal corrected: Eur
     J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
+  corpus_doi: https://doi.org/10.1159/000111876
 - t4_id: T4-025
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1698,7 +1729,9 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1093/sleep/33.8.1061
+  corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
+  corpus_openalex_id: https://openalex.org/W185235087
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-026
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1714,7 +1747,9 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1016/j.jns.2012.08.007
+  corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
+  corpus_openalex_id: https://openalex.org/W2021962531
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-027
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1731,11 +1766,11 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1186/s12883-021-02396-1
   t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to be
     a 2-page NARCOMS validation note, PMID 16193897, not a systematic review of fatigue
     incidence/prevalence). Oliva Ramirez 2021 is the current systematic review of
     MS fatigue epidemiology filling the intended role (confirmed, ~217 citations).
+  corpus_doi: https://doi.org/10.1186/s12883-021-02396-1
 - t4_id: T4-028
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1751,7 +1786,9 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
-  doi: 10.1155/2014/798285
+  corpus_doi: https://doi.org/10.1155/2014/798285
+  corpus_openalex_id: https://openalex.org/W1988210814
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-029
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1766,7 +1803,9 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
-  doi: 10.1016/s1474-4422(07)70196-5
+  corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
+  corpus_openalex_id: https://openalex.org/W2124413251
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-030
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1782,10 +1821,10 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
-  doi: 10.1097/WCO.0b013e3282fd172b
   t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to match
     actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating conditions,
     not only MS).
+  corpus_doi: https://doi.org/10.1097/wco.0b013e3282fd172b
 - t4_id: T4-031
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1815,7 +1854,6 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
-  doi: 10.1056/nejmoa1800149
 - t4_id: T4-032
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1830,10 +1868,10 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
-  doi: 10.1212/WNL.0b013e3181f4d821
   t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID 20876467).
     Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
     features in pediatric MS.'
+  corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d821
 - t4_id: T4-033
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1878,7 +1916,7 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
-  doi: 10.1055/s-0034-1381742
+  corpus_doi: https://doi.org/10.1055/s-0034-1381742
 - t4_id: T4-035
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1893,7 +1931,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1001/jamaneurol.2018.4042
+  corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
 - t4_id: T4-036
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1908,10 +1946,10 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1177/1545968316680592
   t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
     Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl RW
     et al 2017 Neurorehabil Neural Repair confirmed.
+  corpus_doi: https://doi.org/10.1177/1545968316680592
 - t4_id: T4-037
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1927,7 +1965,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1177/1352458512437864
+  corpus_doi: https://doi.org/10.1177/1352458512437864
 - t4_id: T4-038
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1943,7 +1981,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1038/s41582-018-0027-9
+  corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
 - t4_id: T4-039
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1959,7 +1997,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1016/j.apmr.2016.04.016
+  corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
 - t4_id: T4-040
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1975,7 +2013,7 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.1016/j.apmr.2013.01.016
+  corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
 - t4_id: T4-041
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Exercise and Rehabilitation
@@ -1990,11 +2028,11 @@ flat_list:
   topic_codes:
   - T09
   corpus_status: not_found
-  doi: 10.23736/S1973-9087.17.04570-1
   doi_verification_status: needs_manual_verification
   t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
     Medicine (Edizioni Minerva Medica) papers are not fully indexed in OpenAlex —
     API confirmation not possible. Verify via journal website or PubMed.
+  corpus_doi: https://doi.org/10.23736/s1973-9087.17.04570-1
 - t4_id: T4-042
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -2011,9 +2049,9 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
-  doi: 10.1016/s1474-4422(06)70581-6
   t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
     "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
+  corpus_doi: https://doi.org/10.1016/s1474-4422(06)70581-6
 - t4_id: T4-043
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -2029,7 +2067,9 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
-  doi: 10.1007/s13311-017-0562-7
+  corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
+  corpus_openalex_id: https://openalex.org/W2741378031
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-044
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -2061,7 +2101,6 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
-  doi: 10.1093/brain/awt281
 - t4_id: T4-045
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -2092,7 +2131,6 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
-  doi: 10.1111/imm.13004
 - t4_id: T4-046
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Sex and Gender Differences
@@ -2108,10 +2146,10 @@ flat_list:
   - T00
   - T11
   corpus_status: not_found
-  doi: 10.2174/1874205X01408010037
   t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
     Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
     Open Neurol J confirmed.
+  corpus_doi: https://doi.org/10.2174/1874205x01408010037
 - t4_id: T4-047
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -2128,7 +2166,9 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
-  doi: 10.1007/s11606-012-2077-6
+  corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
+  corpus_openalex_id: https://openalex.org/W2041927436
+  corpus_status_note: openalex_title_lookup(similarity=100.0, year_delta=0)
 - t4_id: T4-048
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -2146,7 +2186,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
-  doi: 10.1007/s00415-012-6531-x
+  corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
 - t4_id: T4-049
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -2163,7 +2203,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
-  doi: 10.1016/j.pec.2016.12.009
+  corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
 - t4_id: T4-050
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -2180,7 +2220,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
-  doi: 10.1007/s00415-016-8333-9
+  corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
 - t4_id: T4-051
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
@@ -2197,7 +2237,7 @@ flat_list:
   - T09
   - T16
   corpus_status: not_found
-  doi: 10.1177/1352458519838941
+  corpus_doi: https://doi.org/10.1177/1352458519838941
 - t4_id: T4-052
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
