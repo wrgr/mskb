@@ -149,6 +149,16 @@ core_corpus_selection:
     # Underrepresented topics can relax structural gates (kcore/in_degree) when
     # their strict-pass topic share falls below this threshold.
     relax_structure_below_topic_share: 0.02
+    # Hard per-topic cap: no topic may contribute more than this many T2 papers.
+    # Seeds (T1) are never dropped. Set to 0 to disable. Default: 100.
+    max_per_topic: 100
+    # Leiden-cluster diversity fill fraction applied when a topic exceeds max_per_topic.
+    # Top (1 - diversity_fraction) * cap papers are selected by importance score;
+    # remaining slots prefer papers from citation clusters underrepresented in that
+    # selection, improving bibliometric breadth for oversubscribed topics.
+    # Set to 0.0 for pure importance-based selection.
+    # TODO: revisit tuning in v1.4+ once corpus runs are stable.
+    diversity_fraction: 0.20
   t3:
     # Emerging literature gate.
     min_year: 2022
