@@ -58,8 +58,13 @@ def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
     payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     by_concept = payload.get("by_concept", {}) if isinstance(payload, dict) else {}
     rows: list[dict] = []
-    for concept, items in by_concept.items():
-        for item in items or []:
+    for concept, concept_block in by_concept.items():
+        # v2 format: {concept_path: str, papers: [...]}; v1 fallback: list directly.
+        if isinstance(concept_block, dict):
+            items = concept_block.get("papers", []) or []
+        else:
+            items = concept_block or []
+        for item in items:
             topic_codes = item.get("topic_codes", [])
             if not isinstance(topic_codes, list):
                 topic_codes = []
@@ -74,7 +79,8 @@ def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
                     "topic_codes": ",".join(str(code).strip() for code in topic_codes if str(code).strip()),
                     "corpus_status": str(item.get("corpus_status", "")).strip(),
                     "corpus_id": str(item.get("corpus_id", "")).strip(),
-                    "corpus_doi": str(item.get("corpus_doi", "")).strip(),
+                    # v2: doi field; v1 fallback: corpus_doi
+                    "corpus_doi": str(item.get("doi", "") or item.get("corpus_doi", "")).strip(),
                 }
             )
     t4 = pd.DataFrame(rows)

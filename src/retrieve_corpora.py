@@ -545,12 +545,15 @@ def _run_t4_expert_channel(
     if not t4_yaml_path.exists():
         return rows
     payload = yaml.safe_load(t4_yaml_path.read_text(encoding="utf-8")) or {}
-    # flat_list is the canonical de-duped view; fall back to by_concept if absent.
-    entries: list[dict] = payload.get("flat_list", [])
-    if not entries:
-        by_concept = payload.get("by_concept", {})
-        for items in by_concept.values():
-            entries.extend(items or [])
+    # v2 format: by_concept maps concept_id → {concept_path, papers: [...]}.
+    # v1 fallback: concept_id mapped directly to a list of entries.
+    entries: list[dict] = []
+    by_concept = payload.get("by_concept", {}) if isinstance(payload, dict) else {}
+    for concept_block in by_concept.values():
+        if isinstance(concept_block, dict):
+            entries.extend(concept_block.get("papers", []) or [])
+        else:
+            entries.extend(concept_block or [])
 
     doi_queried: set[str] = set()
     title_queries_used = 0
@@ -563,8 +566,8 @@ def _run_t4_expert_channel(
         title = str(entry.get("title", "") or "").strip()
         year = entry.get("year")
 
-        # DOI lookup first — corpus_doi is populated for papers already in corpus.
-        corpus_doi = str(entry.get("corpus_doi", "") or "").strip()
+        # DOI lookup first (v2: doi field; v1 fallback: corpus_doi).
+        corpus_doi = str(entry.get("doi", "") or entry.get("corpus_doi", "") or "").strip()
         doi = _normalize_doi(corpus_doi)
         work: Optional[Dict[str, object]] = None
 
@@ -673,9 +676,11 @@ def run(config_path: str) -> None:
     n_t4_yaml = 0
     if t4_yaml_path.exists():
         t4_payload = yaml.safe_load(t4_yaml_path.read_text(encoding="utf-8")) or {}
-        n_t4_yaml = len(t4_payload.get("flat_list", []) or list(
-            item for items in (t4_payload.get("by_concept") or {}).values() for item in (items or [])
-        ))
+        for concept_block in (t4_payload.get("by_concept") or {}).values():
+            if isinstance(concept_block, dict):
+                n_t4_yaml += len(concept_block.get("papers", []) or [])
+            else:
+                n_t4_yaml += len(concept_block or [])
 
     stats_payload = {
         "n_candidates": int(len(candidates)),
