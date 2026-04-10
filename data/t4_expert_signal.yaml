@@ -5,10 +5,12 @@ description: 'Papers explicitly nominated by editors as required anchors for MSK
   educational concept pages. Each paper was identified as necessary to cover a thin-topic-area
   concept that is structurally under-served by the algorithmic corpus selection (T2/T3).
   Satisfies Tier 4 criteria (Section 8 of ms_corpus_design_decisions.md): explicit
-  expert signal documented; cross_seed_score = 0 acceptable. Total: 62 papers — 55
+  expert signal documented; cross_seed_score = 0 acceptable. Total: 63 papers — 56
   not yet in corpus (primary addition targets), 7 already included (signal formalisation
   only). v1.2: full DOI audit and corrections; 8 papers replaced with verified alternatives;
-  10 Global South/equity papers added (T4-053–T4-062).'
+  10 Global South/equity papers added (T4-053–T4-062). v1.3: T4-033 replaced (Waldman
+  2014 → Fadda 2021 IPMSSG Lancet Neurol); T4-063 added (Wang/Marrie 2016 Neurology
+  DMT access/insurance, TOPIC-15 structural access anchor).'
 by_concept:
   bladder_bowel_dysfunction:
   - t4_id: T4-001
@@ -599,6 +601,33 @@ by_concept:
     doi_verification_status: verified
     selection_source: G-002 gap resolution v1.2
     corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f88191
+  - &id011
+    t4_id: T4-063
+    t4_source_type: concept_anchor_signal
+    t4_signal: 'Nominated as required anchor for concept page ''Equity and Social
+      Determinants of Health in MS'' (concepts/populations/equity-sdoh). Relevance
+      documented by editor: structural DMT access barrier (insurance) — opens NARCOMS
+      registry + DMT-uptake equity citation neighborhood. Concept covers thin-coverage
+      topic area(s): TOPIC-15.'
+    concept: equity_sdoh
+    concept_path: concepts/populations/equity-sdoh
+    title: Health insurance affects the use of disease-modifying therapy in multiple
+      sclerosis.
+    authors: Wang G, Marrie RA et al
+    year: 2016
+    journal: Neurology
+    pmid: '27358338'
+    topic_codes:
+    - TOPIC-15
+    corpus_status: not_found
+    corpus_doi: https://doi.org/10.1212/WNL.0000000000002887
+    t4_note: 'NARCOMS registry study (N~8,000) documenting how insurance coverage
+      determines DMT use in MS. Wang G, Marrie RA, Salter AR, Fox R, Cofield SS,
+      Tyry T, Cutter GR. Primary structural-access paper for TOPIC-15: insurance
+      is the US-specific mechanism linking race/SES to DMT uptake disparities.
+      Opens the NARCOMS + DMT-access equity citation neighborhood not reached by
+      the current TOPIC-15 seeds, which anchor prevalence/incidence and outcomes
+      but not access. Added v1.3.'
   fatigue_ms:
   - t4_id: T4-022
     t4_source_type: concept_anchor_signal
@@ -2287,3 +2316,4 @@ flat_list:
 - *id008
 - *id009
 - *id010
+- *id011
