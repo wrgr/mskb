@@ -337,18 +337,10 @@ def _update_topic_overviews(
     print(f"Updated topic_overviews.csv with kid overviews (regenerated={updated})")
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--config", default="config.yaml", help="Path to config.yaml")
-    parser.add_argument(
-        "--force",
-        action="store_true",
-        help="Regenerate kid summaries for all papers, ignoring the cache",
-    )
-    args = parser.parse_args()
-
-    cfg = load_config(args.config)
-    root = Path(args.config).resolve().parent
+def run(config_path: str, force: bool = False) -> None:
+    """Update kid-friendly summaries and topic overviews from the pipeline."""
+    cfg = load_config(config_path)
+    root = Path(config_path).resolve().parent
     graph_dir = root / cfg["output_dir"] / "graph"
     topics_dir = root / cfg["output_dir"] / "topics"
     distilled_dir = root / cfg["output_dir"] / "distilled"
@@ -363,7 +355,7 @@ def main() -> None:
     fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
     api_client = _init_api_client(dist_cfg)
 
-    print(f"Updating kid-friendly summaries (force={args.force}) ...")
+    print(f"Updating kid-friendly summaries (force={force}) ...")
     _update_paper_summaries(
         api_client=api_client,
         model=model,
@@ -374,7 +366,7 @@ def main() -> None:
         fulltext_by_id=fulltext_by_id,
         fulltext_source_by_id=fulltext_source_by_id,
         batch_size=batch_size,
-        force=args.force,
+        force=force,
     )
 
     print("Updating kid-friendly topic overviews ...")
@@ -384,13 +376,26 @@ def main() -> None:
         topics_dir=topics_dir,
         scored_path=graph_dir / "scored_papers.csv",
         overviews_path=distilled_dir / "topic_overviews.csv",
-        force=args.force,
+        force=force,
     )
 
     print(
         "\nDone. Re-run site generation to publish the updated kid journey:\n"
         "  cd site && python gen_site.py --config ../config.yaml && npm run build"
     )
+
+
+def main() -> None:
+    """CLI entry point for standalone execution."""
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--config", default="config.yaml", help="Path to config.yaml")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Regenerate kid summaries for all papers, ignoring the cache",
+    )
+    args = parser.parse_args()
+    run(args.config, force=args.force)
 
 
 if __name__ == "__main__":

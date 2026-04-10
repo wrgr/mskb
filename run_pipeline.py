@@ -1,4 +1,4 @@
-"""Orchestrate all pipeline stages in sequence from seed governance to KB audit."""
+"""Orchestrate all pipeline stages in sequence from seed governance to expert comms."""
 
 import argparse
 import subprocess
@@ -14,9 +14,11 @@ from src.compute_scores import run as run_scores
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
+from src.expert_comms import run as run_expert_comms
 from src.retrieve_corpora import run as run_retrieve
 from src.select_core_corpus import run as run_select_core_corpus
 from src.seed_governance import run as run_seed_governance
+from update_kid_journey import run as run_kid_journey
 
 
 def _refresh_concept_links(config_path: str) -> None:
@@ -82,13 +84,23 @@ def main(config_path: str) -> None:
     print("Stage 7b/10: Refreshing concept-paper links...")
     _refresh_concept_links(config_path)
 
+    print("Stage 7c/10: Updating kid-friendly summaries and topic overviews...")
+    run_kid_journey(config_path)
+
     print("Stage 8/10: Building knowledge graph...")
     run_kg(config_path)
 
     print("Stage 9/10: Running KB audit gates...")
     run_audit(config_path)
 
-    print("Pipeline complete. Run `python site/build_site.py --config config.yaml` to build the site.")
+    print("Stage 10/10: Generating expert comms review packet...")
+    run_expert_comms(config_path)
+
+    print(
+        "Pipeline complete.\n"
+        "  - Site:          python site/build_site.py --config config.yaml\n"
+        "  - Expert report: outputs/expert_comms/expert_comms_report.md"
+    )
 
 
 if __name__ == "__main__":
