@@ -24,7 +24,7 @@ by_concept:
     year: 2008
     journal: Nat Rev Neurosci
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1038/nrn2401
     corpus_openalex_id: https://openalex.org/W2008969125
@@ -42,7 +42,7 @@ by_concept:
     year: 1999
     journal: J Urol
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
     corpus_openalex_id: https://openalex.org/W2055534266
@@ -60,7 +60,7 @@ by_concept:
     year: 2009
     journal: J Neurol Neurosurg Psychiatry
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
       in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
@@ -80,7 +80,7 @@ by_concept:
     year: 2015
     journal: Lancet Neurol
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
   - t4_id: T4-005
@@ -97,7 +97,7 @@ by_concept:
     year: 2018
     journal: Degenerative Neurol Neuromuscul Dis
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev
       Gastroenterol Hepatol — confirmed paper is in Degenerative Neurological and
@@ -117,7 +117,7 @@ by_concept:
     year: 2017
     journal: Mult Scler Relat Disord
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
       no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
@@ -138,7 +138,7 @@ by_concept:
     year: 2003
     journal: Neurology
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
   - t4_id: T4-008
@@ -153,7 +153,7 @@ by_concept:
     year: 2005
     journal: J Neurol Neurosurg Psychiatry
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: title_fuzzy(0.99)
     corpus_id: ee043c45f5376a26956aa4650e6e0be2
     corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
@@ -183,7 +183,7 @@ by_concept:
     year: 2014
     journal: Neurology
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
     corpus_openalex_id: https://openalex.org/W2026795289
@@ -201,7 +201,7 @@ by_concept:
     year: 2014
     journal: Nat Rev Neurol
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
     corpus_openalex_id: https://openalex.org/W1994216586
@@ -219,7 +219,7 @@ by_concept:
     year: 2017
     journal: Arch Phys Med Rehabil
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in
       PubMed or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
@@ -238,7 +238,7 @@ by_concept:
     year: 2017
     journal: J Neurol Sci
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
   - t4_id: T4-013
@@ -254,7 +254,7 @@ by_concept:
     year: 2010
     journal: Neurology
     topic_codes:
-    - T10
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
     corpus_openalex_id: https://openalex.org/W2157656577
@@ -273,7 +273,7 @@ by_concept:
     year: 2021
     journal: JAMA Neurol
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
     corpus_openalex_id: https://openalex.org/W3201965895
@@ -291,7 +291,7 @@ by_concept:
     year: 2022
     journal: Neurology
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis
       in Black and White Americans" — actual title confirmed; (2) journal was Lancet
@@ -313,7 +313,7 @@ by_concept:
     year: 2014
     journal: Mult Scler
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
       Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves
@@ -335,7 +335,7 @@ by_concept:
     year: 2022
     journal: Neurology
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
       had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
@@ -356,7 +356,7 @@ by_concept:
     year: 2019
     journal: Neurology
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic
       review — not found; no such paper confirmed in PubMed or OpenAlex). Harding
@@ -376,7 +376,7 @@ by_concept:
     year: 2013
     journal: Neurology
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
   - t4_id: T4-020
@@ -392,7 +392,7 @@ by_concept:
     year: 2015
     journal: Neurol Clin Pract
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
       no such paper confirmed in PubMed or web search). Khan 2015 covers structural
@@ -412,7 +412,7 @@ by_concept:
     year: 2006
     journal: Neurology
     topic_codes:
-    - T13
+    - TOPIC-13
     corpus_status: not_found
     t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found;
       Nealon N is not a first author on any J Neuroimmunol disability progression
@@ -428,7 +428,7 @@ by_concept:
     journal: Neuroepidemiology
     pmid: '26227247'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Systematic review of MS epidemiology in MENA region; fills Global South
       gap (G-001); only synthesis covering Arab countries and Iran.
     functional_role: epidemiology
@@ -445,7 +445,7 @@ by_concept:
     journal: Neuroepidemiology
     pmid: '26960128'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Systematic review of MS epidemiology in Asia; fills Global South gap
       (G-001); covers South and Southeast Asian populations absent from main citation
       network.
@@ -463,7 +463,7 @@ by_concept:
     journal: Multiple Sclerosis and Related Disorders
     pmid: '27586337'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Narrative review of MS in Latin America including Buenos Aires cohort
       data; fills Global South gap (G-001); covers region absent from main citation
       network.
@@ -481,7 +481,7 @@ by_concept:
     journal: Multiple Sclerosis and Related Disorders
     pmid: '32380437'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Scoping review of MS in sub-Saharan Africa; fills the only major global
       region entirely absent from the corpus (G-001); documents extreme evidence thinness.
     functional_role: epidemiology
@@ -499,7 +499,7 @@ by_concept:
     journal: Multiple Sclerosis Journal
     pmid: '31790329'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Comprehensive review of MS in US racial/ethnic minority populations;
       fills G-002 Hispanic and Asian gap; Amezcua is leading voice in this underrepresented
       area.
@@ -517,7 +517,7 @@ by_concept:
     journal: JAMA Neurology
     pmid: '37213118'
     topics:
-    - T13
+    - TOPIC-13
     rationale: National prevalence estimates by race/ethnicity/region; first large-scale
       US race-stratified prevalence study; fills G-002; recommended in gaps.mdx.
     functional_role: epidemiology
@@ -534,7 +534,7 @@ by_concept:
     journal: Autoimmunity
     pmid: '21660908'
     topics:
-    - T13
+    - TOPIC-13
     rationale: Review of MS in Latino/Hispanic Americans; fills G-002; documents distinct
       clinical and genetic features in this underrepresented population.
     functional_role: epidemiology
@@ -552,7 +552,7 @@ by_concept:
     journal: Multiple Sclerosis and Related Disorders
     pmid: '33197756'
     topics:
-    - T13
+    - TOPIC-13
     rationale: First large Mexican MS registry cohort (REMEMBer); fills G-002 Latin
       American gap outside Southern California; provides primary cohort data for Central
       America region.
@@ -571,7 +571,7 @@ by_concept:
     journal: Multiple Sclerosis and Related Disorders
     pmid: '36924660'
     topics:
-    - T13
+    - TOPIC-13
     rationale: 20-year longitudinal MS epidemiology in Japan; fills G-002 Asian population
       gap; documents rising incidence in East Asian population.
     functional_role: epidemiology
@@ -588,7 +588,7 @@ by_concept:
     journal: Neurology
     pmid: '20826714'
     topics:
-    - T13
+    - TOPIC-13
     rationale: National Korean MS prevalence study; fills G-002 Asian population gap;
       one of few population-level East Asian MS epidemiology papers.
     functional_role: epidemiology
@@ -611,8 +611,8 @@ by_concept:
     year: 2008
     journal: Health Qual Life Outcomes
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
       that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
@@ -632,8 +632,8 @@ by_concept:
     year: 2008
     journal: QJM
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: title_fuzzy(0.99)
     corpus_id: a602f8bdae65242db35d223d4cf847a7
     corpus_doi: https://doi.org/10.1093/qjmed/hcm122
@@ -663,8 +663,8 @@ by_concept:
     year: 2008
     journal: Eur Neurol
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
       correlation which does not match the actual Putzki 2008 paper (which covers
@@ -683,8 +683,8 @@ by_concept:
     year: 2010
     journal: Sleep
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
     corpus_openalex_id: https://openalex.org/W185235087
@@ -701,8 +701,8 @@ by_concept:
     year: 2012
     journal: J Neurol Sci
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
     corpus_openalex_id: https://openalex.org/W2021962531
@@ -720,8 +720,8 @@ by_concept:
     year: 2021
     journal: BMC Neurol
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to
       be a 2-page NARCOMS validation note, PMID 16193897, not a systematic review
@@ -741,8 +741,8 @@ by_concept:
     year: 2014
     journal: Mult Scler Int
     topic_codes:
-    - T09
-    - T10
+    - TOPIC-09
+    - TOPIC-10
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1155/2014/798285
     corpus_openalex_id: https://openalex.org/W1988210814
@@ -760,7 +760,7 @@ by_concept:
     year: 2007
     journal: Lancet Neurol
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
     corpus_openalex_id: https://openalex.org/W2124413251
@@ -778,7 +778,7 @@ by_concept:
     year: 2008
     journal: Curr Opin Neurol
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: not_found
     t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to
       match actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating
@@ -796,7 +796,7 @@ by_concept:
     year: 2018
     journal: NEJM
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: title_fuzzy(0.88)
     corpus_id: 5081658b1336498af7327d2e2b5cda6f
     corpus_doi: https://doi.org/10.1056/nejmoa1800149
@@ -826,7 +826,7 @@ by_concept:
     year: 2010
     journal: Neurology
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: not_found
     t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID
       20876467). Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
@@ -844,7 +844,7 @@ by_concept:
     year: 2014
     journal: Semin Neurol
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: title_fuzzy(0.98)
     corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
     corpus_doi: https://doi.org/10.1055/s-0036-1579738
@@ -874,7 +874,7 @@ by_concept:
     year: 2014
     journal: Semin Neurol
     topic_codes:
-    - T12
+    - TOPIC-12
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1055/s-0034-1381742
   rehabilitation_exercise:
@@ -891,7 +891,7 @@ by_concept:
     year: 2019
     journal: JAMA Neurol
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
   - t4_id: T4-036
@@ -907,7 +907,7 @@ by_concept:
     year: 2017
     journal: Neurorehabil Neural Repair
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
       Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl
@@ -927,7 +927,7 @@ by_concept:
     year: 2012
     journal: Mult Scler
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1177/1352458512437864
   - t4_id: T4-038
@@ -943,7 +943,7 @@ by_concept:
     year: 2018
     journal: Nat Rev Neurol
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
   - t4_id: T4-039
@@ -959,7 +959,7 @@ by_concept:
     year: 2017
     journal: Arch Phys Med Rehabil
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
   - t4_id: T4-040
@@ -976,7 +976,7 @@ by_concept:
     year: 2013
     journal: Arch Phys Med Rehabil
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
   - t4_id: T4-041
@@ -992,7 +992,7 @@ by_concept:
     year: 2017
     journal: Eur J Phys Rehabil Med
     topic_codes:
-    - T09
+    - TOPIC-09
     corpus_status: not_found
     doi_verification_status: needs_manual_verification
     t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
@@ -1013,8 +1013,8 @@ by_concept:
     year: 2006
     journal: Lancet Neurol
     topic_codes:
-    - T00
-    - T11
+    - TOPIC-00
+    - TOPIC-11
     corpus_status: not_found
     t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
       "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
@@ -1032,8 +1032,8 @@ by_concept:
     year: 2017
     journal: Neurotherapeutics
     topic_codes:
-    - T00
-    - T11
+    - TOPIC-00
+    - TOPIC-11
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
     corpus_openalex_id: https://openalex.org/W2741378031
@@ -1051,8 +1051,8 @@ by_concept:
     year: 2013
     journal: Brain
     topic_codes:
-    - T00
-    - T11
+    - TOPIC-00
+    - TOPIC-11
     corpus_status: title_fuzzy(0.89)
     corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
     corpus_doi: https://doi.org/10.1093/brain/awt281
@@ -1081,8 +1081,8 @@ by_concept:
     year: 2019
     journal: Immunology
     topic_codes:
-    - T00
-    - T11
+    - TOPIC-00
+    - TOPIC-11
     corpus_status: title_fuzzy(0.99)
     corpus_id: 5dd210f9b1214a715e30bd027cf459ba
     corpus_doi: https://doi.org/10.1111/imm.13004
@@ -1111,8 +1111,8 @@ by_concept:
     year: 2014
     journal: Open Neurol J
     topic_codes:
-    - T00
-    - T11
+    - TOPIC-00
+    - TOPIC-11
     corpus_status: not_found
     t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
       Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
@@ -1124,7 +1124,7 @@ by_concept:
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
       documented by editor: SDM framework anchor. Concept covers thin-coverage topic
-      area(s): T09, T16.'
+      area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: 'Shared decision making: a model for clinical practice.'
@@ -1132,8 +1132,7 @@ by_concept:
     year: 2012
     journal: J Gen Intern Med
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
     corpus_openalex_id: https://openalex.org/W2041927436
@@ -1143,7 +1142,7 @@ by_concept:
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
       documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
-      area(s): T09, T16.'
+      area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: Shared decision making and self-management in MS — a consequence of evidence
@@ -1152,8 +1151,7 @@ by_concept:
     year: 2012
     journal: J Neurol
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
   - t4_id: T4-049
@@ -1161,7 +1159,7 @@ by_concept:
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
       documented by editor: patient voice, T09. Concept covers thin-coverage topic
-      area(s): T09, T16.'
+      area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: Patients' experiences and perceived impact of shared decision-making in
@@ -1170,8 +1168,7 @@ by_concept:
     year: 2017
     journal: Patient Educ Couns
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
   - t4_id: T4-050
@@ -1179,7 +1176,7 @@ by_concept:
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
       documented by editor: decision aid development. Concept covers thin-coverage
-      topic area(s): T09, T16.'
+      topic area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: Development and validation of a decision aid for people with multiple sclerosis.
@@ -1187,8 +1184,7 @@ by_concept:
     year: 2017
     journal: J Neurol
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
   - t4_id: T4-051
@@ -1196,7 +1192,7 @@ by_concept:
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
       documented by editor: preference-weighting evidence. Concept covers thin-coverage
-      topic area(s): T09, T16.'
+      topic area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: 'Preferences of MS patients for DMT characteristics: a discrete choice
@@ -1205,16 +1201,15 @@ by_concept:
     year: 2020
     journal: Mult Scler
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: not_found
     corpus_doi: https://doi.org/10.1177/1352458519838941
   - t4_id: T4-052
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
       and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-      documented by editor: contemporary review, T16. Concept covers thin-coverage
-      topic area(s): T09, T16.'
+      documented by editor: contemporary review. Concept covers thin-coverage
+      topic area(s): TOPIC-09.'
     concept: shared_decision_making
     concept_path: concepts/clinical/shared-decision-making
     title: Shared decision making in multiple sclerosis.
@@ -1222,8 +1217,7 @@ by_concept:
     year: 2021
     journal: Front Neurol
     topic_codes:
-    - T09
-    - T16
+    - TOPIC-09
     corpus_status: title_fuzzy(0.83)
     corpus_id: bc4457f660ecfc779461a3dc1b1dabec
     corpus_doi: https://doi.org/10.3389/fneur.2022.1063904
@@ -1254,7 +1248,7 @@ flat_list:
   year: 2008
   journal: Nat Rev Neurosci
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1038/nrn2401
   corpus_openalex_id: https://openalex.org/W2008969125
@@ -1272,7 +1266,7 @@ flat_list:
   year: 1999
   journal: J Urol
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/s0022-5347(01)61760-9
   corpus_openalex_id: https://openalex.org/W2055534266
@@ -1290,7 +1284,7 @@ flat_list:
   year: 2009
   journal: J Neurol Neurosurg Psychiatry
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   t4_note: Replaces T4-003 v1.1 (Brookes ME et al 2008 Pract Neurol — not confirmed
     in PubMed or any database after exhaustive search). Fowler 2009 is a UK consensus
@@ -1309,7 +1303,7 @@ flat_list:
   year: 2015
   journal: Lancet Neurol
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/s1474-4422(15)00070-8
 - t4_id: T4-005
@@ -1325,7 +1319,7 @@ flat_list:
   year: 2018
   journal: Degenerative Neurol Neuromuscul Dis
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   t4_note: 'Title and journal corrected from v1.1. Original entry listed Nat Rev Gastroenterol
     Hepatol — confirmed paper is in Degenerative Neurological and Neuromuscular Disease
@@ -1345,7 +1339,7 @@ flat_list:
   year: 2017
   journal: Mult Scler Relat Disord
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   t4_note: Replaces T4-006 v1.1 (Marrie RA et al 2022 Mult Scler — not confirmed;
     no paper with that title/year/journal found in PubMed or OpenAlex after exhaustive
@@ -1365,7 +1359,7 @@ flat_list:
   year: 2003
   journal: Neurology
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1212/01.wnl.0000095964.34294.b4
 - t4_id: T4-008
@@ -1380,7 +1374,7 @@ flat_list:
   year: 2005
   journal: J Neurol Neurosurg Psychiatry
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: title_fuzzy(0.99)
   corpus_id: ee043c45f5376a26956aa4650e6e0be2
   corpus_doi: https://doi.org/10.1136/jnnp.2004.054635
@@ -1410,7 +1404,7 @@ flat_list:
   year: 2014
   journal: Neurology
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1212/wnl.0000000000000013
   corpus_openalex_id: https://openalex.org/W2026795289
@@ -1427,7 +1421,7 @@ flat_list:
   year: 2014
   journal: Nat Rev Neurol
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1038/nrneurol.2014.139
   corpus_openalex_id: https://openalex.org/W1994216586
@@ -1445,7 +1439,7 @@ flat_list:
   year: 2017
   journal: Arch Phys Med Rehabil
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   t4_note: Replaces T4-011 v1.1 (Beckner ME et al 2010 Mult Scler — not found in PubMed
     or OpenAlex after exhaustive search; no Beckner first-author resilience/depression
@@ -1464,7 +1458,7 @@ flat_list:
   year: 2017
   journal: J Neurol Sci
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/j.jns.2016.11.067
 - t4_id: T4-013
@@ -1480,7 +1474,7 @@ flat_list:
   year: 2010
   journal: Neurology
   topic_codes:
-  - T10
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1212/wnl.0b013e3181f4d80d
   corpus_openalex_id: https://openalex.org/W2157656577
@@ -1498,7 +1492,7 @@ flat_list:
   year: 2021
   journal: JAMA Neurol
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1001/jamaneurol.2021.3416
   corpus_openalex_id: https://openalex.org/W3201965895
@@ -1516,7 +1510,7 @@ flat_list:
   year: 2022
   journal: Neurology
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: 'Three errors corrected from v1.1: (1) title was "Multiple sclerosis in
     Black and White Americans" — actual title confirmed; (2) journal was Lancet Neurol
@@ -1537,7 +1531,7 @@ flat_list:
   year: 2014
   journal: Mult Scler
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: Title, authors, year, and DOI corrected from v1.1. Original entry listed
     Cutter GR 2015 Mult Scler with DOI 10.1177/2168479013502656 (which resolves to
@@ -1558,7 +1552,7 @@ flat_list:
   year: 2022
   journal: Neurology
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: Replaces T4-017 v1.1 (Naismith RT et al 2018 Neurology — not found; Naismith
     had no such 2018 Neurology paper on immunotherapy in Black Americans after exhaustive
@@ -1578,7 +1572,7 @@ flat_list:
   year: 2019
   journal: Neurology
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: Replaces T4-018 v1.1 (Marrie RA et al 2022 Mult Scler SES systematic review
     — not found; no such paper confirmed in PubMed or OpenAlex). Harding 2019 covers
@@ -1598,7 +1592,7 @@ flat_list:
   year: 2013
   journal: Neurology
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1212/wnl.0b013e3182872855
 - t4_id: T4-020
@@ -1614,7 +1608,7 @@ flat_list:
   year: 2015
   journal: Neurol Clin Pract
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: Replaces T4-020 v1.1 (Tanner L et al 2023 Neurol Clin Pract — not found;
     no such paper confirmed in PubMed or web search). Khan 2015 covers structural
@@ -1634,7 +1628,7 @@ flat_list:
   year: 2006
   journal: Neurology
   topic_codes:
-  - T13
+  - TOPIC-13
   corpus_status: not_found
   t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found; Nealon
     N is not a first author on any J Neuroimmunol disability progression paper). Marrie
@@ -1654,8 +1648,8 @@ flat_list:
   year: 2008
   journal: Health Qual Life Outcomes
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
     that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
@@ -1675,8 +1669,8 @@ flat_list:
   year: 2008
   journal: QJM
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: title_fuzzy(0.99)
   corpus_id: a602f8bdae65242db35d223d4cf847a7
   corpus_doi: https://doi.org/10.1093/qjmed/hcm122
@@ -1706,8 +1700,8 @@ flat_list:
   year: 2008
   journal: Eur Neurol
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
     correlation which does not match the actual Putzki 2008 paper (which covers fatigue
@@ -1726,8 +1720,8 @@ flat_list:
   year: 2010
   journal: Sleep
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1093/sleep/33.8.1061
   corpus_openalex_id: https://openalex.org/W185235087
@@ -1744,8 +1738,8 @@ flat_list:
   year: 2012
   journal: J Neurol Sci
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/j.jns.2012.08.007
   corpus_openalex_id: https://openalex.org/W2021962531
@@ -1763,8 +1757,8 @@ flat_list:
   year: 2021
   journal: BMC Neurol
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to be
     a 2-page NARCOMS validation note, PMID 16193897, not a systematic review of fatigue
@@ -1783,8 +1777,8 @@ flat_list:
   year: 2014
   journal: Mult Scler Int
   topic_codes:
-  - T09
-  - T10
+  - TOPIC-09
+  - TOPIC-10
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1155/2014/798285
   corpus_openalex_id: https://openalex.org/W1988210814
@@ -1801,7 +1795,7 @@ flat_list:
   year: 2007
   journal: Lancet Neurol
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/s1474-4422(07)70196-5
   corpus_openalex_id: https://openalex.org/W2124413251
@@ -1819,7 +1813,7 @@ flat_list:
   year: 2008
   journal: Curr Opin Neurol
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: not_found
   t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to match
     actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating conditions,
@@ -1837,7 +1831,7 @@ flat_list:
   year: 2018
   journal: NEJM
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: title_fuzzy(0.88)
   corpus_id: 5081658b1336498af7327d2e2b5cda6f
   corpus_doi: https://doi.org/10.1056/nejmoa1800149
@@ -1866,7 +1860,7 @@ flat_list:
   year: 2010
   journal: Neurology
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: not_found
   t4_note: 'Journal corrected from v1.1: Ann Neurol → Neurology (confirmed PMID 20876467).
     Title updated: actual paper is the 2-year follow-up of cognitive/psychosocial
@@ -1884,7 +1878,7 @@ flat_list:
   year: 2014
   journal: Semin Neurol
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: title_fuzzy(0.98)
   corpus_id: 7081436c06b13bb72b2ac6bf05b4e0b3
   corpus_doi: https://doi.org/10.1055/s-0036-1579738
@@ -1914,7 +1908,7 @@ flat_list:
   year: 2014
   journal: Semin Neurol
   topic_codes:
-  - T12
+  - TOPIC-12
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1055/s-0034-1381742
 - t4_id: T4-035
@@ -1929,7 +1923,7 @@ flat_list:
   year: 2019
   journal: JAMA Neurol
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1001/jamaneurol.2018.4042
 - t4_id: T4-036
@@ -1944,7 +1938,7 @@ flat_list:
   year: 2017
   journal: Neurorehabil Neural Repair
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   t4_note: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to Behaviour
     Research and Therapy 2019 — wrong journal, wrong year). Correct DOI for Motl RW
@@ -1963,7 +1957,7 @@ flat_list:
   year: 2012
   journal: Mult Scler
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1177/1352458512437864
 - t4_id: T4-038
@@ -1979,7 +1973,7 @@ flat_list:
   year: 2018
   journal: Nat Rev Neurol
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1038/s41582-018-0027-9
 - t4_id: T4-039
@@ -1995,7 +1989,7 @@ flat_list:
   year: 2017
   journal: Arch Phys Med Rehabil
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/j.apmr.2016.04.016
 - t4_id: T4-040
@@ -2011,7 +2005,7 @@ flat_list:
   year: 2013
   journal: Arch Phys Med Rehabil
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/j.apmr.2013.01.016
 - t4_id: T4-041
@@ -2026,7 +2020,7 @@ flat_list:
   year: 2017
   journal: Eur J Phys Rehabil Med
   topic_codes:
-  - T09
+  - TOPIC-09
   corpus_status: not_found
   doi_verification_status: needs_manual_verification
   t4_note: DOI from prior session research; European Journal of Physical and Rehabilitation
@@ -2046,8 +2040,8 @@ flat_list:
   year: 2006
   journal: Lancet Neurol
   topic_codes:
-  - T00
-  - T11
+  - TOPIC-00
+  - TOPIC-11
   corpus_status: not_found
   t4_note: 'Title corrected: Crossref/OpenAlex title is "a longitudinal study" not
     "cohort effect" as listed in v1.1. DOI confirmed via OpenAlex (928 citations).'
@@ -2064,8 +2058,8 @@ flat_list:
   year: 2017
   journal: Neurotherapeutics
   topic_codes:
-  - T00
-  - T11
+  - TOPIC-00
+  - TOPIC-11
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1007/s13311-017-0562-7
   corpus_openalex_id: https://openalex.org/W2741378031
@@ -2083,8 +2077,8 @@ flat_list:
   year: 2013
   journal: Brain
   topic_codes:
-  - T00
-  - T11
+  - TOPIC-00
+  - TOPIC-11
   corpus_status: title_fuzzy(0.89)
   corpus_id: 1116e0a01829df715aa2c3c1adb20c6c
   corpus_doi: https://doi.org/10.1093/brain/awt281
@@ -2113,8 +2107,8 @@ flat_list:
   year: 2019
   journal: Immunology
   topic_codes:
-  - T00
-  - T11
+  - TOPIC-00
+  - TOPIC-11
   corpus_status: title_fuzzy(0.99)
   corpus_id: 5dd210f9b1214a715e30bd027cf459ba
   corpus_doi: https://doi.org/10.1111/imm.13004
@@ -2143,8 +2137,8 @@ flat_list:
   year: 2014
   journal: Open Neurol J
   topic_codes:
-  - T00
-  - T11
+  - TOPIC-00
+  - TOPIC-11
   corpus_status: not_found
   t4_note: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J Neurol
     Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender A et al 2014
@@ -2155,7 +2149,7 @@ flat_list:
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
     documented by editor: SDM framework anchor. Concept covers thin-coverage topic
-    area(s): T09, T16.'
+    area(s): TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: 'Shared decision making: a model for clinical practice.'
@@ -2163,8 +2157,7 @@ flat_list:
   year: 2012
   journal: J Gen Intern Med
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1007/s11606-012-2077-6
   corpus_openalex_id: https://openalex.org/W2041927436
@@ -2174,7 +2167,7 @@ flat_list:
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
     documented by editor: MS-specific SDM review. Concept covers thin-coverage topic
-    area(s): T09, T16.'
+    area(s): TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: Shared decision making and self-management in MS — a consequence of evidence
@@ -2183,8 +2176,7 @@ flat_list:
   year: 2012
   journal: J Neurol
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1007/s00415-012-6531-x
 - t4_id: T4-049
@@ -2192,7 +2184,7 @@ flat_list:
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
     documented by editor: patient voice, T09. Concept covers thin-coverage topic area(s):
-    T09, T16.'
+    TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: Patients' experiences and perceived impact of shared decision-making in MS.
@@ -2200,8 +2192,7 @@ flat_list:
   year: 2017
   journal: Patient Educ Couns
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1016/j.pec.2016.12.009
 - t4_id: T4-050
@@ -2209,7 +2200,7 @@ flat_list:
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
     documented by editor: decision aid development. Concept covers thin-coverage topic
-    area(s): T09, T16.'
+    area(s): TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: Development and validation of a decision aid for people with multiple sclerosis.
@@ -2217,8 +2208,7 @@ flat_list:
   year: 2017
   journal: J Neurol
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1007/s00415-016-8333-9
 - t4_id: T4-051
@@ -2226,7 +2216,7 @@ flat_list:
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
     documented by editor: preference-weighting evidence. Concept covers thin-coverage
-    topic area(s): T09, T16.'
+    topic area(s): TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: 'Preferences of MS patients for DMT characteristics: a discrete choice experiment.'
@@ -2234,16 +2224,15 @@ flat_list:
   year: 2020
   journal: Mult Scler
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: not_found
   corpus_doi: https://doi.org/10.1177/1352458519838941
 - t4_id: T4-052
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Shared Decision-Making
     and Patient Partnership'' (concepts/clinical/shared-decision-making). Relevance
-    documented by editor: contemporary review, T16. Concept covers thin-coverage topic
-    area(s): T09, T16.'
+    documented by editor: contemporary review. Concept covers thin-coverage topic
+    area(s): TOPIC-09.'
   concept: shared_decision_making
   concept_path: concepts/clinical/shared-decision-making
   title: Shared decision making in multiple sclerosis.
@@ -2251,8 +2240,7 @@ flat_list:
   year: 2021
   journal: Front Neurol
   topic_codes:
-  - T09
-  - T16
+  - TOPIC-09
   corpus_status: title_fuzzy(0.83)
   corpus_id: bc4457f660ecfc779461a3dc1b1dabec
   corpus_doi: https://doi.org/10.3389/fneur.2022.1063904

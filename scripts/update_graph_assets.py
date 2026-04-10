@@ -10,7 +10,7 @@ Concept selection is anchored to:
   - AAN Multiple Sclerosis Quality Measurement Set (2020)
   - MSIF Global PROMS Initiative (28 patient-priority domains)
   - ECTRIMS educational curriculum
-  - MSKB topic_map.json (T00–T16)
+  - MSKB topic_map.json (TOPIC-00 through TOPIC-15 + TOPIC-1b)
   - Bloom's taxonomy / cognitive load theory for sequencing
 
 Run from the repo root:
