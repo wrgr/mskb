@@ -395,13 +395,18 @@ by_concept:
       topic area(s): T13.'
     concept: equity_sdoh
     concept_path: concepts/populations/equity-sdoh
-    title: Race/ethnicity as a risk factor for disability progression in MS.
-    authors: Nealon N et al
-    year: 2019
-    journal: J Neuroimmunol
+    title: Does multiple sclerosis-associated disability differ between races?
+    authors: Marrie RA et al
+    year: 2006
+    journal: Neurology
     topic_codes:
     - T13
     corpus_status: not_found
+    doi: 10.1212/01.wnl.0000208505.81912.82
+    t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found;
+      Nealon N is not a first author on any J Neuroimmunol disability progression
+      paper). Marrie 2006 is the foundational race-disability paper in Neurology covering
+      this functional role (confirmed, ~181 citations).
   fatigue_ms:
   - t4_id: T4-022
     t4_source_type: concept_anchor_signal
@@ -410,15 +415,21 @@ by_concept:
       thin-coverage topic area(s): T09, T10.'
     concept: fatigue_ms
     concept_path: concepts/clinical/fatigue-ms
-    title: Prevalence and neurobehavioral correlates of pathological laughing and
-      crying in multiple sclerosis.
-    authors: Feinstein A et al
-    year: 1997
-    journal: Arch Neurol
+    title: 'Fatigue characteristics in multiple sclerosis: the North American Research
+      Committee on Multiple Sclerosis (NARCOMS) survey.'
+    authors: Hadjimichael O et al
+    year: 2008
+    journal: Health Qual Life Outcomes
     topic_codes:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1186/1477-7525-6-100
+    t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
+      that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
+      largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
+      NARCOMS patients), providing the epidemiology-baseline role intended for this
+      slot (confirmed, ~238 citations).
   - t4_id: T4-023
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -449,6 +460,7 @@ by_concept:
     t4_note: Paper is already structurally included in corpus (tier=included). T4
       designation formalises the concept-anchor expert signal and links this paper
       to its educational concept page.
+    doi: 10.1093/qjmed/hcm122
   - t4_id: T4-024
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -456,14 +468,20 @@ by_concept:
       thin-coverage topic area(s): T09, T10.'
     concept: fatigue_ms
     concept_path: concepts/clinical/fatigue-ms
-    title: Prevalence of fatigue and its correlation to depression in MS.
+    title: Prevalence and severity of multiple-sclerosis-associated fatigue in treated
+      and untreated patients.
     authors: Putzki N et al
     year: 2008
-    journal: Eur J Neurol
+    journal: Eur Neurol
     topic_codes:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1159/000111876
+    t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
+      correlation which does not match the actual Putzki 2008 paper (which covers
+      fatigue prevalence/severity in treated vs untreated patients). Journal corrected:
+      Eur J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
   - t4_id: T4-025
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -479,6 +497,7 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1093/sleep/33.8.1061
   - t4_id: T4-026
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -494,6 +513,7 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1016/j.jns.2012.08.007
   - t4_id: T4-027
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -501,14 +521,21 @@ by_concept:
       thin-coverage topic area(s): T09, T10.'
     concept: fatigue_ms
     concept_path: concepts/clinical/fatigue-ms
-    title: Systematic review of the incidence and prevalence of fatigue in MS.
-    authors: Marrie RA et al
-    year: 2005
-    journal: Mult Scler
+    title: 'Prevalence and burden of multiple sclerosis-related fatigue: a systematic
+      literature review.'
+    authors: Oliva Ramirez A et al
+    year: 2021
+    journal: BMC Neurol
     topic_codes:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1186/s12883-021-02396-1
+    t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to
+      be a 2-page NARCOMS validation note, PMID 16193897, not a systematic review
+      of fatigue incidence/prevalence). Oliva Ramirez 2021 is the current systematic
+      review of MS fatigue epidemiology filling the intended role (confirmed, ~217
+      citations).
   - t4_id: T4-028
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -524,6 +551,7 @@ by_concept:
     - T09
     - T10
     corpus_status: not_found
+    doi: 10.1155/2014/798285
   pediatric_ms:
   - t4_id: T4-029
     t4_source_type: concept_anchor_signal
@@ -539,6 +567,7 @@ by_concept:
     topic_codes:
     - T12
     corpus_status: not_found
+    doi: 10.1016/s1474-4422(07)70196-5
   - t4_id: T4-030
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -546,13 +575,18 @@ by_concept:
       differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
     concept: pediatric_ms
     concept_path: concepts/populations/pediatric-ms
-    title: Multiple sclerosis and related disorders in children.
+    title: Epidemiology, immunopathogenesis and management of pediatric central nervous
+      system inflammatory demyelinating conditions.
     authors: Pohl D et al
-    year: 2007
+    year: 2008
     journal: Curr Opin Neurol
     topic_codes:
     - T12
     corpus_status: not_found
+    doi: 10.1097/WCO.0b013e3282fd172b
+    t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to
+      match actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating
+      conditions, not only MS).
   - t4_id: T4-031
     t4_source_type: concept_anchor_signal
     t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1349,13 +1383,18 @@ flat_list:
     area(s): T13.'
   concept: equity_sdoh
   concept_path: concepts/populations/equity-sdoh
-  title: Race/ethnicity as a risk factor for disability progression in MS.
-  authors: Nealon N et al
-  year: 2019
-  journal: J Neuroimmunol
+  title: Does multiple sclerosis-associated disability differ between races?
+  authors: Marrie RA et al
+  year: 2006
+  journal: Neurology
   topic_codes:
   - T13
   corpus_status: not_found
+  doi: 10.1212/01.wnl.0000208505.81912.82
+  t4_note: Replaces T4-021 v1.1 (Nealon N et al 2019 J Neuroimmunol — not found; Nealon
+    N is not a first author on any J Neuroimmunol disability progression paper). Marrie
+    2006 is the foundational race-disability paper in Neurology covering this functional
+    role (confirmed, ~181 citations).
 - t4_id: T4-022
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1363,15 +1402,21 @@ flat_list:
     thin-coverage topic area(s): T09, T10.'
   concept: fatigue_ms
   concept_path: concepts/clinical/fatigue-ms
-  title: Prevalence and neurobehavioral correlates of pathological laughing and crying
-    in multiple sclerosis.
-  authors: Feinstein A et al
-  year: 1997
-  journal: Arch Neurol
+  title: 'Fatigue characteristics in multiple sclerosis: the North American Research
+    Committee on Multiple Sclerosis (NARCOMS) survey.'
+  authors: Hadjimichael O et al
+  year: 2008
+  journal: Health Qual Life Outcomes
   topic_codes:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1186/1477-7525-6-100
+  t4_note: Replaces T4-022 v1.1 (Feinstein A et al 1997 Arch Neurol — wrong paper;
+    that paper covers pseudobulbar affect, not fatigue). Hadjimichael 2008 is the
+    largest population-based fatigue prevalence study in MS (74% prevalence in 9,077
+    NARCOMS patients), providing the epidemiology-baseline role intended for this
+    slot (confirmed, ~238 citations).
 - t4_id: T4-023
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1402,6 +1447,7 @@ flat_list:
   t4_note: Paper is already structurally included in corpus (tier=included). T4 designation
     formalises the concept-anchor expert signal and links this paper to its educational
     concept page.
+  doi: 10.1093/qjmed/hcm122
 - t4_id: T4-024
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1409,14 +1455,20 @@ flat_list:
     thin-coverage topic area(s): T09, T10.'
   concept: fatigue_ms
   concept_path: concepts/clinical/fatigue-ms
-  title: Prevalence of fatigue and its correlation to depression in MS.
+  title: Prevalence and severity of multiple-sclerosis-associated fatigue in treated
+    and untreated patients.
   authors: Putzki N et al
   year: 2008
-  journal: Eur J Neurol
+  journal: Eur Neurol
   topic_codes:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1159/000111876
+  t4_note: 'Title and journal corrected from v1.1. Original title described fatigue-depression
+    correlation which does not match the actual Putzki 2008 paper (which covers fatigue
+    prevalence/severity in treated vs untreated patients). Journal corrected: Eur
+    J Neurol (Wiley/EFNS) → Eur Neurol (Karger) — these are different journals.'
 - t4_id: T4-025
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1432,6 +1484,7 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1093/sleep/33.8.1061
 - t4_id: T4-026
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1447,6 +1500,7 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1016/j.jns.2012.08.007
 - t4_id: T4-027
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1454,14 +1508,20 @@ flat_list:
     thin-coverage topic area(s): T09, T10.'
   concept: fatigue_ms
   concept_path: concepts/clinical/fatigue-ms
-  title: Systematic review of the incidence and prevalence of fatigue in MS.
-  authors: Marrie RA et al
-  year: 2005
-  journal: Mult Scler
+  title: 'Prevalence and burden of multiple sclerosis-related fatigue: a systematic
+    literature review.'
+  authors: Oliva Ramirez A et al
+  year: 2021
+  journal: BMC Neurol
   topic_codes:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1186/s12883-021-02396-1
+  t4_note: Replaces T4-027 v1.1 (Marrie RA et al 2005 Mult Scler — confirmed to be
+    a 2-page NARCOMS validation note, PMID 16193897, not a systematic review of fatigue
+    incidence/prevalence). Oliva Ramirez 2021 is the current systematic review of
+    MS fatigue epidemiology filling the intended role (confirmed, ~217 citations).
 - t4_id: T4-028
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Fatigue in MS'' (concepts/clinical/fatigue-ms).
@@ -1477,6 +1537,7 @@ flat_list:
   - T09
   - T10
   corpus_status: not_found
+  doi: 10.1155/2014/798285
 - t4_id: T4-029
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1491,6 +1552,7 @@ flat_list:
   topic_codes:
   - T12
   corpus_status: not_found
+  doi: 10.1016/s1474-4422(07)70196-5
 - t4_id: T4-030
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
@@ -1498,13 +1560,18 @@ flat_list:
     differential diagnosis review. Concept covers thin-coverage topic area(s): T12.'
   concept: pediatric_ms
   concept_path: concepts/populations/pediatric-ms
-  title: Multiple sclerosis and related disorders in children.
+  title: Epidemiology, immunopathogenesis and management of pediatric central nervous
+    system inflammatory demyelinating conditions.
   authors: Pohl D et al
-  year: 2007
+  year: 2008
   journal: Curr Opin Neurol
   topic_codes:
   - T12
   corpus_status: not_found
+  doi: 10.1097/WCO.0b013e3282fd172b
+  t4_note: Year corrected 2007→2008 (confirmed PMID 18451724). Title updated to match
+    actual Pohl 2008 paper (covers all pediatric CNS inflammatory demyelinating conditions,
+    not only MS).
 - t4_id: T4-031
   t4_source_type: concept_anchor_signal
   t4_signal: 'Nominated as required anchor for concept page ''Pediatric-Onset Multiple
