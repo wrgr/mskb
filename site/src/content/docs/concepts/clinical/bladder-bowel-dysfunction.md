@@ -61,6 +61,13 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 
 ## Citation topics that feed this concept
 
-<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+<p><a href="/mskb/topics/?concept=bladder_bowel_dysfunction"><strong>Open this concept in the research map →</strong></a></p>
+<ul>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-2/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=2">Start journey from this topic</a> (6 linked papers).</li>
+<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-6/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=6">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-7/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=7">Start journey from this topic</a> (1 linked paper).</li>
+</ul>
 
 [//]: # (mskb:topic-links:end)

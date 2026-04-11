@@ -231,6 +231,15 @@ def _first_author_last_name(work: Dict[str, object]) -> str:
     return normalized.split()[-1]
 
 
+def _title_similarity(candidate_title: str, work_title: str) -> float:
+    """Return token_set_ratio similarity between two normalised title strings."""
+    a = normalize_title(candidate_title)
+    b = normalize_title(work_title)
+    if not a or not b:
+        return 0.0
+    return float(fuzz.token_set_ratio(a, b))
+
+
 def _choose_best_openalex_match(
     candidate: Dict[str, object],
     works: List[Dict[str, object]],
@@ -340,7 +349,11 @@ def _enrich_seed_references(
     if not ref_candidates:
         return added_rows, added_edges, stats
 
-    min_title_similarity = float(enrichment_cfg.get("min_title_similarity", 88.0))
+    # Two-tier title similarity thresholds:
+    # doi_match uses a lower bar because the DOI already confirms identity;
+    # title_only requires a higher bar since title search is the sole evidence.
+    min_title_similarity_doi = float(enrichment_cfg.get("min_title_similarity_doi_match", 90.0))
+    min_title_similarity = float(enrichment_cfg.get("min_title_similarity", 98.0))
     max_year_delta = int(enrichment_cfg.get("max_year_delta", 3))
     max_search_results = int(enrichment_cfg.get("max_search_results_per_reference", 8))
     max_title_queries = int(enrichment_cfg.get("max_title_queries_per_seed", 40))
@@ -359,10 +372,19 @@ def _enrich_seed_references(
             stats["n_candidates_with_doi"] += 1
             if candidate_doi not in doi_cache:
                 doi_cache[candidate_doi] = openalex_client.get_work_by_doi(candidate_doi)
-            resolved_work = doi_cache[candidate_doi]
-            if resolved_work:
-                resolved_channel = f"seed_reference_{str(candidate.get('source', 'endnote')).strip()}"
-                stats["n_resolved_via_doi"] += 1
+            doi_work = doi_cache[candidate_doi]
+            if doi_work:
+                # Validate title overlap even for DOI matches to guard against
+                # DOI reassignment or metadata errors in OpenAlex.
+                sim = _title_similarity(
+                    _build_openalex_search_query(candidate),
+                    str(doi_work.get("title", "") or ""),
+                )
+                if sim == 0.0 or sim >= min_title_similarity_doi:
+                    # sim==0.0 means one side has no title — accept on DOI alone.
+                    resolved_work = doi_work
+                    resolved_channel = f"seed_reference_{str(candidate.get('source', 'endnote')).strip()}"
+                    stats["n_resolved_via_doi"] += 1
 
         if not resolved_work and allow_title_search:
             query = _build_openalex_search_query(candidate)

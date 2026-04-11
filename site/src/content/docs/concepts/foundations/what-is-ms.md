@@ -47,6 +47,14 @@ The disease is heterogeneous: most patients begin with relapsing-remitting disea
 
 ## Citation topics that feed this concept
 
-<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+<p><a href="/mskb/topics/?concept=what_is_ms"><strong>Open this concept in the research map →</strong></a></p>
+<ul>
+<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (4 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-6/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=6">Start journey from this topic</a> (4 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-4/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=4">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-2/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=2">Start journey from this topic</a> (1 linked paper).</li>
+<li><a href="/mskb/topics/internal-medicine-8/">Internal medicine</a> · <a href="/mskb/journey/?seed=8">Start journey from this topic</a> (1 linked paper).</li>
+</ul>
 
 [//]: # (mskb:topic-links:end)

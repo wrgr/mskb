@@ -45,6 +45,13 @@ MS is driven by autoreactive T cells (primarily Th1/Th17) and B cells that penet
 
 ## Citation topics that feed this concept
 
-<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+<p><a href="/mskb/topics/?concept=immune_system_basics"><strong>Open this concept in the research map →</strong></a></p>
+<ul>
+<li><a href="/mskb/topics/neuroscience-0/">Neuroscience</a> · <a href="/mskb/journey/?seed=0">Start journey from this topic</a> (5 linked papers).</li>
+<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (5 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-4/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=4">Start journey from this topic</a> (2 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-7/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=7">Start journey from this topic</a> (1 linked paper).</li>
+</ul>
 
 [//]: # (mskb:topic-links:end)
