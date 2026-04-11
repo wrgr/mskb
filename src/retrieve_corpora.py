@@ -231,6 +231,15 @@ def _first_author_last_name(work: Dict[str, object]) -> str:
     return normalized.split()[-1]
 
 
+def _title_similarity(candidate_title: str, work_title: str) -> float:
+    """Return token_set_ratio similarity between two normalised title strings."""
+    a = normalize_title(candidate_title)
+    b = normalize_title(work_title)
+    if not a or not b:
+        return 0.0
+    return float(fuzz.token_set_ratio(a, b))
+
+
 def _choose_best_openalex_match(
     candidate: Dict[str, object],
     works: List[Dict[str, object]],
@@ -340,7 +349,11 @@ def _enrich_seed_references(
     if not ref_candidates:
         return added_rows, added_edges, stats
 
-    min_title_similarity = float(enrichment_cfg.get("min_title_similarity", 88.0))
+    # Two-tier title similarity thresholds:
+    # doi_match uses a lower bar because the DOI already confirms identity;
+    # title_only requires a higher bar since title search is the sole evidence.
+    min_title_similarity_doi = float(enrichment_cfg.get("min_title_similarity_doi_match", 90.0))
+    min_title_similarity = float(enrichment_cfg.get("min_title_similarity", 98.0))
     max_year_delta = int(enrichment_cfg.get("max_year_delta", 3))
     max_search_results = int(enrichment_cfg.get("max_search_results_per_reference", 8))
     max_title_queries = int(enrichment_cfg.get("max_title_queries_per_seed", 40))
@@ -359,10 +372,19 @@ def _enrich_seed_references(
             stats["n_candidates_with_doi"] += 1
             if candidate_doi not in doi_cache:
                 doi_cache[candidate_doi] = openalex_client.get_work_by_doi(candidate_doi)
-            resolved_work = doi_cache[candidate_doi]
-            if resolved_work:
-                resolved_channel = f"seed_reference_{str(candidate.get('source', 'endnote')).strip()}"
-                stats["n_resolved_via_doi"] += 1
+            doi_work = doi_cache[candidate_doi]
+            if doi_work:
+                # Validate title overlap even for DOI matches to guard against
+                # DOI reassignment or metadata errors in OpenAlex.
+                sim = _title_similarity(
+                    _build_openalex_search_query(candidate),
+                    str(doi_work.get("title", "") or ""),
+                )
+                if sim == 0.0 or sim >= min_title_similarity_doi:
+                    # sim==0.0 means one side has no title — accept on DOI alone.
+                    resolved_work = doi_work
+                    resolved_channel = f"seed_reference_{str(candidate.get('source', 'endnote')).strip()}"
+                    stats["n_resolved_via_doi"] += 1
 
         if not resolved_work and allow_title_search:
             query = _build_openalex_search_query(candidate)
@@ -476,14 +498,47 @@ def _run_seed_channel(
 
 
 def _run_query_channel(
-    client: OpenAlexClient, queries: list[str], channel: str, max_results: int
+    client: OpenAlexClient,
+    queries: list[str],
+    channel: str,
+    max_results: int,
+    filter_expr: str = "",
 ) -> list[dict]:
-    """Retrieve papers for a list of search queries under a named channel."""
+    """Retrieve papers for a list of search queries under a named channel.
+
+    ``filter_expr`` is an optional OpenAlex filter string (e.g.
+    ``"from_publication_year:2000,type:article"``) applied to every query.
+    Empty string means no extra filter.
+    """
     rows: list[dict] = []
     for query in queries:
-        for work in client.search_works(query, max_results=max_results):
+        for work in client.search_works(query, max_results=max_results, filter_expr=filter_expr):
             rows.append(_paper_row(work, channel, query=query))
     return rows
+
+
+def _build_openalex_client(cfg: dict, cache_dir: Path) -> OpenAlexClient:
+    """Instantiate an OpenAlex client from the optional ``retrieval.openalex`` block.
+
+    All tuning knobs (timeout, retry budget, default filter, API key env) are
+    optional — missing entries fall back to the client defaults so existing
+    configs keep working. ``api_key_env`` is looked up at call time so rotated
+    keys are picked up without a config edit.
+    """
+    retrieval_cfg = cfg.get("retrieval", {}) or {}
+    oa_cfg = retrieval_cfg.get("openalex", {}) or {}
+    api_key_env = str(oa_cfg.get("api_key_env", "OPENALEX_API_KEY"))
+    api_key = os.environ.get(api_key_env, "")
+    return OpenAlexClient(
+        base_url=cfg["openalex_base_url"],
+        email=cfg["email"],
+        per_page=int(retrieval_cfg.get("per_page", 200)),
+        timeout=int(oa_cfg.get("timeout_seconds", 60)),
+        max_retries=int(oa_cfg.get("max_retries", 4)),
+        max_retry_sleep_s=float(oa_cfg.get("max_retry_sleep_seconds", 30.0)),
+        cache_dir=cache_dir,
+        api_key=api_key,
+    )
 
 
 def _run_framing_seed_channel(
@@ -611,11 +666,12 @@ def run(config_path: str) -> None:
     outdir = root / cfg["output_dir"] / "raw"
     ensure_dir(outdir)
     retrieval_cfg = cfg.get("retrieval", {})
+    openalex_cfg = retrieval_cfg.get("openalex", {}) or {}
+    default_filter = str(openalex_cfg.get("default_filter", "") or "").strip()
 
-    client = OpenAlexClient(
-        base_url=cfg["openalex_base_url"], email=cfg["email"],
-        per_page=retrieval_cfg["per_page"], cache_dir=outdir / "openalex_cache",
-    )
+    client = _build_openalex_client(cfg, cache_dir=outdir / "openalex_cache")
+    if default_filter:
+        print(f"[retrieve] OpenAlex default filter: {default_filter}")
     enrichment_cfg = retrieval_cfg.get("seed_reference_enrichment", {})
     enrichment_enabled = bool(enrichment_cfg.get("enabled", True))
     enrichment_timeout = int(enrichment_cfg.get("request_timeout_seconds", 30))
@@ -659,9 +715,15 @@ def run(config_path: str) -> None:
         citation_edges.extend(framing_edges)
 
     if retrieval_cfg["use_lexical_channel"]:
-        rows.extend(_run_query_channel(client, cfg["queries"]["lexical"], "lexical", max_per_query))
+        rows.extend(_run_query_channel(
+            client, cfg["queries"]["lexical"], "lexical", max_per_query,
+            filter_expr=default_filter,
+        ))
     if retrieval_cfg["use_dataset_channel"]:
-        rows.extend(_run_query_channel(client, cfg["queries"]["dataset"], "dataset", max_per_query))
+        rows.extend(_run_query_channel(
+            client, cfg["queries"]["dataset"], "dataset", max_per_query,
+            filter_expr=default_filter,
+        ))
     if bool(retrieval_cfg.get("use_t4_expert_channel", True)):
         rows.extend(_run_t4_expert_channel(
             t4_yaml_path=t4_yaml_path, client=client, max_title_queries=max_t4_title_queries,

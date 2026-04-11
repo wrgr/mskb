@@ -64,6 +64,14 @@ These papers are not currently in the MSKB corpus and are candidates for additio
 
 ## Citation topics that feed this concept
 
-<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+<p><a href="/mskb/topics/?concept=equity_sdoh"><strong>Open this concept in the research map →</strong></a></p>
+<ul>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-9/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=9">Start journey from this topic</a> (4 linked papers).</li>
+<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-2/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=2">Start journey from this topic</a> (2 linked papers).</li>
+<li><a href="/mskb/topics/internal-medicine-5/">Internal medicine</a> · <a href="/mskb/journey/?seed=5">Start journey from this topic</a> (2 linked papers).</li>
+<li><a href="/mskb/topics/internal-medicine-8/">Internal medicine</a> · <a href="/mskb/journey/?seed=8">Start journey from this topic</a> (1 linked paper).</li>
+</ul>
 
 [//]: # (mskb:topic-links:end)

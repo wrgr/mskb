@@ -42,9 +42,22 @@ def run(config_path: str) -> None:
     outdir = root / cfg["output_dir"] / "normalized"
     ensure_dir(outdir)
 
+    dedup_cfg = cfg.get("dedup", {}) or {}
+    auto_merge_threshold = float(dedup_cfg.get("auto_merge_threshold", 0.85))
+    # Maximum publication-year gap for fuzzy (non-DOI) title merges.
+    # Historically hardcoded to 6, but that window is wide enough to merge distinct
+    # updated review articles (e.g. Compston 2002 vs 2008 Lancet "Multiple sclerosis").
+    # Default 2 covers preprint→published and conference→journal timelines.
+    max_merge_year_delta = int(dedup_cfg.get("max_merge_year_delta", 2))
+
     cand = pd.read_csv(raw / "candidate_papers.csv")
     if cand.empty:
         raise ValueError("candidate_papers.csv is empty")
+
+    # Normalise doi early: empty cells come back from CSV as NaN; str(NaN or "") yields
+    # the truthy string "nan", which would cause all no-DOI papers to be grouped together.
+    cand["doi"] = cand["doi"].fillna("").astype(str).str.strip()
+    cand.loc[cand["doi"].str.lower() == "nan", "doi"] = ""
 
     cand["norm_title"] = cand["title"].fillna("").map(normalize_title)
     cand["norm_first_author"] = cand["first_author"].fillna("").map(normalize_name)
@@ -80,11 +93,12 @@ def run(config_path: str) -> None:
                 if j <= i:
                     continue
                 year_j = rows[j].get("year")
-                if pd.isna(year_i) or pd.isna(year_j) or abs(float(year_i) - float(year_j)) <= 6:
+                if pd.isna(year_i) or pd.isna(year_j) or abs(float(year_i) - float(year_j)) <= max_merge_year_delta:
                     candidate_js.add(j)
 
         for j in sorted(candidate_js):
-            if j in used:
+            # Skip self: doi_groups includes i itself, but i isn't in `used` yet.
+            if j == i or j in used:
                 continue
             other = rows[j]
             same_doi = bool(row.get("doi")) and str(row.get("doi")).lower() == str(other.get("doi")).lower()
@@ -92,8 +106,13 @@ def run(config_path: str) -> None:
             same_author = row.get("norm_first_author") and row.get("norm_first_author") == other.get("norm_first_author")
             year_i = row.get("year")
             year_j = other.get("year")
-            year_penalty_ok = (pd.isna(year_i) or pd.isna(year_j) or abs(float(year_i) - float(year_j)) <= 6)
-            if same_doi or (sim >= cfg["dedup"]["auto_merge_threshold"] and same_author and year_penalty_ok):
+            year_penalty_ok = (pd.isna(year_i) or pd.isna(year_j) or abs(float(year_i) - float(year_j)) <= max_merge_year_delta)
+            # Require at least 4 title tokens for fuzzy merge to avoid merging
+            # short generic titles (e.g. "Multiple sclerosis") across distinct papers.
+            norm_i = row.get("norm_title", "") or normalize_title(str(row.get("title", "")))
+            norm_j = other.get("norm_title", "") or normalize_title(str(other.get("title", "")))
+            title_long_enough = len(norm_i.split()) >= 4 and len(norm_j.split()) >= 4
+            if same_doi or (sim >= auto_merge_threshold and same_author and year_penalty_ok and title_long_enough):
                 cluster.append(j)
                 used.add(j)
         used.add(i)

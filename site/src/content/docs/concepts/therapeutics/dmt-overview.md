@@ -47,6 +47,12 @@ More than 20 DMTs are now approved for relapsing MS, spanning from modest-effica
 
 ## Citation topics that feed this concept
 
-<p><em>No topic overlap links available yet for this concept. Regenerate the taxonomy after refreshing concept-paper links.</em></p>
+<p><a href="/mskb/topics/?concept=dmt_overview"><strong>Open this concept in the research map →</strong></a></p>
+<ul>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (7 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-2/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=2">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-6/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=6">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/internal-medicine-5/">Internal medicine</a> · <a href="/mskb/journey/?seed=5">Start journey from this topic</a> (1 linked paper).</li>
+</ul>
 
 [//]: # (mskb:topic-links:end)

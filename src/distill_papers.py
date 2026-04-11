@@ -820,28 +820,50 @@ class _GeminiClientShim:
         return self._MessagesNamespace(self._api_key, self._BASE_URL)
 
 
-def _init_api_client(dist_cfg: dict) -> object | None:
-    """Return an initialised API client for distillation, or None (rules-based fallback).
+def _init_api_client(dist_cfg: dict) -> tuple[object | None, str]:
+    """Return ``(client, resolved_provider)`` for distillation.
 
     Priority:
-      1. provider=anthropic  — uses ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN
-      2. provider=gemini     — uses GEMINI_API_KEY or GOOGLE_API_KEY
-      3. provider unset/other — try Anthropic, then Gemini, then fall back
+      1. ``provider: anthropic``  — uses ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN
+      2. ``provider: gemini``     — uses GEMINI_API_KEY / GOOGLE_API_KEY
+      3. ``provider: rules_based`` — no LLM, always rules-based
+      4. ``provider`` unset       — try Anthropic, then Gemini, then rules_based
+
+    When ``strict_provider`` (config) is truthy and ``provider`` is set, a
+    missing credential or failed import raises ``RuntimeError`` instead of
+    silently falling back. Defaults to strict whenever ``provider`` is set so
+    the pipeline can never drift from the intended model without a warning.
     """
-    provider = (dist_cfg.get("provider") or "").lower()
+    provider = (dist_cfg.get("provider") or "").strip().lower()
+    strict_default = bool(provider)
+    strict_provider = bool(dist_cfg.get("strict_provider", strict_default))
+
+    def _fail_or_none(message: str) -> object | None:
+        if strict_provider:
+            raise RuntimeError(
+                f"Distillation provider='{provider}' requested but {message}. "
+                "Set distillation.strict_provider=false in config.yaml to "
+                "allow silent rules-based fallback."
+            )
+        print(f"[warn] {message}. Falling back to rules-based distillation.")
+        return None
 
     # --- Anthropic ---
     if provider in ("anthropic", ""):
         try:
             import anthropic
-            if os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"):
-                print("Using Claude API for paper distillation.")
-                return anthropic.Anthropic()
         except Exception as exc:
-            print(f"Could not initialize Anthropic client ({exc}).")
+            if provider == "anthropic":
+                return _fail_or_none(f"anthropic SDK import failed: {exc}"), "anthropic"
+            anthropic = None  # type: ignore[assignment]
+        if anthropic is not None and (
+            os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
+        ):
+            return anthropic.Anthropic(), "anthropic"
         if provider == "anthropic":
-            print("Anthropic credentials not found. Falling back to rules-based distillation.")
-            return None
+            return _fail_or_none(
+                "ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN not set"
+            ), "anthropic"
 
     # --- Gemini ---
     if provider in ("gemini", ""):
@@ -852,17 +874,20 @@ def _init_api_client(dist_cfg: dict) -> object | None:
         )
         if gemini_key:
             try:
-                client = _GeminiClientShim(gemini_key)
-                print("Using Gemini API for paper distillation.")
-                return client
+                return _GeminiClientShim(gemini_key), "gemini"
             except Exception as exc:
-                print(f"Could not initialize Gemini client ({exc}).")
+                if provider == "gemini":
+                    return _fail_or_none(f"Gemini client init failed: {exc}"), "gemini"
+                print(f"[warn] Could not initialize Gemini client ({exc}).")
         if provider == "gemini":
-            print("Gemini credentials not found. Falling back to rules-based distillation.")
-            return None
+            return _fail_or_none("GEMINI_API_KEY / GOOGLE_API_KEY not set"), "gemini"
 
-    print("No LLM credentials found. Falling back to rules-based distillation.")
-    return None
+    # --- Explicit rules-based opt-in ---
+    if provider == "rules_based":
+        return None, "rules_based"
+
+    print("[warn] No LLM credentials found. Falling back to rules-based distillation.")
+    return None, "rules_based"
 
 
 def _boolish(value: object) -> bool:
@@ -1162,7 +1187,7 @@ def run(config_path: str) -> None:
     dist_cfg = cfg.get("distillation", {})
     cache_dir = root / dist_cfg.get("cache_dir", "outputs/distilled/llm_cache")
     ensure_dir(cache_dir)
-    model = dist_cfg.get("model", "claude-haiku-4-5-20251001")
+    configured_model = dist_cfg.get("model", "claude-haiku-4-5-20251001")
     batch_size = dist_cfg.get("batch_size", 10)
     qa_sample_size = max(1, int(dist_cfg.get("qa_sample_size", 25)))
     qa_random_seed = int(dist_cfg.get("qa_random_seed", 13))
@@ -1170,7 +1195,17 @@ def run(config_path: str) -> None:
     fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
     scored = _load_distill_corpus(graph_dir, dist_cfg, fulltext_by_id)
     topic_clusters, paper_topics, topic_labels, paper_topic_map = _load_topic_lookups(topics_dir)
-    api_client = _init_api_client(dist_cfg)
+    api_client, resolved_provider = _init_api_client(dist_cfg)
+    # Resolve the actual model string used at runtime. The configured model
+    # only applies when an LLM client is active; rules-based mode ignores it.
+    if api_client is None:
+        model = "rules_based"
+    else:
+        model = configured_model
+    print(
+        f"[distill] provider={resolved_provider} model={model} "
+        f"(configured={configured_model!r})"
+    )
     default_level, active_levels = _configure_reading_levels(dist_cfg)
 
     def _distill_one_level(

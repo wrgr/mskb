@@ -353,7 +353,7 @@ def run(config_path: str, force: bool = False) -> None:
     batch_size = int(dist_cfg.get("batch_size", 10))
 
     fulltext_by_id, fulltext_source_by_id = _load_fulltext_maps(root, cfg["output_dir"])
-    api_client = _init_api_client(dist_cfg)
+    api_client, _provider = _init_api_client(dist_cfg)
 
     print(f"Updating kid-friendly summaries (force={force}) ...")
     _update_paper_summaries(

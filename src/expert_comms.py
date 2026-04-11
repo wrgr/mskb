@@ -1,7 +1,9 @@
 """Generate domain-expert review packets from v1.3 pipeline outputs.
 
-Reads the audit report, scored corpus, topic clusters, and distilled summaries
-and writes a structured Markdown + JSON reviewer packet to outputs/expert_comms/.
+Reads the audit report, the Stage 5c selected core corpus, topic labels, and
+distilled summaries and writes a structured Markdown + JSON reviewer packet to
+``outputs/expert_comms/``. Corpus, tier counts, and per-topic briefs are keyed
+on the TOPIC-XX taxonomy rather than algorithmic cluster IDs.
 """
 
 import argparse
@@ -13,7 +15,37 @@ from typing import Any
 
 import pandas as pd
 
+from .seed_governance import TOPIC_CATEGORY_MAP, _extract_topic_code
 from .utils import ensure_dir, load_config, save_json
+
+
+# Human-readable labels for each TOPIC-XX code used in the expert packet. These
+# mirror the v1.3 MS Field Orientation Guide topic map so reviewers see the
+# same names as in the seeds manifest.
+TOPIC_LABELS: dict[str, str] = {
+    "TOPIC-00": "Disease Overview",
+    "TOPIC-01": "Genetics",
+    "TOPIC-02": "Pathophysiology",
+    "TOPIC-03": "Epidemiology",
+    "TOPIC-04": "Natural History",
+    "TOPIC-05": "Risk Factors & EBV",
+    "TOPIC-06": "Diagnosis & Monitoring",
+    "TOPIC-07": "Biomarkers",
+    "TOPIC-08": "Disease-Modifying Therapies",
+    "TOPIC-09": "Progressive MS & Smoldering",
+    "TOPIC-10": "Patient-Reported Outcomes",
+    "TOPIC-11": "Symptom Management",
+    "TOPIC-12": "Comorbidities",
+    "TOPIC-13": "Pregnancy & Family Planning",
+    "TOPIC-14": "Pediatric MS",
+    "TOPIC-15": "Equity & SDOH",
+    "TOPIC-16": "Clinical AI",
+    "TOPIC-17": "Remyelination & Neuroprotection",
+}
+
+# Ordered buckets used in the tier breakdown table. The priority order is
+# applied in ``_tier_label`` so each paper lands in exactly one bucket.
+TIER_ORDER: list[str] = ["T1", "T1-ref", "T2", "T3", "T4", "other"]
 
 
 # ---------------------------------------------------------------------------
@@ -74,15 +106,56 @@ def _year_span(papers: pd.DataFrame) -> tuple[int | None, int | None]:
 
 
 def _tier_label(row: pd.Series) -> str:
-    """Derive a human-readable tier label from row flags."""
-    if _safe_int(row.get("in_t4_expert_signal"), 0):
+    """Return one of T1/T1-ref/T2/T3/T4/other for a corpus row.
+
+    Priority order: T4 (expert signal) > T1 (core seeds) > T1-ref (one-hop
+    references from seeds) > T2 > T3 > other. The canonical tier flag set at
+    Stage 5c lives in ``core_selection_tier``; ``all_channels`` and
+    ``tracked_source`` are consulted to split T1 from T1-ref.
+    """
+    selection_tier = _safe_str(row.get("core_selection_tier")).upper()
+    tracked_source = _safe_str(row.get("tracked_source")).lower()
+    all_channels = _safe_str(row.get("all_channels")).lower()
+
+    is_t4 = (
+        selection_tier == "T4"
+        or _safe_int(row.get("in_t4_expert_signal"), 0) == 1
+        or tracked_source.startswith("t4_")
+    )
+    if is_t4:
         return "T4"
-    if _safe_int(row.get("is_seed"), 0):
+
+    if selection_tier == "T1":
         return "T1"
-    tier = _safe_str(row.get("tier"))
-    if tier == "velocity":
+    is_core_seed = bool(row.get("is_core_seed", False)) or "seed_resolution" in all_channels
+    if is_core_seed:
+        return "T1"
+
+    # T1-ref: papers reached via one-hop expansion from seeds (seed_reference or
+    # framing_seed_reference channels). These are not primary seeds but inherit
+    # high provenance weight since they were cited by a seed.
+    if "seed_reference" in all_channels or "framing_seed_reference" in all_channels:
+        return "T1-ref"
+
+    if selection_tier == "T2":
+        return "T2"
+    if selection_tier == "T3":
         return "T3"
-    return "T2"
+
+    # Fall back to the legacy ``tier`` column for corpora built before
+    # Stage 5c wrote core_selection_tier.
+    legacy_tier = _safe_str(row.get("tier")).lower()
+    if legacy_tier == "velocity":
+        return "T3"
+    return "other"
+
+
+def _tier_counts(corpus: pd.DataFrame) -> dict[str, int]:
+    """Return an ordered tier-count dict with zeros for unused buckets."""
+    counts = Counter()
+    for _, row in corpus.iterrows():
+        counts[_tier_label(row)] += 1
+    return {tier: int(counts.get(tier, 0)) for tier in TIER_ORDER}
 
 
 def _top_papers(papers: pd.DataFrame, k: int = 10) -> list[dict[str, Any]]:
@@ -117,12 +190,12 @@ def _top_papers(papers: pd.DataFrame, k: int = 10) -> list[dict[str, Any]]:
 
 
 def _build_topic_brief(
-    topic_id: str,
+    topic_code: str,
     label: str,
     papers: pd.DataFrame,
     summaries: pd.DataFrame,
 ) -> dict[str, Any]:
-    """Build an expert review dict for one topic cluster."""
+    """Build an expert review dict for one TOPIC-XX bucket."""
     yr_min, yr_max = _year_span(papers)
     top_venues = _top_venues(papers, k=5)
 
@@ -149,11 +222,12 @@ def _build_topic_brief(
         flags.append(f"{low_conf} paper(s) have low-confidence AI summaries — recommend manual review.")
 
     return {
-        "topic_id": topic_id,
+        "topic_code": topic_code,
         "label": label,
         "n_papers": len(papers),
         "year_span": [yr_min, yr_max],
         "n_recent": n_recent,
+        "tier_breakdown": _tier_counts(papers),
         "top_venues": [{"venue": v, "count": c} for v, c in top_venues],
         "top_papers": _top_papers(papers, k=10),
         "low_conf_summaries": low_conf,
@@ -173,34 +247,33 @@ def _build_executive_summary(
 ) -> dict[str, Any]:
     """Summarise the corpus for the top-level executive section."""
     n_total = len(corpus)
-
-    # Tier breakdown
-    tier_counts: Counter = Counter()
-    for _, row in corpus.iterrows():
-        tier_counts[_tier_label(row)] += 1
+    tier_breakdown = _tier_counts(corpus)
 
     yr_min, yr_max = _year_span(corpus)
 
     # Top venues across the whole corpus
     top_corpus_venues = _top_venues(corpus, k=8)
 
-    # Topics flagged with issues
-    flagged_topics = [b["label"] for b in topic_briefs if b["flags"]]
+    # Flagged topics are reported by TOPIC-XX code (not cluster label) so
+    # reviewers can cross-reference the seeds manifest directly.
+    flagged_topic_codes = [b["topic_code"] for b in topic_briefs if b["flags"]]
 
     gm = audit_report.get("gate_metrics", {})
     return {
         "n_papers": n_total,
-        "tier_breakdown": dict(tier_counts),
+        "tier_breakdown": tier_breakdown,
         "year_range": [yr_min, yr_max],
         "top_venues": [{"venue": v, "count": c} for v, c in top_corpus_venues],
         "ms_focus_pct": round(_safe_float(gm.get("ms_focus_pct")), 2),
         "missing_abstract_pct": round(_safe_float(gm.get("missing_abstract_pct")), 2),
+        "category_mix_pct": dict(audit_report.get("category_mix_pct", {})),
         "category_entropy_normalized": round(_safe_float(audit_report.get("category_entropy_normalized")), 4),
         "audit_passed": bool(audit_report.get("passed", False)),
         "n_audit_errors": len(audit_report.get("errors", [])),
         "n_audit_warnings": len(audit_report.get("warnings", [])),
         "n_topics": len(topic_briefs),
-        "flagged_topics": flagged_topics,
+        "flagged_topic_codes": flagged_topic_codes,
+        "corpus_source": str(audit_report.get("corpus_source", "unknown")),
     }
 
 
@@ -214,12 +287,15 @@ def _render_topic_brief_md(brief: dict[str, Any]) -> str:
     lines: list[str] = []
     yr = brief.get("year_span", [None, None])
     yr_str = f"{yr[0]}–{yr[1]}" if yr[0] else "n/a"
-    lines.append(f"## {brief['label']} (`{brief['topic_id']}`)")
+    lines.append(f"## {brief['label']} (`{brief['topic_code']}`)")
     lines.append("")
+    tb = brief.get("tier_breakdown", {}) or {}
+    tier_line = ", ".join(f"{t}={tb.get(t, 0)}" for t in TIER_ORDER if tb.get(t, 0) > 0) or "—"
     lines.append(
         f"**{brief['n_papers']} papers** | "
         f"Year span: {yr_str} | "
-        f"Recent (≥2020): {brief.get('n_recent', 0)}"
+        f"Recent (≥2020): {brief.get('n_recent', 0)} | "
+        f"Tiers: {tier_line}"
     )
     lines.append("")
 
@@ -271,18 +347,61 @@ def _render_full_report_md(
     lines.append("")
     es = exec_summary
     gate_badge = "**PASS**" if es["audit_passed"] else "**FAIL**"
+    tb = es.get("tier_breakdown", {}) or {}
+    tier_cells = " | ".join(f"{t}={tb.get(t, 0)}" for t in TIER_ORDER)
     lines.append(f"| Metric | Value |")
     lines.append(f"|--------|-------|")
+    lines.append(f"| Corpus source | `{es.get('corpus_source', 'unknown')}` |")
     lines.append(f"| Final corpus size | {es['n_papers']} papers |")
-    lines.append(f"| Tier breakdown | {es['tier_breakdown']} |")
+    lines.append(f"| Tier breakdown | {tier_cells} |")
     yr = es.get("year_range", [None, None])
     lines.append(f"| Year range | {yr[0]}–{yr[1]} |")
     lines.append(f"| MS focus rate | {es['ms_focus_pct']}% |")
     lines.append(f"| Missing abstract rate | {es['missing_abstract_pct']}% |")
     lines.append(f"| Category diversity (entropy) | {es['category_entropy_normalized']} |")
     lines.append(f"| QA gate status | {gate_badge} ({es['n_audit_errors']} errors, {es['n_audit_warnings']} warnings) |")
-    lines.append(f"| Topics | {es['n_topics']} clusters |")
+    lines.append(f"| Topics covered | {es['n_topics']} TOPIC-XX buckets |")
     lines.append("")
+
+    # Explain the two metrics reviewers most often misread: "MS focus rate"
+    # and "Category diversity (entropy)".
+    lines.append("### How to read these numbers")
+    lines.append("")
+    lines.append(
+        "- **Tier breakdown.** `T1` = curated core seeds (primary literature). "
+        "`T1-ref` = papers reached via one-hop references from seeds (cited by "
+        "or citing a seed). `T2` = graph-established literature that passes "
+        "cross-seed, k-core, and in-degree gates in Stage 5c. `T3` = emerging "
+        "velocity literature (recent years with high citations/year). `T4` = "
+        "expert-curated signal papers. `other` = anything that slipped past "
+        "these buckets."
+    )
+    lines.append(
+        "- **MS focus rate.** Fraction of the selected corpus where either the "
+        "title/abstract or OpenAlex concept set contains MS-specific terminology "
+        "(e.g., \"multiple sclerosis\", \"MS lesion\", DMT names). T4 expert "
+        "picks are exempt from the denominator because their inclusion is "
+        "already justified manually. A value near 100% means nearly every "
+        "auto-selected paper is explicitly about MS rather than adjacent biology."
+    )
+    lines.append(
+        "- **Category diversity (entropy).** Shannon entropy of the corpus "
+        "distribution across the five governance categories "
+        "(pathogenesis_and_immunology, imaging_and_biomarkers, "
+        "clinical_trials_and_therapeutics, clinical_care_and_management, "
+        "epidemiology_and_population_health), binned from each paper's TOPIC-XX "
+        "code via `TOPIC_CATEGORY_MAP`, then normalized to [0, 1]. `1.0` means "
+        "a perfectly balanced corpus across all five categories; `0.0` means "
+        "every paper fell into a single category. Topics that map to more than "
+        "one category (e.g., TOPIC-09 Progressive MS) contribute to each."
+    )
+    lines.append("")
+
+    if es.get("category_mix_pct"):
+        lines.append("**Category mix (%):**")
+        for category, pct in sorted(es["category_mix_pct"].items(), key=lambda kv: -kv[1]):
+            lines.append(f"- {category}: {pct}%")
+        lines.append("")
 
     if es.get("top_venues"):
         lines.append("**Top venues across corpus:**")
@@ -290,10 +409,10 @@ def _render_full_report_md(
             lines.append(f"- {entry['venue']} ({entry['count']} papers)")
         lines.append("")
 
-    if es.get("flagged_topics"):
+    if es.get("flagged_topic_codes"):
         lines.append("**Topics requiring reviewer attention:**")
-        for t in es["flagged_topics"]:
-            lines.append(f"- {t}")
+        for code in es["flagged_topic_codes"]:
+            lines.append(f"- `{code}` {TOPIC_LABELS.get(code, '')}".rstrip())
         lines.append("")
 
     # --- QA/QC Digest ---
@@ -319,12 +438,15 @@ def _render_full_report_md(
     lines.append("## Per-Topic Expert Briefs")
     lines.append("")
     lines.append(
-        "Each section covers one algorithmically derived topic cluster. "
-        "The top-10 papers are ranked by composite importance score (PageRank + citation-age normalization). "
-        "Reviewer flags highlight coverage or quality concerns that warrant a manual check."
+        "Each section covers one TOPIC-XX bucket from the v1.3 MS Field "
+        "Orientation Guide taxonomy. Papers are grouped by their "
+        "`primary_topic_code` as assigned in Stage 5b. The top-10 papers are "
+        "ranked by composite importance score (PageRank + citation-age "
+        "normalization). Reviewer flags highlight coverage or quality concerns "
+        "that warrant a manual check."
     )
     lines.append("")
-    for brief in sorted(topic_briefs, key=lambda b: b["label"]):
+    for brief in sorted(topic_briefs, key=lambda b: b["topic_code"]):
         lines.append(_render_topic_brief_md(brief))
 
     # --- Action Items ---
@@ -365,33 +487,44 @@ def run(config_path: str) -> None:
     with open(audit_path, encoding="utf-8") as f:
         audit_report: dict[str, Any] = json.load(f)
 
-    # Load scored corpus (final papers only)
-    scored_path = out_dir / "graph" / "scored_papers.csv"
-    if not scored_path.exists():
-        raise FileNotFoundError(f"scored_papers.csv not found: {scored_path}")
-    scored = pd.read_csv(scored_path, low_memory=False)
-    scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
-    corpus = scored[scored["in_final_corpus"] == 1].copy()
+    # Load the post-selection corpus written by Stage 5c. Prefer the T4-tracked
+    # file so the tier breakdown sees curated picks. Fall back to the narrower
+    # selected file, and only then to the raw scored corpus for dev debugging.
+    graph_dir = out_dir / "graph"
+    tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
+    selected_path = graph_dir / "core_corpus_selected.csv"
+    scored_path = graph_dir / "scored_papers.csv"
+    if tracked_path.exists():
+        corpus_source = "core_corpus_tracked_with_t4.csv"
+        corpus = pd.read_csv(tracked_path, low_memory=False)
+    elif selected_path.exists():
+        corpus_source = "core_corpus_selected.csv"
+        corpus = pd.read_csv(selected_path, low_memory=False)
+    elif scored_path.exists():
+        corpus_source = "scored_papers.csv (pre-selection fallback)"
+        scored = pd.read_csv(scored_path, low_memory=False)
+        scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
+        corpus = scored[scored["in_final_corpus"] == 1].copy()
+    else:
+        raise FileNotFoundError(
+            f"No corpus CSV found in {graph_dir}. Run Stage 5c before Stage 10."
+        )
     if corpus.empty:
-        raise RuntimeError("No papers in final corpus — cannot generate expert comms.")
+        raise RuntimeError(f"No papers in final corpus ({corpus_source}) — cannot generate expert comms.")
     corpus["canonical_paper_id"] = corpus["canonical_paper_id"].astype(str)
 
-    # Load topic assignments
+    # Ensure primary_topic_code is present — tracked_with_t4 carries it from
+    # Stage 5c, but the fallback files may not, so merge from topic_evidence.
     topics_dir = out_dir / "topics"
-    topic_labels: dict[str, str] = {}
-    paper_to_topic: dict[str, str] = {}
-    topic_clusters_path = topics_dir / "topic_clusters.csv"
-    paper_topics_path = topics_dir / "paper_topics.csv"
-    if topic_clusters_path.exists():
-        tc = pd.read_csv(topic_clusters_path)
-        topic_labels = dict(
-            zip(tc["topic_id"].astype(str), tc.get("auto_label", tc["topic_id"]).astype(str))
+    topic_evidence_path = topics_dir / "paper_topic_evidence.csv"
+    if "primary_topic_code" not in corpus.columns and topic_evidence_path.exists():
+        topic_evidence = pd.read_csv(
+            topic_evidence_path,
+            usecols=["canonical_paper_id", "primary_topic_code"],
+            low_memory=False,
         )
-    if paper_topics_path.exists():
-        pt = pd.read_csv(paper_topics_path)
-        paper_to_topic = dict(
-            zip(pt["canonical_paper_id"].astype(str), pt["topic_id"].astype(str))
-        )
+        topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
+        corpus = corpus.merge(topic_evidence, on="canonical_paper_id", how="left")
 
     # Load distilled summaries if available
     summaries_path = out_dir / "distilled" / "paper_summaries.csv"
@@ -400,15 +533,22 @@ def run(config_path: str) -> None:
         summaries = pd.read_csv(summaries_path, low_memory=False)
         summaries["canonical_paper_id"] = summaries["canonical_paper_id"].astype(str)
 
-    # Build per-topic briefs
-    corpus["_topic_id"] = corpus["canonical_paper_id"].map(paper_to_topic).fillna("unmapped")
-    topic_ids = sorted(corpus["_topic_id"].unique())
+    # Group briefs by TOPIC-XX code (not by Leiden cluster ID). Each paper's
+    # primary_topic_code comes from the topic_evidence CSV written at Stage 5b.
+    topic_codes_series = corpus.get("primary_topic_code", pd.Series("", index=corpus.index)).fillna("")
+    corpus["_topic_code"] = topic_codes_series.map(_extract_topic_code).fillna("")
+    corpus.loc[corpus["_topic_code"] == "", "_topic_code"] = "UNMAPPED"
+
     topic_briefs: list[dict[str, Any]] = []
-    for tid in topic_ids:
-        label = topic_labels.get(tid, f"Topic {tid}")
-        topic_papers = corpus[corpus["_topic_id"] == tid].copy()
-        brief = _build_topic_brief(tid, label, topic_papers, summaries)
+    for topic_code in sorted(corpus["_topic_code"].unique()):
+        label = TOPIC_LABELS.get(topic_code, "Unmapped" if topic_code == "UNMAPPED" else topic_code)
+        topic_papers = corpus[corpus["_topic_code"] == topic_code].copy()
+        brief = _build_topic_brief(topic_code, label, topic_papers, summaries)
         topic_briefs.append(brief)
+
+    # Thread the corpus source into the audit report so it appears verbatim in
+    # the exec summary even when we fell through to a fallback CSV.
+    audit_report.setdefault("corpus_source", corpus_source)
 
     exec_summary = _build_executive_summary(corpus, audit_report, topic_briefs)
     generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -426,7 +566,7 @@ def run(config_path: str) -> None:
     md = _render_full_report_md(exec_summary, topic_briefs, audit_report, generated_at)
     (comms_dir / "expert_comms_report.md").write_text(md, encoding="utf-8")
 
-    n_flagged = len(exec_summary.get("flagged_topics", []))
+    n_flagged = len(exec_summary.get("flagged_topic_codes", []))
     gate = "PASS" if exec_summary["audit_passed"] else "FAIL"
     print(
         f"Expert comms report written to {comms_dir} "

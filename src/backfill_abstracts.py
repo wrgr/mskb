@@ -226,14 +226,28 @@ def run(config_path: str) -> None:
 
     canonical.to_csv(canonical_path, index=False)
 
+    canonical_abstracts = canonical[["canonical_paper_id", "abstract", "abstract_backfill_source"]].copy()
+
     scored_path = graph_dir / "scored_papers.csv"
     if scored_path.exists():
         scored = pd.read_csv(scored_path)
         scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
-        canonical_abstracts = canonical[["canonical_paper_id", "abstract", "abstract_backfill_source"]].copy()
         scored = scored.drop(columns=["abstract", "abstract_backfill_source"], errors="ignore")
         scored = scored.merge(canonical_abstracts, on="canonical_paper_id", how="left")
         scored.to_csv(scored_path, index=False)
+
+    # Sync abstracts into the post-selection corpus snapshots so audit_kb and
+    # expert_comms see recovered abstracts when they read tracked/selected CSVs.
+    for selected_csv in (
+        graph_dir / "core_corpus_tracked_with_t4.csv",
+        graph_dir / "core_corpus_selected.csv",
+    ):
+        if selected_csv.exists():
+            sel = pd.read_csv(selected_csv, low_memory=False)
+            sel["canonical_paper_id"] = sel["canonical_paper_id"].astype(str)
+            sel = sel.drop(columns=["abstract", "abstract_backfill_source"], errors="ignore")
+            sel = sel.merge(canonical_abstracts, on="canonical_paper_id", how="left")
+            sel.to_csv(selected_csv, index=False)
 
     stats_path = raw_dir / "abstract_backfill_stats.json"
     stats_path.write_text(json.dumps(stats, indent=2), encoding="utf-8")

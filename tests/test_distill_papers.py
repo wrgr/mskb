@@ -3,7 +3,43 @@
 import pandas as pd
 import pytest
 
-from src.distill_papers import _rules_based_distill, _select_tiered_distill_corpus
+from src.distill_papers import _init_api_client, _rules_based_distill, _select_tiered_distill_corpus
+
+
+def test_init_api_client_strict_anthropic_missing_raises(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Explicit provider=anthropic with no credentials must error, not fall back."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
+    with pytest.raises(RuntimeError, match="anthropic"):
+        _init_api_client({"provider": "anthropic"})
+
+
+def test_init_api_client_strict_gemini_missing_raises(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Explicit provider=gemini with no credentials must error, not fall back."""
+    for key in ("GEMINI_API_KEY", "GOOGLE_API_KEY", "GOOGLE_GEMINI_API_KEY"):
+        monkeypatch.delenv(key, raising=False)
+    with pytest.raises(RuntimeError, match="gemini"):
+        _init_api_client({"provider": "gemini"})
+
+
+def test_init_api_client_rules_based_explicit(monkeypatch: pytest.MonkeyPatch) -> None:
+    """provider=rules_based returns (None, 'rules_based') without checking env vars."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
+    client, provider = _init_api_client({"provider": "rules_based"})
+    assert client is None
+    assert provider == "rules_based"
+
+
+def test_init_api_client_strict_bypass_opt_out(monkeypatch: pytest.MonkeyPatch) -> None:
+    """strict_provider=false allows silent fallback for explicit providers."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
+    for key in ("GEMINI_API_KEY", "GOOGLE_API_KEY", "GOOGLE_GEMINI_API_KEY"):
+        monkeypatch.delenv(key, raising=False)
+    client, provider = _init_api_client({"provider": "anthropic", "strict_provider": False})
+    assert client is None
+    assert provider == "anthropic"
 
 
 def test_rules_based_distill_basic():
