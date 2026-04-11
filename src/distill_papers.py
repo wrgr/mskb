@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, save_json
+from .utils import ensure_dir, load_config, load_downstream_corpus, save_json
 
 
 READING_LEVELS = ("kid", "basic", "advanced")
@@ -1003,11 +1003,10 @@ def _select_tiered_distill_corpus(scored: pd.DataFrame, max_papers: int, dist_cf
 def _load_distill_corpus(
     graph_dir: Path, dist_cfg: dict, fulltext_by_id: dict
 ) -> pd.DataFrame:
-    """Load scored papers and return selection based on configured distillation strategy."""
+    """Load downstream corpus and return selection based on configured distillation strategy."""
     max_papers = int(dist_cfg.get("max_papers_per_run", 500))
     selection_mode = _clean_text(dist_cfg.get("selection_mode", "importance")).lower() or "importance"
-    scored = pd.read_csv(graph_dir / "scored_papers.csv", low_memory=False)
-    scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
+    scored, _ = load_downstream_corpus(graph_dir)
     scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
     has_abstract = ~(scored["abstract"].isna() | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"]))
     has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))

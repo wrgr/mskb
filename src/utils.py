@@ -97,3 +97,40 @@ def write_df(df: pd.DataFrame, path: Path) -> None:
         df.to_parquet(path, index=False)
     else:
         df.to_csv(path, index=False)
+
+
+def load_downstream_corpus(graph_dir: Path) -> tuple[pd.DataFrame, Path]:
+    """Load corpus for downstream stages, preferring curated tracked outputs.
+
+    Priority:
+      1) core_corpus_tracked_with_t4.csv
+      2) core_corpus_selected.csv
+      3) scored_papers.csv filtered by in_final_corpus / tier
+    """
+    tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
+    selected_path = graph_dir / "core_corpus_selected.csv"
+    scored_path = graph_dir / "scored_papers.csv"
+
+    source_path: Path
+    if tracked_path.exists():
+        source_path = tracked_path
+    elif selected_path.exists():
+        source_path = selected_path
+    elif scored_path.exists():
+        source_path = scored_path
+    else:
+        raise FileNotFoundError(
+            f"Missing downstream corpus input. Checked: {tracked_path}, {selected_path}, {scored_path}"
+        )
+
+    papers = pd.read_csv(source_path, low_memory=False)
+    if source_path.name == "scored_papers.csv":
+        has_in_final = "in_final_corpus" in papers.columns
+        if has_in_final:
+            papers["in_final_corpus"] = papers["in_final_corpus"].fillna(0).astype(int)
+            papers = papers[papers["in_final_corpus"] == 1].copy()
+        elif "tier" in papers.columns:
+            papers = papers[papers["tier"].astype(str).isin(["included", "seed_neighbor"])].copy()
+    elif "tier" in papers.columns:
+        papers = papers[papers["tier"].astype(str).isin(["included", "seed_neighbor"])].copy()
+    return papers, source_path

@@ -7,7 +7,7 @@ sidebar:
 
 import { Aside, Badge } from '@astrojs/starlight/components';
 
-MSKB is built from a curated corpus of approximately **450–650 peer-reviewed documents** spanning 19 research topics in multiple sclerosis. This section documents every significant design decision behind that corpus — not just what was decided, but why.
+MSKB is built from a curated corpus selected by explicit topic-balance and quality gates over a much larger retrieved candidate pool. This section documents every significant design decision behind that corpus — not just what was decided, but why.
 
 The corpus specification lives in [`data/ms_corpus_specification_v1.xlsx`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_specification_v1.xlsx) and the full audit trail in [`data/ms_corpus_design_decisions.md`](https://github.com/wrgr/mskb/blob/main/data/ms_corpus_design_decisions.md).
 
@@ -29,14 +29,14 @@ See [Methodology → Classification systems](/mskb/corpus/methodology/#classific
 
 | Parameter | Value |
 |-----------|-------|
-| Target corpus size | ~450–650 documents |
-| Topics | 18 + Topic 1b (Natural History) |
-| T1 seeds | 40 (base 2 per topic; augmented where coverage was thin) |
-| Review anchors | 6 (R1–R6, expansion only) |
-| Total expansion sources | 46 |
-| Expected raw candidates | 5,000–15,000 before filtering |
+| Rebalance target corpus size | 1,000 (configuration parameter) |
+| Topics | 18 (`TOPIC-00` … `TOPIC-17`) |
+| T1 seeds | 40+ (maintained in `seeds/core_seeds.csv`) |
+| Review/framing anchors | expansion-only support set (not topic-assigned as corpus papers) |
+| Topic expected share | `1/n_topics` |
+| Topic bounds from target | min = `0.5 * expected`, max = `1.5 * expected` |
 
-The target range balances coverage depth (~15–35 documents per topic) against review feasibility and RAG retrieval signal-to-noise.
+Topic bounds are computed from the current configured target and the number of active topic codes, then enforced during selection/audit.
 
 ---
 
@@ -49,14 +49,13 @@ Documents are selected through four distinct mechanisms, each appropriate for a 
 
 See [Seeds](/mskb/corpus/seeds/) for the full list with metadata and rationale.
 
-### Tier 2 — Cross-seed connected
+### Tier 2 — Connectivity + structure
 **Established corpus gate.** Tier 2 requires all of:
-- `cross_seed_score >= 2`
+- `in_degree >= 5 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)`
 - `kcore >= 4`
-- `in_degree >= 2`
 - `paper_importance_score > P70(anchor_category)` (category-relative importance threshold)
 
-To avoid systematically under-selecting thin topics, structural gates (`kcore`, `in_degree`) are relaxed for topics whose strict-pass share is `<2%` of the provisional corpus. Cross-seed and category-relative importance requirements remain in force.
+To avoid systematically under-selecting thin topics, undersubscribed-topic expansion can add lower-importance candidates that still pass structure/connectivity and within-topic ranking constraints.
 
 Additional signal recorded (but not used as a filter): papers whose connected seeds span ≥ 2 topic codes are flagged as **multi-topic bridges** — these are often the highest-value papers for cross-topic queries.
 
@@ -100,11 +99,10 @@ Equity papers are structurally disconnected from the basic science and clinical 
 ## Quality gates
 
 ### Connectivity and recency gates
-- T2 structural gate: `cross_seed_score >= 2`, `kcore >= 4`, `in_degree >= 2`, and `paper_importance_score > P70(anchor_category)`
-- T2 low-share relaxation: for topics `<2%` of strict-pass provisional corpus, drop `kcore`/`in_degree` requirements while keeping `cross_seed` + `importance` gates
+- T2 structural gate: `in_degree >= 5 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)`, plus `kcore >= 4`, plus `paper_importance_score > P70(anchor_category)`
 - T3 gate: `year >= 2022` and `citations_per_year >= 20`, topic-capped at `max(5, ceil(0.20 * T2_topic_count))`
 - T4: `cross_seed_score = 0` acceptable with documented expert signal
-- Final balancing rule: no topic may exceed **20%** of the selected corpus (iterative trim from lowest-priority non-seed papers in over-cap topics)
+- Final balancing rule: rebalance max bound derived from target corpus size (`1.5 * expected`), with iterative trim from lowest-priority non-seed papers in over-cap topics
 
 ### Subdomain score
 `subdomain_score = max(citation_percentile, velocity_percentile)` computed **within each assigned topic**, not cross-field.

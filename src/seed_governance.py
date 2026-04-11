@@ -43,7 +43,7 @@ MS_CONCEPT_TERMS = [
 ]
 
 BRIDGE_HINTS = ["bridge", "bridging", "context", "adjacent", "cross-disease", "mechanistic context"]
-_TOPIC_CODE_RE = re.compile(r"^(T\d+b?)", re.IGNORECASE)
+_TOPIC_CODE_RE = re.compile(r"(TOPIC-\d{2}|T\d+b?)", re.IGNORECASE)
 
 # Map canonical topic codes to the broad governance quota categories.
 # Some topics contribute to more than one governance category by design.
@@ -83,8 +83,18 @@ def _count_hits(text: str, terms: list[str]) -> int:
 
 def _extract_topic_code(value: object) -> str:
     text = _clean_text(value)
-    match = _TOPIC_CODE_RE.match(text)
-    return match.group(1) if match else ""
+    match = _TOPIC_CODE_RE.search(text)
+    return match.group(1).upper() if match else ""
+
+
+def _count_seed_topics_from_primary_topic(core: pd.DataFrame) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for _, row in core.iterrows():
+        code = _extract_topic_code(row.get("primary_topic", ""))
+        if not code:
+            continue
+        counts[code] = int(counts.get(code, 0)) + 1
+    return counts
 
 
 def _count_seed_categories_from_primary_topic(core: pd.DataFrame) -> dict[str, int]:
@@ -192,6 +202,27 @@ def _evaluate_category_quotas(core: pd.DataFrame, quota_cfg: dict) -> tuple[list
         if observed > max_allowed:
             errors.append(f"category '{category}' above maximum: {observed} > {max_allowed}")
     return errors, effective_counts, mapped_counts, count_sources
+
+
+def _evaluate_topic_quotas(core: pd.DataFrame, quota_cfg: dict) -> tuple[list[str], dict]:
+    errors: list[str] = []
+    topic_counts = _count_seed_topics_from_primary_topic(core)
+    observed_counts: dict[str, int] = {}
+    for topic_code, bounds in (quota_cfg or {}).items():
+        if not isinstance(bounds, dict):
+            continue
+        code = _clean_text(topic_code).upper()
+        if not code:
+            continue
+        observed = int(topic_counts.get(code, 0))
+        observed_counts[code] = observed
+        min_allowed = int(bounds.get("min", 0))
+        max_allowed = int(bounds.get("max", 10**9))
+        if observed < min_allowed:
+            errors.append(f"topic '{code}' below minimum: {observed} < {min_allowed}")
+        if observed > max_allowed:
+            errors.append(f"topic '{code}' above maximum: {observed} > {max_allowed}")
+    return errors, observed_counts
 
 
 def _evaluate_caps(values: pd.Series, cap: int, label: str) -> tuple[list[str], dict]:
@@ -379,9 +410,18 @@ def run(config_path: str) -> None:
         meta["category"] = meta["category"].fillna("uncategorized").astype(str)
     meta.to_csv(outdir / "seed_metadata.csv", index=False)
 
-    quota_errors, category_counts, topic_mapped_counts, category_count_sources = _evaluate_category_quotas(
-        core, gcfg.get("category_quotas", {})
-    )
+    topic_quota_cfg = gcfg.get("topic_quotas", {}) or {}
+    quota_mode = "topic" if bool(topic_quota_cfg) else "category"
+    if quota_mode == "topic":
+        quota_errors, topic_counts = _evaluate_topic_quotas(core, topic_quota_cfg)
+        category_counts: dict[str, int] = {}
+        topic_mapped_counts: dict[str, int] = {}
+        category_count_sources: dict[str, str] = {}
+    else:
+        quota_errors, category_counts, topic_mapped_counts, category_count_sources = _evaluate_category_quotas(
+            core, gcfg.get("category_quotas", {})
+        )
+        topic_counts = _count_seed_topics_from_primary_topic(core)
     errors.extend(quota_errors)
 
     venue_cap = max(0, int(gcfg.get("venue_cap", 0)))
@@ -414,6 +454,8 @@ def run(config_path: str) -> None:
         "n_core_seeds": int(len(core)),
         "n_framing_seeds": int(len(framing)),
         "n_resolved_metadata": int(meta["metadata_resolved"].fillna(False).astype(bool).sum()) if not meta.empty else 0,
+        "quota_mode": quota_mode,
+        "topic_counts": {str(k): int(v) for k, v in topic_counts.items()},
         "category_counts": {str(k): int(v) for k, v in category_counts.items()},
         "category_count_sources": {str(k): str(v) for k, v in category_count_sources.items()},
         "topic_mapped_category_counts": {str(k): int(v) for k, v in topic_mapped_counts.items()},

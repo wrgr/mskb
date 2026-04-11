@@ -3,6 +3,7 @@
 import argparse
 import json
 import math
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -37,6 +38,65 @@ def _normalize_doi(value: object) -> str:
     return text.strip()
 
 
+def _annotate_reference_seed_tier(frame: pd.DataFrame) -> pd.DataFrame:
+    """Relabel selected non-core reference seeds as T1_REF for explicit tracking."""
+    if frame.empty or "core_selection_tier" not in frame.columns:
+        return frame
+    out = frame.copy()
+    is_reference_seed = out.get("is_reference_seed", pd.Series(False, index=out.index)).map(_boolish)
+    is_core_seed = out.get("is_core_seed", pd.Series(False, index=out.index)).map(_boolish)
+    relabel_mask = is_reference_seed & (~is_core_seed) & out["core_selection_tier"].astype(str).isin({"T2", "T3"})
+    out.loc[relabel_mask, "core_selection_tier"] = "T1_REF"
+    return out
+
+
+def _recent_velocity_mask(frame: pd.DataFrame, min_year: int, min_citations_per_year: float) -> pd.Series:
+    """Return mask for papers that satisfy the recent-paper velocity definition."""
+    if frame.empty:
+        return pd.Series(False, index=frame.index)
+    years = pd.to_numeric(
+        frame.get("year_int", frame.get("year", pd.Series(0, index=frame.index))),
+        errors="coerce",
+    ).fillna(0)
+    cpy = pd.to_numeric(
+        frame.get("citations_per_year_raw", pd.Series(0.0, index=frame.index)),
+        errors="coerce",
+    ).fillna(0.0)
+    return (years >= int(min_year)) & (cpy >= float(min_citations_per_year))
+
+
+def _recent_reserve_target(topic_total: int, reserve_fraction: float, reserve_floor: int) -> int:
+    """Compute per-topic recent-paper reserve target."""
+    if topic_total <= 0:
+        return 0
+    frac_target = int(math.ceil(max(0.0, float(reserve_fraction)) * float(topic_total)))
+    return max(int(max(0, reserve_floor)), frac_target)
+
+
+def _recent_topic_diagnostics(
+    frame: pd.DataFrame,
+    *,
+    recent_col: str,
+    reserve_fraction: float,
+    reserve_floor: int,
+) -> dict[str, dict[str, int]]:
+    """Summarise per-topic recent-paper coverage versus reserve target."""
+    if frame.empty or recent_col not in frame.columns:
+        return {}
+    out: dict[str, dict[str, int]] = {}
+    for topic, group in frame.groupby("primary_topic_code"):
+        total = int(len(group))
+        recent_count = int(group[recent_col].fillna(False).astype(bool).sum())
+        reserve_target = _recent_reserve_target(total, reserve_fraction, reserve_floor)
+        out[str(topic)] = {
+            "selected_total": total,
+            "recent_count": recent_count,
+            "reserve_target": int(reserve_target),
+            "reserve_shortfall": int(max(0, reserve_target - recent_count)),
+        }
+    return out
+
+
 def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
     path = root / "data" / "t4_expert_signal.yaml"
     if not path.exists():
@@ -52,6 +112,8 @@ def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
                 "corpus_status",
                 "corpus_id",
                 "corpus_doi",
+                "include_in_graph",
+                "exclusion_note",
                 "mapped_canonical_paper_id",
             ]
         )
@@ -81,10 +143,14 @@ def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
                     "corpus_id": str(item.get("corpus_id", "")).strip(),
                     # v2: doi field; v1 fallback: corpus_doi
                     "corpus_doi": str(item.get("doi", "") or item.get("corpus_doi", "")).strip(),
+                    "include_in_graph": _boolish(item.get("include_in_graph", True)),
+                    "exclusion_note": str(item.get("exclusion_note", "")).strip(),
                 }
             )
     t4 = pd.DataFrame(rows)
     if t4.empty:
+        t4["include_in_graph"] = pd.Series(dtype=bool)
+        t4["exclusion_note"] = pd.Series(dtype=str)
         t4["mapped_canonical_paper_id"] = ""
         return t4
 
@@ -191,6 +257,155 @@ def _apply_t2_per_topic_cap(
     return capped
 
 
+def _expand_undersubscribed_topics_for_diversity(
+    scoped: pd.DataFrame,
+    is_t1: pd.Series,
+    is_t2: pd.Series,
+    *,
+    max_t2_per_topic: int,
+    structure_gate: pd.Series,
+    connectivity_gate: pd.Series,
+    min_importance_rank_pct: float,
+    max_additional_fraction: float,
+    max_total_additions: int,
+    floor_target_count: int,
+    current_topic_selected_counts: dict[str, int],
+) -> tuple[pd.Series, dict[str, dict[str, int]]]:
+    """Top up floor topics with diverse lower-importance candidates.
+
+    Rules:
+      - Only floor topics (current selected count below floor_target_count) are considered.
+      - Added papers must pass structural and connectivity gates.
+      - Added papers must pass a softer within-topic importance rank threshold.
+      - Per-topic additions are capped to <= max_additional_fraction * floor_target_count.
+      - Global additions are capped by max_total_additions.
+    """
+    if max_t2_per_topic <= 0 or max_total_additions <= 0 or floor_target_count <= 0:
+        return is_t2.copy(), {}
+
+    community_col = next(
+        (c for c in ("dominant_community_id", "community_id") if c in scoped.columns),
+        None,
+    )
+    out = is_t2.copy()
+    diagnostics: dict[str, dict[str, int]] = {}
+    remaining = int(max_total_additions)
+
+    topic_order: list[tuple[int, str]] = []
+    for topic, group in scoped.groupby("primary_topic_code"):
+        topic_selected_count = int(current_topic_selected_counts.get(str(topic), 0))
+        shortage = max(0, int(floor_target_count - topic_selected_count))
+        if shortage > 0:
+            topic_order.append((shortage, str(topic)))
+    topic_order.sort(key=lambda x: (-x[0], x[1]))
+
+    for _, topic in topic_order:
+        if remaining <= 0:
+            break
+        group = scoped[scoped["primary_topic_code"] == topic].copy()
+        topic_idx = group.index
+        topic_t2_mask = out.loc[topic_idx] & ~is_t1.loc[topic_idx]
+        topic_t2_count = int(topic_t2_mask.sum())
+        topic_pool_count = int(len(group))
+        topic_selected_count = int(current_topic_selected_counts.get(str(topic), 0))
+        shortage = max(0, int(floor_target_count - topic_selected_count))
+        t2_headroom = max(0, int(max_t2_per_topic - topic_t2_count))
+        topic_add_cap = int(math.floor(max(0.0, max_additional_fraction) * floor_target_count))
+        if shortage <= 0 or topic_add_cap <= 0:
+            diagnostics[str(topic)] = {
+                "is_floor_topic": bool(shortage > 0),
+                "floor_target_count": int(floor_target_count),
+                "topic_selected_before": int(topic_selected_count),
+                "topic_t2_before": topic_t2_count,
+                "floor_shortage": int(shortage),
+                "topic_pool_size": int(topic_pool_count),
+                "topic_add_cap_by_fraction": int(topic_add_cap),
+                "candidate_pool": 0,
+                "added": 0,
+            }
+            continue
+
+        candidates = group[
+            (~is_t1.loc[topic_idx])
+            & (~out.loc[topic_idx])
+            & connectivity_gate.loc[topic_idx]
+            & structure_gate.loc[topic_idx]
+            & (group["topic_importance_rank_pct"] >= min_importance_rank_pct)
+        ].copy()
+
+        if candidates.empty:
+            diagnostics[str(topic)] = {
+                "is_floor_topic": True,
+                "floor_target_count": int(floor_target_count),
+                "topic_selected_before": int(topic_selected_count),
+                "topic_t2_before": topic_t2_count,
+                "floor_shortage": int(shortage),
+                "topic_pool_size": int(topic_pool_count),
+                "topic_add_cap_by_fraction": int(topic_add_cap),
+                "candidate_pool": 0,
+                "added": 0,
+            }
+            continue
+
+        add_n = min(
+            int(shortage),
+            int(topic_add_cap),
+            int(t2_headroom),
+            int(remaining),
+            int(len(candidates)),
+        )
+        if add_n <= 0:
+            diagnostics[str(topic)] = {
+                "is_floor_topic": True,
+                "floor_target_count": int(floor_target_count),
+                "topic_selected_before": int(topic_selected_count),
+                "topic_t2_before": topic_t2_count,
+                "floor_shortage": int(shortage),
+                "topic_pool_size": int(topic_pool_count),
+                "topic_add_cap_by_fraction": int(topic_add_cap),
+                "candidate_pool": int(len(candidates)),
+                "added": 0,
+            }
+            continue
+
+        if community_col is not None:
+            current_clusters = Counter(
+                group.loc[topic_t2_mask, community_col].dropna().astype(str)
+            )
+            candidates["_cluster_str"] = candidates[community_col].fillna("").astype(str)
+            candidates["_cluster_count"] = candidates["_cluster_str"].map(
+                lambda c: current_clusters.get(c, 0)
+            )
+            candidates = candidates.sort_values(
+                ["_cluster_count", "paper_importance_score", "citations_per_year_raw"],
+                ascending=[True, False, False],
+            )
+        else:
+            candidates = candidates.sort_values(
+                ["topic_importance_rank_pct", "paper_importance_score", "citations_per_year_raw"],
+                ascending=[False, False],
+            )
+
+        picked = candidates.head(add_n)
+        out.loc[picked.index] = True
+        current_topic_selected_counts[str(topic)] = int(topic_selected_count + len(picked))
+        remaining -= int(len(picked))
+        diagnostics[str(topic)] = {
+            "is_floor_topic": True,
+            "floor_target_count": int(floor_target_count),
+            "topic_selected_before": int(topic_selected_count),
+            "topic_selected_after": int(current_topic_selected_counts.get(str(topic), 0)),
+            "topic_t2_before": topic_t2_count,
+            "floor_shortage": int(shortage),
+            "topic_pool_size": int(topic_pool_count),
+            "topic_add_cap_by_fraction": int(topic_add_cap),
+            "candidate_pool": int(len(candidates)),
+            "added": int(len(picked)),
+        }
+
+    return out, diagnostics
+
+
 def _select_t3_ids(
     scoped: pd.DataFrame,
     is_t1: pd.Series,
@@ -232,40 +447,104 @@ def _select_t3_ids(
 def _apply_topic_cap(
     selected: pd.DataFrame,
     max_topic_share: float,
-) -> tuple[pd.DataFrame, list[dict]]:
+    max_topic_count: int = 0,
+    recent_reserve_fraction: float = 0.0,
+    recent_reserve_floor: int = 0,
+) -> tuple[pd.DataFrame, list[dict], dict[str, int]]:
     capped = selected.copy()
     removed: list[dict] = []
-    tier_rank = {"T3": 0, "T2": 1, "T1": 2}
+    tier_rank = {"T3": 0, "T2": 1, "T1_REF": 2, "T1": 2}
+    reserve_blocked: Counter = Counter()
+    has_recent_col = "is_recent_velocity" in capped.columns
+    reserve_fraction = max(0.0, float(recent_reserve_fraction))
+    reserve_floor = max(0, int(recent_reserve_floor))
 
     while True:
         total = int(len(capped))
         if total <= 0:
             break
         max_allowed = int(math.floor(max_topic_share * total))
+        if max_topic_count > 0:
+            max_allowed = min(max_allowed, int(max_topic_count)) if max_topic_share > 0 else int(max_topic_count)
+        max_allowed = max(1, int(max_allowed))
         over = capped["primary_topic_code"].value_counts()
         over = over[over > max_allowed]
         if over.empty:
             break
 
-        topic = str((over - max_allowed).sort_values(ascending=False).index[0])
-        candidates = capped[(capped["primary_topic_code"] == topic) & (capped["core_selection_tier"] != "T1")].copy()
-        if candidates.empty:
-            break
-        candidates["tier_rank"] = candidates["core_selection_tier"].map(tier_rank).fillna(1)
-        candidates = candidates.sort_values(["tier_rank", "paper_importance_score", "citations_per_year_raw"])
-        drop_row = candidates.iloc[0]
-        drop_id = str(drop_row["canonical_paper_id"])
-        removed.append(
-            {
-                "canonical_paper_id": drop_id,
-                "primary_topic_code": topic,
-                "removed_tier": str(drop_row.get("core_selection_tier", "")),
-                "paper_importance_score": float(drop_row.get("paper_importance_score", 0.0)),
-            }
-        )
-        capped = capped[capped["canonical_paper_id"].astype(str) != drop_id].copy()
+        dropped = False
+        for topic in (over - max_allowed).sort_values(ascending=False).index.tolist():
+            topic = str(topic)
+            topic_rows = capped[capped["primary_topic_code"] == topic].copy()
+            candidates = topic_rows[
+                ~topic_rows["core_selection_tier"].astype(str).isin({"T1", "T1_REF"})
+            ].copy()
+            if candidates.empty:
+                continue
 
-    return capped, removed
+            if has_recent_col:
+                reserve_target = _recent_reserve_target(len(topic_rows), reserve_fraction, reserve_floor)
+                current_recent = int(topic_rows["is_recent_velocity"].fillna(False).astype(bool).sum())
+                if reserve_target > 0 and current_recent <= reserve_target:
+                    candidates = candidates[~candidates["is_recent_velocity"].fillna(False).astype(bool)].copy()
+                    if candidates.empty:
+                        reserve_blocked[topic] += 1
+                        continue
+
+            candidates["tier_rank"] = candidates["core_selection_tier"].map(tier_rank).fillna(1)
+            candidates = candidates.sort_values(["tier_rank", "paper_importance_score", "citations_per_year_raw"])
+            drop_row = candidates.iloc[0]
+            drop_id = str(drop_row["canonical_paper_id"])
+            removed.append(
+                {
+                    "canonical_paper_id": drop_id,
+                    "primary_topic_code": topic,
+                    "removed_tier": str(drop_row.get("core_selection_tier", "")),
+                    "paper_importance_score": float(drop_row.get("paper_importance_score", 0.0)),
+                }
+            )
+            capped = capped[capped["canonical_paper_id"].astype(str) != drop_id].copy()
+            dropped = True
+            break
+
+        if not dropped:
+            break
+
+    return capped, removed, {str(k): int(v) for k, v in reserve_blocked.items()}
+
+
+def _apply_global_tracked_cap(tracked: pd.DataFrame, max_total_papers: int) -> tuple[pd.DataFrame, list[dict]]:
+    """Apply hard global cap to tracked corpus, preferentially removing lower-priority T2/T3 rows."""
+    if max_total_papers <= 0 or len(tracked) <= max_total_papers:
+        return tracked.copy(), []
+
+    out = tracked.copy()
+    to_remove = int(len(out) - max_total_papers)
+    tier_rank = {"T3": 0, "T2": 1, "T1_REF": 2, "T1": 2, "T4": 3}
+
+    removable = out[~out["core_selection_tier"].astype(str).isin({"T1", "T1_REF", "T4"})].copy()
+    if removable.empty:
+        return out, []
+
+    removable["tier_rank"] = removable["core_selection_tier"].map(tier_rank).fillna(0)
+    removable = removable.sort_values(
+        ["tier_rank", "paper_importance_score", "citations_per_year_raw"],
+        ascending=[True, True, True],
+    )
+    drop_rows = removable.head(to_remove)
+    drop_ids = set(drop_rows["canonical_paper_id"].astype(str))
+    removed = [
+        {
+            "canonical_paper_id": str(row.get("canonical_paper_id", "")),
+            "primary_topic_code": str(row.get("primary_topic_code", "")),
+            "removed_tier": str(row.get("core_selection_tier", "")),
+            "paper_importance_score": float(row.get("paper_importance_score", 0.0) or 0.0),
+            "reason": "global_max_total_cap",
+        }
+        for _, row in drop_rows.iterrows()
+    ]
+    out = out[~out["canonical_paper_id"].astype(str).isin(drop_ids)].copy()
+    return out, removed
 
 
 def run(config_path: str) -> None:
@@ -298,6 +577,23 @@ def run(config_path: str) -> None:
     t2_relax_below_topic_share = min(1.0, max(0.0, float(t2_cfg.get("relax_structure_below_topic_share", 0.02))))
     t2_max_per_topic = int(t2_cfg.get("max_per_topic", 100))
     t2_diversity_fraction = float(t2_cfg.get("diversity_fraction", 0.20))
+    t2_under_cfg = t2_cfg.get("undersubscribed_diversity_expand", {}) or {}
+    t2_under_enabled = bool(t2_under_cfg.get("enabled", False))
+    t2_under_max_additional_fraction = min(
+        1.0, max(0.0, float(t2_under_cfg.get("max_additional_fraction_of_topic_t2", 0.50)))
+    )
+    t2_under_min_importance_pct = min(
+        100.0, max(0.0, float(t2_under_cfg.get("min_importance_percentile_by_category", 40.0)))
+    )
+    t2_under_min_importance_quantile = min(0.999, max(0.0, t2_under_min_importance_pct / 100.0))
+    t2_conn_cfg = t2_cfg.get("connectivity_rule", {}) or {}
+    t2_conn_min_in_degree_any = max(0, int(t2_conn_cfg.get("min_in_degree_any", 5)))
+    t2_conn_seed_plus_anchor_min_cross_seed = max(
+        1, int(t2_conn_cfg.get("seed_plus_anchor_min_cross_seed", 1))
+    )
+    t2_conn_seed_plus_anchor_min_anchor_links = max(
+        1, int(t2_conn_cfg.get("seed_plus_anchor_min_anchor_links", 1))
+    )
 
     t3_min_year = int(t3_cfg.get("min_year", 2022))
     t3_min_citations_per_year = float(t3_cfg.get("min_citations_per_year", 20.0))
@@ -305,6 +601,12 @@ def run(config_path: str) -> None:
     t3_floor_per_topic = max(0, int(t3_cfg.get("floor_per_topic", 5)))
 
     max_topic_share = min(1.0, max(0.0, float(balance_cfg.get("max_topic_share", 0.20))))
+    max_total_papers = max(0, int(balance_cfg.get("max_total_papers", 0)))
+    rebalance_cfg = balance_cfg.get("rebalance", {}) or {}
+    rebalance_enabled = bool(rebalance_cfg.get("enabled", False))
+    rebalance_target_corpus_size = max(1, int(rebalance_cfg.get("target_corpus_size", 1000)))
+    rebalance_min_multiplier = max(0.0, float(rebalance_cfg.get("min_multiplier_of_expected", 0.5)))
+    rebalance_max_multiplier = max(0.0, float(rebalance_cfg.get("max_multiplier_of_expected", 1.5)))
 
     scored = pd.read_csv(scored_path, low_memory=False)
     scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
@@ -321,9 +623,11 @@ def run(config_path: str) -> None:
     scoped["anchor_category"] = scoped.get("anchor_category", pd.Series("", index=scoped.index)).fillna("unmapped")
     scoped["anchor_category"] = scoped["anchor_category"].astype(str).replace({"": "unmapped"})
     scoped["is_core_seed"] = scoped.get("is_core_seed", pd.Series(False, index=scoped.index)).map(_boolish)
+    scoped["is_reference_seed"] = scoped.get("is_reference_seed", pd.Series(False, index=scoped.index)).map(_boolish)
 
     for col in [
         "cross_seed_score",
+        "review_anchor_link_count",
         "kcore",
         "in_degree",
         "paper_importance_score",
@@ -335,6 +639,9 @@ def run(config_path: str) -> None:
         if col in scoped.columns:
             scoped[col] = pd.to_numeric(scoped[col], errors="coerce")
     scoped["cross_seed_score"] = scoped.get("cross_seed_score", pd.Series(0.0, index=scoped.index)).fillna(0.0)
+    scoped["review_anchor_link_count"] = scoped.get(
+        "review_anchor_link_count", pd.Series(0.0, index=scoped.index)
+    ).fillna(0.0)
     scoped["kcore"] = scoped.get("kcore", pd.Series(0.0, index=scoped.index)).fillna(0.0)
     scoped["in_degree"] = scoped.get("in_degree", pd.Series(0.0, index=scoped.index)).fillna(0.0)
     scoped["paper_importance_score"] = scoped.get("paper_importance_score", pd.Series(0.0, index=scoped.index)).fillna(0.0)
@@ -344,14 +651,52 @@ def run(config_path: str) -> None:
         scoped["year_int"] = scoped["year_int"].fillna(scoped.get("year", 0)).fillna(0).astype(int)
     else:
         scoped["year_int"] = pd.to_numeric(scoped.get("year", pd.Series(0, index=scoped.index)), errors="coerce").fillna(0).astype(int)
+    scoped["is_recent_velocity"] = _recent_velocity_mask(
+        scoped,
+        min_year=t3_min_year,
+        min_citations_per_year=t3_min_citations_per_year,
+    )
+    scoped["topic_importance_rank_pct"] = (
+        scoped.groupby("primary_topic_code")["paper_importance_score"]
+        .rank(method="average", pct=True)
+        .fillna(0.0)
+        .astype(float)
+    )
+    topic_codes = sorted({t for t in scoped["primary_topic_code"].astype(str).unique() if re.match(r"^TOPIC-\d{2}$", str(t))})
+    n_topics = max(1, int(len(topic_codes)))
+    rebalance_expected_per_topic = float(rebalance_target_corpus_size) / float(n_topics)
+    rebalance_min_count = int(math.ceil(rebalance_expected_per_topic * rebalance_min_multiplier))
+    rebalance_max_count = int(math.floor(rebalance_expected_per_topic * rebalance_max_multiplier))
+    rebalance_max_count = max(1, rebalance_max_count)
+    if rebalance_max_count < rebalance_min_count:
+        rebalance_max_count = rebalance_min_count
 
     cat_threshold = scoped.groupby("anchor_category")["paper_importance_score"].quantile(t2_importance_quantile).to_dict()
+    cat_threshold_under = (
+        scoped.groupby("anchor_category")["paper_importance_score"].quantile(t2_under_min_importance_quantile).to_dict()
+    )
     scoped["t2_category_importance_threshold"] = scoped["anchor_category"].map(cat_threshold).fillna(float("inf"))
+    effective_t2_max_per_topic = int(t2_max_per_topic)
+    if rebalance_enabled:
+        effective_t2_max_per_topic = (
+            min(effective_t2_max_per_topic, rebalance_max_count)
+            if effective_t2_max_per_topic > 0
+            else int(rebalance_max_count)
+        )
 
     is_t1 = scoped["is_core_seed"].copy()
+    t2_connectivity_in_degree_any = scoped["in_degree"] >= t2_conn_min_in_degree_any
+    t2_connectivity_seed_plus_anchor = (
+        (scoped["cross_seed_score"] >= t2_conn_seed_plus_anchor_min_cross_seed)
+        & (scoped["review_anchor_link_count"] >= t2_conn_seed_plus_anchor_min_anchor_links)
+    )
+    t2_connectivity_gate = (
+        t2_connectivity_in_degree_any
+        | t2_connectivity_seed_plus_anchor
+    )
     t2_base_gate = (
         (~is_t1)
-        & (scoped["cross_seed_score"] >= t2_min_cross_seed)
+        & t2_connectivity_gate
         & (scoped["paper_importance_score"] > scoped["t2_category_importance_threshold"])
     )
     t2_structure_gate = (scoped["kcore"] >= t2_min_kcore) & (scoped["in_degree"] >= t2_min_in_degree)
@@ -382,9 +727,58 @@ def run(config_path: str) -> None:
         scoped,
         is_t1=is_t1,
         is_t2=t2_final,
-        max_t2_per_topic=t2_max_per_topic,
+        max_t2_per_topic=effective_t2_max_per_topic,
         diversity_fraction=t2_diversity_fraction,
     )
+
+    # Optional undersubscribed-topic expansion: add diverse lower-importance papers
+    # that still pass connectivity/structure filters, while respecting global headroom.
+    t3_ids_pre_expand, _ = _select_t3_ids(
+        scoped=scoped,
+        is_t1=is_t1,
+        is_t2=t2_final,
+        t3_min_year=t3_min_year,
+        t3_min_citations_per_year=t3_min_citations_per_year,
+        t3_fraction_of_t2=t3_fraction_of_t2,
+        t3_floor_per_topic=t3_floor_per_topic,
+    )
+    base_union_pre_expand = int(
+        (is_t1 | t2_final | scoped["canonical_paper_id"].astype(str).isin(t3_ids_pre_expand)).sum()
+    )
+    if max_total_papers > 0:
+        addition_headroom = max(0, int(max_total_papers - base_union_pre_expand))
+    else:
+        addition_headroom = int(len(scoped))
+
+    undersubscribed_expand_diag: dict[str, dict[str, int]] = {}
+    if t2_under_enabled and addition_headroom > 0:
+        pre_expand_topic_counts = (
+            scoped[
+                is_t1
+                | t2_final
+                | scoped["canonical_paper_id"].astype(str).isin(t3_ids_pre_expand)
+            ]["primary_topic_code"]
+            .value_counts()
+            .to_dict()
+        )
+        floor_target_count = (
+            int(rebalance_min_count)
+            if rebalance_enabled
+            else max(0, int(math.ceil(0.02 * base_union_pre_expand)))
+        )
+        t2_final, undersubscribed_expand_diag = _expand_undersubscribed_topics_for_diversity(
+            scoped=scoped,
+            is_t1=is_t1,
+            is_t2=t2_final,
+            max_t2_per_topic=effective_t2_max_per_topic,
+            structure_gate=t2_structure_gate,
+            connectivity_gate=t2_connectivity_gate,
+            min_importance_rank_pct=t2_under_min_importance_quantile,
+            max_additional_fraction=t2_under_max_additional_fraction,
+            max_total_additions=addition_headroom,
+            floor_target_count=floor_target_count,
+            current_topic_selected_counts={str(k): int(v) for k, v in pre_expand_topic_counts.items()},
+        )
 
     t3_ids, t3_diag = _select_t3_ids(
         scoped=scoped,
@@ -424,7 +818,34 @@ def run(config_path: str) -> None:
     pre_cap["t3_rank_in_topic"] = pre_cap["t3_rank_in_topic"].fillna(0).astype(int)
     pre_cap["t3_topic_cap"] = pre_cap["t3_topic_cap"].fillna(0).astype(int)
 
-    capped, removed = _apply_topic_cap(pre_cap, max_topic_share=max_topic_share)
+    capped, removed, reserve_blocked_topics = _apply_topic_cap(
+        pre_cap,
+        max_topic_share=max_topic_share,
+        max_topic_count=(rebalance_max_count if rebalance_enabled else 0),
+        recent_reserve_fraction=t3_fraction_of_t2,
+        recent_reserve_floor=t3_floor_per_topic,
+    )
+    capped = _annotate_reference_seed_tier(capped)
+
+    recent_pre_cap_by_topic = _recent_topic_diagnostics(
+        pre_cap,
+        recent_col="is_recent_velocity",
+        reserve_fraction=t3_fraction_of_t2,
+        reserve_floor=t3_floor_per_topic,
+    )
+    recent_post_cap_by_topic = _recent_topic_diagnostics(
+        capped,
+        recent_col="is_recent_velocity",
+        reserve_fraction=t3_fraction_of_t2,
+        reserve_floor=t3_floor_per_topic,
+    )
+    topics_below_recent_reserve_post_cap = sorted(
+        [
+            topic
+            for topic, diag in recent_post_cap_by_topic.items()
+            if int(diag.get("recent_count", 0)) < int(diag.get("reserve_target", 0))
+        ]
+    )
 
     selected_path = graph_dir / "core_corpus_selected.csv"
     capped.to_csv(selected_path, index=False)
@@ -446,7 +867,14 @@ def run(config_path: str) -> None:
     for col in t4_meta_cols:
         tracked[col] = ""
 
-    mapped_rows = t4_rows[t4_rows["mapped_canonical_paper_id"].astype(str) != ""].copy() if not t4_rows.empty else pd.DataFrame()
+    t4_rows_graph = t4_rows[t4_rows["include_in_graph"]].copy() if not t4_rows.empty else pd.DataFrame()
+    t4_rows_note_only = t4_rows[~t4_rows["include_in_graph"]].copy() if not t4_rows.empty else pd.DataFrame()
+
+    mapped_rows = (
+        t4_rows_graph[t4_rows_graph["mapped_canonical_paper_id"].astype(str) != ""].copy()
+        if not t4_rows_graph.empty
+        else pd.DataFrame()
+    )
     mapped_rows_df = pd.DataFrame(
         columns=["canonical_paper_id", "t4_id", "t4_concept", "t4_source_type", "t4_topic_codes", "t4_corpus_status"]
     )
@@ -502,7 +930,9 @@ def run(config_path: str) -> None:
         tracked = pd.concat([tracked, t4_mapped_add_df[tracked.columns]], ignore_index=True)
 
     forced_rows = (
-        t4_rows[t4_rows["mapped_canonical_paper_id"].astype(str) == ""].copy() if not t4_rows.empty else pd.DataFrame()
+        t4_rows_graph[t4_rows_graph["mapped_canonical_paper_id"].astype(str) == ""].copy()
+        if not t4_rows_graph.empty
+        else pd.DataFrame()
     )
     forced_rows = forced_rows[
         forced_rows["corpus_status"].astype(str).str.lower().str.startswith("not_found")
@@ -567,6 +997,21 @@ def run(config_path: str) -> None:
         forced_df = forced_df[tracked.columns].copy()
         tracked = pd.concat([tracked, forced_df], ignore_index=True)
 
+    tracked, global_cap_removed = _apply_global_tracked_cap(tracked, max_total_papers=max_total_papers)
+    global_cap_removed_df = pd.DataFrame(global_cap_removed)
+    global_cap_removed_path = graph_dir / "core_corpus_removed_by_global_cap.csv"
+    if global_cap_removed_df.empty:
+        global_cap_removed_df = pd.DataFrame(
+            columns=[
+                "canonical_paper_id",
+                "primary_topic_code",
+                "removed_tier",
+                "paper_importance_score",
+                "reason",
+            ]
+        )
+    global_cap_removed_df.to_csv(global_cap_removed_path, index=False)
+
     tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
     tracked.to_csv(tracked_path, index=False)
     t4_additions_path = graph_dir / "t4_mapped_additions_not_in_t1_t3.csv"
@@ -579,6 +1024,40 @@ def run(config_path: str) -> None:
         pd.DataFrame(columns=tracked.columns).to_csv(t4_forced_path, index=False)
     else:
         forced_df.to_csv(t4_forced_path, index=False)
+
+    t4_excluded_note_path = graph_dir / "t4_excluded_note.csv"
+    if t4_rows_note_only.empty:
+        pd.DataFrame(
+            columns=[
+                "t4_id",
+                "t4_concept",
+                "title",
+                "authors",
+                "year",
+                "journal",
+                "topic_codes",
+                "corpus_status",
+                "corpus_doi",
+                "mapped_canonical_paper_id",
+                "exclusion_note",
+            ]
+        ).to_csv(t4_excluded_note_path, index=False)
+    else:
+        t4_rows_note_only[
+            [
+                "t4_id",
+                "t4_concept",
+                "title",
+                "authors",
+                "year",
+                "journal",
+                "topic_codes",
+                "corpus_status",
+                "corpus_doi",
+                "mapped_canonical_paper_id",
+                "exclusion_note",
+            ]
+        ].to_csv(t4_excluded_note_path, index=False)
 
     # Document the three classification systems and their roles for provenance.
     classification_systems = {
@@ -635,6 +1114,20 @@ def run(config_path: str) -> None:
                 "min_in_degree": t2_min_in_degree,
                 "importance_percentile_by_category": t2_importance_pct,
                 "relax_structure_below_topic_share": t2_relax_below_topic_share,
+                "connectivity_rule": {
+                    "expression": "in_degree >= min_in_degree_any OR (cross_seed_score >= seed_plus_anchor_min_cross_seed AND review_anchor_link_count >= seed_plus_anchor_min_anchor_links)",
+                    "min_in_degree_any": int(t2_conn_min_in_degree_any),
+                    "seed_plus_anchor_min_cross_seed": int(t2_conn_seed_plus_anchor_min_cross_seed),
+                    "seed_plus_anchor_min_anchor_links": int(t2_conn_seed_plus_anchor_min_anchor_links),
+                },
+                "effective_max_t2_per_topic": int(effective_t2_max_per_topic),
+                "undersubscribed_diversity_expand": {
+                    "enabled": t2_under_enabled,
+                    "max_additional_fraction_of_topic_t2": t2_under_max_additional_fraction,
+                    "min_importance_percentile_by_category": t2_under_min_importance_pct,
+                    "max_total_additions_headroom": int(addition_headroom),
+                    "base_union_pre_expand": int(base_union_pre_expand),
+                },
             },
             "t3": {
                 "min_year": t3_min_year,
@@ -642,7 +1135,18 @@ def run(config_path: str) -> None:
                 "cap_fraction_of_t2_per_topic": t3_fraction_of_t2,
                 "floor_per_topic": t3_floor_per_topic,
             },
-            "balance": {"max_topic_share": max_topic_share},
+            "balance": {"max_topic_share": max_topic_share, "max_total_papers": max_total_papers},
+            "rebalance": {
+                "enabled": bool(rebalance_enabled),
+                "target_corpus_size": int(rebalance_target_corpus_size),
+                "n_topics": int(n_topics),
+                "topic_codes": topic_codes,
+                "expected_per_topic": rebalance_expected_per_topic,
+                "min_multiplier_of_expected": rebalance_min_multiplier,
+                "max_multiplier_of_expected": rebalance_max_multiplier,
+                "min_count": int(rebalance_min_count),
+                "max_count": int(rebalance_max_count),
+            },
         },
         "low_share_topics_for_t2_relaxation": low_share_topics,
         "strict_pass_counts": {
@@ -666,8 +1170,25 @@ def run(config_path: str) -> None:
             else 0.0,
         },
         "topic_counts_pre_cap": _topic_counts(pre_cap),
+        "undersubscribed_diversity_expansion": {
+            "enabled": t2_under_enabled,
+            "topic_diagnostics": undersubscribed_expand_diag,
+            "total_added": int(sum(v.get("added", 0) for v in undersubscribed_expand_diag.values())),
+        },
         "t3_topic_diagnostics": t3_diag,
         "t3_topic_diagnostics_strict": strict_t3_diag,
+        "recent_velocity_reserve": {
+            "enabled": True,
+            "min_year": int(t3_min_year),
+            "min_citations_per_year": float(t3_min_citations_per_year),
+            "reserve_fraction_of_topic": float(t3_fraction_of_t2),
+            "reserve_floor_per_topic": int(t3_floor_per_topic),
+            "n_topics_below_reserve_post_cap": int(len(topics_below_recent_reserve_post_cap)),
+            "topics_below_reserve_post_cap": topics_below_recent_reserve_post_cap,
+            "reserve_blocked_topics_during_cap": reserve_blocked_topics,
+            "pre_cap_by_topic": recent_pre_cap_by_topic,
+            "post_cap_by_topic": recent_post_cap_by_topic,
+        },
         "topic_cap_removals": {
             "total_removed": int(len(removed)),
             "removed_by_topic": {str(k): int(v) for k, v in removed_df["primary_topic_code"].value_counts().items()} if not removed_df.empty else {},
@@ -680,18 +1201,37 @@ def run(config_path: str) -> None:
         },
         "t4": {
             "yaml_rows_total": int(len(t4_rows)),
+            "note_only_excluded_from_graph": int(len(t4_rows_note_only)),
             "mapped_to_existing_corpus": int(len(t4_mapped_ids)),
             "mapped_additions_not_in_t1_t2_t3": int(len(t4_mapped_add_df)),
             "forced_not_found_added": int(len(forced_df)),
             "tracked_total_with_t4": int(len(tracked)),
         },
+        "global_total_cap": {
+            "enabled": bool(max_total_papers > 0),
+            "max_total_papers": int(max_total_papers),
+            "removed_count": int(len(global_cap_removed_df)),
+            "removed_by_tier": (
+                {str(k): int(v) for k, v in global_cap_removed_df["removed_tier"].value_counts().items()}
+                if not global_cap_removed_df.empty
+                else {}
+            ),
+            "removed_by_topic": (
+                {str(k): int(v) for k, v in global_cap_removed_df["primary_topic_code"].value_counts().items()}
+                if not global_cap_removed_df.empty
+                else {}
+            ),
+            "removed_csv": str(global_cap_removed_path),
+        },
         "artifacts": {
             "selected_csv": str(selected_path),
             "removed_csv": str(removed_path),
+            "global_removed_csv": str(global_cap_removed_path),
             "missing_csv": str(missing_path),
             "tracked_with_t4_csv": str(tracked_path),
             "t4_mapped_additions_csv": str(t4_additions_path),
             "t4_forced_not_found_csv": str(t4_forced_path),
+            "t4_excluded_note_csv": str(t4_excluded_note_path),
         },
     }
     summary_path = graph_dir / "core_corpus_selection_summary.json"

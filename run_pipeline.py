@@ -3,6 +3,7 @@
 import argparse
 import subprocess
 import sys
+import time
 
 from src.audit_kb import run as run_audit
 from src.assign_topic_evidence import run as run_topic_evidence
@@ -15,11 +16,36 @@ from src.compute_viz_metrics import run as run_viz_metrics
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
-from src.expert_comms import run as run_expert_comms
+from src.generate_reports import run as run_generate_reports
 from src.retrieve_corpora import run as run_retrieve
 from src.select_core_corpus import run as run_select_core_corpus
 from src.seed_governance import run as run_seed_governance
 from update_kid_journey import run as run_kid_journey
+
+
+def _format_elapsed(seconds: float) -> str:
+    """Return a compact elapsed-time string for console logs."""
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    minutes, rem = divmod(seconds, 60)
+    if minutes < 60:
+        return f"{int(minutes)}m {rem:.1f}s"
+    hours, rem = divmod(minutes, 60)
+    return f"{int(hours)}h {int(rem)}m"
+
+
+def _run_stage(stage_label: str, stage_fn) -> None:
+    """Run one pipeline stage with start/end checkpoint logs."""
+    print(f"{stage_label}...")
+    start = time.perf_counter()
+    try:
+        stage_fn()
+    except Exception:
+        elapsed = time.perf_counter() - start
+        print(f"  [elapsed] {stage_label} failed after {_format_elapsed(elapsed)}")
+        raise
+    elapsed = time.perf_counter() - start
+    print(f"  [elapsed] {stage_label} complete in {_format_elapsed(elapsed)}")
 
 
 def _refresh_concept_links(config_path: str) -> None:
@@ -49,6 +75,30 @@ def _refresh_concept_links(config_path: str) -> None:
 
 def main(config_path: str) -> None:
     """Run all pipeline stages in sequence for the given config file."""
+    pipeline_start = time.perf_counter()
+
+    _run_stage("Stage 0/10: Seed governance checks", lambda: run_seed_governance(config_path))
+    _run_stage("Stage 1/10: Retrieving corpora", lambda: run_retrieve(config_path))
+    _run_stage("Stage 2/10: Deduplicating and merging", lambda: run_merge(config_path))
+    _run_stage("Stage 3/10: Building graphs", lambda: run_graphs(config_path))
+    _run_stage("Stage 4/10: Computing scores", lambda: run_scores(config_path))
+    _run_stage("Stage 5/10: Discovering topics (Leiden clusters)", lambda: run_topics(config_path))
+    _run_stage("Stage 5b/10: Assigning topic evidence (T-codes)", lambda: run_topic_evidence(config_path))
+    _run_stage("Stage 5c/10: Selecting core corpus (T1+T2+T3+T4)", lambda: run_select_core_corpus(config_path))
+    _run_stage(
+        "Stage 5d/10: Backfilling missing abstracts on tracked core corpus",
+        lambda: run_backfill_abstracts(config_path),
+    )
+    _run_stage("Stage 6/10: Building learner journey", lambda: run_learner_journey(config_path))
+    _run_stage("Stage 7/10: Distilling papers (AI summaries)", lambda: run_distill(config_path))
+    _run_stage("Stage 7b/10: Refreshing concept-paper links", lambda: _refresh_concept_links(config_path))
+    _run_stage(
+        "Stage 7c/10: Updating kid-friendly summaries and topic overviews",
+        lambda: run_kid_journey(config_path),
+    )
+    _run_stage("Stage 8/10: Building knowledge graph", lambda: run_kg(config_path))
+    _run_stage("Stage 9/10: Running KB audit gates", lambda: run_audit(config_path))
+    _run_stage("Stage 10/10: Generating QA/QC + expert comms reports", lambda: run_generate_reports(config_path))
     print("Stage 0/10: Seed governance checks...")
     run_seed_governance(config_path)
 
@@ -100,10 +150,15 @@ def main(config_path: str) -> None:
     print("Stage 10/10: Generating expert comms review packet...")
     run_expert_comms(config_path)
 
+    pipeline_elapsed = time.perf_counter() - pipeline_start
     print(
         "Pipeline complete.\n"
+        f"  - Total elapsed: {_format_elapsed(pipeline_elapsed)}\n"
         "  - Site:          python site/build_site.py --config config.yaml\n"
-        "  - Expert report: outputs/expert_comms/expert_comms_report.md"
+        "  - QA/QC report:  outputs/expert_comms/qa_qc_report.md\n"
+        "  - Expert pass:   outputs/expert_comms/expert_comms_report.md\n"
+        "  - Snapshots:     outputs/expert_comms/*_YYYYMMDDTHHMMSSZ.*\n"
+        "  - Provenance:    outputs/provenance/retrieval_snapshot_YYYYMMDDTHHMMSSZ.json"
     )
 
 

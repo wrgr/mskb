@@ -214,6 +214,14 @@ def _normalize_doi(value: object) -> str:
     return doi.strip()
 
 
+def _boolish(value: object) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
+
 def _count_term_hits(text: str, terms: list[str]) -> int:
     t = _normalize_text(text)
     if not t:
@@ -396,6 +404,9 @@ def _load_t4_registry(root: Path) -> pd.DataFrame:
             for entry in entries:
                 if not isinstance(entry, dict):
                     continue
+                # Respect explicit QA exclusions in the authoritative T4 registry.
+                if not _boolish(entry.get("include_in_graph", True)):
+                    continue
                 topic_codes = entry.get("topic_codes", [])
                 if isinstance(topic_codes, list):
                     topic_code = ",".join(str(c).strip() for c in topic_codes if str(c).strip())
@@ -563,7 +574,8 @@ def _add_connectivity_columns(
     papers["cross_seed_score"] = papers["canonical_paper_id"].map(core_counts).fillna(0.0).astype(int)
     papers["review_anchor_link_count"] = papers["canonical_paper_id"].map(anchor_counts).fillna(0.0).astype(int)
     papers["is_core_seed"] = papers["canonical_paper_id"].astype(str).isin(core_seed_ids)
-    papers["is_review_anchor_source"] = papers["canonical_paper_id"].astype(str).isin(review_anchor_ids)
+    papers["is_reference_seed"] = papers["canonical_paper_id"].astype(str).isin(review_anchor_ids)
+    papers["is_review_anchor_source"] = papers["is_reference_seed"]
 
     t2_cfg = (scoring_cfg.get("tier_connectivity", {}) or {})
     min_seed_only = max(1, int(t2_cfg.get("t2_min_cross_seed", 2)))

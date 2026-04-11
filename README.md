@@ -14,6 +14,7 @@ MSKB builds a curated, navigable knowledge base from the MS literature by:
 6. **Building learner journey paths** that suggest the next paper or topic to study
 7. **Distilling papers** into undergraduate-accessible summaries using the Claude API
 8. **Building a knowledge graph** with MS-specific entities (drugs, genes, pathology, biomarkers, animal models) plus learner-journey edges
+9. **Auditing and gap-tracking** with topic-bound checks and explicit thin-literature notes
 
 The final output is a **static MkDocs site** where students can browse topics, read distilled paper summaries, follow structured reading paths, and explore the MS research landscape.
 
@@ -41,22 +42,44 @@ python run_pipeline.py --config config.yaml
 | 4 | `src/compute_scores.py` | Score papers for MS relevance + age-normalized centrality + evidence strength |
 | 5 | `src/discover_topics.py` | Discover topic clusters from citation structure |
 | 5b | `src/assign_topic_evidence.py` | Assign per-paper topic evidence with seed/anchor provenance |
-| 5c | `src/select_core_corpus.py` | Apply explicit T1/T2/T3 balancing rules and export selected core corpus |
+| 5c | `src/select_core_corpus.py` | Apply explicit T1/T2/T3(+T4 tracking) selection rules and topic rebalance bounds |
+| 5d | `src/backfill_abstracts.py` | Recover abstracts and place unresolved tracked papers on hold |
 | 6 | `src/build_learner_journey.py` | Recommend next papers/topics from citation + topic structure |
 | 7 | `src/distill_papers.py` | Generate accessible summaries with provenance/certainty + faithfulness QA sample |
+| 7b | `src/link_concepts_to_papers.py` | Refresh concept→paper cache after distillation |
+| 7c | `update_kid_journey.py` | Regenerate kid-friendly summaries and topic overviews |
 | 8 | `src/build_knowledge_graph.py` | Extract MS entities and build heterogeneous KG |
-| 9 | `src/audit_kb.py` | Run CI-like corpus audit gates (`ms_focus`, contamination, category bounds, missing data) |
+| 9 | `src/audit_kb.py` | Run CI-like corpus audit gates (`ms_focus`, contamination, topic bounds, missing data) |
+| 10 | `src/generate_reports.py` | Generate timestamped QA/QC report (TOPIC-code lens) + site-facing expert comms pass |
 
 Run individual stages:
 ```bash
 python -m src.retrieve_corpora --config config.yaml
 python -m src.assign_topic_evidence --config config.yaml
 python -m src.select_core_corpus --config config.yaml
+python -m src.backfill_abstracts --config config.yaml
 python -m src.discover_topics --config config.yaml
 python -m src.distill_papers --config config.yaml
 python -m src.seed_governance --config config.yaml
 python -m src.audit_kb --config config.yaml
 ```
+
+## v1.3 Stability Rules
+
+- Topic codes must use `TOPIC-##` format.
+- T2 connectivity rule: `in_degree >= 5 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)`.
+- Recent-paper reserve per topic:
+  - recent paper definition: `year >= 2022 AND citations_per_year_raw >= 20.0`
+  - reserve target: `max(5, ceil(0.20 * topic_selected_count))`
+  - audit severity: warning when `< 5`, error when `< 3`
+- Topic rebalance bounds are derived from `target_corpus_size / n_topics`:
+  - min = `0.5 * expected`
+  - max = `1.5 * expected`
+- Tracked papers without abstracts are placed on hold and excluded from graph outputs when `governance.hold_missing_abstracts_from_graph: true`.
+- Audit topic under-min policy is permissive:
+  - warn when topic is below min but still `>= 2%`
+  - fail when topic is below min and `< 2%`
+  - always record thin-literature notes in audit report gap notes
 
 ## Static Site
 

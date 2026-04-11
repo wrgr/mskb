@@ -89,18 +89,28 @@ import '../../styles/custom.css';
     <span class="paper-panel-hint">Click any node in the graph to view its details below.</span>
   </header>
   <div id="paper-details">Select a node in the graph to view summary, source link, and relationship choices.</div>
-  <div class="rel-grid">
-    <div class="rel-section">
-      <h4>Parents <small>(papers this one cites)</small></h4>
-      <div id="parent-links"></div>
+  <div class="rel-tabs explorer-rel-tabs">
+    <input type="radio" name="explorer-rel" id="explorer-rel-parents" class="mskb-tab-input" checked />
+    <input type="radio" name="explorer-rel" id="explorer-rel-children" class="mskb-tab-input" />
+    <input type="radio" name="explorer-rel" id="explorer-rel-related" class="mskb-tab-input" />
+    <div class="mskb-tab-labels rel-tab-labels" role="group" aria-label="Citation relationships">
+      <label for="explorer-rel-parents">Parents</label>
+      <label for="explorer-rel-children">Children</label>
+      <label for="explorer-rel-related">Related</label>
     </div>
-    <div class="rel-section">
-      <h4>Children <small>(papers that cite this one)</small></h4>
-      <div id="child-links"></div>
-    </div>
-    <div class="rel-section">
-      <h4>Related <small>(nearby in citation neighborhood)</small></h4>
-      <div id="related-links"></div>
+    <div class="rel-grid">
+      <div class="rel-section">
+        <h4>Parents <small>(papers this one cites)</small></h4>
+        <div id="parent-links"></div>
+      </div>
+      <div class="rel-section">
+        <h4>Children <small>(papers that cite this one)</small></h4>
+        <div id="child-links"></div>
+      </div>
+      <div class="rel-section">
+        <h4>Related <small>(nearby in citation neighborhood)</small></h4>
+        <div id="related-links"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -121,7 +131,14 @@ import '../../styles/custom.css';
 <div class="tools-panel">
   <h3>Tools</h3>
   <p class="tools-intro">Each tool below operates on the <strong>Relevant papers</strong> list above (or, where applicable, on the visible graph corpus).</p>
-  <div class="tool-grid">
+  <div class="tools-tabs explorer-tools-tabs">
+    <input type="radio" name="explorer-tools" id="explorer-tools-search" class="mskb-tab-input" checked />
+    <input type="radio" name="explorer-tools" id="explorer-tools-idea" class="mskb-tab-input" />
+    <div class="mskb-tab-labels tool-tab-labels" role="group" aria-label="Explorer tools">
+      <label for="explorer-tools-search">Direct search</label>
+      <label for="explorer-tools-idea">Find research like…</label>
+    </div>
+    <div class="tool-grid">
     <section class="tool-card">
       <h4>Direct search</h4>
       <p>Find papers by author, title, or abstract text.</p>
@@ -149,6 +166,7 @@ import '../../styles/custom.css';
       </div>
       <div id="idea-results"></div>
     </section>
+    </div>
   </div>
 </div>
 
