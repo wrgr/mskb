@@ -1704,7 +1704,7 @@
       return;
     }
     targetEl.innerHTML = nodes
-      .map(n => `${renderActionButtons(n)} <span>${escapeHtml((n.title || "Untitled").slice(0, 85))}</span>`)
+      .map(n => `<div class="rel-item">${renderActionButtons(n)} <span>${escapeHtml((n.title || "Untitled").slice(0, 85))}</span></div>`)
       .join("");
   }
 

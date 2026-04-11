@@ -677,6 +677,9 @@ by_concept:
       relevance: editorial framing, T09
       corpus_status: not_found
       doi: https://doi.org/10.1001/jamaneurol.2018.4042
+      include_in_graph: false
+      exclusion_note: Bibliographic confirmation still open; hold out of graph pending
+        verified source metadata.
     - t4_id: T4-036
       title: 'Exercise and MS: a systematic review with meta-analysis.'
       authors: Motl RW et al
@@ -687,20 +690,24 @@ by_concept:
       relevance: fatigue and walking RCT summary
       corpus_status: not_found
       doi: https://doi.org/10.1177/1545968316680592
+      include_in_graph: false
+      exclusion_note: Bibliographic confirmation still open; hold out of graph pending
+        verified source metadata.
       provenance: DOI corrected from v1.1 (10.1016/j.brat.2019.103464 resolved to
         Behaviour Research and Therapy 2019 — wrong journal, wrong year). Correct
         DOI for Motl RW et al 2017 Neurorehabil Neural Repair confirmed.
     - t4_id: T4-037
-      title: 'Progressive resistance training and MS: effects on physical fitness
-        and quality of life.'
-      authors: Kjolhede T et al
+      title: 'Multiple sclerosis and progressive resistance training: a systematic
+        review.'
+      authors: Kjølhede T, Vissing K, Dalgas U
       year: 2012
       journal: Mult Scler
+      pmid: '22760230'
       topic_codes:
       - TOPIC-10
-      relevance: resistance training RCT
+      relevance: resistance training systematic review
       corpus_status: not_found
-      doi: https://doi.org/10.1177/1352458512437864
+      doi: https://doi.org/10.1177/1352458512437418
     - t4_id: T4-038
       title: Exercise and cognitive impairment in MS.
       authors: Sandroff BM et al
@@ -711,6 +718,9 @@ by_concept:
       relevance: cognitive rehabilitation bridge to T09
       corpus_status: not_found
       doi: https://doi.org/10.1038/s41582-018-0027-9
+      include_in_graph: false
+      exclusion_note: Bibliographic confirmation still open; hold out of graph pending
+        verified source metadata.
     - t4_id: T4-039
       title: 'Rehabilitation in MS: a systematic review of systematic reviews.'
       authors: Khan F, Amatya B
@@ -820,19 +830,18 @@ by_concept:
         cocite_seeds: 77
       doi: https://doi.org/10.1111/imm.13004
     - t4_id: T4-046
-      title: The impact of gender on multiple sclerosis.
-      authors: Rottlaender A et al
-      year: 2014
-      journal: Open Neurol J
+      title: Sex and gender issues in multiple sclerosis.
+      authors: Harbo HF, Gold R, Tintoré M
+      year: 2013
+      journal: Ther Adv Neurol Disord
+      pmid: '23858327'
+      pmcid: PMC3707353
       topic_codes:
       - TOPIC-03
       - TOPIC-13
-      relevance: general overview
+      relevance: sex/gender clinical and biological implications overview
       corpus_status: not_found
-      doi: https://doi.org/10.2174/1874205x01408010037
-      provenance: DOI corrected from v1.1 (10.1016/j.jns.2009.07.012 resolved to J
-        Neurol Sci 2009 — year_delta=5, wrong paper). Correct DOI for Rottlaender
-        A et al 2014 Open Neurol J confirmed.
+      doi: https://doi.org/10.1177/1756285613488434
   shared_decision_making:
     concept_path: concepts/clinical/shared-decision-making
     papers:
@@ -852,14 +861,18 @@ by_concept:
       title: Shared decision making and self-management in MS — a consequence of evidence
         based medicine.
       authors: Heesen C et al
-      year: 2012
+      year: 2007
       journal: J Neurol
+      pmid: '17503119'
       topic_codes:
       - TOPIC-10
       - TOPIC-11
       relevance: MS-specific SDM review
       corpus_status: not_found
-      doi: https://doi.org/10.1007/s00415-012-6531-x
+      doi: https://doi.org/10.1007/s00415-007-2028-z
+      include_in_graph: false
+      exclusion_note: Abstract still unavailable after recovery channels; hold out
+        of graph until abstract is recovered.
     - t4_id: T4-049
       title: Patients' experiences and perceived impact of shared decision-making
         in MS.
@@ -873,29 +886,33 @@ by_concept:
       corpus_status: not_found
       doi: https://doi.org/10.1016/j.pec.2016.12.009
     - t4_id: T4-050
-      title: Development and validation of a decision aid for people with multiple
-        sclerosis.
-      authors: Solari A et al
-      year: 2017
-      journal: J Neurol
+      title: Development and usability testing of a patient decision aid for newly
+        diagnosed relapsing multiple sclerosis patients.
+      authors: Bansback N et al
+      year: 2019
+      journal: BMC Neurol
+      pmid: '31325961'
+      pmcid: PMC6642472
       topic_codes:
       - TOPIC-10
       - TOPIC-11
       relevance: decision aid development
       corpus_status: not_found
-      doi: https://doi.org/10.1007/s00415-016-8333-9
+      doi: https://doi.org/10.1186/s12883-019-1382-7
     - t4_id: T4-051
-      title: 'Preferences of MS patients for DMT characteristics: a discrete choice
-        experiment.'
-      authors: Visser LH et al
-      year: 2020
-      journal: Mult Scler
+      title: 'Patient preferences for treatment of multiple sclerosis with disease-modifying
+        therapies: a discrete choice experiment.'
+      authors: Garcia-Dominguez JM et al
+      year: 2016
+      journal: Patient Prefer Adherence
+      pmid: '27713622'
+      pmcid: PMC5045232
       topic_codes:
       - TOPIC-10
       - TOPIC-11
       relevance: preference-weighting evidence
       corpus_status: not_found
-      doi: https://doi.org/10.1177/1352458519838941
+      doi: https://doi.org/10.2147/PPA.S114619
     - t4_id: T4-052
       title: Shared decision making in multiple sclerosis.
       authors: Grácio S et al

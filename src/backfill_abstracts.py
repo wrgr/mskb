@@ -1,13 +1,19 @@
-"""Backfill missing abstracts in the canonical corpus from local data and OpenAlex."""
+"""Backfill missing abstracts from local data, OpenAlex, and secondary metadata sources."""
 
 import argparse
+import html
 import json
 import os
+import re
 import time
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import quote
 
 import pandas as pd
+import requests
 
+from .crossref_client import CrossrefClient
 from .openalex_client import OpenAlexClient
 from .utils import invert_abstract_index, load_config
 
@@ -50,6 +56,249 @@ def _first_nonempty(values: list[str]) -> str:
     return ""
 
 
+def _normalize_doi(value: object) -> str:
+    text = _clean_text(value).lower()
+    text = text.replace("https://doi.org/", "").replace("http://doi.org/", "").replace("doi:", "")
+    return text.strip()
+
+
+def _strip_markup(value: object) -> str:
+    text = _clean_text(value)
+    if not text:
+        return ""
+    text = html.unescape(text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def _is_plausible_abstract(text: str, min_chars: int = 60) -> bool:
+    text = _clean_text(text)
+    if not text:
+        return False
+    if len(text) < min_chars:
+        return False
+    # Require at least one sentence-like delimiter to avoid headings/titles.
+    if all(mark not in text for mark in [". ", "; ", ": "]):
+        return False
+    return True
+
+
+def _source_quality(source: str) -> str:
+    s = _clean_text(source).lower()
+    if not s:
+        return ""
+    if s.startswith("fulltext_"):
+        return "inferred_from_fulltext"
+    return "abstract_text"
+
+
+def _fetch_crossref_abstract(doi_norm: str, client: CrossrefClient) -> tuple[str, str]:
+    work = client.get_work_by_doi(doi_norm)
+    if not work:
+        return "", ""
+    abstract = _strip_markup(work.get("abstract", ""))
+    if not abstract:
+        return "", ""
+    return abstract, "crossref"
+
+
+def _fetch_datacite_abstract(doi_norm: str, timeout: int, email: str) -> tuple[str, str]:
+    url = f"https://doi.org/{doi_norm}"
+    headers = {
+        "Accept": "application/vnd.citationstyles.csl+json",
+        "User-Agent": f"mskb/0.1 ({email or 'unknown'})",
+    }
+    resp = requests.get(url, headers=headers, timeout=timeout)
+    if resp.status_code >= 400:
+        return "", ""
+    try:
+        payload = resp.json()
+    except ValueError:
+        return "", ""
+    abstract = _strip_markup(payload.get("abstract", ""))
+    if not abstract:
+        return "", ""
+    return abstract, "doi_csl_json"
+
+
+def _fetch_europepmc_abstract(doi_norm: str, timeout: int, email: str) -> tuple[str, str]:
+    url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+    params = {"query": f"DOI:{doi_norm}", "format": "json", "pageSize": 1}
+    headers = {"User-Agent": f"mskb/0.1 ({email or 'unknown'})"}
+    resp = requests.get(url, params=params, headers=headers, timeout=timeout)
+    if resp.status_code >= 400:
+        return "", ""
+    try:
+        payload = resp.json()
+    except ValueError:
+        return "", ""
+    hits = ((payload.get("resultList") or {}).get("result") or [])
+    if not hits:
+        return "", ""
+    abstract = _strip_markup((hits[0] or {}).get("abstractText", ""))
+    if not abstract:
+        return "", ""
+    return abstract, "europe_pmc"
+
+
+def _fetch_pubmed_abstract(doi_norm: str, timeout: int, email: str) -> tuple[str, str]:
+    headers = {"User-Agent": f"mskb/0.1 ({email or 'unknown'})"}
+    search_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+    search_params = {"db": "pubmed", "term": f"{doi_norm}[AID]", "retmax": 1, "retmode": "json"}
+    search_resp = requests.get(search_url, params=search_params, headers=headers, timeout=timeout)
+    if search_resp.status_code >= 400:
+        return "", ""
+    try:
+        search_payload = search_resp.json()
+    except ValueError:
+        return "", ""
+    id_list = ((search_payload.get("esearchresult") or {}).get("idlist") or [])
+    if not id_list:
+        return "", ""
+    pmid = str(id_list[0]).strip()
+    if not pmid:
+        return "", ""
+
+    fetch_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+    fetch_params = {"db": "pubmed", "id": pmid, "retmode": "xml"}
+    fetch_resp = requests.get(fetch_url, params=fetch_params, headers=headers, timeout=timeout)
+    if fetch_resp.status_code >= 400:
+        return "", ""
+    try:
+        root = ET.fromstring(fetch_resp.text)
+    except ET.ParseError:
+        return "", ""
+    texts: list[str] = []
+    for node in root.findall(".//Abstract/AbstractText"):
+        part = _strip_markup("".join(node.itertext()))
+        if part:
+            texts.append(part)
+    abstract = _clean_text(" ".join(texts))
+    if not abstract:
+        return "", ""
+    return abstract, "pubmed"
+
+
+def _fetch_semantic_scholar_abstract(doi_norm: str, timeout: int, email: str) -> tuple[str, str]:
+    if not doi_norm:
+        return "", ""
+    encoded_doi = quote(doi_norm, safe="")
+    url = f"https://api.semanticscholar.org/graph/v1/paper/DOI:{encoded_doi}"
+    params = {"fields": "abstract"}
+    headers = {"User-Agent": f"mskb/0.1 ({email or 'unknown'})"}
+    resp = requests.get(url, params=params, headers=headers, timeout=timeout)
+    if resp.status_code >= 400:
+        return "", ""
+    try:
+        payload = resp.json()
+    except ValueError:
+        return "", ""
+    abstract = _strip_markup((payload or {}).get("abstract", ""))
+    if not abstract:
+        return "", ""
+    return abstract, "semantic_scholar"
+
+
+def _extract_abstract_from_fulltext_text(pid: str, text_dir: Path) -> tuple[str, str]:
+    path = text_dir / f"{pid}.txt"
+    if not path.exists():
+        return "", ""
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return "", ""
+    text = _strip_markup(raw)
+    if not text:
+        return "", ""
+    pattern = re.compile(
+        r"(?is)\babstract\b[:\s-]*(.{120,6000}?)(?:\bintroduction\b|\bbackground\b|\bmethods?\b|\bkeywords?\b|\n\s*1[\.\)]\s*introduction\b)"
+    )
+    match = pattern.search(text)
+    if match:
+        abstract = _clean_text(match.group(1))
+        if _is_plausible_abstract(abstract):
+            return abstract, "fulltext_heuristic"
+    # Fallback: take the abstract-like pre-introduction prefix when explicit heading is absent.
+    intro_match = re.search(r"(?is)\bintroduction\b", text)
+    if intro_match:
+        prefix = text[: intro_match.start()]
+        prefix = re.sub(r"\s+", " ", prefix).strip()
+        # Drop very short prefixes and likely metadata-only stubs.
+        if _is_plausible_abstract(prefix, min_chars=180) and prefix.count(".") >= 3:
+            return prefix, "fulltext_prefix_heuristic"
+    return "", ""
+
+
+def _extract_website_abstract_from_html(html_text: str) -> tuple[str, str]:
+    text = _clean_text(html_text)
+    if not text:
+        return "", ""
+
+    # 1) High-quality publisher tags.
+    patterns = [
+        (r'(?is)<meta[^>]+name=["\']citation_abstract["\'][^>]+content=["\'](.*?)["\']', "website_citation_abstract"),
+        (r'(?is)<meta[^>]+name=["\']dc\.description["\'][^>]+content=["\'](.*?)["\']', "website_dc_description"),
+        (r'(?is)<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']', "website_og_description"),
+        (r'(?is)<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', "website_meta_description"),
+    ]
+    for pattern, source in patterns:
+        m = re.search(pattern, text)
+        if not m:
+            continue
+        candidate = _strip_markup(m.group(1))
+        if _is_plausible_abstract(candidate, min_chars=100):
+            return candidate, source
+
+    # 2) JSON-LD description.
+    for block in re.findall(r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', text):
+        block_text = _clean_text(block)
+        if not block_text:
+            continue
+        try:
+            payload = json.loads(block_text)
+        except Exception:
+            continue
+        records = payload if isinstance(payload, list) else [payload]
+        for rec in records:
+            if not isinstance(rec, dict):
+                continue
+            candidate = _strip_markup(rec.get("description", ""))
+            if _is_plausible_abstract(candidate, min_chars=100):
+                return candidate, "website_jsonld_description"
+
+    # 3) Abstract section blocks.
+    section_patterns = [
+        r'(?is)(?:<h2[^>]*>\s*abstract\s*</h2>|<h3[^>]*>\s*abstract\s*</h3>)\s*(.{120,6000}?)(?:<h2|<h3|</section>)',
+        r'(?is)<section[^>]*(?:id|class)=["\'][^"\']*abstract[^"\']*["\'][^>]*>(.{120,6000}?)</section>',
+        r'(?is)<div[^>]*(?:id|class)=["\'][^"\']*abstract[^"\']*["\'][^>]*>(.{120,6000}?)</div>',
+    ]
+    for pattern in section_patterns:
+        m = re.search(pattern, text)
+        if not m:
+            continue
+        candidate = _strip_markup(m.group(1))
+        if _is_plausible_abstract(candidate, min_chars=120):
+            return candidate, "website_abstract_section"
+
+    return "", ""
+
+
+def _fetch_website_abstract(doi_norm: str, timeout: int, email: str) -> tuple[str, str]:
+    if not doi_norm:
+        return "", ""
+    url = f"https://doi.org/{doi_norm}"
+    headers = {
+        "Accept": "text/html,application/xhtml+xml",
+        "User-Agent": f"mskb/0.1 ({email or 'unknown'})",
+    }
+    resp = requests.get(url, headers=headers, timeout=timeout, allow_redirects=True)
+    if resp.status_code >= 400:
+        return "", ""
+    html_text = resp.text or ""
+    return _extract_website_abstract_from_html(html_text)
+
+
 def run(config_path: str) -> None:
     """Backfill missing abstracts from local candidate versions then OpenAlex, updating canonical CSVs."""
     cfg = load_config(config_path)
@@ -68,8 +317,14 @@ def run(config_path: str) -> None:
 
     if "abstract_backfill_source" not in canonical.columns:
         canonical["abstract_backfill_source"] = ""
+    canonical["abstract_backfill_source"] = canonical["abstract_backfill_source"].fillna("").astype(str)
+    if "abstract_backfill_quality" not in canonical.columns:
+        canonical["abstract_backfill_quality"] = ""
+    canonical["abstract_backfill_quality"] = canonical["abstract_backfill_quality"].fillna("").astype(str)
 
     backfill_cfg = cfg.get("abstract_backfill", {}) or {}
+    governance_cfg = cfg.get("governance", {}) or {}
+    hold_missing_abstracts_from_graph = bool(governance_cfg.get("hold_missing_abstracts_from_graph", False))
     enabled = bool(backfill_cfg.get("enabled", True))
     selected_cfg = backfill_cfg.get("selected_scope", {}) or {}
     selected_scope_enabled = bool(enabled and selected_cfg.get("enabled", False))
@@ -105,6 +360,36 @@ def run(config_path: str) -> None:
         "attempted_openalex_queries": 0,
         "successful_openalex_backfills": 0,
         "openalex_errors": 0,
+        "attempted_secondary_queries": 0,
+        "successful_secondary_backfills": 0,
+        "secondary_errors": 0,
+        "attempted_by_source": {
+            "crossref": 0,
+            "doi_csl_json": 0,
+            "pubmed": 0,
+            "europe_pmc": 0,
+            "semantic_scholar": 0,
+            "fulltext_heuristic": 0,
+            "website_scrape": 0,
+        },
+        "successful_by_source": {
+            "crossref": 0,
+            "doi_csl_json": 0,
+            "pubmed": 0,
+            "europe_pmc": 0,
+            "semantic_scholar": 0,
+            "fulltext_heuristic": 0,
+            "website_scrape": 0,
+        },
+        "errors_by_source": {
+            "crossref": 0,
+            "doi_csl_json": 0,
+            "pubmed": 0,
+            "europe_pmc": 0,
+            "semantic_scholar": 0,
+            "fulltext_heuristic": 0,
+            "website_scrape": 0,
+        },
         "missing_after_all": 0,
         "missing_after_scope": 0,
     }
@@ -133,15 +418,22 @@ def run(config_path: str) -> None:
             ) & selected_scope_mask
             canonical.loc[selector, "abstract"] = canonical.loc[selector, "canonical_paper_id"].map(recoverable_map)
             canonical.loc[selector, "abstract_backfill_source"] = "candidate_version"
+            canonical.loc[selector, "abstract_backfill_quality"] = "abstract_text"
             stats["filled_from_candidate_versions"] = int(selector.sum())
 
-    # Pass 2: query OpenAlex for remaining missing abstracts.
+    # Pass 2: query OpenAlex then secondary metadata channels for remaining missing abstracts.
     max_queries = backfill_cfg.get("max_openalex_queries")
     env_max_queries = _clean_text(os.environ.get("MSKB_MAX_OPENALEX_QUERIES", ""))
     if env_max_queries:
         max_queries = env_max_queries
+    max_secondary_queries = backfill_cfg.get("max_secondary_queries")
+    env_max_secondary_queries = _clean_text(os.environ.get("MSKB_MAX_SECONDARY_QUERIES", ""))
+    if env_max_secondary_queries:
+        max_secondary_queries = env_max_secondary_queries
     per_request_sleep_s = float(backfill_cfg.get("sleep_seconds", 0.03))
     cache_dir = raw_dir / "openalex_cache"
+    crossref_cache_dir = raw_dir / "crossref_cache"
+    fulltext_text_dir = output_dir / "fulltext" / "text"
 
     if enabled:
         if max_queries is not None:
@@ -149,6 +441,11 @@ def run(config_path: str) -> None:
                 max_queries = int(max_queries)
             except (TypeError, ValueError):
                 max_queries = None
+        if max_secondary_queries is not None:
+            try:
+                max_secondary_queries = int(max_secondary_queries)
+            except (TypeError, ValueError):
+                max_secondary_queries = None
         timeout = int(backfill_cfg.get("request_timeout_seconds", 12))
         max_consecutive_errors = int(backfill_cfg.get("max_consecutive_errors", 6))
         client = OpenAlexClient(
@@ -158,16 +455,20 @@ def run(config_path: str) -> None:
             timeout=timeout,
             cache_dir=cache_dir,
         )
+        crossref_client = CrossrefClient(email=str(cfg.get("email", "") or ""), timeout=timeout, cache_dir=crossref_cache_dir)
+        secondary_cache: dict[tuple[str, str], tuple[str, str]] = {}
 
         remaining_missing = canonical[_is_missing_abstract(canonical["abstract"]) & selected_scope_mask].copy()
         consecutive_errors = 0
         for idx, row in remaining_missing.iterrows():
             if max_queries is not None and stats["attempted_openalex_queries"] >= max_queries:
-                break
+                pass
             if consecutive_errors >= max_consecutive_errors:
                 break
             fetched_abstract = ""
             fetched_source = ""
+            pid = str(row.get("canonical_paper_id", "") or "").strip()
+            doi_norm = _normalize_doi(row.get("doi", ""))
 
             openalex_ids = []
             openalex_ids.extend(_extract_ids(row.get("openalex_id", "")))
@@ -175,25 +476,27 @@ def run(config_path: str) -> None:
             # Preserve order and de-duplicate.
             dedup_openalex_ids = list(dict.fromkeys(openalex_ids))
 
-            for oa_id in dedup_openalex_ids:
-                stats["attempted_openalex_queries"] += 1
-                try:
-                    work = client.get_work_by_openalex_id(oa_id)
-                except Exception:
-                    work = None
-                    stats["openalex_errors"] += 1
-                    consecutive_errors += 1
-                if not work:
-                    continue
-                consecutive_errors = 0
-                fetched_abstract = invert_abstract_index(work.get("abstract_inverted_index", {}))
-                if fetched_abstract:
-                    fetched_source = f"openalex_id:{oa_id}"
-                    break
-                if max_queries is not None and stats["attempted_openalex_queries"] >= max_queries:
-                    break
-                if per_request_sleep_s > 0:
-                    time.sleep(per_request_sleep_s)
+            if max_queries is None or stats["attempted_openalex_queries"] < max_queries:
+                for oa_id in dedup_openalex_ids:
+                    if max_queries is not None and stats["attempted_openalex_queries"] >= max_queries:
+                        break
+                    stats["attempted_openalex_queries"] += 1
+                    try:
+                        work = client.get_work_by_openalex_id(oa_id)
+                    except Exception:
+                        work = None
+                        stats["openalex_errors"] += 1
+                        consecutive_errors += 1
+                    if not work:
+                        continue
+                    consecutive_errors = 0
+                    fetched_abstract = _strip_markup(invert_abstract_index(work.get("abstract_inverted_index", {})))
+                    if _is_plausible_abstract(fetched_abstract):
+                        fetched_source = f"openalex_id:{oa_id}"
+                        break
+                    fetched_abstract = ""
+                    if per_request_sleep_s > 0:
+                        time.sleep(per_request_sleep_s)
 
             if not fetched_abstract:
                 doi = _clean_text(row.get("doi", ""))
@@ -207,16 +510,65 @@ def run(config_path: str) -> None:
                         consecutive_errors += 1
                     if work:
                         consecutive_errors = 0
-                        fetched_abstract = invert_abstract_index(work.get("abstract_inverted_index", {}))
-                        if fetched_abstract:
+                        fetched_abstract = _strip_markup(invert_abstract_index(work.get("abstract_inverted_index", {})))
+                        if _is_plausible_abstract(fetched_abstract):
                             fetched_source = f"doi:{doi}"
+                        else:
+                            fetched_abstract = ""
+                    if per_request_sleep_s > 0:
+                        time.sleep(per_request_sleep_s)
+
+            if not fetched_abstract and (max_secondary_queries is None or stats["attempted_secondary_queries"] < max_secondary_queries):
+                secondary_steps: list[tuple[str, object]] = [
+                    ("crossref", lambda: _fetch_crossref_abstract(doi_norm, crossref_client)),
+                    ("doi_csl_json", lambda: _fetch_datacite_abstract(doi_norm, timeout, str(cfg.get("email", "") or ""))),
+                    ("pubmed", lambda: _fetch_pubmed_abstract(doi_norm, timeout, str(cfg.get("email", "") or ""))),
+                    ("europe_pmc", lambda: _fetch_europepmc_abstract(doi_norm, timeout, str(cfg.get("email", "") or ""))),
+                    ("semantic_scholar", lambda: _fetch_semantic_scholar_abstract(doi_norm, timeout, str(cfg.get("email", "") or ""))),
+                    ("fulltext_heuristic", lambda: _extract_abstract_from_fulltext_text(pid, fulltext_text_dir)),
+                    ("website_scrape", lambda: _fetch_website_abstract(doi_norm, timeout, str(cfg.get("email", "") or ""))),
+                ]
+                for source_key, fetch_fn in secondary_steps:
+                    if source_key not in {"fulltext_heuristic"} and not doi_norm:
+                        continue
+                    if max_secondary_queries is not None and stats["attempted_secondary_queries"] >= max_secondary_queries:
+                        break
+                    cache_key = (source_key, doi_norm if source_key != "fulltext_heuristic" else pid)
+                    stats["attempted_secondary_queries"] += 1
+                    stats["attempted_by_source"][source_key] += 1
+                    if cache_key in secondary_cache:
+                        candidate_abstract, candidate_source = secondary_cache[cache_key]
+                    else:
+                        try:
+                            candidate_abstract, candidate_source = fetch_fn()
+                        except Exception:
+                            candidate_abstract, candidate_source = "", ""
+                            stats["secondary_errors"] += 1
+                            stats["errors_by_source"][source_key] += 1
+                        secondary_cache[cache_key] = (candidate_abstract, candidate_source)
+                    candidate_abstract = _strip_markup(candidate_abstract)
+                    if _is_plausible_abstract(candidate_abstract):
+                        fetched_abstract = candidate_abstract
+                        fetched_source = candidate_source or source_key
+                        stats["successful_secondary_backfills"] += 1
+                        stats["successful_by_source"][source_key] += 1
+                        break
                     if per_request_sleep_s > 0:
                         time.sleep(per_request_sleep_s)
 
             if fetched_abstract:
                 canonical.at[idx, "abstract"] = fetched_abstract
                 canonical.at[idx, "abstract_backfill_source"] = fetched_source or "openalex_backfill"
-                stats["successful_openalex_backfills"] += 1
+                canonical.at[idx, "abstract_backfill_quality"] = _source_quality(fetched_source or "openalex_backfill")
+                if str(fetched_source).startswith("openalex_") or str(fetched_source).startswith("doi:"):
+                    stats["successful_openalex_backfills"] += 1
+
+    # Normalize quality tags for all rows with known source.
+    known_source_mask = canonical["abstract_backfill_source"].map(_clean_text).astype(str) != ""
+    empty_quality_mask = canonical["abstract_backfill_quality"].map(_clean_text).astype(str) == ""
+    for idx in canonical[known_source_mask & empty_quality_mask].index:
+        src = _clean_text(canonical.at[idx, "abstract_backfill_source"])
+        canonical.at[idx, "abstract_backfill_quality"] = _source_quality(src)
 
     missing_after = _is_missing_abstract(canonical["abstract"])
     missing_after_scope = missing_after & selected_scope_mask
@@ -228,12 +580,88 @@ def run(config_path: str) -> None:
 
     scored_path = graph_dir / "scored_papers.csv"
     if scored_path.exists():
-        scored = pd.read_csv(scored_path)
+        scored = pd.read_csv(scored_path, low_memory=False)
         scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
-        canonical_abstracts = canonical[["canonical_paper_id", "abstract", "abstract_backfill_source"]].copy()
-        scored = scored.drop(columns=["abstract", "abstract_backfill_source"], errors="ignore")
+        canonical_abstracts = canonical[
+            ["canonical_paper_id", "abstract", "abstract_backfill_source", "abstract_backfill_quality"]
+        ].copy()
+        scored = scored.drop(
+            columns=["abstract", "abstract_backfill_source", "abstract_backfill_quality"], errors="ignore"
+        )
         scored = scored.merge(canonical_abstracts, on="canonical_paper_id", how="left")
         scored.to_csv(scored_path, index=False)
+
+    # Keep post-selection corpus artifacts in sync now that downstream stages consume them.
+    canonical_abstracts = canonical[
+        ["canonical_paper_id", "abstract", "abstract_backfill_source", "abstract_backfill_quality"]
+    ].copy()
+    for fname in ["core_corpus_selected.csv", "core_corpus_tracked_with_t4.csv"]:
+        path = graph_dir / fname
+        if not path.exists():
+            continue
+        frame = pd.read_csv(path, low_memory=False)
+        if "canonical_paper_id" not in frame.columns:
+            continue
+        frame["canonical_paper_id"] = frame["canonical_paper_id"].astype(str)
+        frame = frame.drop(
+            columns=["abstract", "abstract_backfill_source", "abstract_backfill_quality"], errors="ignore"
+        )
+        frame = frame.merge(canonical_abstracts, on="canonical_paper_id", how="left")
+        frame.to_csv(path, index=False)
+
+    # Apply "hold missing abstracts" only after all backfill attempts have run.
+    hold_path = graph_dir / "papers_on_hold_missing_abstract.csv"
+    hold_df = pd.DataFrame(
+        columns=[
+            "canonical_paper_id",
+            "core_selection_tier",
+            "primary_topic_code",
+            "t4_id",
+            "tracked_source",
+            "doi",
+            "title",
+            "hold_reason",
+        ]
+    )
+    if hold_missing_abstracts_from_graph:
+        tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
+        if tracked_path.exists():
+            tracked = pd.read_csv(tracked_path, low_memory=False)
+            if "canonical_paper_id" in tracked.columns:
+                tracked["canonical_paper_id"] = tracked["canonical_paper_id"].astype(str)
+                tracked_missing_mask = _is_missing_abstract(
+                    tracked.get("abstract", pd.Series("", index=tracked.index))
+                )
+                if bool(tracked_missing_mask.any()):
+                    hold_df = tracked.loc[
+                        tracked_missing_mask,
+                        [
+                            "canonical_paper_id",
+                            "core_selection_tier",
+                            "primary_topic_code",
+                            "t4_id",
+                            "tracked_source",
+                            "doi",
+                            "title",
+                        ],
+                    ].copy()
+                    hold_df["hold_reason"] = "missing_abstract_after_backfill"
+                    held_ids = set(hold_df["canonical_paper_id"].astype(str))
+                    tracked = tracked.loc[~tracked["canonical_paper_id"].astype(str).isin(held_ids)].copy()
+                    tracked.to_csv(tracked_path, index=False)
+
+                    selected_path = graph_dir / "core_corpus_selected.csv"
+                    if selected_path.exists():
+                        selected = pd.read_csv(selected_path, low_memory=False)
+                        if "canonical_paper_id" in selected.columns:
+                            selected["canonical_paper_id"] = selected["canonical_paper_id"].astype(str)
+                            selected = selected.loc[
+                                ~selected["canonical_paper_id"].astype(str).isin(held_ids)
+                            ].copy()
+                            selected.to_csv(selected_path, index=False)
+    hold_df.to_csv(hold_path, index=False)
+    stats["hold_missing_abstracts_enabled"] = bool(hold_missing_abstracts_from_graph)
+    stats["hold_missing_abstracts_count"] = int(len(hold_df))
 
     stats_path = raw_dir / "abstract_backfill_stats.json"
     stats_path.write_text(json.dumps(stats, indent=2), encoding="utf-8")

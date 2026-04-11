@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, sha256_file
+from .utils import ensure_dir, load_config, load_downstream_corpus, sha256_file
 
 DRUG_PATTERNS = {
     "Ocrelizumab": ["ocrelizumab", "ocrevus"],
@@ -147,9 +147,7 @@ def run(config_path: str) -> None:
     ensure_dir(outkg)
     ensure_dir(outex)
 
-    papers = pd.read_csv(graph / "scored_papers.csv")
-    if "in_final_corpus" in papers.columns:
-        papers = papers[papers["in_final_corpus"] == 1].copy()
+    papers, _ = load_downstream_corpus(graph)
     author_metrics = pd.read_csv(graph / "author_metrics.csv") if (graph / "author_metrics.csv").exists() else pd.DataFrame()
     authors = pd.read_csv(norm / "canonical_authors.csv")
     paper_authors = pd.read_csv(norm / "paper_authors.csv")

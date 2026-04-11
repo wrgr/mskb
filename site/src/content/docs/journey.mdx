@@ -33,7 +33,16 @@ import '../../styles/custom.css';
 
   <div class="tools-panel">
     <h3>Journey Tools</h3>
-    <div class="tool-grid">
+    <div class="tools-tabs journey-tools-tabs">
+      <input type="radio" name="journey-tools" id="journey-tools-path" class="mskb-tab-input" checked />
+      <input type="radio" name="journey-tools" id="journey-tools-community" class="mskb-tab-input" />
+      <input type="radio" name="journey-tools" id="journey-tools-io" class="mskb-tab-input" />
+      <div class="mskb-tab-labels tool-tab-labels" role="group" aria-label="Journey tools">
+        <label for="journey-tools-path">Learning path</label>
+        <label for="journey-tools-community">Community</label>
+        <label for="journey-tools-io">Import / Export</label>
+      </div>
+      <div class="tool-grid">
       <section class="tool-card">
         <h4>Learning path</h4>
         <p>Stage selected papers into foundations, bridges, and deep dives.</p>
@@ -65,6 +74,7 @@ import '../../styles/custom.css';
         </div>
         <div id="journey-io-status"></div>
       </section>
+      </div>
     </div>
   </div>
 </div>

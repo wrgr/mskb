@@ -1,13 +1,15 @@
 """Run quality audit gates against the scored paper corpus and emit a report."""
 
 import argparse
+import json
 import math
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, save_json
+from .utils import ensure_dir, load_config, load_downstream_corpus, save_json
 
 
 def _safe_float(value: object, default: float = 0.0) -> float:
@@ -67,6 +69,19 @@ def _is_unmapped_topic(value: object) -> bool:
     return text.upper() == "UNMAPPED"
 
 
+def _normalize_topic_code(value: object) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    upper = text.upper()
+    if upper == "UNMAPPED":
+        return "UNMAPPED"
+    match_topic = re.match(r"^TOPIC-(\d{2})$", upper)
+    if match_topic:
+        return f"TOPIC-{match_topic.group(1)}"
+    return ""
+
+
 def _top_records(df: pd.DataFrame, score_col: str, k: int = 15) -> list[dict]:
     if score_col not in df.columns or df.empty:
         return []
@@ -112,10 +127,27 @@ def _build_markdown_report(report: dict) -> str:
         f"`{gm.get('unmapped_topic_count', 0)}` "
         f"(`{gm.get('unmapped_topic_pct', 0):.2f}%`)"
     )
+    lines.append(
+        f"- Review cross-sectional cluster: "
+        f"`{gm.get('review_cluster_count', 0)}` "
+        f"(`{gm.get('review_cluster_pct', 0):.2f}%`)"
+    )
     lines.append("")
     lines.append("## Category Mix")
     lines.append(f"- Normalized entropy: `{report.get('category_entropy_normalized', 0):.4f}`")
     lines.append(f"- Distribution: `{report.get('category_mix_pct', {})}`")
+    lines.append("")
+    lines.append("## Topic Mix")
+    lines.append(f"- Distribution: `{report.get('topic_mix_pct', {})}`")
+    topic_bounds = report.get("topic_bounds", {}) or {}
+    if topic_bounds:
+        lines.append(
+            "- Topic bounds gate: "
+            f"`enabled={topic_bounds.get('enabled', False)}`, "
+            f"`min_pct={topic_bounds.get('min_pct', 0):.2f}`, "
+            f"`max_pct={topic_bounds.get('max_pct', 0):.2f}`, "
+            f"`include_unmapped={topic_bounds.get('include_unmapped', False)}`"
+        )
     lines.append("")
     lines.append("## Centrality Views")
     lines.append("- Top papers by `paper_importance_score` and `age_normalized_importance_score` are both written to JSON.")
@@ -140,16 +172,8 @@ def run(config_path: str) -> None:
     outdir = root / cfg["output_dir"] / "audit"
     ensure_dir(outdir)
 
-    scored_path = root / cfg["output_dir"] / "graph" / "scored_papers.csv"
-    if not scored_path.exists():
-        raise FileNotFoundError(f"Missing scored papers file: {scored_path}")
-
-    scored = pd.read_csv(scored_path, low_memory=False)
-    if scored.empty:
-        raise RuntimeError("scored_papers.csv is empty")
-
-    scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
-    final = scored[scored["in_final_corpus"] == 1].copy()
+    graph_dir = root / cfg["output_dir"] / "graph"
+    final, source_path = load_downstream_corpus(graph_dir)
     if final.empty:
         raise RuntimeError("No papers in final corpus")
 
@@ -161,6 +185,27 @@ def run(config_path: str) -> None:
     missing_abstract_policy = str(gcfg.get("missing_abstract_policy", "error") or "error").strip().lower()
     max_missing_source_link_pct = _safe_float(gcfg.get("max_missing_source_link_pct", 5.0), 5.0)
     enforce_category_bounds = bool(gcfg.get("enforce_category_bounds", True))
+    enforce_topic_bounds = bool(gcfg.get("enforce_topic_bounds", False))
+    topic_min_pct = _safe_float(gcfg.get("topic_min_pct", 1.0), 1.0)
+    topic_max_pct = _safe_float(gcfg.get("topic_max_pct", 10.0), 10.0)
+    topic_bounds_use_rebalance = bool(gcfg.get("topic_bounds_use_rebalance_from_selection_summary", True))
+    topic_under_min_warn_if_observed_pct_at_least = _safe_float(
+        gcfg.get("topic_under_min_warn_if_observed_pct_at_least", 2.0), 2.0
+    )
+    topic_bounds_include_unmapped = bool(gcfg.get("topic_bounds_include_unmapped", False))
+    topic_expected_codes_raw = gcfg.get("topic_expected_codes", [])
+    topic_expected_codes = []
+    if isinstance(topic_expected_codes_raw, (list, tuple)):
+        for code in topic_expected_codes_raw:
+            if not str(code).strip():
+                continue
+            normalized = _normalize_topic_code(code)
+            if not normalized:
+                raise ValueError(
+                    f"Invalid topic_expected_codes entry '{code}'. "
+                    "Use TOPIC-## codes (or UNMAPPED) only."
+                )
+            topic_expected_codes.append(normalized)
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -214,26 +259,80 @@ def run(config_path: str) -> None:
     category_entropy_normalized = _normalized_entropy(category_counts)
 
     topic_evidence_path = root / cfg["output_dir"] / "topics" / "paper_topic_evidence.csv"
+    topic_counts: dict[str, int] = {}
+    topic_mix_pct: dict[str, float] = {}
+    topic_gap_notes: list[dict[str, object]] = []
     unmapped_topic_count = 0
     unmapped_topic_pct = 0.0
+    review_cluster_count = 0
+    review_cluster_pct = 0.0
     unmapped_topic_sample: list[dict] = []
     unmapped_path = outdir / "final_corpus_unmapped_topics.csv"
     if topic_evidence_path.exists():
         topic_evidence = pd.read_csv(
             topic_evidence_path,
-            usecols=["canonical_paper_id", "primary_topic_code", "topic_assignment_method"],
+            usecols=lambda c: c in {"canonical_paper_id", "primary_topic_code", "topic_assignment_method", "topic_cluster"},
             low_memory=False,
         )
         topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
+        topic_evidence = topic_evidence.rename(
+            columns={
+                "primary_topic_code": "evidence_primary_topic_code",
+                "topic_assignment_method": "evidence_topic_assignment_method",
+                "topic_cluster": "evidence_topic_cluster",
+            }
+        )
 
         final_topic = final.copy()
         final_topic["canonical_paper_id"] = final_topic["canonical_paper_id"].astype(str)
         final_topic = final_topic.merge(topic_evidence, on="canonical_paper_id", how="left")
+        final_topic["primary_topic_code"] = (
+            final_topic.get("primary_topic_code", pd.Series("", index=final_topic.index))
+            .fillna("")
+            .astype(str)
+            .str.strip()
+        )
+        final_topic["primary_topic_code"] = final_topic["primary_topic_code"].where(
+            final_topic["primary_topic_code"] != "",
+            final_topic.get("evidence_primary_topic_code", pd.Series("", index=final_topic.index)).fillna("").astype(str).str.strip(),
+        )
+        final_topic["topic_assignment_method"] = (
+            final_topic.get("topic_assignment_method", pd.Series("", index=final_topic.index))
+            .fillna("")
+            .astype(str)
+            .str.strip()
+        )
+        final_topic["topic_assignment_method"] = final_topic["topic_assignment_method"].where(
+            final_topic["topic_assignment_method"] != "",
+            final_topic.get("evidence_topic_assignment_method", pd.Series("", index=final_topic.index)).fillna("").astype(str).str.strip(),
+        )
+        final_topic["topic_cluster"] = (
+            final_topic.get("topic_cluster", pd.Series("", index=final_topic.index))
+            .fillna("")
+            .astype(str)
+            .str.strip()
+        )
+        final_topic["topic_cluster"] = final_topic["topic_cluster"].where(
+            final_topic["topic_cluster"] != "",
+            final_topic.get("evidence_topic_cluster", pd.Series("", index=final_topic.index)).fillna("").astype(str).str.strip(),
+        )
+
+        cluster_series = final_topic.get("topic_cluster", pd.Series("", index=final_topic.index)).fillna("").astype(str).str.upper()
+        review_cluster_mask = cluster_series == "REVIEW_CLUSTER"
         topic_series = final_topic.get("primary_topic_code", pd.Series("", index=final_topic.index))
-        unmapped_mask = topic_series.map(_is_unmapped_topic)
+        topic_series = topic_series.fillna("").astype(str).str.strip().map(_normalize_topic_code)
+        topic_series = topic_series.apply(lambda v: "UNMAPPED" if _is_unmapped_topic(v) else v)
+
+        topic_series_for_mix = topic_series.copy()
+        topic_series_for_mix.loc[review_cluster_mask] = "REVIEW_CLUSTER"
+        topic_counts = topic_series_for_mix.value_counts().to_dict()
+        topic_mix_pct = {k: round(v * 100.0, 2) for k, v in _normalize_counter(topic_counts).items()}
+        unmapped_mask = topic_series.map(_is_unmapped_topic) & ~review_cluster_mask
         unmapped = final_topic[unmapped_mask].copy()
         unmapped_topic_count = int(len(unmapped))
         unmapped_topic_pct = float((unmapped_topic_count / max(1, len(final_topic))) * 100.0)
+        review_cluster_count = int(review_cluster_mask.sum())
+        review_cluster_pct = float((review_cluster_count / max(1, len(final_topic))) * 100.0)
         if not unmapped.empty:
             keep_cols = [
                 "canonical_paper_id",
@@ -290,6 +389,82 @@ def run(config_path: str) -> None:
                     f"category '{category}' out of bounds: {observed_pct:.2f}% not in [{min_pct:.2f}%, {max_pct:.2f}%]"
                 )
 
+    if enforce_topic_bounds:
+        if not topic_counts:
+            errors.append(f"topic bounds enabled but topic evidence is unavailable: {topic_evidence_path}")
+        else:
+            topic_scope_size = max(1, len(final) - review_cluster_count)
+            effective_topic_min_pct = float(topic_min_pct)
+            effective_topic_max_pct = float(topic_max_pct)
+            if topic_bounds_use_rebalance:
+                selection_summary_path = graph_dir / "core_corpus_selection_summary.json"
+                if selection_summary_path.exists():
+                    try:
+                        summary = json.loads(selection_summary_path.read_text(encoding="utf-8"))
+                        rebalance = ((summary.get("rules", {}) or {}).get("rebalance", {}) or {})
+                        min_count = _safe_int(rebalance.get("min_count", 0), 0)
+                        max_count = _safe_int(rebalance.get("max_count", 0), 0)
+                        if min_count > 0:
+                            effective_topic_min_pct = (float(min_count) / float(topic_scope_size)) * 100.0
+                        if max_count > 0:
+                            effective_topic_max_pct = (float(max_count) / float(topic_scope_size)) * 100.0
+                    except Exception as exc:
+                        warnings.append(
+                            f"failed to load rebalance bounds from {selection_summary_path}: {type(exc).__name__}"
+                        )
+            bounds_counts = {
+                topic: count
+                for topic, count in topic_counts.items()
+                if topic != "REVIEW_CLUSTER"
+            }
+            if topic_expected_codes:
+                topics_to_check = topic_expected_codes
+            else:
+                topics_to_check = sorted(bounds_counts.keys())
+            for topic_code in topics_to_check:
+                if not topic_bounds_include_unmapped and _is_unmapped_topic(topic_code):
+                    continue
+                observed_pct = (bounds_counts.get(topic_code, 0) / topic_scope_size) * 100.0
+                if observed_pct < effective_topic_min_pct:
+                    # Permissive floor policy: treat thin-literature topics as warnings
+                    # when they still retain at least 2% share.
+                    if observed_pct >= topic_under_min_warn_if_observed_pct_at_least:
+                        warnings.append(
+                            f"topic '{topic_code}' below minimum: {observed_pct:.2f}% < {effective_topic_min_pct:.2f}% "
+                            f"(warning-only; literature appears thin for this topic)"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "warning_thin_literature",
+                                "observed_pct": round(observed_pct, 4),
+                                "min_pct": round(effective_topic_min_pct, 4),
+                                "note": "Topic appears undersupplied in current literature relative to balance target.",
+                            }
+                        )
+                    else:
+                        errors.append(
+                            f"topic '{topic_code}' out of bounds: {observed_pct:.2f}% "
+                            f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "error_under_min_literature_thin",
+                                "observed_pct": round(observed_pct, 4),
+                                "min_pct": round(effective_topic_min_pct, 4),
+                                "note": (
+                                    "Topic coverage is materially under target; available literature appears thin "
+                                    "for this scope."
+                                ),
+                            }
+                        )
+                elif observed_pct > effective_topic_max_pct:
+                    errors.append(
+                        f"topic '{topic_code}' out of bounds: {observed_pct:.2f}% "
+                        f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                    )
+
     if "age_normalized_importance_score" not in final.columns:
         warnings.append("age_normalized_importance_score missing; side-by-side ranking is unavailable")
 
@@ -305,9 +480,24 @@ def run(config_path: str) -> None:
             "missing_source_link_pct": round(missing_source_link_pct, 4),
             "unmapped_topic_count": int(unmapped_topic_count),
             "unmapped_topic_pct": round(unmapped_topic_pct, 4),
+            "review_cluster_count": int(review_cluster_count),
+            "review_cluster_pct": round(review_cluster_pct, 4),
             "missing_abstract_policy": missing_abstract_policy,
         },
         "category_mix_pct": category_mix_pct,
+        "topic_mix_pct": topic_mix_pct,
+        "topic_bounds": {
+            "enabled": enforce_topic_bounds,
+            "min_pct": round(topic_min_pct, 4),
+            "max_pct": round(topic_max_pct, 4),
+            "use_rebalance_from_selection_summary": bool(topic_bounds_use_rebalance),
+            "under_min_warn_if_observed_pct_at_least": round(
+                topic_under_min_warn_if_observed_pct_at_least, 4
+            ),
+            "include_unmapped": topic_bounds_include_unmapped,
+            "expected_topic_codes": topic_expected_codes,
+        },
+        "topic_gap_notes": topic_gap_notes,
         "category_entropy": round(category_entropy, 6),
         "category_entropy_normalized": round(category_entropy_normalized, 6),
         "unmapped_topic_sample": unmapped_topic_sample,

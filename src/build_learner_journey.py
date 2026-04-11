@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, save_json
+from .utils import ensure_dir, load_config, load_downstream_corpus, save_json
 
 
 def _rank_norm(values: pd.Series) -> pd.Series:
@@ -90,16 +90,8 @@ def run(config_path: str) -> None:
     ensure_dir(graph_dir)
     ensure_dir(website_dir)
 
-    papers_path = graph_dir / "scored_papers.csv"
-    if not papers_path.exists():
-        raise FileNotFoundError(f"Missing required input: {papers_path}")
-    papers = pd.read_csv(papers_path)
+    papers, papers_path = load_downstream_corpus(graph_dir)
     papers["canonical_paper_id"] = papers["canonical_paper_id"].astype(str)
-
-    if "in_final_corpus" in papers.columns:
-        papers = papers[papers["in_final_corpus"] == 1].copy()
-    elif "tier" in papers.columns:
-        papers = papers[papers["tier"].astype(str).isin(["included", "seed_neighbor"])].copy()
 
     paper_ids = set(papers["canonical_paper_id"].astype(str))
     if not paper_ids:
@@ -365,4 +357,3 @@ if __name__ == "__main__":
     parser.add_argument("--config", required=True)
     args = parser.parse_args()
     run(args.config)
-

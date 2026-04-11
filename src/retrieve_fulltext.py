@@ -199,6 +199,7 @@ def run(
     max_openalex_lookups: int,
     retry_failed: bool,
     retry_missing_pdf: bool,
+    force_openalex_refresh: bool,
 ) -> None:
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
@@ -286,6 +287,7 @@ def run(
         "scope": scope,
         "retry_failed": bool(retry_failed),
         "retry_missing_pdf": bool(retry_missing_pdf),
+        "force_openalex_refresh": bool(force_openalex_refresh),
         "total_input_papers": int(len(papers)),
         "skipped_already_done": 0,
         "openalex_cache_hits": 0,
@@ -310,7 +312,7 @@ def run(
             work_source = ""
             oa_ids = _extract_openalex_ids(row)
             for oid in oa_ids:
-                if oid in cached_works:
+                if (not force_openalex_refresh) and oid in cached_works:
                     work = cached_works[oid]
                     work_source = "cache"
                     stats["openalex_cache_hits"] += 1
@@ -444,6 +446,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Retry papers until a PDF is captured; skip rows that already have a saved PDF.",
     )
+    parser.add_argument(
+        "--force-openalex-refresh",
+        action="store_true",
+        help="Bypass local OpenAlex cache and query OpenAlex API for each work id.",
+    )
     args = parser.parse_args()
     max_papers = args.max_papers if args.max_papers > 0 else None
     run(
@@ -453,4 +460,5 @@ if __name__ == "__main__":
         max_openalex_lookups=max(0, int(args.max_openalex_lookups)),
         retry_failed=bool(args.retry_failed),
         retry_missing_pdf=bool(args.retry_missing_pdf),
+        force_openalex_refresh=bool(args.force_openalex_refresh),
     )

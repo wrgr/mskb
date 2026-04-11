@@ -43,18 +43,18 @@ MSKB uses a seven-stage bibliometric pipeline run entirely from publicly availab
 
 ### Stage 0 — Seed governance
 
-A governance checklist validates **40 hand-curated T1 seed papers** against quotas for five clinical categories, venue concentration caps, author concentration caps, and explicit MS relevance requirements. Seeds are committed to `seeds/core_seeds.csv`. An additional **52 expert-signal T4 papers** are curated by domain experts and documented in `data/t4_expert_signal.yaml` (the authoritative source for T4 retrieval and selection).
+A governance checklist validates hand-curated T1 seeds against topic quotas (`TOPIC-##`), venue concentration caps, author concentration caps, and explicit MS relevance requirements. Seeds are committed to `seeds/core_seeds.csv`. Expert-signal T4 papers are curated by domain experts and documented in `data/t4_expert_signal.yaml` (the authoritative source for T4 retrieval and selection).
 
 ### Stage 1 — Corpus retrieval
 
 Papers are retrieved from **OpenAlex** via five channels:
 - **Seed channel**: direct DOI lookup for every T1 core seed, with one-hop reference expansion
-- **Framing seed channel**: one-hop expansion from each of the six review-anchor seeds (R1–R6), providing additional candidate mass and anchor links for topic assignment
+- **Framing seed channel**: one-hop expansion from review-anchor seeds (R-series), providing additional candidate mass and anchor links for topic assignment
 - **Lexical channel**: 20 structured keyword queries covering the five MS categories
 - **Dataset channel**: 7 registry/cohort-level queries (MSBase, NARCOMS, Atlas of MS, GBD, etc.)
 - **T4 expert channel**: DOI lookup + title search for every entry in `data/t4_expert_signal.yaml` (all 52 expert-signal papers)
 
-Core seed papers are additionally enriched via CrossRef and Semantic Scholar (one-hop reference expansion, title-similarity matching at ≥ 88%). Framing seeds contribute to the candidate pool and topic assignment but are NOT counted toward cross-seed scoring (which uses only the 40 core seeds).
+Core seed papers are additionally enriched via CrossRef and Semantic Scholar (one-hop reference expansion, title-similarity matching at ≥ 88%). Framing seeds contribute to the candidate pool and topic assignment but are not counted as core seed evidence in topic scoring.
 
 ### Stage 2 — Deduplication & merge
 
@@ -80,19 +80,23 @@ Each paper receives a composite relevance score combining:
 A tiered structural gate selects the curated corpus:
 
 **T2 gate (established literature):**
-- min cross-seed score ≥ 2
+- connectivity rule: `in_degree >= 5 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)`
 - min k-core ≥ 4
-- min in-degree ≥ 2
 - importance percentile ≥ 70% within category
 
-Underrepresented topics (< 2% topic share) relax the structural gate to preserve diversity.
+Undersubscribed-topic expansion is allowed with softer within-topic ranking to preserve diversity while keeping structural/connectivity quality gates.
 
 **T3 gate (emerging literature):**
 - Publication year ≥ 2022
 - Citations per year ≥ 20.0
 - Per-topic cap: 20% of T2 topic count, with floor of 5 papers/topic
 
-**Topic balance:** No topic may exceed 20% of the final selected corpus.
+**Topic rebalance:** Bounds are derived from target corpus size:
+- expected per topic = `target_corpus_size / n_topics`
+- min = `0.5 * expected`
+- max = `1.5 * expected`
+
+After selection, tracked papers still missing abstracts can be put on hold and excluded from graph outputs (`governance.hold_missing_abstracts_from_graph`).
 
 ### Stage 6 — Distillation (AI summaries)
 
@@ -140,7 +144,7 @@ MSKB uses three distinct classification systems with distinct roles. Understandi
 - **Completeness**: MSKB is not a systematic review. The corpus covers the high-centrality core of MS literature as of April 2026, not every published paper
 - **Currency**: The build date is April 9, 2026. Papers published after this date are not included
 - **Clinical correctness**: AI-generated summaries may contain errors or omissions. Do not use them for clinical decision-making
-- **Abstract quality**: Approximately 15% of papers in the raw candidate pool lacked an abstract from OpenAlex; these may have lower-quality summaries
+- **Abstract availability**: Raw candidate pools can include papers without abstracts from upstream providers; unresolved papers can be held out of graph outputs per governance policy
 - **Language coverage**: The corpus is overwhelmingly English-language literature — a known gap (see [Gap Tracker](/mskb/corpus/gaps/))
 
 ---

@@ -1,6 +1,7 @@
 
 import argparse
 import json
+import time
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -20,6 +21,26 @@ try:
     _LEIDEN_AVAILABLE = True
 except Exception:
     _LEIDEN_AVAILABLE = False
+
+
+def _format_elapsed(seconds: float) -> str:
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    minutes, rem = divmod(seconds, 60)
+    if minutes < 60:
+        return f"{int(minutes)}m {rem:.1f}s"
+    hours, rem = divmod(minutes, 60)
+    return f"{int(hours)}h {int(rem)}m"
+
+
+def _checkpoint_start(label: str) -> float:
+    print(f"  [checkpoint] {label}...")
+    return time.perf_counter()
+
+
+def _checkpoint_end(label: str, start: float) -> None:
+    elapsed = time.perf_counter() - start
+    print(f"  [checkpoint] {label} complete in {_format_elapsed(elapsed)}")
 
 
 def _pagerank(graph: nx.DiGraph, alpha: float = 0.85, max_iter: int = 100, tol: float = 1.0e-6) -> dict:
@@ -160,6 +181,7 @@ def _seed_lineage_metrics(
 
 
 def run(config_path: str) -> None:
+    stage_start = time.perf_counter()
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     norm = root / cfg["output_dir"] / "normalized"
@@ -167,6 +189,7 @@ def run(config_path: str) -> None:
     outdir = root / cfg["output_dir"] / "graph"
     ensure_dir(outdir)
 
+    checkpoint = _checkpoint_start("Load normalized graph inputs")
     papers = pd.read_csv(norm / "canonical_papers.csv")
     version_map = pd.read_csv(norm / "paper_version_map.csv")
     seed_edges_path = raw / "seed_citation_edges.csv"
@@ -174,7 +197,9 @@ def run(config_path: str) -> None:
         seed_edges = pd.read_csv(seed_edges_path)
     else:
         seed_edges = pd.DataFrame(columns=["source_openalex_id", "target_openalex_id", "edge_type"])
+    _checkpoint_end("Load normalized graph inputs", checkpoint)
 
+    checkpoint = _checkpoint_start("Map OpenAlex IDs and collect citation edges")
     oa_to_canonical = {}
     for _, row in version_map.iterrows():
         if pd.notna(row.get("openalex_id")) and str(row["openalex_id"]).strip():
@@ -202,7 +227,9 @@ def run(config_path: str) -> None:
     cit_edges = list(
         citation_edges_df[["source_paper_id", "target_paper_id"]].itertuples(index=False, name=None)
     )
+    _checkpoint_end("Map OpenAlex IDs and collect citation edges", checkpoint)
 
+    checkpoint = _checkpoint_start("Build citation graph and paper-level metrics")
     G = nx.DiGraph()
     for _, row in papers.iterrows():
         G.add_node(row["canonical_paper_id"], title=row["title"], year=row.get("year"), doi=row.get("doi"), cited_by=row.get("merged_cited_by_count", row.get("cited_by_count", 0)))
@@ -240,7 +267,9 @@ def run(config_path: str) -> None:
         })
     metrics_df = pd.DataFrame(metrics)
     metrics_df.to_csv(outdir / "paper_graph_metrics.csv", index=False)
+    _checkpoint_end("Build citation graph and paper-level metrics", checkpoint)
 
+    checkpoint = _checkpoint_start("Build co-citation edges")
     incoming = defaultdict(set)
     outgoing = defaultdict(set)
     for s, t in cit_edges:
@@ -256,7 +285,9 @@ def run(config_path: str) -> None:
 
     cocit_rows = [{"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "CO_CITED"} for (a, b), w in cocit.items() if w >= cfg["graphs"]["min_cocitation_weight"]]
     pd.DataFrame(cocit_rows).to_csv(outdir / "co_citation_edges.csv", index=False)
+    _checkpoint_end("Build co-citation edges", checkpoint)
 
+    checkpoint = _checkpoint_start("Build bibliographic coupling edges")
     # Compute bibliographic coupling by inverting references:
     # for each referenced paper, connect all corpus papers that cite it.
     # This avoids O(n^2) pairwise paper intersections on large corpora.
@@ -273,7 +304,9 @@ def run(config_path: str) -> None:
                 bib[(citing_list[i], citing_list[j])] += 1
     bib_rows = [{"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "BIBLIOGRAPHIC_COUPLING"} for (a, b), w in bib.items()]
     pd.DataFrame(bib_rows).to_csv(outdir / "bibliographic_coupling_edges.csv", index=False)
+    _checkpoint_end("Build bibliographic coupling edges", checkpoint)
 
+    checkpoint = _checkpoint_start("Build coauthorship edges")
     pa = pd.read_csv(norm / "paper_authors.csv")
     auth_groups = pa.groupby("canonical_paper_id")["canonical_author_id"].apply(list)
     coauth = Counter()
@@ -284,7 +317,9 @@ def run(config_path: str) -> None:
                 coauth[(authors[i], authors[j])] += 1
     coauth_rows = [{"source_author_id": a, "target_author_id": b, "weight": w, "edge_type": "CO_AUTHOR"} for (a, b), w in coauth.items() if w >= cfg["graphs"]["min_coauthorship_weight"]]
     pd.DataFrame(coauth_rows).to_csv(outdir / "coauthorship_edges.csv", index=False)
+    _checkpoint_end("Build coauthorship edges", checkpoint)
 
+    checkpoint = _checkpoint_start("Write graph exchange artifacts (GraphML)")
     nx.write_graphml(G, outdir / "citation_graph.graphml")
     cocit_graph = nx.Graph()
     for row in cocit_rows:
@@ -294,6 +329,9 @@ def run(config_path: str) -> None:
     for row in bib_rows:
         bib_graph.add_edge(row["source_paper_id"], row["target_paper_id"], weight=row["weight"])
     nx.write_graphml(bib_graph, outdir / "bibliographic_coupling_graph.graphml")
+    _checkpoint_end("Write graph exchange artifacts (GraphML)", checkpoint)
+
+    print(f"Stage G: Graph build complete in {_format_elapsed(time.perf_counter() - stage_start)}")
 
 
 if __name__ == "__main__":

@@ -25,6 +25,8 @@ import yaml
 
 
 CONCEPTS_DIR = Path("site/src/content/docs/concepts")
+TRACKED_CORPUS_CSV = Path("outputs/graph/core_corpus_tracked_with_t4.csv")
+SELECTED_CORPUS_CSV = Path("outputs/graph/core_corpus_selected.csv")
 SCORED_PAPERS_CSV = Path("outputs/graph/scored_papers.csv")
 PAPER_TOPICS_CSV = Path("outputs/topics/paper_topics.csv")
 TOPIC_CLUSTERS_CSV = Path("outputs/topics/topic_clusters.csv")
@@ -396,7 +398,11 @@ def _load_primary_topic_per_paper(root: Path) -> dict[str, str]:
 
 
 def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: dict[str, str]) -> list[PaperDoc]:
-    path = root / SCORED_PAPERS_CSV
+    path = root / TRACKED_CORPUS_CSV
+    if not path.exists():
+        path = root / SELECTED_CORPUS_CSV
+    if not path.exists():
+        path = root / SCORED_PAPERS_CSV
     if not path.exists():
         raise FileNotFoundError(f"Corpus file not found: {path}")
 
@@ -408,8 +414,8 @@ def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: 
             if not paper_id:
                 continue
 
-            # Prefer final corpus rows when the field is present.
-            if "in_final_corpus" in row and not _is_truthy(row.get("in_final_corpus")):
+            # Prefer final corpus rows when reading the broad scored table.
+            if path.name == "scored_papers.csv" and "in_final_corpus" in row and not _is_truthy(row.get("in_final_corpus")):
                 continue
             if "tier" in row:
                 tier = _clean_text(row.get("tier")).lower()
@@ -439,7 +445,7 @@ def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: 
                 )
             )
     if not papers:
-        raise RuntimeError("No candidate papers available after filtering scored_papers.csv.")
+        raise RuntimeError(f"No candidate papers available after filtering {path.name}.")
     return papers
 
 

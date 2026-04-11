@@ -13,7 +13,7 @@ from typing import Any
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, save_json
+from .utils import ensure_dir, load_config, load_downstream_corpus, save_json
 
 
 # ---------------------------------------------------------------------------
@@ -365,13 +365,8 @@ def run(config_path: str) -> None:
     with open(audit_path, encoding="utf-8") as f:
         audit_report: dict[str, Any] = json.load(f)
 
-    # Load scored corpus (final papers only)
-    scored_path = out_dir / "graph" / "scored_papers.csv"
-    if not scored_path.exists():
-        raise FileNotFoundError(f"scored_papers.csv not found: {scored_path}")
-    scored = pd.read_csv(scored_path, low_memory=False)
-    scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
-    corpus = scored[scored["in_final_corpus"] == 1].copy()
+    # Load downstream corpus (prefer tracked/selected over broad scored file).
+    corpus, source_path = load_downstream_corpus(out_dir / "graph")
     if corpus.empty:
         raise RuntimeError("No papers in final corpus — cannot generate expert comms.")
     corpus["canonical_paper_id"] = corpus["canonical_paper_id"].astype(str)

@@ -1,5 +1,7 @@
 # Quick Reference Card
 
+> Legacy planning reference. For current v1.3 pipeline behavior and gates, use `README.md`, `config.yaml`, and `site/src/content/docs/corpus/*` as the authoritative sources.
+
 ---
 
 ## Files You Created (6 Total)
