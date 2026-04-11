@@ -1827,6 +1827,30 @@ def generate(config_path: str) -> None:
         topic_clusters = pd.read_csv(topics_dir / "topic_clusters.csv")
     if (topics_dir / "paper_topics.csv").exists():
         paper_topics = pd.read_csv(topics_dir / "paper_topics.csv")
+
+    # Filter topic_clusters to only those with ≥1 paper from the selected corpus.
+    # Leiden clustering runs on the full scored graph and can produce off-topic
+    # clusters (e.g. cardiac, glioma, EEG) that contain no MS-relevant selected
+    # papers. Only clusters with selected-corpus papers get their own topic page.
+    if not topic_clusters.empty and not paper_topics.empty:
+        tracked_csv = graph_dir / "core_corpus_tracked_with_t4.csv"
+        _ref_csv = graph_dir / "core_corpus_selected.csv" if not tracked_csv.exists() else None
+        _corpus_csv = tracked_csv if tracked_csv.exists() else _ref_csv
+        if _corpus_csv and _corpus_csv.exists():
+            _selected_ids = set(
+                pd.read_csv(_corpus_csv, usecols=["canonical_paper_id"], low_memory=False)[
+                    "canonical_paper_id"
+                ].astype(str)
+            )
+            _active_cluster_ids = set(
+                paper_topics[paper_topics["canonical_paper_id"].isin(_selected_ids)]["topic_id"]
+            )
+            _before = len(topic_clusters)
+            topic_clusters = topic_clusters[topic_clusters["topic_id"].isin(_active_cluster_ids)].copy()
+            _dropped = _before - len(topic_clusters)
+            if _dropped:
+                print(f"Topic filter: dropped {_dropped} off-topic cluster(s) with no selected-corpus papers.")
+
     if (distilled_dir / "paper_summaries.csv").exists():
         paper_summaries = pd.read_csv(distilled_dir / "paper_summaries.csv")
     if (distilled_dir / "topic_overviews.csv").exists():

@@ -260,6 +260,7 @@ def run(config_path: str) -> None:
     unmapped_topic_pct = 0.0
     unmapped_topic_sample: list[dict] = []
     unmapped_path = outdir / "final_corpus_unmapped_topics.csv"
+    unmapped_mask: pd.Series = pd.Series(False, index=final.index)
     final["canonical_paper_id"] = final["canonical_paper_id"].astype(str)
     if topic_evidence_path.exists():
         topic_evidence = pd.read_csv(
@@ -355,6 +356,41 @@ def run(config_path: str) -> None:
     if "age_normalized_importance_score" not in final.columns:
         warnings.append("age_normalized_importance_score missing; side-by-side ranking is unavailable")
 
+    # Build a per-paper hold list: papers that flagged at least one soft issue.
+    # These pass through all gates so the pipeline can complete; reviewers can
+    # inspect held_papers.csv after the run before promoting the corpus.
+    hold_reasons: dict[str, list[str]] = {}
+
+    bio_no_ms_mask = final.get("biology_no_ms_link", pd.Series(False, index=final.index)).fillna(False).astype(bool)
+    for pid in final.loc[bio_no_ms_mask, "canonical_paper_id"].tolist():
+        hold_reasons.setdefault(str(pid), []).append("biology_no_ms_link")
+
+    no_link_mask = ~final.apply(_has_source_link, axis=1)
+    for pid in final.loc[no_link_mask, "canonical_paper_id"].tolist():
+        hold_reasons.setdefault(str(pid), []).append("missing_source_link")
+
+    no_abstract_mask = ~abstract_present
+    for pid in final.loc[no_abstract_mask, "canonical_paper_id"].tolist():
+        hold_reasons.setdefault(str(pid), []).append("missing_abstract")
+
+    for pid in final.loc[unmapped_mask, "canonical_paper_id"].tolist():
+        hold_reasons.setdefault(str(pid), []).append("unmapped_topic")
+
+    held_papers_path = outdir / "held_papers.csv"
+    if hold_reasons:
+        hold_rows = [
+            {"canonical_paper_id": pid, "hold_reasons": "; ".join(reasons)}
+            for pid, reasons in sorted(hold_reasons.items())
+        ]
+        pd.DataFrame(hold_rows).to_csv(held_papers_path, index=False)
+        warnings.append(
+            f"{len(hold_reasons)} paper(s) flagged for manual review — see {held_papers_path}"
+        )
+    else:
+        pd.DataFrame(columns=["canonical_paper_id", "hold_reasons"]).to_csv(held_papers_path, index=False)
+
+    held_paper_count = len(hold_reasons)
+
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "corpus_source": corpus_source,
@@ -369,6 +405,7 @@ def run(config_path: str) -> None:
             "unmapped_topic_count": int(unmapped_topic_count),
             "unmapped_topic_pct": round(unmapped_topic_pct, 4),
             "missing_abstract_policy": missing_abstract_policy,
+            "held_paper_count": int(held_paper_count),
         },
         "category_mix_pct": category_mix_pct,
         "category_counts": {k: int(v) for k, v in category_counts.items()},

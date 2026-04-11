@@ -26,6 +26,10 @@ import yaml
 
 CONCEPTS_DIR = Path("site/src/content/docs/concepts")
 SCORED_PAPERS_CSV = Path("outputs/graph/scored_papers.csv")
+# Preferred corpus source: post-selection tracked CSV (~900 papers) so concept
+# pages only reference papers visible in the explorer. Falls back to scored_papers
+# when the tracked file is absent (e.g. early pipeline stages).
+CORE_CORPUS_TRACKED_CSV = Path("outputs/graph/core_corpus_tracked_with_t4.csv")
 PAPER_TOPICS_CSV = Path("outputs/topics/paper_topics.csv")
 TOPIC_CLUSTERS_CSV = Path("outputs/topics/topic_clusters.csv")
 DEFAULT_CACHE_PATH = Path("data/concept_papers.json")
@@ -396,9 +400,24 @@ def _load_primary_topic_per_paper(root: Path) -> dict[str, str]:
 
 
 def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: dict[str, str]) -> list[PaperDoc]:
-    path = root / SCORED_PAPERS_CSV
-    if not path.exists():
-        raise FileNotFoundError(f"Corpus file not found: {path}")
+    """Load the candidate paper pool for concept linking.
+
+    Prefers core_corpus_tracked_with_t4.csv (the post-selection ~900-paper corpus)
+    so concept pages only reference papers visible in the explorer. Falls back to
+    scored_papers.csv filtered by in_final_corpus when the tracked file is absent.
+    """
+    tracked = root / CORE_CORPUS_TRACKED_CSV
+    scored = root / SCORED_PAPERS_CSV
+    if tracked.exists():
+        path = tracked
+        is_tracked = True
+    elif scored.exists():
+        path = scored
+        is_tracked = False
+    else:
+        raise FileNotFoundError(
+            f"Corpus file not found: tried {tracked} and {scored}"
+        )
 
     papers: list[PaperDoc] = []
     with path.open("r", encoding="utf-8", newline="") as f:
@@ -408,13 +427,14 @@ def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: 
             if not paper_id:
                 continue
 
-            # Prefer final corpus rows when the field is present.
-            if "in_final_corpus" in row and not _is_truthy(row.get("in_final_corpus")):
-                continue
-            if "tier" in row:
-                tier = _clean_text(row.get("tier")).lower()
-                if tier and tier not in {"included", "seed_neighbor"}:
+            if not is_tracked:
+                # scored_papers.csv fallback: filter to final-corpus rows only.
+                if "in_final_corpus" in row and not _is_truthy(row.get("in_final_corpus")):
                     continue
+                if "tier" in row:
+                    tier = _clean_text(row.get("tier")).lower()
+                    if tier and tier not in {"included", "seed_neighbor"}:
+                        continue
 
             title = _clean_text(row.get("title"))
             abstract = _clean_text(row.get("abstract"))
@@ -438,8 +458,9 @@ def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: 
                     tokens=tokens,
                 )
             )
+    source_name = path.name
     if not papers:
-        raise RuntimeError("No candidate papers available after filtering scored_papers.csv.")
+        raise RuntimeError(f"No candidate papers available after filtering {source_name}.")
     return papers
 
 
