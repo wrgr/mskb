@@ -1782,6 +1782,19 @@ def _generate_kid_journey_page(
     print(f"Kid journey page written to {out_path}")
 
 
+def _build_viz_assets(*, outputs_dir: Path, assets_dir: Path) -> None:
+    """Copy lineage and field-development JSON from pipeline outputs to site assets."""
+    web_dir = outputs_dir / "website"
+    for name in ("lineage_data.json", "field_development.json"):
+        src = web_dir / name
+        if not src.exists():
+            print(f"[warn] {name} not found in {web_dir}; run compute_viz_metrics first.")
+            continue
+        dst = assets_dir / name
+        dst.write_bytes(src.read_bytes())
+        print(f"Viz asset: {dst}")
+
+
 def generate(config_path: str) -> None:
     """Generate all MkDocs site content from pipeline outputs under the configured output directory."""
     root = Path(config_path).resolve().parent
@@ -2134,6 +2147,7 @@ def generate(config_path: str) -> None:
     # site/src/content/docs/explorer.mdx is hand-maintained; the vendor JS and
     # explorer.js live in site/public/javascripts/. The pipeline only refreshes
     # the explorer JSON payloads in site/public/assets/.
+    _build_viz_assets(outputs_dir=root / cfg["output_dir"], assets_dir=assets_dir)
 
     # Starlight auto-generates the sidebar from directory contents (configured
     # in astro.config.mjs), so there is no nav file to rewrite.

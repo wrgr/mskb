@@ -12,6 +12,7 @@ from src.build_graphs import run as run_graphs
 from src.build_knowledge_graph import run as run_kg
 from src.build_learner_journey import run as run_learner_journey
 from src.compute_scores import run as run_scores
+from src.compute_viz_metrics import run as run_viz_metrics
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
@@ -98,6 +99,56 @@ def main(config_path: str) -> None:
     _run_stage("Stage 8/10: Building knowledge graph", lambda: run_kg(config_path))
     _run_stage("Stage 9/10: Running KB audit gates", lambda: run_audit(config_path))
     _run_stage("Stage 10/10: Generating QA/QC + expert comms reports", lambda: run_generate_reports(config_path))
+    print("Stage 0/10: Seed governance checks...")
+    run_seed_governance(config_path)
+
+    print("Stage 1/10: Retrieving corpora...")
+    run_retrieve(config_path)
+
+    print("Stage 2/10: Deduplicating and merging...")
+    run_merge(config_path)
+
+    print("Stage 2b/10: Backfilling missing abstracts...")
+    run_backfill_abstracts(config_path)
+
+    print("Stage 3/10: Building graphs...")
+    run_graphs(config_path)
+
+    print("Stage 4/10: Computing scores...")
+    run_scores(config_path)
+
+    print("Stage 5/10: Discovering topics (Leiden clusters)...")
+    run_topics(config_path)
+
+    print("Stage 5b/10: Assigning topic evidence (T-codes)...")
+    run_topic_evidence(config_path)
+
+    print("Stage 5c/10: Selecting core corpus (T1+T2+T3+T4)...")
+    run_select_core_corpus(config_path)
+
+    print("Stage 6/10: Building learner journey...")
+    run_learner_journey(config_path)
+
+    print("Stage 7/10: Distilling papers (AI summaries)...")
+    run_distill(config_path)
+
+    print("Stage 7b/10: Refreshing concept-paper links...")
+    _refresh_concept_links(config_path)
+
+    print("Stage 7c/10: Updating kid-friendly summaries and topic overviews...")
+    run_kid_journey(config_path)
+
+    print("Stage 8/10: Building knowledge graph...")
+    run_kg(config_path)
+
+    print("Stage 9/10: Running KB audit gates...")
+    run_audit(config_path)
+
+    print("Stage 9b/10: Computing visualization metrics...")
+    run_viz_metrics(config_path)
+
+    print("Stage 10/10: Generating expert comms review packet...")
+    run_expert_comms(config_path)
 
     pipeline_elapsed = time.perf_counter() - pipeline_start
     print(
