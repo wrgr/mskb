@@ -38,6 +38,65 @@ def _normalize_doi(value: object) -> str:
     return text.strip()
 
 
+def _annotate_reference_seed_tier(frame: pd.DataFrame) -> pd.DataFrame:
+    """Relabel selected non-core reference seeds as T1_REF for explicit tracking."""
+    if frame.empty or "core_selection_tier" not in frame.columns:
+        return frame
+    out = frame.copy()
+    is_reference_seed = out.get("is_reference_seed", pd.Series(False, index=out.index)).map(_boolish)
+    is_core_seed = out.get("is_core_seed", pd.Series(False, index=out.index)).map(_boolish)
+    relabel_mask = is_reference_seed & (~is_core_seed) & out["core_selection_tier"].astype(str).isin({"T2", "T3"})
+    out.loc[relabel_mask, "core_selection_tier"] = "T1_REF"
+    return out
+
+
+def _recent_velocity_mask(frame: pd.DataFrame, min_year: int, min_citations_per_year: float) -> pd.Series:
+    """Return mask for papers that satisfy the recent-paper velocity definition."""
+    if frame.empty:
+        return pd.Series(False, index=frame.index)
+    years = pd.to_numeric(
+        frame.get("year_int", frame.get("year", pd.Series(0, index=frame.index))),
+        errors="coerce",
+    ).fillna(0)
+    cpy = pd.to_numeric(
+        frame.get("citations_per_year_raw", pd.Series(0.0, index=frame.index)),
+        errors="coerce",
+    ).fillna(0.0)
+    return (years >= int(min_year)) & (cpy >= float(min_citations_per_year))
+
+
+def _recent_reserve_target(topic_total: int, reserve_fraction: float, reserve_floor: int) -> int:
+    """Compute per-topic recent-paper reserve target."""
+    if topic_total <= 0:
+        return 0
+    frac_target = int(math.ceil(max(0.0, float(reserve_fraction)) * float(topic_total)))
+    return max(int(max(0, reserve_floor)), frac_target)
+
+
+def _recent_topic_diagnostics(
+    frame: pd.DataFrame,
+    *,
+    recent_col: str,
+    reserve_fraction: float,
+    reserve_floor: int,
+) -> dict[str, dict[str, int]]:
+    """Summarise per-topic recent-paper coverage versus reserve target."""
+    if frame.empty or recent_col not in frame.columns:
+        return {}
+    out: dict[str, dict[str, int]] = {}
+    for topic, group in frame.groupby("primary_topic_code"):
+        total = int(len(group))
+        recent_count = int(group[recent_col].fillna(False).astype(bool).sum())
+        reserve_target = _recent_reserve_target(total, reserve_fraction, reserve_floor)
+        out[str(topic)] = {
+            "selected_total": total,
+            "recent_count": recent_count,
+            "reserve_target": int(reserve_target),
+            "reserve_shortfall": int(max(0, reserve_target - recent_count)),
+        }
+    return out
+
+
 def _load_t4_signal_rows(root: Path, scored: pd.DataFrame) -> pd.DataFrame:
     path = root / "data" / "t4_expert_signal.yaml"
     if not path.exists():
@@ -389,10 +448,16 @@ def _apply_topic_cap(
     selected: pd.DataFrame,
     max_topic_share: float,
     max_topic_count: int = 0,
-) -> tuple[pd.DataFrame, list[dict]]:
+    recent_reserve_fraction: float = 0.0,
+    recent_reserve_floor: int = 0,
+) -> tuple[pd.DataFrame, list[dict], dict[str, int]]:
     capped = selected.copy()
     removed: list[dict] = []
-    tier_rank = {"T3": 0, "T2": 1, "T1": 2}
+    tier_rank = {"T3": 0, "T2": 1, "T1_REF": 2, "T1": 2}
+    reserve_blocked: Counter = Counter()
+    has_recent_col = "is_recent_velocity" in capped.columns
+    reserve_fraction = max(0.0, float(recent_reserve_fraction))
+    reserve_floor = max(0, int(recent_reserve_floor))
 
     while True:
         total = int(len(capped))
@@ -407,25 +472,45 @@ def _apply_topic_cap(
         if over.empty:
             break
 
-        topic = str((over - max_allowed).sort_values(ascending=False).index[0])
-        candidates = capped[(capped["primary_topic_code"] == topic) & (capped["core_selection_tier"] != "T1")].copy()
-        if candidates.empty:
-            break
-        candidates["tier_rank"] = candidates["core_selection_tier"].map(tier_rank).fillna(1)
-        candidates = candidates.sort_values(["tier_rank", "paper_importance_score", "citations_per_year_raw"])
-        drop_row = candidates.iloc[0]
-        drop_id = str(drop_row["canonical_paper_id"])
-        removed.append(
-            {
-                "canonical_paper_id": drop_id,
-                "primary_topic_code": topic,
-                "removed_tier": str(drop_row.get("core_selection_tier", "")),
-                "paper_importance_score": float(drop_row.get("paper_importance_score", 0.0)),
-            }
-        )
-        capped = capped[capped["canonical_paper_id"].astype(str) != drop_id].copy()
+        dropped = False
+        for topic in (over - max_allowed).sort_values(ascending=False).index.tolist():
+            topic = str(topic)
+            topic_rows = capped[capped["primary_topic_code"] == topic].copy()
+            candidates = topic_rows[
+                ~topic_rows["core_selection_tier"].astype(str).isin({"T1", "T1_REF"})
+            ].copy()
+            if candidates.empty:
+                continue
 
-    return capped, removed
+            if has_recent_col:
+                reserve_target = _recent_reserve_target(len(topic_rows), reserve_fraction, reserve_floor)
+                current_recent = int(topic_rows["is_recent_velocity"].fillna(False).astype(bool).sum())
+                if reserve_target > 0 and current_recent <= reserve_target:
+                    candidates = candidates[~candidates["is_recent_velocity"].fillna(False).astype(bool)].copy()
+                    if candidates.empty:
+                        reserve_blocked[topic] += 1
+                        continue
+
+            candidates["tier_rank"] = candidates["core_selection_tier"].map(tier_rank).fillna(1)
+            candidates = candidates.sort_values(["tier_rank", "paper_importance_score", "citations_per_year_raw"])
+            drop_row = candidates.iloc[0]
+            drop_id = str(drop_row["canonical_paper_id"])
+            removed.append(
+                {
+                    "canonical_paper_id": drop_id,
+                    "primary_topic_code": topic,
+                    "removed_tier": str(drop_row.get("core_selection_tier", "")),
+                    "paper_importance_score": float(drop_row.get("paper_importance_score", 0.0)),
+                }
+            )
+            capped = capped[capped["canonical_paper_id"].astype(str) != drop_id].copy()
+            dropped = True
+            break
+
+        if not dropped:
+            break
+
+    return capped, removed, {str(k): int(v) for k, v in reserve_blocked.items()}
 
 
 def _apply_global_tracked_cap(tracked: pd.DataFrame, max_total_papers: int) -> tuple[pd.DataFrame, list[dict]]:
@@ -435,9 +520,9 @@ def _apply_global_tracked_cap(tracked: pd.DataFrame, max_total_papers: int) -> t
 
     out = tracked.copy()
     to_remove = int(len(out) - max_total_papers)
-    tier_rank = {"T3": 0, "T2": 1, "T1": 2, "T4": 3}
+    tier_rank = {"T3": 0, "T2": 1, "T1_REF": 2, "T1": 2, "T4": 3}
 
-    removable = out[~out["core_selection_tier"].astype(str).isin({"T1", "T4"})].copy()
+    removable = out[~out["core_selection_tier"].astype(str).isin({"T1", "T1_REF", "T4"})].copy()
     if removable.empty:
         return out, []
 
@@ -538,6 +623,7 @@ def run(config_path: str) -> None:
     scoped["anchor_category"] = scoped.get("anchor_category", pd.Series("", index=scoped.index)).fillna("unmapped")
     scoped["anchor_category"] = scoped["anchor_category"].astype(str).replace({"": "unmapped"})
     scoped["is_core_seed"] = scoped.get("is_core_seed", pd.Series(False, index=scoped.index)).map(_boolish)
+    scoped["is_reference_seed"] = scoped.get("is_reference_seed", pd.Series(False, index=scoped.index)).map(_boolish)
 
     for col in [
         "cross_seed_score",
@@ -565,6 +651,11 @@ def run(config_path: str) -> None:
         scoped["year_int"] = scoped["year_int"].fillna(scoped.get("year", 0)).fillna(0).astype(int)
     else:
         scoped["year_int"] = pd.to_numeric(scoped.get("year", pd.Series(0, index=scoped.index)), errors="coerce").fillna(0).astype(int)
+    scoped["is_recent_velocity"] = _recent_velocity_mask(
+        scoped,
+        min_year=t3_min_year,
+        min_citations_per_year=t3_min_citations_per_year,
+    )
     scoped["topic_importance_rank_pct"] = (
         scoped.groupby("primary_topic_code")["paper_importance_score"]
         .rank(method="average", pct=True)
@@ -727,10 +818,33 @@ def run(config_path: str) -> None:
     pre_cap["t3_rank_in_topic"] = pre_cap["t3_rank_in_topic"].fillna(0).astype(int)
     pre_cap["t3_topic_cap"] = pre_cap["t3_topic_cap"].fillna(0).astype(int)
 
-    capped, removed = _apply_topic_cap(
+    capped, removed, reserve_blocked_topics = _apply_topic_cap(
         pre_cap,
         max_topic_share=max_topic_share,
         max_topic_count=(rebalance_max_count if rebalance_enabled else 0),
+        recent_reserve_fraction=t3_fraction_of_t2,
+        recent_reserve_floor=t3_floor_per_topic,
+    )
+    capped = _annotate_reference_seed_tier(capped)
+
+    recent_pre_cap_by_topic = _recent_topic_diagnostics(
+        pre_cap,
+        recent_col="is_recent_velocity",
+        reserve_fraction=t3_fraction_of_t2,
+        reserve_floor=t3_floor_per_topic,
+    )
+    recent_post_cap_by_topic = _recent_topic_diagnostics(
+        capped,
+        recent_col="is_recent_velocity",
+        reserve_fraction=t3_fraction_of_t2,
+        reserve_floor=t3_floor_per_topic,
+    )
+    topics_below_recent_reserve_post_cap = sorted(
+        [
+            topic
+            for topic, diag in recent_post_cap_by_topic.items()
+            if int(diag.get("recent_count", 0)) < int(diag.get("reserve_target", 0))
+        ]
     )
 
     selected_path = graph_dir / "core_corpus_selected.csv"
@@ -1063,6 +1177,18 @@ def run(config_path: str) -> None:
         },
         "t3_topic_diagnostics": t3_diag,
         "t3_topic_diagnostics_strict": strict_t3_diag,
+        "recent_velocity_reserve": {
+            "enabled": True,
+            "min_year": int(t3_min_year),
+            "min_citations_per_year": float(t3_min_citations_per_year),
+            "reserve_fraction_of_topic": float(t3_fraction_of_t2),
+            "reserve_floor_per_topic": int(t3_floor_per_topic),
+            "n_topics_below_reserve_post_cap": int(len(topics_below_recent_reserve_post_cap)),
+            "topics_below_reserve_post_cap": topics_below_recent_reserve_post_cap,
+            "reserve_blocked_topics_during_cap": reserve_blocked_topics,
+            "pre_cap_by_topic": recent_pre_cap_by_topic,
+            "post_cap_by_topic": recent_post_cap_by_topic,
+        },
         "topic_cap_removals": {
             "total_removed": int(len(removed)),
             "removed_by_topic": {str(k): int(v) for k, v in removed_df["primary_topic_code"].value_counts().items()} if not removed_df.empty else {},

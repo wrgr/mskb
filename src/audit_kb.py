@@ -148,6 +148,25 @@ def _build_markdown_report(report: dict) -> str:
             f"`max_pct={topic_bounds.get('max_pct', 0):.2f}`, "
             f"`include_unmapped={topic_bounds.get('include_unmapped', False)}`"
         )
+    recent_cfg = report.get("recent_topic_velocity", {}) or {}
+    if recent_cfg:
+        lines.append(
+            "- Recent-paper reserve gate: "
+            f"`enabled={recent_cfg.get('enabled', False)}`, "
+            f"`min_year={recent_cfg.get('min_year', 0)}`, "
+            f"`min_citations_per_year={recent_cfg.get('min_citations_per_year', 0):.2f}`, "
+            f"`reserve_fraction={recent_cfg.get('reserve_fraction_of_topic', 0):.2f}`, "
+            f"`reserve_floor={recent_cfg.get('reserve_floor_per_topic', 0)}`, "
+            f"`warn_below={recent_cfg.get('warn_below_count', 0)}`, "
+            f"`error_below={recent_cfg.get('error_below_count', 0)}`"
+        )
+        lines.append(
+            "- Recent-paper deficits: "
+            f"`below_reserve={recent_cfg.get('topics_below_reserve_count', 0)}`, "
+            f"`below_warn={recent_cfg.get('topics_below_warn_count', 0)}`, "
+            f"`below_error={recent_cfg.get('topics_below_error_count', 0)}`, "
+            f"`below_error_waived={recent_cfg.get('topics_below_error_count_waived', 0)}`"
+        )
     lines.append("")
     lines.append("## Centrality Views")
     lines.append("- Top papers by `paper_importance_score` and `age_normalized_importance_score` are both written to JSON.")
@@ -193,6 +212,21 @@ def run(config_path: str) -> None:
         gcfg.get("topic_under_min_warn_if_observed_pct_at_least", 2.0), 2.0
     )
     topic_bounds_include_unmapped = bool(gcfg.get("topic_bounds_include_unmapped", False))
+    topic_bounds_warn_only_codes_raw = gcfg.get("topic_bounds_warn_only_codes", [])
+    topic_bounds_warn_only_codes: list[str] = []
+    if isinstance(topic_bounds_warn_only_codes_raw, (list, tuple)):
+        for code in topic_bounds_warn_only_codes_raw:
+            if not str(code).strip():
+                continue
+            normalized = _normalize_topic_code(code)
+            if not normalized:
+                raise ValueError(
+                    f"Invalid topic_bounds_warn_only_codes entry '{code}'. "
+                    "Use TOPIC-## codes (or UNMAPPED) only."
+                )
+            topic_bounds_warn_only_codes.append(normalized)
+    topic_bounds_warn_only_set = set(topic_bounds_warn_only_codes)
+
     topic_expected_codes_raw = gcfg.get("topic_expected_codes", [])
     topic_expected_codes = []
     if isinstance(topic_expected_codes_raw, (list, tuple)):
@@ -206,6 +240,44 @@ def run(config_path: str) -> None:
                     "Use TOPIC-## codes (or UNMAPPED) only."
                 )
             topic_expected_codes.append(normalized)
+
+    t3_cfg = ((cfg.get("core_corpus_selection", {}) or {}).get("t3", {}) or {})
+    enforce_recent_topic_coverage = bool(gcfg.get("enforce_recent_topic_coverage", True))
+    recent_topic_min_year = _safe_int(gcfg.get("recent_topic_min_year", t3_cfg.get("min_year", 2022)), 2022)
+    recent_topic_min_citations_per_year = _safe_float(
+        gcfg.get("recent_topic_min_citations_per_year", t3_cfg.get("min_citations_per_year", 20.0)),
+        20.0,
+    )
+    recent_topic_reserve_fraction = max(
+        0.0,
+        _safe_float(
+            gcfg.get("recent_topic_reserve_fraction", t3_cfg.get("cap_fraction_of_t2_per_topic", 0.20)),
+            0.20,
+        ),
+    )
+    recent_topic_reserve_floor = max(
+        0,
+        _safe_int(gcfg.get("recent_topic_reserve_floor_per_topic", t3_cfg.get("floor_per_topic", 5)), 5),
+    )
+    recent_topic_warn_below_count = max(0, _safe_int(gcfg.get("recent_topic_warn_below_count", 5), 5))
+    recent_topic_error_below_count = max(0, _safe_int(gcfg.get("recent_topic_error_below_count", 3), 3))
+    if recent_topic_error_below_count > recent_topic_warn_below_count:
+        recent_topic_warn_below_count = recent_topic_error_below_count
+    recent_topic_include_unmapped = bool(gcfg.get("recent_topic_include_unmapped", False))
+    recent_topic_error_warn_only_codes_raw = gcfg.get("recent_topic_error_warn_only_codes", [])
+    recent_topic_error_warn_only_codes: list[str] = []
+    if isinstance(recent_topic_error_warn_only_codes_raw, (list, tuple)):
+        for code in recent_topic_error_warn_only_codes_raw:
+            if not str(code).strip():
+                continue
+            normalized = _normalize_topic_code(code)
+            if not normalized:
+                raise ValueError(
+                    f"Invalid recent_topic_error_warn_only_codes entry '{code}'. "
+                    "Use TOPIC-## codes (or UNMAPPED) only."
+                )
+            recent_topic_error_warn_only_codes.append(normalized)
+    recent_topic_error_warn_only_set = set(recent_topic_error_warn_only_codes)
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -267,6 +339,9 @@ def run(config_path: str) -> None:
     review_cluster_count = 0
     review_cluster_pct = 0.0
     unmapped_topic_sample: list[dict] = []
+    final_topic = final.copy()
+    topic_series = pd.Series("", index=final.index, dtype=object)
+    review_cluster_mask = pd.Series(False, index=final.index, dtype=bool)
     unmapped_path = outdir / "final_corpus_unmapped_topics.csv"
     if topic_evidence_path.exists():
         topic_evidence = pd.read_csv(
@@ -424,6 +499,7 @@ def run(config_path: str) -> None:
             for topic_code in topics_to_check:
                 if not topic_bounds_include_unmapped and _is_unmapped_topic(topic_code):
                     continue
+                warn_only_bounds = str(topic_code) in topic_bounds_warn_only_set
                 observed_pct = (bounds_counts.get(topic_code, 0) / topic_scope_size) * 100.0
                 if observed_pct < effective_topic_min_pct:
                     # Permissive floor policy: treat thin-literature topics as warnings
@@ -440,6 +516,21 @@ def run(config_path: str) -> None:
                                 "observed_pct": round(observed_pct, 4),
                                 "min_pct": round(effective_topic_min_pct, 4),
                                 "note": "Topic appears undersupplied in current literature relative to balance target.",
+                            }
+                        )
+                    elif warn_only_bounds:
+                        warnings.append(
+                            f"topic '{topic_code}' out of bounds (warning-only override): {observed_pct:.2f}% "
+                            f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "warning_bounds_override_under",
+                                "observed_pct": round(observed_pct, 4),
+                                "min_pct": round(effective_topic_min_pct, 4),
+                                "max_pct": round(effective_topic_max_pct, 4),
+                                "note": "Topic-bounds underflow configured as warning-only override.",
                             }
                         )
                     else:
@@ -460,10 +551,164 @@ def run(config_path: str) -> None:
                             }
                         )
                 elif observed_pct > effective_topic_max_pct:
-                    errors.append(
-                        f"topic '{topic_code}' out of bounds: {observed_pct:.2f}% "
-                        f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                    if warn_only_bounds:
+                        warnings.append(
+                            f"topic '{topic_code}' out of bounds (warning-only override): {observed_pct:.2f}% "
+                            f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "warning_bounds_override_over",
+                                "observed_pct": round(observed_pct, 4),
+                                "min_pct": round(effective_topic_min_pct, 4),
+                                "max_pct": round(effective_topic_max_pct, 4),
+                                "note": "Topic-bounds overflow configured as warning-only override.",
+                            }
+                        )
+                    else:
+                        errors.append(
+                            f"topic '{topic_code}' out of bounds: {observed_pct:.2f}% "
+                            f"not in [{effective_topic_min_pct:.2f}%, {effective_topic_max_pct:.2f}%]"
+                        )
+
+    recent_topic_stats: dict[str, dict[str, object]] = {}
+    topics_below_recent_reserve = 0
+    topics_below_recent_warn = 0
+    topics_below_recent_error = 0
+    topics_below_recent_error_waived = 0
+    if enforce_recent_topic_coverage:
+        if topic_evidence_path.exists() and topic_counts:
+            years = pd.to_numeric(
+                final_topic.get("year_int", final_topic.get("year", pd.Series(0, index=final_topic.index))),
+                errors="coerce",
+            ).fillna(0)
+            cpy = pd.to_numeric(
+                final_topic.get("citations_per_year_raw", pd.Series(0.0, index=final_topic.index)),
+                errors="coerce",
+            ).fillna(0.0)
+            recent_mask = (
+                (years >= int(recent_topic_min_year))
+                & (cpy >= float(recent_topic_min_citations_per_year))
+                & (~review_cluster_mask)
+            )
+            topic_counts_no_review = {
+                str(topic): int(count)
+                for topic, count in topic_counts.items()
+                if str(topic) != "REVIEW_CLUSTER"
+            }
+            if topic_expected_codes:
+                topics_to_check_recent = topic_expected_codes
+            else:
+                topics_to_check_recent = sorted(topic_counts_no_review.keys())
+
+            for topic_code in topics_to_check_recent:
+                if not recent_topic_include_unmapped and _is_unmapped_topic(topic_code):
+                    continue
+                topic_mask = (topic_series == topic_code) & (~review_cluster_mask)
+                topic_total = int(topic_mask.sum())
+                recent_count = int((topic_mask & recent_mask).sum())
+                reserve_target = (
+                    max(
+                        int(recent_topic_reserve_floor),
+                        int(math.ceil(float(recent_topic_reserve_fraction) * float(topic_total))),
                     )
+                    if topic_total > 0
+                    else 0
+                )
+                warn_only_override = str(topic_code) in recent_topic_error_warn_only_set
+                recent_topic_stats[str(topic_code)] = {
+                    "topic_total": topic_total,
+                    "recent_count": recent_count,
+                    "reserve_target": int(reserve_target),
+                    "shortfall": int(max(0, reserve_target - recent_count)),
+                    "below_warn_threshold": bool(topic_total > 0 and recent_count < recent_topic_warn_below_count),
+                    "below_error_threshold": bool(topic_total > 0 and recent_count < recent_topic_error_below_count),
+                    "error_warn_only_override": bool(warn_only_override),
+                }
+                if topic_total <= 0:
+                    continue
+
+                if recent_count < reserve_target:
+                    topics_below_recent_reserve += 1
+
+                if recent_count < recent_topic_error_below_count:
+                    if warn_only_override:
+                        topics_below_recent_error_waived += 1
+                        topics_below_recent_warn += 1
+                        warnings.append(
+                            f"topic '{topic_code}' has too few recent papers: {recent_count} < "
+                            f"{recent_topic_error_below_count} "
+                            f"(warning-only override; recent = year>={recent_topic_min_year} and "
+                            f"citations/year>={recent_topic_min_citations_per_year:.2f}; "
+                            f"reserve_target={reserve_target})"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "warning_recent_error_waived",
+                                "recent_count": int(recent_count),
+                                "error_threshold": int(recent_topic_error_below_count),
+                                "warn_threshold": int(recent_topic_warn_below_count),
+                                "reserve_target": int(reserve_target),
+                                "note": "Recent-paper shortfall is configured as warning-only for this topic.",
+                            }
+                        )
+                    else:
+                        topics_below_recent_error += 1
+                        errors.append(
+                            f"topic '{topic_code}' has too few recent papers: {recent_count} < "
+                            f"{recent_topic_error_below_count} "
+                            f"(recent = year>={recent_topic_min_year} and citations/year>={recent_topic_min_citations_per_year:.2f}; "
+                            f"reserve_target={reserve_target})"
+                        )
+                        topic_gap_notes.append(
+                            {
+                                "topic_code": str(topic_code),
+                                "status": "error_recent_too_few",
+                                "recent_count": int(recent_count),
+                                "error_threshold": int(recent_topic_error_below_count),
+                                "warn_threshold": int(recent_topic_warn_below_count),
+                                "reserve_target": int(reserve_target),
+                                "note": "Recent-paper coverage is below hard minimum threshold.",
+                            }
+                        )
+                elif recent_count < recent_topic_warn_below_count:
+                    topics_below_recent_warn += 1
+                    warnings.append(
+                        f"topic '{topic_code}' has low recent-paper coverage: {recent_count} < "
+                        f"{recent_topic_warn_below_count} "
+                        f"(recent = year>={recent_topic_min_year} and citations/year>={recent_topic_min_citations_per_year:.2f}; "
+                        f"reserve_target={reserve_target})"
+                    )
+                    topic_gap_notes.append(
+                        {
+                            "topic_code": str(topic_code),
+                            "status": "warning_recent_below_warn_threshold",
+                            "recent_count": int(recent_count),
+                            "warn_threshold": int(recent_topic_warn_below_count),
+                            "reserve_target": int(reserve_target),
+                            "note": "Recent-paper coverage is below warning threshold.",
+                        }
+                    )
+                elif recent_count < reserve_target:
+                    warnings.append(
+                        f"topic '{topic_code}' below recent-paper reserve target: {recent_count} < {reserve_target} "
+                        f"(target=max({recent_topic_reserve_floor}, ceil({recent_topic_reserve_fraction:.2f}*topic_n)))"
+                    )
+                    topic_gap_notes.append(
+                        {
+                            "topic_code": str(topic_code),
+                            "status": "warning_recent_below_reserve",
+                            "recent_count": int(recent_count),
+                            "reserve_target": int(reserve_target),
+                            "note": "Recent-paper coverage is below reserve target for this topic.",
+                        }
+                    )
+        else:
+            warnings.append(
+                f"recent topic coverage gate enabled but topic evidence is unavailable: {topic_evidence_path}"
+            )
 
     if "age_normalized_importance_score" not in final.columns:
         warnings.append("age_normalized_importance_score missing; side-by-side ranking is unavailable")
@@ -483,6 +728,10 @@ def run(config_path: str) -> None:
             "review_cluster_count": int(review_cluster_count),
             "review_cluster_pct": round(review_cluster_pct, 4),
             "missing_abstract_policy": missing_abstract_policy,
+            "recent_topics_below_reserve_target": int(topics_below_recent_reserve),
+            "recent_topics_below_warn_threshold": int(topics_below_recent_warn),
+            "recent_topics_below_error_threshold": int(topics_below_recent_error),
+            "recent_topics_below_error_threshold_waived": int(topics_below_recent_error_waived),
         },
         "category_mix_pct": category_mix_pct,
         "topic_mix_pct": topic_mix_pct,
@@ -495,7 +744,24 @@ def run(config_path: str) -> None:
                 topic_under_min_warn_if_observed_pct_at_least, 4
             ),
             "include_unmapped": topic_bounds_include_unmapped,
+            "warn_only_codes": sorted(topic_bounds_warn_only_codes),
             "expected_topic_codes": topic_expected_codes,
+        },
+        "recent_topic_velocity": {
+            "enabled": bool(enforce_recent_topic_coverage),
+            "min_year": int(recent_topic_min_year),
+            "min_citations_per_year": float(recent_topic_min_citations_per_year),
+            "reserve_fraction_of_topic": float(recent_topic_reserve_fraction),
+            "reserve_floor_per_topic": int(recent_topic_reserve_floor),
+            "warn_below_count": int(recent_topic_warn_below_count),
+            "error_below_count": int(recent_topic_error_below_count),
+            "include_unmapped": bool(recent_topic_include_unmapped),
+            "error_warn_only_codes": sorted(recent_topic_error_warn_only_codes),
+            "topics_below_reserve_count": int(topics_below_recent_reserve),
+            "topics_below_warn_count": int(topics_below_recent_warn),
+            "topics_below_error_count": int(topics_below_recent_error),
+            "topics_below_error_count_waived": int(topics_below_recent_error_waived),
+            "by_topic": recent_topic_stats,
         },
         "topic_gap_notes": topic_gap_notes,
         "category_entropy": round(category_entropy, 6),

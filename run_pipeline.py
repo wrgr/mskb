@@ -15,7 +15,7 @@ from src.compute_scores import run as run_scores
 from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
-from src.expert_comms import run as run_expert_comms
+from src.generate_reports import run as run_generate_reports
 from src.retrieve_corpora import run as run_retrieve
 from src.select_core_corpus import run as run_select_core_corpus
 from src.seed_governance import run as run_seed_governance
@@ -97,14 +97,17 @@ def main(config_path: str) -> None:
     )
     _run_stage("Stage 8/10: Building knowledge graph", lambda: run_kg(config_path))
     _run_stage("Stage 9/10: Running KB audit gates", lambda: run_audit(config_path))
-    _run_stage("Stage 10/10: Generating expert comms review packet", lambda: run_expert_comms(config_path))
+    _run_stage("Stage 10/10: Generating QA/QC + expert comms reports", lambda: run_generate_reports(config_path))
 
     pipeline_elapsed = time.perf_counter() - pipeline_start
     print(
         "Pipeline complete.\n"
         f"  - Total elapsed: {_format_elapsed(pipeline_elapsed)}\n"
         "  - Site:          python site/build_site.py --config config.yaml\n"
-        "  - Expert report: outputs/expert_comms/expert_comms_report.md"
+        "  - QA/QC report:  outputs/expert_comms/qa_qc_report.md\n"
+        "  - Expert pass:   outputs/expert_comms/expert_comms_report.md\n"
+        "  - Snapshots:     outputs/expert_comms/*_YYYYMMDDTHHMMSSZ.*\n"
+        "  - Provenance:    outputs/provenance/retrieval_snapshot_YYYYMMDDTHHMMSSZ.json"
     )
 
 

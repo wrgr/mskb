@@ -82,6 +82,43 @@ def test_load_t4_registry_v1_fallback(tmp_path: Path) -> None:
     assert "10.1000/legacy" in set(registry["doi_norm"].tolist())
 
 
+def test_load_t4_registry_skips_include_in_graph_false(tmp_path: Path) -> None:
+    """Entries explicitly excluded from graph should not be treated as T4 signals."""
+    data_dir = tmp_path / "data"
+    data_dir.mkdir(parents=True)
+    payload = {
+        "by_concept": {
+            "pediatric_ms": {
+                "concept_path": "concepts/populations/pediatric-ms",
+                "papers": [
+                    {
+                        "t4_id": "T4-033",
+                        "title": "Keep Me",
+                        "doi": "https://doi.org/10.1000/keep",
+                        "topic_codes": ["TOPIC-14"],
+                        "relevance": "valid",
+                        "include_in_graph": True,
+                    },
+                    {
+                        "t4_id": "T4-034",
+                        "title": "Exclude Me",
+                        "doi": "https://doi.org/10.1000/exclude",
+                        "topic_codes": ["TOPIC-14"],
+                        "relevance": "bad citation",
+                        "include_in_graph": False,
+                    },
+                ],
+            }
+        }
+    }
+    (data_dir / "t4_expert_signal.yaml").write_text(yaml.safe_dump(payload), encoding="utf-8")
+
+    registry = compute_scores._load_t4_registry(tmp_path)
+    dois = set(registry["doi_norm"].tolist())
+    assert "10.1000/keep" in dois
+    assert "10.1000/exclude" not in dois
+
+
 def test_add_t4_expert_columns_matches_by_title_when_doi_missing() -> None:
     """Papers without a DOI are matched by normalised title."""
     papers = pd.DataFrame(

@@ -345,6 +345,13 @@ def run(config_path: str) -> None:
                 f"not found in {selected_path}"
             )
         selected_scope_ids = set(selected_df[selected_id_column].dropna().astype(str).tolist())
+        if hold_missing_abstracts_from_graph:
+            hold_path = graph_dir / "papers_on_hold_missing_abstract.csv"
+            if hold_path.exists():
+                hold_df = pd.read_csv(hold_path, usecols=lambda c: c == "canonical_paper_id")
+                if "canonical_paper_id" in hold_df.columns:
+                    hold_ids = set(hold_df["canonical_paper_id"].dropna().astype(str).tolist())
+                    selected_scope_ids |= hold_ids
         selected_scope_mask = canonical["canonical_paper_id"].astype(str).isin(selected_scope_ids)
 
     missing_before = _is_missing_abstract(canonical["abstract"])
@@ -611,29 +618,42 @@ def run(config_path: str) -> None:
 
     # Apply "hold missing abstracts" only after all backfill attempts have run.
     hold_path = graph_dir / "papers_on_hold_missing_abstract.csv"
-    hold_df = pd.DataFrame(
-        columns=[
-            "canonical_paper_id",
-            "core_selection_tier",
-            "primary_topic_code",
-            "t4_id",
-            "tracked_source",
-            "doi",
-            "title",
-            "hold_reason",
-        ]
-    )
+    hold_columns = [
+        "canonical_paper_id",
+        "core_selection_tier",
+        "primary_topic_code",
+        "t4_id",
+        "tracked_source",
+        "doi",
+        "title",
+        "hold_reason",
+    ]
+    hold_df = pd.DataFrame(columns=hold_columns)
     if hold_missing_abstracts_from_graph:
+        previous_hold_df = pd.DataFrame(columns=hold_columns)
+        if hold_path.exists():
+            previous_hold_df = pd.read_csv(hold_path, low_memory=False)
+            if "canonical_paper_id" in previous_hold_df.columns:
+                previous_hold_df["canonical_paper_id"] = previous_hold_df["canonical_paper_id"].astype(str)
+            for col in hold_columns:
+                if col not in previous_hold_df.columns:
+                    previous_hold_df[col] = ""
+            previous_hold_df = previous_hold_df[hold_columns].copy()
+
+        tracked = pd.DataFrame()
+        tracked_has_ids = False
+        tracked_missing_hold_df = pd.DataFrame(columns=hold_columns)
         tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
         if tracked_path.exists():
             tracked = pd.read_csv(tracked_path, low_memory=False)
             if "canonical_paper_id" in tracked.columns:
+                tracked_has_ids = True
                 tracked["canonical_paper_id"] = tracked["canonical_paper_id"].astype(str)
                 tracked_missing_mask = _is_missing_abstract(
                     tracked.get("abstract", pd.Series("", index=tracked.index))
                 )
                 if bool(tracked_missing_mask.any()):
-                    hold_df = tracked.loc[
+                    tracked_missing_hold_df = tracked.loc[
                         tracked_missing_mask,
                         [
                             "canonical_paper_id",
@@ -645,20 +665,92 @@ def run(config_path: str) -> None:
                             "title",
                         ],
                     ].copy()
-                    hold_df["hold_reason"] = "missing_abstract_after_backfill"
-                    held_ids = set(hold_df["canonical_paper_id"].astype(str))
-                    tracked = tracked.loc[~tracked["canonical_paper_id"].astype(str).isin(held_ids)].copy()
-                    tracked.to_csv(tracked_path, index=False)
+                    tracked_missing_hold_df["hold_reason"] = "missing_abstract_after_backfill"
 
-                    selected_path = graph_dir / "core_corpus_selected.csv"
-                    if selected_path.exists():
-                        selected = pd.read_csv(selected_path, low_memory=False)
-                        if "canonical_paper_id" in selected.columns:
-                            selected["canonical_paper_id"] = selected["canonical_paper_id"].astype(str)
-                            selected = selected.loc[
-                                ~selected["canonical_paper_id"].astype(str).isin(held_ids)
+        merged_hold = pd.concat([previous_hold_df, tracked_missing_hold_df], ignore_index=True)
+        if "canonical_paper_id" in merged_hold.columns:
+            merged_hold["canonical_paper_id"] = merged_hold["canonical_paper_id"].astype(str)
+            merged_hold = merged_hold.loc[merged_hold["canonical_paper_id"].str.strip() != ""].copy()
+            merged_hold = merged_hold.drop_duplicates(subset=["canonical_paper_id"], keep="last")
+
+            missing_now_ids = set(
+                canonical.loc[_is_missing_abstract(canonical["abstract"]), "canonical_paper_id"]
+                .dropna()
+                .astype(str)
+                .tolist()
+            )
+            hold_df = merged_hold.loc[merged_hold["canonical_paper_id"].isin(missing_now_ids)].copy()
+            hold_df = hold_df[hold_columns].copy()
+
+            held_ids = set(hold_df["canonical_paper_id"].astype(str))
+            previous_hold_ids = (
+                set(previous_hold_df["canonical_paper_id"].astype(str))
+                if "canonical_paper_id" in previous_hold_df.columns
+                else set()
+            )
+            recovered_ids = previous_hold_ids - held_ids
+            if tracked_path.exists() and tracked_has_ids:
+                tracked = tracked.loc[~tracked["canonical_paper_id"].astype(str).isin(held_ids)].copy()
+
+                if recovered_ids:
+                    tracked_existing_ids = set(tracked["canonical_paper_id"].astype(str))
+                    recover_add_ids = sorted(recovered_ids - tracked_existing_ids)
+                    if recover_add_ids:
+                        recover_map = previous_hold_df.set_index("canonical_paper_id").to_dict("index")
+                        recovered_rows = pd.DataFrame()
+                        if scored_path.exists():
+                            scored_full = pd.read_csv(scored_path, low_memory=False)
+                            if "canonical_paper_id" in scored_full.columns:
+                                scored_full["canonical_paper_id"] = scored_full["canonical_paper_id"].astype(str)
+                                recovered_rows = scored_full.loc[
+                                    scored_full["canonical_paper_id"].isin(recover_add_ids)
+                                ].copy()
+                        if not recovered_rows.empty:
+                            recovered_rows["core_selection_tier"] = recovered_rows["canonical_paper_id"].map(
+                                lambda pid: _clean_text(recover_map.get(str(pid), {}).get("core_selection_tier"))
+                            )
+                            recovered_rows["primary_topic_code"] = recovered_rows["canonical_paper_id"].map(
+                                lambda pid: _clean_text(recover_map.get(str(pid), {}).get("primary_topic_code"))
+                            )
+                            recovered_rows["tracked_source"] = recovered_rows["canonical_paper_id"].map(
+                                lambda pid: _clean_text(recover_map.get(str(pid), {}).get("tracked_source")) or "T1_T2_T3"
+                            )
+                            recovered_rows["t4_id"] = recovered_rows["canonical_paper_id"].map(
+                                lambda pid: _clean_text(recover_map.get(str(pid), {}).get("t4_id"))
+                            )
+                            for col in tracked.columns:
+                                if col not in recovered_rows.columns:
+                                    recovered_rows[col] = pd.NA
+                            recovered_rows = recovered_rows[tracked.columns].copy()
+                            tracked = pd.concat([tracked, recovered_rows], ignore_index=True)
+
+                tracked.to_csv(tracked_path, index=False)
+
+            selected_path = graph_dir / "core_corpus_selected.csv"
+            if selected_path.exists():
+                selected = pd.read_csv(selected_path, low_memory=False)
+                if "canonical_paper_id" in selected.columns:
+                    selected["canonical_paper_id"] = selected["canonical_paper_id"].astype(str)
+                    selected = selected.loc[~selected["canonical_paper_id"].astype(str).isin(held_ids)].copy()
+                    if recovered_ids and tracked_path.exists() and tracked_has_ids and not tracked.empty:
+                        selected_existing_ids = set(selected["canonical_paper_id"].astype(str))
+                        tracked_recovered = tracked.loc[
+                            tracked["canonical_paper_id"].astype(str).isin(recovered_ids)
+                        ].copy()
+                        if "core_selection_tier" in tracked_recovered.columns:
+                            tracked_recovered = tracked_recovered.loc[
+                                tracked_recovered["core_selection_tier"].astype(str).str.upper() != "T4"
                             ].copy()
-                            selected.to_csv(selected_path, index=False)
+                        tracked_recovered = tracked_recovered.loc[
+                            ~tracked_recovered["canonical_paper_id"].astype(str).isin(selected_existing_ids)
+                        ].copy()
+                        if not tracked_recovered.empty:
+                            for col in selected.columns:
+                                if col not in tracked_recovered.columns:
+                                    tracked_recovered[col] = pd.NA
+                            tracked_recovered = tracked_recovered[selected.columns].copy()
+                            selected = pd.concat([selected, tracked_recovered], ignore_index=True)
+                    selected.to_csv(selected_path, index=False)
     hold_df.to_csv(hold_path, index=False)
     stats["hold_missing_abstracts_enabled"] = bool(hold_missing_abstracts_from_graph)
     stats["hold_missing_abstracts_count"] = int(len(hold_df))

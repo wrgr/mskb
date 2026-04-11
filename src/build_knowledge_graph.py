@@ -129,11 +129,17 @@ def write_provenance_snapshot(root: Path, output_dir: str) -> None:
         explorer / "explorer_papers.parquet",
         explorer / "explorer_authors.parquet",
     ]
+    now = datetime.now(timezone.utc)
+    generated_at_utc = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    timestamp_slug = now.strftime("%Y%m%dT%H%M%SZ")
     snapshot = {
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "generated_at_utc": generated_at_utc,
+        "snapshot_id_utc": timestamp_slug,
         "artifacts": [_artifact_info(path) for path in key_files],
     }
-    (provenance_dir / "retrieval_snapshot.json").write_text(json.dumps(snapshot, indent=2), encoding="utf-8")
+    payload = json.dumps(snapshot, indent=2)
+    (provenance_dir / "retrieval_snapshot.json").write_text(payload, encoding="utf-8")
+    (provenance_dir / f"retrieval_snapshot_{timestamp_slug}.json").write_text(payload, encoding="utf-8")
 
 
 def run(config_path: str) -> None:

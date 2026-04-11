@@ -664,6 +664,8 @@ by_concept:
       relevance: natural history, T1b bridge
       corpus_status: not_found
       doi: https://doi.org/10.1055/s-0034-1381742
+      include_in_graph: false
+      exclusion_note: Explicitly excluded; bad/off-topic citation (non-MS thoracic oncology imaging article matched in OpenAlex).
   rehabilitation_exercise:
     concept_path: concepts/clinical/rehabilitation-exercise
     papers:

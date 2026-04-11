@@ -50,7 +50,7 @@ python run_pipeline.py --config config.yaml
 | 7c | `update_kid_journey.py` | Regenerate kid-friendly summaries and topic overviews |
 | 8 | `src/build_knowledge_graph.py` | Extract MS entities and build heterogeneous KG |
 | 9 | `src/audit_kb.py` | Run CI-like corpus audit gates (`ms_focus`, contamination, topic bounds, missing data) |
-| 10 | `src/expert_comms.py` | Generate expert review packet from latest corpus + audit outputs |
+| 10 | `src/generate_reports.py` | Generate timestamped QA/QC report (TOPIC-code lens) + site-facing expert comms pass |
 
 Run individual stages:
 ```bash
@@ -68,6 +68,10 @@ python -m src.audit_kb --config config.yaml
 
 - Topic codes must use `TOPIC-##` format.
 - T2 connectivity rule: `in_degree >= 5 OR (cross_seed_score >= 1 AND review_anchor_link_count >= 1)`.
+- Recent-paper reserve per topic:
+  - recent paper definition: `year >= 2022 AND citations_per_year_raw >= 20.0`
+  - reserve target: `max(5, ceil(0.20 * topic_selected_count))`
+  - audit severity: warning when `< 5`, error when `< 3`
 - Topic rebalance bounds are derived from `target_corpus_size / n_topics`:
   - min = `0.5 * expected`
   - max = `1.5 * expected`

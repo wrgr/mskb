@@ -317,6 +317,20 @@ governance:
     # record warning + thin-literature gap note instead of hard error.
     topic_under_min_warn_if_observed_pct_at_least: 2.0
     topic_bounds_include_unmapped: false
+    # Optional topic-bounds warn-only overrides (otherwise out-of-bounds is an error).
+    topic_bounds_warn_only_codes: []
+    # Recent-paper reserve gate: recent = year>=min_year and citations/year>=min_citations.
+    # Gate severity: warning below warn threshold, hard error below error threshold.
+    enforce_recent_topic_coverage: true
+    recent_topic_min_year: 2022
+    recent_topic_min_citations_per_year: 20.0
+    recent_topic_reserve_fraction: 0.20
+    recent_topic_reserve_floor_per_topic: 5
+    recent_topic_warn_below_count: 5
+    recent_topic_error_below_count: 3
+    # Optional: downgrade selected topics that are below the error threshold to warning-only.
+    # Example: [TOPIC-11]
+    recent_topic_error_warn_only_codes: []
     # Audit checks each listed topic against [topic_min_pct, topic_max_pct].
     # Missing topics count as 0% and fail the gate.
     # Use TOPIC-## codes only (legacy T## codes are rejected).
