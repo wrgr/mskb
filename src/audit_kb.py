@@ -150,6 +150,13 @@ def _build_markdown_report(report: dict) -> str:
     lines.append(f"- Normalized entropy: `{report.get('category_entropy_normalized', 0):.4f}`")
     lines.append(f"- Distribution: `{report.get('category_mix_pct', {})}`")
     lines.append("")
+    lines.append("## Manual Review")
+    held = gm.get("held_paper_count", 0)
+    lines.append(f"- Papers held for manual review: `{held}`")
+    if held:
+        lines.append("- Reasons may include: `biology_no_ms_link`, `missing_source_link`, `missing_abstract`, `unmapped_topic`")
+        lines.append("- See `outputs/audit/held_papers.csv` for full list with per-paper reasons.")
+    lines.append("")
     lines.append("## Centrality Views")
     lines.append("- Top papers by `paper_importance_score` and `age_normalized_importance_score` are both written to JSON.")
     lines.append("")
@@ -423,10 +430,16 @@ def run(config_path: str) -> None:
     (outdir / "kb_audit_report.md").write_text(_build_markdown_report(report), encoding="utf-8")
 
     status = "PASS" if report["passed"] else "FAIL"
-    print(f"KB audit gates: {status} ({len(errors)} errors, {len(warnings)} warnings)")
+    print(
+        f"KB audit gates: {status} "
+        f"({len(errors)} errors, {len(warnings)} warnings, "
+        f"{held_paper_count} held for manual review)"
+    )
     if errors:
         for err in errors:
-            print(f"  - {err}")
+            print(f"  ERROR: {err}")
+    if held_paper_count:
+        print(f"  REVIEW REQUIRED: {held_paper_count} paper(s) in {held_papers_path}")
     if fail_on_error and errors:
         raise RuntimeError("KB audit gates failed")
 

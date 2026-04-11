@@ -1,9 +1,11 @@
 """Orchestrate all pipeline stages in sequence from seed governance to expert comms."""
 
 import argparse
+import json
 import subprocess
 import sys
 import time
+from pathlib import Path
 from typing import Callable
 
 from src.audit_kb import run as run_audit
@@ -80,6 +82,49 @@ def _run_stage(
     )
 
 
+def _print_qc_summary(config_path: str) -> None:
+    """Print a QC/QA summary after all stages complete, highlighting items needing attention."""
+    from src.utils import load_config
+    cfg = load_config(config_path)
+    root = Path(config_path).resolve().parent
+    output_dir = root / cfg["output_dir"]
+
+    audit_json = output_dir / "audit" / "kb_audit_report.json"
+    if not audit_json.exists():
+        print("  [QC] Audit report not found — skipping QC summary.")
+        return
+
+    report = json.loads(audit_json.read_text(encoding="utf-8"))
+    gm = report.get("gate_metrics", {})
+    status = "PASS" if report.get("passed") else "FAIL"
+    held = int(gm.get("held_paper_count", 0))
+    errors = report.get("errors", [])
+    warnings = report.get("warnings", [])
+
+    print("\n--- QC Summary ---")
+    print(f"  Audit status   : {status}")
+    print(f"  Corpus size    : {report.get('n_final_corpus', '?')} papers")
+    print(f"  MS focus       : {gm.get('ms_focus_pct', 0):.1f}%")
+    print(f"  Missing abstract: {gm.get('missing_abstract_pct', 0):.1f}%")
+    print(f"  Missing src link: {gm.get('missing_source_link_pct', 0):.1f}%")
+    print(f"  Bio/no-MS link : {gm.get('biology_no_ms_link_count', 0)}")
+    print(f"  Unmapped topics: {gm.get('unmapped_topic_count', 0)}")
+
+    if held:
+        held_path = output_dir / "audit" / "held_papers.csv"
+        print(f"\n  *** {held} paper(s) held for manual review ***")
+        print(f"      See: {held_path}")
+    if errors:
+        print(f"\n  Gate failures ({len(errors)}):")
+        for err in errors:
+            print(f"    - {err}")
+    if warnings:
+        print(f"\n  Warnings ({len(warnings)}):")
+        for w in warnings:
+            print(f"    - {w}")
+    print("------------------")
+
+
 def main(config_path: str) -> None:
     """Run all pipeline stages in sequence for the given config file."""
     pipeline_start = time.monotonic()
@@ -111,8 +156,10 @@ def main(config_path: str) -> None:
         _run_stage(idx, total, label, fn, config_path, pipeline_start)
 
     total_elapsed = _fmt_duration(time.monotonic() - pipeline_start)
+    print(f"\nPipeline complete in {total_elapsed}.")
+    _print_qc_summary(config_path)
     print(
-        f"Pipeline complete in {total_elapsed}.\n"
+        "\nNext steps:\n"
         "  - Site:          python site/build_site.py --config config.yaml\n"
         "  - Expert report: outputs/expert_comms/expert_comms_report.md"
     )
