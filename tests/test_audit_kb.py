@@ -10,6 +10,135 @@ import pandas as pd
 from src import audit_kb
 
 
+def test_bin_by_topic_category_multi_assignment() -> None:
+    """TOPIC-XX codes that map to multiple categories contribute to each."""
+    series = pd.Series(
+        [
+            "TOPIC-02",  # pathogenesis only
+            "TOPIC-09 Progressive MS & Smoldering",  # pathogenesis + trials
+            "TOPIC-05",  # pathogenesis + epi
+            "",  # unmapped
+            "T02",  # legacy/invalid → unmapped
+        ]
+    )
+    counts = audit_kb._bin_by_topic_category(series)
+    assert counts["pathogenesis_and_immunology"] == 3
+    assert counts["clinical_trials_and_therapeutics"] == 1
+    assert counts["epidemiology_and_population_health"] == 1
+    assert counts["unmapped"] == 2
+    # Unused buckets should still be present with zero.
+    assert counts["imaging_and_biomarkers"] == 0
+
+
+def test_audit_prefers_tracked_with_t4_over_scored(tmp_path: Path) -> None:
+    """When core_corpus_tracked_with_t4.csv exists the audit must use it."""
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        "\n".join(
+            [
+                'output_dir: "outputs"',
+                "governance:",
+                "  audit_gates:",
+                "    fail_on_error: false",
+                "    min_ms_focus_pct: 0.0",
+                "    max_biology_no_ms_link: 100",
+                "    max_missing_abstract_pct: 100.0",
+                '    missing_abstract_policy: "todo"',
+                "    max_missing_source_link_pct: 100.0",
+                "    enforce_category_bounds: false",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    graph_dir = tmp_path / "outputs" / "graph"
+    topics_dir = tmp_path / "outputs" / "topics"
+    graph_dir.mkdir(parents=True)
+    topics_dir.mkdir(parents=True)
+
+    # scored_papers.csv has many pre-selection rows, tracked has only 2.
+    pd.DataFrame(
+        [
+            {
+                "canonical_paper_id": f"pre{i}",
+                "title": f"pre {i}",
+                "year": 2020,
+                "doi": f"10.1/{i}",
+                "openalex_id": f"https://openalex.org/Wpre{i}",
+                "all_openalex_ids": "",
+                "in_final_corpus": 1,
+                "has_ms_focus": True,
+                "biology_no_ms_link": False,
+                "abstract": "abs",
+                "anchor_category": "pathogenesis_and_immunology",
+                "paper_importance_score": 0.1,
+                "age_normalized_importance_score": 0.1,
+                "merged_cited_by_count": 1,
+                "pagerank": 0.01,
+                "evidence_type": "review",
+            }
+            for i in range(100)
+        ]
+    ).to_csv(graph_dir / "scored_papers.csv", index=False)
+
+    pd.DataFrame(
+        [
+            {
+                "canonical_paper_id": "sel1",
+                "title": "Selected One",
+                "year": 2022,
+                "doi": "10.1/sel1",
+                "openalex_id": "https://openalex.org/Wsel1",
+                "all_openalex_ids": "",
+                "has_ms_focus": True,
+                "biology_no_ms_link": False,
+                "abstract": "A",
+                "primary_topic_code": "TOPIC-02",
+                "paper_importance_score": 0.9,
+                "age_normalized_importance_score": 0.8,
+                "merged_cited_by_count": 20,
+                "pagerank": 0.2,
+                "evidence_type": "review",
+                "core_selection_tier": "T2",
+            },
+            {
+                "canonical_paper_id": "sel2",
+                "title": "Selected Two",
+                "year": 2023,
+                "doi": "10.1/sel2",
+                "openalex_id": "https://openalex.org/Wsel2",
+                "all_openalex_ids": "",
+                "has_ms_focus": True,
+                "biology_no_ms_link": False,
+                "abstract": "B",
+                "primary_topic_code": "TOPIC-07",
+                "paper_importance_score": 0.8,
+                "age_normalized_importance_score": 0.7,
+                "merged_cited_by_count": 18,
+                "pagerank": 0.15,
+                "evidence_type": "review",
+                "core_selection_tier": "T3",
+            },
+        ]
+    ).to_csv(graph_dir / "core_corpus_tracked_with_t4.csv", index=False)
+
+    pd.DataFrame(
+        [
+            {"canonical_paper_id": "sel1", "primary_topic_code": "TOPIC-02", "topic_assignment_method": "seed_link"},
+            {"canonical_paper_id": "sel2", "primary_topic_code": "TOPIC-07", "topic_assignment_method": "lexical"},
+        ]
+    ).to_csv(topics_dir / "paper_topic_evidence.csv", index=False)
+
+    audit_kb.run(str(config_path))
+
+    report = json.loads((tmp_path / "outputs" / "audit" / "kb_audit_report.json").read_text(encoding="utf-8"))
+    assert report["n_final_corpus"] == 2, "audit must use tracked_with_t4 (2 rows), not scored (100 rows)"
+    assert report["corpus_source"] == "core_corpus_tracked_with_t4.csv"
+    assert report["category_counts"]["pathogenesis_and_immunology"] == 1
+    assert report["category_counts"]["imaging_and_biomarkers"] == 1
+    assert report["category_counts"]["unmapped"] == 0
+
+
 def test_audit_flags_screened_papers_without_topic_assignment(tmp_path: Path) -> None:
     config_path = tmp_path / "config.yaml"
     config_path.write_text(

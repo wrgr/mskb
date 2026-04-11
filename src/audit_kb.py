@@ -1,4 +1,9 @@
-"""Run quality audit gates against the scored paper corpus and emit a report."""
+"""Run quality audit gates against the selected core corpus and emit a report.
+
+Categories are binned by TOPIC-XX code (via TOPIC_CATEGORY_MAP) rather than
+cluster-derived ``anchor_category`` so the audit reports on the same taxonomy
+used by seed governance and the expert comms packet.
+"""
 
 import argparse
 import math
@@ -7,6 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from .seed_governance import TOPIC_CATEGORY_MAP, _extract_topic_code
 from .utils import ensure_dir, load_config, save_json
 
 
@@ -67,6 +73,32 @@ def _is_unmapped_topic(value: object) -> bool:
     return text.upper() == "UNMAPPED"
 
 
+def _bin_by_topic_category(topic_codes: pd.Series) -> dict[str, int]:
+    """Return category -> count by mapping each TOPIC-XX code through TOPIC_CATEGORY_MAP.
+
+    A topic that maps to multiple categories contributes to each (like seed
+    governance quotas). Unmapped or missing topic codes are bucketed under
+    ``unmapped`` so reviewers can see them explicitly.
+    """
+    counts: dict[str, int] = {cat: 0 for cat in (
+        "pathogenesis_and_immunology",
+        "imaging_and_biomarkers",
+        "clinical_trials_and_therapeutics",
+        "clinical_care_and_management",
+        "epidemiology_and_population_health",
+    )}
+    counts["unmapped"] = 0
+    for value in topic_codes.fillna("").astype(str):
+        code = _extract_topic_code(value)
+        mapped = TOPIC_CATEGORY_MAP.get(code, [])
+        if not mapped:
+            counts["unmapped"] += 1
+            continue
+        for category in mapped:
+            counts[category] = counts.get(category, 0) + 1
+    return counts
+
+
 def _top_records(df: pd.DataFrame, score_col: str, k: int = 15) -> list[dict]:
     if score_col not in df.columns or df.empty:
         return []
@@ -94,6 +126,7 @@ def _build_markdown_report(report: dict) -> str:
     lines.append("# KB Audit Report")
     lines.append("")
     lines.append(f"- Generated: `{report['generated_at_utc']}`")
+    lines.append(f"- Corpus source: `{report.get('corpus_source', 'unknown')}`")
     lines.append(f"- Final corpus size: `{report['n_final_corpus']}`")
     lines.append(f"- Gates passed: `{report['passed']}`")
     lines.append("")
@@ -140,18 +173,31 @@ def run(config_path: str) -> None:
     outdir = root / cfg["output_dir"] / "audit"
     ensure_dir(outdir)
 
-    scored_path = root / cfg["output_dir"] / "graph" / "scored_papers.csv"
-    if not scored_path.exists():
-        raise FileNotFoundError(f"Missing scored papers file: {scored_path}")
-
-    scored = pd.read_csv(scored_path, low_memory=False)
-    if scored.empty:
-        raise RuntimeError("scored_papers.csv is empty")
-
-    scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
-    final = scored[scored["in_final_corpus"] == 1].copy()
+    # Prefer the post-selection core corpus (T1+T2+T3+T4 from Stage 5c) over the
+    # raw scored output. Fall back to the scored file only if Stage 5c hasn't run,
+    # so the audit still runs for developers debugging earlier stages.
+    graph_dir = root / cfg["output_dir"] / "graph"
+    tracked_path = graph_dir / "core_corpus_tracked_with_t4.csv"
+    selected_path = graph_dir / "core_corpus_selected.csv"
+    scored_path = graph_dir / "scored_papers.csv"
+    if tracked_path.exists():
+        corpus_source = "core_corpus_tracked_with_t4.csv"
+        final = pd.read_csv(tracked_path, low_memory=False)
+    elif selected_path.exists():
+        corpus_source = "core_corpus_selected.csv"
+        final = pd.read_csv(selected_path, low_memory=False)
+    elif scored_path.exists():
+        corpus_source = "scored_papers.csv (pre-selection fallback)"
+        scored = pd.read_csv(scored_path, low_memory=False)
+        scored["in_final_corpus"] = scored.get("in_final_corpus", 0).fillna(0).astype(int)
+        final = scored[scored["in_final_corpus"] == 1].copy()
+    else:
+        raise FileNotFoundError(
+            f"No corpus CSV found in {graph_dir}. Run Stages 4/5c before Stage 9."
+        )
     if final.empty:
-        raise RuntimeError("No papers in final corpus")
+        raise RuntimeError(f"No papers in final corpus ({corpus_source})")
+    final = final.copy()
 
     gcfg = (cfg.get("governance", {}) or {}).get("audit_gates", {}) or {}
     fail_on_error = bool(gcfg.get("fail_on_error", True))
@@ -207,17 +253,14 @@ def run(config_path: str) -> None:
             f"missing source-link rate above threshold: {missing_source_link_pct:.2f}% > {max_missing_source_link_pct:.2f}%"
         )
 
-    category_series = final.get("anchor_category", pd.Series("unmapped", index=final.index)).fillna("unmapped")
-    category_counts = category_series.astype(str).value_counts().to_dict()
-    category_mix_pct = {k: round(v * 100.0, 2) for k, v in _normalize_counter(category_counts).items()}
-    category_entropy = _shannon_entropy(category_counts)
-    category_entropy_normalized = _normalized_entropy(category_counts)
-
+    # Merge topic evidence so we can bin by TOPIC-XX (the taxonomy used by seed
+    # governance and expert comms) rather than the cluster-derived anchor_category.
     topic_evidence_path = root / cfg["output_dir"] / "topics" / "paper_topic_evidence.csv"
     unmapped_topic_count = 0
     unmapped_topic_pct = 0.0
     unmapped_topic_sample: list[dict] = []
     unmapped_path = outdir / "final_corpus_unmapped_topics.csv"
+    final["canonical_paper_id"] = final["canonical_paper_id"].astype(str)
     if topic_evidence_path.exists():
         topic_evidence = pd.read_csv(
             topic_evidence_path,
@@ -225,15 +268,21 @@ def run(config_path: str) -> None:
             low_memory=False,
         )
         topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
+        # Only merge columns the tracked corpus doesn't already carry so we
+        # preserve any primary_topic_code that was written at Stage 5c.
+        merge_cols = ["canonical_paper_id"]
+        if "primary_topic_code" not in final.columns:
+            merge_cols.append("primary_topic_code")
+        if "topic_assignment_method" not in final.columns:
+            merge_cols.append("topic_assignment_method")
+        if len(merge_cols) > 1:
+            final = final.merge(topic_evidence[merge_cols], on="canonical_paper_id", how="left")
 
-        final_topic = final.copy()
-        final_topic["canonical_paper_id"] = final_topic["canonical_paper_id"].astype(str)
-        final_topic = final_topic.merge(topic_evidence, on="canonical_paper_id", how="left")
-        topic_series = final_topic.get("primary_topic_code", pd.Series("", index=final_topic.index))
+        topic_series = final.get("primary_topic_code", pd.Series("", index=final.index))
         unmapped_mask = topic_series.map(_is_unmapped_topic)
-        unmapped = final_topic[unmapped_mask].copy()
+        unmapped = final[unmapped_mask].copy()
         unmapped_topic_count = int(len(unmapped))
-        unmapped_topic_pct = float((unmapped_topic_count / max(1, len(final_topic))) * 100.0)
+        unmapped_topic_pct = float((unmapped_topic_count / max(1, len(final))) * 100.0)
         if not unmapped.empty:
             keep_cols = [
                 "canonical_paper_id",
@@ -242,7 +291,7 @@ def run(config_path: str) -> None:
                 "doi",
                 "openalex_id",
                 "topic_assignment_method",
-                "anchor_category",
+                "primary_topic_code",
                 "paper_importance_score",
             ]
             existing_cols = [c for c in keep_cols if c in unmapped.columns]
@@ -257,7 +306,7 @@ def run(config_path: str) -> None:
             ]
             warnings.append(
                 "papers pass screening but are missing topic assignment: "
-                f"{unmapped_topic_count} / {len(final_topic)} ({unmapped_topic_pct:.2f}%). "
+                f"{unmapped_topic_count} / {len(final)} ({unmapped_topic_pct:.2f}%). "
                 f"See {unmapped_path}"
             )
         else:
@@ -269,20 +318,33 @@ def run(config_path: str) -> None:
                     "doi",
                     "openalex_id",
                     "topic_assignment_method",
-                    "anchor_category",
+                    "primary_topic_code",
                     "paper_importance_score",
                 ]
             ).to_csv(unmapped_path, index=False)
     else:
         warnings.append(f"topic evidence missing: {topic_evidence_path} (cannot check unmapped topic assignments)")
 
+    # Bin the final corpus by TOPIC-XX via TOPIC_CATEGORY_MAP. Topics mapped to
+    # multiple categories contribute to each (consistent with seed governance),
+    # so category_counts can total more than n_final_corpus — we normalize by
+    # the cross-category total so percentages still sum to ~100%.
+    topic_code_series = final.get("primary_topic_code", pd.Series("", index=final.index))
+    category_counts = _bin_by_topic_category(topic_code_series)
+    category_mix_pct = {k: round(v * 100.0, 2) for k, v in _normalize_counter(category_counts).items()}
+    category_entropy = _shannon_entropy(category_counts)
+    category_entropy_normalized = _normalized_entropy(category_counts)
+
     target_ranges = (((cfg.get("scoring", {}) or {}).get("topic_balance", {}) or {}).get("target_ranges", {}) or {})
     if enforce_category_bounds and target_ranges:
-        total = max(1, len(final))
+        # Percentages are taken over the cross-category total (counts may double-
+        # assign a paper whose TOPIC-XX maps to multiple governance categories),
+        # matching category_mix_pct so reviewers see the same numbers in both places.
+        total_cat_count = max(1, sum(int(v) for v in category_counts.values()))
         for category, bounds in target_ranges.items():
             if not isinstance(bounds, dict):
                 continue
-            observed_pct = (category_counts.get(category, 0) / total) * 100.0
+            observed_pct = (category_counts.get(category, 0) / total_cat_count) * 100.0
             min_pct = _safe_float(bounds.get("min_pct", 0.0), 0.0) * 100.0
             max_pct = _safe_float(bounds.get("max_pct", 1.0), 1.0) * 100.0
             if observed_pct < min_pct or observed_pct > max_pct:
@@ -295,6 +357,7 @@ def run(config_path: str) -> None:
 
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "corpus_source": corpus_source,
         "n_final_corpus": int(len(final)),
         "gate_metrics": {
             "ms_focus_pct": round(ms_focus_pct, 4),
@@ -308,6 +371,7 @@ def run(config_path: str) -> None:
             "missing_abstract_policy": missing_abstract_policy,
         },
         "category_mix_pct": category_mix_pct,
+        "category_counts": {k: int(v) for k, v in category_counts.items()},
         "category_entropy": round(category_entropy, 6),
         "category_entropy_normalized": round(category_entropy_normalized, 6),
         "unmapped_topic_sample": unmapped_topic_sample,
