@@ -58,9 +58,6 @@ def main(config_path: str) -> None:
     print("Stage 2/10: Deduplicating and merging...")
     run_merge(config_path)
 
-    print("Stage 2b/10: Backfilling missing abstracts...")
-    run_backfill_abstracts(config_path)
-
     print("Stage 3/10: Building graphs...")
     run_graphs(config_path)
 
@@ -75,6 +72,9 @@ def main(config_path: str) -> None:
 
     print("Stage 5c/10: Selecting core corpus (T1+T2+T3+T4)...")
     run_select_core_corpus(config_path)
+
+    print("Stage 5d/10: Backfilling abstracts for selected corpus...")
+    run_backfill_abstracts(config_path)
 
     print("Stage 6/10: Building learner journey...")
     run_learner_journey(config_path)

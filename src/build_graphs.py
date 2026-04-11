@@ -247,8 +247,14 @@ def run(config_path: str) -> None:
         outgoing[s].add(t)
         incoming[t].add(s)
 
+    # Skip hub papers with too many in-corpus citers: O(n²) pairs would exhaust memory.
+    # Papers cited by >200 corpus works are bibliometric hubs whose co-citation pairs
+    # are too numerous and too non-specific to be informative for similarity scoring.
+    MAX_CITERS_PER_HUB = 200
     cocit = Counter()
     for cited_paper, citers in incoming.items():
+        if len(citers) > MAX_CITERS_PER_HUB:
+            continue
         citers = sorted(citers)
         for i in range(len(citers)):
             for j in range(i + 1, len(citers)):
@@ -265,13 +271,21 @@ def run(config_path: str) -> None:
         for ref_id in ref_ids:
             ref_to_papers[ref_id].add(source_paper_id)
 
+    # Same hub cap as co-citation: skip reference hubs with too many citing corpus papers.
     bib = Counter()
     for citing_papers in ref_to_papers.values():
+        if len(citing_papers) > MAX_CITERS_PER_HUB:
+            continue
         citing_list = sorted(citing_papers)
         for i in range(len(citing_list)):
             for j in range(i + 1, len(citing_list)):
                 bib[(citing_list[i], citing_list[j])] += 1
-    bib_rows = [{"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "BIBLIOGRAPHIC_COUPLING"} for (a, b), w in bib.items()]
+    min_bib = cfg["graphs"]["min_bibcoupling_weight"]
+    bib_rows = [
+        {"source_paper_id": a, "target_paper_id": b, "weight": w, "edge_type": "BIBLIOGRAPHIC_COUPLING"}
+        for (a, b), w in bib.items()
+        if w >= min_bib
+    ]
     pd.DataFrame(bib_rows).to_csv(outdir / "bibliographic_coupling_edges.csv", index=False)
 
     pa = pd.read_csv(norm / "paper_authors.csv")
@@ -285,15 +299,9 @@ def run(config_path: str) -> None:
     coauth_rows = [{"source_author_id": a, "target_author_id": b, "weight": w, "edge_type": "CO_AUTHOR"} for (a, b), w in coauth.items() if w >= cfg["graphs"]["min_coauthorship_weight"]]
     pd.DataFrame(coauth_rows).to_csv(outdir / "coauthorship_edges.csv", index=False)
 
+    # Write only the primary citation graph; co-citation and bib-coupling graphs are
+    # not consumed by any downstream stage and are too large to serialise as XML.
     nx.write_graphml(G, outdir / "citation_graph.graphml")
-    cocit_graph = nx.Graph()
-    for row in cocit_rows:
-        cocit_graph.add_edge(row["source_paper_id"], row["target_paper_id"], weight=row["weight"])
-    nx.write_graphml(cocit_graph, outdir / "co_citation_graph.graphml")
-    bib_graph = nx.Graph()
-    for row in bib_rows:
-        bib_graph.add_edge(row["source_paper_id"], row["target_paper_id"], weight=row["weight"])
-    nx.write_graphml(bib_graph, outdir / "bibliographic_coupling_graph.graphml")
 
 
 if __name__ == "__main__":
