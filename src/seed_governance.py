@@ -43,29 +43,30 @@ MS_CONCEPT_TERMS = [
 ]
 
 BRIDGE_HINTS = ["bridge", "bridging", "context", "adjacent", "cross-disease", "mechanistic context"]
-_TOPIC_CODE_RE = re.compile(r"^(T\d+b?)", re.IGNORECASE)
+# Matches v1.3+ TOPIC-XX codes (e.g. "TOPIC-09 Progressive MS & Smoldering").
+_TOPIC_CODE_RE = re.compile(r"^(TOPIC-\d+)", re.IGNORECASE)
 
-# Map canonical topic codes to the broad governance quota categories.
-# Some topics contribute to more than one governance category by design.
+# Map v1.3 TOPIC-XX codes to broad governance quota categories.
+# Some topics contribute to more than one category by design.
 TOPIC_CATEGORY_MAP: dict[str, list[str]] = {
-    "T00": ["epidemiology_and_population_health"],
-    "T01": ["clinical_care_and_management"],
-    "T1b": ["epidemiology_and_population_health"],
-    "T02": ["pathogenesis_and_immunology"],
-    "T03": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],
-    "T04": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],
-    "T05": ["imaging_and_biomarkers"],
-    "T06": ["imaging_and_biomarkers"],
-    "T07": ["clinical_trials_and_therapeutics"],
-    "T08": ["pathogenesis_and_immunology", "clinical_trials_and_therapeutics"],
-    "T09": ["clinical_care_and_management"],
-    "T10": ["clinical_care_and_management", "epidemiology_and_population_health"],
-    "T11": ["clinical_trials_and_therapeutics", "clinical_care_and_management"],
-    "T12": ["clinical_trials_and_therapeutics"],
-    "T13": ["epidemiology_and_population_health"],
-    "T14": ["imaging_and_biomarkers"],
-    "T15": ["pathogenesis_and_immunology", "imaging_and_biomarkers"],
-    "T16": ["clinical_trials_and_therapeutics"],
+    "TOPIC-00": ["clinical_care_and_management"],  # Disease Overview
+    "TOPIC-01": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],  # Genetics
+    "TOPIC-02": ["pathogenesis_and_immunology"],  # Pathophysiology
+    "TOPIC-03": ["epidemiology_and_population_health"],  # Epidemiology
+    "TOPIC-04": ["epidemiology_and_population_health"],  # Natural History
+    "TOPIC-05": ["pathogenesis_and_immunology", "epidemiology_and_population_health"],  # Risk Factors/EBV
+    "TOPIC-06": ["imaging_and_biomarkers"],  # Diagnosis & Monitoring
+    "TOPIC-07": ["imaging_and_biomarkers"],  # Biomarkers
+    "TOPIC-08": ["clinical_trials_and_therapeutics"],  # DMTs
+    "TOPIC-09": ["pathogenesis_and_immunology", "clinical_trials_and_therapeutics"],  # Progressive MS & Smoldering
+    "TOPIC-10": ["clinical_care_and_management"],  # PROs
+    "TOPIC-11": ["clinical_care_and_management"],  # Symptom Management
+    "TOPIC-12": ["clinical_care_and_management", "epidemiology_and_population_health"],  # Comorbidities
+    "TOPIC-13": ["clinical_trials_and_therapeutics", "clinical_care_and_management"],  # Pregnancy
+    "TOPIC-14": ["clinical_trials_and_therapeutics"],  # Pediatric MS
+    "TOPIC-15": ["epidemiology_and_population_health"],  # Equity & SDOH
+    "TOPIC-16": ["imaging_and_biomarkers"],  # Clinical AI
+    "TOPIC-17": ["pathogenesis_and_immunology", "imaging_and_biomarkers"],  # Remyelination & Neuroprotection
 }
 
 
