@@ -1,0 +1,97 @@
+/* ===================================================================== */
+/* Concept page primitives                                                */
+/* ===================================================================== */
+
+.concept-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  margin: 0.5rem 0 1.2rem;
+  font-size: 0.85rem;
+  color: var(--mskb-muted);
+}
+
+.concept-meta strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+.concept-objectives {
+  margin: 1rem 0 1.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.concept-objectives li {
+  position: relative;
+  padding: 0.1rem 0 0.1rem 1.3rem;
+}
+
+.concept-objectives li::before {
+  content: '';
+  position: absolute;
+  left: 0.1rem;
+  top: 0.65em;
+  width: 0.55rem;
+  height: 0.1rem;
+  background: var(--sl-color-accent);
+}
+
+.concept-graph {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+@media (max-width: 820px) {
+  .concept-graph {
+    grid-template-columns: 1fr;
+  }
+}
+
+.concept-graph section {
+  border-top: 2px solid var(--mskb-rule);
+  padding-top: 0.6rem;
+}
+
+.concept-graph h4 {
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mskb-muted);
+  margin: 0 0 0.4rem;
+}
+
+.concept-graph ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.concept-graph a {
+  display: block;
+  padding: 0.2rem 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  border-bottom: 0;
+  transition: text-decoration-color 0.12s;
+}
+
+.concept-graph a:hover,
+.concept-graph a:focus-visible {
+  color: var(--sl-color-accent);
+  text-decoration-color: var(--sl-color-accent);
+}
+
+.concept-graph .empty {
+  color: var(--mskb-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
