@@ -1,6 +1,6 @@
 ---
 title: Multiple Sclerosis Knowledge Base
-description: A concept-first learning map for MS research, linked to the citation graph and curated resources.
+description: A concept-first learning map for MS research — AI-assembled, expert-reviewed, and openly built.
 template: doc
 tableOfContents: false
 pagefind: true
@@ -16,7 +16,7 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 <div class="home-banner-wrap">
   <img
     src="/mskb/assets/banner.svg"
-    alt="Abstract citation network showing the three layers of MSKB: Foundation, Clinical, and Frontier"
+    alt="Abstract citation network showing a learning pathway through three knowledge zones: Foundation, Clinical, and Frontier"
     class="home-banner"
     width="1200"
     height="220"
@@ -25,19 +25,29 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 </div>
 
 <div class="home-hero">
-  <h1>Learn multiple sclerosis by concept, not by pile.</h1>
+  <h1>Follow the science of MS — from first principles to frontier.</h1>
   <p>
-    Multiple sclerosis affects nearly 3 million people worldwide and is the leading
-    cause of non-traumatic neurological disability in young adults. Despite major
-    advances — EBV causality established, BTK inhibitors entering trials, blood
-    biomarkers now clinical-grade — the research literature can be overwhelming to enter.
+    MS research is moving fast. EBV causality established. BTK inhibitors entering trials.
+    Blood biomarkers going clinical. The field is producing answers — and producing new
+    questions just as quickly. Whether you're a student approaching the literature for
+    the first time, a clinician staying current with fast-moving evidence, or someone
+    with a personal stake in this disease: getting oriented in a field this deep takes
+    real effort. Even researchers well inside it find it hard to hold the full history
+    of a concept across subdisciplines and decades.
   </p>
   <p>
-    MSKB is a free, openly-licensed learning map for undergraduate and early-graduate
-    researchers. It structures <strong>649 peer-reviewed papers</strong> (T1–T4 corpus, April 2026)
-    into 18 research topics, links them to 30 learner-centered concept pages,
-    and curates reading paths from foundations to frontier.
-    Start with a concept, follow its prerequisites, and trace your way into the literature.
+    MSKB is a free, openly-licensed learning map — AI-assembled and expert-reviewed —
+    that structures <strong>649 peer-reviewed papers</strong> (T1–T4 corpus, April 2026)
+    into concept-first pathways. Each pathway gives you the clearest possible signal
+    through a complex literature: every concept connects back to what you need first,
+    and forward to what opens up next. Start at a question that pulls you.
+    Follow the threads. Understand not just what the field knows — but how it came to know it.
+  </p>
+  <p>
+    We build in the open, because good science improves when more people can see the work.
+    The curation pipeline is documented, the gaps are tracked publicly, and expert review
+    is always welcome. If you find an error, a missing thread, or a framing that could be
+    sharper — you are improving the resource for everyone who comes after you.
   </p>
   <div class="home-cta">
     <a class="primary" href="/mskb/pathways/">Start with a pathway</a>
@@ -48,63 +58,65 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 
 ## Pick a starting pathway
 
-New to MS? Start here. Each pathway is a scaffolded sequence from foundational concepts to advanced topics.
+No prior background assumed. Each pathway is a scaffolded sequence — from first principles to the questions at the edge of what the field currently knows.
 
 <CardGrid>
   <LinkCard
     title="Clinical pathway"
     href="/mskb/pathways/clinical/"
-    description="Symptom → diagnosis → classification → treatment. Best if your starting question is 'what does MS look like in the clinic?'"
+    description="Symptom → diagnosis → classification → treatment. Start here if your first question is: what does MS look like for the people who have it?"
   />
   <LinkCard
     title="Mechanistic pathway"
     href="/mskb/pathways/mechanistic/"
-    description="Immune basics → inflammation → demyelination → therapeutic targets. Best if your starting question is 'why does MS happen?'"
+    description="Immune basics → inflammation → demyelination → therapeutic targets. Start here if your first question is: why does MS happen, and how do we intervene?"
   />
   <LinkCard
     title="Emerging topics"
     href="/mskb/pathways/emerging/"
-    description="The NMSS Pathways to Cures framework — smoldering MS, remyelination, EBV prevention, and the open questions that need the next generation of investigators."
+    description="Smoldering MS, remyelination, EBV prevention — the open questions where the field is still writing its own answers. This is where the next generation of researchers will make their mark."
   />
 </CardGrid>
 
-## Three layers, one learner journey
+## Three ways in — pick your entry point
 
-MSKB is built from three coordinated layers. You can enter from any of them and move between them as you learn.
+MSKB is built from three coordinated layers. Enter from whichever fits where you are, and move between them as your understanding deepens.
 
 <CardGrid>
   <LinkCard
     title="Layer A · Concept map"
     href="/mskb/concepts/"
-    description="~80 MS concepts with prerequisites, learning objectives, and curated resources. Pick a concept and follow the prerequisite chain."
+    description="~80 MS concepts with prerequisites, learning objectives, and curated resources. Every concept connects back to what you need and forward to what comes next."
   />
   <LinkCard
     title="Layer B · Learning journey"
     href="/mskb/journey/"
-    description="Build a paper list from pathways, concepts, and topics, then export a guided foundations → bridges → deep-dives reading sequence."
+    description="Build a reading list from pathways, concepts, and topics, then export a guided foundations → bridges → deep-dives sequence."
   />
   <LinkCard
     title="Layer C · Citation explorer"
     href="/mskb/explorer/"
-    description="Browse the canonical 649-paper citation graph, filtering by topic, centrality, reading level, or citation depth."
+    description="Browse the full 649-paper citation graph, filterable by topic, centrality, reading level, and citation depth. See how the field connects."
   />
 </CardGrid>
 
-## What every concept page shows you
+## What every concept page gives you
 
-Every concept page has the same structure:
+Every concept page follows the same structure, so you always know where you are:
 
-- **Learning objectives** — what you should be able to do, tagged with Bloom's taxonomy level (Remember → Understand → Apply → Analyze)
-- **Prerequisites** — concepts you should understand first
-- **Key questions** — self-check questions to test your understanding
+- **Learning objectives** — what you should be able to do, tagged by Bloom's level (Remember → Understand → Apply → Analyze)
+- **Prerequisites** — concepts to understand first, with direct links
+- **Key questions** — self-check prompts to test your understanding before moving on
 - **Papers** — 3–7 foundational references drawn from the citation graph
-- **Resources** — videos, tools, and datasets curated against a quality rubric
+- **Resources** — videos, tools, and datasets vetted against a quality rubric
 
-Concepts, citations, and resources are kept **separate** on purpose: the citation graph answers *"what's the research landscape?"*; the concept map answers *"what should I learn next?"*; resources answer *"how do I learn it?"*
+The citation graph, concept map, and resources are kept separate on purpose: each answers a different question. *What is the research landscape?* *What should I learn next?* *How do I learn it?*
 
-## About the corpus
+## Built openly — open to review
 
-MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across 18 MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity, within-subdomain citation scores, and expert-signal curation. Every design decision is documented.
+MSKB is assembled from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill), layered with a hand-curated concept ontology. The corpus begins with **40 hand-curated seed papers** across 18 MS research topics, expanded via citation networks and filtered by cross-seed connectivity, citation scores, and expert review.
+
+Every design decision is documented. Every gap is tracked publicly. If you are a researcher, clinician, or advanced student who spots an error or a missing thread, reach out — expert eyes improve this resource for everyone.
 
 <CardGrid>
   <LinkCard
@@ -125,7 +137,7 @@ MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score
   <LinkCard
     title="Gap tracker"
     href="/mskb/corpus/gaps/"
-    description="10 known coverage gaps tracked publicly — Global South, equity, digital biomarkers, and more."
+    description="10 known coverage gaps tracked publicly — Global South representation, equity, digital biomarkers, and more."
   />
   <LinkCard
     title="Whitepaper"
@@ -134,9 +146,11 @@ MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score
   />
 </CardGrid>
 
-<Aside type="note" title="AI-assisted curation — read this first">
-MSKB is a **learning engineering experiment** built to support student access to MS research. The corpus was assembled and annotated with AI assistance (bibliometric pipeline + Claude API distillation). Plain-language summaries are AI-generated from the primary literature. Verify critical clinical claims against primary sources and current guidelines before applying them.
+<Aside type="note" title="AI-assembled, expert-reviewed — what that means">
+MSKB is a **learning engineering experiment** built to support student access to MS research. The corpus was assembled and annotated with AI assistance (bibliometric pipeline + Claude API distillation). Plain-language summaries are AI-generated from the primary literature.
 
-This resource is free to use and adapt for non-commercial purposes under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
-Questions, corrections, or comments: [willgray@jhu.edu](mailto:willgray@jhu.edu)
+Verify critical clinical claims against primary sources and current guidelines before applying them. This resource is not a substitute for clinical judgment or primary literature review.
+
+Errors, omissions, and sharper framings are genuinely welcome — they improve the resource for everyone who uses it.
+Contact: [willgray@jhu.edu](mailto:willgray@jhu.edu) · Free to use and adapt for non-commercial purposes under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 </Aside>
