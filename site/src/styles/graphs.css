@@ -1,0 +1,355 @@
+  margin: 1rem 0 1.2rem;
+}
+
+.mskb-graph-shell {
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 28%, transparent);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--sl-color-accent) 6%, #ffffff), #ffffff 22%);
+  padding: 0.82rem;
+  box-shadow: 0 10px 24px rgba(7, 36, 56, 0.08);
+}
+
+.mskb-graph-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mskb-graph-controls input[type='search'] {
+  min-width: 230px;
+  flex: 1 1 230px;
+  padding: 0.38rem 0.58rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 30%, transparent);
+  border-radius: 9px;
+  background: #ffffff;
+  color: inherit;
+}
+
+.mskb-graph-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mskb-graph-pills button {
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 28%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  padding: 0.28rem 0.62rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.mskb-graph-pills button.is-active {
+  border-color: var(--sl-color-accent);
+  background: color-mix(in srgb, var(--sl-color-accent) 16%, transparent);
+}
+
+.mskb-graph-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mskb-graph-actions button {
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 28%, transparent);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  padding: 0.28rem 0.6rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.mskb-graph-layout {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 19rem;
+  gap: 0.75rem;
+}
+
+.mskb-graph-canvas {
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
+  border-radius: 12px;
+  background: #fbfcfe;
+  min-height: 32rem;
+}
+
+.mskb-sigma-stage {
+  width: 100%;
+  height: min(70vh, 680px);
+  min-height: 32rem;
+  display: block;
+}
+
+.mskb-graph-details {
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 0.7rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.mskb-detail-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mskb-detail-head h4 {
+  margin: 0;
+}
+
+.mskb-chip {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.72rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 28%, transparent);
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  color: var(--mskb-muted);
+}
+
+.mskb-connected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.mskb-connected-list button {
+  font: inherit;
+  font-size: 0.76rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
+  border-radius: 8px;
+  background: transparent;
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+}
+
+.mskb-add {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mskb-add button {
+  width: fit-content;
+  font: inherit;
+  font-size: 0.82rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 62%, #0c3446);
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(140deg, #0e6e7d 0%, #115777 100%);
+  padding: 0.3rem 0.64rem;
+  cursor: pointer;
+}
+
+.mskb-add button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .mskb-graph-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mskb-sigma-stage,
+  .mskb-graph-canvas {
+    min-height: 24rem;
+  }
+}
+
+/* ===================================================================== */
+/* Kid journey page                                                        */
+/* ===================================================================== */
+
+.kid-journey-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 16%, rgba(255, 239, 198, 0.35) 0, transparent 42%),
+    linear-gradient(132deg, #133148 0%, #11607e 52%, #f2a444 170%);
+  color: #ffffff;
+  border: 1px solid rgba(233, 244, 255, 0.3);
+  padding: clamp(1rem, 0.75rem + 1vw, 1.6rem);
+  margin-bottom: 1.8rem;
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(14, 37, 58, 0.22);
+}
+
+.kid-journey-hero-kicker {
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(244, 251, 255, 0.88);
+}
+
+.kid-journey-hero h2 {
+  margin-top: 0;
+  border-top: 0;
+  color: #ffffff;
+  font-size: clamp(1.35rem, 1.06rem + 1vw, 2rem);
+  line-height: 1.15;
+}
+
+.kid-journey-hero p {
+  margin: 0.45rem 0 0;
+  color: rgba(243, 251, 255, 0.94);
+}
+
+.kid-journey-intro-grid {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.kid-intro-card {
+  border-radius: 11px;
+  border: 1px solid rgba(225, 241, 255, 0.3);
+  background: rgba(244, 252, 255, 0.15);
+  padding: 0.55rem 0.62rem;
+  font-size: 0.83rem;
+  line-height: 1.4;
+}
+
+.kid-intro-card strong {
+  color: #ffffff;
+}
+
+.sl-markdown-content .kid-journey-hero ~ .sl-heading-wrapper.level-h2 h2 {
+  margin-top: 2rem;
+  border-top: 0;
+  background: linear-gradient(95deg, #d9f2ff 0%, #f5fbff 70%);
+  border: 1px solid #b8dff4;
+  border-radius: 11px;
+  padding: 0.58rem 0.8rem;
+  color: #083649;
+  font-size: clamp(1.1rem, 1rem + 0.44vw, 1.4rem);
+}
+
+.sl-markdown-content .kid-journey-hero ~ .sl-heading-wrapper.level-h3 h3 {
+  margin-top: 1.15rem;
+  border-top: 0;
+  padding-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+  color: #0d607b;
+}
+
+.sl-markdown-content .kid-journey-hero ~ .sl-heading-wrapper.level-h3 + p {
+  display: inline-flex;
+  margin: 0 0 0.55rem;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #aad7e7;
+  background: #e9f8ff;
+  color: #0a5269;
+  font-size: 0.76rem;
+}
+
+.sl-markdown-content .kid-journey-hero ~ .sl-heading-wrapper.level-h4 h4 {
+  margin-top: 0.72rem;
+  border-top: 0;
+  padding-top: 0;
+  font-size: 1.16rem;
+  color: #0b4f6c;
+}
+
+.paper-stream--kid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0.88rem;
+  margin: 0.8rem 0 1.65rem;
+}
+
+.paper-stream--kid .paper-card {
+  border: 1px solid #bfe2f2;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--sl-color-accent) 6%, #ffffff), #ffffff 26%);
+  padding: 0.85rem 0.9rem 0.92rem;
+  border-bottom: 1px solid #bfe2f2;
+  margin-bottom: 0;
+  box-shadow: 0 8px 18px rgba(10, 39, 60, 0.08);
+}
+
+.paper-stream--kid .paper-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.paper-stream--kid .paper-card h4 {
+  margin: 0.65rem 0 0.24rem;
+  border-top: 0;
+  padding-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  color: #0c5268;
+}
+
+.paper-stream--kid .paper-meta {
+  margin-bottom: 0.4rem;
+}
+
+.paper-stream--kid .kpi-pill {
+  border-color: #8ac9df;
+  color: #0b5066;
+  background: #f4fcff;
+  font-weight: 700;
+}
+
+.paper-stream--kid .paper-summary,
+.paper-stream--kid .paper-why {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.paper-stream--kid ul {
+  margin: 0.22rem 0 0.58rem;
+  padding-left: 1rem;
+}
+
+.paper-stream--kid li {
+  margin: 0.18rem 0;
+}
+
+.paper-stream--kid details {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #aad7e7;
+}
+
+.paper-stream--kid details summary {
+  font-size: 0.81rem;
+  color: #0b4f63;
+}
+
+.paper-stream--kid a {
+  font-weight: 620;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .kid-journey-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-stream--kid {
+    grid-template-columns: 1fr;
+  }
+}
+
