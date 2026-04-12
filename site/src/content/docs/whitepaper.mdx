@@ -1,0 +1,148 @@
+---
+title: Whitepaper
+description: Technical whitepaper documenting the MSKB concept, pipeline methodology, and novel contributions.
+tableOfContents: true
+pagefind: true
+---
+
+import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+# MSKB: A Bibliometric Knowledge Engineering Framework for MS Research Navigation
+
+**Version 1.0 · April 2026**
+
+<Aside type="tip" title="Download the PDF">
+  A print-ready version of this whitepaper is available for download.
+
+  [**Download WHITEPAPER.pdf →**](/mskb/whitepaper.pdf)
+</Aside>
+
+---
+
+## Abstract
+
+The Multiple Sclerosis Knowledge Base (MSKB) is an open-source knowledge engineering framework that transforms the MS research literature into a structured, pedagogically scaffolded knowledge base navigable by undergraduate researchers. MSKB combines bibliometric graph analysis, multi-signal relevance scoring, expert-curated ontology design, and large language model summarization to select, organize, and present approximately 500–650 peer-reviewed MS papers.
+
+Unlike prior literature aggregation tools, MSKB:
+
+1. Makes corpus construction decisions **explicit and auditable**
+2. Embeds pedagogical scaffolding through a **learner-centered concept ontology** grounded in Bloom's taxonomy
+3. Corrects for known **structural biases** in citation networks that systematically exclude equity and emerging-subfield literature
+4. Exposes a **heterogeneous knowledge graph** connecting papers, topics, biomedical entities, and learner journey paths
+
+---
+
+## Motivation
+
+Multiple sclerosis research spans basic immunology and genetics, clinical trial methodology, neuroimaging, neurorehabilitation, epidemiology, health equity, and patient-reported outcomes. A student entering the field faces a body of literature that is simultaneously vast, structurally heterogeneous, and rapidly evolving.
+
+Existing tools — PubMed, Google Scholar, OpenAlex — are retrieval systems, not learning systems. They answer specific queries but do not help a learner understand what they need to know before they can ask the right queries, which papers are foundational versus confirmatory, or how the research landscape has evolved over time.
+
+MSKB addresses this gap through a multi-stage pipeline that outputs a curated, navigable knowledge base designed specifically for undergraduate researchers.
+
+---
+
+## Design Principles
+
+Three principles govern all MSKB design decisions:
+
+**Transparency over automation.** Every significant corpus construction decision is documented in a human-readable audit trail alongside the code that implements it. Algorithmic methods are used where they add value, but their limitations are explicitly flagged.
+
+**Structural over prestige.** Corpus selection relies on citation network structure (cross-seed connectivity, PageRank, k-core) rather than journal impact factors or institutional prestige.
+
+**Pedagogy as a first-class concern.** Every design decision is evaluated against whether it helps an undergraduate researcher build genuine understanding, not merely access information.
+
+---
+
+## Pipeline Overview
+
+MSKB is an 18-stage reproducible pipeline that transforms raw OpenAlex data into a static, client-rendered knowledge base site:
+
+| Stage | Description |
+|-------|-------------|
+| 0 | Seed governance |
+| 1 | Corpus retrieval (OpenAlex) |
+| 2 | Deduplication and version merging |
+| 3 | Graph construction (citation, co-citation, bibliographic coupling, co-authorship) |
+| 4 | Multi-signal relevance scoring |
+| 5 | Topic discovery (Leiden community detection) |
+| 5b | Topic evidence assignment |
+| 5c | Core corpus selection (T1–T4 tier rules) |
+| 6 | Abstract backfill (PubMed) |
+| 7 | Learner journey construction |
+| 8 | Paper distillation (Claude API) |
+| 9 | Concept–paper linking (Gemini / Anthropic) |
+| 10 | Kid journey and topic overview generation |
+| 11 | Knowledge graph construction |
+| 12 | Corpus audit (automated quality gates) |
+| 13–18 | Metrics export, site generation, corpus export |
+
+---
+
+## Four-Tier Corpus Architecture
+
+Papers are assigned to one of four tiers based on how they enter the corpus:
+
+| Tier | Name | Selection Mechanism |
+|------|------|---------------------|
+| T1 | Seeds | Human curation: topic coverage, document type diversity |
+| T2 | Cross-seed connected | Algorithmic: structural centrality in the seed citation network |
+| T3 | Velocity / Emerging | Algorithmic: high velocity relative to within-topic peers |
+| T4 | Expert signal | Human: conference awards, non-Western cohort studies, structurally isolated important papers |
+
+---
+
+## Novel Contributions
+
+<CardGrid>
+  <LinkCard
+    title="Auditable corpus construction"
+    href="/mskb/corpus/design-decisions/"
+    description="Every significant design decision documented as a first-class engineering artifact with explicit rationale and engineering-judgment callouts."
+  />
+  <LinkCard
+    title="Structural equity correction"
+    href="/mskb/corpus/methodology/"
+    description="Four explicit mechanisms to correct for citation network biases that systematically disadvantage equity and emerging-subfield literature."
+  />
+  <LinkCard
+    title="Pedagogical ontology bound to corpus"
+    href="/mskb/concepts/"
+    description="The MS-LCO binds Bloom's-taxonomy-grounded concept structure to the curated corpus through an automated, refreshable concept–paper linking pipeline."
+  />
+  <LinkCard
+    title="Heterogeneous learner knowledge graph"
+    href="/mskb/explorer/"
+    description="A single graph unifying bibliometric relationships, biomedical entity mentions, and pedagogical learner journey edges."
+  />
+</CardGrid>
+
+---
+
+## Known Limitations
+
+- **OpenAlex coverage gaps** — some conference proceedings and gray literature are not indexed
+- **Regex entity extraction** — entity tagging uses pattern matching, not neural NER; false positives and negatives exist
+- **LLM faithfulness** — paper distillations are spot-checked but not systematically evaluated; treat as reading aids, not substitutes
+- **Static corpus update cycle** — the corpus is a snapshot; major new results are not automatically incorporated
+- **Threshold calibration** — numeric inclusion thresholds were calibrated by inspection, not against retrieval quality benchmarks
+
+---
+
+## Citation
+
+If you use MSKB in your work, please cite:
+
+```
+Gray, W. (2026). MSKB: A Bibliometric Knowledge Engineering Framework
+for MS Research Navigation. Technical Whitepaper, Version 1.0.
+https://wrgr.github.io/mskb/whitepaper/
+```
+
+---
+
+<Aside type="note">
+The full technical whitepaper — including detailed methodology, algorithm descriptions, the complete novel contributions section, and references — is available as a **[print-ready PDF](/mskb/whitepaper.pdf)**.
+
+Source code and pipeline: [github.com/wrgr/mskb](https://github.com/wrgr/mskb)
+</Aside>

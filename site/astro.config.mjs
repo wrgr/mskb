@@ -89,6 +89,7 @@ export default defineConfig({
             { label: 'Gap Tracker', link: '/corpus/gaps/' },
           ],
         },
+        { label: 'Whitepaper', link: '/whitepaper/' },
       ],
       pagination: false,
       lastUpdated: true,
