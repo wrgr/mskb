@@ -126,6 +126,23 @@ MSKB uses three distinct classification systems with distinct roles. Understandi
 
 ~30 concept pages (`site/src/content/docs/concepts/`) derived from literature review and learning science. Concepts are manually authored to guide learners through the knowledge base. They link to corpus papers and serve as the nomination source for T4 expert signals (each T4 paper is nominated because a concept page requires it as an anchor). Learner concepts are **not used** in corpus selection or balance.
 
+### Category anchoring registry
+
+To make category design auditable, MSKB maintains a machine-readable registry at `data/concept_category_anchors.yaml` that maps each of the 5 concept categories to explicit anchor sources.
+
+Anchor source families include:
+- Learning-science scaffolding framework (Bloom taxonomy + cognitive load theory)
+- MSKB topic map and corpus design decisions
+- James Lind Alliance MS priority-setting syllabus
+- AAN MS quality-measure framework
+- MSIF Global PROMS framework
+- ECTRIMS educational curriculum framing
+
+CI tests validate that:
+- all categories are anchored to declared sources,
+- every concept has anchor metadata (topic map plus at least one explicit rationale signal),
+- category registries cover observed JLA/AAN/PROMS usage on concept pages.
+
 ---
 
 ## Transparency notes

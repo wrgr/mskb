@@ -443,3 +443,13 @@ This register lists every decision in the corpus construction methodology that w
 ---
 
 *Document version 1.3 — April 2026. All §17 decisions apply to the v1.3 corpus run.*
+
+## 18. Manual Abstract Adjudication (April 2026)
+
+**Decision:** Add `data/manual_abstract_decisions.json` as the reproducible source of truth for expert-approved abstract overrides (including introduction proxies when formal abstracts are unavailable).
+
+**Rationale:** Core papers can be held solely for `missing_abstract` even when the source website clearly provides abstract-like content or when older papers have no formal abstract section. Keeping these decisions in chat alone is not auditable. A committed JSON file lets the pipeline apply the same decisions every run.
+
+**Implementation:** `src/backfill_abstracts.py` now applies manual decisions before API lookups, writes `abstract_backfill_source = manual_expert:<reviewer>`, and emits a provenance snapshot at `outputs/provenance/manual_abstract_updates_<timestamp>.json`.
+
+**Current batch:** 8 core-held papers were adjudicated with `decision_tag: wgr_expert_decision` and moved from unresolved missing-abstract status to resolved/manual-proxy status.

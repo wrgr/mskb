@@ -171,8 +171,8 @@ core_corpus_selection:
     max_topic_share: 0.20
 
 distillation:
-  provider: "anthropic"
-  model: "claude-haiku-4-5-20251001"
+  provider: "gemini"
+  model: "gemini-2.5-flash"
   # "importance" (legacy top-N by paper_importance_score) or "tiered_t1_t2_t3".
   selection_mode: "tiered_t1_t2_t3"
   max_papers_per_run: 650
@@ -210,9 +210,48 @@ abstract_backfill:
   enabled: true
   # Optional cap on API requests for missing abstracts. Set null for no cap.
   max_openalex_queries:
+  # Optional cap for secondary lookups (OpenAlex title/author and PubMed fallback).
+  max_secondary_queries:
+  # Emit per-paper audit traces of every lookup attempt (JSONL + summary CSV).
+  verbose_trace: false
+  trace_overwrite: true
   sleep_seconds: 0.03
   request_timeout_seconds: 12
   max_consecutive_errors: 6
+  # Retry transient HTTP/network failures before marking a paper unresolved.
+  fetch_max_retries: 2
+  fetch_retry_backoff_seconds: 0.6
+  # Secondary OpenAlex title/author matching gate.
+  title_author_min_similarity: 88.0
+  title_author_max_year_delta: 3
+  title_author_max_search_results: 8
+  # PubMed fallback for records where OpenAlex has no abstract text.
+  pubmed_fallback:
+    enabled: true
+    timeout_seconds: 10
+    min_title_similarity: 85.0
+  # Final fallback: parse abstract-like metadata from DOI landing pages.
+  html_fallback:
+    enabled: true
+    min_chars: 120
+  # Optional: authoritative manual overrides for missing abstracts.
+  # Supports JSON (list of objects) or CSV.
+  manual_decisions:
+    enabled: false
+    path: "data/manual_abstract_decisions.json"
+    id_column: "canonical_paper_id"
+    abstract_column: "manual_abstract"
+    source_column: "source"
+    reviewer_column: "verified_by"
+    reason_column: "reason"
+    source_url_column: "source_url"
+    decision_tag_column: "decision_tag"
+    website_note_column: "website_note"
+    citation_column: "citation"
+    source_label: "manual_expert"
+    provenance_source: "user_verified"
+    write_provenance: true
+    overwrite_existing: false
   selected_scope:
     # When enabled, only backfill abstracts for the selected corpus.
     enabled: false
@@ -265,6 +304,7 @@ governance:
     max_missing_abstract_pct: 25.0
     # "todo" tracks missing abstracts as warnings instead of hard failures.
     missing_abstract_policy: "todo"
+    hold_missing_named_author: true
     max_missing_source_link_pct: 5.0
     enforce_category_bounds: true
   landmark_anchors:

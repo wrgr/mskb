@@ -25,7 +25,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 cp config.example.yaml config.yaml
-# Edit config.yaml: set your email and (optionally) Anthropic API key
+# Edit config.yaml: set your email and (optionally) Gemini API key
 
 python run_pipeline.py --config config.yaml
 ```

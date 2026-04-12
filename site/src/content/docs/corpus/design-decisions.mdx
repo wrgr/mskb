@@ -257,4 +257,17 @@ This is documented explicitly because stating it as validated would be misleadin
 
 **Equity gap:** The structural disconnection between equity literature and the main MS citation network is a known limitation of all citation-based corpus construction approaches. Tier 4 mechanisms partially address this but do not fully resolve it. Future iterations should consider whether equity research merits a separate, parallel selection pipeline.
 
+---
+
+## 15. Manual abstract adjudication
+
+**Decision (April 2026):** Maintain expert-reviewed abstract overrides in `data/manual_abstract_decisions.json`, and apply them during the abstract backfill stage before automated API fallbacks.
+
+This captures cases where:
+
+- the paper is real and core, but machine retrieval missed the abstract
+- the source has no formal abstract and an expert-approved introduction proxy is used
+
+Each run writes a timestamped provenance record to `outputs/provenance/manual_abstract_updates_<timestamp>.json`, including reviewer, reason, and source URL.
+
 See [Gap Tracker](/mskb/corpus/gaps/) for the full list of 12 tracked gaps.

@@ -22,6 +22,25 @@ def test_init_api_client_strict_gemini_missing_raises(monkeypatch: pytest.Monkey
         _init_api_client({"provider": "gemini"})
 
 
+def test_init_api_client_auto_prefers_gemini_when_available(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Auto provider selection should resolve Gemini first when a Gemini key is present."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
+    monkeypatch.setenv("GEMINI_API_KEY", "dummy-key")
+    client, provider = _init_api_client({})
+    assert client is not None
+    assert provider == "gemini"
+
+
+def test_init_api_client_auto_prefers_gemini_over_anthropic(monkeypatch: pytest.MonkeyPatch) -> None:
+    """When both keys exist and provider is unset, Gemini remains the default."""
+    monkeypatch.setenv("GEMINI_API_KEY", "dummy-key")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "dummy-key")
+    client, provider = _init_api_client({})
+    assert client is not None
+    assert provider == "gemini"
+
+
 def test_init_api_client_rules_based_explicit(monkeypatch: pytest.MonkeyPatch) -> None:
     """provider=rules_based returns (None, 'rules_based') without checking env vars."""
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)

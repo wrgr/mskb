@@ -1,9 +1,9 @@
-"""Assign topic codes using an evidence ladder: seed links, anchor links, then lexical prototype match."""
+"""Assign topic codes using graph-distance to topic-labeled seeds as the primary signal."""
 
 import argparse
 import json
 import re
-from collections import Counter, defaultdict
+from collections import Counter, defaultdict, deque
 from pathlib import Path
 
 import pandas as pd
@@ -11,7 +11,8 @@ from rapidfuzz import fuzz
 
 from .utils import ensure_dir, load_config, save_json
 
-_TOPIC_CODE_RE = re.compile(r"^(T\d+b?)")
+_TOPIC_CODE_RE = re.compile(r"TOPIC-(\d{2})", re.IGNORECASE)
+_LEGACY_TOPIC_CODE_RE = re.compile(r"\bT(\d{1,2})(B?)\b", re.IGNORECASE)
 
 
 def _normalize_doi(value: object) -> str:
@@ -23,9 +24,21 @@ def _normalize_doi(value: object) -> str:
 
 
 def _extract_topic_code(value: object) -> str:
-    text = str(value or "").strip()
-    match = _TOPIC_CODE_RE.match(text)
-    return match.group(1) if match else ""
+    text = str(value or "").strip().upper()
+    if not text or text == "NAN":
+        return ""
+    match = _TOPIC_CODE_RE.search(text)
+    if match:
+        return f"TOPIC-{match.group(1)}"
+    legacy = _LEGACY_TOPIC_CODE_RE.search(text)
+    if legacy:
+        number = int(legacy.group(1))
+        suffix = legacy.group(2).lower()
+        # Normalize most legacy labels into TOPIC-XX for compatibility with topic_map.
+        if not suffix:
+            return f"TOPIC-{number:02d}"
+        return f"T{number:02d}{suffix}"
+    return ""
 
 
 def _parse_topics_covered(value: object) -> list[str]:
@@ -51,6 +64,50 @@ def _build_bidirectional_adjacency(edges: pd.DataFrame) -> dict[str, set[str]]:
         neighbors[src].add(dst)
         neighbors[dst].add(src)
     return neighbors
+
+
+def _graph_distance_support(
+    neighbors: dict[str, set[str]],
+    topic_seed_nodes: dict[str, set[str]],
+    max_hops: int = 4,
+    decay: float = 0.65,
+) -> tuple[dict[str, Counter], dict[str, dict[str, int]]]:
+    """Compute topic support by shortest graph distance to each topic's labeled seed set."""
+    support_by_pid: dict[str, Counter] = defaultdict(Counter)
+    min_hops_by_pid: dict[str, dict[str, int]] = defaultdict(dict)
+    max_hops = max(1, int(max_hops))
+    decay = float(decay)
+    if decay <= 0:
+        decay = 0.65
+
+    for topic_code, seeds in topic_seed_nodes.items():
+        topic_seeds = {str(pid) for pid in seeds if str(pid)}
+        if not topic_seeds:
+            continue
+        seen: dict[str, int] = {}
+        q: deque[tuple[str, int]] = deque()
+        for seed_pid in topic_seeds:
+            seen[seed_pid] = 0
+            q.append((seed_pid, 0))
+
+        while q:
+            pid, dist = q.popleft()
+            if dist >= max_hops:
+                continue
+            next_dist = dist + 1
+            for nbr in neighbors.get(pid, set()):
+                if nbr in seen:
+                    continue
+                seen[nbr] = next_dist
+                q.append((nbr, next_dist))
+
+        for pid, hops in seen.items():
+            if hops <= 0:
+                continue
+            score = decay ** (hops - 1)
+            support_by_pid[pid][topic_code] += float(score)
+            min_hops_by_pid[pid][topic_code] = int(hops)
+    return support_by_pid, min_hops_by_pid
 
 
 def _topic_codes_from_map(topic_map_path: Path) -> list[str]:
@@ -162,6 +219,25 @@ def run(config_path: str) -> None:
     topic_map_path = root / "data" / "topic_map.json"
     prototypes = _topic_prototypes(topic_map_path, core_seeds)
     known_topic_codes = _topic_codes_from_map(topic_map_path)
+    assignment_cfg = (cfg.get("topics", {}) or {}).get("assignment", {}) or {}
+    graph_max_hops = int(assignment_cfg.get("graph_max_hops", 4))
+    graph_decay = float(assignment_cfg.get("graph_decay", 0.65))
+    seed_bonus_weight = float(assignment_cfg.get("seed_link_bonus_weight", 0.20))
+    anchor_bonus_weight = float(assignment_cfg.get("anchor_link_bonus_weight", 0.12))
+
+    topic_seed_nodes: dict[str, set[str]] = defaultdict(set)
+    for pid, codes in core_pid_topics.items():
+        for code in codes:
+            topic_seed_nodes[code].add(pid)
+    for pid, codes in anchor_pid_topics.items():
+        for code in codes:
+            topic_seed_nodes[code].add(pid)
+    graph_support, graph_min_hops = _graph_distance_support(
+        neighbors=neighbors,
+        topic_seed_nodes=topic_seed_nodes,
+        max_hops=graph_max_hops,
+        decay=graph_decay,
+    )
 
     assignments: list[dict] = []
     method_counts: Counter = Counter()
@@ -190,20 +266,45 @@ def run(config_path: str) -> None:
         primary = ""
         secondary: list[str] = []
         lexical_scores: dict[str, float] = {}
+        graph_support_scores: dict[str, float] = {}
+        min_hops_for_pid: dict[str, int] = graph_min_hops.get(pid, {})
 
         # T1 is explicit.
         if bool(row.get("is_core_seed", False)) and core_pid_topics.get(pid):
             method = "core_seed"
             primary, secondary = _choose_primary_secondary(seed_support or Counter({next(iter(core_pid_topics[pid])): 1}))
             confidence = 1.0
+        elif graph_support.get(pid):
+            method = "graph_distance"
+            base = Counter(graph_support.get(pid, {}))
+            # Seed/anchor direct links are still useful as soft bonuses, but not primary.
+            for code, count in seed_support.items():
+                base[code] += float(seed_bonus_weight) * float(count)
+            for code, count in anchor_support.items():
+                base[code] += float(anchor_bonus_weight) * float(count)
+            graph_support_scores = {k: round(float(v), 4) for k, v in base.items()}
+            primary, secondary = _choose_primary_secondary(base)
+
+            ranked = sorted(base.items(), key=lambda kv: (-kv[1], kv[0]))
+            top_score = float(ranked[0][1]) if ranked else 0.0
+            second_score = float(ranked[1][1]) if len(ranked) > 1 else 0.0
+            margin = max(0.0, top_score - second_score)
+            nearest_hops = int(min_hops_for_pid.get(primary, graph_max_hops + 1)) if primary else (graph_max_hops + 1)
+            hop_conf = {
+                1: 0.82,
+                2: 0.72,
+                3: 0.62,
+                4: 0.54,
+            }.get(nearest_hops, 0.45)
+            confidence = min(0.95, hop_conf + min(0.12, 0.06 * margin))
         elif seed_support:
-            method = "seed_link"
+            method = "seed_link_fallback"
             primary, secondary = _choose_primary_secondary(seed_support)
-            confidence = min(0.98, 0.55 + 0.15 * max(seed_support.values()) + 0.03 * sum(seed_support.values()))
+            confidence = min(0.85, 0.45 + 0.10 * max(seed_support.values()) + 0.03 * sum(seed_support.values()))
         elif anchor_support:
-            method = "review_anchor_link"
+            method = "review_anchor_link_fallback"
             primary, secondary = _choose_primary_secondary(anchor_support)
-            confidence = min(0.85, 0.45 + 0.10 * max(anchor_support.values()) + 0.03 * sum(anchor_support.values()))
+            confidence = min(0.75, 0.35 + 0.08 * max(anchor_support.values()) + 0.02 * sum(anchor_support.values()))
         else:
             for code, proto in prototypes.items():
                 if not proto or not text:
@@ -239,6 +340,8 @@ def run(config_path: str) -> None:
                 "n_review_anchor_links": int(sum(anchor_support.values())),
                 "seed_support_by_topic": json.dumps(dict(seed_support)),
                 "anchor_support_by_topic": json.dumps(dict(anchor_support)),
+                "graph_support_by_topic": json.dumps(graph_support_scores),
+                "min_hops_by_topic": json.dumps({k: int(v) for k, v in min_hops_for_pid.items()}),
                 "lexical_scores_by_topic": json.dumps({k: round(v, 4) for k, v in lexical_scores.items()}),
             }
         )

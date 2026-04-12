@@ -1,0 +1,90 @@
+[
+  {
+    "canonical_paper_id": "1732c900cb128278ee1098c3fc947059",
+    "manual_abstract": "We report a multicenter, randomized, double-blind, placebo-controlled trial of interferon beta-1b (IFNB) in 372 ambulatory patients with relapsing-remitting multiple sclerosis (MS). Entry criteria included an Expanded Disability Status Scale (EDSS) score of 0 to 5.5 and at least two exacerbations in the previous 2 years. One-third of the patients received placebo, one-third 1.6 million international units (MIU) of IFNB, and one-third 8 MIU of IFNB, self-administered by subcutaneous injections every other day. The primary end points were differences in exacerbation rates and proportion of patients remaining exacerbation-free. The annual exacerbation rate for patients receiving placebo was 1.27; for 1.6 MIU IFNB, 1.17; and for 8 MIU IFNB, 0.84 after 2 years. Exacerbation rates were significantly lower in both treatment groups compared with the placebo group (8 MIU versus placebo, p = 0.0001; 1.6 MIU versus placebo, p = 0.0101; and 8 MIU versus 1.6 MIU, p = 0.0086), suggesting a dosage effect. The reduction in exacerbation severity in the 8 MIU group was attributable to a twofold reduction in the frequency of moderate and severe attacks. More patients in the 8 MIU group (n = 36) were exacerbation-free at 2 years compared with the placebo group (n = 18; p = 0.007). EDSS scores changed little from baseline in both the placebo and treatment arms. Accordingly, a significant change in disability could not be discerned in this trial. Finally, in serial MRIs, MS activity was significantly less in the high-dose IFNB group. (ABSTRACT TRUNCATED AT 250 WORDS)",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "PubMed abstract verified by expert review.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/8469318/",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Official abstract from PubMed.",
+    "citation": "DOI 10.1212/WNL.43.4.655"
+  },
+  {
+    "canonical_paper_id": "1d83ff77c48ed61b205e78f614c92552",
+    "manual_abstract": "Several schemes for the diagnosis and clinical classification of multiple sclerosis (MS) have been advanced. The best known is that published by Schumacher et al. The criteria for this scheme were established in order to select patients for participation in therapeutic trials, and pertain only to what might be called definite MS. No provision was made for incorporating supportive laboratory data into the diagnostic criteria. As no reliable specific laboratory test for the diagnosis of MS has been discovered, the diagnosis remains a clinical one, and there is still a need for clinical diagnostic criteria. However, several laboratory and clinical procedures have been developed within the last decade which aid greatly in demonstrating neurological dysfunction attributable to lesions, and even the lesions themselves. One problem with the various published diagnostic classifications is their discrepant terminology: what is considered probable in one is called definite in another. Another problem is that all the proposed schemes require much subjective judgment, a difficulty which cannot be completely overcome but can be diminished by adding to the clinical evaluation the results of laboratory, neuroimaging, neuropsychological, and neurophysiological procedures. Today there is a need for more exact criteria than existed earlier in order to conduct therapeutic trials in multicenter programs, to compare epidemiological surveys, to evaluate new diagnostic procedures, and to estimate the activity of the disease process in MS.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "Manual extraction for older paper style.",
+    "source_url": "https://doi.org/10.1002/ana.410130302",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Manual summary text in place of unavailable structured abstract.",
+    "citation": "Poser CM et al. New diagnostic criteria for multiple sclerosis: Guidelines for research protocols. Ann Neurol. 1983."
+  },
+  {
+    "canonical_paper_id": "37fb81157c4a5bc0814bc9544ed1d705",
+    "manual_abstract": "Background: The beneficial effects of interferon beta have only been shown for patients in the relapsing-remitting phase of multiple sclerosis (MS). The role of interferon beta in the treatment of patients who are in the secondary progressive phase of the disease (SP-MS), and for whom no effective drug treatment is available, has not been assessed. Methods: In this multicentre, double-masked, randomised, placebo-controlled trial, outpatients with SP-MS having scores of 3.0-6.5 on the Expanded Disability Status Scale (EDSS) received either 8 million IU interferon beta-1b every other day subcutaneously, or placebo, for up to 3 years. The primary outcome was the time to confirmed progression in disability as measured by a 1.0 point increase on the EDSS, sustained for at least 3 months, or a 0.5 point increase if the baseline EDSS was 6.0 or 6.5. A prospectively planned interim analysis of safety and efficacy of the intention-to-treat population was done after all patients had been in the study for at least 2 years. Findings: 358 patients with SP-MS were allocated placebo and 360 were allocated interferon beta-1b; 57 patients (31 placebo, 26 interferon beta-1b) were lost to follow-up. There was a highly significant difference in time to confirmed progression of disability in favour of interferon beta-1b (p=0.0008). Interferon beta-1b delayed progression for 9-12 months in a study period of 2-3 years. The odds ratio for confirmed progression was 0.65 (95% CI 0.52-0.83). This beneficial effect was seen in patients with superimposed relapses and in patients who had only progressive deterioration without relapses. Positive results were also obtained regarding time to becoming wheelchair-bound, relapse rate and severity, number of steroid treatments and hospital admissions, as well as on magnetic resonance imaging variables. The drug was safe and side effects were in line with previous experience with interferon beta-1b. The study was stopped after the interim results gave clear evidence of efficacy. Interpretation: Treatment with interferon beta-1b delays sustained neurological deterioration in patients with SP-MS. Interferon beta-1b is the first treatment to show a therapeutic effect in patients with SP-MS.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "PubMed abstract verified by expert review.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/9820296/",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Official abstract from PubMed.",
+    "citation": "DOI 10.1016/S0140-6736(98)10039-9"
+  },
+  {
+    "canonical_paper_id": "6570b18f5a3d79fb625c55df6631f50e",
+    "manual_abstract": "Maria was distraught after reading about the potential epidemic, yet to happen, and the horror stories on Facebook needing reassurance and certainty about what she should do. She requested an urgent appointment to review her treatment plan. Maria was a 26-year-old woman with relapsing multiple sclerosis who had recently experienced brainstem relapse with double vision and ataxia despite treatment with pegylated interferon-beta for the last 18 months. A brain MRI performed one month prior had shown 16 new T2 lesions, four of which were enhancing. One of the enhancing lesions was at the pontomedullary junction and was certainly the cause of her relapse. Treatment was to be escalated to ocrelizumab with the first dose in a week's time. In view of the emerging coronavirus pandemic, she was questioning whether or not she should go ahead with ocrelizumab. If this scenario sounds plausible what should neurologists do? Human coronaviruses are predominantly associated with respiratory tract infections and includes those that cause severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and now the COVID-19 pandemic. In an uncertain world, where we do not have a clear evidence-base, you often have to default to scientific principles, rather than using the wisdom of the crowd. Not surprising, with Italy being one of the epicentres of the COVID-19 epidemic, the Italian society of neurology or SIN broke cover first producing recommendations on the management of patients with MS during the COVID-19 epidemic. The SIN guidelines provide relatively straightforward short-term advice on how to manage patients with MS, but do not address supervision of these patients in the intermediate or long-term especially those with highly active MS.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "No formal abstract in source; introduction text used as proxy per expert review.",
+    "source_url": "https://doi.org/10.1016/j.msard.2020.102073",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Introduction excerpt used in place of abstract.",
+    "citation": "Giovannoni G. Mult Scler Relat Disord. 2020."
+  },
+  {
+    "canonical_paper_id": "cb81d5ec0fb44f00c843e03aac289a1f",
+    "manual_abstract": "Background: Previous trials of interferon beta in multiple sclerosis (MS) have shown efficacy, but the degree of clinical benefit remains uncertain, and the optimum dose is not known. We undertook a double-blind, placebo-controlled study in relapsing/remitting MS to investigate the effects of subcutaneous interferon beta-1a. Methods: 560 patients with Kurtzke expanded disability status scale (EDSS) scores of 0-5.0, from 22 centres in nine countries, were randomly assigned subcutaneous recombinant interferon beta-1a 22 microg (n=189), or 44 microg (n=184), or placebo (n=187) three times a week for 2 years. Neurological examinations were done every 3 months. All patients had MRI twice yearly and 205 had monthly scans in the first 9 months of treatment. Analysis was by intention to treat. Findings: Clinical data on 533 (95%) patients were available at 2 years. The relapse rate was significantly lower at 1 and 2 years with both doses of interferon beta-1a than with placebo (mean number per patient 1.82 for 22 microg group, 1.73 for 44 microg group vs 2.56 for placebo group: risk reductions 27% [95% CI 14-39] and 33 [21-44]). Time to first relapse was prolonged by 3 and 5 months in the 22 microg and 44 microg groups respectively, and the proportion of relapse-free patients was significantly increased (p<0.05). Interferon beta-1a delayed progression in disability, and decreased accumulated disability during the study. The accumulation of burden of disease and number of active lesions on MRI was lower in both treatment groups than in the placebo group. Interpretation: Subcutaneous interferon beta-1a is an effective treatment for relapsing/remitting MS in terms of relapse rate, defined disability, and all MRI outcome measures in a dose-related manner, and it is well tolerated. Longer-term benefits may become clearer with further follow-up and investigation.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "PubMed abstract verified by expert review.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/9824502/",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Official abstract from PubMed.",
+    "citation": "DOI 10.1016/S0140-6736(98)03334-0"
+  },
+  {
+    "canonical_paper_id": "cdc5fced700ab383b3f24b49e20fcb51",
+    "manual_abstract": "This paper is a classic mid-20th-century discussion of human problem solving and concept formation, arguing that intelligent behavior is not simply rote stimulus-response learning but instead depends on the ability to form internal cognitive structures that organize experience. A second major theme is that effective learning and performance involve active hypothesis testing and feedback-driven refinement. The implications are relevant to modern education and training: instructional systems should emphasize structured exploration, feedback, and opportunities for learners to articulate and refine their reasoning rather than simple memorization or procedural repetition.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "Old foundational paper with no abstract; manual synthesized summary allowed per expert review.",
+    "source_url": "https://nyaspubs.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1749-6632.1965.tb20235.x",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Manual synthesized summary used in place of abstract.",
+    "citation": "DOI 10.1111/j.1749-6632.1965.tb20235.x"
+  },
+  {
+    "canonical_paper_id": "d3bbf6c8cf4e188905c34ae849538c1a",
+    "manual_abstract": "Recently, the detection of axonal degeneration in the lesions of multiple sclerosis has attracted new and unexpected attention. Magnetic resonance techniques such as MR-spectroscopy and magnetization transfer imaging have provided insight into pathophysiologic changes in multiple sclerosis, suggesting more pronounced damage to axons than had been previously assumed. Moreover, the correlation found between axonal damage and clinical disability has stimulated a revival of axonal pathology research, which has found its preliminary climax in the description of axonal transections in the lesions of multiple sclerosis by Trapp et al. Review of early literature suggests that axonal damage, including axonal pathologic changes such as axonal swellings and transections, had already been recognized and described in detail at the turn of the century. At the time of their publication, the first descriptions of axonal pathology in MS were an intensely discussed and controversial subject.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "Older paper with no formal abstract; introduction paragraphs manually extracted.",
+    "source_url": "https://doi.org/10.1111/j.1750-3639.1999.tb00547.x",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Introduction excerpt used in place of abstract.",
+    "citation": "Kornek B, Lassmann H. Axonal Pathology in Multiple Sclerosis. A Historical Note."
+  },
+  {
+    "canonical_paper_id": "e85b2b87a33d1ecdc3d9768135ac5d11",
+    "manual_abstract": "Multiple sclerosis (MS) is a chronic neurologic disease affecting approximately 1 million adults worldwide and 300,000 Americans. Early illustrations by Carswell in 1838 and Cruveilhier in 1841, followed by the detailed clinical and pathologic correlative studies of Charcot in 1868 and 1880, described the pathologic hallmarks of the MS lesion as consisting of focal demyelination, inflammation, scar formation, and varying axonal destruction. These lesions are scattered throughout the central nervous system, with a predilection for the optic nerves, brainstem, spinal cord, cerebellum, and periventricular white matter. Relapses and progression are the two basic clinical phenomena of prototypic MS. Relapses are considered the clinical expression of acute focal or multifocal inflammatory demyelination disseminated in the CNS, whereas progression reflects the occurrence of chronic demyelination, axonal loss, and gliosis. Early in the disease, remission of symptoms likely is the result of remyelination and resolution of inflammation, but after recurrent attacks, remyelination is limited. Although MS includes inflammatory and demyelinating components, their relative influence on axonal loss is unclear. A combination of inflammatory and noninflammatory factors likely contributes to short- and long-term disability in MS. This review highlights advances in experimental neuropathology that have contributed to a better understanding of MS lesion pathogenesis.",
+    "source": "manual_expert",
+    "verified_by": "wgr",
+    "reason": "Older-style article; introduction used in place of abstract per expert review.",
+    "source_url": "https://doi.org/10.1016/j.ncl.2004.09.002",
+    "decision_tag": "wgr_expert_decision",
+    "website_note": "Introduction excerpt used in place of abstract.",
+    "citation": "Lucchinetti CF, Bruck W, Noseworthy J. The pathology of multiple sclerosis. Neurol Clin. 2005."
+  }
+]

@@ -671,6 +671,8 @@ def _validate_selection(
 
 def _gemini_select(model: str, prompt: str, api_key: str, timeout_seconds: int = 90) -> dict[str, Any] | None:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    raw_verify = _clean_text(os.environ.get("MSKB_SSL_VERIFY", "true")).lower()
+    verify_ssl = raw_verify not in {"0", "false", "no", "off"}
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -683,6 +685,7 @@ def _gemini_select(model: str, prompt: str, api_key: str, timeout_seconds: int =
         params={"key": api_key},
         json=payload,
         timeout=timeout_seconds,
+        verify=verify_ssl,
     )
     response.raise_for_status()
     data = response.json()

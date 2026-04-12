@@ -11,6 +11,15 @@ from typing import Dict, List, Optional
 import requests
 
 
+def _env_bool(name: str, default: bool) -> bool:
+    raw = (os.environ.get(name) or "").strip().lower()
+    if raw in {"1", "true", "yes", "y", "on"}:
+        return True
+    if raw in {"0", "false", "no", "n", "off"}:
+        return False
+    return bool(default)
+
+
 class OpenAlexClient:
     def __init__(
         self,
@@ -22,6 +31,7 @@ class OpenAlexClient:
         max_retries: int = 4,
         max_retry_sleep_s: float = 30.0,
         api_key: str = "",
+        verify_ssl: Optional[bool] = None,
     ):
         self.base_url = base_url.rstrip("/")
         self.email = email
@@ -31,11 +41,18 @@ class OpenAlexClient:
         self.max_retry_sleep_s = max(1.0, float(max_retry_sleep_s))
         env_api_key = (os.environ.get("OPENALEX_API_KEY") or "").strip()
         self.api_key = (str(api_key or "").strip() or env_api_key)
+        if verify_ssl is None:
+            if (os.environ.get("OPENALEX_VERIFY_SSL") or "").strip():
+                verify_ssl = _env_bool("OPENALEX_VERIFY_SSL", True)
+            else:
+                verify_ssl = _env_bool("MSKB_SSL_VERIFY", True)
+        self.verify_ssl = bool(verify_ssl)
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": f"mskb/0.1 ({email})"})
+        self.session.verify = self.verify_ssl
 
     def _cache_path(self, path: str, params: Dict) -> Optional[Path]:
         if not self.cache_dir:

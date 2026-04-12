@@ -771,11 +771,14 @@ class _GeminiClientShim:
     def __init__(self, api_key: str) -> None:
         import requests as _requests  # noqa: F401 — confirm requests is available
         self._api_key = api_key
+        raw_verify = _clean_text(os.environ.get("MSKB_SSL_VERIFY", "true")).lower()
+        self._verify_ssl = raw_verify not in {"0", "false", "no", "off"}
 
     class _MessagesNamespace:
         def __init__(self, api_key: str, base_url: str) -> None:
             self._api_key = api_key
             self._base_url = base_url
+            self._verify_ssl = True
 
         def create(self, model: str, max_tokens: int, messages: list) -> object:
             import requests
@@ -797,6 +800,7 @@ class _GeminiClientShim:
                 params={"key": self._api_key},
                 json=payload,
                 timeout=60,
+                verify=self._verify_ssl,
             )
             resp.raise_for_status()
             data = resp.json()
@@ -817,17 +821,19 @@ class _GeminiClientShim:
 
     @property
     def messages(self):
-        return self._MessagesNamespace(self._api_key, self._BASE_URL)
+        ns = self._MessagesNamespace(self._api_key, self._BASE_URL)
+        ns._verify_ssl = self._verify_ssl
+        return ns
 
 
 def _init_api_client(dist_cfg: dict) -> tuple[object | None, str]:
     """Return ``(client, resolved_provider)`` for distillation.
 
     Priority:
-      1. ``provider: anthropic``  — uses ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN
-      2. ``provider: gemini``     — uses GEMINI_API_KEY / GOOGLE_API_KEY
+      1. ``provider: gemini``     — uses GEMINI_API_KEY / GOOGLE_API_KEY
+      2. ``provider: anthropic``  — uses ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN
       3. ``provider: rules_based`` — no LLM, always rules-based
-      4. ``provider`` unset       — try Anthropic, then Gemini, then rules_based
+      4. ``provider`` unset       — try Gemini, then Anthropic, then rules_based
 
     When ``strict_provider`` (config) is truthy and ``provider`` is set, a
     missing credential or failed import raises ``RuntimeError`` instead of
@@ -848,23 +854,6 @@ def _init_api_client(dist_cfg: dict) -> tuple[object | None, str]:
         print(f"[warn] {message}. Falling back to rules-based distillation.")
         return None
 
-    # --- Anthropic ---
-    if provider in ("anthropic", ""):
-        try:
-            import anthropic
-        except Exception as exc:
-            if provider == "anthropic":
-                return _fail_or_none(f"anthropic SDK import failed: {exc}"), "anthropic"
-            anthropic = None  # type: ignore[assignment]
-        if anthropic is not None and (
-            os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
-        ):
-            return anthropic.Anthropic(), "anthropic"
-        if provider == "anthropic":
-            return _fail_or_none(
-                "ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN not set"
-            ), "anthropic"
-
     # --- Gemini ---
     if provider in ("gemini", ""):
         gemini_key = (
@@ -881,6 +870,23 @@ def _init_api_client(dist_cfg: dict) -> tuple[object | None, str]:
                 print(f"[warn] Could not initialize Gemini client ({exc}).")
         if provider == "gemini":
             return _fail_or_none("GEMINI_API_KEY / GOOGLE_API_KEY not set"), "gemini"
+
+    # --- Anthropic ---
+    if provider in ("anthropic", ""):
+        try:
+            import anthropic
+        except Exception as exc:
+            if provider == "anthropic":
+                return _fail_or_none(f"anthropic SDK import failed: {exc}"), "anthropic"
+            anthropic = None  # type: ignore[assignment]
+        if anthropic is not None and (
+            os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")
+        ):
+            return anthropic.Anthropic(), "anthropic"
+        if provider == "anthropic":
+            return _fail_or_none(
+                "ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN not set"
+            ), "anthropic"
 
     # --- Explicit rules-based opt-in ---
     if provider == "rules_based":
@@ -1187,7 +1193,7 @@ def run(config_path: str) -> None:
     dist_cfg = cfg.get("distillation", {})
     cache_dir = root / dist_cfg.get("cache_dir", "outputs/distilled/llm_cache")
     ensure_dir(cache_dir)
-    configured_model = dist_cfg.get("model", "claude-haiku-4-5-20251001")
+    configured_model = dist_cfg.get("model", "gemini-2.5-flash")
     batch_size = dist_cfg.get("batch_size", 10)
     qa_sample_size = max(1, int(dist_cfg.get("qa_sample_size", 25)))
     qa_random_seed = int(dist_cfg.get("qa_random_seed", 13))

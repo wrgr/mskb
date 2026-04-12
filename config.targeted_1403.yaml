@@ -1,0 +1,307 @@
+email: willgray+test@gmail.com
+openalex_base_url: https://api.openalex.org
+output_dir: outputs
+retrieval:
+  per_page: 200
+  max_search_results_per_query: 500
+  max_pages_cited_by: 3
+  use_seed_channel: true
+  use_lexical_channel: true
+  use_dataset_channel: true
+  use_t4_expert_channel: true
+  t4_max_title_queries: 0
+  seed_reference_enrichment:
+    enabled: false
+    use_crossref: true
+    use_semantic_scholar: true
+    use_openalex_title_search: true
+    max_crossref_refs_per_seed: 250
+    max_semantic_scholar_refs_per_seed: 250
+    max_search_results_per_reference: 8
+    max_title_queries_per_seed: 40
+    min_title_similarity: 88.0
+    max_year_delta: 3
+    request_timeout_seconds: 30
+    search_sleep_seconds: 0.03
+    semantic_scholar_api_key_env: SEMANTIC_SCHOLAR_API_KEY
+queries:
+  lexical:
+  - multiple sclerosis pathogenesis
+  - multiple sclerosis immunology
+  - demyelination autoimmune
+  - experimental autoimmune encephalomyelitis
+  - multiple sclerosis disease-modifying therapy
+  - multiple sclerosis MRI lesion
+  - multiple sclerosis epidemiology risk factors
+  - multiple sclerosis remyelination
+  - multiple sclerosis biomarker neurofilament
+  - oligodendrocyte precursor cell multiple sclerosis
+  - multiple sclerosis Epstein-Barr virus
+  - multiple sclerosis progressive neurodegeneration
+  - multiple sclerosis blood-brain barrier
+  - multiple sclerosis T cell B cell
+  dataset:
+  - UK Biobank multiple sclerosis
+  - MSBase registry multiple sclerosis
+  - IMSGC genome-wide association multiple sclerosis
+  - CLIMB cohort multiple sclerosis
+  - NARCOMS registry multiple sclerosis
+dedup:
+  auto_merge_threshold: 0.85
+graphs:
+  min_cocitation_weight: 2
+  min_bibcoupling_weight: 2
+  min_coauthorship_weight: 1
+scoring:
+  include_if_min_signals: 1
+  include_if_score_at_least: 0.15
+  tier_connectivity:
+    t2_min_cross_seed: 2
+    t2_seed_plus_anchor_min_cross_seed: 1
+    t2_seed_plus_anchor_min_anchor_links: 1
+  tier4_expert:
+    enabled: true
+    require_ms_focus: false
+    min_score_field_membership: 0.0
+  ms_focus:
+    lexical_min_hits: 1
+    concept_min_hits: 1
+    minor_boost_multiplier: 1.2
+    boost_multiplier: 1.65
+  core_vs_context:
+    mode: core_plus_context
+    bridge:
+      min_seed_affinity: 2.0
+      min_in_degree: 3
+      min_kcore: 4
+  downweight:
+    biology_hit_min: 2
+    biology_no_ms_multiplier: 0.35
+  topic_balance:
+    enabled: true
+    target_ranges:
+      pathogenesis_and_immunology:
+        min_pct: 0.15
+        max_pct: 0.35
+      imaging_and_biomarkers:
+        min_pct: 0.15
+        max_pct: 0.35
+      clinical_trials_and_therapeutics:
+        min_pct: 0.1
+        max_pct: 0.3
+      clinical_care_and_management:
+        min_pct: 0.05
+        max_pct: 0.2
+      epidemiology_and_population_health:
+        min_pct: 0.1
+        max_pct: 0.3
+  weights:
+    direct_seed_citation: 3.0
+    landmark_anchor: 0.5
+    lexical_relevance: 2.0
+    dataset_method_alignment: 1.5
+    cocitation: 1.5
+    bibcoupling: 1.0
+    core_author_overlap: 0.5
+topics:
+  min_cluster_size: 5
+core_corpus_selection:
+  t2:
+    min_cross_seed_score: 2
+    min_kcore: 4
+    min_in_degree: 2
+    importance_percentile_by_category: 70.0
+    relax_structure_below_topic_share: 0.02
+    connectivity_rule:
+      min_in_degree_any: 5
+      seed_plus_anchor_min_cross_seed: 1
+      seed_plus_anchor_min_anchor_links: 1
+    undersubscribed_diversity_expand:
+      enabled: true
+      max_additional_fraction_of_topic_t2: 0.5
+      min_importance_percentile_by_category: 40.0
+  t3:
+    min_year: 2022
+    min_citations_per_year: 20.0
+    cap_fraction_of_t2_per_topic: 0.2
+    floor_per_topic: 5
+  balance:
+    max_topic_share: 0.2
+    max_total_papers: 0
+    rebalance:
+      enabled: true
+      target_corpus_size: 1000
+      min_multiplier_of_expected: 0.5
+      max_multiplier_of_expected: 1.5
+learner_journey:
+  max_next_papers: 5
+  max_next_topics: 3
+  min_topic_transition_edges: 2
+distillation:
+  provider: gemini
+  model: gemini-2.5-flash
+  selection_mode: tiered_t1_t2_t3
+  max_papers_per_run: 650
+  tiered_selection:
+    t4_max_papers: 120
+    t2_max_papers: 360
+    t3_max_papers: 220
+    t3_min_year: 2022
+    t3_min_citations_per_year: 20.0
+    t3_min_cross_seed_score: 0
+  cache_dir: outputs/distilled/llm_cache
+  batch_size: 10
+  qa_sample_size: 25
+  qa_random_seed: 13
+abstract_backfill:
+  enabled: true
+  max_openalex_queries: 50
+  max_secondary_queries: 50
+  verbose_trace: true
+  trace_overwrite: true
+  sleep_seconds: 0.03
+  request_timeout_seconds: 4
+  max_consecutive_errors: 6
+  fetch_max_retries: 2
+  fetch_retry_backoff_seconds: 0.6
+  title_author_min_similarity: 88.0
+  title_author_max_year_delta: 3
+  title_author_max_search_results: 8
+  pubmed_fallback:
+    enabled: true
+    timeout_seconds: 10
+    min_title_similarity: 85.0
+  html_fallback:
+    enabled: true
+    min_chars: 120
+  selected_scope:
+    enabled: true
+    selected_csv_path: /tmp/mskb_single_target_1403.csv
+    selected_id_column: canonical_paper_id
+site:
+  explorer:
+    source_csv: outputs/graph/core_corpus_tracked_with_t4.csv
+    require_abstract: false
+    start_metric: pagerank
+    min_in_degree: 0
+    min_out_degree: 0
+    min_kcore: 0
+    start_nodes: 0
+    lite_start_nodes: 2500
+    mobile_start_nodes: 2500
+governance:
+  hold_missing_abstracts_from_graph: true
+  seed_checklist:
+    enabled: true
+    fail_on_error: false
+    fail_on_unresolved_metadata: false
+    topic_quotas:
+      TOPIC-00:
+        min: 1
+        max: 8
+      TOPIC-01:
+        min: 1
+        max: 8
+      TOPIC-02:
+        min: 1
+        max: 8
+      TOPIC-03:
+        min: 1
+        max: 8
+      TOPIC-04:
+        min: 1
+        max: 8
+      TOPIC-05:
+        min: 1
+        max: 8
+      TOPIC-06:
+        min: 1
+        max: 8
+      TOPIC-07:
+        min: 1
+        max: 8
+      TOPIC-08:
+        min: 1
+        max: 8
+      TOPIC-09:
+        min: 1
+        max: 8
+      TOPIC-10:
+        min: 1
+        max: 8
+      TOPIC-11:
+        min: 1
+        max: 8
+      TOPIC-12:
+        min: 1
+        max: 8
+      TOPIC-13:
+        min: 1
+        max: 8
+      TOPIC-14:
+        min: 1
+        max: 8
+      TOPIC-15:
+        min: 1
+        max: 8
+      TOPIC-16:
+        min: 1
+        max: 8
+      TOPIC-17:
+        min: 1
+        max: 8
+    venue_cap: 12
+    author_cap: 8
+    ms_lexical_min_hits: 1
+    ms_concept_min_hits: 1
+    allow_bridge_justification: true
+  audit_gates:
+    fail_on_error: true
+    min_ms_focus_pct: 75.0
+    max_biology_no_ms_link: 0
+    max_missing_abstract_pct: 5.0
+    missing_abstract_policy: todo
+    max_missing_source_link_pct: 5.0
+    enforce_category_bounds: false
+    enforce_topic_bounds: true
+    topic_min_pct: 1.0
+    topic_max_pct: 10.0
+    topic_bounds_use_rebalance_from_selection_summary: true
+    topic_under_min_warn_if_observed_pct_at_least: 2.0
+    topic_bounds_include_unmapped: false
+    topic_bounds_warn_only_codes:
+    - TOPIC-10
+    enforce_recent_topic_coverage: true
+    recent_topic_min_year: 2022
+    recent_topic_min_citations_per_year: 20.0
+    recent_topic_reserve_fraction: 0.2
+    recent_topic_reserve_floor_per_topic: 5
+    recent_topic_warn_below_count: 5
+    recent_topic_error_below_count: 3
+    recent_topic_error_warn_only_codes:
+    - TOPIC-11
+    topic_expected_codes:
+    - TOPIC-00
+    - TOPIC-01
+    - TOPIC-02
+    - TOPIC-03
+    - TOPIC-04
+    - TOPIC-05
+    - TOPIC-06
+    - TOPIC-07
+    - TOPIC-08
+    - TOPIC-09
+    - TOPIC-10
+    - TOPIC-11
+    - TOPIC-12
+    - TOPIC-13
+    - TOPIC-14
+    - TOPIC-15
+    - TOPIC-16
+    - TOPIC-17
+  landmark_anchors:
+    enabled: true
+    min_year: 1980
+    max_year: 2020
+    output_top_k: 25
+    per_decade_cap: 5

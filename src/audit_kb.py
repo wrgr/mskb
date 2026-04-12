@@ -73,6 +73,16 @@ def _is_unmapped_topic(value: object) -> bool:
     return text.upper() == "UNMAPPED"
 
 
+def _core_corpus_mask(df: pd.DataFrame) -> pd.Series:
+    """Return a boolean mask for papers considered core for strict QA checks."""
+    if "in_core_corpus" in df.columns:
+        return df["in_core_corpus"].fillna(False).astype(bool)
+    if "corpus_role" in df.columns:
+        role = df["corpus_role"].fillna("").astype(str).str.strip().str.lower()
+        return role.eq("core")
+    return pd.Series(True, index=df.index)
+
+
 def _bin_by_topic_category(topic_codes: pd.Series) -> dict[str, int]:
     """Return category -> count by mapping each TOPIC-XX code through TOPIC_CATEGORY_MAP.
 
@@ -140,6 +150,7 @@ def _build_markdown_report(report: dict) -> str:
     lines.append(f"- `biology_no_ms_link` (final count): `{gm.get('biology_no_ms_link_count', 0)}`")
     lines.append(f"- Missing abstract rate: `{gm.get('missing_abstract_pct', 0):.2f}%`")
     lines.append(f"- Missing source-link rate: `{gm.get('missing_source_link_pct', 0):.2f}%`")
+    lines.append(f"- Missing named-author count (final corpus): `{gm.get('missing_named_author_count', 0)}`")
     lines.append(
         f"- Missing topic assignment (screened corpus): "
         f"`{gm.get('unmapped_topic_count', 0)}` "
@@ -153,8 +164,16 @@ def _build_markdown_report(report: dict) -> str:
     lines.append("## Manual Review")
     held = gm.get("held_paper_count", 0)
     lines.append(f"- Papers held for manual review: `{held}`")
+    if gm.get("hold_missing_abstract_core_only", False):
+        lines.append(
+            f"- Missing-abstract hold policy: `core_only` "
+            f"(excluded non-core count: `{gm.get('missing_abstract_excluded_non_core_count', 0)}`)"
+        )
     if held:
-        lines.append("- Reasons may include: `biology_no_ms_link`, `missing_source_link`, `missing_abstract`, `unmapped_topic`")
+        lines.append(
+            "- Reasons may include: `biology_no_ms_link`, `missing_source_link`, "
+            "`missing_named_author`, `missing_abstract`, `unmapped_topic`"
+        )
         lines.append("- See `outputs/audit/held_papers.csv` for full list with per-paper reasons.")
     lines.append("")
     lines.append("## Centrality Views")
@@ -212,6 +231,8 @@ def run(config_path: str) -> None:
     max_biology_no_ms_link = _safe_int(gcfg.get("max_biology_no_ms_link", 0), 0)
     max_missing_abstract_pct = _safe_float(gcfg.get("max_missing_abstract_pct", 25.0), 25.0)
     missing_abstract_policy = str(gcfg.get("missing_abstract_policy", "error") or "error").strip().lower()
+    hold_missing_abstract_core_only = bool(gcfg.get("hold_missing_abstract_core_only", True))
+    hold_missing_named_author = bool(gcfg.get("hold_missing_named_author", False))
     max_missing_source_link_pct = _safe_float(gcfg.get("max_missing_source_link_pct", 5.0), 5.0)
     enforce_category_bounds = bool(gcfg.get("enforce_category_bounds", True))
 
@@ -260,6 +281,14 @@ def run(config_path: str) -> None:
             f"missing source-link rate above threshold: {missing_source_link_pct:.2f}% > {max_missing_source_link_pct:.2f}%"
         )
 
+    if "has_named_author" in final.columns:
+        has_named_author = pd.to_numeric(final["has_named_author"], errors="coerce").fillna(0).astype(int) > 0
+    else:
+        fallback_author = final.get("first_author", pd.Series("", index=final.index)).fillna("").astype(str).str.strip()
+        has_named_author = ~fallback_author.eq("")
+    missing_named_author_mask = ~has_named_author
+    missing_named_author_count = int(missing_named_author_mask.sum())
+
     # Merge topic evidence so we can bin by TOPIC-XX (the taxonomy used by seed
     # governance and expert comms) rather than the cluster-derived anchor_category.
     topic_evidence_path = root / cfg["output_dir"] / "topics" / "paper_topic_evidence.csv"
@@ -276,15 +305,34 @@ def run(config_path: str) -> None:
             low_memory=False,
         )
         topic_evidence["canonical_paper_id"] = topic_evidence["canonical_paper_id"].astype(str)
-        # Only merge columns the tracked corpus doesn't already carry so we
-        # preserve any primary_topic_code that was written at Stage 5c.
-        merge_cols = ["canonical_paper_id"]
-        if "primary_topic_code" not in final.columns:
-            merge_cols.append("primary_topic_code")
-        if "topic_assignment_method" not in final.columns:
-            merge_cols.append("topic_assignment_method")
-        if len(merge_cols) > 1:
-            final = final.merge(topic_evidence[merge_cols], on="canonical_paper_id", how="left")
+        # Always ingest topic evidence and prefer fresh Stage 5b assignments when
+        # present; fall back to existing columns from tracked corpus otherwise.
+        final = final.merge(
+            topic_evidence.rename(
+                columns={
+                    "primary_topic_code": "primary_topic_code_evidence",
+                    "topic_assignment_method": "topic_assignment_method_evidence",
+                }
+            ),
+            on="canonical_paper_id",
+            how="left",
+        )
+        existing_primary = final.get("primary_topic_code", pd.Series("", index=final.index))
+        evidence_primary = final.get("primary_topic_code_evidence", pd.Series("", index=final.index))
+        final["primary_topic_code"] = evidence_primary.where(
+            evidence_primary.fillna("").astype(str).str.strip() != "",
+            existing_primary,
+        )
+        existing_method = final.get("topic_assignment_method", pd.Series("", index=final.index))
+        evidence_method = final.get("topic_assignment_method_evidence", pd.Series("", index=final.index))
+        final["topic_assignment_method"] = evidence_method.where(
+            evidence_method.fillna("").astype(str).str.strip() != "",
+            existing_method,
+        )
+        final = final.drop(
+            columns=["primary_topic_code_evidence", "topic_assignment_method_evidence"],
+            errors="ignore",
+        )
 
         topic_series = final.get("primary_topic_code", pd.Series("", index=final.index))
         unmapped_mask = topic_series.map(_is_unmapped_topic)
@@ -376,9 +424,22 @@ def run(config_path: str) -> None:
     for pid in final.loc[no_link_mask, "canonical_paper_id"].tolist():
         hold_reasons.setdefault(str(pid), []).append("missing_source_link")
 
+    if hold_missing_named_author:
+        for pid in final.loc[missing_named_author_mask, "canonical_paper_id"].tolist():
+            hold_reasons.setdefault(str(pid), []).append("missing_named_author")
+
     no_abstract_mask = ~abstract_present
-    for pid in final.loc[no_abstract_mask, "canonical_paper_id"].tolist():
+    abstract_hold_mask = no_abstract_mask
+    if hold_missing_abstract_core_only:
+        abstract_hold_mask = no_abstract_mask & _core_corpus_mask(final)
+    for pid in final.loc[abstract_hold_mask, "canonical_paper_id"].tolist():
         hold_reasons.setdefault(str(pid), []).append("missing_abstract")
+    skipped_missing_abstract_holds = int((no_abstract_mask & ~abstract_hold_mask).sum())
+    if skipped_missing_abstract_holds:
+        warnings.append(
+            f"{skipped_missing_abstract_holds} non-core paper(s) missing abstracts were excluded "
+            "from manual-review holds by policy (hold_missing_abstract_core_only=true)"
+        )
 
     for pid in final.loc[unmapped_mask, "canonical_paper_id"].tolist():
         hold_reasons.setdefault(str(pid), []).append("unmapped_topic")
@@ -409,9 +470,14 @@ def run(config_path: str) -> None:
             "biology_no_ms_link_count": int(biology_no_ms_link_count),
             "missing_abstract_pct": round(missing_abstract_pct, 4),
             "missing_source_link_pct": round(missing_source_link_pct, 4),
+            "hold_missing_named_author": bool(hold_missing_named_author),
+            "missing_named_author_count": int(missing_named_author_count),
             "unmapped_topic_count": int(unmapped_topic_count),
             "unmapped_topic_pct": round(unmapped_topic_pct, 4),
             "missing_abstract_policy": missing_abstract_policy,
+            "hold_missing_abstract_core_only": bool(hold_missing_abstract_core_only),
+            "missing_abstract_hold_count": int(abstract_hold_mask.sum()),
+            "missing_abstract_excluded_non_core_count": int(skipped_missing_abstract_holds),
             "held_paper_count": int(held_paper_count),
         },
         "category_mix_pct": category_mix_pct,

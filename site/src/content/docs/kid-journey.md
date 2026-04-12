@@ -1,32 +1,39 @@
 ---
 title: MS Science for Curious Minds
-description: "A plain-language learning journey through MS research — written for curious 12-year-olds."
+description: "A plain-language tour of MS research for curious minds, classrooms, and families."
 sidebar:
   label: For Curious Minds
   order: 5
 ---
 
 <div class="kid-journey-hero">
+<p class="kid-journey-hero-kicker">For Curious Minds</p>
+<h2>MS Science for Curious Minds</h2>
+<p>
+  Multiple sclerosis (MS) is a condition where the immune system accidentally attacks the brain and spinal cord.
+  Scientists around the world are working to understand why this happens, how to treat it better, and how to prevent it in the future.
+</p>
+<p>
+  This page is a guided tour of those discoveries in clear, plain language. Think of it as a science adventure:
+  each section explains one part of the puzzle, then shows real studies that moved the field forward.
+</p>
 
-## MS Science for Curious Minds
-
-Multiple sclerosis — or MS — is a condition where the body's own immune system accidentally attacks the brain and spinal cord.
-Thousands of scientists around the world are working every day to understand it, treat it, and one day cure it.
-
-This page takes you on a tour of what they've discovered, written in plain language so anyone can follow along.
-Each section covers a different part of the puzzle.
-
+<div class="kid-journey-intro-grid" role="list" aria-label="How to use this page">
+  <div class="kid-intro-card" role="listitem"><strong>Start with the big ideas</strong> and skim each section intro first.</div>
+  <div class="kid-intro-card" role="listitem"><strong>Pick one paper card</strong> that sounds interesting and read its "Why it matters" line.</div>
+  <div class="kid-intro-card" role="listitem"><strong>Ask one question</strong> after each section: "What did scientists discover here?"</div>
+</div>
 </div>
 
 ---
 
-## How MS works inside the body
+## Part 1: How MS works inside the body
 
 ### Neuroscience
 
 *4549 research papers in this area.*
 
-# What Scientists Are Learning About Multiple Sclerosis
+#### What Scientists Are Learning About Multiple Sclerosis
 
 Did you know that your brain and nerves are protected by a special coating called myelin, kind of like the plastic covering on a phone charger wire? In multiple sclerosis (MS), the body's defense system gets confused and attacks this protective coating, damaging the nerves underneath. Scientists have discovered something surprising: the real problem isn't just the inflammation (swelling from the attack), but also that the nerve fibers themselves get broken, like snapping wires inside the brain. This is exciting because it means doctors now understand MS is more complicated than they thought, and they're learning exactly what causes the long-term problems that make MS harder to manage over time.
 
@@ -146,7 +153,7 @@ The good news is that scientists around the world are working together like a te
 
 *4235 research papers in this area.*
 
-# The Mystery of Multiple Sclerosis: What Scientists Are Learning
+#### The Mystery of Multiple Sclerosis: What Scientists Are Learning
 
 Scientists around the world are working hard to solve a big puzzle: what causes multiple sclerosis, or MS, a disease where the body's defense system (called the immune system) accidentally attacks the brain and spine? Here's what's super cool—researchers recently discovered that a very common virus called Epstein-Barr virus (EBV), which lots of people catch when they're young, might be connected to MS. In fact, people who got infected with this virus were 32 times more likely to develop MS later on! This is exciting because it means scientists might finally understand *why* some people get MS, and that's a huge step toward stopping it.
 
@@ -266,19 +273,19 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 
 *5 research papers in this area.*
 
-# What Scientists Are Learning About Brain Tumors
+#### What Scientists Are Learning About Brain Tumors
 
 Did you know that your body's defense system—the thing that fights off colds and flu—might actually help protect you from getting certain brain tumors? Scientists are discovering that people who have had certain virus infections, like chickenpox, seem to have different chances of getting a type of brain tumor called a glioma. This is surprising because usually we think of viruses as bad things, but it turns out your immune system's memory of fighting these viruses might be like a bodyguard protecting your brain! Researchers are looking at blood samples from people before they got sick to understand this mystery better.
 
 Here's why this matters for people with MS (multiple sclerosis): Scientists think MS and brain tumors might be connected to how our immune systems work, because both involve how our bodies protect themselves. By understanding what makes some people more likely to get brain tumors, doctors are learning more about how immune systems work in general—and this knowledge could help them create better treatments for MS and other diseases too. The more we understand about how our bodies defend themselves, the better we can help people stay healthy. Scientists around the world are working hard every day to crack these puzzles and help people live longer, healthier lives!
 
-## Seeing MS: scans, tests, and measurements
+## Part 2: Seeing MS with scans, tests, and measurements
 
 ### Multiple Sclerosis Research Studies
 
 *2792 research papers in this area.*
 
-# Scientists Are Using Smart Computers to Understand Multiple Sclerosis
+#### Scientists Are Using Smart Computers to Understand Multiple Sclerosis
 
 Imagine if a computer could look at pictures of someone's brain and figure out what's happening with their health before doctors even notice! That's what scientists are doing now with multiple sclerosis (MS), a condition where the body's immune system accidentally attacks the protective coating around nerves. They're using artificial intelligence—which is basically super-smart computer programs—to study brain scans, genetic information, and medical records from thousands of patients. This is exciting because computers can spot patterns that humans might miss, helping doctors understand MS better and faster than ever before.
 
@@ -400,11 +407,11 @@ The coolest part? This research could be life-changing for people living with MS
 
 *1613 research papers in this area.*
 
-# Finding Hidden Clues in the Blood: The MS Detective Work
+#### Finding Hidden Clues in the Blood: The MS Detective Work
 
 Scientists have discovered something amazing—they can now look for special clues in a person's blood that tell them how someone's MS is doing, even before the person feels any symptoms! Think of it like having a secret superpower detector: instead of waiting for problems to show up on brain scans or symptoms to get worse, doctors can now spot tiny pieces of damaged nerve cells floating in the blood and measure them. This is exciting because it's like having an early warning system that can catch disease activity before it causes real trouble. The coolest part? All they need is a simple blood test, not complicated brain imaging!
 
-# A Personalized Path to Better Treatment
+#### A Personalized Path to Better Treatment
 
 This discovery could totally change how doctors treat MS in the future—instead of using the same treatment for everyone, they could match each person with the best medicine for *their* specific type of MS. Right now, doctors sometimes have to wait weeks or months to know if a treatment is actually working, but with these blood tests, they could know much faster and switch to something better if needed. It's like giving each MS fighter their own custom game plan instead of a one-size-fits-all approach! Scientists around the world are still racing to understand even more hidden clues in our blood, and they're determined to turn MS from something scary into something that people can manage and control.
 
@@ -521,7 +528,7 @@ This discovery could totally change how doctors treat MS in the future—instead
 
 *11 research papers in this area.*
 
-# Cool Discoveries About Body Chemicals and Disease
+#### Cool Discoveries About Body Chemicals and Disease
 
 Scientists are learning amazing things about tiny tumors called neuroendocrine tumors (which are abnormal growths that make special chemicals in your body). These tumors can mess with your hormones—which are like messengers that tell your body how to work properly. When doctors understand exactly what these tumors do and which hormones they're messing with, they can catch them faster and treat them better. It's like being a detective looking for clues about what's gone wrong inside!
 
@@ -552,13 +559,13 @@ Here's why this matters for people with multiple sclerosis (MS), which is a dise
 
 </div>
 
-## Living with MS: care and daily life
+## Part 3: Living with MS in daily life
 
 ### Multiple Sclerosis Research Studies
 
 *4080 research papers in this area.*
 
-# Understanding Multiple Sclerosis Better
+#### Understanding Multiple Sclerosis Better
 
 Scientists who study multiple sclerosis (MS) are working like detectives to figure out the best ways to help people with this condition. MS is a disease where the body's defense system accidentally attacks the brain and nerves, making it hard for people to move, think, or remember things clearly. What's exciting is that researchers are testing special tools and measurements to see exactly how MS affects people—like testing how fast someone can think or complete a puzzle. This might sound simple, but finding the right way to measure these changes is super important because it helps doctors know if new medicines actually work!
 
@@ -683,11 +690,11 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 
 *3401 research papers in this area.*
 
-# Understanding How MS Changes Over Time
+#### Understanding How MS Changes Over Time
 
 Scientists recently discovered something surprising: multiple sclerosis (MS) isn't just one simple disease—it's more like several different diseases hiding under the same name! Researchers used super-powerful computers and data from thousands of patients to figure out that MS affects people in many different ways. Some people's symptoms come and go like waves, while others have symptoms that slowly get worse over time. This is exciting because doctors had been treating everyone the same way, even though their bodies were doing completely different things!
 
-# Better Treatment for Everyone
+#### Better Treatment for Everyone
 
 Now that scientists understand MS better, they can finally match the right treatment to each person instead of using a one-size-fits-all approach. Researchers have already found medicines that help slow down the disease, and they're testing new ones all the time. With this new knowledge about the different types of MS, doctors will be able to predict which treatments will work best for each patient and help them stay healthier for longer. Scientists around the world are working hard to unlock even more secrets about MS, and every discovery brings hope to the millions of people living with this condition today.
 
@@ -808,7 +815,7 @@ Now that scientists understand MS better, they can finally match the right treat
 
 *1392 research papers in this area.*
 
-# Scientists Are Helping Kids With Multiple Sclerosis
+#### Scientists Are Helping Kids With Multiple Sclerosis
 
 Did you know that kids and teenagers can get a disease called multiple sclerosis, or MS? It's a condition where a person's body accidentally attacks the protective coating around nerves in their brain and spinal cord, making it hard for messages to travel through the body. Scientists have discovered something surprising: MS in young people works differently than it does in adults, and kids need special treatments just for them. Right now, researchers around the world are studying over 1,400 different research papers to figure out the best ways to help kids with MS feel better and live fuller lives.
 
@@ -928,7 +935,7 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 
 *971 research papers in this area.*
 
-# What Scientists Are Learning About MS and Pregnancy
+#### What Scientists Are Learning About MS and Pregnancy
 
 Here's something really surprising: when women with multiple sclerosis (MS)—a disease where the body's immune system attacks the nerves in the brain and spinal cord—become pregnant, their symptoms actually get *better*! Scientists have discovered that during pregnancy, especially in the last three months, women have fewer MS flare-ups (these are times when symptoms suddenly get worse). This is exciting because it shows that something about pregnancy changes how the body's immune system works, and understanding this might help doctors find new treatments for everyone with MS, not just pregnant women.
 
@@ -1049,7 +1056,7 @@ The really cool part is that this discovery could help more women with MS feel c
 
 *16 research papers in this area.*
 
-# How Your Brain Could Control a Computer (And Help People with MS!)
+#### How Your Brain Could Control a Computer (And Help People with MS!)
 
 Imagine if you could move a wheelchair, type a message, or play a video game just by *thinking* about it—without using your hands or voice. Scientists are making this possible using special brain-reading technology! They use machines that pick up tiny electrical signals from your brain (called EEG), and then artificial intelligence—super-smart computer programs—learns to understand what you're thinking. It's like teaching a computer to read your mind! This technology is already helping people control robotic arms and wheelchairs in real labs, and it's getting better every single day.
 
@@ -1059,7 +1066,7 @@ For people living with MS (a disease that makes it harder to move your body), br
 
 *5 research papers in this area.*
 
-# Understanding Heart Valve Problems: A Gateway to Better Health
+#### Understanding Heart Valve Problems: A Gateway to Better Health
 
 Your heart has tiny doors inside it called valves that open and close to keep blood flowing the right way—kind of like one-way gates in a water park! Sometimes these valves get sick or damaged, which is called valvular heart disease, and it can make people feel tired, short of breath, or dizzy. Scientists around the world are studying how often this happens, where it happens most, and why—because understanding the problem is the first step to fixing it. What's exciting is that researchers are discovering new patterns that could help doctors catch valve problems earlier, before they become serious.
 
@@ -1094,19 +1101,19 @@ Here's the cool part: Some people with MS (a disease that affects the nervous sy
 
 *5 research papers in this area.*
 
-# Understanding Essential Tremor and How Doctors Are Finding New Ways to Help
+#### Understanding Essential Tremor and How Doctors Are Finding New Ways to Help
 
 Imagine your hands shaking so much that it's hard to write, eat, or hold a cup of coffee—that's what people with essential tremor experience. Scientists are discovering that this shaking happens because certain parts of the brain aren't communicating properly with each other. The exciting news is that doctors are testing brand-new treatments that can actually "talk" to the brain without cutting it open! These treatments use special machines and sound waves to help fix the brain's connections and stop the tremors. It's like doctors are learning to tune the brain's communication system, the way you might tune a guitar to make it sound just right.
 
 What's really amazing is that this research could help people with multiple sclerosis (MS) too, since MS can also affect how the brain controls movement and cause shaking. By understanding how to fix tremors in essential tremor patients, scientists are learning techniques that might work for MS patients who experience similar shaking problems. These new treatments are gentler and safer than older surgery methods, which means patients can go home the same day and feel better faster. Scientists around the world are still working hard to understand exactly how the brain controls movement, and one day, these discoveries might help millions of people move more smoothly and freely.
 
-## Who gets MS and why
+## Part 4: Who gets MS, and why
 
 ### Internal medicine
 
 *510 research papers in this area.*
 
-# What Scientists Are Learning About Multiple Sclerosis
+#### What Scientists Are Learning About Multiple Sclerosis
 
 Scientists around the world are working hard to understand multiple sclerosis, or MS—a condition where the body's defense system accidentally attacks the protective covering around nerves in the brain and spine. Think of it like your phone's protective case getting damaged, which makes it harder for messages to get through. What's exciting is that researchers have discovered there are many different types of MS, and they're learning that things like our lifestyle, genes, and even where we live can affect whether someone gets it. By studying 510 different research papers, doctors are finding new clues about what causes MS and how to help people feel better!
 
@@ -1221,7 +1228,7 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 
 *444 research papers in this area.*
 
-# Scientists Are Learning Something Surprising About Multiple Sclerosis
+#### Scientists Are Learning Something Surprising About Multiple Sclerosis
 
 Did you know that scientists used to think multiple sclerosis (MS), a disease that affects how the brain and body communicate, was much more common in some groups of people than others? Well, they were wrong! New research is showing that MS actually affects people from many different racial and ethnic backgrounds more equally than doctors thought before. This is super exciting because it means scientists had been missing a lot of people who needed help and treatment. By discovering this, they're realizing they need to pay closer attention to all communities and make sure everyone gets fair treatment, not just some groups of people.
 
@@ -1339,7 +1346,7 @@ Here's why this matters for people living with MS right now: when doctors unders
 
 ---
 
-## Want to explore more?
+## Keep exploring
 
 - [Learning Journey](/mskb/journey/) — build your own reading path through the full research graph.
 - [Citation Topics](/mskb/topics/) — browse all research areas by category.

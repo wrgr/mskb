@@ -1,0 +1,143 @@
+version: "1.0"
+generated: "2026-04-12"
+description: >
+  Registry that anchors learner-facing concept categories to external
+  literature/syllabus-style authorities and to internal MSKB governance assets.
+  This file is intentionally auditable and machine-readable so category design
+  choices can be justified in reviews and CI checks.
+
+sources:
+  - id: bloom_sweller_learning_framework
+    label: "Bloom taxonomy + cognitive load theory learning framework"
+    source_type: "learning_science_framework"
+    repository_evidence:
+      - "LEARNING_CONCEPT_ONTOLOGY.md"
+      - "site/src/content/docs/concepts/index.mdx"
+    note: >
+      Defines sequencing expectations (foundation to application) and supports
+      why categories should be pedagogically scaffolded.
+
+  - id: mskb_topic_map
+    label: "MSKB topic map (TOPIC-## orientation taxonomy)"
+    source_type: "internal_domain_taxonomy"
+    repository_evidence:
+      - "data/topic_map.json"
+      - "data/ms_corpus_design_decisions.md"
+    note: >
+      Provides domain decomposition used by corpus selection and concept/topic
+      alignment.
+
+  - id: jla_ms_priority_setting_partnership_2022
+    label: "James Lind Alliance MS Priority Setting Partnership (2022)"
+    source_type: "patient_priority_syllabus"
+    repository_evidence:
+      - "site/src/content/docs/concepts/**/*.md (concept.anchors.jla_priority)"
+      - "scripts/update_graph_assets.py"
+    note: >
+      Anchors categories that prioritize patient-identified uncertainties
+      (symptom management, shared decision-making, treatment priorities).
+
+  - id: aan_ms_quality_measure_set_2020
+    label: "AAN Multiple Sclerosis Quality Measurement Set (2020)"
+    source_type: "clinical_quality_framework"
+    repository_evidence:
+      - "site/src/content/docs/concepts/**/*.md (concept.anchors.aan_quality_measure)"
+      - "scripts/update_graph_assets.py"
+    note: >
+      Anchors categories requiring measurable clinical quality concepts
+      (monitoring, cognition, symptom screening, care quality).
+
+  - id: msif_global_proms_initiative
+    label: "MSIF Global PROMS Initiative"
+    source_type: "patient_reported_outcomes_framework"
+    repository_evidence:
+      - "site/src/content/docs/concepts/**/*.md (concept.anchors.proms)"
+      - "scripts/update_graph_assets.py"
+    note: >
+      Anchors categories where patient-reported burden and lived experience are
+      first-class coverage requirements.
+
+  - id: ectrims_educational_curriculum
+    label: "ECTRIMS educational curriculum (MS teaching framework)"
+    source_type: "professional_syllabus"
+    repository_evidence:
+      - "scripts/update_graph_assets.py"
+      - "LEARNING_CONCEPT_ONTOLOGY.md"
+    note: >
+      Provides specialist educational scope for mechanism, diagnosis, and
+      therapeutic category boundaries.
+
+categories:
+  pathogenesis_and_immunology:
+    label: "Pathogenesis and Immunology"
+    rationale: >
+      Captures mechanistic disease biology required before diagnosis and
+      treatment reasoning.
+    source_ids:
+      - bloom_sweller_learning_framework
+      - mskb_topic_map
+      - ectrims_educational_curriculum
+    concept_examples:
+      - immune_system_basics
+      - neuroinflammation
+      - ebv_ms
+
+  imaging_and_biomarkers:
+    label: "Imaging and Biomarkers"
+    rationale: >
+      Captures diagnostic and monitoring evidence needed for disease definition,
+      staging, and treatment response evaluation.
+    source_ids:
+      - mskb_topic_map
+      - ectrims_educational_curriculum
+      - aan_ms_quality_measure_set_2020
+      - jla_ms_priority_setting_partnership_2022
+    concept_examples:
+      - mcdonald_criteria
+      - mri_patterns
+      - csf_biomarkers
+
+  clinical_trials_and_therapeutics:
+    label: "Clinical Trials and Therapeutics"
+    rationale: >
+      Captures evidence-to-treatment translation including efficacy, safety, and
+      treatment optimization.
+    source_ids:
+      - mskb_topic_map
+      - aan_ms_quality_measure_set_2020
+      - jla_ms_priority_setting_partnership_2022
+      - ectrims_educational_curriculum
+    concept_examples:
+      - dmt_overview
+      - b_cell_therapies
+      - treatment_monitoring
+
+  clinical_care_and_management:
+    label: "Clinical Care and Management"
+    rationale: >
+      Captures real-world care delivery, symptom burden, and patient-centered
+      decisions in longitudinal MS management.
+    source_ids:
+      - mskb_topic_map
+      - jla_ms_priority_setting_partnership_2022
+      - aan_ms_quality_measure_set_2020
+      - msif_global_proms_initiative
+      - bloom_sweller_learning_framework
+    concept_examples:
+      - what_is_ms
+      - fatigue_ms
+      - shared_decision_making
+
+  epidemiology_and_population_health:
+    label: "Epidemiology and Population Health"
+    rationale: >
+      Captures incidence/prevalence, disparities, access, and population-level
+      outcomes needed for equitable and globally relevant MS understanding.
+    source_ids:
+      - mskb_topic_map
+      - jla_ms_priority_setting_partnership_2022
+      - msif_global_proms_initiative
+    concept_examples:
+      - ms_epidemiology
+      - equity_sdoh
+      - sex_gender_ms

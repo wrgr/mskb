@@ -1,9 +1,9 @@
 ---
-title: Learning Journey
-description: Build a cross-topic paper list, map it to concepts, and export your study path.
+title: Learning Journey Studio
+description: Build a targeted MS reading plan from concepts, citation topics, or seed papers.
 template: splash
 hero:
-  tagline: Move from citation topics to concept-first study plans with one shared paper list.
+  tagline: Curate papers with the graph, stage them into a sequence, and export a study-ready reading packet.
 sidebar:
   label: Learning Journey
   order: 4
@@ -12,40 +12,74 @@ sidebar:
 import '../../styles/custom.css';
 
 <div class="journey-shell">
-  <p>
-    Start with a concept, a citation topic, or your own seed papers. The graph below maps pathways to concepts and lets you add linked papers into a reusable learning list.
-  </p>
+  <section class="journey-hero" aria-labelledby="journey-studio-title">
+    <p class="journey-kicker">Learning Journey Studio</p>
+    <h2 id="journey-studio-title">Turn scattered papers into a deliberate study path.</h2>
+    <p>
+      Start with a concept, citation topic, or your own seed set. Use the graph to collect high-value papers,
+      then let the tools organize them into a foundations-to-deep-dive sequence you can reuse and share.
+    </p>
+    <div class="journey-hero-grid" role="list" aria-label="Learning Journey workflow">
+      <article class="journey-mini-card" role="listitem">
+        <h3>1. Scout the map</h3>
+        <p>Explore linked concepts and topic clusters to find useful entry papers quickly.</p>
+      </article>
+      <article class="journey-mini-card" role="listitem">
+        <h3>2. Build your set</h3>
+        <p>Add papers into one shared working list that powers every tool on this page.</p>
+      </article>
+      <article class="journey-mini-card" role="listitem">
+        <h3>3. Export and teach</h3>
+        <p>Generate a phased reading plan and export markdown, JSON, or BibTeX outputs.</p>
+      </article>
+    </div>
+  </section>
 
-  <div id="mskb-graph-spine" class="mskb-graph-root"></div>
+  <section class="journey-map">
+    <header class="journey-map-head">
+      <h3>Concept + Topic Graph</h3>
+      <p>
+        Click nodes to inspect details and add papers. Use search and filters to tighten the map around your
+        current learning question.
+      </p>
+    </header>
+    <div id="mskb-graph-spine" class="mskb-graph-root"></div>
+  </section>
 
   <section class="selection-panel">
     <header class="selection-panel-head">
       <div>
-        <h3>Relevant papers <span id="selection-count" class="selection-count">0</span></h3>
-        <p class="selection-panel-hint">This list is shared with the explorer and persisted in your browser.</p>
+        <h3>Relevant Papers <span id="selection-count" class="selection-count">0</span></h3>
+        <p class="selection-panel-hint">
+          This is your active working set. It is shared with the explorer and saved in your browser.
+        </p>
       </div>
       <div class="explorer-actions selection-panel-actions">
-        <button id="journey-clear" type="button">Clear all</button>
+        <button id="journey-clear" type="button">Clear List</button>
       </div>
     </header>
     <div id="journey-selected"></div>
   </section>
 
   <div class="tools-panel">
-    <h3>Journey Tools</h3>
+    <header class="journey-tools-head">
+      <h3>Build and Export</h3>
+      <p>Each tool runs on the Relevant Papers list above.</p>
+    </header>
+
     <div class="tool-grid">
       <section class="tool-card">
-        <h4>Learning path</h4>
-        <p>Stage selected papers into foundations, bridges, and deep dives.</p>
+        <h4>Learning Path</h4>
+        <p>Stage selected papers into foundations, bridges, and advanced extensions.</p>
         <div class="explorer-actions">
-          <button id="journey-generate" type="button">Generate Learning Path</button>
+          <button id="journey-generate" type="button">Generate 3-Phase Path</button>
         </div>
         <div id="journey-results"></div>
       </section>
 
       <section class="tool-card">
-        <h4>Community reading list</h4>
-        <p>Compute set-level graph stats and export a markdown handout.</p>
+        <h4>Community Reading List</h4>
+        <p>Compute set-level graph statistics and export a shareable markdown handout.</p>
         <div id="community-stats" class="community-stats"></div>
         <div class="explorer-actions">
           <button id="community-generate" type="button">Build Community Stats</button>
@@ -56,7 +90,7 @@ import '../../styles/custom.css';
 
       <section class="tool-card">
         <h4>Import / Export</h4>
-        <p>Move your paper selection between sessions or share with collaborators.</p>
+        <p>Move your selection between devices, save checkpoints, or share with collaborators.</p>
         <div class="explorer-actions journey-io-actions">
           <input id="journey-import" type="file" accept=".json,application/json" />
           <button id="journey-export-json" type="button">Export JSON</button>
