@@ -19,7 +19,14 @@ export default defineConfig({
         'Multiple Sclerosis Knowledge Base — a concept-first learning map linked to the citation graph of MS research.',
       favicon: '/favicon.svg',
       social: [],
-      customCss: ['./src/styles/custom.css'],
+      customCss: [
+        './src/styles/utilities.css',
+        './src/styles/concept-pages.css',
+        './src/styles/explorer.css',
+        './src/styles/citation-graph.css',
+        './src/styles/journey.css',
+        './src/styles/graphs.css',
+      ],
       components: {
         Footer: './src/components/SiteFooter.astro',
       },
