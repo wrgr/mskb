@@ -1,0 +1,460 @@
+/*
+ * MSKB design system.
+ *
+ * Principles:
+ *   1. One typeface family (system-ui), let weight/size carry hierarchy.
+ *   2. One neutral + one ink + one accent. No gradients.
+ *   3. Whitespace over borders/shadows. Cards only when grouping is meaningful.
+ *   4. Let Starlight's defaults handle the docs chrome; only override what we
+ *      need for the concept and paper components.
+ */
+
+:root {
+  /* Starlight variables we override to enforce the palette. */
+  --sl-font:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --sl-font-system:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --sl-font-system-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  /* Accent: a single restrained teal. */
+  --sl-color-accent-low: #0b3b38;
+  --sl-color-accent: #0e8f85;
+  --sl-color-accent-high: #9ee7df;
+
+  /* Mskb tokens used by our own components. */
+  --mskb-rule: color-mix(in srgb, currentColor 12%, transparent);
+  --mskb-muted: color-mix(in srgb, currentColor 64%, transparent);
+  --mskb-subtle-bg: color-mix(in srgb, currentColor 4%, transparent);
+
+  /* Accessibility: consistent focus ring used across all interactive elements. */
+  --mskb-focus-ring: 2px solid var(--sl-color-accent);
+  --mskb-focus-offset: 2px;
+}
+
+/* ===================================================================== */
+/* Accessibility — focus management                                        */
+/* ===================================================================== */
+
+/* Keyboard-visible focus rings on every interactive element.
+   :focus-visible targets keyboard/programmatic focus only, not mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+details summary:focus-visible {
+  outline: var(--mskb-focus-ring);
+  outline-offset: var(--mskb-focus-offset);
+  border-radius: 2px;
+}
+
+/* Remove the default outline only for mouse users. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Lean, neutral reading widths. Starlight's default is already good; we just
+   nudge line-length for comfort on wide monitors. */
+.sl-markdown-content {
+  max-width: 72ch;
+}
+
+/* The banner image needs to escape the 72ch prose cap. */
+.sl-markdown-content .home-banner-wrap {
+  max-width: none;
+  width: min(100%, 900px);
+}
+
+/* Kill the heavy heading ornament inherited from the old site. */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  font-weight: 650;
+  letter-spacing: -0.005em;
+}
+
+.sl-markdown-content h1 {
+  font-size: clamp(1.8rem, 1.4rem + 1.1vw, 2.4rem);
+  margin-bottom: 0.4rem;
+}
+
+.sl-markdown-content h2 {
+  margin-top: 2.4rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid var(--mskb-rule);
+}
+
+.sl-markdown-content h2:first-of-type {
+  border-top: 0;
+  margin-top: 1.8rem;
+}
+
+/* Page lede — the first paragraph after H1. */
+.sl-markdown-content > p:first-of-type {
+  font-size: 1.05rem;
+  color: var(--mskb-muted);
+}
+
+/* Accessibility — high-contrast mode support                             */
+/* ===================================================================== */
+
+@media (forced-colors: active) {
+  .home-cta a.primary,
+  .mskb-add button,
+  .explorer-shell .btn-add {
+    forced-color-adjust: none;
+    background: ButtonText;
+    color: ButtonFace;
+    border-color: ButtonText;
+  }
+
+  .kpi-pill,
+  .mskb-chip {
+    border-color: ButtonText;
+  }
+}
+
+/* ===================================================================== */
+/* Print styles — hide interactive chrome, show clean reading content     */
+/* ===================================================================== */
+
+@media print {
+  .explorer-shell,
+  .journey-shell,
+  .lineage-shell,
+  .field-dev-shell,
+  .home-cta,
+  .mskb-graph-root {
+    display: none;
+  }
+}
+
+/* ===================================================================== */
+/* Field Development page                                                  */
+/* Mobile / touch refinements                                             */
+/* ===================================================================== */
+
+/* --- Touch targets --------------------------------------------------- */
+/* WCAG 2.5.8: interactive controls need ~44px touch targets on phones.  */
+@media (pointer: coarse) {
+  .lineage-btn,
+  .lineage-close-btn,
+  .cs-sort-btn,
+  .cs-tab,
+  .mskb-graph-pills button,
+  .mskb-graph-actions button,
+  .mskb-connected-list button {
+    min-height: 44px;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .lineage-close-btn {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .mskb-connected-list button {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  /* cs-tab already has horizontal padding; just ensure the min-height. */
+  .cs-tab {
+    line-height: 1;
+  }
+}
+
+/* --- Tab strip ------------------------------------------------------- */
+/* Allow horizontal scroll when tab labels exceed the viewport width.    */
+.cs-tabs {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cs-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent individual tabs from compressing below their natural width.   */
+.cs-tab {
+  flex-shrink: 0;
+}
+
+/* --- Sort-button row ------------------------------------------------- */
+/* Wrap sort buttons gracefully; ensure row doesn't clip on 320px.       */
+.cs-sort-row {
+  flex-wrap: wrap;
+}
+
+/* --- Fixed-height canvases ------------------------------------------ */
+/* Reduce canvas heights that are too tall for portrait mobile screens.  */
+@media (max-width: 640px) {
+  .lineage-stage {
+    height: 380px;
+  }
+
+  .lineage-main {
+    min-height: 0;
+  }
+
+  .ancestry-container {
+    min-height: 320px;
+  }
+
+  .mskb-sigma-stage,
+  .mskb-graph-canvas {
+    min-height: 22rem;
+  }
+
+  .explorer-shell #paper-graph {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
+
+/* --- Resource list -------------------------------------------------- */
+/* On very narrow viewports collapse the 3-col grid: type and title on  */
+/* the first row, source indented below.                                 */
+@media (max-width: 480px) {
+  .resource-list li {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 0.7rem;
+  }
+
+  .resource-list .resource-source {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.78rem;
+  }
+}
+
+/* --- Journey selection item ----------------------------------------- */
+/* Drop the action buttons to a second full-width row so they don't     */
+/* squeeze the title on narrow screens.                                  */
+@media (max-width: 480px) {
+  .journey-shell .selection-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .journey-shell .selection-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Citation Graph (force-directed D3) ──────────────────────────────────── */
+
+.ct-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.ct-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: flex-start;
+}
+
+.ct-search-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ct-search-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.85rem;
+  background: var(--sl-color-bg, #fff);
+  color: var(--sl-color-text, #1f2937);
+}
+
+.ct-search-input:focus {
+  outline: var(--mskb-focus-ring);
+  outline-offset: var(--mskb-focus-offset);
+}
+
+.ct-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 6px;
+  background: var(--sl-color-bg, #fff);
+  color: var(--sl-color-text, #1f2937);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ct-btn:hover {
+  background: var(--mskb-subtle-bg);
+}
+
+.ct-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ct-slider-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--sl-color-gray-3, #4b5563);
+}
+
+.ct-slider-label input[type="range"] {
+  width: 140px;
+  accent-color: #0e8f85;
+}
+
+.ct-slider-label span {
+  font-variant-numeric: tabular-nums;
+  min-width: 2.6ch;
+}
+
+.ct-count {
+  font-size: 0.78rem;
+  color: var(--sl-color-gray-4, #6b7280);
+}
+
+/* Category filter pills */
+.ct-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ct-pill {
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.22rem 0.7rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--sl-color-gray-3, #4b5563);
+  transition: background 0.12s, opacity 0.12s, border-color 0.12s;
+  opacity: 0.45;
+}
+
+.ct-pill[data-cat]:not([data-cat="all"])::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ct-pill-color, currentColor);
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.ct-pill.is-active {
+  opacity: 1;
+  background: color-mix(in srgb, var(--ct-pill-color, var(--sl-color-accent)) 12%, transparent);
+  border-color: color-mix(in srgb, var(--ct-pill-color, var(--sl-color-accent)) 40%, transparent);
+  color: var(--sl-color-text, #1f2937);
+}
+
+/* Force-directed graph SVG canvas — height controlled by CSS so mobile
+   media queries work correctly (never use width/height SVG attributes). */
+.ct-graph-canvas {
+  width: 100%;
+  height: 640px;
+  display: block;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 8px;
+  background: var(--sl-color-bg, #fff);
+  cursor: grab;
+}
+
+.ct-graph-canvas:active {
+  cursor: grabbing;
+}
+
+/* Selected node detail panel */
+.ct-detail {
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 8px;
+  background: var(--sl-color-bg-sidebar, #f8fafc);
+  min-height: 3.5rem;
+}
+
+.ct-detail-hint {
+  color: var(--mskb-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.ct-detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.ct-detail-chip {
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 0.12rem 0.5rem;
+}
+
+.ct-detail-title {
+  font-weight: 600;
+  margin: 0.2rem 0;
+  line-height: 1.4;
+  font-size: 0.92rem;
+}
+
+.ct-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--mskb-muted);
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 980px) {
+  .ct-graph-canvas {
+    height: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ct-graph-canvas {
+    height: 360px;
+  }
+
+  .ct-controls {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .ct-search-row {
+    flex-wrap: nowrap;
+  }
+}
