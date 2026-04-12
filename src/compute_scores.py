@@ -858,6 +858,10 @@ def run(config_path: str) -> None:
         scoring_cfg.get("tier4_expert", {}),
     )
 
+    # Ensure nullable string columns never write NaN — blank cells cause
+    # pandas DtypeWarning on re-read due to chunk-level type inference.
+    if "query" in papers.columns:
+        papers["query"] = papers["query"].fillna("")
     papers.to_csv(graph / "scored_papers.csv", index=False)
     _write_author_metrics(papers, paper_authors, canonical_authors, graph)
 

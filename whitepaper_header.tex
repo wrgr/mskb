@@ -1,0 +1,130 @@
+% Custom header for MSKB Whitepaper — uses only packages confirmed present
+
+% geometry loaded by pandoc via -V geometry; patch headheight after
+\usepackage{etoolbox}
+\AtBeginDocument{\geometry{headheight=14pt}}
+
+% --- Fonts (XeLaTeX) ---
+\usepackage{fontspec}
+\setmainfont{Georgia}
+\setsansfont{Helvetica Neue}
+\setmonofont[Scale=0.85]{Menlo}
+
+% --- Color palette ---
+\usepackage{xcolor}
+\definecolor{mskbblue}{HTML}{1A4E8A}
+\definecolor{mskbaccent}{HTML}{2E86C1}
+\definecolor{mskblight}{HTML}{EBF5FB}
+\definecolor{mskbgray}{HTML}{5D6D7E}
+\definecolor{tablegray}{HTML}{F4F6F7}
+\definecolor{rulecolor}{HTML}{AEB6BF}
+\definecolor{codebg}{HTML}{F2F3F4}
+
+% --- Section styling ---
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\color{mskbblue}\large\bfseries\sffamily}
+  {\color{mskbblue}\thesection.}{0.55em}{}
+  [\vspace{-0.35em}{\color{rulecolor}\rule{\linewidth}{0.6pt}}\vspace{0.15em}]
+
+\titleformat{\subsection}
+  {\color{mskbgray}\normalsize\bfseries\sffamily}
+  {\color{mskbgray}\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\color{mskbgray}\small\itshape\sffamily}
+  {\thesubsubsection}{0.5em}{}
+
+\titlespacing{\section}{0pt}{1.6em}{0.5em}
+\titlespacing{\subsection}{0pt}{1.0em}{0.3em}
+\titlespacing{\subsubsection}{0pt}{0.7em}{0.2em}
+
+% --- Headers and footers ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{mskbgray}MSKB Whitepaper}
+\fancyhead[R]{\small\sffamily\color{mskbgray}Multiple Sclerosis Knowledge Base}
+\fancyfoot[C]{\small\sffamily\color{mskbgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{rulecolor}\hrule width\headwidth height\headrulewidth \vspace{1pt}}
+\renewcommand{\footrulewidth}{0pt}
+
+% Plain style for title page (no header/footer)
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\small\sffamily\color{mskbgray}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% --- Paragraph spacing ---
+\usepackage{parskip}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% --- List spacing ---
+\usepackage{enumitem}
+\setlist[itemize]{topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1.4em}
+\setlist[enumerate]{topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1.6em}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+% Subtle header row shading for pandoc tables
+\newcommand{\tableheadcolor}{\rowcolor{mskblight}}
+
+% --- Code blocks ---
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framesep=5pt,
+  framerule=0.3pt,
+  rulecolor=\color{rulecolor},
+  breaklines=true,
+  breakatwhitespace=true,
+  xleftmargin=8pt,
+  xrightmargin=8pt,
+  aboveskip=8pt,
+  belowskip=6pt,
+  showstringspaces=false
+}
+
+% --- Caption styling ---
+\usepackage{caption}
+\captionsetup{font={small,sf},labelfont={bf,color=mskbgray}}
+
+% --- Microtype for better typography ---
+\usepackage{microtype}
+
+% --- Abstract: left-ruled colored box via minipage + rule ---
+\renewenvironment{abstract}{%
+  \noindent
+  \begin{minipage}{\linewidth}
+  \noindent\color{mskbaccent}\rule{3pt}{\dimexpr\totalheight+2\fboxsep}\hspace{10pt}%
+  \begin{minipage}{\dimexpr\linewidth-3pt-14pt}
+  \setlength{\parskip}{0.4em}
+  \noindent{\sffamily\bfseries\color{mskbblue}Abstract}\par\smallskip\small
+}{%
+  \end{minipage}
+  \end{minipage}\par\bigskip
+}
+
+% --- Pandoc tightlist compatibility ---
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}}
+
+% --- Hyperlinks (loaded last) ---
+\usepackage[
+  colorlinks=true,
+  linkcolor=mskbblue,
+  urlcolor=mskbaccent,
+  citecolor=mskbgray,
+  pdfusetitle
+]{hyperref}

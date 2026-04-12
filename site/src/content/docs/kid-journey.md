@@ -46,12 +46,11 @@ The good news is that scientists around the world are working together like a te
 <span class="kpi-pill">1998</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates axonal transection in the lesions of multiple sclerosis. Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</p>
+<p class="paper-summary">Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</li>
-<li>Challenge: This paper investigates axonal transection in the lesions of multiple sclerosis.</li>
+<li><strong>Background:</strong> Transected axons are common in the lesions of multiple sclerosis, and axonal transection may be the pathologic correlate of the irreversible neurologic impairment in this disease.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -66,13 +65,12 @@ The good news is that scientists around the world are working together like a te
 <span class="kpi-pill">2018</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates multiple sclerosis. A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</p>
+<p class="paper-summary">A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</li>
-<li>Challenge: A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</li>
-<li>Action: This paper investigates multiple sclerosis.</li>
+<li><strong>Background:</strong> Multiple sclerosis affects more than 2 million people worldwide and is currently incurable.</li>
+<li><strong>Question:</strong> A number of interventions to modify the course of multiple sclerosis have been developed that offer new insight into disease mechanisms.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -87,14 +85,14 @@ The good news is that scientists around the world are working together like a te
 <span class="kpi-pill">2000</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates heterogeneity of multiple sclerosis lesions: implications for the pathogenesis of demyelination. This pathogenetic heterogeneity of plaques from different MS patients may have fundamental implications for the diagnosis and therapy of this disease.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</p>
+<p class="paper-summary">This pathogenetic heterogeneity of plaques from different MS patients may have fundamental implications for the diagnosis and therapy of this disease.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</li>
-<li>Challenge: These features are supported by experimental evidence, which demonstrates that fundamentally different processes, such as autoimmunity or virus infection, may induce MS-like inflammatory demyelinating plaques and suggest that MS may be a disease with heterogeneous pathogenetic mechanisms.</li>
-<li>Action: From a large pathology sample of MS, collected in three international centers, we selected 51 biopsies and 32 autopsies that contained actively demyelinating lesions defined by stringent criteria.</li>
-<li>Resolution: The pathology of the lesions was analyzed using a broad spectrum of immunological and neurobiological markers.</li>
+<li><strong>Background:</strong> Multiple sclerosis (MS) is a disease with profound heterogeneity in clinical course, neuroradiological appearance of the lesions, involvement of susceptibility gene loci, and response to therapy.</li>
+<li><strong>Question:</strong> These features are supported by experimental evidence, which demonstrates that fundamentally different processes, such as autoimmunity or virus infection, may induce MS-like inflammatory demyelinating plaques and suggest that MS may be a disease with heterogeneous pathogenetic mechanisms.</li>
+<li><strong>Method:</strong> From a large pathology sample of MS, collected in three international centers, we selected 51 biopsies and 32 autopsies that contained actively demyelinating lesions defined by stringent criteria.</li>
+<li><strong>Finding:</strong> The pathology of the lesions was analyzed using a broad spectrum of immunological and neurobiological markers.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -109,14 +107,14 @@ The good news is that scientists around the world are working together like a te
 <span class="kpi-pill">2008</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates multiple sclerosis: an immune or neurodegenerative disorder?. We question whether inflammatory demyelination is primary or secondary in the disease process and discuss the challenges of elucidating the cause of MS and developing therapies that will delay or prevent the irreversible and progressive neurological decline that most MS patients endure.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</p>
+<p class="paper-summary">We question whether inflammatory demyelination is primary or secondary in the disease process and discuss the challenges of elucidating the cause of MS and developing therapies that will delay or prevent the irreversible and progressive neurological decline that most MS patients endure.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</li>
-<li>Challenge: The clinical disease course is variable, usually starts with reversible episodes of neurological disability in the third or fourth decade of life, and transforms into a disease of continuous and irreversible neurological decline by the sixth or seventh decade.</li>
-<li>Action: We review data that support neurodegeneration as the major cause of irreversible neurological disability in MS patients.</li>
-<li>Resolution: We question whether inflammatory demyelination is primary or secondary in the disease process and discuss the challenges of elucidating the cause of MS and developing therapies that will delay or prevent the irreversible and progressive neurological decline that most MS patients endure.</li>
+<li><strong>Background:</strong> Multiple sclerosis (MS) is an inflammatory-mediated demyelinating disease of the human central nervous system.</li>
+<li><strong>Question:</strong> The clinical disease course is variable, usually starts with reversible episodes of neurological disability in the third or fourth decade of life, and transforms into a disease of continuous and irreversible neurological decline by the sixth or seventh decade.</li>
+<li><strong>Method:</strong> We review data that support neurodegeneration as the major cause of irreversible neurological disability in MS patients.</li>
+<li><strong>Finding:</strong> We question whether inflammatory demyelination is primary or secondary in the disease process and discuss the challenges of elucidating the cause of MS and developing therapies that will delay or prevent the irreversible and progressive neurological decline that most MS patients endure.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -131,14 +129,14 @@ The good news is that scientists around the world are working together like a te
 <span class="kpi-pill">2018</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates multiple sclerosis pathology. Demyelination and neurodegeneration is finally accomplished by oxidative injury and mitochondrial damage leading to a state of &quot;virtual hypoxia.&quot;</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</p>
+<p class="paper-summary">Demyelination and neurodegeneration is finally accomplished by oxidative injury and mitochondrial damage leading to a state of &quot;virtual hypoxia.&quot;</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</li>
-<li>Challenge: In this review, the spectrum of MS lesions and their relation to the inflammatory process is described.</li>
-<li>Action: Pathology suggests that inflammation drives tissue injury at all stages of the disease.</li>
-<li>Resolution: Focal inflammatory infiltrates in the meninges and the perivascular spaces appear to produce soluble factors, which induce demyelination or neurodegeneration either directly or indirectly through microglia activation.</li>
+<li><strong>Background:</strong> Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system (CNS), which gives rise to focal lesions in the gray and white matter and to diffuse neurodegeneration in the entire brain.</li>
+<li><strong>Question:</strong> In this review, the spectrum of MS lesions and their relation to the inflammatory process is described.</li>
+<li><strong>Method:</strong> Pathology suggests that inflammation drives tissue injury at all stages of the disease.</li>
+<li><strong>Finding:</strong> Focal inflammatory infiltrates in the meninges and the perivascular spaces appear to produce soluble factors, which induce demyelination or neurodegeneration either directly or indirectly through microglia activation.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -166,14 +164,14 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 <span class="kpi-pill">2003</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates sf-36 health survey: manual and interpretation guide. It is important to keep an open mind when assessing patients suspected of having multiple sclerosis and to apply the recognized criteria for diagnosis of the disease.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because of 400 consecutive patients referred to Dalhousie University&#x27;s multiple sclerosis research unit 52 (13%) were found not to have multiple sclerosis.</p>
+<p class="paper-summary">It is important to keep an open mind when assessing patients suspected of having multiple sclerosis and to apply the recognized criteria for diagnosis of the disease.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Of 400 consecutive patients referred to Dalhousie University&#x27;s multiple sclerosis research unit 52 (13%) were found not to have multiple sclerosis.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Of 400 consecutive patients referred to Dalhousie University&#x27;s multiple sclerosis research unit 52 (13%) were found not to have multiple sclerosis.</li>
-<li>Challenge: Forty-one (79%) of the patients were female and 11 (21%) were male.</li>
-<li>Action: About half of the patients had raised the suspicion of multiple sclerosis, and about half had either a medical background or a close association with a patient with the disease.</li>
-<li>Resolution: Although in many cases a diagnosis was made at the initial visit, in difficult cases the most effective diagnostic technique was repeated assessment of the patient over a long period.</li>
+<li><strong>Background:</strong> Of 400 consecutive patients referred to Dalhousie University&#x27;s multiple sclerosis research unit 52 (13%) were found not to have multiple sclerosis.</li>
+<li><strong>Question:</strong> Forty-one (79%) of the patients were female and 11 (21%) were male.</li>
+<li><strong>Method:</strong> About half of the patients had raised the suspicion of multiple sclerosis, and about half had either a medical background or a close association with a patient with the disease.</li>
+<li><strong>Finding:</strong> Although in many cases a diagnosis was made at the initial visit, in difficult cases the most effective diagnostic technique was repeated assessment of the patient over a long period.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -188,13 +186,12 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 <span class="kpi-pill">2020</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates rising prevalence of multiple sclerosis worldwide: insights from the atlas of ms, third edition. Action is needed by multiple stakeholders to close knowledge gaps.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the global prevalence of MS has risen since 2013, but good surveillance data is not universal.</p>
+<p class="paper-summary">Action is needed by multiple stakeholders to close knowledge gaps.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The global prevalence of MS has risen since 2013, but good surveillance data is not universal.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The global prevalence of MS has risen since 2013, but good surveillance data is not universal.</li>
-<li>Challenge: Action is needed by multiple stakeholders to close knowledge gaps.</li>
-<li>Action: This paper investigates rising prevalence of multiple sclerosis worldwide: insights from the atlas of ms, third edition.</li>
+<li><strong>Background:</strong> The global prevalence of MS has risen since 2013, but good surveillance data is not universal.</li>
+<li><strong>Question:</strong> Action is needed by multiple stakeholders to close knowledge gaps.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -209,14 +206,14 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 <span class="kpi-pill">2022</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates longitudinal analysis reveals high prevalence of epstein-barr virus associated with multiple sclerosis. These findings cannot be explained by any known risk factor for MS and suggest EBV as the leading cause of MS.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology.</p>
+<p class="paper-summary">These findings cannot be explained by any known risk factor for MS and suggest EBV as the leading cause of MS.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology.</li>
-<li>Challenge: We tested the hypothesis that MS is caused by Epstein-Barr virus (EBV) in a cohort comprising more than 10 million young adults on active duty in the US military, 955 of whom were diagnosed with MS during their period of service.</li>
-<li>Action: Risk of MS increased 32-fold after infection with EBV but was not increased after infection with other viruses, including the similarly transmitted cytomegalovirus.</li>
-<li>Resolution: Serum levels of neurofilament light chain, a biomarker of neuroaxonal degeneration, increased only after EBV seroconversion.</li>
+<li><strong>Background:</strong> Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology.</li>
+<li><strong>Question:</strong> We tested the hypothesis that MS is caused by Epstein-Barr virus (EBV) in a cohort comprising more than 10 million young adults on active duty in the US military, 955 of whom were diagnosed with MS during their period of service.</li>
+<li><strong>Method:</strong> Risk of MS increased 32-fold after infection with EBV but was not increased after infection with other viruses, including the similarly transmitted cytomegalovirus.</li>
+<li><strong>Finding:</strong> Serum levels of neurofilament light chain, a biomarker of neuroaxonal degeneration, increased only after EBV seroconversion.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -231,14 +228,13 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 <span class="kpi-pill">2019</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility. Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
+<p class="paper-summary">Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</li>
-<li>Challenge: This paper investigates multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility.</li>
-<li>Action: We analyzed genetic data of 47,429 multiple sclerosis (MS) and 68,374 control subjects and established a reference map of the genetic architecture of MS that includes 200 autosomal susceptibility variants outside the major histocompatibility complex (MHC), one chromosome X variant, and 32 variants within the extended MHC.</li>
-<li>Resolution: We used an ensemble of methods to prioritize 551 putative susceptibility genes that implicate multiple innate and adaptive pathways distributed across the cellular components of the immune system.</li>
+<li><strong>Background:</strong> Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</li>
+<li><strong>Method:</strong> We analyzed genetic data of 47,429 multiple sclerosis (MS) and 68,374 control subjects and established a reference map of the genetic architecture of MS that includes 200 autosomal susceptibility variants outside the major histocompatibility complex (MHC), one chromosome X variant, and 32 variants within the extended MHC.</li>
+<li><strong>Finding:</strong> We used an ensemble of methods to prioritize 551 putative susceptibility genes that implicate multiple innate and adaptive pathways distributed across the cellular components of the immune system.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -253,12 +249,11 @@ The good news is that understanding what causes MS opens up amazing possibilitie
 <span class="kpi-pill">2019</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the global burden of disease study 2016. Bill &amp; Melinda Gates Foundation.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-summary">Bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of multiple sclerosis 1990–2016: a systematic analysis for the global burden of disease study 2016.</li>
+<li><strong>Background:</strong> Bill &amp; Melinda Gates Foundation.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -298,14 +293,13 @@ The coolest part? This research could be life-changing for people living with MS
 <span class="kpi-pill">2011</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates diagnostic criteria for multiple sclerosis: 2010 revisions to the mcdonald criteria. These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because new evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</p>
+<p class="paper-summary">These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</p>
+<p class="paper-why"><strong>Why it matters:</strong> New evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: New evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</li>
-<li>Challenge: The use of imaging for demonstration of dissemination of central nervous system lesions in space and time has been simplified, and in some circumstances dissemination in space and time can be established by a single scan.</li>
-<li>Action: These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</li>
-<li>Resolution: This paper investigates diagnostic criteria for multiple sclerosis: 2010 revisions to the mcdonald criteria.</li>
+<li><strong>Background:</strong> New evidence and consensus has led to further revision of the McDonald Criteria for diagnosis of multiple sclerosis.</li>
+<li><strong>Question:</strong> The use of imaging for demonstration of dissemination of central nervous system lesions in space and time has been simplified, and in some circumstances dissemination in space and time can be established by a single scan.</li>
+<li><strong>Method:</strong> These revisions simplify the Criteria, preserve their diagnostic sensitivity and specificity, address their applicability across populations, and may allow earlier diagnosis and more uniform and widespread use.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -320,14 +314,14 @@ The coolest part? This research could be life-changing for people living with MS
 <span class="kpi-pill">2001</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates recommended diagnostic criteria for multiple sclerosis: guidelines from the international panel on the diagnosis of multiple sclerosis. The outcome of a diagnostic evaluation is either MS, &quot;possible MS&quot; (for those at risk for MS, but for whom diagnostic evaluation is equivocal), or &quot;not MS.&quot;</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</p>
+<p class="paper-summary">The outcome of a diagnostic evaluation is either MS, &quot;possible MS&quot; (for those at risk for MS, but for whom diagnostic evaluation is equivocal), or &quot;not MS.&quot;</p>
+<p class="paper-why"><strong>Why it matters:</strong> The International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</li>
-<li>Challenge: The focus remains on the objective demonstration of dissemination of lesions in both time and space.</li>
-<li>Action: Magnetic resonance imaging is integrated with dinical and other paraclinical diagnostic methods.</li>
-<li>Resolution: The revised criteria facilitate the diagnosis of MS in patients with a variety of presentations, including &quot;monosymptomatic&quot; disease suggestive of MS, disease with a typical relapsing-remitting course, and disease with insidious progression, without clear attacks and remissions.</li>
+<li><strong>Background:</strong> The International Panel on MS Diagnosis presents revised diagnostic criteria for multiple sclerosis (MS).</li>
+<li><strong>Question:</strong> The focus remains on the objective demonstration of dissemination of lesions in both time and space.</li>
+<li><strong>Method:</strong> Magnetic resonance imaging is integrated with dinical and other paraclinical diagnostic methods.</li>
+<li><strong>Finding:</strong> The revised criteria facilitate the diagnosis of MS in patients with a variety of presentations, including &quot;monosymptomatic&quot; disease suggestive of MS, disease with a typical relapsing-remitting course, and disease with insidious progression, without clear attacks and remissions.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -342,14 +336,14 @@ The coolest part? This research could be life-changing for people living with MS
 <span class="kpi-pill">2005</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates cortical demyelination and diffuse white matter injury in multiple sclerosis. With chronicity, diffuse inflammation accumulates throughout the whole brain, and is associated with slowly progressive axonal injury in the NAWM and cortical demyelination.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</p>
+<p class="paper-summary">With chronicity, diffuse inflammation accumulates throughout the whole brain, and is associated with slowly progressive axonal injury in the NAWM and cortical demyelination.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</li>
-<li>Challenge: We thus analysed global brain pathology in multiple sclerosis, focusing on the normal-appearing white matter (NAWM) and the cortex.</li>
-<li>Action: Autopsy tissue from 52 multiple sclerosis patients (acute, relapsing-remitting, primary and secondary progressive multiple sclerosis) and from 30 controls was analysed using quantitative morphological techniques.</li>
-<li>Resolution: New and active focal inflammatory demyelinating lesions in the white matter were mainly present in patients with acute and relapsing multiple sclerosis, while diffuse injury of the NAWM and cortical demyelination were characteristic hallmarks of primary and secondary progressive multiple sclerosis.</li>
+<li><strong>Background:</strong> Focal demyelinated plaques in white matter, which are the hallmark of multiple sclerosis pathology, only partially explain the patient&#x27;s clinical deficits.</li>
+<li><strong>Question:</strong> We thus analysed global brain pathology in multiple sclerosis, focusing on the normal-appearing white matter (NAWM) and the cortex.</li>
+<li><strong>Method:</strong> Autopsy tissue from 52 multiple sclerosis patients (acute, relapsing-remitting, primary and secondary progressive multiple sclerosis) and from 30 controls was analysed using quantitative morphological techniques.</li>
+<li><strong>Finding:</strong> New and active focal inflammatory demyelinating lesions in the white matter were mainly present in patients with acute and relapsing multiple sclerosis, while diffuse injury of the NAWM and cortical demyelination were characteristic hallmarks of primary and secondary progressive multiple sclerosis.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -364,14 +358,13 @@ The coolest part? This research could be life-changing for people living with MS
 <span class="kpi-pill">2001</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions. These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because these data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</p>
+<p class="paper-summary">These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</p>
+<p class="paper-why"><strong>Why it matters:</strong> These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</li>
-<li>Challenge: This paper investigates transected neurites, apoptotic neurons, and reduced inflammation in cortical multiple sclerosis lesions.</li>
-<li>Action: Multiple Sclerosis (MS) is an inflammatory demyelinating disease of the central nervous system that causes motor, sensory, and cognitive deficits.</li>
-<li>Resolution: The present study characterized demyelinated lesions in the cerebral cortex of MS patients.</li>
+<li><strong>Background:</strong> These data support the hypothesis that demyelination, axonal transection, dendritic transection, and apoptotic loss of neurons in the cerebral cortex contribute to neurological dysfunction in MS patients.</li>
+<li><strong>Method:</strong> Multiple Sclerosis (MS) is an inflammatory demyelinating disease of the central nervous system that causes motor, sensory, and cognitive deficits.</li>
+<li><strong>Finding:</strong> The present study characterized demyelinated lesions in the cerebral cortex of MS patients.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -386,13 +379,12 @@ The coolest part? This research could be life-changing for people living with MS
 <span class="kpi-pill">2019</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates association of chronic active multiple sclerosis lesions with disability in vivo. These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</p>
+<p class="paper-summary">These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</li>
-<li>Challenge: These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</li>
-<li>Action: This paper investigates association of chronic active multiple sclerosis lesions with disability in vivo.</li>
+<li><strong>Background:</strong> Chronic active lesions are common, are associated with more aggressive disease, exert ongoing tissue damage, and occur even in individuals treated with effective disease-modifying therapies.</li>
+<li><strong>Question:</strong> These results prompt the planning of MRI-based clinical trials aimed at treating perilesional chronic inflammation in MS.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -422,13 +414,12 @@ This discovery could totally change how doctors treat MS in the future—instead
 <span class="kpi-pill">2017</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates serum neurofilament light: a biomarker of neuronal damage in multiple sclerosis. Ann Neurol 2017;81:857-870.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because these results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</p>
+<p class="paper-summary">Ann Neurol 2017;81:857-870.</p>
+<p class="paper-why"><strong>Why it matters:</strong> These results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: These results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</li>
-<li>Challenge: Ann Neurol 2017;81:857-870.</li>
-<li>Action: This paper investigates serum neurofilament light: a biomarker of neuronal damage in multiple sclerosis.</li>
+<li><strong>Background:</strong> These results support the value of sNfL as a sensitive and clinically meaningful blood biomarker to monitor tissue damage and the effects of therapies in MS.</li>
+<li><strong>Question:</strong> Ann Neurol 2017;81:857-870.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -443,14 +434,14 @@ This discovery could totally change how doctors treat MS in the future—instead
 <span class="kpi-pill">2022</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study. FUNDING Swiss National Science Foundation, Progressive Multiple Sclerosis Alliance, Biogen, Celgene, Novartis, Roche.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</p>
+<p class="paper-summary">FUNDING Swiss National Science Foundation, Progressive Multiple Sclerosis Alliance, Biogen, Celgene, Novartis, Roche.</p>
+<p class="paper-why"><strong>Why it matters:</strong> BACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: BACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</li>
-<li>Challenge: The absence of representative reference values to correct for physiological age-dependent increases in sNfL has limited the diagnostic use of this biomarker at an individual level.</li>
-<li>Action: We aimed to assess the applicability of sNfL for identification of people at risk for future disease activity by establishing a reference database to derive reference values corrected for age and body-mass index (BMI).</li>
-<li>Resolution: Furthermore, we used the reference database to test the suitability of sNfL as an endpoint for group-level comparison of effectiveness across disease-modifying therapies.</li>
+<li><strong>Background:</strong> BACKGROUND Serum neurofilament light chain (sNfL) is a biomarker of neuronal damage that is used not only to monitor disease activity and response to drugs and to prognosticate disease course in people with multiple sclerosis on the group level.</li>
+<li><strong>Question:</strong> The absence of representative reference values to correct for physiological age-dependent increases in sNfL has limited the diagnostic use of this biomarker at an individual level.</li>
+<li><strong>Method:</strong> We aimed to assess the applicability of sNfL for identification of people at risk for future disease activity by establishing a reference database to derive reference values corrected for age and body-mass index (BMI).</li>
+<li><strong>Finding:</strong> Furthermore, we used the reference database to test the suitability of sNfL as an endpoint for group-level comparison of effectiveness across disease-modifying therapies.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -465,14 +456,14 @@ This discovery could totally change how doctors treat MS in the future—instead
 <span class="kpi-pill">2021</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the potential of serum neurofilament as biomarker for multiple sclerosis. Here, we propose specific clinical scenarios where implementing sNfL measures may be of utility, including, among others: initial diagnosis, first treatment choice, surveillance of subclinical disease activity and guidance of therapy selection.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</p>
+<p class="paper-summary">Here, we propose specific clinical scenarios where implementing sNfL measures may be of utility, including, among others: initial diagnosis, first treatment choice, surveillance of subclinical disease activity and guidance of therapy selection.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</li>
-<li>Challenge: Blood-based serum neurofilament light chain (sNfL) is currently under close investigation as an easily accessible biomarker of prognosis and treatment response in patients with multiple sclerosis.</li>
-<li>Action: There is abundant evidence that sNfL levels reflect ongoing inflammatory-driven neuroaxonal damage (e.g.</li>
-<li>Resolution: relapses or MRI disease activity) and that sNfL levels predict disease activity over the next few years.</li>
+<li><strong>Background:</strong> Multiple sclerosis is a highly heterogeneous disease, and the detection of neuroaxonal damage as well as its quantification is a critical step for patients.</li>
+<li><strong>Question:</strong> Blood-based serum neurofilament light chain (sNfL) is currently under close investigation as an easily accessible biomarker of prognosis and treatment response in patients with multiple sclerosis.</li>
+<li><strong>Method:</strong> There is abundant evidence that sNfL levels reflect ongoing inflammatory-driven neuroaxonal damage (e.g.</li>
+<li><strong>Finding:</strong> relapses or MRI disease activity) and that sNfL levels predict disease activity over the next few years.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -487,12 +478,11 @@ This discovery could totally change how doctors treat MS in the future—instead
 <span class="kpi-pill">2019</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates serum neurofilament light chain levels in patients with presymptomatic multiple sclerosis. The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</p>
+<p class="paper-summary">The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</li>
-<li>Challenge: This paper investigates serum neurofilament light chain levels in patients with presymptomatic multiple sclerosis.</li>
+<li><strong>Background:</strong> The levels of sNfL were increased 6 years before the clinical MS onset, indicating that MS may have a prodromal phase lasting several years and that neuroaxonal damage occurs already during this phase.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -507,13 +497,12 @@ This discovery could totally change how doctors treat MS in the future—instead
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates serum glial fibrillary acidic protein compared with neurofilament light chain as a biomarker for disease progression in multiple sclerosis. sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</p>
+<p class="paper-summary">sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</li>
-<li>Challenge: sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</li>
-<li>Action: This paper investigates serum glial fibrillary acidic protein compared with neurofilament light chain as a biomarker for disease progression in multiple sclerosis.</li>
+<li><strong>Background:</strong> Results of this cohort study suggest that sGFAP is a prognostic biomarker for future PIRA and revealed its complementary potential next to sNfL.</li>
+<li><strong>Question:</strong> sGFAP may serve as a useful biomarker for disease progression in MS in individual patient management and drug development.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -541,14 +530,14 @@ Here's why this matters for people with multiple sclerosis (MS), which is a dise
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates european neuroendocrine tumor society 2023 guidance paper for functioning pancreatic neuroendocrine tumour syndromes. The recommendations provided in this paper focus on the biochemical, genetic and imaging work-up as well as therapeutic management of the individual hormonal syndromes in well-differentiated, grade 1-3, functioning NET with the primary tumour originating in the pancreas, and for specific subtypes also in the duodenum.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because this ENETS guidance paper aims to provide practical advice to clinicians for the diagnosis, treatment and follow-up of functioning syndromes in pancreatic neuroendocrine tumours (NET).</p>
+<p class="paper-summary">The recommendations provided in this paper focus on the biochemical, genetic and imaging work-up as well as therapeutic management of the individual hormonal syndromes in well-differentiated, grade 1-3, functioning NET with the primary tumour originating in the pancreas, and for specific subtypes also in the duodenum.</p>
+<p class="paper-why"><strong>Why it matters:</strong> This ENETS guidance paper aims to provide practical advice to clinicians for the diagnosis, treatment and follow-up of functioning syndromes in pancreatic neuroendocrine tumours (NET).</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: This ENETS guidance paper aims to provide practical advice to clinicians for the diagnosis, treatment and follow-up of functioning syndromes in pancreatic neuroendocrine tumours (NET).</li>
-<li>Challenge: A NET-associated functioning syndrome is defined by the presence of a clinical syndrome combined with biochemical evidence of inappropriately elevated hormonal levels.</li>
-<li>Action: Different hormonal syndromes can be encountered in pancreatic NET patients, including insulinoma, gastrinoma as well as the rare glucagonoma, VIPoma, ACTHoma, PTHrPoma, carcinoid syndrome, calcitoninoma, GHRHoma and somatostatinoma.</li>
-<li>Resolution: The recommendations provided in this paper focus on the biochemical, genetic and imaging work-up as well as therapeutic management of the individual hormonal syndromes in well-differentiated, grade 1-3, functioning NET with the primary tumour originating in the pancreas, and for specific subtypes also in the duodenum.</li>
+<li><strong>Background:</strong> This ENETS guidance paper aims to provide practical advice to clinicians for the diagnosis, treatment and follow-up of functioning syndromes in pancreatic neuroendocrine tumours (NET).</li>
+<li><strong>Question:</strong> A NET-associated functioning syndrome is defined by the presence of a clinical syndrome combined with biochemical evidence of inappropriately elevated hormonal levels.</li>
+<li><strong>Method:</strong> Different hormonal syndromes can be encountered in pancreatic NET patients, including insulinoma, gastrinoma as well as the rare glucagonoma, VIPoma, ACTHoma, PTHrPoma, carcinoid syndrome, calcitoninoma, GHRHoma and somatostatinoma.</li>
+<li><strong>Finding:</strong> The recommendations provided in this paper focus on the biochemical, genetic and imaging work-up as well as therapeutic management of the individual hormonal syndromes in well-differentiated, grade 1-3, functioning NET with the primary tumour originating in the pancreas, and for specific subtypes also in the duodenum.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -580,14 +569,13 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 <span class="kpi-pill">1983</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates rating neurologic impairment in multiple sclerosis. Patterns of FS and relations of FS by type and grade to the DSS are demonstrated.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because one method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</p>
+<p class="paper-summary">Patterns of FS and relations of FS by type and grade to the DSS are demonstrated.</p>
+<p class="paper-why"><strong>Why it matters:</strong> One method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: One method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</li>
-<li>Challenge: A new Expanded Disability Status Scale (EDSS) is presented, with each of the former steps (1,2,3 .</li>
-<li>Action: .</li>
-<li>Resolution: This paper investigates rating neurologic impairment in multiple sclerosis.</li>
+<li><strong>Background:</strong> One method of evaluating the degree of neurologic impairment in MS has been the combination of grades (0 = normal to 5 or 6 = maximal impairment) within 8 Functional Systems (FS) and an overall Disability Status Scale (DSS) that had steps from 0 (normal) to 10 (death due to MS).</li>
+<li><strong>Question:</strong> A new Expanded Disability Status Scale (EDSS) is presented, with each of the former steps (1,2,3 .</li>
+<li><strong>Method:</strong> .</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -602,14 +590,14 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 <span class="kpi-pill">2017</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates validity of the symbol digit modalities test as a cognition performance outcome measure for multiple sclerosis. The research in MS clearly supports the reliability and validity of this test and recently has supported a responder definition of SDMT change approximating 4 points or 10% in magnitude.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</p>
+<p class="paper-summary">The research in MS clearly supports the reliability and validity of this test and recently has supported a responder definition of SDMT change approximating 4 points or 10% in magnitude.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</li>
-<li>Challenge: The increasing focus of new therapies on slowing progression or reversing neurological disability makes the utilization of sensitive, reproducible, and valid measures essential.</li>
-<li>Action: Processing speed is a basic elemental cognitive function that likely influences downstream processes such as memory.</li>
-<li>Resolution: The Multiple Sclerosis Outcome Assessments Consortium (MSOAC) includes representatives from advocacy organizations, Food and Drug Administration (FDA), European Medicines Agency (EMA), National Institute of Neurological Disorders and Stroke (NINDS), academic institutions, and industry partners along with persons living with MS.</li>
+<li><strong>Background:</strong> Cognitive and motor performance measures are commonly employed in multiple sclerosis (MS) research, particularly when the purpose is to determine the efficacy of treatment.</li>
+<li><strong>Question:</strong> The increasing focus of new therapies on slowing progression or reversing neurological disability makes the utilization of sensitive, reproducible, and valid measures essential.</li>
+<li><strong>Method:</strong> Processing speed is a basic elemental cognitive function that likely influences downstream processes such as memory.</li>
+<li><strong>Finding:</strong> The Multiple Sclerosis Outcome Assessments Consortium (MSOAC) includes representatives from advocacy organizations, Food and Drug Administration (FDA), European Medicines Agency (EMA), National Institute of Neurological Disorders and Stroke (NINDS), academic institutions, and industry partners along with persons living with MS.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -624,14 +612,13 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 <span class="kpi-pill">2001</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the multiple sclerosis impact scale (msis-29): a new patient-based outcome measure. The aim of this study was to develop such a measure.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the aim of this study was to develop such a measure.</p>
+<p class="paper-summary">The aim of this study was to develop such a measure.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The aim of this study was to develop such a measure.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The aim of this study was to develop such a measure.</li>
-<li>Challenge: This paper investigates the multiple sclerosis impact scale (msis-29): a new patient-based outcome measure.</li>
-<li>Action: Changes in health policy have underlined the importance of evidence-based clinical practice and rigorous evaluation of patient-based outcomes.</li>
-<li>Resolution: As patient-based outcome measurement is particularly important in treatment trials of multiple sclerosis, a number of disease-specific instruments have been developed recently.</li>
+<li><strong>Background:</strong> The aim of this study was to develop such a measure.</li>
+<li><strong>Method:</strong> Changes in health policy have underlined the importance of evidence-based clinical practice and rigorous evaluation of patient-based outcomes.</li>
+<li><strong>Finding:</strong> As patient-based outcome measurement is particularly important in treatment trials of multiple sclerosis, a number of disease-specific instruments have been developed recently.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -646,14 +633,13 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 <span class="kpi-pill">2015</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the incidence and prevalence of psychiatric disorders in multiple sclerosis: a systematic review. Future comparisons across studies would be enhanced by developing a consistent approach to measuring psychiatric comorbidity, and reporting of age-, sex-, and ethnicity-specific estimates.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because this review confirms that psychiatric comorbidity, particularly depression and anxiety, is common in MS.</p>
+<p class="paper-summary">Future comparisons across studies would be enhanced by developing a consistent approach to measuring psychiatric comorbidity, and reporting of age-, sex-, and ethnicity-specific estimates.</p>
+<p class="paper-why"><strong>Why it matters:</strong> This review confirms that psychiatric comorbidity, particularly depression and anxiety, is common in MS.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: This review confirms that psychiatric comorbidity, particularly depression and anxiety, is common in MS.</li>
-<li>Challenge: However, the incidence of psychiatric comorbidity remains understudied.</li>
-<li>Action: Future comparisons across studies would be enhanced by developing a consistent approach to measuring psychiatric comorbidity, and reporting of age-, sex-, and ethnicity-specific estimates.</li>
-<li>Resolution: This paper investigates the incidence and prevalence of psychiatric disorders in multiple sclerosis: a systematic review.</li>
+<li><strong>Background:</strong> This review confirms that psychiatric comorbidity, particularly depression and anxiety, is common in MS.</li>
+<li><strong>Question:</strong> However, the incidence of psychiatric comorbidity remains understudied.</li>
+<li><strong>Method:</strong> Future comparisons across studies would be enhanced by developing a consistent approach to measuring psychiatric comorbidity, and reporting of age-, sex-, and ethnicity-specific estimates.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -668,14 +654,13 @@ Scientists are still racing to answer big questions: Why does MS make some peopl
 <span class="kpi-pill">2005</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates depression in multiple sclerosis: a review. This review on MS and depression identifies the following key issues: How common is depression in people with MS? Is depression in MS associated with lesions in specific regions of the central nervous system? Is there an increased risk of suicide in MS? Is there a higher than expected incidence of anxiety disorders in MS? Are fatigue and depressed mood related in MS? Is there a relation between depression and cognitive impairment in MS? Which psychosocial variables affect the development of depression in MS? Does treatment with interferon increase the risk of depression? How effective are treatments for MS patients with depression? Each of these issues is briefly reviewed with critical commentary, and some priorities for future research are suggested.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because several studies have reported high rates of depression in multiple sclerosis (MS) with a lifetime prevalence of approximately 50% and an annual prevalence of 20% not uncommon.</p>
+<p class="paper-summary">This review on MS and depression identifies the following key issues: How common is depression in people with MS? Is depression in MS associated with lesions in specific regions of the central nervous system? Is there an increased risk of suicide in MS? Is there a higher than expected incidence of anxiety disorders in MS? Are fatigue and depressed mood related in MS? Is there a relation between depression and cognitive impairment in MS? Which psychosocial variables affect the development of depression in MS? Does treatment with interferon increase the risk of depression? How effective are treatments for MS patients with depression? Each of these issues is briefly reviewed with critical commentary, and some priorities for future research are suggested.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Several studies have reported high rates of depression in multiple sclerosis (MS) with a lifetime prevalence of approximately 50% and an annual prevalence of 20% not uncommon.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Several studies have reported high rates of depression in multiple sclerosis (MS) with a lifetime prevalence of approximately 50% and an annual prevalence of 20% not uncommon.</li>
-<li>Challenge: Concern about the potential of new drug treatments to exacerbate or precipitate depression in MS has led to increased interest in the relation between MS and depression.</li>
-<li>Action: This review on MS and depression identifies the following key issues: How common is depression in people with MS? Is depression in MS associated with lesions in specific regions of the central nervous system? Is there an increased risk of suicide in MS? Is there a higher than expected incidence of anxiety disorders in MS? Are fatigue and depressed mood related in MS? Is there a relation between depression and cognitive impairment in MS? Which psychosocial variables affect the development of depression in MS? Does treatment with interferon increase the risk of depression? How effective are treatments for MS patients with depression? Each of these issues is briefly reviewed with critical commentary, and some priorities for future research are suggested.</li>
-<li>Resolution: This paper investigates depression in multiple sclerosis: a review.</li>
+<li><strong>Background:</strong> Several studies have reported high rates of depression in multiple sclerosis (MS) with a lifetime prevalence of approximately 50% and an annual prevalence of 20% not uncommon.</li>
+<li><strong>Question:</strong> Concern about the potential of new drug treatments to exacerbate or precipitate depression in MS has led to increased interest in the relation between MS and depression.</li>
+<li><strong>Method:</strong> This review on MS and depression identifies the following key issues: How common is depression in people with MS? Is depression in MS associated with lesions in specific regions of the central nervous system? Is there an increased risk of suicide in MS? Is there a higher than expected incidence of anxiety disorders in MS? Are fatigue and depressed mood related in MS? Is there a relation between depression and cognitive impairment in MS? Which psychosocial variables affect the development of depression in MS? Does treatment with interferon increase the risk of depression? How effective are treatments for MS patients with depression? Each of these issues is briefly reviewed with critical commentary, and some priorities for future research are suggested.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -705,14 +690,14 @@ Now that scientists understand MS better, they can finally match the right treat
 <span class="kpi-pill">2014</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates new multiple sclerosis phenotypic classification. Accurate clinical course descriptions are useful for communication, prognostication, clinical trial design and to guide everyday clinical decision-making.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</p>
+<p class="paper-summary">Accurate clinical course descriptions are useful for communication, prognostication, clinical trial design and to guide everyday clinical decision-making.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</li>
-<li>Challenge: All forms of MS should be further subcategorized as either active or non-active.</li>
-<li>Action: Active MS is defined as the occurrence of clinical relapse or the presence of new T2 or gadolinium-enhancing lesions over a specified period of time, preferably at least one year.</li>
-<li>Resolution: An additional subcategory for patients with progressive MS differentiates between those who have shown signs of disability progression over a given time period and those who have remained stable.</li>
+<li><strong>Background:</strong> Clinically isolated syndrome has been added, and progressive relapsing MS has been eliminated, from the clinical course descriptions.</li>
+<li><strong>Question:</strong> All forms of MS should be further subcategorized as either active or non-active.</li>
+<li><strong>Method:</strong> Active MS is defined as the occurrence of clinical relapse or the presence of new T2 or gadolinium-enhancing lesions over a specified period of time, preferably at least one year.</li>
+<li><strong>Finding:</strong> An additional subcategory for patients with progressive MS differentiates between those who have shown signs of disability progression over a given time period and those who have remained stable.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -727,14 +712,14 @@ Now that scientists understand MS better, they can finally match the right treat
 <span class="kpi-pill">2014</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates defining the clinical course of multiple sclerosis. Strategies for future research to better define phenotypes are also outlined.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</p>
+<p class="paper-summary">Strategies for future research to better define phenotypes are also outlined.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</li>
-<li>Challenge: Standardized descriptions published in 1996 based on a survey of international MS experts provided purely clinical phenotypes based on data and consensus at that time, but imaging and biological correlates were lacking.</li>
-<li>Action: Increased understanding of MS and its pathology, coupled with general concern that the original descriptors may not adequately reflect more recently identified clinical aspects of the disease, prompted a re-examination of MS disease phenotypes by the International Advisory Committee on Clinical Trials of MS.</li>
-<li>Resolution: While imaging and biological markers that might provide objective criteria for separating clinical phenotypes are lacking, we propose refined descriptors that include consideration of disease activity (based on clinical relapse rate and imaging findings) and disease progression.</li>
+<li><strong>Background:</strong> Accurate clinical course descriptions (phenotypes) of multiple sclerosis (MS) are important for communication, prognostication, design and recruitment of clinical trials, and treatment decision-making.</li>
+<li><strong>Question:</strong> Standardized descriptions published in 1996 based on a survey of international MS experts provided purely clinical phenotypes based on data and consensus at that time, but imaging and biological correlates were lacking.</li>
+<li><strong>Method:</strong> Increased understanding of MS and its pathology, coupled with general concern that the original descriptors may not adequately reflect more recently identified clinical aspects of the disease, prompted a re-examination of MS disease phenotypes by the International Advisory Committee on Clinical Trials of MS.</li>
+<li><strong>Finding:</strong> While imaging and biological markers that might provide objective criteria for separating clinical phenotypes are lacking, we propose refined descriptors that include consideration of disease activity (based on clinical relapse rate and imaging findings) and disease progression.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -749,14 +734,13 @@ Now that scientists understand MS better, they can finally match the right treat
 <span class="kpi-pill">2006</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates a randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis. (ClinicalTrials.gov number, NCT00027300.).</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</p>
+<p class="paper-summary">(ClinicalTrials.gov number, NCT00027300.).</p>
+<p class="paper-why"><strong>Why it matters:</strong> Natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</li>
-<li>Challenge: Adhesion-molecule inhibitors hold promise as an effective treatment for relapsing multiple sclerosis.</li>
-<li>Action: (ClinicalTrials.gov number, NCT00027300.).</li>
-<li>Resolution: This paper investigates a randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis.</li>
+<li><strong>Background:</strong> Natalizumab reduced the risk of the sustained progression of disability and the rate of clinical relapse in patients with relapsing multiple sclerosis.</li>
+<li><strong>Question:</strong> Adhesion-molecule inhibitors hold promise as an effective treatment for relapsing multiple sclerosis.</li>
+<li><strong>Method:</strong> (ClinicalTrials.gov number, NCT00027300.).</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -771,14 +755,14 @@ Now that scientists understand MS better, they can finally match the right treat
 <span class="kpi-pill">1996</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates defining the clinical course of multiple sclerosis. In this report, we provide a summary of the survey results and propose standardized definitions for the most common clinical courses of patients with MS.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</p>
+<p class="paper-summary">In this report, we provide a summary of the survey results and propose standardized definitions for the most common clinical courses of patients with MS.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</li>
-<li>Challenge: It is particularly important in design of, and recruitment for, clinical trials statistically powered for expected outcomes for given patient populations with narrowly defined entry criteria.</li>
-<li>Action: For agents that prove safe and effective for MS, knowledge of the patient populations in definitive clinical trials assists clinicians in determining who may ultimately benefit from use of the medication.</li>
-<li>Resolution: An international survey of clinicians involved with MS revealed areas of consensus about some terms classically used to describe types of the disease and other areas for which there was lack of consensus.</li>
+<li><strong>Background:</strong> Standardization of terminology used to describe the pattern and course of MS is essential for mutual understanding between clinicians and investigators.</li>
+<li><strong>Question:</strong> It is particularly important in design of, and recruitment for, clinical trials statistically powered for expected outcomes for given patient populations with narrowly defined entry criteria.</li>
+<li><strong>Method:</strong> For agents that prove safe and effective for MS, knowledge of the patient populations in definitive clinical trials assists clinicians in determining who may ultimately benefit from use of the medication.</li>
+<li><strong>Finding:</strong> An international survey of clinicians involved with MS revealed areas of consensus about some terms classically used to describe types of the disease and other areas for which there was lack of consensus.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -793,14 +777,14 @@ Now that scientists understand MS better, they can finally match the right treat
 <span class="kpi-pill">2016</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates ocrelizumab versus interferon beta-1a in relapsing multiple sclerosis. Hoffmann-La Roche; OPERA I and II ClinicalTrials.gov numbers, NCT01247324 and NCT01412333 , respectively.).</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</p>
+<p class="paper-summary">Hoffmann-La Roche; OPERA I and II ClinicalTrials.gov numbers, NCT01247324 and NCT01412333 , respectively.).</p>
+<p class="paper-why"><strong>Why it matters:</strong> Among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</li>
-<li>Challenge: Larger and longer studies of the safety of ocrelizumab are required.</li>
-<li>Action: (Funded by F.</li>
-<li>Resolution: Hoffmann-La Roche; OPERA I and II ClinicalTrials.gov numbers, NCT01247324 and NCT01412333 , respectively.).</li>
+<li><strong>Background:</strong> Among patients with relapsing multiple sclerosis, ocrelizumab was associated with lower rates of disease activity and progression than interferon beta-1a over a period of 96 weeks.</li>
+<li><strong>Question:</strong> Larger and longer studies of the safety of ocrelizumab are required.</li>
+<li><strong>Method:</strong> (Funded by F.</li>
+<li><strong>Finding:</strong> Hoffmann-La Roche; OPERA I and II ClinicalTrials.gov numbers, NCT01247324 and NCT01412333 , respectively.).</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -828,14 +812,14 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 <span class="kpi-pill">2015</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates international consensus diagnostic criteria for neuromyelitis optica spectrum disorders. The IPND also proposed validation strategies and achieved consensus on pediatric NMOSD diagnosis and the concepts of monophasic NMOSD and opticospinal MS.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</p>
+<p class="paper-summary">The IPND also proposed validation strategies and achieved consensus on pediatric NMOSD diagnosis and the concepts of monophasic NMOSD and opticospinal MS.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</li>
-<li>Challenge: Prior NMO diagnostic criteria required optic nerve and spinal cord involvement but more restricted or more extensive CNS involvement may occur.</li>
-<li>Action: The International Panel for NMO Diagnosis (IPND) was convened to develop revised diagnostic criteria using systematic literature reviews and electronic surveys to facilitate consensus.</li>
-<li>Resolution: The new nomenclature defines the unifying term NMO spectrum disorders (NMOSD), which is stratified further by serologic testing (NMOSD with or without AQP4-IgG).</li>
+<li><strong>Background:</strong> Neuromyelitis optica (NMO) is an inflammatory CNS syndrome distinct from multiple sclerosis (MS) that is associated with serum aquaporin-4 immunoglobulin G antibodies (AQP4-IgG).</li>
+<li><strong>Question:</strong> Prior NMO diagnostic criteria required optic nerve and spinal cord involvement but more restricted or more extensive CNS involvement may occur.</li>
+<li><strong>Method:</strong> The International Panel for NMO Diagnosis (IPND) was convened to develop revised diagnostic criteria using systematic literature reviews and electronic surveys to facilitate consensus.</li>
+<li><strong>Finding:</strong> The new nomenclature defines the unifying term NMO spectrum disorders (NMOSD), which is stratified further by serologic testing (NMOSD with or without AQP4-IgG).</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -850,13 +834,12 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 <span class="kpi-pill">2013</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates international pediatric multiple sclerosis study group criteria for pediatric multiple sclerosis and immune-mediated central nervous system demyelinating disorders: revisions to the 2007 definitions. Their utility will depend on the outcomes of their application in prospective research.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because these definitions are proposed for clinical and research purposes.</p>
+<p class="paper-summary">Their utility will depend on the outcomes of their application in prospective research.</p>
+<p class="paper-why"><strong>Why it matters:</strong> These definitions are proposed for clinical and research purposes.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: These definitions are proposed for clinical and research purposes.</li>
-<li>Challenge: Their utility will depend on the outcomes of their application in prospective research.</li>
-<li>Action: This paper investigates international pediatric multiple sclerosis study group criteria for pediatric multiple sclerosis and immune-mediated central nervous system demyelinating disorders: revisions to the 2007 definitions.</li>
+<li><strong>Background:</strong> These definitions are proposed for clinical and research purposes.</li>
+<li><strong>Question:</strong> Their utility will depend on the outcomes of their application in prospective research.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -871,14 +854,13 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 <span class="kpi-pill">2018</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates trial of fingolimod versus interferon beta-1a in pediatric multiple sclerosis. (Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</p>
+<p class="paper-summary">(Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</p>
+<p class="paper-why"><strong>Why it matters:</strong> Among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</li>
-<li>Challenge: Longer studies are required to determine the durability and safety of fingolimod in pediatric multiple sclerosis.</li>
-<li>Action: (Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</li>
-<li>Resolution: This paper investigates trial of fingolimod versus interferon beta-1a in pediatric multiple sclerosis.</li>
+<li><strong>Background:</strong> Among pediatric patients with relapsing multiple sclerosis, fingolimod was associated with a lower rate of relapse and less accumulation of lesions on MRI over a 2-year period than interferon beta-1a but was associated with a higher rate of serious adverse events.</li>
+<li><strong>Question:</strong> Longer studies are required to determine the durability and safety of fingolimod in pediatric multiple sclerosis.</li>
+<li><strong>Method:</strong> (Funded by Novartis Pharma; PARADIGMS ClinicalTrials.gov number, NCT01892722 .).</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -893,13 +875,12 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 <span class="kpi-pill">2009</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates increased relapse rate in pediatric-onset compared with adult-onset multiple sclerosis. This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</p>
+<p class="paper-summary">This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</li>
-<li>Challenge: This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</li>
-<li>Action: This paper investigates increased relapse rate in pediatric-onset compared with adult-onset multiple sclerosis.</li>
+<li><strong>Background:</strong> Relapses are more frequent in patients with pediatric-onset compared with adult-onset MS in the disease-modifying treatment era.</li>
+<li><strong>Question:</strong> This finding suggests that patients with pediatric-onset MS experience a more inflammatory disease course than patients with adult onset of the disease.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -914,13 +895,12 @@ One of the coolest discoveries is that doctors now have new medicines that work 
 <span class="kpi-pill">2010</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates cognitive and psychosocial features in childhood and juvenile ms. Our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</p>
+<p class="paper-summary">Our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</li>
-<li>Challenge: This paper investigates cognitive and psychosocial features in childhood and juvenile ms.</li>
-<li>Action: The progressive nature of the cognitive difficulties emphasizes the need for developing effective treatment strategies.</li>
+<li><strong>Background:</strong> Our findings confirm the importance of systematic assessment of cognitive and psychosocial issues in children and teens with MS.</li>
+<li><strong>Method:</strong> The progressive nature of the cognitive difficulties emphasizes the need for developing effective treatment strategies.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -948,12 +928,11 @@ The really cool part is that this discovery could help more women with MS feel c
 <span class="kpi-pill">1998</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates rate of pregnancy-related relapse in multiple sclerosis. In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because in women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</p>
+<p class="paper-summary">In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</p>
+<p class="paper-why"><strong>Why it matters:</strong> In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</li>
-<li>Challenge: This paper investigates rate of pregnancy-related relapse in multiple sclerosis.</li>
+<li><strong>Background:</strong> In women with multiple sclerosis, the rate of relapse declines during pregnancy, especially in the third trimester, and increases during the first three months post partum before returning to the prepregnancy rate.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -968,14 +947,14 @@ The really cool part is that this discovery could help more women with MS feel c
 <span class="kpi-pill">2018</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates impact of sex hormones on immune function and multiple sclerosis development. Understanding these molecular mechanisms may contribute to the development of new and safer treatments for both men and women.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because multiple sclerosis (MS) is a chronic inflammatory disease of the central nervous system (CNS) affecting young people and leading to demyelination and neurodegeneration.</p>
+<p class="paper-summary">Understanding these molecular mechanisms may contribute to the development of new and safer treatments for both men and women.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Multiple sclerosis (MS) is a chronic inflammatory disease of the central nervous system (CNS) affecting young people and leading to demyelination and neurodegeneration.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory disease of the central nervous system (CNS) affecting young people and leading to demyelination and neurodegeneration.</li>
-<li>Challenge: The disease is clearly more common in women, in whom incidence has been rising.</li>
-<li>Action: Gender differences include: earlier disease onset and more frequent relapses in women; and faster progression and worse outcomes in men.</li>
-<li>Resolution: Hormone-related physiological conditions in women such as puberty, pregnancy, puerperium, and menopause also exert significant influence both on disease prevalence as well as on outcomes.</li>
+<li><strong>Background:</strong> Multiple sclerosis (MS) is a chronic inflammatory disease of the central nervous system (CNS) affecting young people and leading to demyelination and neurodegeneration.</li>
+<li><strong>Question:</strong> The disease is clearly more common in women, in whom incidence has been rising.</li>
+<li><strong>Method:</strong> Gender differences include: earlier disease onset and more frequent relapses in women; and faster progression and worse outcomes in men.</li>
+<li><strong>Finding:</strong> Hormone-related physiological conditions in women such as puberty, pregnancy, puerperium, and menopause also exert significant influence both on disease prevalence as well as on outcomes.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -990,14 +969,13 @@ The really cool part is that this discovery could help more women with MS feel c
 <span class="kpi-pill">2024</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates pregnancy and reproductive health in women with multiple sclerosis: an update. The ever-increasing therapeutic complexity of MS calls for ongoing education and updated guidance for neuroimmunology and obstetrics healthcare providers.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because patients with MS should receive accurate support and counseling related to their reproductive options.</p>
+<p class="paper-summary">The ever-increasing therapeutic complexity of MS calls for ongoing education and updated guidance for neuroimmunology and obstetrics healthcare providers.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Patients with MS should receive accurate support and counseling related to their reproductive options.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Patients with MS should receive accurate support and counseling related to their reproductive options.</li>
-<li>Challenge: The general outlook on pregnancy and MS remains positive.</li>
-<li>Action: The ever-increasing therapeutic complexity of MS calls for ongoing education and updated guidance for neuroimmunology and obstetrics healthcare providers.</li>
-<li>Resolution: This paper investigates pregnancy and reproductive health in women with multiple sclerosis: an update.</li>
+<li><strong>Background:</strong> Patients with MS should receive accurate support and counseling related to their reproductive options.</li>
+<li><strong>Question:</strong> The general outlook on pregnancy and MS remains positive.</li>
+<li><strong>Method:</strong> The ever-increasing therapeutic complexity of MS calls for ongoing education and updated guidance for neuroimmunology and obstetrics healthcare providers.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1012,14 +990,14 @@ The really cool part is that this discovery could help more women with MS feel c
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates sex and gender differences in neurodegenerative diseases: challenges for therapeutic opportunities. We believe that pointing out these differences in clinical practice may help achieve more successful precision and personalized care.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the term &quot;neurodegenerative diseases&quot; (NDs) identifies a group of heterogeneous diseases characterized by progressive loss of selectively vulnerable populations of neurons, which progressively deteriorates over time, leading to neuronal dysfunction.</p>
+<p class="paper-summary">We believe that pointing out these differences in clinical practice may help achieve more successful precision and personalized care.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The term &quot;neurodegenerative diseases&quot; (NDs) identifies a group of heterogeneous diseases characterized by progressive loss of selectively vulnerable populations of neurons, which progressively deteriorates over time, leading to neuronal dysfunction.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The term &quot;neurodegenerative diseases&quot; (NDs) identifies a group of heterogeneous diseases characterized by progressive loss of selectively vulnerable populations of neurons, which progressively deteriorates over time, leading to neuronal dysfunction.</li>
-<li>Challenge: Protein aggregation and neuronal loss have been considered the most characteristic hallmarks of NDs, but growing evidence confirms that significant dysregulation of innate immune pathways plays a crucial role as well.</li>
-<li>Action: NDs vary from multiple sclerosis, in which the autoimmune inflammatory component is predominant, to more &quot;classical&quot; NDs, such as Parkinson&#x27;s disease, Alzheimer&#x27;s disease, amyotrophic lateral sclerosis, and spinal muscular atrophy.</li>
-<li>Resolution: Of interest, many of the clinical differences reported in NDs seem to be closely linked to sex, which may be justified by the significant changes in immune mechanisms between affected females and males.</li>
+<li><strong>Background:</strong> The term &quot;neurodegenerative diseases&quot; (NDs) identifies a group of heterogeneous diseases characterized by progressive loss of selectively vulnerable populations of neurons, which progressively deteriorates over time, leading to neuronal dysfunction.</li>
+<li><strong>Question:</strong> Protein aggregation and neuronal loss have been considered the most characteristic hallmarks of NDs, but growing evidence confirms that significant dysregulation of innate immune pathways plays a crucial role as well.</li>
+<li><strong>Method:</strong> NDs vary from multiple sclerosis, in which the autoimmune inflammatory component is predominant, to more &quot;classical&quot; NDs, such as Parkinson&#x27;s disease, Alzheimer&#x27;s disease, amyotrophic lateral sclerosis, and spinal muscular atrophy.</li>
+<li><strong>Finding:</strong> Of interest, many of the clinical differences reported in NDs seem to be closely linked to sex, which may be justified by the significant changes in immune mechanisms between affected females and males.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1034,14 +1012,14 @@ The really cool part is that this discovery could help more women with MS feel c
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates pathophysiology of obesity and its associated diseases. In this review, we review the links between obesity and other diseases, with a view to improve the future management and treatment of obesity and its co-morbidities.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the occurrence of obesity has increased across the whole world.</p>
+<p class="paper-summary">In this review, we review the links between obesity and other diseases, with a view to improve the future management and treatment of obesity and its co-morbidities.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The occurrence of obesity has increased across the whole world.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The occurrence of obesity has increased across the whole world.</li>
-<li>Challenge: Many epidemiological studies have indicated that obesity strongly contributes to the development of cancer, cardiovascular diseases, type 2 diabetes, liver diseases and other disorders, accounting for a heavy burden on the public and on health-care systems every year.</li>
-<li>Action: Excess energy uptake induces adipocyte hypertrophy, hyperplasia and formation of visceral fat in other non-adipose tissues to evoke cardiovascular disease, liver diseases.</li>
-<li>Resolution: Adipose tissue can also secrete adipokines and inflammatory cytokines to affect the local microenvironment, induce insulin resistance, hyperglycemia, and activate associated inflammatory signaling pathways.</li>
+<li><strong>Background:</strong> The occurrence of obesity has increased across the whole world.</li>
+<li><strong>Question:</strong> Many epidemiological studies have indicated that obesity strongly contributes to the development of cancer, cardiovascular diseases, type 2 diabetes, liver diseases and other disorders, accounting for a heavy burden on the public and on health-care systems every year.</li>
+<li><strong>Method:</strong> Excess energy uptake induces adipocyte hypertrophy, hyperplasia and formation of visceral fat in other non-adipose tissues to evoke cardiovascular disease, liver diseases.</li>
+<li><strong>Finding:</strong> Adipose tissue can also secrete adipokines and inflammatory cytokines to affect the local microenvironment, induce insulin resistance, hyperglycemia, and activate associated inflammatory signaling pathways.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1079,14 +1057,13 @@ Here's the cool part: Some people with MS (a disease that affects the nervous sy
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the global burden of valvular heart disease: from clinical epidemiology to management. This review mainly focuses on the epidemiology of primary (organic, related to the valve itself) valvular disease and its management, especially emphasizing the importance of heart valve centers in ensuring the best care of patients through a multidisciplinary team.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because valvular heart disease is a leading cause of cardiovascular morbidity and mortality and a major contributor of symptoms and functional disability.</p>
+<p class="paper-summary">This review mainly focuses on the epidemiology of primary (organic, related to the valve itself) valvular disease and its management, especially emphasizing the importance of heart valve centers in ensuring the best care of patients through a multidisciplinary team.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Valvular heart disease is a leading cause of cardiovascular morbidity and mortality and a major contributor of symptoms and functional disability.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Valvular heart disease is a leading cause of cardiovascular morbidity and mortality and a major contributor of symptoms and functional disability.</li>
-<li>Challenge: Knowledge of valvular heart disease epidemiology and a deep comprehension of the geographical and temporal trends are crucial for clinical advances and the formulation of effective health policy for primary and secondary prevention.</li>
-<li>Action: This review mainly focuses on the epidemiology of primary (organic, related to the valve itself) valvular disease and its management, especially emphasizing the importance of heart valve centers in ensuring the best care of patients through a multidisciplinary team.</li>
-<li>Resolution: This paper investigates the global burden of valvular heart disease: from clinical epidemiology to management.</li>
+<li><strong>Background:</strong> Valvular heart disease is a leading cause of cardiovascular morbidity and mortality and a major contributor of symptoms and functional disability.</li>
+<li><strong>Question:</strong> Knowledge of valvular heart disease epidemiology and a deep comprehension of the geographical and temporal trends are crucial for clinical advances and the formulation of effective health policy for primary and secondary prevention.</li>
+<li><strong>Method:</strong> This review mainly focuses on the epidemiology of primary (organic, related to the valve itself) valvular disease and its management, especially emphasizing the importance of heart valve centers in ensuring the best care of patients through a multidisciplinary team.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1126,12 +1103,11 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 <span class="kpi-pill">2024</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates burden of disease scenarios for 204 countries and territories, 2022–2050: a forecasting analysis for the global burden of disease study 2021. Bill &amp; Melinda Gates Foundation.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-summary">Bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates burden of disease scenarios for 204 countries and territories, 2022–2050: a forecasting analysis for the global burden of disease study 2021.</li>
+<li><strong>Background:</strong> Bill &amp; Melinda Gates Foundation.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1146,12 +1122,11 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 <span class="kpi-pill">2025</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates global, regional, and national prevalence of adult overweight and obesity, 1990–2021, with forecasts to 2050: a forecasting study for the global burden of disease study 2021. Bill &amp; Melinda Gates Foundation.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-summary">Bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national prevalence of adult overweight and obesity, 1990–2021, with forecasts to 2050: a forecasting study for the global burden of disease study 2021.</li>
+<li><strong>Background:</strong> Bill &amp; Melinda Gates Foundation.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1166,12 +1141,11 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 <span class="kpi-pill">2022</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates global, regional, and national burden of hepatitis b, 1990–2019: a systematic analysis for the global burden of disease study 2019. Bill &amp; Melinda Gates Foundation.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-summary">Bill &amp; Melinda Gates Foundation.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Bill &amp; Melinda Gates Foundation.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of hepatitis b, 1990–2019: a systematic analysis for the global burden of disease study 2019.</li>
+<li><strong>Background:</strong> Bill &amp; Melinda Gates Foundation.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1186,12 +1160,11 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates global, regional, and national burden of rheumatoid arthritis, 1990–2020, and projections to 2050: a systematic analysis of the global burden of disease study 2021. Bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</p>
+<p class="paper-summary">Bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of rheumatoid arthritis, 1990–2020, and projections to 2050: a systematic analysis of the global burden of disease study 2021.</li>
+<li><strong>Background:</strong> Bill &amp; Melinda Gates Foundation, Institute of Bone and Joint Research, and Global Alliance for Musculoskeletal Health.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1206,14 +1179,14 @@ The coolest part? This knowledge is already helping doctors treat MS patients in
 <span class="kpi-pill">2022</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates migraine: a review on its history, global epidemiology, risk factors, and comorbidities. This review presents a comprehensive review of the most up-to-date literature on the epidemiology, and risk factors, as well as highlighting the gaps in our knowledge.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because migraine affects more than one billion individuals each year across the world, and is one of the most common neurologic disorders, with a high prevalence and morbidity, especially among young adults and females.</p>
+<p class="paper-summary">This review presents a comprehensive review of the most up-to-date literature on the epidemiology, and risk factors, as well as highlighting the gaps in our knowledge.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Migraine affects more than one billion individuals each year across the world, and is one of the most common neurologic disorders, with a high prevalence and morbidity, especially among young adults and females.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Migraine affects more than one billion individuals each year across the world, and is one of the most common neurologic disorders, with a high prevalence and morbidity, especially among young adults and females.</li>
-<li>Challenge: Migraine is associated with a wide range of comorbidities, which range from stress and sleep disturbances to suicide.</li>
-<li>Action: The complex and largely unclear mechanisms of migraine development have resulted in the proposal of various social and biological risk factors, such as hormonal imbalances, genetic and epigenetic influences, as well as cardiovascular, neurological, and autoimmune diseases.</li>
-<li>Resolution: This review presents a comprehensive review of the most up-to-date literature on the epidemiology, and risk factors, as well as highlighting the gaps in our knowledge.</li>
+<li><strong>Background:</strong> Migraine affects more than one billion individuals each year across the world, and is one of the most common neurologic disorders, with a high prevalence and morbidity, especially among young adults and females.</li>
+<li><strong>Question:</strong> Migraine is associated with a wide range of comorbidities, which range from stress and sleep disturbances to suicide.</li>
+<li><strong>Method:</strong> The complex and largely unclear mechanisms of migraine development have resulted in the proposal of various social and biological risk factors, such as hormonal imbalances, genetic and epigenetic influences, as well as cardiovascular, neurological, and autoimmune diseases.</li>
+<li><strong>Finding:</strong> This review presents a comprehensive review of the most up-to-date literature on the epidemiology, and risk factors, as well as highlighting the gaps in our knowledge.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1241,13 +1214,12 @@ Here's why this matters for people living with MS right now: when doctors unders
 <span class="kpi-pill">2019</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the prevalence of ms in the united states. Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because the estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</p>
+<p class="paper-summary">Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</p>
+<p class="paper-why"><strong>Why it matters:</strong> The estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: The estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</li>
-<li>Challenge: Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</li>
-<li>Action: This paper investigates the prevalence of ms in the united states.</li>
+<li><strong>Background:</strong> The estimated US national MS prevalence for 2010 is the highest reported to date and provides evidence that the north-south gradient persists.</li>
+<li><strong>Question:</strong> Our rigorous algorithm-based approach to estimating prevalence is efficient and has the potential to be used for other chronic neurologic conditions.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1262,13 +1234,12 @@ Here's why this matters for people living with MS right now: when doctors unders
 <span class="kpi-pill">2013</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates incidence of multiple sclerosis in multiple racial and ethnic groups. Our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</p>
+<p class="paper-summary">Our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</li>
-<li>Challenge: A possible explanation for our findings is that people with darker skin tones have lower vitamin D levels and thereby an increased risk of MS, but this would not explain why Hispanics and Asians have a lower risk of MS than whites or why the higher risk of MS among blacks was found only among women.</li>
-<li>Action: This paper investigates incidence of multiple sclerosis in multiple racial and ethnic groups.</li>
+<li><strong>Background:</strong> Our findings do not support the widely accepted assertion that blacks have a lower risk of MS than whites.</li>
+<li><strong>Question:</strong> A possible explanation for our findings is that people with darker skin tones have lower vitamin D levels and thereby an increased risk of MS, but this would not explain why Hispanics and Asians have a lower risk of MS than whites or why the higher risk of MS among blacks was found only among women.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1283,14 +1254,14 @@ Here's why this matters for people living with MS right now: when doctors unders
 <span class="kpi-pill">2012</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates the gulf war era multiple sclerosis cohort: age and incidence rates by race, sex and service. This Gulf War era multiple sclerosis cohort provides a unique resource for further study.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because we characterize here a new nationwide incident cohort of multiple sclerosis from the US military-veteran population.</p>
+<p class="paper-summary">This Gulf War era multiple sclerosis cohort provides a unique resource for further study.</p>
+<p class="paper-why"><strong>Why it matters:</strong> We characterize here a new nationwide incident cohort of multiple sclerosis from the US military-veteran population.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: We characterize here a new nationwide incident cohort of multiple sclerosis from the US military-veteran population.</li>
-<li>Challenge: This cohort provides an update to the only other US nationwide incidence study of multiple sclerosis performed during the 1970s.</li>
-<li>Action: Medical records and data from the Department of Defense and Department of Veterans Affairs for cases of multiple sclerosis who served in the military between 1990, the start of the Gulf War era, and 2007 and who were service-connected for this disorder by the Department of Veterans Affairs from 1990 on, were reviewed.</li>
-<li>Resolution: A total of 2691 patients were confirmed as having multiple sclerosis: 2288 definite, 190 possible, 207 clinically isolated syndrome and six neuromyelitis optica.</li>
+<li><strong>Background:</strong> We characterize here a new nationwide incident cohort of multiple sclerosis from the US military-veteran population.</li>
+<li><strong>Question:</strong> This cohort provides an update to the only other US nationwide incidence study of multiple sclerosis performed during the 1970s.</li>
+<li><strong>Method:</strong> Medical records and data from the Department of Defense and Department of Veterans Affairs for cases of multiple sclerosis who served in the military between 1990, the start of the Gulf War era, and 2007 and who were service-connected for this disorder by the Department of Veterans Affairs from 1990 on, were reviewed.</li>
+<li><strong>Finding:</strong> A total of 2691 patients were confirmed as having multiple sclerosis: 2288 definite, 190 possible, 207 clinically isolated syndrome and six neuromyelitis optica.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1305,13 +1276,12 @@ Here's why this matters for people living with MS right now: when doctors unders
 <span class="kpi-pill">2021</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates health disparities, inequities, and social determinants of health in multiple sclerosis and related disorders in the us. This includes developing research frameworks aimed at understanding the magnitude and interrelationships of SDOH to better develop system-based multilevel interventions across the spectrum of care for these neurological conditions.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because increased efforts are needed to better understand the role of SDOH in racial and ethnic health disparities and inequities in MS, NMOSD, and emerging autoimmune disorders.</p>
+<p class="paper-summary">This includes developing research frameworks aimed at understanding the magnitude and interrelationships of SDOH to better develop system-based multilevel interventions across the spectrum of care for these neurological conditions.</p>
+<p class="paper-why"><strong>Why it matters:</strong> Increased efforts are needed to better understand the role of SDOH in racial and ethnic health disparities and inequities in MS, NMOSD, and emerging autoimmune disorders.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: Increased efforts are needed to better understand the role of SDOH in racial and ethnic health disparities and inequities in MS, NMOSD, and emerging autoimmune disorders.</li>
-<li>Challenge: This includes developing research frameworks aimed at understanding the magnitude and interrelationships of SDOH to better develop system-based multilevel interventions across the spectrum of care for these neurological conditions.</li>
-<li>Action: This paper investigates health disparities, inequities, and social determinants of health in multiple sclerosis and related disorders in the us.</li>
+<li><strong>Background:</strong> Increased efforts are needed to better understand the role of SDOH in racial and ethnic health disparities and inequities in MS, NMOSD, and emerging autoimmune disorders.</li>
+<li><strong>Question:</strong> This includes developing research frameworks aimed at understanding the magnitude and interrelationships of SDOH to better develop system-based multilevel interventions across the spectrum of care for these neurological conditions.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>
@@ -1326,14 +1296,13 @@ Here's why this matters for people living with MS right now: when doctors unders
 <span class="kpi-pill">2023</span>
 </div>
 <h4>What did scientists find out?</h4>
-<p class="paper-summary">This paper investigates population-based estimates for the prevalence of multiple sclerosis in the united states by race, ethnicity, age, sex, and geographic region. This study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</p>
-<p class="paper-why"><strong>Why it matters:</strong> This matters for MS because this study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</p>
+<p class="paper-summary">This study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</p>
+<p class="paper-why"><strong>Why it matters:</strong> This study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</p>
 <h4>Key ideas</h4>
 <ul>
-<li>Opportunity: This study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</li>
-<li>Challenge: This paper investigates population-based estimates for the prevalence of multiple sclerosis in the united states by race, ethnicity, age, sex, and geographic region.</li>
-<li>Action: Inconsistent racial and ethnic classifications created heterogeneity within groups.</li>
-<li>Resolution: In the United States, MS affects diverse racial and ethnic groups.</li>
+<li><strong>Background:</strong> This study found that White individuals had the highest MS prevalence followed by Black individuals, individuals from other non-Hispanic racial and ethnic groups, and Hispanic individuals.</li>
+<li><strong>Method:</strong> Inconsistent racial and ethnic classifications created heterogeneity within groups.</li>
+<li><strong>Finding:</strong> In the United States, MS affects diverse racial and ethnic groups.</li>
 </ul>
 <details>
 <summary><strong>Original abstract (for grown-ups)</strong></summary>

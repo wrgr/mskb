@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
@@ -20,6 +21,7 @@ from src.deduplicate_and_merge import run as run_merge
 from src.discover_topics import run as run_topics
 from src.distill_papers import run as run_distill
 from src.expert_comms import run as run_expert_comms
+from src.export_corpus import run as run_export_corpus
 from src.retrieve_corpora import run as run_retrieve
 from src.select_core_corpus import run as run_select_core_corpus
 from src.seed_governance import run as run_seed_governance
@@ -43,15 +45,20 @@ def _refresh_concept_links(config_path: str) -> None:
     relative paths for concept files and corpus outputs, so it is invoked
     as a subprocess rather than imported directly.
     """
+    child_env = os.environ.copy()
+    # Force unbuffered child output so per-concept progress logs stream live.
+    child_env["PYTHONUNBUFFERED"] = "1"
     result = subprocess.run(
         [
             sys.executable,
+            "-u",
             "src/link_concepts_to_papers.py",
             "--config",
             config_path,
             "--refresh",
         ],
         check=False,
+        env=child_env,
     )
     if result.returncode != 0:
         print(
@@ -149,6 +156,7 @@ def main(config_path: str) -> None:
         ("Paper acquisition QA: KB audit gates", run_audit),
         ("Computing visualization metrics", run_viz_metrics),
         ("Generating expert comms review packet", run_expert_comms),
+        ("Exporting corpus with key fields", run_export_corpus),
     ]
 
     total = len(stages)

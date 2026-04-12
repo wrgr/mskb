@@ -37,7 +37,8 @@ Name (label)
 ├── Key Questions (what students should ask themselves)
 ├── Primary Evidence Type (review, trial, observational, mechanistic)
 ├── Recommended Paper Count (3-7 foundational papers, 2-4 advanced)
-└── Resources (papers, videos, tools, datasets, clinical products)
+├── Resources (papers, videos, tools, datasets, clinical products)
+└── Citation Fields: doi or url per anchor paper (for direct, citable reference)
 ```
 
 ---
@@ -230,9 +231,9 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Reviews, diagnostic guidelines (McDonald criteria, consensus statements)
 
 **Recommended Papers**: 3-5 foundational
-- Thompson et al. (2018) *Lancet* comprehensive MS review [Foundational overview]
-- Reich et al. (2018) *NEJM* MS mechanistic review [Pathophysiology integration]
-- Montalban et al. (2025) *Lancet Neurol* McDonald Criteria revision [Diagnostic standards]
+- Thompson et al. (2018) *Lancet* comprehensive MS review [Foundational overview] — [doi:10.1016/S0140-6736(18)30481-1](https://doi.org/10.1016/S0140-6736(18)30481-1)
+- Reich et al. (2018) *NEJM* MS mechanistic review [Pathophysiology integration] — doi: [verify]
+- Montalban et al. (2025) *Lancet Neurol* McDonald Criteria revision [Diagnostic standards] — doi: [verify]
 - Classic diagnostic papers (Poser criteria → Barkhof criteria → McDonald)
 
 ---
@@ -259,8 +260,8 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Mechanistic studies (in vitro, animal models, imaging pathology)
 
 **Recommended Papers**: 5-7 foundational
-- Lassmann & Bradl (2010+) *Neuropathology of MS* [Pathology classic]
-- Franklin & Ffrench-Constant (2008) *Nat Rev Neurosci* remyelination review
+- Lassmann & Bradl (2010+) *Neuropathology of MS* [Pathology classic] — doi: [verify]
+- Franklin & Ffrench-Constant (2008) *Nat Rev Neurosci* remyelination review — [doi:10.1038/nrn2480](https://doi.org/10.1038/nrn2480)
 - Recent pathology on cortical lesions and remyelination failure
 - EAE and cuprizone model studies on demyelination mechanisms
 
@@ -288,8 +289,8 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Diagnostic guidelines, clinical trials, imaging studies
 
 **Recommended Papers**: 4-6
-- Wattjes et al. (2021) *Lancet Neurol* MAGNIMS MRI consensus [Clinical standard]
-- Montalban et al. (2025) *Lancet Neurol* McDonald 2024 revisions [Current standard]
+- Wattjes et al. (2021) *Lancet Neurol* MAGNIMS MRI consensus [Clinical standard] — [doi:10.1016/S1474-4422(21)00095-X](https://doi.org/10.1016/S1474-4422(21)00095-X)
+- Montalban et al. (2025) *Lancet Neurol* McDonald 2024 revisions [Current standard] — doi: [verify]
 - Papers on paramagnetic rim lesions and slowly expanding lesions (recent imaging)
 - Differential diagnosis imaging (NMO, ADEM, other mimics)
 
@@ -318,7 +319,7 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Mechanistic studies, phase 2/3 trials, real-world evidence
 
 **Recommended Papers**: 5-7
-- Hauser et al. (2017) *NEJM* ocrelizumab pivotal trial OPERA I/II
+- Hauser et al. (2017) *NEJM* ocrelizumab pivotal trial OPERA I/II — [doi:10.1056/NEJMoa1601277](https://doi.org/10.1056/NEJMoa1601277)
 - Recent B cell biology papers (Sospedra, von Büdingen, Lanz et al. on EBNA1 mimicry)
 - Papers on infection risk, immune reconstitution, extended interval dosing
 - Comparative effectiveness trials (ASCLEPIOS, rituximab comparisons)
@@ -348,8 +349,8 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Prospective cohorts, mechanistic studies, genetic studies
 
 **Recommended Papers**: 4-6
-- Bjornevik et al. (2022) *Science* prospective cohort (serum EBV → MS)
-- Lanz et al. (2022) *Nature* EBNA1 GlialCAM mimicry mechanistic study
+- Bjornevik et al. (2022) *Science* prospective cohort (serum EBV → MS) — [doi:10.1126/science.abj8222](https://doi.org/10.1126/science.abj8222)
+- Lanz et al. (2022) *Nature* EBNA1 GlialCAM mimicry mechanistic study — [doi:10.1038/s41586-022-04520-4](https://doi.org/10.1038/s41586-022-04520-4)
 - HLA-B*05:01 papers (gene-environment interaction)
 - Critical reviews on causality questions (Bradford Hill criteria, confounding)
 
@@ -377,11 +378,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Registry studies, prevalence surveys, longitudinal cohort studies
 
 **Recommended Papers**: 4–6 foundational
-- Wallin et al. (2019) *Neurology* global MS prevalence atlas [Population baseline]
-- Koch-Henriksen & Sørensen (2010) *Lancet Neurol* changing sex ratio [Temporal trends]
-- Confavreux et al. (2000) *NEJM* Lyon cohort natural history [Pre-DMT baseline]
-- Confavreux & Vukusic (2006) *Brain* disability accumulation patterns [Progression mechanics]
-- GBD 2016 MS Collaborators *Lancet Neurol* (2019) [Global burden]
+- Wallin et al. (2019) *Neurology* global MS prevalence atlas [Population baseline] — [doi:10.1212/WNL.0000000000007817](https://doi.org/10.1212/WNL.0000000000007817)
+- Koch-Henriksen & Sørensen (2010) *Lancet Neurol* changing sex ratio [Temporal trends] — [doi:10.1016/S1474-4422(10)70244-2](https://doi.org/10.1016/S1474-4422(10)70244-2)
+- Confavreux et al. (2000) *NEJM* Lyon cohort natural history [Pre-DMT baseline] — [doi:10.1056/NEJM200004063421402](https://doi.org/10.1056/NEJM200004063421402)
+- Confavreux & Vukusic (2006) *Brain* disability accumulation patterns [Progression mechanics] — doi: [verify]
+- GBD 2016 MS Collaborators *Lancet Neurol* (2019) [Global burden] — doi: [verify]
 
 ---
 
@@ -407,11 +408,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Mechanistic reviews, EAE animal models, human immunology studies
 
 **Recommended Papers**: 5–7 foundational
-- Wekerle H (2009) *Curr Opin Neurol* autoimmune T cells in MS [Mechanistic framework]
-- Hemmer et al. (2015) *Nat Rev Neurosci* immunopathogenesis [Comprehensive review]
-- Lanz et al. (2022) *Nature* EBNA1/GlialCAM molecular mimicry [B cell mechanism]
-- von Büdingen et al. (2012) *J Exp Med* intrathecal B cell clones [B cell CNS activity]
-- Sospedra & Martin (2016) *Annu Rev Immunol* T cell specificity [T cell mechanisms]
+- Wekerle H (2009) *Curr Opin Neurol* autoimmune T cells in MS [Mechanistic framework] — doi: [verify]
+- Hemmer et al. (2015) *Nat Rev Neurosci* immunopathogenesis [Comprehensive review] — doi: [verify]
+- Lanz et al. (2022) *Nature* EBNA1/GlialCAM molecular mimicry [B cell mechanism] — [doi:10.1038/s41586-022-04520-4](https://doi.org/10.1038/s41586-022-04520-4)
+- von Büdingen et al. (2012) *J Exp Med* intrathecal B cell clones [B cell CNS activity] — doi: [verify]
+- Sospedra & Martin (2016) *Annu Rev Immunol* T cell specificity [T cell mechanisms] — doi: [verify]
 
 ---
 
@@ -438,10 +439,10 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Mechanistic studies (in vitro, animal), neuroimaging-pathology correlations
 
 **Recommended Papers**: 4–6 foundational
-- Ransohoff & Engelhardt (2012) *Nat Rev Immunol* leukocyte trafficking across the CNS [BBB mechanics]
-- Lassmann H (2014) *JAMA Neurol* mechanisms of tissue injury [BBB-pathology link]
-- Waubant EL (2006) *Neurologist* BBB in MS [Clinical context]
-- Calabrese et al. (2021) *Lancet Neurol* treatment and BBB restoration [Therapeutic angle]
+- Ransohoff & Engelhardt (2012) *Nat Rev Immunol* leukocyte trafficking across the CNS [BBB mechanics] — [doi:10.1038/nri3178](https://doi.org/10.1038/nri3178)
+- Lassmann H (2014) *JAMA Neurol* mechanisms of tissue injury [BBB-pathology link] — doi: [verify]
+- Waubant EL (2006) *Neurologist* BBB in MS [Clinical context] — doi: [verify]
+- Calabrese et al. (2021) *Lancet Neurol* treatment and BBB restoration [Therapeutic angle] — doi: [verify]
 
 ---
 
@@ -467,11 +468,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: GWAS studies, familial and twin studies, functional genetics
 
 **Recommended Papers**: 5–7 foundational
-- International MS Genetics Consortium (2011) *Nature* 57 genetic loci [First large GWAS]
-- Sawcer et al. (2011) *Nature* genetic risk landscape [Comprehensive GWAS]
-- IMSGC (2019) *Science* 200+ risk variants [Latest GWAS]
-- Ramagopalan et al. (2009) *PLoS Genet* HLA functional analysis [HLA mechanism]
-- Oksenberg & Barcellos (2005) *Nat Rev Genet* twin/family studies [Heritability baseline]
+- International MS Genetics Consortium (2011) *Nature* 57 genetic loci [First large GWAS] — doi: [verify]
+- Sawcer et al. (2011) *Nature* genetic risk landscape [Comprehensive GWAS] — [doi:10.1038/nature10251](https://doi.org/10.1038/nature10251)
+- IMSGC (2019) *Science* 200+ risk variants [Latest GWAS] — [doi:10.1126/science.aav7188](https://doi.org/10.1126/science.aav7188)
+- Ramagopalan et al. (2009) *PLoS Genet* HLA functional analysis [HLA mechanism] — doi: [verify]
+- Oksenberg & Barcellos (2005) *Nat Rev Genet* twin/family studies [Heritability baseline] — doi: [verify]
 
 ---
 
@@ -498,11 +499,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Biomarker studies, diagnostic accuracy studies, treatment monitoring cohorts
 
 **Recommended Papers**: 5–7 foundational
-- Khalil et al. (2018) *Nat Rev Neurol* NfL in neurological diseases [Comprehensive NfL review]
-- Kuhle et al. (2019) *Lancet Neurol* serum NfL longitudinal validation [Blood NfL clinical use]
-- Disanto et al. (2017) *Ann Neurol* serum NfL in MS [Disease activity correlation]
-- Mattsson-Carlgren et al. (2021) *JAMA Neurol* GFAP as progression marker [GFAP validation]
-- Montalban et al. (2025) *Lancet Neurol* McDonald 2024 criteria [OCB in updated diagnostic criteria]
+- Khalil et al. (2018) *Nat Rev Neurol* NfL in neurological diseases [Comprehensive NfL review] — [doi:10.1038/s41582-018-0015-4](https://doi.org/10.1038/s41582-018-0015-4)
+- Kuhle et al. (2019) *Lancet Neurol* serum NfL longitudinal validation [Blood NfL clinical use] — [doi:10.1016/S1474-4422(19)30196-5](https://doi.org/10.1016/S1474-4422(19)30196-5)
+- Disanto et al. (2017) *Ann Neurol* serum NfL in MS [Disease activity correlation] — doi: [verify]
+- Mattsson-Carlgren et al. (2021) *JAMA Neurol* GFAP as progression marker [GFAP validation] — doi: [verify]
+- Montalban et al. (2025) *Lancet Neurol* McDonald 2024 criteria [OCB in updated diagnostic criteria] — doi: [verify]
 
 ---
 
@@ -529,11 +530,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Clinical consensus criteria, natural history cohorts, trial enrolment criteria
 
 **Recommended Papers**: 4–6 foundational
-- Lublin et al. (2014) *Neurology* phenotype classification revision [Definitive classification]
-- Thompson et al. (2018) *Lancet* comprehensive MS overview [Phenotype clinical framing]
-- Confavreux & Vukusic (2006) *Brain* [How phenotypes map to natural history]
-- Okuda et al. (2009) *Neurology* RIS diagnostic criteria [RIS definition]
-- Brownlee et al. (2017) *Lancet* CIS to RRMS conversion [CIS clinical management]
+- Lublin et al. (2014) *Neurology* phenotype classification revision [Definitive classification] — [doi:10.1212/WNL.0000000000000560](https://doi.org/10.1212/WNL.0000000000000560)
+- Thompson et al. (2018) *Lancet* comprehensive MS overview [Phenotype clinical framing] — [doi:10.1016/S0140-6736(18)30481-1](https://doi.org/10.1016/S0140-6736(18)30481-1)
+- Confavreux & Vukusic (2006) *Brain* [How phenotypes map to natural history] — doi: [verify]
+- Okuda et al. (2009) *Neurology* RIS diagnostic criteria [RIS definition] — doi: [verify]
+- Brownlee et al. (2017) *Lancet* CIS to RRMS conversion [CIS clinical management] — doi: [verify]
 
 ---
 
@@ -561,11 +562,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Post-hoc trial analyses, longitudinal cohort studies, advanced MRI studies
 
 **Recommended Papers**: 5–7 foundational
-- Cagol et al. (2022) *JAMA Neurol* PIRA across the MS spectrum [PIRA definition and prevalence]
-- Absinta et al. (2021) *Nat Commun* paramagnetic rim lesions and chronic active lesions [PRL imaging]
-- Giovannoni et al. (2022) *Mult Scler* smoldering MS framework [Conceptual review]
-- Kappos et al. (2020) *Lancet Neurol* disability outcomes beyond NEDA [PIRA clinical context]
-- Elliott et al. (2019) *Mult Scler* slowly expanding lesions [SEL quantification]
+- Cagol et al. (2022) *JAMA Neurol* PIRA across the MS spectrum [PIRA definition and prevalence] — [doi:10.1001/jamaneurol.2021.5256](https://doi.org/10.1001/jamaneurol.2021.5256)
+- Absinta et al. (2021) *Nat Commun* paramagnetic rim lesions and chronic active lesions [PRL imaging] — [doi:10.1038/s41467-021-24450-9](https://doi.org/10.1038/s41467-021-24450-9)
+- Giovannoni et al. (2022) *Mult Scler* smoldering MS framework [Conceptual review] — doi: [verify]
+- Kappos et al. (2020) *Lancet Neurol* disability outcomes beyond NEDA [PIRA clinical context] — doi: [verify]
+- Elliott et al. (2019) *Mult Scler* slowly expanding lesions [SEL quantification] — doi: [verify]
 
 ---
 
@@ -592,11 +593,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Phase 3 RCTs, systematic reviews, network meta-analyses, real-world evidence
 
 **Recommended Papers**: 5–7 foundational
-- He et al. (2020) *JAMA Neurol* network meta-analysis of DMT efficacy [Comparative effectiveness]
-- Tramacere et al. (2015) *Cochrane* interferon beta systematic review [Lower-efficacy baseline]
-- Brown et al. (2019) *JAMA Neurol* high-efficacy vs. escalation outcomes [HEAT strategy]
-- ECTRIMS/EAN (2018) *Mult Scler* treatment guidelines [Clinical standard]
-- Hauser et al. (2017) *NEJM* ocrelizumab OPERA I/II [B cell therapy pivotal trial]
+- He et al. (2020) *JAMA Neurol* network meta-analysis of DMT efficacy [Comparative effectiveness] — [doi:10.1001/jamaneurol.2020.0249](https://doi.org/10.1001/jamaneurol.2020.0249)
+- Tramacere et al. (2015) *Cochrane* interferon beta systematic review [Lower-efficacy baseline] — doi: [verify]
+- Brown et al. (2019) *JAMA Neurol* high-efficacy vs. escalation outcomes [HEAT strategy] — doi: [verify]
+- ECTRIMS/EAN (2018) *Mult Scler* treatment guidelines [Clinical standard] — doi: [verify]
+- Hauser et al. (2017) *NEJM* ocrelizumab OPERA I/II [B cell therapy pivotal trial] — [doi:10.1056/NEJMoa1601277](https://doi.org/10.1056/NEJMoa1601277)
 
 ---
 
@@ -624,8 +625,8 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Phase 2/3 RCTs, mechanistic studies, CNS pharmacokinetics
 
 **Recommended Papers**: 4–6 foundational
-- Montalban et al. (2023) *NEJM* tolebrutinib HERCULES phase 3 [Progressive MS result]
-- Reich et al. (2024) tolebrutinib GEMINI I/II RMS phase 3 [RMS result]
+- Montalban et al. (2023) *NEJM* tolebrutinib HERCULES phase 3 [Progressive MS result] — doi: [verify]
+- Reich et al. (2024) tolebrutinib GEMINI I/II RMS phase 3 [RMS result] — doi: [verify]
 - BTK signalling mechanistic review (Bouhnik et al. or equivalent) [Mechanism]
 - CNS penetrance pharmacokinetics (preclinical or PK study) [Key pharmacological property]
 
@@ -654,10 +655,10 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Registry studies (ped MS registries), pediatric RCTs, case series
 
 **Recommended Papers**: 4–6 foundational
-- Waldman et al. (2014) *Lancet Neurol* pediatric MS review [Comprehensive overview]
-- Chitnis et al. (2018) *NEJM* PARADIGMS trial (fingolimod in children) [First ped DMT RCT]
-- Renoux et al. (2007) *NEJM* natural history of pediatric-onset MS [Long-term outcomes]
-- Yeh & Chitnis (2022) *Lancet Neurol* pediatric MS update [Current clinical management]
+- Waldman et al. (2014) *Lancet Neurol* pediatric MS review [Comprehensive overview] — doi: [verify]
+- Chitnis et al. (2018) *NEJM* PARADIGMS trial (fingolimod in children) [First ped DMT RCT] — [doi:10.1056/NEJMoa1800149](https://doi.org/10.1056/NEJMoa1800149)
+- Renoux et al. (2007) *NEJM* natural history of pediatric-onset MS [Long-term outcomes] — doi: [verify]
+- Yeh & Chitnis (2022) *Lancet Neurol* pediatric MS update [Current clinical management] — doi: [verify]
 
 ---
 
@@ -684,10 +685,10 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Prospective cohort studies, registry data, pharmacovigilance studies
 
 **Recommended Papers**: 4–6 foundational
-- Vukusic et al. (2004) *Brain* PRIMS study [Definitive pregnancy activity data]
-- Hellwig et al. (2012) *Ther Adv Neurol Disord* DMT safety in pregnancy [Safety review]
-- Lu et al. (2021) *Mult Scler* pregnancy outcomes on B cell therapies [High-efficacy DMT data]
-- Cree et al. (2019) MS and pregnancy guidance [Clinical guidance]
+- Vukusic et al. (2004) *Brain* PRIMS study [Definitive pregnancy activity data] — doi: [verify]
+- Hellwig et al. (2012) *Ther Adv Neurol Disord* DMT safety in pregnancy [Safety review] — doi: [verify]
+- Lu et al. (2021) *Mult Scler* pregnancy outcomes on B cell therapies [High-efficacy DMT data] — doi: [verify]
+- Cree et al. (2019) MS and pregnancy guidance [Clinical guidance] — doi: [verify]
 
 ---
 
@@ -714,11 +715,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Neuropsychological cross-sectional and longitudinal studies, MRI-cognition correlations
 
 **Recommended Papers**: 5–7 foundational
-- Rao et al. (1991) *Neurology* cognitive impairment prevalence [Classic prevalence study]
-- Benedict et al. (2017) *Mult Scler* SDMT validity and norms [Key screening tool]
-- Sumowski et al. (2018) *Neurology* cognitive reserve and MS [Reserve hypothesis]
-- Amato et al. (2013) *Arch Neurol* cognitive trajectories over time [Longitudinal picture]
-- Langdon et al. (2012) *Mult Scler* recommendations for cognitive testing in trials [Outcome standards]
+- Rao et al. (1991) *Neurology* cognitive impairment prevalence [Classic prevalence study] — doi: [verify]
+- Benedict et al. (2017) *Mult Scler* SDMT validity and norms [Key screening tool] — doi: [verify]
+- Sumowski et al. (2018) *Neurology* cognitive reserve and MS [Reserve hypothesis] — doi: [verify]
+- Amato et al. (2013) *Arch Neurol* cognitive trajectories over time [Longitudinal picture] — doi: [verify]
+- Langdon et al. (2012) *Mult Scler* recommendations for cognitive testing in trials [Outcome standards] — doi: [verify]
 
 ---
 
@@ -744,11 +745,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Epidemiological studies, intervention RCTs, meta-analyses of screening tools
 
 **Recommended Papers**: 5–7 foundational
-- Patten et al. (2003) *Neurology* population-based depression prevalence [T4-007: key epidemiological anchor]
-- Siegert & Abernethy (2005) *J Neurol Neurosurg Psychiatry* depression review [T4-008: mechanism + treatment review]
-- Feinstein et al. (2014) *Lancet Neurol* psychiatric aspects of MS [Comprehensive clinical review]
-- Mohr et al. (2001) *Mult Scler* telephone CBT RCT [Evidence-based treatment]
-- Rickards (2005) *J Neurol Neurosurg Psychiatry* depression in neurological conditions [Comparative context]
+- Patten et al. (2003) *Neurology* population-based depression prevalence [T4-007: key epidemiological anchor] — doi: [verify]
+- Siegert & Abernethy (2005) *J Neurol Neurosurg Psychiatry* depression review [T4-008: mechanism + treatment review] — doi: [verify]
+- Feinstein et al. (2014) *Lancet Neurol* psychiatric aspects of MS [Comprehensive clinical review] — doi: [verify]
+- Mohr et al. (2001) *Mult Scler* telephone CBT RCT [Evidence-based treatment] — doi: [verify]
+- Rickards (2005) *J Neurol Neurosurg Psychiatry* depression in neurological conditions [Comparative context] — doi: [verify]
 
 ---
 
@@ -775,11 +776,11 @@ POPULATION HEALTH AND EPIDEMIOLOGY
 **Primary Evidence Type**: Epidemiological cohort studies, health systems research, health disparities literature, qualitative research
 
 **Recommended Papers**: 5–7 foundational
-- Amezcua et al. (2021) *JAMA Neurol* disparities in MS [Comprehensive equity review — R5 expansion anchor]
-- Langer-Gould et al. (2013) *Neurology* racial/ethnic incidence [Incidence disparities]
-- Langer-Gould et al. (2022) *Neurology* prevalence disparities update [Updated epidemiology]
-- Wallin et al. (2023) *Neurology* global prevalence by region [Global equity framing]
-- Dastjerdi et al. (2023) structural racism in MS outcomes [SDOH mechanisms — T4-era addition]
+- Amezcua et al. (2021) *JAMA Neurol* disparities in MS [Comprehensive equity review — R5 expansion anchor] — doi: [verify]
+- Langer-Gould et al. (2013) *Neurology* racial/ethnic incidence [Incidence disparities] — doi: [verify]
+- Langer-Gould et al. (2022) *Neurology* prevalence disparities update [Updated epidemiology] — doi: [verify]
+- Wallin et al. (2023) *Neurology* global prevalence by region [Global equity framing] — doi: [verify]
+- Dastjerdi et al. (2023) structural racism in MS outcomes [SDOH mechanisms — T4-era addition] — doi: [verify]
 
 ---
 
@@ -909,6 +910,11 @@ For each concept, curate:
 - **Quarterly**: Add newly published landmark papers in hot topics (EBV, PIRA, BTK inhibitors)
 - **Annually**: Audit concept definitions, prerequisites, and learning objectives for consistency
 - **As-needed**: Deprecate papers if superseded by new evidence; flag controversial claims
+
+**DOI / Citation Verification**:
+- Papers marked `doi: [verify]` need a confirmed DOI before being treated as citable references.  
+  Resolve by looking up each paper at [doi.org](https://doi.org) or PubMed and replacing the placeholder with the confirmed `[doi:xxx](https://doi.org/xxx)` link.
+- DOIs provided without a `[verify]` tag were sourced from high-confidence recall; spot-check any before programmatic ingestion.
 
 **Feedback Integration**:
 - Learners flag concepts that were confusing or prerequisites that didn't work

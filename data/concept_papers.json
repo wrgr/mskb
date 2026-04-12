@@ -2,820 +2,852 @@
   "concepts": {
     "b_cell_therapies": {
       "advanced": [
-        "c64b243a85cfddaecd548fbccfea7f49",
-        "c8f4c7d0c541747d0d35a84a463a49fb",
-        "ab642b9255f962f00084042f2154bb2b",
-        "81f301ab327c6b3c10d8b23878f382d3"
+        "164f7d3d63d5cc85828794aec88f9836",
+        "e2f8a0d10254bee7300aaa1726630eab",
+        "b46b6752eb8b2e6783c6d009553915f0",
+        "96be9990629de69cbf217e0d0d3a083f",
+        "1a6420577881a2020d502068c6e79515"
       ],
       "foundational": [
+        "c64b243a85cfddaecd548fbccfea7f49",
+        "53ef3e54a182f121080c54f6f5d63787",
         "8f74f55a5ffdbf102e55a123fa031090",
-        "dd050edd43edfb032001cbd6c46d638c",
-        "b5e4140f626ba592e0f8040b9e63f18c"
+        "e6c7440544642a0a1a31ebdf5bc7e577",
+        "b5e4140f626ba592e0f8040b9e63f18c",
+        "c218df1f3b002d3bbe29f57a38e5003b",
+        "ab642b9255f962f00084042f2154bb2b"
       ],
       "rationales": {
-        "81f301ab327c6b3c10d8b23878f382d3": "This paper addresses important safety considerations for rituximab use in women planning or undergoing pregnancy.",
-        "8f74f55a5ffdbf102e55a123fa031090": "This paper establishes the foundational understanding of B-cells as key disease drivers and therapeutic targets in MS.",
-        "ab642b9255f962f00084042f2154bb2b": "This study provides specialized insight into the pathological role of meningeal B-cell follicles in progressive MS.",
-        "b5e4140f626ba592e0f8040b9e63f18c": "This review marks the entry into an era of B-cell therapy, highlighting its effectiveness across MS forms.",
-        "c64b243a85cfddaecd548fbccfea7f49": "This recent review offers a comprehensive update on anti-CD20 therapies, covering pathology, clinical applications, and newer agents.",
-        "c8f4c7d0c541747d0d35a84a463a49fb": "This paper explores the deeper immunological mechanisms of specific B-cell subsets and their role in B-cell depletion therapy.",
-        "dd050edd43edfb032001cbd6c46d638c": "This pivotal trial provides early evidence for the efficacy of rituximab in B-cell depletion for relapsing-remitting MS."
+        "164f7d3d63d5cc85828794aec88f9836": "Explores advanced mechanistic insights into B cell depletion therapies across various autoimmune diseases, including MS.",
+        "1a6420577881a2020d502068c6e79515": "Provides advanced molecular insights into clonally expanded B cells in MS, linking them to Epstein-Barr virus and GlialCAM.",
+        "53ef3e54a182f121080c54f6f5d63787": "Reviews the evolving understanding of B cell roles in MS pathogenesis and the concept of targeted B-cell depletion.",
+        "8f74f55a5ffdbf102e55a123fa031090": "Highlights B cells as key disease drivers and therapeutic targets, referencing early rituximab trials.",
+        "96be9990629de69cbf217e0d0d3a083f": "Delves into the molecular mechanism by which BTK inhibition modulates B-cell\u2013T-cell interaction, offering deeper therapeutic understanding.",
+        "ab642b9255f962f00084042f2154bb2b": "Reveals the pathological significance of meningeal B-cell follicles in progressive MS, linking B cells to severe cortical pathology.",
+        "b46b6752eb8b2e6783c6d009553915f0": "Introduces Bruton\u2019s Tyrosine Kinase (BTK) inhibition as a promising next-generation B-cell targeted therapy for MS.",
+        "b5e4140f626ba592e0f8040b9e63f18c": "Marks the significant impact and establishment of B-cell therapy as a crucial treatment option for MS.",
+        "c218df1f3b002d3bbe29f57a38e5003b": "Presents pivotal phase 2 trial data demonstrating the efficacy and safety of ocrelizumab in relapsing-remitting MS.",
+        "c64b243a85cfddaecd548fbccfea7f49": "Provides a comprehensive overview of anti-CD20 therapies, covering their pathological basis and clinical application in MS.",
+        "e2f8a0d10254bee7300aaa1726630eab": "Discusses practical considerations for using rituximab, an anti-CD20 agent, in the specific context of pediatric MS.",
+        "e6c7440544642a0a1a31ebdf5bc7e577": "Focuses on ocrelizumab and other CD20+ B-cell depleting therapies, including their efficacy in primary progressive MS."
       }
     },
     "bladder_bowel_dysfunction": {
       "advanced": [
-        "2e6662ce25b2b0d794aa73b2c2006649"
+        "9c4fe72f3611a0b20da3dee38f56cd67"
       ],
       "foundational": [
         "4b507897543694afd32a767f85057185",
         "36b6f797c345c00e237754d333659aed",
-        "9c4fe72f3611a0b20da3dee38f56cd67",
-        "a076e268d7706f1a9aa86bbf8cf02558"
+        "0dbb5d2a3d85d5e2ae182b598ef6863c"
       ],
       "rationales": {
-        "2e6662ce25b2b0d794aa73b2c2006649": "This review discusses advanced spinal cord imaging, crucial for understanding the neurological mechanisms underlying bladder and bowel dysfunction.",
-        "36b6f797c345c00e237754d333659aed": "This consensus provides foundational guidelines for the assessment and management of bladder symptoms in MS.",
-        "4b507897543694afd32a767f85057185": "This review details the prevalence, quality of life impact, and management strategies for neurogenic bowel dysfunction in MS.",
-        "9c4fe72f3611a0b20da3dee38f56cd67": "This paper explores patient satisfaction and the bothersome nature of bladder and bowel symptoms, highlighting their quality of life impact.",
-        "a076e268d7706f1a9aa86bbf8cf02558": "This paper defines MS clinical courses, providing essential context for understanding bladder and bowel dysfunction across phenotypes."
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "This narrative review highlights bladder and bowel dysfunction as significant 'invisible symptoms' within a comprehensive approach to MS management.",
+        "36b6f797c345c00e237754d333659aed": "This consensus paper offers essential guidance on the assessment and management of bladder symptoms in MS, crucial for clinical practice.",
+        "4b507897543694afd32a767f85057185": "This review provides a foundational understanding of neurogenic bowel dysfunction, covering its prevalence, impact on quality of life, and management strategies in MS.",
+        "9c4fe72f3611a0b20da3dee38f56cd67": "This paper delves into the patient perspective, examining treatment satisfaction and the bothersome nature of bladder and bowel symptoms, offering a deeper insight into QoL impact."
       }
     },
     "blood_brain_barrier": {
       "advanced": [
-        "834bfb49ae9fed82e6c36e476b74f714",
-        "e208a93e8b45ce632643d45c56c0b1fb",
-        "93f0d1384e4a987b20a0677b896ed46a",
-        "35298d0e900e990010cc08ec8fd7d9f4",
-        "a658576ea70fd9b436f25cc4b62a4c53",
-        "4d8eb5833eb7e446bc82b41d0aee76db"
+        "1f099a26257999c215216ade9be0c56e",
+        "4521f7b1ab1d3b8887c461351ab075ad",
+        "fc0d8c9249ff5851ee5b4a5028bdf9e1",
+        "9e3e323bea2186699e497d7861581b81"
       ],
       "foundational": [
-        "d482c328c19ba5b126673737057a9685",
-        "be8ee73d7234208eb47d6eb2fd8b8677",
-        "0f219b3b7566ca251b64135ad6ff3f3d",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d",
-        "c8f4c7d0c541747d0d35a84a463a49fb"
+        "44870152065b2135ec133bba0de70180",
+        "be8ee73d7234208eb47d6eb2fd8b8677"
       ],
       "rationales": {
-        "0f219b3b7566ca251b64135ad6ff3f3d": "Explains the role of autoreactive lymphocytes, key immune cells that cross the compromised BBB to drive MS pathology.",
-        "35298d0e900e990010cc08ec8fd7d9f4": "Discusses MRI as a clinical tool for monitoring MS disease activity, which implicitly includes detecting BBB breakdown.",
-        "4d8eb5833eb7e446bc82b41d0aee76db": "Examines inflammation and oxidative stress as key pathological consequences of immune cell entry and CNS damage in MS.",
-        "834bfb49ae9fed82e6c36e476b74f714": "Delves into a specific molecular mechanism by which microglia regulate BBB integrity in inflammatory demyelination relevant to MS.",
-        "93f0d1384e4a987b20a0677b896ed46a": "Focuses on NF-\u03baB, a key inflammatory signaling pathway activated in MS, representing a deeper molecular consequence of CNS inflammation.",
-        "a658576ea70fd9b436f25cc4b62a4c53": "Explores the critical link between CNS inflammation, initiated by BBB dysfunction, and subsequent neurodegeneration in MS.",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d": "Focuses on T helper cells, a specific and crucial type of lymphocyte involved in CNS inflammation after BBB breach.",
-        "be8ee73d7234208eb47d6eb2fd8b8677": "Directly addresses the fundamental process of immune cell transmigration into the CNS in multiple sclerosis.",
-        "c8f4c7d0c541747d0d35a84a463a49fb": "Highlights the role of B cells, another significant immune cell type contributing to MS pathogenesis following BBB dysfunction.",
-        "d482c328c19ba5b126673737057a9685": "Provides a general understanding of blood-brain barrier function and its breakdown in neurodegeneration.",
-        "e208a93e8b45ce632643d45c56c0b1fb": "Explores advanced insights into viral triggers that can drive the inflammatory cascade in MS, a consequence of BBB dysfunction."
+        "1f099a26257999c215216ade9be0c56e": "This study details the specific role of PECAM-1 in stabilizing BBB integrity and facilitating T-cell diapedesis during neuroinflammation.",
+        "44870152065b2135ec133bba0de70180": "This review provides a comprehensive overview of BBB dysfunction in MS, covering its causes, consequences, and therapeutic implications.",
+        "4521f7b1ab1d3b8887c461351ab075ad": "This research identifies MCAM as a key adhesion molecule promoting the recruitment of encephalitogenic T lymphocytes across the BBB.",
+        "9e3e323bea2186699e497d7861581b81": "This review explores advanced strategies, such as engineered nanoparticles, for precision drug delivery across the BBB to treat CNS disorders.",
+        "be8ee73d7234208eb47d6eb2fd8b8677": "This paper explains the fundamental mechanisms by which immune cells breach the BBB to enter the brain in MS.",
+        "fc0d8c9249ff5851ee5b4a5028bdf9e1": "This paper establishes neurofilament levels as a biomarker associated with BBB integrity and lymphocyte extravasation in early MS."
       }
     },
     "btk_inhibitors": {
       "advanced": [
-        "b4edb101341ca99cbe8e816c2b026ac2",
-        "7541612a7ea49f1aa731f605c7158ffa",
-        "e4eb2d213c43c24473852fd14e9840cd",
-        "98c83ea8cdcd9c251d383978347cbb0e",
-        "834bfb49ae9fed82e6c36e476b74f714",
-        "6d8489df9953235b9db14617634bb7f4"
+        "6054b7a4501e736e10cd63667cbcd1cc",
+        "69454965c1bbf0799f3e2fc82178c664",
+        "96be9990629de69cbf217e0d0d3a083f",
+        "b46b6752eb8b2e6783c6d009553915f0",
+        "9db9dd82b4dae30a54a43921da47423d",
+        "abd2317d673f30595736f38dbd7665f1"
       ],
       "foundational": [
         "6ab243ce87f009bef30c91d659f804bc",
-        "69454965c1bbf0799f3e2fc82178c664",
-        "6054b7a4501e736e10cd63667cbcd1cc",
-        "efc6956c9e379a9fcf5339d12a53a661",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25",
-        "22092527fa6e11b1e5ab3a6336e4353d"
+        "eeacec868b4511093739cb3b1d64953a",
+        "3cda6446e9a295feed1dab470ec3f2ca",
+        "e6e2d51c408ba03d91f083e7d88944e5",
+        "44870152065b2135ec133bba0de70180"
       ],
       "rationales": {
-        "22092527fa6e11b1e5ab3a6336e4353d": "This paper describes the pathology of 'smoldering plaques' characterized by microglial activation, which BTK inhibitors aim to address in progressive MS.",
-        "6054b7a4501e736e10cd63667cbcd1cc": "This paper presents a key phase 2b clinical trial for tolebrutinib, another brain-penetrant BTK inhibitor, demonstrating its safety and efficacy in relapsing MS.",
-        "69454965c1bbf0799f3e2fc82178c664": "This is a foundational clinical trial for evobrutinib, an oral BTK inhibitor, providing early evidence of its efficacy in relapsing MS.",
-        "6ab243ce87f009bef30c91d659f804bc": "This paper provides a comprehensive overview of Bruton's tyrosine kinase inhibitors for multiple sclerosis, serving as an excellent introduction to the topic.",
-        "6d8489df9953235b9db14617634bb7f4": "This genomic study implicates both peripheral immune cells (like B cells) and microglia in MS susceptibility, offering a broader genetic context for the targets of BTK inhibitors.",
-        "7541612a7ea49f1aa731f605c7158ffa": "This paper delves into the specific microglial dysfunction of inefficient myelin debris clearance, which impairs remyelination and is a potential target for BTK inhibitors.",
-        "834bfb49ae9fed82e6c36e476b74f714": "This paper uncovers a specific molecular pathway (miR-126a-5p/MMP9 axis) by which microglia regulate blood-brain barrier integrity, a process potentially influenced by CNS-penetrant BTK inhibitors.",
-        "98c83ea8cdcd9c251d383978347cbb0e": "This paper demonstrates how modulating macrophage/microglia function can enhance remyelination, providing a mechanistic example relevant to the remyelinating potential of BTK inhibitors.",
-        "b4edb101341ca99cbe8e816c2b026ac2": "This paper uses advanced 7T MRI to visualize iron-rim lesions and their association with slowly expanding plaques, offering a deeper insight into smoldering MS pathology targeted by BTK inhibitors.",
-        "e4eb2d213c43c24473852fd14e9840cd": "This paper provides a detailed exploration of the roles of microglia and astrocytes in phagocytosis and myelination, offering a deeper cellular understanding of BTK inhibitor targets.",
-        "efc6956c9e379a9fcf5339d12a53a661": "This paper introduces the crucial concept that BTK inhibition can promote myelin repair, highlighting a key therapeutic mechanism beyond immune cell modulation.",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25": "This review establishes the role of CNS macrophages (microglia) in progressive MS, providing essential context for understanding why BTK inhibitors target these cells."
+        "3cda6446e9a295feed1dab470ec3f2ca": "Explains the multifaceted role of microglia in MS, highlighting why they are a key target for CNS-penetrant BTK inhibitors.",
+        "44870152065b2135ec133bba0de70180": "Explains blood-brain barrier dysfunction in MS, underscoring the importance of CNS-penetrant therapies like BTK inhibitors.",
+        "6054b7a4501e736e10cd63667cbcd1cc": "Presents phase 2b clinical trial data for tolebrutinib, demonstrating its efficacy and safety in relapsing MS.",
+        "69454965c1bbf0799f3e2fc82178c664": "Reports on a placebo-controlled trial of evobrutinib, offering specific clinical outcomes for another BTK inhibitor.",
+        "6ab243ce87f009bef30c91d659f804bc": "Provides a comprehensive overview of Bruton's tyrosine kinase inhibitors and their therapeutic potential in multiple sclerosis.",
+        "96be9990629de69cbf217e0d0d3a083f": "Delves into the specific molecular mechanisms by which BTK inhibition modulates B-cell and T-cell interactions.",
+        "9db9dd82b4dae30a54a43921da47423d": "Investigates specific microglial pathways, like MAPKERK overactivity, that BTK inhibitors might target in MS.",
+        "abd2317d673f30595736f38dbd7665f1": "Explores how activated microglia contribute to demyelination via CSF1R signaling, a pathway potentially modulated by BTK inhibitors.",
+        "b46b6752eb8b2e6783c6d009553915f0": "Offers a detailed review of BTK inhibition, providing a deeper synthesis of the therapeutic landscape and challenges.",
+        "e6e2d51c408ba03d91f083e7d88944e5": "Discusses the mechanisms driving progressive MS, providing context for BTK inhibitors targeting 'smoldering' disease.",
+        "eeacec868b4511093739cb3b1d64953a": "Establishes the critical role of B cells in MS pathogenesis, a primary target for BTK inhibitors."
       }
     },
     "cognition_ms": {
       "advanced": [
-        "48ea801d9e193594d285cfda9d2871e0",
-        "6ccba954a51064043eaea2a354f9b730",
-        "f70e209fc2414ec859d33035ddd60a3a",
-        "f6490731cc2485b8c5a48abcd08ba9df",
-        "21fc977feae2d034b603cb7733ebd6c5"
-      ],
-      "foundational": [
-        "5c6eb5958ea2fb8239eab3372fbcdf33",
-        "65ee33999237182f417f4cd2909ea3e8",
-        "10b44f5497cbc0174a5d1ccda9b0e013",
-        "fec457302ab115a85120859e4b47207d",
+        "213dcd047c81784a185b5b8550fc8199",
+        "248eb043211fd51a413f554d51f4502c",
+        "c3459bbaa673a053c01b67c303aaa154",
+        "21fc977feae2d034b603cb7733ebd6c5",
+        "ae690b0463b086e974631afe383e7c3d",
         "602de8ec1be83948ae88f76db94194c3"
       ],
+      "foundational": [
+        "aea9088c9f22b9300d18dab5d5730027",
+        "87b7474219a5662a93cf3d81d0ff23f9",
+        "5c6eb5958ea2fb8239eab3372fbcdf33",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c",
+        "df8167e4fdc5afa715e53bdaec4325d2"
+      ],
       "rationales": {
-        "10b44f5497cbc0174a5d1ccda9b0e013": "Highlights the significant impact and interplay of mood disorders with cognitive impairment in MS patients.",
-        "21fc977feae2d034b603cb7733ebd6c5": "Explores a mechanistic understanding of hippocampal dysfunction and a potential therapeutic strategy for cognitive deficits in MS.",
-        "48ea801d9e193594d285cfda9d2871e0": "Investigates MRI measures and clinical factors that predict future cognitive decline in MS.",
-        "5c6eb5958ea2fb8239eab3372fbcdf33": "Provides essential guidelines for screening, awareness, and management of cognitive symptoms in MS care.",
-        "602de8ec1be83948ae88f76db94194c3": "Explores how menopause can influence and overlap with cognitive symptoms in women with MS.",
-        "65ee33999237182f417f4cd2909ea3e8": "Introduces and validates a key assessment tool (MACFIMS) for identifying common cognitive deficits in MS.",
-        "6ccba954a51064043eaea2a354f9b730": "Demonstrates the enhanced prognostic value of integrating multi-modal biomarkers for early cognitive impairment in MS.",
-        "f6490731cc2485b8c5a48abcd08ba9df": "Offers clinical guidance on utilizing NfL as a biomarker for prognosis and treatment monitoring, relevant to neurodegeneration underlying cognitive issues.",
-        "f70e209fc2414ec859d33035ddd60a3a": "Provides longitudinal evidence for serum NfL as a biomarker correlating with cognitive performance in MS.",
-        "fec457302ab115a85120859e4b47207d": "Addresses the prevalence and impact of cognitive disturbances in the pediatric MS population."
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "This review positions cognitive impairments as a key 'invisible symptom' within a comprehensive approach to MS management.",
+        "213dcd047c81784a185b5b8550fc8199": "This paper delves into structural MRI correlates, using advanced methods to link specific brain damage to cognitive deficits in MS.",
+        "21fc977feae2d034b603cb7733ebd6c5": "This research explores the neuropathology of hippocampal dysfunction and a potential therapeutic intervention for memory impairment in MS.",
+        "248eb043211fd51a413f554d51f4502c": "This study investigates the correlation between cognitive dysfunction and neurofilament light polypeptide levels, a specific biomarker, in MS.",
+        "5c6eb5958ea2fb8239eab3372fbcdf33": "This paper offers practical recommendations for cognitive screening and management, addressing assessment tools and strategies.",
+        "602de8ec1be83948ae88f76db94194c3": "This review focuses on the specific effects of menopause on cognitive symptoms in women with multiple sclerosis.",
+        "87b7474219a5662a93cf3d81d0ff23f9": "This foundational paper details the prevalence and specific patterns of cognitive dysfunction observed in multiple sclerosis.",
+        "ae690b0463b086e974631afe383e7c3d": "This paper examines how race and ethnicity influence cognitive function in newly diagnosed MS patients, highlighting demographic disparities.",
+        "aea9088c9f22b9300d18dab5d5730027": "This paper provides a comprehensive overview of cognitive impairment in MS, covering clinical management, MRI, and therapeutic avenues.",
+        "c3459bbaa673a053c01b67c303aaa154": "This paper provides specialized insights into cognitive and psychosocial features specifically in childhood and juvenile MS.",
+        "df8167e4fdc5afa715e53bdaec4325d2": "This study explores the crucial link between cognitive deficits and their impact on everyday functional activities in MS patients."
       }
     },
     "csf_biomarkers": {
       "advanced": [
-        "96751ecdaa29c743fd2017ef1166dcc1",
-        "29a5e523cb04dd327a6e5a9c6a22d025",
-        "1305d8d4e76b4e8df3bcbb294c51a669",
-        "6ccba954a51064043eaea2a354f9b730",
-        "a34c385ae845f68d0cdcd5cceec456d6",
-        "84c7dda1dab6685f12ae301b7dc5d142"
+        "d03770c799886673a34c90cef87c8e0a",
+        "850b028db28632cccad53606cff867c0",
+        "c036b8ea79fdc6cab8dda54892c64621",
+        "eb5a5bdc2622a6dbc7e8a235fd3b0965"
       ],
       "foundational": [
-        "0a7c16172a6e1a4f0a7cfdf68d4bac0e",
-        "dbbce5c55c5eeec69cf326b18f2889ec",
-        "2f7973bb6c1abcdba7fa3f3ba8c267f8"
+        "96751ecdaa29c743fd2017ef1166dcc1",
+        "29a5e523cb04dd327a6e5a9c6a22d025",
+        "a6904749e51b185ab55ca5084eb1cc55",
+        "9b280fde6874792c004e6b847bdaf1f6"
       ],
       "rationales": {
-        "0a7c16172a6e1a4f0a7cfdf68d4bac0e": "Provides a comprehensive overview of current and emerging biomarkers, including NfL, for MS disease activity and progression.",
-        "1305d8d4e76b4e8df3bcbb294c51a669": "Delves into the specific methodological aspects and reliability of the K free light chain index for intrathecal synthesis.",
-        "29a5e523cb04dd327a6e5a9c6a22d025": "Explores the prognostic utility of NfL and oligoclonal bands in predicting conversion to MS in early disease stages.",
-        "2f7973bb6c1abcdba7fa3f3ba8c267f8": "Investigates a broad range of inflammation-related protein biomarkers in both CSF and plasma, offering a wider perspective.",
-        "6ccba954a51064043eaea2a354f9b730": "Demonstrates the advanced application of combining blood and imaging biomarkers for predicting cognitive impairment in MS.",
-        "84c7dda1dab6685f12ae301b7dc5d142": "Identifies novel predictive autoantibody signatures, representing a cutting-edge approach to biomarker discovery.",
-        "96751ecdaa29c743fd2017ef1166dcc1": "Discusses the integration of kappa free light chains and oligoclonal bands into the latest diagnostic criteria for MS.",
-        "a34c385ae845f68d0cdcd5cceec456d6": "Investigates the specific autoantibody repertoire in CSF and serum, providing deeper insight into IgG synthesis and OCB.",
-        "dbbce5c55c5eeec69cf326b18f2889ec": "Establishes the diagnostic importance of kappa free light chains in CSF for MS, a key biomarker."
+        "29a5e523cb04dd327a6e5a9c6a22d025": "This study establishes neurofilament light chain and oligoclonal bands as prognostic biomarkers in early stages of multiple sclerosis.",
+        "850b028db28632cccad53606cff867c0": "This paper examines the relationship between CSF neurofilament light chain levels and cognitive impairment in multiple sclerosis patients.",
+        "96751ecdaa29c743fd2017ef1166dcc1": "This paper introduces kappa free light chains and oligoclonal bands as interchangeable CSF biomarkers in the 2024 McDonald diagnostic criteria.",
+        "9b280fde6874792c004e6b847bdaf1f6": "This critical review provides a foundational understanding of blood neurofilament light chain as a biomarker for neuronal injury.",
+        "a6904749e51b185ab55ca5084eb1cc55": "This paper highlights the role of NfL and glial fibrillary acidic protein (GFAP) in differentiating MS disease courses.",
+        "c036b8ea79fdc6cab8dda54892c64621": "This research demonstrates serum neurofilament light chain as a predictor of disease worsening and brain/spinal cord atrophy in multiple sclerosis.",
+        "d03770c799886673a34c90cef87c8e0a": "This study investigates the combined prognostic potential of CSF neurofilament light chain and chitinase-3 like-1 in multiple sclerosis.",
+        "eb5a5bdc2622a6dbc7e8a235fd3b0965": "This paper focuses on the utility of serum neurofilament light chain as a biomarker specifically in progressive multiple sclerosis."
       }
     },
     "demyelination_remyelination": {
       "advanced": [
-        "e4eb2d213c43c24473852fd14e9840cd",
+        "ffdc650801631b8452f2f3cb7e113810",
         "7541612a7ea49f1aa731f605c7158ffa",
-        "dbf329a645b2882ad0edfc57b1d5411b",
+        "b93bbc430aa624c3a24885ab119a1bd5",
         "3b559471b6d4c5b6fda99a35ae786419",
-        "d8533e4b4fe15c58b1d25fa49f856480",
-        "04f56eec510f8885c35dfbf5401822b8",
-        "c036b8ea79fdc6cab8dda54892c64621",
-        "6149d4340638dc5e38691c640de64d42"
+        "6149d4340638dc5e38691c640de64d42",
+        "daa928e91ffdb9a2b096b43eac907503",
+        "d38a701103dc736dc27650680dd6ed33",
+        "ae2b051d13e046a36e209c2b3d3073bc"
       ],
       "foundational": [
-        "107100ef01117840ffa15a9c7faab84e",
-        "7e24728d3ff983ef01031c9209c9b0a4",
-        "d38a701103dc736dc27650680dd6ed33",
+        "bcca4f261a35e09dcc89122f5a3c7991",
+        "13564bdb5febb0b1d38b77676aeba9fd",
         "ac493a2b3c0e1da06953d27942d421ff",
-        "2202f12a53491be9581e74f27eb55741",
-        "c904ba4486eb3d1ab3509426087231c9",
-        "ffdc650801631b8452f2f3cb7e113810",
-        "d6ec96bd4c56cb827b47625ed36f2318"
+        "5aae6d9b9b5d6478eb293ec5f1c7d594",
+        "d4b9e04dc5a8d39c6a9b2b8173049841",
+        "14ad1ba5291f6c3657c596cc02558ae7",
+        "2202f12a53491be9581e74f27eb55741"
       ],
       "rationales": {
-        "04f56eec510f8885c35dfbf5401822b8": "Presents early findings on neurofilament protein in CSF as a potential biomarker for axonal damage and disease activity.",
-        "107100ef01117840ffa15a9c7faab84e": "Provides a foundational overview of MS as an inflammatory neurodegenerative disease characterized by demyelination and lesion formation.",
-        "2202f12a53491be9581e74f27eb55741": "Establishes axonal loss as a primary driver of irreversible neurological disability in MS.",
-        "3b559471b6d4c5b6fda99a35ae786419": "Explores the neural androgen receptor as a potential therapeutic target for stimulating myelin repair in chronic demyelination.",
-        "6149d4340638dc5e38691c640de64d42": "Examines the frequency and extent of remyelination specifically within cortical lesions in chronic MS patients.",
-        "7541612a7ea49f1aa731f605c7158ffa": "Investigates how inefficient clearance of myelin debris by microglia directly impairs remyelinating processes.",
-        "7e24728d3ff983ef01031c9209c9b0a4": "Explores the critical role of inflammation in driving demyelination and neuro-axonal damage in MS.",
-        "ac493a2b3c0e1da06953d27942d421ff": "Presents early evidence of acute axonal damage occurring in MS lesions, linking it to permanent disability.",
-        "c036b8ea79fdc6cab8dda54892c64621": "Demonstrates the utility of serum neurofilament light chain as a predictor of disease worsening and brain atrophy in MS.",
-        "c904ba4486eb3d1ab3509426087231c9": "Introduces the concept of myelin recovery and highlights the significant challenges associated with remyelination in MS.",
-        "d38a701103dc736dc27650680dd6ed33": "Offers in situ evidence for specific immune mechanisms, like antibody and complement, in mediating myelin destruction.",
-        "d6ec96bd4c56cb827b47625ed36f2318": "Discusses the pathological heterogeneity of MS lesions and its implications for understanding demyelination mechanisms.",
-        "d8533e4b4fe15c58b1d25fa49f856480": "Utilizes advanced MRI techniques to quantify and characterize myelin and axon pathology in vivo across different lesion types.",
-        "dbf329a645b2882ad0edfc57b1d5411b": "Identifies a specific MS risk gene, Mertk, as crucial for microglial activation and efficient remyelination.",
-        "e4eb2d213c43c24473852fd14e9840cd": "Delves into the specific roles of microglia and astrocytes in myelin debris phagocytosis and subsequent remyelination processes.",
-        "ffdc650801631b8452f2f3cb7e113810": "Compares the dynamics of demyelination and remyelination, particularly addressing the causes of incomplete remyelination in progressive MS."
+        "13564bdb5febb0b1d38b77676aeba9fd": "This comprehensive review offers an updated overview of MS pathology, including molecular aspects, demyelination in white and gray matter, and neurodegeneration.",
+        "14ad1ba5291f6c3657c596cc02558ae7": "This paper proposes a unifying histological classification system for MS lesions, essential for understanding the diverse pathological manifestations.",
+        "2202f12a53491be9581e74f27eb55741": "This paper establishes the critical link between neurodegeneration, specifically axonal loss, and permanent neurological disability in MS.",
+        "3b559471b6d4c5b6fda99a35ae786419": "This paper explores the neural androgen receptor as a specific therapeutic target for promoting myelin repair in chronic demyelination.",
+        "5aae6d9b9b5d6478eb293ec5f1c7d594": "This review provides a foundational understanding of remyelination biology in the CNS and its potential for therapeutic intervention.",
+        "6149d4340638dc5e38691c640de64d42": "This study provides insights into the occurrence and extent of remyelination specifically within cortical lesions in chronic MS patients.",
+        "7541612a7ea49f1aa731f605c7158ffa": "This study identifies inefficient myelin debris clearance by microglia as a specific mechanism impairing remyelination processes.",
+        "ac493a2b3c0e1da06953d27942d421ff": "This early study was crucial in establishing the presence and significance of acute axonal damage in MS lesions.",
+        "ae2b051d13e046a36e209c2b3d3073bc": "This study investigates regional differences in remyelination failure, particularly in periventricular areas, and its contribution to neurodegeneration.",
+        "b93bbc430aa624c3a24885ab119a1bd5": "This paper introduces the concept of a reversible form of axon damage, adding nuance to the understanding of axonal pathology in MS.",
+        "bcca4f261a35e09dcc89122f5a3c7991": "This paper provides a foundational understanding of MS pathology, defining inflammatory demyelination and associated axonal damage.",
+        "d38a701103dc736dc27650680dd6ed33": "This paper provides in situ evidence for specific immunological mechanisms, namely antibody- and complement-mediated demyelination, in MS.",
+        "d4b9e04dc5a8d39c6a9b2b8173049841": "This recent review synthesizes the pathogenesis of chronic demyelination and axonal degeneration, highlighting their therapeutic implications.",
+        "daa928e91ffdb9a2b096b43eac907503": "This recent paper focuses on 'smouldering lesions' and the specific cellular and pathobiochemical mechanisms driving chronic demyelination and neurodegeneration.",
+        "ffdc650801631b8452f2f3cb7e113810": "This paper delves into the complex balance between demyelination and remyelination in the context of progressive multiple sclerosis."
       }
     },
     "depression_anxiety_ms": {
       "advanced": [
+        "182655ec2515f4deb31a2f736a6c672a",
         "2def680bfb7f4123cf2964bf2d5faf20",
         "602de8ec1be83948ae88f76db94194c3",
-        "4d110195d3d5a270332afc6890c82433",
-        "ba032dd490406d7cc30b8997156b1389"
+        "836eed21167b7034dca4476ac7aeca63",
+        "d228cc19cf0229460184cf29966dc067"
       ],
       "foundational": [
-        "1a0536159d73a4a67efe368ef57ed45f",
+        "ee043c45f5376a26956aa4650e6e0be2",
         "08caccad9a0ca229a22f4550b3dc20a7",
+        "10b44f5497cbc0174a5d1ccda9b0e013",
         "669ba1b5949d8ddb24ebc16a6d1b015d",
-        "10b44f5497cbc0174a5d1ccda9b0e013"
+        "0dbb5d2a3d85d5e2ae182b598ef6863c",
+        "7f8057f754bc25f4e383921a82b15354"
       ],
       "rationales": {
-        "08caccad9a0ca229a22f4550b3dc20a7": "This 'State of the Art' review provides a comprehensive overview of neuropsychiatric symptoms, including depression, their diagnosis, and treatment in MS.",
-        "10b44f5497cbc0174a5d1ccda9b0e013": "This paper provides a recent overview of depressive symptoms and anxiety, highlighting their impact on quality of life and connection to cognitive impairment in MS.",
-        "1a0536159d73a4a67efe368ef57ed45f": "This systematic review and meta-analysis establishes the prevalence of depression and anxiety in MS and their association with disability.",
-        "2def680bfb7f4123cf2964bf2d5faf20": "This paper delves into the specialized topic of perinatal depression and anxiety, addressing a unique context for women with MS.",
-        "4d110195d3d5a270332afc6890c82433": "This paper provides advanced insights into the etiology, effects, and management of psychiatric disorders as comorbidities in MS.",
-        "602de8ec1be83948ae88f76db94194c3": "This review explores the specific effects of menopause on women with MS, including overlapping symptoms like mood disturbances.",
-        "669ba1b5949d8ddb24ebc16a6d1b015d": "This evidence-based guideline offers foundational recommendations for the assessment and management of psychiatric disorders in MS patients.",
-        "ba032dd490406d7cc30b8997156b1389": "This review examines sex-specific factors and their impact on women with MS across the lifespan, including implications for mood disorders."
+        "08caccad9a0ca229a22f4550b3dc20a7": "Offers an updated overview of the high prevalence and impact of neuropsychiatric symptoms, including depression, in MS.",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "Integrates mood disorders into the broader context of 'invisible symptoms' for comprehensive MS management.",
+        "10b44f5497cbc0174a5d1ccda9b0e013": "Presents emerging evidence on depressive symptoms, anxiety, and cognitive impairment, providing a current foundational understanding.",
+        "182655ec2515f4deb31a2f736a6c672a": "Explores the gut microbiota-brain axis as a specific biological mechanism contributing to neurological and psychiatric disorders.",
+        "2def680bfb7f4123cf2964bf2d5faf20": "Focuses on the specialized context of perinatal depression and anxiety in women with MS.",
+        "602de8ec1be83948ae88f76db94194c3": "Reviews the impact of menopause on women with MS, including its influence on mood disturbances.",
+        "669ba1b5949d8ddb24ebc16a6d1b015d": "Delivers evidence-based guidelines for the assessment and management of psychiatric disorders in MS.",
+        "7f8057f754bc25f4e383921a82b15354": "Investigates the strong relationship between cognitive impairment and nonsomatic symptoms of depression in MS.",
+        "836eed21167b7034dca4476ac7aeca63": "Provides deeper insights into the inflammatory and neuroglial aspects of MS pathogenesis relevant to mood disorder mechanisms.",
+        "d228cc19cf0229460184cf29966dc067": "Details the mechanisms of neuronal dysfunction and degeneration in MS, offering a biological basis for neuropsychiatric symptoms.",
+        "ee043c45f5376a26956aa4650e6e0be2": "Provides an early comprehensive review of depression prevalence and its relationship with MS."
       }
     },
     "disease_course": {
       "advanced": [
-        "1b84ccb0d4cf9a3c36fe1fe3f93b1064",
-        "3bd9e8c227d3165966ef76c53ae2f761",
-        "f9f2ed6dc044e99d40d42063c98de5d3",
-        "00dcfc8471284767e07f54fda26ce562",
-        "eb5a5bdc2622a6dbc7e8a235fd3b0965",
-        "1272531bbe61511e02863f5654c7f02e",
+        "a62e6867fd8fd089666cf7bd38d78f49",
+        "836e3bf429a210dcbde1d50e143d5b94",
+        "b756978d42c57cf588ecd13f75a1e4b6",
+        "f5cb7f0de8b18a6be79e9cd440b94b3a",
         "ffdc650801631b8452f2f3cb7e113810",
-        "bc0811208676c8e7d888b6beada8d402"
+        "582f23682211d97c40cacbcc87c3f2bb",
+        "f9f2ed6dc044e99d40d42063c98de5d3",
+        "6f322777da26a96e70c125f02d2e0eff"
       ],
       "foundational": [
-        "891e0143fe813d9a76c3c27065d412a5",
         "3be219c79ed6acd2d1696e3bbda3da2f",
-        "38d65ed7107ec8b5091630cf4be49d20",
-        "813237f9ab450891b35a34b8032c9b3d",
-        "e5d9ce9e69921545837f9e2ab38589b0",
+        "891e0143fe813d9a76c3c27065d412a5",
         "047a3285ade63589276df8c2ce31e345",
+        "38d65ed7107ec8b5091630cf4be49d20",
         "753ba5e0dffbc730f4ff23d495623e9d",
-        "a62e6867fd8fd089666cf7bd38d78f49"
+        "1b84ccb0d4cf9a3c36fe1fe3f93b1064",
+        "813237f9ab450891b35a34b8032c9b3d",
+        "2aad391cd41041d0c680cb0eef1522d0"
       ],
       "rationales": {
-        "00dcfc8471284767e07f54fda26ce562": "Provides evidence for a two-stage model of disability progression, linking early inflammation to later neurodegeneration.",
-        "047a3285ade63589276df8c2ce31e345": "Explains how disability is acquired through relapse-associated worsening and progression independent of relapse activity.",
-        "1272531bbe61511e02863f5654c7f02e": "Reviews advanced machine learning and MRI-based methods for predicting MS disease progression and outcomes.",
-        "1b84ccb0d4cf9a3c36fe1fe3f93b1064": "Offers a comprehensive review of secondary progressive MS, detailing its characteristics and therapeutic challenges.",
-        "38d65ed7107ec8b5091630cf4be49d20": "Examines the critical relationship between relapses and the accumulation of long-term disability.",
-        "3bd9e8c227d3165966ef76c53ae2f761": "Introduces the concept of 'smouldering MS' as a key pathological driver of insidious disease progression.",
-        "3be219c79ed6acd2d1696e3bbda3da2f": "Establishes the updated phenotypic classification crucial for understanding different MS disease courses.",
-        "753ba5e0dffbc730f4ff23d495623e9d": "Offers key observations on the clinical features and evolution of the progressive phase of MS.",
-        "813237f9ab450891b35a34b8032c9b3d": "Introduces standard clinical outcome measures like EDSS for assessing disability progression in MS.",
-        "891e0143fe813d9a76c3c27065d412a5": "Provides a foundational understanding of MS natural history and diverse patterns of disability accumulation.",
-        "a62e6867fd8fd089666cf7bd38d78f49": "Provides a contemporary overview of evolving epidemiological trends and redefinitions of MS clinical course.",
-        "bc0811208676c8e7d888b6beada8d402": "Identifies distinct MS endophenotypes using high-dimensional blood signatures, linking them to different disease trajectories.",
-        "e5d9ce9e69921545837f9e2ab38589b0": "Discusses the interplay of inflammatory and neurodegenerative processes driving MS disease course.",
-        "eb5a5bdc2622a6dbc7e8a235fd3b0965": "Explores the utility of serum neurofilament light as a biomarker for monitoring progression in MS.",
-        "f9f2ed6dc044e99d40d42063c98de5d3": "Presents a topographical model to conceptually integrate relapses and progression within the MS disease course.",
-        "ffdc650801631b8452f2f3cb7e113810": "Analyzes the balance between demyelination and remyelination as pathological correlates of progressive MS."
+        "047a3285ade63589276df8c2ce31e345": "This study clarifies how disability is acquired in MS, distinguishing between relapse-associated worsening and progression independent of relapse activity.",
+        "1b84ccb0d4cf9a3c36fe1fe3f93b1064": "This review offers a comprehensive overview of secondary progressive MS, detailing its characteristics and differences from relapsing-remitting MS.",
+        "2aad391cd41041d0c680cb0eef1522d0": "This systematic review provides an essential overview of MS relapse epidemiology, outcomes, and management.",
+        "38d65ed7107ec8b5091630cf4be49d20": "This paper investigates the crucial relationship between relapses and long-term disability progression in MS.",
+        "3be219c79ed6acd2d1696e3bbda3da2f": "This paper introduces the widely accepted phenotypic classification of MS disease courses.",
+        "582f23682211d97c40cacbcc87c3f2bb": "This review provides insights into the complex epigenetic mechanisms that contribute to MS disease progression.",
+        "6f322777da26a96e70c125f02d2e0eff": "This review delves into the current understanding and future challenges regarding the secondary progressive phase of MS.",
+        "753ba5e0dffbc730f4ff23d495623e9d": "This natural history study provides key observations on the clinical features and evolution of the progressive phase of MS.",
+        "813237f9ab450891b35a34b8032c9b3d": "This paper discusses the standard clinical outcome measures, including EDSS, used to assess MS disease progression in trials.",
+        "836e3bf429a210dcbde1d50e143d5b94": "This study provides specific evidence for relapse-independent progression in MS patients under long-term treatment, deepening understanding of PIRA.",
+        "891e0143fe813d9a76c3c27065d412a5": "This foundational paper presents a unifying concept for the variable patterns of MS evolution and disability accumulation.",
+        "a62e6867fd8fd089666cf7bd38d78f49": "This recent paper discusses emerging epidemiological trends and evolving definitions that redefine the clinical course of MS.",
+        "b756978d42c57cf588ecd13f75a1e4b6": "This observational study investigates the critical impact of early high-efficacy therapy on reducing long-term disability in MS.",
+        "f5cb7f0de8b18a6be79e9cd440b94b3a": "This paper explores the use of serum neurofilament light chain as a biomarker for individual prognostication of MS disease activity.",
+        "f9f2ed6dc044e99d40d42063c98de5d3": "This paper proposes a topographical model that integrates the dynamic interplay of relapses and progression in MS disease course.",
+        "ffdc650801631b8452f2f3cb7e113810": "This study examines the pathological balance between demyelination and remyelination as a key factor in progressive MS."
       }
     },
     "dmt_overview": {
       "advanced": [
+        "6ab243ce87f009bef30c91d659f804bc",
+        "e6e2d51c408ba03d91f083e7d88944e5",
+        "19205a4ee145885de5c9d60d65040a45",
         "047a3285ade63589276df8c2ce31e345",
         "92d58c9a84372afaad9777a4390ed4cf",
-        "746b4621c05f13bab10c519ef3efcb0c",
-        "4ff24399cb96cba7a8171e70658a055b",
-        "17872ed3dfe1413dc47b2033f0d41a54",
-        "3bd9e8c227d3165966ef76c53ae2f761",
-        "166b2482b2068cf9b9df6aa85b62de9e",
-        "20bcb5fb1dd77d076bac428fe661032d"
+        "f5cb7f0de8b18a6be79e9cd440b94b3a",
+        "24cbe6ff99bcce90651711eeb6449fba",
+        "40c6aa431603781e610fc5fe8dde3a25"
       ],
       "foundational": [
-        "730559cf4e13882f7715636e52cae7e7",
-        "4271ebf6ac652293dbb06cf94322aebf",
-        "ed25bc26506ce184116636cac37753af",
+        "37e44e24c83cfcbcb63c9211904fde32",
         "e301a2244218a4c99ba9bd4e58008856",
-        "9fc11e3fc64f3720e33ee86aeb01376b",
-        "84ae88628effb18c490010bff232ac8e",
-        "a62e6867fd8fd089666cf7bd38d78f49",
-        "7056e08d0029bd609d3f554f36847367"
+        "c661d94bf04f95e30c989a2928c1fd1d",
+        "7bb9dc37873ffa2e91d8bc18377c12c6",
+        "4eafb27d793a22ee7d874172a61f5aa1",
+        "b35653a40f5dee84247cf9a471c4493c",
+        "5b8d7453124ad4527894c2bf0b1f0687"
       ],
       "rationales": {
-        "047a3285ade63589276df8c2ce31e345": "Investigates how disability accrues in MS, distinguishing relapse-associated worsening from progression independent of relapse activity.",
-        "166b2482b2068cf9b9df6aa85b62de9e": "Reviews the evolving landscape of fluid biomarkers for MS diagnosis, prognosis, and monitoring treatment response.",
-        "17872ed3dfe1413dc47b2033f0d41a54": "Delves into the pathogenic mechanisms and current treatment challenges for progressive forms of multiple sclerosis.",
-        "20bcb5fb1dd77d076bac428fe661032d": "Provides a consensus statement on evaluating therapeutics specifically for pediatric multiple sclerosis, a specialized population.",
-        "3bd9e8c227d3165966ef76c53ae2f761": "Presents the concept of 'smouldering MS' as a primary driver of disease progression, influencing long-term therapeutic strategies.",
-        "4271ebf6ac652293dbb06cf94322aebf": "Offers a comprehensive overview of current and emerging disease-modifying therapies and their targets.",
-        "4ff24399cb96cba7a8171e70658a055b": "Explores current advancements and future directions in therapies aimed at promoting remyelination in MS.",
-        "7056e08d0029bd609d3f554f36847367": "Offers a historical perspective on MS research and the promise of new therapeutic developments.",
-        "730559cf4e13882f7715636e52cae7e7": "Provides a broad historical and pathophysiological context for understanding MS and its pharmacological interventions.",
-        "746b4621c05f13bab10c519ef3efcb0c": "Describes the development of the Multiple Sclerosis Functional Composite (MSFC) as a key outcome measure for clinical trials.",
-        "84ae88628effb18c490010bff232ac8e": "Summarizes practical guideline recommendations for initiating, switching, and stopping DMTs in adults.",
-        "92d58c9a84372afaad9777a4390ed4cf": "Discusses the challenges and methods for capturing disease activity and assessing treatment efficacy in MS clinical trials.",
-        "9fc11e3fc64f3720e33ee86aeb01376b": "Articulates the paradigm shift towards early initiation of high-efficacy treatments in MS.",
-        "a62e6867fd8fd089666cf7bd38d78f49": "Provides essential context on the evolving epidemiology and clinical course of multiple sclerosis.",
-        "e301a2244218a4c99ba9bd4e58008856": "Details the landscape of high-efficacy therapies and the diverse mechanisms of action for RRMS.",
-        "ed25bc26506ce184116636cac37753af": "Explains the molecular targets and mechanisms of various innovative DMTs, crucial for understanding mechanism classes."
+        "047a3285ade63589276df8c2ce31e345": "It provides a deeper understanding of how disability accumulates in MS (RAW vs PIRA) and the effectiveness of therapies in delaying this process.",
+        "19205a4ee145885de5c9d60d65040a45": "This review outlines the progress, new lessons learned, and remaining challenges in clinical trials for progressive multiple sclerosis.",
+        "24cbe6ff99bcce90651711eeb6449fba": "This paper presents a roadmap towards precision medicine in MS, aiming to tailor treatments to individual patient profiles.",
+        "37e44e24c83cfcbcb63c9211904fde32": "This paper provides a comprehensive overview of current and emerging DMTs and treatment strategies in MS.",
+        "40c6aa431603781e610fc5fe8dde3a25": "It discusses remyelination therapies as a new and exciting direction for promoting repair and regeneration in multiple sclerosis.",
+        "4eafb27d793a22ee7d874172a61f5aa1": "This review offers a foundational understanding of MS pathogenesis and the early landscape of disease-modifying agents.",
+        "5b8d7453124ad4527894c2bf0b1f0687": "This consensus statement advocates for early and unrestricted access to high-efficacy DMTs to optimize long-term benefits for MS patients.",
+        "6ab243ce87f009bef30c91d659f804bc": "This paper explores Bruton tyrosine kinase inhibitors as an emerging therapeutic mechanism, particularly for targeting CNS immunopathology.",
+        "7bb9dc37873ffa2e91d8bc18377c12c6": "It presents international consensus recommendations for improving MS management, emphasizing the importance of early intervention for brain health.",
+        "92d58c9a84372afaad9777a4390ed4cf": "This paper examines the various outcome measures used in clinical trials for MS, which are crucial for assessing DMT efficacy.",
+        "b35653a40f5dee84247cf9a471c4493c": "It focuses on advances in oral immunomodulating therapies, highlighting their diverse modes of action and convenience.",
+        "c661d94bf04f95e30c989a2928c1fd1d": "This paper directly addresses the critical debate between early highly effective versus escalation treatment approaches in MS.",
+        "e301a2244218a4c99ba9bd4e58008856": "It details the multitude of DMT options, their mechanisms of action, and the role of high-efficacy therapies for treatment-na\u00efve RRMS.",
+        "e6e2d51c408ba03d91f083e7d88944e5": "It discusses mechanism-based criteria to improve therapeutic outcomes specifically in the challenging context of progressive multiple sclerosis.",
+        "f5cb7f0de8b18a6be79e9cd440b94b3a": "It focuses on serum neurofilament light chain as a biomarker for individual prognostication of disease activity and treatment response."
       }
     },
     "ebv_ms": {
       "advanced": [
-        "76d721c70acb143d14abc71c389bfbb6",
-        "e208a93e8b45ce632643d45c56c0b1fb",
-        "5a886a4c09f88376451a066961b6bcfe",
-        "40b2412b060a65cc34f4d790102d0f8c"
+        "1a6420577881a2020d502068c6e79515",
+        "8fea31c9665a41051222994c9a4e1bac",
+        "8fc051aee0708f1a71834a9ba78d18bc",
+        "08b736a81bbcebdccc0b17c33bbc093b"
       ],
       "foundational": [
-        "e7f3950da40b2549bf7eb222752d21d3",
-        "41e92eda134066b55f2fc5e830b3a512",
-        "08b736a81bbcebdccc0b17c33bbc093b",
-        "8260be4d16f19ad2df7970c2366e5852"
+        "e016f8b969e198802e798c5b87379fa0",
+        "a1dd62c23bbcbc33afc0f5caaee0fb9e",
+        "76d721c70acb143d14abc71c389bfbb6",
+        "2d5e7c2469c2831f2dba43c878d51c98"
       ],
       "rationales": {
-        "08b736a81bbcebdccc0b17c33bbc093b": "This review offers a comprehensive overview of EBV's role in MS, covering both epidemiological links and initial insights into molecular pathophysiology.",
-        "40b2412b060a65cc34f4d790102d0f8c": "This study provides direct evidence of dysregulated EBV infection within the MS brain, offering a specific mechanistic insight.",
-        "41e92eda134066b55f2fc5e830b3a512": "This foundational study demonstrates that primary EBV infection significantly increases the risk of developing MS in a large cohort.",
-        "5a886a4c09f88376451a066961b6bcfe": "This paper explores the implications of EBV's role for potential immunotherapy strategies, addressing the 'path to prevention' aspect.",
-        "76d721c70acb143d14abc71c389bfbb6": "This recent paper explicitly focuses on advancing the understanding from mere association to detailed mechanisms of EBV in MS pathogenesis.",
-        "8260be4d16f19ad2df7970c2366e5852": "This paper places EBV within the broader context of environmental risk factors for MS, highlighting its early recognized importance.",
-        "e208a93e8b45ce632643d45c56c0b1fb": "This paper delves into the complex interplay of EBV with other viruses and its role in driving the inflammatory cascade underlying MS.",
-        "e7f3950da40b2549bf7eb222752d21d3": "This paper provides robust, recent epidemiological evidence for the strong association between EBV infection and increased MS risk."
+        "08b736a81bbcebdccc0b17c33bbc093b": "Delves into the molecular pathophysiology of EBV in MS and discusses methods for in vivo imaging of its effects.",
+        "1a6420577881a2020d502068c6e79515": "Offers direct evidence for molecular mimicry, showing how EBV proteins can trigger autoreactive B cell responses in MS.",
+        "2d5e7c2469c2831f2dba43c878d51c98": "Explores how EBV infection interacts with genetic and other environmental factors to increase MS risk.",
+        "76d721c70acb143d14abc71c389bfbb6": "Discusses the evolution of research from establishing an association to investigating specific mechanisms of EBV in MS.",
+        "8fc051aee0708f1a71834a9ba78d18bc": "Outlines broader opportunities for prevention and therapeutic interventions based on the understanding of EBV's role in MS.",
+        "8fea31c9665a41051222994c9a4e1bac": "Focuses on the specific potential of EBV vaccines as a strategy for preventing multiple sclerosis.",
+        "a1dd62c23bbcbc33afc0f5caaee0fb9e": "Presents compelling epidemiological and mechanistic evidence for EBV's causal role in multiple sclerosis.",
+        "e016f8b969e198802e798c5b87379fa0": "Provides a comprehensive overview of epidemiological evidence and proposed mechanisms linking EBV to MS."
       }
     },
     "environmental_risk_factors": {
       "advanced": [
-        "76d721c70acb143d14abc71c389bfbb6",
-        "af8af4099b657e7de72fca65f93f5dd7",
+        "08b736a81bbcebdccc0b17c33bbc093b",
+        "ca4ee3c12af2d85872592b930194b948",
         "e8805cba8751e2897f427b6b4dde49c8",
-        "e2e2095e60a993f88584f7bb6cb2575d"
+        "1bd77682a43725371cf903c3a6e5e086",
+        "ba032dd490406d7cc30b8997156b1389",
+        "dcaa8d412e524f57ad70149a2d2f744c"
       ],
       "foundational": [
+        "94a5401cbe9b50e5fd1cc92c67e7282b",
+        "cd29e813a01ae351213cd04d665b538b",
+        "b54381d3b6f0da22af4cab19d65e5fb4",
+        "e6d83866bed881b97c822fc80b71415c",
         "2b31bec83ae7e825b93027a8460c3550",
-        "8260be4d16f19ad2df7970c2366e5852",
+        "40a4d6921945ddccedfe5db83952927d",
         "6d8511824acdb4d016410b6f880a6f95",
-        "08b736a81bbcebdccc0b17c33bbc093b"
+        "e2e2095e60a993f88584f7bb6cb2575d"
       ],
       "rationales": {
-        "08b736a81bbcebdccc0b17c33bbc093b": "Offers a focused review on Epstein-Barr virus, vitamin D, and smoking as key established environmental risk factors.",
-        "2b31bec83ae7e825b93027a8460c3550": "Provides a comprehensive epidemiological overview of genetic and environmental risk factors, including migration, vitamin D, and infections.",
-        "6d8511824acdb4d016410b6f880a6f95": "Details non-infectious environmental factors like migration, diet, and behaviors that contribute to MS risk.",
-        "76d721c70acb143d14abc71c389bfbb6": "Explores the mechanistic link between Epstein-Barr virus and MS, moving beyond mere association.",
-        "8260be4d16f19ad2df7970c2366e5852": "Establishes the foundational role of infectious agents and the hygiene hypothesis in MS environmental risk.",
-        "af8af4099b657e7de72fca65f93f5dd7": "Presents recent large-scale evidence from biobanks on the association between viral exposures, including EBV, and MS risk.",
-        "e2e2095e60a993f88584f7bb6cb2575d": "Provides an updated perspective on the complex interplay of genetic, environmental, and lifestyle factors, including considerations for diverse populations.",
-        "e8805cba8751e2897f427b6b4dde49c8": "Investigates the specific role of vitamin D levels in explaining racial and ethnic differences in MS incidence."
+        "08b736a81bbcebdccc0b17c33bbc093b": "Delves into the molecular pathophysiology and imaging aspects of Epstein-Barr virus's role in MS, offering a deeper understanding.",
+        "1bd77682a43725371cf903c3a6e5e086": "Examines the rising incidence of MS in women, suggesting complex sex-based and environmental interactions.",
+        "2b31bec83ae7e825b93027a8460c3550": "Provides an updated epidemiological perspective on genetic and environmental factors, including vitamin D, obesity, and infections.",
+        "40a4d6921945ddccedfe5db83952927d": "A recent review (2021) summarizing key environmental factors and introducing gene-environment interactions.",
+        "6d8511824acdb4d016410b6f880a6f95": "Focuses specifically on non-infectious environmental factors, including diet and behaviors, complementing infectious factor discussions.",
+        "94a5401cbe9b50e5fd1cc92c67e7282b": "Provides a comprehensive umbrella review of environmental risk factors, summarizing evidence quality.",
+        "b54381d3b6f0da22af4cab19d65e5fb4": "Discusses the strength of evidence for EBV, vitamin D, smoking, and migration as causal factors.",
+        "ba032dd490406d7cc30b8997156b1389": "Further explores sex-specific environmental interactions and their influence on MS risk across the lifespan in women.",
+        "ca4ee3c12af2d85872592b930194b948": "Systematically reviews modifiable risk factors like vitamin D and smoking specifically in the context of MS progression, not just onset.",
+        "cd29e813a01ae351213cd04d665b538b": "Offers a foundational overview of established environmental risk factors like vitamin D, smoking, and EBV.",
+        "dcaa8d412e524f57ad70149a2d2f744c": "Analyzes MS mortality trends by race/ethnicity, age, and sex, providing a more specific epidemiological outcome related to environmental and social factors.",
+        "e2e2095e60a993f88584f7bb6cb2575d": "A very recent (2022) review covering complex interactions between genetic, environmental, and lifestyle factors affecting MS risk.",
+        "e6d83866bed881b97c822fc80b71415c": "Highlights the strong evidence from migration studies and geographical distribution for environmental influence on MS risk.",
+        "e8805cba8751e2897f427b6b4dde49c8": "Investigates MS incidence across diverse racial and ethnic groups, exploring potential links to vitamin D levels and environmental disparities."
       }
     },
     "equity_sdoh": {
       "advanced": [
-        "aadaac3a695f0faa74dbab4e4d3a5cb6",
-        "4d110195d3d5a270332afc6890c82433",
-        "69437280a3e25e1eedbf6975c8ea512d",
-        "ffd9ef7b9715e375c70fc5052d33c377"
+        "e3f8c9201d1d341c5fb6f4bc041e9a8b",
+        "eb6000ed7d2ff59b413a1cf6c5b27075",
+        "94453b7cf5e2600787d77a2b649b7eb2",
+        "136e6c4da0c13ea236c366fb34541dc0",
+        "3302a596efe511690f98a2a9d0dcee6d",
+        "4d110195d3d5a270332afc6890c82433"
       ],
       "foundational": [
         "23b31e5ae980f7e08a8dab671ff0eb66",
-        "915a0e4d10533766d6c79ea9ac4d50d0",
+        "ea75402200858c1cfb4915ca6f3a1a0d",
         "aed83c9bd9b7103cf7b7c22bb51b4ee7",
-        "8e4e807bc24e72840008d12b0f81dc3f",
         "dfdb25ae484eaab3b3a2553224cd9cbb",
-        "94453b7cf5e2600787d77a2b649b7eb2",
-        "9f163f607d3c7d032be3f517f017fc0c"
+        "5b8d7453124ad4527894c2bf0b1f0687",
+        "06378984db2a72517ac5a0301d8a6c35",
+        "69437280a3e25e1eedbf6975c8ea512d"
       ],
       "rationales": {
-        "23b31e5ae980f7e08a8dab671ff0eb66": "This paper provides a comprehensive overview of health disparities, inequities, and social determinants of health in MS, setting the stage for the concept.",
-        "4d110195d3d5a270332afc6890c82433": "This review identifies higher comorbidity burdens in underrepresented minority and immigrant groups with MS, offering a specific health outcome disparity.",
-        "69437280a3e25e1eedbf6975c8ea512d": "This paper provides a more detailed comparison of MS characteristics, including prevalence and phenotypes, between Caucasians and Latino Americans.",
-        "8e4e807bc24e72840008d12b0f81dc3f": "This paper explores how race and ethnicity influence MS presentation and disease course, introducing clinical disparities.",
-        "915a0e4d10533766d6c79ea9ac4d50d0": "This 'Atlas' highlights the global problem of MS with widespread inequity, providing a broad foundational context for the concept.",
-        "94453b7cf5e2600787d77a2b649b7eb2": "This paper highlights the specific challenges of underdiagnosis, undertreatment, and worse outcomes for African American patients with MS.",
-        "9f163f607d3c7d032be3f517f017fc0c": "This paper addresses the critical issue of underrepresentation of minority populations in MS clinical trials and the resulting lack of evidence-based treatment approaches.",
-        "aadaac3a695f0faa74dbab4e4d3a5cb6": "This study delves deeper into the association between disease severity, socioeconomic status, and race, explicitly mentioning the role of systemic racism in MS outcomes.",
-        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "This study provides population-based prevalence estimates of MS in the US, demonstrating racial, ethnic, and geographic disparities.",
-        "dfdb25ae484eaab3b3a2553224cd9cbb": "This paper demonstrates how health insurance coverage, a key socioeconomic factor, directly impacts access to disease-modifying therapies in MS.",
-        "ffd9ef7b9715e375c70fc5052d33c377": "This paper highlights the underrecognition of MS burden in specific racial and ethnic groups and calls for further research into emerging disparities."
+        "06378984db2a72517ac5a0301d8a6c35": "Identifies pervasive global barriers to early MS diagnosis, including resource limitations and lack of accessible education.",
+        "136e6c4da0c13ea236c366fb34541dc0": "Discusses health equity challenges and recommendations in the context of wearable devices and digital health.",
+        "23b31e5ae980f7e08a8dab671ff0eb66": "Provides a comprehensive overview of health disparities, inequities, and social determinants of health in MS in the US.",
+        "3302a596efe511690f98a2a9d0dcee6d": "Examines the differential association of sun exposure and vitamin D with MS risk across Black, Hispanic, and White populations.",
+        "4d110195d3d5a270332afc6890c82433": "Highlights that people with MS from underrepresented minority and immigrant groups experience higher comorbidity burdens.",
+        "5b8d7453124ad4527894c2bf0b1f0687": "Advocates for early and unrestricted access to high-efficacy DMTs, highlighting systemic barriers like reimbursement restrictions.",
+        "69437280a3e25e1eedbf6975c8ea512d": "Provides an earlier epidemiological perspective on differences in MS prevalence and phenotypes between Caucasians and Latino Americans.",
+        "94453b7cf5e2600787d77a2b649b7eb2": "Addresses the historical underdiagnosis and undertreatment of MS in African Americans, advocating for improved care and outcomes.",
+        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "Offers population-based prevalence estimates of MS in the US, disaggregated by race, ethnicity, and geographic region.",
+        "dfdb25ae484eaab3b3a2553224cd9cbb": "Demonstrates how health insurance coverage, a key socioeconomic factor, impacts access to disease-modifying therapies in MS.",
+        "e3f8c9201d1d341c5fb6f4bc041e9a8b": "Investigates the influence of individual and neighborhood-level social determinants of health on disparate disability accumulation across diverse MS patient cohorts.",
+        "ea75402200858c1cfb4915ca6f3a1a0d": "Examines health disparities in MS specifically among Hispanic and Black populations, highlighting the role of social determinants of health.",
+        "eb6000ed7d2ff59b413a1cf6c5b27075": "Demonstrates a direct association between socioeconomic disparity and accelerated retinal neurodegeneration in multiple sclerosis."
       }
     },
     "fatigue_ms": {
       "advanced": [
+        "8a66f5941e13d7c3b4770058c1ef189e",
         "1d745f5a6158839375124de9b91bf4f5",
-        "faddc13f6a0b10c037c36554f70fc422",
-        "t4::t4-037",
+        "59b434a47382fbb022e713eb8a4480b9",
+        "d228cc19cf0229460184cf29966dc067",
+        "08caccad9a0ca229a22f4550b3dc20a7",
+        "602de8ec1be83948ae88f76db94194c3",
         "7e5e80a56b9cbcbbb0464f41985afa7b"
       ],
       "foundational": [
         "73217a0acca5463cc45270a2be46abaf",
-        "92d84cb253af1e42b0c4f0da7fb951af",
-        "8a66f5941e13d7c3b4770058c1ef189e",
-        "730f37ee5280dd8a2485d8573094c34b"
+        "730f37ee5280dd8a2485d8573094c34b",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c"
       ],
       "rationales": {
-        "1d745f5a6158839375124de9b91bf4f5": "This paper presents a specific treatment algorithm for tailored therapeutic strategies, offering deeper insights into management approaches.",
-        "730f37ee5280dd8a2485d8573094c34b": "This paper introduces a key patient-based outcome measure (MSIS-29) for assessing the impact of MS symptoms, including fatigue, on quality of life.",
-        "73217a0acca5463cc45270a2be46abaf": "This paper provides a comprehensive overview of fatigue mechanisms, evaluation, and treatment in MS.",
-        "7e5e80a56b9cbcbbb0464f41985afa7b": "This article discusses a specific emerging pharmacological treatment (high-dose biotin) and its proposed mechanisms for improving MS-related disability, including fatigue.",
-        "8a66f5941e13d7c3b4770058c1ef189e": "This meta-analysis summarizes evidence for common fatigue management interventions, offering an evidence-based foundation.",
-        "92d84cb253af1e42b0c4f0da7fb951af": "This review focuses on the essential aspects of fatigue management, including the importance of early diagnosis.",
-        "faddc13f6a0b10c037c36554f70fc422": "This review explores the neurodegenerative mechanisms underlying fatigue and discusses relevant biomarkers like kynurenines.",
-        "t4::t4-037": "This paper investigates a specific non-pharmacological intervention, progressive resistance training, for its effects on physical fitness and quality of life."
+        "08caccad9a0ca229a22f4550b3dc20a7": "This review examines fatigue within the broader spectrum of neuropsychiatric symptoms in MS, aiding in differential diagnosis and holistic care.",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "This review contextualizes fatigue as a prevalent 'invisible symptom' in MS and discusses its comprehensive management alongside other symptoms.",
+        "1d745f5a6158839375124de9b91bf4f5": "It offers a specific treatment algorithm and recommendations for tailored therapeutic strategies to manage MS-related fatigue.",
+        "59b434a47382fbb022e713eb8a4480b9": "This paper delves into the specific mechanisms of altered energy metabolism in oligodendrocytes and myelin, which can contribute to MS fatigue.",
+        "602de8ec1be83948ae88f76db94194c3": "It discusses how menopause can influence and overlap with MS symptoms, including fatigue, in women with MS.",
+        "730f37ee5280dd8a2485d8573094c34b": "It introduces a key patient-reported outcome measure (MSIS-29) for assessing the impact of MS symptoms, including fatigue, on quality of life.",
+        "73217a0acca5463cc45270a2be46abaf": "This paper provides a comprehensive overview of fatigue mechanisms, evaluation methods, and treatment strategies in MS.",
+        "7e5e80a56b9cbcbbb0464f41985afa7b": "This paper explores a specific, mechanism-driven therapeutic approach (high-dose biotin) targeting demyelination and hypoxia, relevant to progressive MS fatigue.",
+        "8a66f5941e13d7c3b4770058c1ef189e": "This meta-analysis provides evidence-based insights into the effectiveness of various non-pharmacological and pharmacological interventions for MS fatigue.",
+        "d228cc19cf0229460184cf29966dc067": "It explores the underlying mechanisms of neuronal dysfunction and degeneration in MS, providing a deeper understanding of potential fatigue origins."
       }
     },
     "genetic_susceptibility": {
       "advanced": [
-        "b0b77ce88e62754732811aa69e8c9f50",
-        "08b736a81bbcebdccc0b17c33bbc093b",
-        "936e4eaff6e1046fc2642f018520a2b6",
-        "0a3d560e03f892d439433556b3670d5e",
-        "42e7b58c06c339adacb6202481e7a890"
+        "474cd5ca83daec4114528ad6fa2fb038",
+        "e9e155dece4aba0cf17bcf2bd9ea6b1f",
+        "82e83be64352e206bb31d18e1213f117",
+        "3f6a6d17cd8921c2bb8561a7175ffd6f",
+        "998dc55354b6171ddf5c6a7a2510244d",
+        "899e3ef18eb92a39f188776d0ac02e41",
+        "e8805cba8751e2897f427b6b4dde49c8",
+        "e721790f1c77eb7abd1a72ee6b8813fa"
       ],
       "foundational": [
-        "81a4314212e6f7786ce3ba1732ea9f7c",
-        "e2e2095e60a993f88584f7bb6cb2575d",
-        "7056e08d0029bd609d3f554f36847367",
-        "8260be4d16f19ad2df7970c2366e5852"
+        "4fda7c4ebf1df9444efbc9911032644b",
+        "ffc9f0f13c6422bcc49ccdba548ce5b7",
+        "69758ed9767f3bd58f1f4b80d6ebe630",
+        "1b402784fc6580d3a67b8ec436beef0a",
+        "e2e2095e60a993f88584f7bb6cb2575d"
       ],
       "rationales": {
-        "08b736a81bbcebdccc0b17c33bbc093b": "This paper delves into the specific role of Epstein-Barr virus as a well-established environmental risk factor, illustrating gene-environment interactions.",
-        "0a3d560e03f892d439433556b3670d5e": "This paper uses eQTL studies to explore the functional impact of autoimmune risk alleles on immune cell gene expression, providing deeper mechanistic insights.",
-        "42e7b58c06c339adacb6202481e7a890": "This paper investigates the genetic basis of MS disease severity and outcomes, moving beyond susceptibility to more complex genetic influences.",
-        "7056e08d0029bd609d3f554f36847367": "This paper highlights the progress in mapping genes that influence MS risk and identifying environmental triggers, setting the stage for genetic susceptibility.",
-        "81a4314212e6f7786ce3ba1732ea9f7c": "This paper provides an overview of MS genetics, explaining why it is not a Mendelian disease and highlighting classic HLA associations.",
-        "8260be4d16f19ad2df7970c2366e5852": "This paper discusses how genetic susceptibility interacts with environmental factors, such as infections, to influence MS risk.",
-        "936e4eaff6e1046fc2642f018520a2b6": "This paper applies Mendelian randomization, an advanced genetic epidemiological method, to identify potential drug targets based on genetic insights.",
-        "b0b77ce88e62754732811aa69e8c9f50": "This landmark paper presents findings from a large-scale GWAS meta-analysis, identifying novel non-HLA susceptibility loci for MS.",
-        "e2e2095e60a993f88584f7bb6cb2575d": "This paper broadly introduces the complex interplay of genetic, environmental, and lifestyle factors in MS risk and disease course."
+        "1b402784fc6580d3a67b8ec436beef0a": "This classic review introduces MS as a complex trait resulting from the interplay of genetic and environmental factors.",
+        "3f6a6d17cd8921c2bb8561a7175ffd6f": "This paper provides specialized insights into MS susceptibility alleles within the African American population, highlighting genetic diversity.",
+        "474cd5ca83daec4114528ad6fa2fb038": "This advanced study delves into how Class II HLA interactions specifically modulate genetic risk for MS.",
+        "4fda7c4ebf1df9444efbc9911032644b": "This comprehensive review provides a foundational understanding of MS immunogenetics, covering HLA and non-HLA loci.",
+        "69758ed9767f3bd58f1f4b80d6ebe630": "This study offers foundational insights into the fine-mapping of HLA and non-HLA effects within the major histocompatibility complex.",
+        "82e83be64352e206bb31d18e1213f117": "This study identifies novel MS susceptibility loci and introduces the advanced concept of epigenetic regulation in MS.",
+        "899e3ef18eb92a39f188776d0ac02e41": "This paper demonstrates an early application of genetic risk scores for predicting MS susceptibility, showing methodological development.",
+        "998dc55354b6171ddf5c6a7a2510244d": "This paper examines sex-related factors in MS susceptibility, illustrating a key gene-environment interaction.",
+        "e2e2095e60a993f88584f7bb6cb2575d": "This recent review provides an updated foundational perspective on the complex genetic and environmental factors influencing MS risk.",
+        "e721790f1c77eb7abd1a72ee6b8813fa": "This focused study exemplifies research into specific gene variants (TREM2) and their contribution to MS susceptibility.",
+        "e8805cba8751e2897f427b6b4dde49c8": "This study investigates MS incidence across multiple racial and ethnic groups, providing advanced epidemiological context for genetic differences.",
+        "e9e155dece4aba0cf17bcf2bd9ea6b1f": "This paper explores the advanced concept of polygenic risk scores and their association with MS susceptibility and phenotype.",
+        "ffc9f0f13c6422bcc49ccdba548ce5b7": "This paper establishes the fundamental role of genetic risk and immune mechanisms in MS pathogenesis."
       }
     },
     "immune_system_basics": {
       "advanced": [
-        "c64b243a85cfddaecd548fbccfea7f49",
-        "c8f4c7d0c541747d0d35a84a463a49fb",
-        "aeba3a20e2b4b5d0a39eabb4141dbf88",
-        "dee58f114a139a4f89a7a83c200c1e9b",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25",
-        "2c6ba1ceaf63d51f3e0e49a62df681ec",
-        "76d721c70acb143d14abc71c389bfbb6",
-        "0a3d560e03f892d439433556b3670d5e"
+        "f5717e702c1a02165597f0e7b72a9832",
+        "b5204c9bbf8e070f29221745d7c1a11e",
+        "be8ee73d7234208eb47d6eb2fd8b8677",
+        "db6a2a7229909cb022ece641d9b8d356",
+        "53ef3e54a182f121080c54f6f5d63787",
+        "4647e94d43b6056c2ec584a858b03319",
+        "997b6f0dd02735d479d9dbb2298752dc",
+        "6d8489df9953235b9db14617634bb7f4"
       ],
       "foundational": [
-        "0f219b3b7566ca251b64135ad6ff3f3d",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d",
-        "7e24728d3ff983ef01031c9209c9b0a4",
-        "be8ee73d7234208eb47d6eb2fd8b8677",
-        "1d7a73f4a8a010b888dad41d335d2d1a",
-        "836eed21167b7034dca4476ac7aeca63"
+        "636ef5c50ae48d38777edf8fe9012ecd",
+        "e7a453f8960daff5eec8bb2dfbfa2e4b",
+        "f598271fc2ac7146bbbc2865b9db7cc3",
+        "bcca4f261a35e09dcc89122f5a3c7991",
+        "1403a7ec27e0a811cbe6c1622e22b143",
+        "1b402784fc6580d3a67b8ec436beef0a"
       ],
       "rationales": {
-        "0a3d560e03f892d439433556b3670d5e": "It uses eQTL analysis to explore the genetic basis of immune cell function and dysfunction in autoimmunity.",
-        "0f219b3b7566ca251b64135ad6ff3f3d": "This paper provides a foundational understanding of autoreactive T and B lymphocytes in MS pathogenesis.",
-        "1d7a73f4a8a010b888dad41d335d2d1a": "This paper introduces the 'inside-out' vs. 'outside-in' paradigms for understanding the initiating events of MS autoimmunity.",
-        "2c6ba1ceaf63d51f3e0e49a62df681ec": "It investigates the impact of B cell-rich meningeal inflammation on spinal cord pathology in MS.",
-        "76d721c70acb143d14abc71c389bfbb6": "This paper delves into the mechanisms linking Epstein-Barr virus to MS pathogenesis, moving beyond mere association.",
-        "7e24728d3ff983ef01031c9209c9b0a4": "This paper offers a general overview of inflammation and the autoimmune response to CNS self-antigens in MS.",
-        "836eed21167b7034dca4476ac7aeca63": "It provides a broad perspective on the established role of autoimmunity and the interplay of immune, glial, and nerve cells in MS.",
-        "aeba3a20e2b4b5d0a39eabb4141dbf88": "This paper reveals the complex effect of anti-CD20 therapy on CD20+ T cells, adding nuance to B cell targeting.",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d": "It focuses on the critical role of T helper cells as modulators of inflammation in multiple sclerosis.",
-        "be8ee73d7234208eb47d6eb2fd8b8677": "It explains the fundamental process of how immune cells gain access to the central nervous system in MS.",
-        "c64b243a85cfddaecd548fbccfea7f49": "This paper details the pathology and clinical implications of anti-CD20 B cell therapies in MS.",
-        "c8f4c7d0c541747d0d35a84a463a49fb": "It explores the specific function of proinflammatory GM-CSF-producing B cells and their relevance to B cell depletion therapy.",
-        "dee58f114a139a4f89a7a83c200c1e9b": "It utilizes single-cell transcriptomics to provide an advanced understanding of leukocyte composition and transcriptome in MS.",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25": "This paper focuses on the role of CNS macrophages (microglia) in progressive MS and their therapeutic implications."
+        "1403a7ec27e0a811cbe6c1622e22b143": "This paper offers a general overview of MS as a multifactorial, immune-mediated disease influenced by genetic and environmental factors.",
+        "1b402784fc6580d3a67b8ec436beef0a": "This foundational paper introduces MS as a prototype inflammatory autoimmune disorder of the central nervous system.",
+        "4647e94d43b6056c2ec584a858b03319": "This paper delves into the specific trafficking and clonal relationships of B cells between the central nervous system and periphery.",
+        "53ef3e54a182f121080c54f6f5d63787": "This paper provides a deeper understanding of B cell contributions to CNS autoimmunity and their therapeutic targeting in MS.",
+        "636ef5c50ae48d38777edf8fe9012ecd": "This paper provides a broad overview of the immune cells, including T and B cells, and their primary importance in MS pathogenesis.",
+        "6d8489df9953235b9db14617634bb7f4": "This paper offers an advanced genetic perspective on MS susceptibility, linking specific variants to peripheral immune cells and microglia.",
+        "997b6f0dd02735d479d9dbb2298752dc": "This paper examines the specific role of Epstein-Barr virus-specific CD8 T cells in brain infiltration and immunopathology in MS.",
+        "b5204c9bbf8e070f29221745d7c1a11e": "This paper specifically focuses on the pathogenic role of CD8+ T lymphocytes in multiple sclerosis, a key T cell subset.",
+        "bcca4f261a35e09dcc89122f5a3c7991": "This paper describes the pathological hallmarks of MS, including the massive infiltration by various immune cells in lesions.",
+        "be8ee73d7234208eb47d6eb2fd8b8677": "This paper explores the mechanisms by which immune cells, once primed, access the central nervous system in MS.",
+        "db6a2a7229909cb022ece641d9b8d356": "This paper investigates how Epstein-Barr virus and HLA-DR15 interact to influence immune control and MS risk, touching on self-tolerance breakdown.",
+        "e7a453f8960daff5eec8bb2dfbfa2e4b": "This recent review explores the fundamental roles of immune cells and their interactions with central nervous system cells in MS.",
+        "f5717e702c1a02165597f0e7b72a9832": "This paper details the diverse functions of B cells in autoimmune diseases, including antigen presentation and cytokine production.",
+        "f598271fc2ac7146bbbc2865b9db7cc3": "This paper explains the key parts played by both innate and adaptive immune responses in the course of MS."
       }
     },
     "mcdonald_criteria": {
       "advanced": [
+        "54eacb18376f30217eb830d95125d04f",
         "96751ecdaa29c743fd2017ef1166dcc1",
-        "dbbce5c55c5eeec69cf326b18f2889ec",
-        "fca5496deaa554c4e837901513d01b6d",
-        "5c115d16e7afcfccd68f70ebf95a311d",
-        "653c9a9c5d6f080f20931067ae8f8b87",
-        "7ee74ba403b17b4c8cc65330399f6720",
-        "68f6ab0c1897785898c945dba7bbb038"
+        "9780a49ab0c6e76a0b21a438ab49459c",
+        "5c60cde779d8bb2b85c5b51fe7df84d5",
+        "6f0bcde1754b17eed47e37dad191cdb7",
+        "c9d49452250fe97b7661e80b623c0de8",
+        "6b3bbeea5e7a86a821a9bea7abb07213"
       ],
       "foundational": [
         "10d94ef31b459d6a188fca3faf88fb44",
         "5485207155f0032dc50ae25e431172a3",
         "1ab813d2f87432ead481a99a3c3909f7",
-        "e274a4ab957cdb983b2fa86687fc73f3"
+        "6b37effb8e2059438a6e62bfdc501273",
+        "bee6fc47a89f910d953deab96f380773"
       ],
       "rationales": {
-        "10d94ef31b459d6a188fca3faf88fb44": "This paper introduced the original McDonald Criteria, establishing the foundational principles of MS diagnosis.",
-        "1ab813d2f87432ead481a99a3c3909f7": "This paper outlines the 2010 revisions, simplifying MRI criteria for dissemination in space and time.",
-        "5485207155f0032dc50ae25e431172a3": "This paper details the 2005 revisions, strengthening the role of MRI in demonstrating dissemination in time and space.",
-        "5c115d16e7afcfccd68f70ebf95a311d": "This paper offers an imaging perspective on the diagnostic work-up, discussing the evolution and future of MRI in relation to the McDonald criteria.",
-        "653c9a9c5d6f080f20931067ae8f8b87": "This paper explores the potential of paramagnetic rim lesions as novel diagnostic indicators, representing an advanced imaging biomarker.",
-        "68f6ab0c1897785898c945dba7bbb038": "This paper discusses the role of MRI in diagnosing Primary Progressive MS, applying the 2017 McDonald criteria to a specific disease subtype.",
-        "7ee74ba403b17b4c8cc65330399f6720": "This paper specifically assesses the utility of the McDonald 2010 criteria in the context of pediatric multiple sclerosis, a specialized population.",
-        "96751ecdaa29c743fd2017ef1166dcc1": "This paper directly addresses the 2024 McDonald criteria, focusing on the integration of kappa free light chains as a new biomarker.",
-        "dbbce5c55c5eeec69cf326b18f2889ec": "This consensus statement provides detailed guidance on using cerebrospinal fluid kappa free light chains for MS diagnosis, supporting the 2024 criteria.",
-        "e274a4ab957cdb983b2fa86687fc73f3": "This paper discusses the 2017 revisions, which further simplified MRI criteria and introduced CSF findings as evidence for dissemination in time.",
-        "fca5496deaa554c4e837901513d01b6d": "This paper critically examines the issue of MS misdiagnosis, highlighting challenges in applying diagnostic criteria in clinical practice."
+        "10d94ef31b459d6a188fca3faf88fb44": "Defines the original McDonald Criteria, establishing the foundational principles of MS diagnosis.",
+        "1ab813d2f87432ead481a99a3c3909f7": "Outlines the 2010 revisions, simplifying imaging criteria for dissemination in space and time.",
+        "5485207155f0032dc50ae25e431172a3": "Presents the first revision of the McDonald Criteria, detailing early refinements to diagnostic guidelines.",
+        "54eacb18376f30217eb830d95125d04f": "Provides updated MRI recommendations specifically for the 2024 McDonald criteria, including new anatomical locations.",
+        "5c60cde779d8bb2b85c5b51fe7df84d5": "Discusses the revised diagnostic criteria for radiologically isolated syndrome, highlighting challenges in applying imaging criteria.",
+        "6b37effb8e2059438a6e62bfdc501273": "Details the 2017 revisions, which further refined the application of clinical and MRI evidence for MS diagnosis.",
+        "6b3bbeea5e7a86a821a9bea7abb07213": "Explores the conceptual shift towards a unified set of diagnostic criteria for multiple sclerosis.",
+        "6f0bcde1754b17eed47e37dad191cdb7": "Establishes a consensus standard for CSF analysis in MS diagnosis, providing context for biomarker integration.",
+        "96751ecdaa29c743fd2017ef1166dcc1": "Explains the role of cerebrospinal fluid biomarkers, like kappa free light chains, in the 2024 McDonald criteria.",
+        "9780a49ab0c6e76a0b21a438ab49459c": "Offers detailed MAGNIMS consensus guidelines on MRI use, providing a deeper understanding of imaging principles in MS diagnosis.",
+        "bee6fc47a89f910d953deab96f380773": "Introduces the latest 2024 McDonald Criteria, incorporating new biomarkers and unifying diagnostic approaches across the lifespan.",
+        "c9d49452250fe97b7661e80b623c0de8": "Reviews emerging imaging and liquid biomarkers, offering a broader perspective on future diagnostic tools in MS."
       }
     },
     "mri_patterns": {
       "advanced": [
-        "3e820c7866ef2de1e0aba7f33385fada",
+        "bde5b633e71584cd8e512d994c3b451f",
         "b4edb101341ca99cbe8e816c2b026ac2",
-        "6c7211f91426898b5dec90e3db1876a5",
-        "d94b52db95e9a25d7eea666bb91130a9",
         "c62fc186b48655b54f4b005587dca01b",
         "68f6ab0c1897785898c945dba7bbb038",
-        "27196447b68c979a0fdacff2f7029089",
-        "1272531bbe61511e02863f5654c7f02e"
+        "213dcd047c81784a185b5b8550fc8199",
+        "0ad33f96c26dc6966b58c398a0ab54fc",
+        "f2111e1e0a7bdb2cf71ca08c581faae1"
       ],
       "foundational": [
+        "54eacb18376f30217eb830d95125d04f",
         "5485207155f0032dc50ae25e431172a3",
-        "058d8f25c48adbb66cf26a39569daec6",
-        "2e6662ce25b2b0d794aa73b2c2006649",
-        "5c115d16e7afcfccd68f70ebf95a311d",
-        "675b163134c56749010c672cdf8ad285",
-        "abc33f103e6a50024fa436d880c847f7",
-        "06c920701576fcd81f79b9f241855fd7"
+        "832de7ab52d9653e1b261393e45011fc",
+        "de711ed10e6b4b95bd6916bfe65ebde1",
+        "d94b52db95e9a25d7eea666bb91130a9",
+        "38b559e522843df104f3ccd1e58408b6"
       ],
       "rationales": {
-        "058d8f25c48adbb66cf26a39569daec6": "Provides practical guidelines for assessing MRI lesions, including T2/FLAIR, crucial for accurate diagnosis and monitoring.",
-        "06c920701576fcd81f79b9f241855fd7": "Demonstrates the long-term clinical relevance of T2 MRI lesions in predicting disability progression in MS.",
-        "1272531bbe61511e02863f5654c7f02e": "Reviews the application of machine learning and MRI-based biomarkers for predicting MS disease progression and outcomes.",
-        "27196447b68c979a0fdacff2f7029089": "Provides consensus recommendations on using brain and spinal cord atrophy measures, an advanced MRI biomarker for disease evolution.",
-        "2e6662ce25b2b0d794aa73b2c2006649": "Offers a comprehensive review of spinal cord imaging, a key component of MRI patterns in MS.",
-        "3e820c7866ef2de1e0aba7f33385fada": "Presents a machine learning approach for automated central vein sign assessment, advancing diagnostic efficiency.",
-        "5485207155f0032dc50ae25e431172a3": "This paper outlines the 2005 McDonald criteria, which are foundational for using MRI lesion patterns in MS diagnosis.",
-        "5c115d16e7afcfccd68f70ebf95a311d": "Discusses the evolving role of MRI in the diagnostic work-up of MS, providing a broad imaging perspective.",
-        "675b163134c56749010c672cdf8ad285": "A consensus statement introducing paramagnetic rim lesions as a marker for chronic active inflammation in MS.",
-        "68f6ab0c1897785898c945dba7bbb038": "Focuses on the fundamental contribution of MRI to the accurate diagnosis of Primary Progressive Multiple Sclerosis.",
-        "6c7211f91426898b5dec90e3db1876a5": "Investigates the disease correlates of paramagnetic rim lesions using quantitative susceptibility mapping, an advanced imaging technique.",
-        "abc33f103e6a50024fa436d880c847f7": "Introduces the central vein sign and the role of ultra-high-field MRI in enhancing its detection for MS diagnosis.",
-        "b4edb101341ca99cbe8e816c2b026ac2": "Explores the pathology and 7T MRI characteristics of slowly expanding iron rim lesions, offering deeper insights into chronic activity.",
-        "c62fc186b48655b54f4b005587dca01b": "Reviews emerging machine learning techniques for detecting cortical lesions, central vein sign, and paramagnetic rim lesions.",
-        "d94b52db95e9a25d7eea666bb91130a9": "Details the spatial distribution of MS lesions in the cervical spinal cord, providing specialized anatomical insights."
+        "0ad33f96c26dc6966b58c398a0ab54fc": "An early serial MRI study quantifying progressive cerebral atrophy, an important aspect of long-term MS monitoring.",
+        "213dcd047c81784a185b5b8550fc8199": "Examines structural MRI correlates of cognitive impairment, linking imaging patterns to functional outcomes in MS.",
+        "38b559e522843df104f3ccd1e58408b6": "A foundational paper on the prevalence and distribution of cortical lesions in multiple sclerosis.",
+        "5485207155f0032dc50ae25e431172a3": "Introduces the 2005 McDonald criteria, highlighting the foundational role of MRI in MS diagnosis.",
+        "54eacb18376f30217eb830d95125d04f": "Provides the latest consensus recommendations on MRI use for MS diagnosis, including expanded anatomical locations.",
+        "68f6ab0c1897785898c945dba7bbb038": "Focuses on the specific role of MRI in diagnosing and monitoring primary progressive multiple sclerosis.",
+        "832de7ab52d9653e1b261393e45011fc": "Offers revised guidelines for standardized brain and spinal cord MRI protocols for MS diagnosis and follow-up.",
+        "b4edb101341ca99cbe8e816c2b026ac2": "Investigates paramagnetic rim lesions and their association with slowly expanding lesions using advanced 7T MRI.",
+        "bde5b633e71584cd8e512d994c3b451f": "A consensus statement on the central vein sign as a novel and specific MRI biomarker for MS diagnosis.",
+        "c62fc186b48655b54f4b005587dca01b": "Reviews emerging MRI biomarkers like cortical lesions, central vein sign, and paramagnetic rim lesions, and future machine learning applications.",
+        "d94b52db95e9a25d7eea666bb91130a9": "Explores the spatial distribution of lesions specifically in the cervical spinal cord, a critical area in MS imaging.",
+        "de711ed10e6b4b95bd6916bfe65ebde1": "An early study demonstrating the utility of serial gadolinium-enhanced MRI for detecting disease activity in both brain and spinal cord.",
+        "f2111e1e0a7bdb2cf71ca08c581faae1": "Uses advanced connectivity-based parcellation to study thalamic abnormalities and their implications for cognitive impairment in MS."
       }
     },
     "ms_epidemiology": {
       "advanced": [
         "a62e6867fd8fd089666cf7bd38d78f49",
         "aed83c9bd9b7103cf7b7c22bb51b4ee7",
-        "81a4314212e6f7786ce3ba1732ea9f7c",
-        "8260be4d16f19ad2df7970c2366e5852",
-        "5dd210f9b1214a715e30bd027cf459ba",
-        "ee0c0ec75717d39aad8f087956fe5ab2",
-        "2aad391cd41041d0c680cb0eef1522d0",
-        "3bd9e8c227d3165966ef76c53ae2f761"
+        "452a9108c94b8dc732ad9ca0446821d4",
+        "29d9f0c4a7920213e1108c5f919b36c8",
+        "94453b7cf5e2600787d77a2b649b7eb2",
+        "1bd77682a43725371cf903c3a6e5e086",
+        "d48cc3a8981270bce8a5eff6ba1a7c4c",
+        "38d65ed7107ec8b5091630cf4be49d20"
       ],
       "foundational": [
-        "7ead7aebeb6db424fea382ae4363867d",
-        "e2e2095e60a993f88584f7bb6cb2575d",
-        "915a0e4d10533766d6c79ea9ac4d50d0",
+        "a67b7efa8857e47af4f9fd37d43ac881",
         "b616ccbbfacdfb24a3d76455fb2ba01b",
-        "cfda84294c6b892ebbd7c1efff0b7afb",
-        "730559cf4e13882f7715636e52cae7e7"
+        "585a3b9d89a32027995044197f1070ce",
+        "6ad5a1cf1fd9e3122685289c3685b1d7",
+        "376b8183bf14ce1c59e42ef542bea47c",
+        "7ead7aebeb6db424fea382ae4363867d",
+        "d1a7cbc5fc702c16279a5b3d1734ae50",
+        "1d44380f4643434c432fbb73e2ee01fc"
       ],
       "rationales": {
-        "2aad391cd41041d0c680cb0eef1522d0": "Systematically reviews the epidemiology, outcomes, and management of MS relapses, offering a deeper understanding of a defining feature of the disease trajectory.",
-        "3bd9e8c227d3165966ef76c53ae2f761": "Introduces the concept of 'smouldering MS' as a primary driver of disease progression, offering an advanced perspective on the underlying pathology of natural history.",
-        "5dd210f9b1214a715e30bd027cf459ba": "Examines the impact of sex hormones on immune function and MS development, explaining gender differences in incidence and disease course.",
-        "730559cf4e13882f7715636e52cae7e7": "Offers a historical overview of MS, including early descriptions and a general discussion of age, sex, genetics, and environmental risk factors.",
-        "7ead7aebeb6db424fea382ae4363867d": "Provides a broad review of MS epidemiology, including increasing incidence and gene-environment interactions, serving as a general introduction.",
-        "81a4314212e6f7786ce3ba1732ea9f7c": "Provides an in-depth overview of the genetic contributions to MS susceptibility, addressing a key aspect of 'why' individuals develop the disease.",
-        "8260be4d16f19ad2df7970c2366e5852": "Focuses specifically on the role of infectious agents as environmental risk factors for MS, detailing one major component of 'why' MS occurs.",
-        "915a0e4d10533766d6c79ea9ac4d50d0": "Presents a global perspective on MS epidemiology, including prevalence and resource availability, addressing the 'where' aspect of the concept.",
-        "a62e6867fd8fd089666cf7bd38d78f49": "Explores emerging epidemiological trends, such as increasing prevalence and shifts in age distribution, providing an updated perspective on MS demographics.",
-        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "Delivers detailed, population-based prevalence estimates across diverse demographics and geographic regions in the US, offering granular data on 'who gets MS' and 'where.'",
-        "b616ccbbfacdfb24a3d76455fb2ba01b": "Discusses the natural history of MS, providing essential context for understanding the long-term disease trajectory before the era of immunomodulatory treatments.",
-        "cfda84294c6b892ebbd7c1efff0b7afb": "A classic geographically based study that provides early insights into the natural history and clinical course of MS.",
-        "e2e2095e60a993f88584f7bb6cb2575d": "Offers a foundational overview of MS epidemiology and pathophysiology, highlighting genetic, environmental, and lifestyle factors influencing risk and disease course.",
-        "ee0c0ec75717d39aad8f087956fe5ab2": "Reviews the current status of pediatric MS epidemiology, diagnosis, and treatment, focusing on the disease's presentation in a younger population."
+        "1bd77682a43725371cf903c3a6e5e086": "Explores sex-based differences in MS incidence and disease progression.",
+        "1d44380f4643434c432fbb73e2ee01fc": "Presents a geographically based study on the natural history of multiple sclerosis.",
+        "29d9f0c4a7920213e1108c5f919b36c8": "Focuses on the epidemiology and unique challenges of multiple sclerosis in elderly populations.",
+        "376b8183bf14ce1c59e42ef542bea47c": "Emphasizes the importance of epidemiology and natural history for understanding MS clinical course.",
+        "38d65ed7107ec8b5091630cf4be49d20": "Examines the relationship between relapses and long-term disability in the natural history of MS.",
+        "452a9108c94b8dc732ad9ca0446821d4": "Systematically reviews the incidence and prevalence of pediatric-onset multiple sclerosis.",
+        "585a3b9d89a32027995044197f1070ce": "Updates the global prevalence of MS, highlighting geographical differences.",
+        "6ad5a1cf1fd9e3122685289c3685b1d7": "Discusses environmental risk factors influencing MS etiology and geographic patterns.",
+        "7ead7aebeb6db424fea382ae4363867d": "Reviews the increasing incidence of MS and the role of gene-environment interactions.",
+        "94453b7cf5e2600787d77a2b649b7eb2": "Addresses the epidemiology and outcomes of multiple sclerosis in African American patients.",
+        "a62e6867fd8fd089666cf7bd38d78f49": "Discusses emerging epidemiological trends, including increasing prevalence and shifts in age distribution.",
+        "a67b7efa8857e47af4f9fd37d43ac881": "Provides a broad overview of MS prevalence, geographic distribution, and natural history.",
+        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "Provides detailed, population-based prevalence estimates across diverse demographics in the United States.",
+        "b616ccbbfacdfb24a3d76455fb2ba01b": "Offers new perspectives on the natural history and progression of multiple sclerosis.",
+        "d1a7cbc5fc702c16279a5b3d1734ae50": "Offers a foundational overview of MS epidemiology, diagnosis, and disease progression.",
+        "d48cc3a8981270bce8a5eff6ba1a7c4c": "Investigates latitudinal variations in the incidence and types of first demyelinating events."
       }
     },
     "ms_phenotypes": {
       "advanced": [
+        "24cbe6ff99bcce90651711eeb6449fba",
+        "74c913442adb20e9ebd5d21dcff06747",
+        "d03770c799886673a34c90cef87c8e0a",
+        "c9d49452250fe97b7661e80b623c0de8",
+        "a1c229f51b5c7e7e2ea08f8ed1bee5e7",
+        "1f8af781ddc5eb24b75af5ba607df825",
         "1272531bbe61511e02863f5654c7f02e",
-        "e301a2244218a4c99ba9bd4e58008856",
-        "2d72e1ced8f3eeb6cd352d8f9b3e83a1",
-        "c62fc186b48655b54f4b005587dca01b",
-        "37a18e7b35d38a44a91da5b73881f4cb",
-        "00ddc76cab6d1fa8dd8ce27e233140b4",
-        "7e0c489020a8f4a7399c2d2d05c88210"
+        "878c7d083b615e30b26d1f69d78bf315"
       ],
       "foundational": [
         "a076e268d7706f1a9aa86bbf8cf02558",
         "3be219c79ed6acd2d1696e3bbda3da2f",
-        "891e0143fe813d9a76c3c27065d412a5",
+        "ec8a52011af7e56a0957ed4199c8324c",
+        "16ea4af218dbf8b12bca15316a9c903b",
         "1b84ccb0d4cf9a3c36fe1fe3f93b1064",
         "68f6ab0c1897785898c945dba7bbb038",
-        "a1c229f51b5c7e7e2ea08f8ed1bee5e7",
-        "ad59af692546a3cd062ad1cdcfea8105",
-        "06c920701576fcd81f79b9f241855fd7"
+        "891e0143fe813d9a76c3c27065d412a5"
       ],
       "rationales": {
-        "00ddc76cab6d1fa8dd8ce27e233140b4": "This paper discusses the integration of big data and artificial intelligence for predicting MS progression, representing future directions in personalized care.",
-        "06c920701576fcd81f79b9f241855fd7": "This paper examines clinically isolated syndromes (CIS) and the role of MRI in predicting their conversion to definite MS, a critical aspect of early diagnosis and prognosis.",
-        "1272531bbe61511e02863f5654c7f02e": "This review explores advanced methods like machine learning and MRI biomarkers for predicting MS disease progression and outcomes.",
-        "1b84ccb0d4cf9a3c36fe1fe3f93b1064": "This paper specifically details secondary progressive MS, a key phenotype, including its course and therapeutic considerations.",
-        "2d72e1ced8f3eeb6cd352d8f9b3e83a1": "This paper delves into the challenges and imaging perspectives for diagnosing progressive MS, highlighting advanced diagnostic considerations.",
-        "37a18e7b35d38a44a91da5b73881f4cb": "This paper highlights serum neurofilament light chain as a promising biomarker for assessing prognosis and treatment response in MS.",
-        "3be219c79ed6acd2d1696e3bbda3da2f": "This paper presents the updated phenotypic classification, including CIS and active/non-active subcategories, which is fundamental for current understanding.",
-        "68f6ab0c1897785898c945dba7bbb038": "This paper focuses on the diagnosis of primary progressive MS, a distinct phenotype, emphasizing the role of MRI and McDonald criteria.",
-        "7e0c489020a8f4a7399c2d2d05c88210": "This paper focuses on clinical outcome measures specifically for progressive MS trials, crucial for evaluating new therapies for this challenging phenotype.",
-        "891e0143fe813d9a76c3c27065d412a5": "This paper provides historical context on the natural history and early classification of MS, essential for understanding the evolution of phenotype definitions.",
-        "a076e268d7706f1a9aa86bbf8cf02558": "This paper defines the clinical course and phenotypes of MS, crucial for understanding the disease's progression and management.",
-        "a1c229f51b5c7e7e2ea08f8ed1bee5e7": "This paper explores the pathogenic mechanisms underlying different clinical courses of MS, providing insight into the biological basis of phenotypes.",
-        "ad59af692546a3cd062ad1cdcfea8105": "This paper offers long-term follow-up data on CIS, RRMS, and SPMS, illustrating disease progression and prognosis across these phenotypes.",
-        "c62fc186b48655b54f4b005587dca01b": "This paper discusses emerging MRI biomarkers and machine learning techniques for improving MS diagnosis and monitoring disease progression.",
-        "e301a2244218a4c99ba9bd4e58008856": "This paper discusses high-efficacy therapies for RRMS, directly addressing how phenotype guides treatment eligibility and selection."
+        "1272531bbe61511e02863f5654c7f02e": "This paper reviews advanced methods like machine learning and MRI biomarkers for predicting MS progression and outcomes.",
+        "16ea4af218dbf8b12bca15316a9c903b": "This paper provides a focused definition and understanding of Clinically Isolated Syndrome (CIS).",
+        "1b84ccb0d4cf9a3c36fe1fe3f93b1064": "This paper offers a comprehensive overview of Secondary Progressive MS (SPMS), including its pathology and therapeutic response.",
+        "1f8af781ddc5eb24b75af5ba607df825": "This paper focuses on disease-modifying treatments specifically for progressive multiple sclerosis, linking phenotype to therapy.",
+        "24cbe6ff99bcce90651711eeb6449fba": "This paper presents a roadmap for applying precision medicine to MS, leveraging phenotypic heterogeneity for individualized care.",
+        "3be219c79ed6acd2d1696e3bbda3da2f": "This paper introduces the revised MS phenotypic classification, including CIS and activity qualifiers.",
+        "68f6ab0c1897785898c945dba7bbb038": "This paper discusses the diagnosis of Primary Progressive MS (PPMS) and the fundamental role of MRI.",
+        "74c913442adb20e9ebd5d21dcff06747": "This paper discusses the concept of precision phenotyping in MS, building on established classifications with activity qualifiers.",
+        "878c7d083b615e30b26d1f69d78bf315": "This paper addresses evidence-based prognostication for personalized MS treatment, highlighting the role of biomarkers and algorithms.",
+        "891e0143fe813d9a76c3c27065d412a5": "This paper explores the natural history of MS, categorizing patients by clinical course and disability accumulation.",
+        "a076e268d7706f1a9aa86bbf8cf02558": "This paper defines the clinical course descriptions of MS, crucial for understanding phenotypes.",
+        "a1c229f51b5c7e7e2ea08f8ed1bee5e7": "This paper differentiates pathogenic mechanisms associated with various clinical courses of MS (RRMS vs. progressive forms).",
+        "c9d49452250fe97b7661e80b623c0de8": "This paper reviews emerging imaging and liquid biomarkers crucial for diagnosis, prognosis, and treatment monitoring in MS.",
+        "d03770c799886673a34c90cef87c8e0a": "This paper investigates CSF biomarkers (NFL, CHI3L1) for defining disease course and prognosis in MS.",
+        "ec8a52011af7e56a0957ed4199c8324c": "This paper reviews the evolution of MS subtypes, incorporating imaging and biological correlates and new phenotypes like RIS/CIS."
       }
     },
     "neuroinflammation": {
       "advanced": [
-        "7cc218c2a28e03eb000441efcf3bfa2a",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25",
-        "b4edb101341ca99cbe8e816c2b026ac2",
-        "3963a24700a48b7f0f36b5e63ab37159",
-        "7541612a7ea49f1aa731f605c7158ffa",
-        "92b691d6a2645ce4ccefcf1c4210b7ec",
-        "6d8489df9953235b9db14617634bb7f4"
+        "87335f365c779af1cea4c3e172c5cb23",
+        "1f099a26257999c215216ade9be0c56e",
+        "726b349cb6c81f9a934d7ba4515fe1d7",
+        "259c1e631aaab29e8a2c04dbc85d8096",
+        "6ab243ce87f009bef30c91d659f804bc",
+        "997b6f0dd02735d479d9dbb2298752dc",
+        "6d8489df9953235b9db14617634bb7f4",
+        "76917ecbe9e1a811b1c1f57bc36fc04b"
       ],
       "foundational": [
-        "be8ee73d7234208eb47d6eb2fd8b8677",
-        "2e050870b51f3cc315d1664247650cad",
         "836eed21167b7034dca4476ac7aeca63",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d",
-        "0f219b3b7566ca251b64135ad6ff3f3d",
-        "f54eed3be1cf9fa659276b3622d62103"
+        "44870152065b2135ec133bba0de70180",
+        "13a8b0b158850424322ea68961935051",
+        "dd16b12c06f8d0712ca86a270823dc2e",
+        "7ceef2a9c35427b801ea4b6806448c82",
+        "bcca4f261a35e09dcc89122f5a3c7991"
       ],
       "rationales": {
-        "0f219b3b7566ca251b64135ad6ff3f3d": "Discusses the involvement of autoreactive lymphocytes, including T and B cells, in the pathogenesis and myelin destruction in MS.",
-        "2e050870b51f3cc315d1664247650cad": "Provides a broad overview of neuroinflammation, including glial cell activation and inflammatory mediators, as a key process in neurodegenerative diseases like MS.",
-        "3963a24700a48b7f0f36b5e63ab37159": "Delves into the unique molecular events and inflammatory mechanisms driving demyelination and neurodegeneration in cortical lesions.",
-        "6d8489df9953235b9db14617634bb7f4": "Presents a genomic map that implicates specific peripheral immune cells and microglia in MS susceptibility, offering genetic insights into neuroinflammation.",
-        "7541612a7ea49f1aa731f605c7158ffa": "Examines how inefficient clearance of myelin debris by microglia contributes to impaired remyelination, sustaining CNS damage.",
-        "7cc218c2a28e03eb000441efcf3bfa2a": "Identifies the presence of ectopic B-cell follicles in the meninges, a key finding for understanding compartmentalized chronic inflammation in progressive MS.",
-        "836eed21167b7034dca4476ac7aeca63": "Offers a comprehensive introduction to the roles of immune, glial, and nerve cells in the pathogenesis of MS.",
-        "92b691d6a2645ce4ccefcf1c4210b7ec": "Reveals how Versican promotes T helper 17 cytotoxic inflammation and actively impedes oligodendrocyte precursor cell remyelination.",
-        "b4ebe41bd1a03714cf45c362d4bd8f0d": "Details the critical role of T helper cells as key modulators in the inflammatory processes characteristic of MS.",
-        "b4edb101341ca99cbe8e816c2b026ac2": "Investigates chronic active lesions with iron rims, revealing smoldering inflammation and microglial involvement in lesion expansion.",
-        "be8ee73d7234208eb47d6eb2fd8b8677": "Explains the fundamental process of how immune cells breach the blood-brain barrier to initiate CNS inflammation in MS.",
-        "f54eed3be1cf9fa659276b3622d62103": "Highlights the role of cytokine signaling in initiating T cell activation and their subsequent infiltration into the CNS in MS.",
-        "f8e4a4f3eb0e944fa80dc7ce99567a25": "Explores the specific roles of CNS macrophages and microglia in the context of progressive MS and neurodegeneration."
+        "13a8b0b158850424322ea68961935051": "This paper offers a core understanding of microglia's role in neuroinflammation and neurodegeneration.",
+        "1f099a26257999c215216ade9be0c56e": "This paper provides a detailed, advanced mechanism of T-cell diapedesis across the blood-brain barrier.",
+        "259c1e631aaab29e8a2c04dbc85d8096": "This paper explores specific patterns of deep grey matter damage linked to leptomeningeal inflammation in progressive MS.",
+        "44870152065b2135ec133bba0de70180": "This paper is foundational for understanding blood-brain barrier dysfunction and immune cell entry into the CNS.",
+        "6ab243ce87f009bef30c91d659f804bc": "This paper discusses Bruton tyrosine kinase inhibitors as an advanced therapeutic strategy targeting CNS immunopathology.",
+        "6d8489df9953235b9db14617634bb7f4": "This paper offers advanced genomic insights into the susceptibility roles of peripheral immune cells and microglia in MS.",
+        "726b349cb6c81f9a934d7ba4515fe1d7": "This paper delves into the specific molecular pathway of the NLRP3 inflammasome in neuroinflammation.",
+        "76917ecbe9e1a811b1c1f57bc36fc04b": "This paper provides an advanced overview of pathophysiology and therapeutic strategies for progressive MS, linking to chronic inflammation.",
+        "7ceef2a9c35427b801ea4b6806448c82": "This paper provides a foundational understanding of the cellular immunology, including T cells, in relapsing MS.",
+        "836eed21167b7034dca4476ac7aeca63": "This paper provides a foundational overview of inflammatory and neuroglial aspects in MS pathogenesis.",
+        "87335f365c779af1cea4c3e172c5cb23": "This advanced paper focuses on chronic active lesions and smoldering neuroinflammation, key to compartmentalized disease.",
+        "997b6f0dd02735d479d9dbb2298752dc": "This paper investigates the specific role of EBV-specific CD8 T cells in MS brain infiltration, offering a specialized mechanism.",
+        "bcca4f261a35e09dcc89122f5a3c7991": "This paper describes the fundamental pathological outcomes of inflammation, including demyelination and axonal damage in MS.",
+        "dd16b12c06f8d0712ca86a270823dc2e": "This classic paper establishes the foundational role of B cells in multiple sclerosis."
       }
     },
     "paramagnetic_rim_lesions": {
       "advanced": [
         "c62fc186b48655b54f4b005587dca01b",
-        "7caa872d0e017ac9fded936010b44d5b",
-        "3a2347d83a80a060940934473939f3ab",
-        "834bfb49ae9fed82e6c36e476b74f714",
-        "1272531bbe61511e02863f5654c7f02e"
+        "c25b3c10db1be0944e544962a26d9372",
+        "8156de94933730a0e90753deeb9d7ce9",
+        "bd911a1af2c53cddce1a0913fc0b88d3"
       ],
       "foundational": [
+        "87335f365c779af1cea4c3e172c5cb23",
         "b4edb101341ca99cbe8e816c2b026ac2",
-        "6c7211f91426898b5dec90e3db1876a5",
         "675b163134c56749010c672cdf8ad285",
-        "c6d600f9bd9e5139df9804e58df67739",
-        "2086c7480d3d77f777ff4d7222e7359a"
+        "65ee8198a04888860da2def2dc35f0f4"
       ],
       "rationales": {
-        "1272531bbe61511e02863f5654c7f02e": "This review discusses predicting MS progression using machine learning and MRI-based biomarkers, providing an advanced perspective on integrating PRLs into predictive models.",
-        "2086c7480d3d77f777ff4d7222e7359a": "This paper demonstrates that chronic white matter lesion activity, characteristic of PRLs, predicts clinical progression in primary progressive multiple sclerosis.",
-        "3a2347d83a80a060940934473939f3ab": "This paper discusses the Progression Independent of Relapse Activity (PIRA) framework, providing a broader context for understanding how chronic active lesions like PRLs contribute to disability accrual.",
-        "675b163134c56749010c672cdf8ad285": "As a consensus statement, this paper provides an authoritative overview of imaging chronic active lesions, including paramagnetic rim lesions, in MS.",
-        "6c7211f91426898b5dec90e3db1876a5": "This paper highlights quantitative susceptibility mapping (QSM) for detecting paramagnetic rims and links them to chronic active lesions and disease progression.",
-        "7caa872d0e017ac9fded936010b44d5b": "This paper investigates the association of paramagnetic rim lesions with cognitive impairment and their presence in radiologically isolated syndrome (RIS), offering deeper clinical insights.",
-        "834bfb49ae9fed82e6c36e476b74f714": "This paper delves into the mechanistic role of microglia in regulating blood-brain barrier integrity during inflammatory demyelination, relevant to the iron-laden microglial rim of PRLs.",
-        "b4edb101341ca99cbe8e816c2b026ac2": "This paper establishes the pathological basis of iron accumulation in chronic MS lesions and its detection by 7T MRI as slowly expanding rims.",
-        "c62fc186b48655b54f4b005587dca01b": "This paper explores emerging machine learning techniques for analyzing paramagnetic rim lesions and other imaging biomarkers, indicating future diagnostic and prognostic avenues.",
-        "c6d600f9bd9e5139df9804e58df67739": "This paper identifies slowly expanding/evolving lesions as an MRI marker for chronic active MS lesions and smoldering inflammation, a core feature of PRLs."
+        "65ee8198a04888860da2def2dc35f0f4": "This multicenter study establishes the diagnostic specificity of paramagnetic rim lesions for multiple sclerosis, highlighting their importance as a unique imaging biomarker.",
+        "675b163134c56749010c672cdf8ad285": "This consensus statement is crucial for standardizing the imaging and terminology of chronic active lesions, including paramagnetic rim lesions, for consistent research and clinical application.",
+        "8156de94933730a0e90753deeb9d7ce9": "This paper introduces \"broad rim lesions\" as a new, related biomarker for rapid disease progression, advancing the understanding of rim lesion subtypes and their clinical implications.",
+        "87335f365c779af1cea4c3e172c5cb23": "This paper provides a comprehensive overview of chronic active lesions, setting the stage for understanding paramagnetic rim lesions within the broader context of smoldering neuroinflammation.",
+        "b4edb101341ca99cbe8e816c2b026ac2": "This foundational study details the pathological basis of iron accumulation and microglial activity in paramagnetic rim lesions, linking it to 7T MRI findings and lesion expansion.",
+        "bd911a1af2c53cddce1a0913fc0b88d3": "This review provides a deeper mechanistic understanding of microglial activity, which is central to the formation and persistence of the iron-laden rim in paramagnetic rim lesions.",
+        "c25b3c10db1be0944e544962a26d9372": "This study applies the concept of paramagnetic rim lesions to radiologically isolated syndrome, demonstrating their prognostic value in early disease stages.",
+        "c62fc186b48655b54f4b005587dca01b": "This paper explores advanced machine learning techniques for analyzing paramagnetic rim lesions, indicating future directions for their quantitative assessment and clinical utility."
       }
     },
     "pediatric_ms": {
       "advanced": [
-        "4b8e090276e1f15769821771ec0cd8bc",
-        "5c6eb5958ea2fb8239eab3372fbcdf33",
-        "161db682a609af654e928b7d692906f4"
+        "a08f95b1bfa988b00cadc3c6bc6453c2",
+        "f6f46ee4a38b36acbbd98e06d2a8387a"
       ],
       "foundational": [
         "ee0c0ec75717d39aad8f087956fe5ab2",
-        "7ee74ba403b17b4c8cc65330399f6720",
-        "6a73db6d3d93c8daa33ac1166ff707e8",
+        "71b428c976118b038788719e1bb8b5cf",
+        "a55e061f0a1a58a73cae78bbd7277ced",
+        "452a9108c94b8dc732ad9ca0446821d4",
         "20bcb5fb1dd77d076bac428fe661032d",
-        "746b1c67ac8cb6969caea9b0470f2e86"
+        "5c6eb5958ea2fb8239eab3372fbcdf33"
       ],
       "rationales": {
-        "161db682a609af654e928b7d692906f4": "Explores a specific biological mechanism (tryptophan metabolism) linked to pediatric MS risk and disease course.",
-        "20bcb5fb1dd77d076bac428fe661032d": "Outlines consensus on evaluating and using therapeutics specifically for pediatric MS.",
-        "4b8e090276e1f15769821771ec0cd8bc": "Essential for understanding MOGAD as a key differential diagnosis from pediatric MS and ADEM.",
-        "5c6eb5958ea2fb8239eab3372fbcdf33": "Provides specific recommendations for cognitive screening in children with MS, addressing neurodevelopmental consequences.",
-        "6a73db6d3d93c8daa33ac1166ff707e8": "Discusses evolving diagnostic approaches and treatment strategies specific to pediatric MS.",
-        "746b1c67ac8cb6969caea9b0470f2e86": "Offers an update on clinical features, diagnosis, therapies, and the risk of early cognitive impairment in pediatric MS.",
-        "7ee74ba403b17b4c8cc65330399f6720": "Critically examines the utility of diagnostic criteria, including IPMSSG, for pediatric MS.",
-        "ee0c0ec75717d39aad8f087956fe5ab2": "Provides a comprehensive overview of pediatric MS epidemiology, diagnosis, and treatment."
+        "20bcb5fb1dd77d076bac428fe661032d": "A consensus statement guiding the evaluation and management of therapeutics specifically for pediatric MS.",
+        "452a9108c94b8dc732ad9ca0446821d4": "A systematic review establishing the foundational epidemiological understanding of pediatric-onset multiple sclerosis.",
+        "5c6eb5958ea2fb8239eab3372fbcdf33": "Provides recommendations for cognitive screening and management, addressing neurodevelopmental consequences in children with MS.",
+        "71b428c976118b038788719e1bb8b5cf": "Offers detailed insights into diagnostic criteria refinement and the differential diagnosis of pediatric demyelinating conditions.",
+        "a08f95b1bfa988b00cadc3c6bc6453c2": "Explores specific considerations and challenges in applying MS therapies to pediatric patients, including long-term functional impact.",
+        "a55e061f0a1a58a73cae78bbd7277ced": "Crucial for understanding Acute Disseminated Encephalomyelitis (ADEM) as a key differential diagnosis in children.",
+        "ee0c0ec75717d39aad8f087956fe5ab2": "Provides a comprehensive overview of pediatric MS epidemiology, diagnosis, and treatment.",
+        "f6f46ee4a38b36acbbd98e06d2a8387a": "Investigates the specialized topic of hospital-diagnosed infections in youth as a potential risk factor for subsequent MS diagnosis."
       }
     },
     "pira_smoldering_ms": {
       "advanced": [
-        "b4edb101341ca99cbe8e816c2b026ac2",
-        "6c7211f91426898b5dec90e3db1876a5",
-        "c62fc186b48655b54f4b005587dca01b",
-        "faddc13f6a0b10c037c36554f70fc422",
-        "04af9a843f3077e313a8f1a96e6263b2",
-        "01e45335db85b65745c70e9c6d942353",
-        "1272531bbe61511e02863f5654c7f02e"
+        "fe45a74afc3fc28cd164c5bf37da48ad",
+        "a60a8dc1da0c8d0193cfa13150c59b59",
+        "a2bc642cc464e27bdfc808b7753ac635",
+        "d03770c799886673a34c90cef87c8e0a",
+        "f6490731cc2485b8c5a48abcd08ba9df",
+        "14e2e01d8abd15a29743ef008ab620ce",
+        "0e303d81bde4ee02a650e51c199519d0",
+        "bd911a1af2c53cddce1a0913fc0b88d3"
       ],
       "foundational": [
         "3a2347d83a80a060940934473939f3ab",
-        "047a3285ade63589276df8c2ce31e345",
-        "94550508a9f731c6741c8eac24c66a50",
+        "d51bd05d38a9d668d98fabf7abde7ba0",
+        "87335f365c779af1cea4c3e172c5cb23",
+        "b4edb101341ca99cbe8e816c2b026ac2",
         "38d65ed7107ec8b5091630cf4be49d20",
-        "c6d600f9bd9e5139df9804e58df67739",
-        "2086c7480d3d77f777ff4d7222e7359a",
-        "00dcfc8471284767e07f54fda26ce562"
+        "00dcfc8471284767e07f54fda26ce562",
+        "b10d7d4d7ee07628f49104178752fb99",
+        "c9d49452250fe97b7661e80b623c0de8"
       ],
       "rationales": {
-        "00dcfc8471284767e07f54fda26ce562": "This paper proposes a two-stage model of disability progression, linking focal inflammation, diffuse inflammation, and neurodegeneration.",
-        "01e45335db85b65745c70e9c6d942353": "This paper explores emerging CSF biomarkers, such as GFAP and neurofilament heavy chain, for non-relapsing progressive disease outcomes.",
-        "047a3285ade63589276df8c2ce31e345": "This study quantifies the relative contributions of relapse-associated worsening and PIRA to disability accumulation over time.",
-        "04af9a843f3077e313a8f1a96e6263b2": "This study differentiates subsequent progression and disease activity in progressive MS using serum GFAP and NfL levels.",
-        "1272531bbe61511e02863f5654c7f02e": "This review examines the use of machine learning and MRI-based biomarkers for predicting multiple sclerosis disease progression and outcomes.",
-        "2086c7480d3d77f777ff4d7222e7359a": "This study demonstrates how chronic active and slowly expanding lesions predict clinical progression in primary progressive MS.",
-        "38d65ed7107ec8b5091630cf4be49d20": "This paper explores the historical dissociation between relapse suppression and long-term disability, laying groundwork for the PIRA concept.",
-        "3a2347d83a80a060940934473939f3ab": "This paper defines PIRA, discusses its pathobiological foundations, and highlights its clinical trial implications.",
-        "6c7211f91426898b5dec90e3db1876a5": "This study uses quantitative susceptibility mapping (QSM) to detect paramagnetic rim lesions, correlating them with chronic active inflammation and progression.",
-        "94550508a9f731c6741c8eac24c66a50": "This real-life cohort study provides evidence for the occurrence and significance of PIRA even in early multiple sclerosis.",
-        "b4edb101341ca99cbe8e816c2b026ac2": "This paper details the pathology and 7T MRI characteristics of slowly expanding iron rim lesions, linking them to chronic inflammation.",
-        "c62fc186b48655b54f4b005587dca01b": "This review discusses advanced imaging biomarkers like paramagnetic rim lesions and emerging machine learning techniques for their analysis.",
-        "c6d600f9bd9e5139df9804e58df67739": "This paper establishes slowly expanding lesions as an MRI marker for chronic active MS lesions and smoldering inflammation.",
-        "faddc13f6a0b10c037c36554f70fc422": "This review comprehensively covers neurodegeneration, silent progression, and the role of various biomarkers, including kynurenines."
+        "00dcfc8471284767e07f54fda26ce562": "This paper proposes a two-stage model of disability progression, conceptually linking focal inflammation, diffuse inflammation, and neurodegeneration.",
+        "0e303d81bde4ee02a650e51c199519d0": "This paper identifies sGFAP and sNfL as biomarkers for predicting PIRA risk under B-cell depleting treatment.",
+        "14e2e01d8abd15a29743ef008ab620ce": "This paper presents an advanced 3D stem cell model to study glial-immune neurodegenerative phenotypes relevant to MS.",
+        "38d65ed7107ec8b5091630cf4be49d20": "This paper highlights the dissociation between relapses and long-term disability, providing a historical context for the emergence of the PIRA concept.",
+        "3a2347d83a80a060940934473939f3ab": "This paper provides a foundational understanding of the PIRA framework, its definition, and clinical implications.",
+        "87335f365c779af1cea4c3e172c5cb23": "This paper is foundational for understanding the classification, terminology, and clinical significance of chronic active lesions and smoldering neuroinflammation.",
+        "a2bc642cc464e27bdfc808b7753ac635": "This paper characterizes demyelinated lesions in the cerebral cortex, detailing neurodegeneration in a specific brain region.",
+        "a60a8dc1da0c8d0193cfa13150c59b59": "This paper explores the specific pathogenic implications of iron and zinc patterns within chronic MS lesions.",
+        "b10d7d4d7ee07628f49104178752fb99": "This paper provides foundational evidence for axonal injury as a major correlate of permanent clinical deficit in MS, underpinning neurodegeneration.",
+        "b4edb101341ca99cbe8e816c2b026ac2": "This paper establishes the link between slowly expanding lesions, iron rims, and pathology using advanced MRI, crucial for understanding chronic lesion activity.",
+        "bd911a1af2c53cddce1a0913fc0b88d3": "This paper reviews the complex roles and regulation of microglia activity in chronic inflammation within MS.",
+        "c9d49452250fe97b7661e80b623c0de8": "This paper reviews emerging imaging and liquid biomarkers, offering a broad perspective on tools for detecting smoldering disease.",
+        "d03770c799886673a34c90cef87c8e0a": "This paper investigates the combined prognostic potential of CSF NfL and CHI3L1 biomarkers in defining MS disease course.",
+        "d51bd05d38a9d668d98fabf7abde7ba0": "This paper offers a comprehensive overview of smoldering inflammation and PIRA, including their determinants and biomarkers.",
+        "f6490731cc2485b8c5a48abcd08ba9df": "This paper provides practical guidance on using neurofilament light chain as a blood biomarker for MS management, including disease progression.",
+        "fe45a74afc3fc28cd164c5bf37da48ad": "This paper delves into meningeal lymphoid aggregates as a specific pathological mechanism driving PIRA."
       }
     },
     "pregnancy_ms": {
       "advanced": [
-        "d9b3b7fe443d36924c673434a27ae08e",
-        "411f13fe54136bcf84510863f4d83f0d",
-        "c0d317d8c93631c6946b236bb0820f39",
-        "5c5e256eed43db47ffc78496ecf4cd22"
+        "cc2423e3929e1f2160499bad1a63b11d",
+        "02d552731d42fef38771b2b5aa96607f",
+        "c0d317d8c93631c6946b236bb0820f39"
       ],
       "foundational": [
+        "45a5aafa1aa766c979144867547b9162",
         "78a3e7a32c9f36726f55bb498851f377",
         "3cd7fd55631aef232baee632b8e42c91",
-        "ba032dd490406d7cc30b8997156b1389",
-        "5eaa86ac37ad24713b3716cad49926b4"
+        "20db80dea93c8c151c49cd2da9486c9a",
+        "ba032dd490406d7cc30b8997156b1389"
       ],
       "rationales": {
-        "3cd7fd55631aef232baee632b8e42c91": "The PRIMS study is a foundational prospective study identifying clinical predictors of postpartum relapse risk.",
-        "411f13fe54136bcf84510863f4d83f0d": "This paper offers a detailed analysis of both clinical and radiologic disease activity during pregnancy and the high-risk postpartum period.",
-        "5c5e256eed43db47ffc78496ecf4cd22": "This study provides mechanistic insights into white matter plasticity and enhanced remyelination in the maternal central nervous system.",
-        "5eaa86ac37ad24713b3716cad49926b4": "This review explores how female gender and reproductive factors generally influence MS risk, relapses, and progression.",
-        "78a3e7a32c9f36726f55bb498851f377": "This review provides a comprehensive overview of family planning, antenatal, and postpartum care in MS.",
-        "ba032dd490406d7cc30b8997156b1389": "This paper sets the context for MS in women of childbearing age and discusses family planning considerations.",
-        "c0d317d8c93631c6946b236bb0820f39": "This paper delves into the hormonal and gender-related immune changes that influence MS disease course during pregnancy.",
-        "d9b3b7fe443d36924c673434a27ae08e": "This study provides specific data on the use and safety of natalizumab, fingolimod, and dimethyl fumarate during pregnancy."
+        "02d552731d42fef38771b2b5aa96607f": "This study investigates the effect of a specific immunomodulatory treatment (IVIg) on relapses during pregnancy and postpartum.",
+        "20db80dea93c8c151c49cd2da9486c9a": "This paper reviews DMT safety and provides treatment recommendations for women with MS planning pregnancy, during, and after.",
+        "3cd7fd55631aef232baee632b8e42c91": "The PRIMS study is a landmark prospective study that established the influence of pregnancy and postpartum on MS disease course.",
+        "45a5aafa1aa766c979144867547b9162": "This evidence-based review provides a comprehensive overview of pregnancy-related issues and practical recommendations in MS.",
+        "78a3e7a32c9f36726f55bb498851f377": "This review offers a broad understanding of family planning, antenatal, and postpartum care challenges in MS.",
+        "ba032dd490406d7cc30b8997156b1389": "This paper provides essential context on MS prevalence in women of childbearing age and the importance of family planning.",
+        "c0d317d8c93631c6946b236bb0820f39": "This paper explores the underlying biological mechanisms, specifically hormonal and immune changes, influencing MS activity during pregnancy.",
+        "cc2423e3929e1f2160499bad1a63b11d": "This systematic review and meta-analysis offers a high-level, quantitative synthesis of postpartum relapse risk in MS."
       }
     },
     "rehabilitation_exercise": {
       "advanced": [
-        "92e5d0a6537ea9f7af37e8a59dd66940",
-        "t4::t4-038",
-        "1d745f5a6158839375124de9b91bf4f5"
+        "8a66f5941e13d7c3b4770058c1ef189e",
+        "aeac419aaae507723e7eed23bfb49d7e",
+        "5c6eb5958ea2fb8239eab3372fbcdf33",
+        "t4::t4-038"
       ],
       "foundational": [
+        "c5fb14c6d7199721a0722d734f689c09",
         "t4::t4-036",
-        "t4::t4-035",
-        "8a66f5941e13d7c3b4770058c1ef189e",
-        "5c6eb5958ea2fb8239eab3372fbcdf33",
-        "248d06764a4313b43bc4f863ce6f6f8d"
+        "017e0bf58a5ad8cd9619ed4eac6ad104",
+        "b2aa947c3300afbeee69256e56aeb33c",
+        "t4::t4-035"
       ],
       "rationales": {
-        "1d745f5a6158839375124de9b91bf4f5": "Provides a detailed algorithm for managing MS-related fatigue, moving beyond general recommendations to tailored strategies.",
-        "248d06764a4313b43bc4f863ce6f6f8d": "Highlights the importance of multidisciplinary teams in MS care, a cornerstone of comprehensive rehabilitation.",
-        "5c6eb5958ea2fb8239eab3372fbcdf33": "Provides essential recommendations for cognitive screening and management, a core component of MS rehabilitation.",
-        "8a66f5941e13d7c3b4770058c1ef189e": "Offers foundational evidence for exercise as a key intervention for managing MS-related fatigue through a meta-analysis.",
-        "92e5d0a6537ea9f7af37e8a59dd66940": "Presents a randomized controlled trial on combining aerobic exercise and cognitive rehabilitation, offering deeper insights into specific interventions.",
-        "t4::t4-035": "Establishes the conceptual importance and advocates for exercise as a crucial therapeutic strategy in MS.",
-        "t4::t4-036": "Provides a comprehensive systematic review and meta-analysis on the benefits of exercise in MS, establishing foundational evidence.",
-        "t4::t4-038": "Focuses specifically on the interplay between exercise and cognitive impairment, building on general exercise benefits."
+        "017e0bf58a5ad8cd9619ed4eac6ad104": "Introduces the concept and effectiveness of multidisciplinary rehabilitation as a core component of MS care.",
+        "5c6eb5958ea2fb8239eab3372fbcdf33": "Offers guidelines for addressing cognitive symptoms, a key aspect of comprehensive rehabilitation in MS.",
+        "8a66f5941e13d7c3b4770058c1ef189e": "Delves into specific interventions, including exercise, for managing fatigue, a prevalent and challenging MS symptom.",
+        "aeac419aaae507723e7eed23bfb49d7e": "Provides a specialized meta-analysis on the impact of exercise specifically on improving walking ability in MS patients.",
+        "b2aa947c3300afbeee69256e56aeb33c": "Presents a randomized controlled trial demonstrating the effectiveness of individualized rehabilitation programs in reducing disability in MS.",
+        "c5fb14c6d7199721a0722d734f689c09": "Provides a foundational overview of the general benefits of exercise training for individuals with MS.",
+        "t4::t4-035": "Emphasizes the critical role and advocacy for exercise as a therapeutic intervention in MS management.",
+        "t4::t4-036": "Offers a comprehensive, evidence-based summary of the effects of exercise in MS through a systematic review and meta-analysis.",
+        "t4::t4-038": "Explores the specific relationship between exercise and its potential benefits for cognitive impairment in MS."
       }
     },
     "sex_gender_ms": {
       "advanced": [
+        "5dd210f9b1214a715e30bd027cf459ba",
+        "c0d317d8c93631c6946b236bb0820f39",
         "ba032dd490406d7cc30b8997156b1389",
-        "602de8ec1be83948ae88f76db94194c3",
-        "5ef1e2ac5fdc9a2f23d34eb8998c77d9",
-        "f5caf3b516e5ce50ec285c0e363c35d9",
-        "b14be46db6337dd5021ecda7683e79ed",
-        "22092527fa6e11b1e5ab3a6336e4353d"
+        "5eaa86ac37ad24713b3716cad49926b4",
+        "f5caf3b516e5ce50ec285c0e363c35d9"
       ],
       "foundational": [
         "78d5f7580ff63ca98598392558f5274d",
-        "5dd210f9b1214a715e30bd027cf459ba",
-        "9fd24e8d092a2e49f46e96821cc102a8",
+        "1bd77682a43725371cf903c3a6e5e086",
+        "259143a9a2b4b4f6811715d5bcbe4549",
+        "83cc02f206f3b3df9c6fd272608654bb",
         "1116e0a01829df715aa2c3c1adb20c6c",
-        "aed83c9bd9b7103cf7b7c22bb51b4ee7",
-        "c0d317d8c93631c6946b236bb0820f39",
-        "dcaa8d412e524f57ad70149a2d2f744c"
+        "aed83c9bd9b7103cf7b7c22bb51b4ee7"
       ],
       "rationales": {
-        "1116e0a01829df715aa2c3c1adb20c6c": "This study evaluates sex differences in relapse incidence and the relationship between sex and primary progressive disease course.",
-        "22092527fa6e11b1e5ab3a6336e4353d": "This paper offers advanced pathological insights into how gender contributes to the dynamic nature of white matter MS plaques.",
-        "5dd210f9b1214a715e30bd027cf459ba": "This review details the impact of sex hormones on immune function and how these modulate MS development and gender differences in disease course.",
-        "5ef1e2ac5fdc9a2f23d34eb8998c77d9": "This study provides specialized insights into how reproductive history influences the risk of progressive MS in women.",
-        "602de8ec1be83948ae88f76db94194c3": "This evidence-based review specifically addresses the effects of menopause on women with MS, a critical life stage for disease modulation.",
-        "78d5f7580ff63ca98598392558f5274d": "This paper provides a foundational overview of why MS susceptibility is higher in females and how sex influences disease course.",
-        "9fd24e8d092a2e49f46e96821cc102a8": "This paper highlights the importance of studying sex differences in MS to gain new insights for management and treatments.",
-        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "This study provides recent population-based estimates of MS prevalence, including significant differences by sex in the United States.",
-        "b14be46db6337dd5021ecda7683e79ed": "This study provides a specific finding on how male sex can influence the development of cognitive dysfunction in MS progression.",
-        "ba032dd490406d7cc30b8997156b1389": "This paper offers a deeper understanding of how sex effects manifest across the entire lifespan in women with MS, particularly during reproductive years.",
-        "c0d317d8c93631c6946b236bb0820f39": "This paper explores hormonal and gender-related immune changes in MS, including the impact of pregnancy on disease activity.",
-        "dcaa8d412e524f57ad70149a2d2f744c": "This paper presents crucial epidemiological data on MS-specific mortality trends, highlighting distinctive differences by sex.",
-        "f5caf3b516e5ce50ec285c0e363c35d9": "This autopsy cohort analysis offers advanced pathological insights into lesion activity and its correlation with clinical severity and sex in progressive MS."
+        "1116e0a01829df715aa2c3c1adb20c6c": "Details how sex influences specific disease characteristics like relapse incidence and the progressive course of multiple sclerosis.",
+        "1bd77682a43725371cf903c3a6e5e086": "Establishes the key epidemiological trends of rising MS incidence in women and the distinct vulnerability of men to disease progression.",
+        "259143a9a2b4b4f6811715d5bcbe4549": "Offers longitudinal data on the changing sex ratio of MS, providing crucial evidence for the increasing female predominance.",
+        "5dd210f9b1214a715e30bd027cf459ba": "Explores the mechanistic role of sex hormones in modulating immune function and influencing MS development and course.",
+        "5eaa86ac37ad24713b3716cad49926b4": "Examines the specific influence of female gender and reproductive factors on MS risk, relapse rates, and disease progression.",
+        "78d5f7580ff63ca98598392558f5274d": "Provides a foundational overview of sex differences in MS susceptibility and disease course, highlighting female predisposition and male progression.",
+        "83cc02f206f3b3df9c6fd272608654bb": "A review summarizing gender issues in MS, including increasing incidence in women and differing impacts on men and women.",
+        "aed83c9bd9b7103cf7b7c22bb51b4ee7": "Presents recent population-based prevalence estimates by sex, offering current epidemiological context for sex differences in MS in the US.",
+        "ba032dd490406d7cc30b8997156b1389": "Focuses on the unique impact of sex and reproductive factors on MS throughout the female lifespan, including environmental interactions.",
+        "c0d317d8c93631c6946b236bb0820f39": "Delves into specific hormonal and gender-related immune changes that contribute to the observed sex differences in MS pathology and progression.",
+        "f5caf3b516e5ce50ec285c0e363c35d9": "Investigates the correlation between sex and lesion activity in progressive MS patients, providing pathological insights into sex-specific disease severity."
       }
     },
     "shared_decision_making": {
       "advanced": [
-        "992a1bb75d20d03226e2302be0826e06",
-        "94453b7cf5e2600787d77a2b649b7eb2",
+        "878c7d083b615e30b26d1f69d78bf315",
+        "24cbe6ff99bcce90651711eeb6449fba",
+        "78a3e7a32c9f36726f55bb498851f377",
+        "9c65af9cba92675e236848f797bc5664",
         "23b31e5ae980f7e08a8dab671ff0eb66",
-        "730f37ee5280dd8a2485d8573094c34b"
+        "5c6eb5958ea2fb8239eab3372fbcdf33",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c",
+        "7b6119e7c1887c2e4fbdad07217293a0"
       ],
       "foundational": [
         "35045b8d3ae27fcb8023ee8f072509a9",
@@ -823,89 +855,95 @@
         "t4::t4-048"
       ],
       "rationales": {
-        "23b31e5ae980f7e08a8dab671ff0eb66": "Explores the broader impact of social determinants of health and inequities on patient partnership and care in MS.",
-        "35045b8d3ae27fcb8023ee8f072509a9": "Provides a foundational three-step model for implementing shared decision-making in clinical practice.",
-        "730f37ee5280dd8a2485d8573094c34b": "Introduces a patient-based outcome measure, essential for incorporating patient priorities and evaluating the impact of shared decision-making.",
-        "94453b7cf5e2600787d77a2b649b7eb2": "Highlights the importance of addressing health disparities to ensure equitable and informed shared decision-making for all MS patient populations.",
-        "992a1bb75d20d03226e2302be0826e06": "Illustrates the complexities of shared decision-making in a specific, high-stakes scenario like pregnancy and medication use in MS.",
-        "bc4457f660ecfc779461a3dc1b1dabec": "Directly addresses the critical role of shared decision-making in MS due to its preference-sensitive nature and diverse treatment options.",
-        "t4::t4-048": "Links shared decision-making to patient self-management and evidence-based medicine, crucial for patient partnership in MS."
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "Addresses the management of 'invisible symptoms' in MS, underscoring the need to incorporate patient-reported priorities into care.",
+        "23b31e5ae980f7e08a8dab671ff0eb66": "Highlights health disparities and social determinants of health, crucial for ensuring equitable patient partnership in MS care.",
+        "24cbe6ff99bcce90651711eeb6449fba": "Outlines a roadmap for precision medicine in MS, emphasizing individualized care that relies on patient partnership.",
+        "35045b8d3ae27fcb8023ee8f072509a9": "Provides a practical, three-step model for implementing shared decision-making in clinical practice.",
+        "5c6eb5958ea2fb8239eab3372fbcdf33": "Offers recommendations for cognitive screening and management, emphasizing patient awareness and education in a challenging symptom area.",
+        "78a3e7a32c9f36726f55bb498851f377": "Provides a comprehensive review of family planning and pregnancy care in MS, a key area for shared decision-making.",
+        "7b6119e7c1887c2e4fbdad07217293a0": "Explores the future role of AI in enabling personalized care for MS patients, supporting advanced shared decision-making.",
+        "878c7d083b615e30b26d1f69d78bf315": "Discusses evidence-based prognostication as a foundation for personalized treatment decisions in MS.",
+        "9c65af9cba92675e236848f797bc5664": "Examines the risks and decision-making process for discontinuing natalizumab during pregnancy in MS patients.",
+        "bc4457f660ecfc779461a3dc1b1dabec": "Reviews the importance of shared decision-making in MS, given its preference-sensitive nature and increasing treatment options.",
+        "t4::t4-048": "Connects shared decision-making with self-management and the principles of evidence-based medicine in MS."
       }
     },
     "treatment_monitoring": {
       "advanced": [
-        "35298d0e900e990010cc08ec8fd7d9f4",
+        "60a9e7a28b80ab6b48cc661707e1b2d9",
         "27196447b68c979a0fdacff2f7029089",
-        "1272531bbe61511e02863f5654c7f02e",
+        "35298d0e900e990010cc08ec8fd7d9f4",
+        "83879aac5e319c560e10511f9eeb7047",
         "7506ab532a23bdc1068eb28bd8a720bf",
-        "166b2482b2068cf9b9df6aa85b62de9e",
-        "9fc11e3fc64f3720e33ee86aeb01376b"
+        "dba97c9e6f0a34e828788addc92105e0",
+        "86d612a034eacb3844093d1604ddfe3f"
       ],
       "foundational": [
         "6182bdc2c818dbdc07a1bd744601e3bd",
-        "0a7c16172a6e1a4f0a7cfdf68d4bac0e",
-        "9b280fde6874792c004e6b847bdaf1f6",
-        "a3afa4b7bcf774a803b4118bcaf23f48",
-        "84ae88628effb18c490010bff232ac8e",
-        "4271ebf6ac652293dbb06cf94322aebf"
+        "f83ddd7f43783453985e7d9a4dd58098",
+        "92c1072a8b8efe1f73b1564e0e87b5a7",
+        "f6490731cc2485b8c5a48abcd08ba9df",
+        "c661d94bf04f95e30c989a2928c1fd1d",
+        "878c7d083b615e30b26d1f69d78bf315",
+        "a3afa4b7bcf774a803b4118bcaf23f48"
       ],
       "rationales": {
-        "0a7c16172a6e1a4f0a7cfdf68d4bac0e": "This paper introduces various current and future biomarkers in MS, including NfL, for assessing disease activity and progression.",
-        "1272531bbe61511e02863f5654c7f02e": "This review delves into the advanced use of machine learning and MRI-based biomarkers for predicting MS disease progression and outcomes.",
-        "166b2482b2068cf9b9df6aa85b62de9e": "This paper provides an advanced perspective on the evolving landscape of fluid biomarkers in MS, from current applications to future potential.",
-        "27196447b68c979a0fdacff2f7029089": "These MAGNIMS recommendations provide specialized guidance on using brain and spinal cord atrophy measures as advanced MRI biomarkers in MS.",
-        "35298d0e900e990010cc08ec8fd7d9f4": "This paper explores the advanced application of AI for MRI monitoring in MS, particularly in achieving No Evidence of Disease Activity (NEDA).",
-        "4271ebf6ac652293dbb06cf94322aebf": "This review offers a foundational overview of current and emerging disease-modulatory therapies, crucial for understanding treatment monitoring contexts.",
-        "6182bdc2c818dbdc07a1bd744601e3bd": "This consensus guideline provides a foundational understanding of MRI's role in monitoring MS disease prognosis and treatment efficacy.",
-        "7506ab532a23bdc1068eb28bd8a720bf": "This study demonstrates the advanced prognostic value of serum NfL levels in predicting long-term clinical outcomes in multiple sclerosis.",
-        "84ae88628effb18c490010bff232ac8e": "This guideline summary provides essential recommendations for initiating, switching, and stopping disease-modifying therapies in adults with MS.",
-        "9b280fde6874792c004e6b847bdaf1f6": "This critical review offers a comprehensive overview of blood NfL as a biomarker for neuronal injury across neurological diseases, including MS.",
-        "9fc11e3fc64f3720e33ee86aeb01376b": "This review discusses the advanced therapeutic strategy of initiating early treatment with high-efficacy drugs in MS, challenging traditional escalation approaches.",
-        "a3afa4b7bcf774a803b4118bcaf23f48": "This study specifically validates blood NfL as an accessible biomarker for MS disease activity and response to treatment."
+        "27196447b68c979a0fdacff2f7029089": "Focuses on the advanced application of brain and spinal cord atrophy measures in MS clinical practice.",
+        "35298d0e900e990010cc08ec8fd7d9f4": "Validates the real-world application of AI-based MRI for monitoring disease activity and guiding treatment escalation.",
+        "60a9e7a28b80ab6b48cc661707e1b2d9": "Presents updated consensus recommendations for MRI use in MS diagnosis and monitoring, building on prior guidelines.",
+        "6182bdc2c818dbdc07a1bd744601e3bd": "Provides foundational consensus guidelines for using MRI in MS monitoring and prognosis.",
+        "7506ab532a23bdc1068eb28bd8a720bf": "Investigates the long-term prognostic value of serum NfL levels in predicting clinical outcomes in MS.",
+        "83879aac5e319c560e10511f9eeb7047": "Addresses the practical requirements and challenges for implementing neurofilament light chain in clinical laboratory practice.",
+        "86d612a034eacb3844093d1604ddfe3f": "Provides a specific clinical trial example of switching natalizumab dosing to balance efficacy and safety risks.",
+        "878c7d083b615e30b26d1f69d78bf315": "Explores the role of evidence-based prognosis in personalizing MS treatment and guiding therapy adjustments.",
+        "92c1072a8b8efe1f73b1564e0e87b5a7": "Proposes a structured monitoring matrix to integrate various data for effective MS management and treatment decisions.",
+        "a3afa4b7bcf774a803b4118bcaf23f48": "Demonstrates the utility of blood NfL as a biomarker for assessing MS disease activity and treatment response.",
+        "c661d94bf04f95e30c989a2928c1fd1d": "Discusses the critical debate between early highly effective versus escalation treatment strategies in MS.",
+        "dba97c9e6f0a34e828788addc92105e0": "Examines the complex considerations and open questions surrounding de-escalation and discontinuation of DMTs in MS.",
+        "f6490731cc2485b8c5a48abcd08ba9df": "Delivers practical guidance on the clinical utility of neurofilament light chain as a biomarker in MS management.",
+        "f83ddd7f43783453985e7d9a4dd58098": "Offers a comprehensive, recent overview of neurofilaments as clinical biomarkers for neurological disorders, including MS."
       }
     },
     "what_is_ms": {
       "advanced": [
-        "9a3826e23c3ab8d5e0b9921dce93e546",
+        "4f915e5dd9026399fd0d37fb25a65ffc",
+        "6a9b2670b98fb8113d39c1ed8b25162d",
+        "63593f511d71c98736a1b73f682ca724",
+        "71b428c976118b038788719e1bb8b5cf",
         "3bd9e8c227d3165966ef76c53ae2f761",
-        "87605002568aa9a771f02bf932771e43",
-        "1272531bbe61511e02863f5654c7f02e",
-        "6a8f375195bd02c12cd24d10f0f5d08d",
-        "e208a93e8b45ce632643d45c56c0b1fb",
-        "9298725bc7c8805af9681cfeba3bbabb",
-        "e4d40c88efe906478c9e5af58466ad7b"
+        "9a3826e23c3ab8d5e0b9921dce93e546",
+        "0117d7341fa28304b60d4e1c6d07183f",
+        "65ee8198a04888860da2def2dc35f0f4"
       ],
       "foundational": [
+        "14ad1ba5291f6c3657c596cc02558ae7",
         "a62e6867fd8fd089666cf7bd38d78f49",
-        "730559cf4e13882f7715636e52cae7e7",
         "891e0143fe813d9a76c3c27065d412a5",
+        "16451535b784415a06b276c6ace2becf",
         "e5d9ce9e69921545837f9e2ab38589b0",
-        "4b8e090276e1f15769821771ec0cd8bc",
-        "370e011eea706b7f5b039830514b15bf",
-        "1d7a73f4a8a010b888dad41d335d2d1a",
-        "9fc9d533faa62165c7711535d2077ba2"
+        "87605002568aa9a771f02bf932771e43",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c"
       ],
       "rationales": {
-        "1272531bbe61511e02863f5654c7f02e": "Explores advanced methods like machine learning and MRI biomarkers for predicting MS progression and outcomes.",
-        "1d7a73f4a8a010b888dad41d335d2d1a": "Discusses the 'inside-out' vs. 'outside-in' paradigms, offering a foundational perspective on MS etiopathogenesis.",
-        "370e011eea706b7f5b039830514b15bf": "Highlights the critical role of MRI in the diagnosis and prognosis of MS, a key aspect of its clinical definition.",
-        "3bd9e8c227d3165966ef76c53ae2f761": "Introduces the advanced concept of 'smouldering MS' as a primary driver of pathology, deepening understanding of disease progression.",
-        "4b8e090276e1f15769821771ec0cd8bc": "Essential for understanding how MS differs from other demyelinating conditions like MOGAD, aiding in differential diagnosis.",
-        "6a8f375195bd02c12cd24d10f0f5d08d": "Focuses on serum neurofilament light chain as an advanced biomarker for individual prognostication of MS disease activity.",
-        "730559cf4e13882f7715636e52cae7e7": "Offers a foundational understanding of MS history and its core pathophysiology as an immune-inflammatory disease.",
-        "87605002568aa9a771f02bf932771e43": "Delves into the complex role of neurodegeneration as a key component of MS progression and disability.",
-        "891e0143fe813d9a76c3c27065d412a5": "Establishes the concept of MS natural history and its variable patterns of evolution and classification.",
-        "9298725bc7c8805af9681cfeba3bbabb": "Offers advanced insights into B cell targeting in MS by drawing comparisons with other autoimmune diseases.",
-        "9a3826e23c3ab8d5e0b9921dce93e546": "Presents an advanced, data-driven approach to reclassifying MS progression, moving beyond traditional subtypes.",
-        "9fc9d533faa62165c7711535d2077ba2": "Provides a foundational understanding of the autoimmune mechanisms involving T cells in MS pathogenesis.",
-        "a62e6867fd8fd089666cf7bd38d78f49": "Provides a current overview of MS definition, epidemiology, and evolving clinical course.",
-        "e208a93e8b45ce632643d45c56c0b1fb": "Provides an advanced perspective on the cumulative roles of multiple viral infections in driving MS pathogenesis.",
-        "e4d40c88efe906478c9e5af58466ad7b": "Compares the preclinical phases of MS with other autoimmune disorders, providing a specialized view on differential understanding.",
-        "e5d9ce9e69921545837f9e2ab38589b0": "Explores the fundamental debate on whether MS is primarily an immune or neurodegenerative disorder, crucial for its definition."
+        "0117d7341fa28304b60d4e1c6d07183f": "Offers consensus recommendations for radiologically isolated syndrome, a nuanced aspect of subclinical MS diagnosis.",
+        "0dbb5d2a3d85d5e2ae182b598ef6863c": "Offers a comprehensive definition of MS as a chronic autoimmune inflammatory CNS disease with diverse symptoms.",
+        "14ad1ba5291f6c3657c596cc02558ae7": "Proposes a unifying histological classification system for MS lesions, essential for defining the disease.",
+        "16451535b784415a06b276c6ace2becf": "Defines MS within the broader context of inflammatory demyelinating diseases and describes its pathological hallmarks.",
+        "3bd9e8c227d3165966ef76c53ae2f761": "Proposes a deeper understanding of MS pathology by introducing the concept of 'smouldering MS'.",
+        "4f915e5dd9026399fd0d37fb25a65ffc": "Defines distinct features of anti-MOG antibody-associated demyelination, crucial for differentiating it from MS.",
+        "63593f511d71c98736a1b73f682ca724": "Addresses the challenging diagnosis and classification of optic neuritis, a common initial symptom requiring differentiation.",
+        "65ee8198a04888860da2def2dc35f0f4": "Identifies paramagnetic rim lesions as specific MRI markers for MS, aiding in differential diagnosis.",
+        "6a9b2670b98fb8113d39c1ed8b25162d": "Focuses on the differential diagnosis of neuromyelitis optica spectrum disorders (NMOSD) from MS.",
+        "71b428c976118b038788719e1bb8b5cf": "Provides clinical, imaging, and biological considerations for diagnosing pediatric MS and differentiating it from other demyelinating conditions.",
+        "87605002568aa9a771f02bf932771e43": "Highlights neurodegeneration as a key component of MS, expanding on its definition beyond just demyelination.",
+        "891e0143fe813d9a76c3c27065d412a5": "Discusses the natural history and classification of MS disease patterns, contributing to its definition.",
+        "9a3826e23c3ab8d5e0b9921dce93e546": "Explores AI-driven reclassification of MS progression, representing an advanced approach to disease subtyping.",
+        "a62e6867fd8fd089666cf7bd38d78f49": "Provides a current definition of MS as a chronic inflammatory and neurodegenerative CNS disease, along with epidemiological trends.",
+        "e5d9ce9e69921545837f9e2ab38589b0": "Explores the fundamental nature of MS as an immune-mediated versus neurodegenerative disorder."
       }
     }
   },
-  "generated_at_utc": "2026-04-11T19:10:41.832740+00:00",
+  "generated_at_utc": "2026-04-12T19:11:57.090589+00:00",
   "model": "gemini-2.5-flash",
   "prompt_hash": "2449a72a6927cb98956849d9255db062acb66672a2380b855a319d6552258bb6",
   "version": 1

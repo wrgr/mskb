@@ -52,8 +52,28 @@ import '../../styles/custom.css';
     </div>
   </section>
 
-</div>
+  <section class="chart-card">
+    <h3>Citation genealogy</h3>
+    <p class="chart-hint">Foundational papers at the center; each ring outward is one generation of work that built on the papers inside it. Node size = citation count. Drag to pan, scroll to zoom, hover for details.</p>
+    <div class="fd-ancestry-controls">
+      <label class="fd-ancestry-label">
+        Min importance
+        <input type="range" id="fd-ancestry-threshold" min="0" max="5" step="0.1" value="0.5" />
+        <span id="fd-ancestry-threshold-val">0.5</span>
+      </label>
+      <span id="fd-ancestry-count" class="fd-ancestry-count"></span>
+    </div>
+    <div class="fd-ancestry-wrap">
+      <div id="fd-ancestry" class="chart-container ancestry-container" role="img" aria-label="Citation genealogy graph">
+        <div class="chart-loading">Loading…</div>
+      </div>
+      <div id="fd-ancestry-tooltip" class="fd-tooltip" hidden role="tooltip"></div>
+    </div>
+  </section>
 
 </div>
 
+</div>
+
+<script is:inline src="/mskb/javascripts/vendor/cytoscape.min.js"></script>
 <script is:inline src="/mskb/javascripts/field_development.js"></script>

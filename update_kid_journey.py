@@ -169,6 +169,7 @@ def _update_paper_summaries(
     cache_dir: Path,
     summaries_path: Path,
     scored_path: Path,
+    core_corpus_path: Path,
     topics_dir: Path,
     fulltext_by_id: dict,
     fulltext_source_by_id: dict,
@@ -183,6 +184,25 @@ def _update_paper_summaries(
     scored = pd.read_csv(scored_path, low_memory=False)
     scored = scored[scored["tier"].isin(["included", "seed_neighbor"])].copy()
     scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
+    if core_corpus_path.exists():
+        core = pd.read_csv(core_corpus_path, low_memory=False)
+        if "canonical_paper_id" not in core.columns:
+            print(
+                f"[warn] core corpus file missing canonical_paper_id: {core_corpus_path}; "
+                "falling back to scored corpus."
+            )
+        else:
+            core_ids = set(core["canonical_paper_id"].astype(str))
+            scored = scored[scored["canonical_paper_id"].isin(core_ids)].copy()
+            print(
+                "  Restricting kid summaries to core corpus papers: "
+                f"{len(scored)} candidates from {core_corpus_path.name}"
+            )
+    else:
+        print(
+            f"[warn] core corpus file not found at {core_corpus_path}; "
+            "falling back to scored corpus."
+        )
     has_abstract = ~(scored["abstract"].isna() | scored["abstract"].astype(str).str.strip().str.lower().isin(["", "nan"]))
     has_fulltext = scored["canonical_paper_id"].isin(set(fulltext_by_id))
     scored = scored[has_abstract | has_fulltext].copy()
@@ -259,13 +279,19 @@ def _update_paper_summaries(
                 time.sleep(1)
 
         if (idx + 1) % 50 == 0:
-            print(f"  Processed {idx + 1}/{len(scored)} papers  (updated={updated}, skipped={skipped})")
+            print(
+                f"  Processed {idx + 1}/{len(scored)} papers  "
+                f"(updated={updated}, reused_cached={skipped})"
+            )
 
     # Write back.
     if existing:
         out_df = pd.DataFrame(list(existing.values()))
         out_df.to_csv(summaries_path, index=False)
-        print(f"Wrote {len(out_df)} rows to {summaries_path}  (kid summaries updated={updated}, skipped={skipped})")
+        print(
+            f"Wrote {len(out_df)} rows to {summaries_path}  "
+            f"(kid summaries updated={updated}, reused_cached={skipped})"
+        )
     else:
         print("[warn] No rows to write; paper_summaries.csv unchanged.")
 
@@ -362,6 +388,7 @@ def run(config_path: str, force: bool = False) -> None:
         cache_dir=cache_dir,
         summaries_path=distilled_dir / "paper_summaries.csv",
         scored_path=graph_dir / "scored_papers.csv",
+        core_corpus_path=graph_dir / "core_corpus_tracked_with_t4.csv",
         topics_dir=topics_dir,
         fulltext_by_id=fulltext_by_id,
         fulltext_source_by_id=fulltext_source_by_id,

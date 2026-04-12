@@ -1,0 +1,67 @@
+---
+title: Corpus Statistics
+description: Top papers, most influential authors, leading journals, and domain breakdown across the 1,000+ paper MS knowledge base.
+template: splash
+hero:
+  tagline: The most cited papers, most influential authors, and leading journals in the MS corpus.
+sidebar:
+  label: Statistics
+  order: 2
+---
+
+import '../../../styles/custom.css';
+
+<div class="cs-shell">
+
+<div id="cs-stats" class="cs-stats-row" aria-label="Corpus summary statistics"></div>
+
+<div class="cs-tabs" role="tablist" aria-label="Corpus statistics views">
+  <button class="cs-tab cs-tab-active" role="tab" data-tab="papers" aria-selected="true">Top papers</button>
+  <button class="cs-tab" role="tab" data-tab="authors" aria-selected="false">Top authors</button>
+  <button class="cs-tab" role="tab" data-tab="venues" aria-selected="false">Journals &amp; domains</button>
+</div>
+
+<div id="cs-panel-papers" class="cs-panel" role="tabpanel">
+  <div class="cs-sort-row">
+    <span class="cs-sort-label">Sort by</span>
+    <button class="cs-sort-btn cs-sort-active" data-sort="global_citations">Global citations</button>
+    <button class="cs-sort-btn" data-sort="corpus_citations">Corpus influence</button>
+    <button class="cs-sort-btn" data-sort="importance_score">Importance score</button>
+  </div>
+  <p class="chart-hint">
+    <strong>Global citations</strong> = total citations worldwide (OpenAlex). <strong>Corpus influence</strong> = how many other papers in this corpus cite this paper. <strong>Importance score</strong> = composite pipeline metric.
+  </p>
+  <div id="cs-papers-table" class="cs-table-wrap">
+    <div class="chart-loading">Loading…</div>
+  </div>
+</div>
+
+<div id="cs-panel-authors" class="cs-panel cs-panel-hidden" role="tabpanel">
+  <p class="chart-hint">Ranked by composite importance score — a corpus-specific metric that weights MS-field relevance, lineage, and citation impact together. Requires at least 2 papers in the corpus.</p>
+  <div id="cs-authors-table" class="cs-table-wrap">
+    <div class="chart-loading">Loading…</div>
+  </div>
+</div>
+
+<div id="cs-panel-venues" class="cs-panel cs-panel-hidden" role="tabpanel">
+  <div class="cs-charts-pair">
+    <section class="chart-card cs-chart-half">
+      <h3>Top journals</h3>
+      <p class="chart-hint">Papers in corpus per journal, top 20.</p>
+      <div id="cs-venues-chart" class="cs-bar-chart-wrap">
+        <div class="chart-loading">Loading…</div>
+      </div>
+    </section>
+    <section class="chart-card cs-chart-half">
+      <h3>Domain breakdown</h3>
+      <p class="chart-hint">Papers by primary MS research domain.</p>
+      <div id="cs-domains-chart" class="cs-bar-chart-wrap">
+        <div class="chart-loading">Loading…</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</div>
+
+<script is:inline src="/mskb/javascripts/corpus_stats.js"></script>

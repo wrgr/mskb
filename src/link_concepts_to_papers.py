@@ -232,6 +232,8 @@ class PaperDoc:
     topic_id: str
     topic_label: str
     tokens: Counter[str]
+    doi: str = ""
+    openalex_id: str = ""
 
 
 def _clean_text(value: Any) -> str:
@@ -456,6 +458,8 @@ def _load_papers(root: Path, topic_by_paper: dict[str, str], topic_label_by_id: 
                     topic_id=topic_id,
                     topic_label=topic_label_by_id.get(topic_id, ""),
                     tokens=tokens,
+                    doi=_clean_text(row.get("doi")),
+                    openalex_id=_clean_text(row.get("openalex_id")),
                 )
             )
     source_name = path.name
@@ -546,6 +550,19 @@ def _shortlist_payload(shortlist: list[tuple[PaperDoc, float]]) -> list[dict[str
             }
         )
     return payload
+
+
+def _citation_fields(paper: PaperDoc) -> dict[str, str]:
+    """Return citable doi and url for a paper derived from corpus metadata.
+
+    Prefers DOI (resolvable at doi.org); falls back to the OpenAlex record URL.
+    Returns an empty dict when neither field is available.
+    """
+    if paper.doi:
+        return {"doi": paper.doi, "url": f"https://doi.org/{paper.doi}"}
+    if paper.openalex_id:
+        return {"url": f"https://openalex.org/{paper.openalex_id}"}
+    return {}
 
 
 def _heuristic_selection(
@@ -801,6 +818,7 @@ def _validate_cache_structure(
         foundational = payload.get("foundational")
         advanced = payload.get("advanced")
         rationales = payload.get("rationales")
+        citations = payload.get("citations", {})
         if not isinstance(foundational, list):
             errors.append(f"{concept_id}: foundational must be a list.")
             foundational = []
@@ -810,6 +828,14 @@ def _validate_cache_structure(
         if not isinstance(rationales, dict):
             errors.append(f"{concept_id}: rationales must be an object.")
             rationales = {}
+        if not isinstance(citations, dict):
+            errors.append(f"{concept_id}: citations must be an object.")
+        else:
+            for pid, cit in citations.items():
+                if pid not in paper_ids:
+                    errors.append(f"{concept_id}: unknown paper id in citations: {pid}")
+                elif not isinstance(cit, dict):
+                    errors.append(f"{concept_id}: citations entry for {pid} must be an object.")
 
         seen: set[str] = set()
         for group_name, ids in (("foundational", foundational), ("advanced", advanced)):
@@ -882,6 +908,7 @@ def _refresh_cache(
     idf = _build_idf(papers)
     postings = _build_postings(papers)
     paper_ids = {paper.paper_id for paper in papers}
+    paper_by_id = {paper.paper_id: paper for paper in papers}
 
     concept_by_id = {concept.concept_id: concept for concept in concepts}
     selected_ids = set(concept_by_id.keys()) if not only_ids else set(only_ids)
@@ -922,6 +949,15 @@ def _refresh_cache(
         if selection is None:
             # Should be unreachable due heuristic fallback, but keep defensive.
             selection = {"foundational": [], "advanced": [], "rationales": {}}
+
+        citations: dict[str, dict[str, str]] = {}
+        for pid in selection["foundational"] + selection["advanced"]:
+            paper = paper_by_id.get(pid)
+            if paper:
+                cit = _citation_fields(paper)
+                if cit:
+                    citations[pid] = cit
+        selection["citations"] = citations
 
         merged_concepts[concept_id] = selection
         print(

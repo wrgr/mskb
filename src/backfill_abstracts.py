@@ -1212,6 +1212,9 @@ def run(config_path: str) -> None:
         scored["canonical_paper_id"] = scored["canonical_paper_id"].astype(str)
         scored = scored.drop(columns=["abstract", "abstract_backfill_source"], errors="ignore")
         scored = scored.merge(canonical_abstracts, on="canonical_paper_id", how="left")
+        # Left-merge leaves NaN for unmatched rows; write "" so re-reads don't
+        # trigger a DtypeWarning from mixed chunk-level type inference.
+        scored["abstract_backfill_source"] = scored["abstract_backfill_source"].fillna("")
         scored.to_csv(scored_path, index=False)
 
     # Sync abstracts into the post-selection corpus snapshots so audit_kb and

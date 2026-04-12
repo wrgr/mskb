@@ -1,0 +1,51 @@
+---
+title: Citation Tree
+description: A step dendrogram of MS research lineage — foundational papers on the left, with each column to the right showing one generation of work that built upon it.
+template: splash
+hero:
+  tagline: How MS research branches from foundational work — a family tree of citation lineage.
+sidebar:
+  label: Citation Tree
+  order: 7
+---
+
+import '../../styles/custom.css';
+
+<div class="ct-shell">
+
+<p>
+  Each paper is pruned to its single most-important parent (the paper it cites with the highest importance score), producing a <strong>spanning tree</strong> of the citation graph. Generation&nbsp;0 — foundational papers with no outgoing citations in the corpus — sit on the left. Each column to the right is one generation of work built upon the papers behind it. Scroll vertically to explore; hover any node for details.
+</p>
+
+<div class="ct-controls">
+  <fieldset class="lineage-filter-group ct-domain-filter">
+    <legend>Domain</legend>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="pathogenesis_and_immunology" checked /><span class="legend-dot" style="background:#1f77b4"></span> Pathogenesis &amp; Immunology</label>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="imaging_and_biomarkers" checked /><span class="legend-dot" style="background:#17a2b8"></span> Imaging &amp; Biomarkers</label>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="clinical_trials_and_therapeutics" checked /><span class="legend-dot" style="background:#d62728"></span> Therapeutics</label>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="clinical_care_and_management" checked /><span class="legend-dot" style="background:#2ca02c"></span> Clinical Care</label>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="epidemiology_and_population_health" checked /><span class="legend-dot" style="background:#9467bd"></span> Epidemiology</label>
+    <label class="lineage-check"><input type="checkbox" class="ct-cat-filter" value="unknown" checked /><span class="legend-dot" style="background:#aaa"></span> Other</label>
+  </fieldset>
+
+  <div class="ct-slider-row">
+    <label class="ct-slider-label">
+      Min importance
+      <input type="range" id="ct-threshold" min="4.0" max="6.3" step="0.1" value="5.2" />
+      <span id="ct-threshold-val">5.2</span>
+    </label>
+    <span id="ct-count" class="ct-count"></span>
+  </div>
+</div>
+
+<div class="ct-viewport">
+  <div id="ct-canvas" class="ct-canvas" role="img" aria-label="Citation spanning-tree dendrogram">
+    <div class="chart-loading">Loading…</div>
+  </div>
+</div>
+
+<div id="ct-tooltip" class="ct-tooltip" hidden role="tooltip"></div>
+
+</div>
+
+<script is:inline src="/mskb/javascripts/citation_tree.js"></script>

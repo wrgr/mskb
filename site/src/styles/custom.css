@@ -316,7 +316,7 @@ details summary:focus-visible {
 
 .topic-index {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
   gap: 0.4rem 1.4rem;
   margin: 1rem 0 2rem;
 }
@@ -404,7 +404,8 @@ details summary:focus-visible {
 
 .topic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  /* min(20rem,100%) prevents the cell from exceeding the viewport on narrow phones. */
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
   gap: 0.1rem 1.4rem;
   margin: 0.6rem 0 1.4rem;
 }
@@ -1915,8 +1916,458 @@ details summary:focus-visible {
   border-radius: 5px;
   font-size: 0.78rem;
   line-height: 1.5;
-  max-width: 280px;
+  max-width: min(280px, calc(100vw - 2rem));
   pointer-events: none;
   z-index: 20;
+  white-space: normal;
+}
+
+/* ── Citation genealogy ───────────────────────────────────────────────────── */
+
+.fd-ancestry-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.fd-ancestry-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--sl-color-gray-3, #4b5563);
+}
+
+.fd-ancestry-label input[type="range"] {
+  width: 120px;
+  accent-color: #0e8f85;
+}
+
+.fd-ancestry-label span {
+  font-variant-numeric: tabular-nums;
+  min-width: 2.4ch;
+}
+
+.fd-ancestry-count {
+  font-size: 0.78rem;
+  color: var(--sl-color-gray-4, #6b7280);
+}
+
+.fd-ancestry-wrap {
+  position: relative;
+}
+
+.ancestry-container {
+  min-height: 540px;
+  background: var(--sl-color-bg-sidebar, #f9fafb);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── Corpus statistics page ───────────────────────────────────────────────── */
+
+.cs-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.cs-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cs-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 2px solid var(--sl-color-hairline, #e5e7eb);
+  padding-bottom: 0;
+}
+
+.cs-tab {
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: var(--sl-color-gray-3, #4b5563);
+  border-radius: 4px 4px 0 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.cs-tab:hover {
+  color: var(--sl-color-text, #111);
+  background: var(--sl-color-bg-sidebar, #f9fafb);
+}
+
+.cs-tab-active {
+  color: var(--sl-color-text, #111);
+  border-bottom-color: #0e8f85;
+  font-weight: 600;
+}
+
+.cs-panel {
+  display: block;
+}
+
+.cs-panel-hidden {
+  display: none;
+}
+
+.cs-sort-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.cs-sort-label {
+  font-size: 0.82rem;
+  color: var(--sl-color-gray-4, #6b7280);
+  margin-right: 0.2rem;
+}
+
+.cs-sort-btn {
+  padding: 0.28rem 0.75rem;
+  font-size: 0.82rem;
+  background: var(--sl-color-bg-sidebar, #f3f4f6);
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--sl-color-gray-3, #4b5563);
+  transition: background 0.12s, color 0.12s;
+}
+
+.cs-sort-btn:hover {
+  background: #e5f5f4;
+  color: #0e8f85;
+}
+
+.cs-sort-active {
+  background: #0e8f85;
+  color: #fff;
+  border-color: #0e8f85;
+}
+
+.cs-sort-active:hover {
+  background: #0b7a71;
+  color: #fff;
+}
+
+.cs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 6px;
+}
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.cs-table thead {
+  background: var(--sl-color-bg-sidebar, #f9fafb);
+}
+
+.cs-table th {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sl-color-gray-4, #6b7280);
+  border-bottom: 1px solid var(--sl-color-hairline, #e5e7eb);
+  white-space: nowrap;
+}
+
+.cs-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--sl-color-hairline, #e5e7eb);
+  vertical-align: middle;
+}
+
+.cs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cs-table tbody tr:hover {
+  background: var(--sl-color-bg-sidebar, #f9fafb);
+}
+
+.cs-rank {
+  color: var(--sl-color-gray-4, #9ca3af);
+  font-size: 0.76rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.cs-paper-title {
+  max-width: 380px;
+  line-height: 1.4;
+}
+
+.cs-paper-link {
+  color: var(--sl-color-text-accent, #0e8f85);
+  text-decoration: none;
+}
+
+.cs-paper-link:hover {
+  text-decoration: underline;
+}
+
+.cs-num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-primary {
+  font-weight: 600;
+  color: var(--sl-color-text, #111);
+}
+
+.cs-author,
+.cs-venue {
+  color: var(--sl-color-gray-3, #4b5563);
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-author-name {
+  font-weight: 500;
+}
+
+.cs-cat-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.cs-charts-pair {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cs-chart-half {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.cs-bar-chart-wrap {
+  overflow: hidden;
+}
+
+/* ===================================================================== */
+/* Mobile / touch refinements                                             */
+/* ===================================================================== */
+
+/* --- Touch targets --------------------------------------------------- */
+/* WCAG 2.5.8: interactive controls need ~44px touch targets on phones.  */
+@media (pointer: coarse) {
+  .lineage-btn,
+  .lineage-close-btn,
+  .cs-sort-btn,
+  .cs-tab,
+  .mskb-graph-pills button,
+  .mskb-graph-actions button,
+  .mskb-connected-list button {
+    min-height: 44px;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .lineage-close-btn {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .mskb-connected-list button {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  /* cs-tab already has horizontal padding; just ensure the min-height. */
+  .cs-tab {
+    line-height: 1;
+  }
+}
+
+/* --- Tab strip ------------------------------------------------------- */
+/* Allow horizontal scroll when tab labels exceed the viewport width.    */
+.cs-tabs {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cs-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent individual tabs from compressing below their natural width.   */
+.cs-tab {
+  flex-shrink: 0;
+}
+
+/* --- Sort-button row ------------------------------------------------- */
+/* Wrap sort buttons gracefully; ensure row doesn't clip on 320px.       */
+.cs-sort-row {
+  flex-wrap: wrap;
+}
+
+/* --- Fixed-height canvases ------------------------------------------ */
+/* Reduce canvas heights that are too tall for portrait mobile screens.  */
+@media (max-width: 640px) {
+  .lineage-stage {
+    height: 380px;
+  }
+
+  .lineage-main {
+    min-height: 0;
+  }
+
+  .ancestry-container {
+    min-height: 320px;
+  }
+
+  .mskb-sigma-stage,
+  .mskb-graph-canvas {
+    min-height: 22rem;
+  }
+
+  .explorer-shell #paper-graph {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
+
+/* --- Resource list -------------------------------------------------- */
+/* On very narrow viewports collapse the 3-col grid: type and title on  */
+/* the first row, source indented below.                                 */
+@media (max-width: 480px) {
+  .resource-list li {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 0.7rem;
+  }
+
+  .resource-list .resource-source {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.78rem;
+  }
+}
+
+/* --- Journey selection item ----------------------------------------- */
+/* Drop the action buttons to a second full-width row so they don't     */
+/* squeeze the title on narrow screens.                                  */
+@media (max-width: 480px) {
+  .journey-shell .selection-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .journey-shell .selection-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Citation Tree (dendrogram) ───────────────────────────────────────────── */
+
+.ct-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.ct-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: flex-start;
+}
+
+.ct-domain-filter {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 6px;
+  padding: 0.5rem 0.875rem;
+}
+
+.ct-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ct-slider-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--sl-color-gray-3, #4b5563);
+}
+
+.ct-slider-label input[type="range"] {
+  width: 140px;
+  accent-color: #0e8f85;
+}
+
+.ct-slider-label span {
+  font-variant-numeric: tabular-nums;
+  min-width: 2.6ch;
+}
+
+.ct-count {
+  font-size: 0.78rem;
+  color: var(--sl-color-gray-4, #6b7280);
+}
+
+.ct-viewport {
+  width: 100%;
+  max-height: 640px;
+  overflow: auto;
+  border: 1px solid var(--sl-color-hairline, #e5e7eb);
+  border-radius: 6px;
+  background: var(--sl-color-bg, #fff);
+}
+
+.ct-canvas {
+  /* SVG is appended here; min-height prevents collapse before data loads */
+  min-height: 200px;
+}
+
+/* Fixed-position tooltip — works regardless of scroll within .ct-viewport */
+.ct-tooltip {
+  position: fixed;
+  background: rgba(17, 24, 39, 0.92);
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  max-width: 300px;
+  pointer-events: none;
+  z-index: 100;
   white-space: normal;
 }

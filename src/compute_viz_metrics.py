@@ -261,15 +261,120 @@ def _load_scored_papers(graph_dir: Path) -> pd.DataFrame | None:
 
     wanted = {
         "canonical_paper_id", "title", "year", "doi", "first_author",
-        "merged_cited_by_count", "paper_importance_score", "dominant_category", "tier",
+        "merged_cited_by_count", "paper_importance_score", "dominant_category",
+        "anchor_category", "tier", "venue", "corpus_role",
     }
     df = pd.read_csv(path, usecols=lambda c: c in wanted)
     df["canonical_paper_id"] = df["canonical_paper_id"].astype(str)
     return df
 
 
+def _build_corpus_stats_json(
+    papers: pd.DataFrame,
+    graph: nx.DiGraph,
+    topic_map: dict[str, str],
+    author_metrics_path: Path,
+) -> dict[str, Any]:
+    """Assemble corpus_stats.json with top papers, top authors, and venue/domain breakdowns."""
+    in_deg = dict(graph.in_degree())
+
+    # ── Per-paper rows ───────────────────────────────────────────────────────
+    paper_rows: list[dict[str, Any]] = []
+    for _, row in papers.iterrows():
+        pid = str(row["canonical_paper_id"])
+        year = _safe_int(row.get("year", 0))
+        if not (_YEAR_MIN < year < _YEAR_MAX):
+            continue
+        # anchor_category is set specifically for the core corpus; prefer it
+        # over the full-graph topic_map which can be skewed.
+        _nan = {"nan", "none", "unmapped", ""}
+        _anchor = str(row.get("anchor_category", "") or "").lower().strip()
+        _dominant = str(row.get("dominant_category", "") or "").lower().strip()
+        category = (
+            str(row.get("anchor_category", "")) if _anchor not in _nan else ""
+        ) or (
+            str(row.get("dominant_category", "")) if _dominant not in _nan else ""
+        ) or topic_map.get(pid, "") or "unknown"
+        venue = str(row.get("venue", "") or "")
+        paper_rows.append({
+            "id": pid,
+            "title": str(row.get("title", ""))[:120],
+            "year": year,
+            "first_author": str(row.get("first_author", "")),
+            "venue": venue if venue.lower() not in {"nan", "none", ""} else "",
+            "doi": str(row.get("doi", "") or ""),
+            "global_citations": _safe_int(row.get("merged_cited_by_count", 0)),
+            "corpus_citations": in_deg.get(pid, 0),
+            "importance_score": round(_safe_float(row.get("paper_importance_score", 0.0)), 4),
+            "category": category,
+            "corpus_role": str(row.get("corpus_role", "core")),
+        })
+
+    # ── Top papers (25 each) ─────────────────────────────────────────────────
+    def top_papers(key: str, n: int = 25) -> list[dict[str, Any]]:
+        return sorted(paper_rows, key=lambda p: p[key], reverse=True)[:n]
+
+    # ── Venue counts ─────────────────────────────────────────────────────────
+    venue_counts: dict[str, int] = defaultdict(int)
+    for p in paper_rows:
+        v = p["venue"].strip()
+        if v and v.lower() not in {"nan", "none", ""}:
+            venue_counts[v] += 1
+    venues = sorted(venue_counts.items(), key=lambda x: x[1], reverse=True)
+
+    # ── Domain counts ────────────────────────────────────────────────────────
+    domain_counts: dict[str, int] = defaultdict(int)
+    for p in paper_rows:
+        domain_counts[p["category"]] += 1
+
+    # ── Decade distribution ──────────────────────────────────────────────────
+    decade_counts: dict[str, int] = defaultdict(int)
+    for p in paper_rows:
+        decade = (p["year"] // 10) * 10
+        decade_counts[str(decade)] += 1
+
+    # ── Author metrics ───────────────────────────────────────────────────────
+    top_authors: list[dict[str, Any]] = []
+    if author_metrics_path.exists():
+        auth = pd.read_csv(author_metrics_path)
+        # Require at least 2 included papers to filter out single-paper cameos.
+        active = auth[auth["n_included_papers"] >= 2].copy()
+        active_sorted = active.nlargest(30, "author_importance_score")
+        for _, row in active_sorted.iterrows():
+            top_authors.append({
+                "name": str(row.get("display_name", "")),
+                "papers": _safe_int(row.get("n_included_papers", 0)),
+                "global_citations": _safe_int(row.get("total_citations", 0)),
+                "corpus_citations": _safe_int(row.get("corpus_citations_received", 0)),
+                "importance_score": round(_safe_float(row.get("author_importance_score", 0.0)), 3),
+            })
+
+    # ── Metadata ─────────────────────────────────────────────────────────────
+    valid_years = [p["year"] for p in paper_rows]
+    total_global_cites = sum(p["global_citations"] for p in paper_rows)
+    peak_venue = venues[0][0] if venues else ""
+
+    return {
+        "metadata": {
+            "total_papers": len(paper_rows),
+            "year_range": [min(valid_years, default=0), max(valid_years, default=0)],
+            "total_global_citations": total_global_cites,
+            "n_authors": len(top_authors),
+            "n_venues": len(venues),
+            "peak_venue": peak_venue,
+            "domains": dict(domain_counts),
+            "decades": dict(sorted(decade_counts.items())),
+        },
+        "top_papers_by_global_citations": top_papers("global_citations"),
+        "top_papers_by_corpus_citations": top_papers("corpus_citations"),
+        "top_papers_by_importance": top_papers("importance_score"),
+        "top_authors": top_authors,
+        "venues": [{"name": v, "count": c} for v, c in venues[:40]],
+    }
+
+
 def run(config_path: str) -> None:
-    """Load pipeline outputs and write lineage and field-development JSON assets."""
+    """Load pipeline outputs and write lineage, field-development, and corpus-stats JSON assets."""
     cfg = load_config(config_path)
     root = Path(config_path).resolve().parent
     graph_dir = root / cfg["output_dir"] / "graph"
@@ -311,4 +416,18 @@ def run(config_path: str) -> None:
         "field_development.json: %d years, %d papers",
         len(field_dev["timeline"]),
         len(field_dev["scatter"]),
+    )
+
+    corpus_stats = _build_corpus_stats_json(
+        included, graph, topic_map, graph_dir / "author_metrics.csv"
+    )
+    (web_dir / "corpus_stats.json").write_text(
+        json.dumps(corpus_stats, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    LOG.info(
+        "corpus_stats.json: %d papers, %d authors, %d venues",
+        corpus_stats["metadata"]["total_papers"],
+        len(corpus_stats["top_authors"]),
+        corpus_stats["metadata"]["n_venues"],
     )

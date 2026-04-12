@@ -1785,7 +1785,7 @@ def _generate_kid_journey_page(
 def _build_viz_assets(*, outputs_dir: Path, assets_dir: Path) -> None:
     """Copy lineage and field-development JSON from pipeline outputs to site assets."""
     web_dir = outputs_dir / "website"
-    for name in ("lineage_data.json", "field_development.json"):
+    for name in ("lineage_data.json", "field_development.json", "corpus_stats.json"):
         src = web_dir / name
         if not src.exists():
             print(f"[warn] {name} not found in {web_dir}; run compute_viz_metrics first.")

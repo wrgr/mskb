@@ -69,6 +69,7 @@ export default defineConfig({
         { label: 'Learning Journey', link: '/journey/' },
         { label: 'Citation Explorer', link: '/explorer/' },
         { label: 'Citation Lineage', link: '/lineage/' },
+        { label: 'Citation Tree', link: '/citation-tree/' },
         { label: 'Field Development', link: '/field-development/' },
         { label: 'Glossary', link: '/glossary/' },
         {
@@ -80,6 +81,7 @@ export default defineConfig({
           label: 'Corpus & Docs',
           items: [
             { label: 'Overview', link: '/corpus/' },
+            { label: 'Statistics', link: '/corpus/stats/' },
             { label: 'Methodology & Limitations', link: '/corpus/methodology/' },
             { label: 'Topic Map', link: '/corpus/topics/' },
             { label: 'Seeds & Anchors', link: '/corpus/seeds/' },
