@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .utils import ensure_dir, load_config, save_json
+from .utils import ensure_dir, load_config, redact_secrets, save_json
 
 
 READING_LEVELS = ("kid", "basic", "advanced")
@@ -571,7 +571,7 @@ def _distill_with_api(client, model: str, prompt: str) -> dict | None:
             return json.loads(text[start:end])
         return None
     except Exception as e:
-        print(f"  API error: {e}")
+        print(f"  API error: {redact_secrets(str(e))}")
         return None
 
 

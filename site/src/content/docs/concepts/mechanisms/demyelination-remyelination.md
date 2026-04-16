@@ -48,11 +48,10 @@ Demyelination begins when autoreactive lymphocytes and macrophages invade CNS wh
 
 <p><a href="/mskb/topics/?concept=demyelination_remyelination"><strong>Open this concept in the research map →</strong></a></p>
 <ul>
-<li><a href="/mskb/topics/neuroscience-0/">Neuroscience</a> · <a href="/mskb/journey/?seed=0">Start journey from this topic</a> (8 linked papers).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-4/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=4">Start journey from this topic</a> (3 linked papers).</li>
+<li><a href="/mskb/topics/immunology-0/">Immunology</a> · <a href="/mskb/journey/?seed=0">Start journey from this topic</a> (6 linked papers).</li>
+<li><a href="/mskb/topics/neurogenesis-and-neuroplasticity-mechanisms-neuroscience-1/">Neurogenesis and neuroplasticity mechanisms · Neuroscience</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (6 linked papers).</li>
 <li><a href="/mskb/topics/multiple-sclerosis-research-studies-6/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=6">Start journey from this topic</a> (3 linked papers).</li>
-<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (1 linked paper).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-7/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=7">Start journey from this topic</a> (1 linked paper).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-research-studies-8/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=8">Start journey from this topic</a> (1 linked paper).</li>
 </ul>
 
 [//]: # (mskb:topic-links:end)

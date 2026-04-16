@@ -1,0 +1,3561 @@
+---
+title: Multiple sclerosis
+description: "Pathogenesis & Immunology · 3607 papers"
+sidebar:
+  label: Multiple sclerosis
+topic_taxonomy:
+  category: pathogenesis_and_immunology
+  category_source: concept
+  category_concept_id: ebv_ms
+---
+
+## Overview
+
+This research cluster delves into the fundamental biological mechanisms and risk factors that contribute to the development of Multiple Sclerosis (MS). While the broader category name &quot;imaging and biomarkers&quot; suggests a focus on diagnostic tools and
+
+<p><em>Raw cluster label:</em> Medicine / Multiple sclerosis / Biology</p>
+
+## Concepts this topic supports
+
+<ul>
+<li><a href="/mskb/journey/?concept=ebv_ms">Epstein-Barr Virus and MS</a> (8 linked papers) · <a href="/mskb/concepts/mechanisms/ebv-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=environmental_risk_factors">Environmental Risk Factors in MS</a> (7 linked papers) · <a href="/mskb/concepts/mechanisms/environmental-risk-factors/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=genetic_susceptibility">Genetic Susceptibility in MS</a> (7 linked papers) · <a href="/mskb/concepts/mechanisms/genetic-susceptibility/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=ms_epidemiology">MS Epidemiology and Natural History</a> (5 linked papers) · <a href="/mskb/concepts/foundations/ms-epidemiology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=immune_system_basics">Immune System Basics for MS</a> (3 linked papers) · <a href="/mskb/concepts/foundations/immune-system-basics/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=neuroinflammation">Neuroinflammation Pathways in MS</a> (2 linked papers) · <a href="/mskb/concepts/mechanisms/neuroinflammation/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=sex_gender_ms">Sex and Gender Differences in MS</a> (2 linked papers) · <a href="/mskb/concepts/populations/sex-gender-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=b_cell_therapies">B Cell–Targeted Therapies</a> (1 linked paper) · <a href="/mskb/concepts/therapeutics/b-cell-therapies/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=bladder_bowel_dysfunction">Bladder and Bowel Dysfunction in MS</a> (1 linked paper) · <a href="/mskb/concepts/clinical/bladder-bowel-dysfunction/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=blood_brain_barrier">Blood-Brain Barrier Dysfunction</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/blood-brain-barrier/">open concept page</a></li>
+</ul>
+
+## Reading Path
+
+Papers ordered by importance and pedagogic progression.
+
+<div class="paper-stream">
+<article class="paper-card">
+<h3>Rising prevalence of multiple sclerosis worldwide: Insights from the Atlas of MS, third edition</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2020</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (61%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The global prevalence of MS has risen since 2013, but good surveillance data is not universal. Action is needed by multiple stakeholders to close knowledge gaps.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates rising prevalence of multiple sclerosis worldwide: insights from the atlas of ms, third edition. Action is needed by multiple stakeholders to close knowledge gaps.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The global prevalence of MS has risen since 2013, but good surveillance data is not universal.</li>
+<li>Challenge: Action is needed by multiple stakeholders to close knowledge gaps.</li>
+<li>Action: This paper investigates rising prevalence of multiple sclerosis worldwide: insights from the atlas of ms, third edition.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1177/1352458520970841" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Clare Walton. (2020). Rising prevalence of multiple sclerosis worldwide: Insights from the Atlas of MS, third edition. Multiple Sclerosis Journal. https://doi.org/10.1177/1352458520970841</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_6b77d37902e3_2020,
+  title = {Rising prevalence of multiple sclerosis worldwide: Insights from the Atlas of MS, third edition},
+  author = {Clare Walton},
+  year = {2020},
+  journal = {Multiple Sclerosis Journal},
+  doi = {10.1177/1352458520970841},
+  url = {https://doi.org/10.1177/1352458520970841},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (76%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology. We tested the hypothesis that MS is caused by Epstein-Barr virus (EBV) in a cohort comprising more than 10 million young adults on active duty in the US military, 955 of whom were diagnosed with MS during their period of service. Risk of MS increased 32-fold after infection with EBV but was not increased after infection with other viruses, including the similarly transmitted cytomegalovirus. Serum levels of neurofilament light chain, a biomarker of neuroaxonal degeneration, increased only after EBV seroconversion. These findings cannot be explained by any known risk factor for MS and suggest EBV as the leading cause of MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates longitudinal analysis reveals high prevalence of epstein-barr virus associated with multiple sclerosis. These findings cannot be explained by any known risk factor for MS and suggest EBV as the leading cause of MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of the central nervous system of unknown etiology.</li>
+<li>Challenge: We tested the hypothesis that MS is caused by Epstein-Barr virus (EBV) in a cohort comprising more than 10 million young adults on active duty in the US military, 955 of whom were diagnosed with MS during their period of service.</li>
+<li>Action: Risk of MS increased 32-fold after infection with EBV but was not increased after infection with other viruses, including the similarly transmitted cytomegalovirus.</li>
+<li>Resolution: Serum levels of neurofilament light chain, a biomarker of neuroaxonal degeneration, increased only after EBV seroconversion.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/science.abj8222" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Kjetil Bjørnevik. (2022). Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis. Science. https://doi.org/10.1126/science.abj8222</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e7f3950da40b_2022,
+  title = {Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis},
+  author = {Kjetil Bjørnevik},
+  year = {2022},
+  journal = {Science},
+  doi = {10.1126/science.abj8222},
+  url = {https://doi.org/10.1126/science.abj8222},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetic risk and a primary role for cell-mediated immune mechanisms in multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2011</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis is a common disease of the central nervous system in which the interplay between inflammatory and neurodegenerative processes typically results in intermittent neurological disturbance followed by progressive accumulation of disability. Epidemiological studies have shown that genetic factors are primarily responsible for the substantially increased frequency of the disease seen in the relatives of affected individuals, and systematic attempts to identify linkage in multiplex families have confirmed that variation within the major histocompatibility complex (MHC) exerts the greatest individual effect on risk. Modestly powered genome-wide association studies (GWAS) have enabled more than 20 additional risk loci to be identified and have shown that multiple variants exerting modest individual effects have a key role in disease susceptibility. Most of the genetic architecture underlying susceptibility to the disease remains to be defined and is anticipated to require the analysis of sample sizes that are beyond the numbers currently available to individual research groups. In a collaborative GWAS involving 9,772 cases of European descent collected by 23 research groups working in 15 different countries, we have replicated almost all of the previously suggested associations and identified at least a further 29 novel susceptibility loci. Within the MHC we have refined the identity of the HLA-DRB1 risk alleles and confirmed that variation in the HLA-A gene underlies the independent protective effect attributable to the class I region. Immunologically relevant genes are significantly overrepresented among those mapping close to the identified loci and particularly implicate T-helper-cell differentiation in the pathogenesis of multiple sclerosis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetic risk and a primary role for cell-mediated immune mechanisms in multiple sclerosis. Immunologically relevant genes are significantly overrepresented among those mapping close to the identified loci and particularly implicate T-helper-cell differentiation in the pathogenesis of multiple sclerosis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis is a common disease of the central nervous system in which the interplay between inflammatory and neurodegenerative processes typically results in intermittent neurological disturbance followed by progressive accumulation of disability.</li>
+<li>Challenge: Epidemiological studies have shown that genetic factors are primarily responsible for the substantially increased frequency of the disease seen in the relatives of affected individuals, and systematic attempts to identify linkage in multiplex families have confirmed that variation within the major histocompatibility complex (MHC) exerts the greatest individual effect on risk.</li>
+<li>Action: Modestly powered genome-wide association studies (GWAS) have enabled more than 20 additional risk loci to be identified and have shown that multiple variants exerting modest individual effects have a key role in disease susceptibility.</li>
+<li>Resolution: Most of the genetic architecture underlying susceptibility to the disease remains to be defined and is anticipated to require the analysis of sample sizes that are beyond the numbers currently available to individual research groups.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/nature10251" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Stephen Sawcer. (2011). Genetic risk and a primary role for cell-mediated immune mechanisms in multiple sclerosis. Nature. https://doi.org/10.1038/nature10251</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_ffc9f0f13c64_2011,
+  title = {Genetic risk and a primary role for cell-mediated immune mechanisms in multiple sclerosis},
+  author = {Stephen Sawcer},
+  year = {2011},
+  journal = {Nature},
+  doi = {10.1038/nature10251},
+  url = {https://doi.org/10.1038/nature10251},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2019</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>We analyzed genetic data of 47,429 multiple sclerosis (MS) and 68,374 control subjects and established a reference map of the genetic architecture of MS that includes 200 autosomal susceptibility variants outside the major histocompatibility complex (MHC), one chromosome X variant, and 32 variants within the extended MHC. We used an ensemble of methods to prioritize 551 putative susceptibility genes that implicate multiple innate and adaptive pathways distributed across the cellular components of the immune system. Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility. Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Using expression profiles from purified human microglia, we observed enrichment for MS genes in these brain-resident immune cells, suggesting that these may have a role in targeting an autoimmune process to the central nervous system, although MS is most likely initially triggered by perturbation of peripheral immune responses.</li>
+<li>Challenge: This paper investigates multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility.</li>
+<li>Action: We analyzed genetic data of 47,429 multiple sclerosis (MS) and 68,374 control subjects and established a reference map of the genetic architecture of MS that includes 200 autosomal susceptibility variants outside the major histocompatibility complex (MHC), one chromosome X variant, and 32 variants within the extended MHC.</li>
+<li>Resolution: We used an ensemble of methods to prioritize 551 putative susceptibility genes that implicate multiple innate and adaptive pathways distributed across the cellular components of the immune system.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/science.aav7188" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Nikolaos A. Patsopoulos. (2019). Multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility. Science. https://doi.org/10.1126/science.aav7188</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_6d8489df9953_2019,
+  title = {Multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility},
+  author = {Nikolaos A. Patsopoulos},
+  year = {2019},
+  journal = {Science},
+  doi = {10.1126/science.aav7188},
+  url = {https://doi.org/10.1126/science.aav7188},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Environmental risk factors for multiple sclerosis. Part I: The role of infection</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2007</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Although genetic susceptibility explains the clustering of multiple sclerosis (MS) cases within families and the sharp decline in risk with increasing genetic distance, it cannot fully explain the geographic variations in MS frequency and the changes in risk that occur with migration. Epidemiological data provide some support for the &quot;hygiene hypothesis,&quot; but with the additional proviso for a key role of Epstein-Barr virus (EBV) in determining MS risk. We show that whereas EBV stands out as the only infectious agent that can explain many of the key features of MS epidemiology, by itself the link between EBV and MS cannot explain the decline in risk among migrants from high to low MS prevalence areas. This decline implies that either EBV strains in low-risk areas have less propensity to cause MS, or that other infectious or noninfectious factors modify the host response to EBV or otherwise contribute to determine MS risk. The role of infectious factors is discussed here; in a companion article, we will examine the possible role of noninfectious factors and provide evidence that high levels of vitamin D may have a protective role, particularly during adolescence. The primary purpose of these reviews is to identify clues to the causes of MS and to evaluate the possibility of primary prevention.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates environmental risk factors for multiple sclerosis. part i: the role of infection. We show that whereas EBV stands out as the only infectious agent that can explain many of the key features of MS epidemiology, by itself the link between EBV and MS cannot explain the decline in risk among migrants from high to low MS prevalence areas.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We show that whereas EBV stands out as the only infectious agent that can explain many of the key features of MS epidemiology, by itself the link between EBV and MS cannot explain the decline in risk among migrants from high to low MS prevalence areas.</li>
+<li>Challenge: This paper investigates environmental risk factors for multiple sclerosis.</li>
+<li>Action: part i: the role of infection.</li>
+<li>Resolution: Although genetic susceptibility explains the clustering of multiple sclerosis (MS) cases within families and the sharp decline in risk with increasing genetic distance, it cannot fully explain the geographic variations in MS frequency and the changes in risk that occur with migration.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/ana.21117" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Alberto Ascherio. (2007). Environmental risk factors for multiple sclerosis. Part I: The role of infection. Annals of Neurology. https://doi.org/10.1002/ana.21117</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_8260be4d16f1_2007,
+  title = {Environmental risk factors for multiple sclerosis. Part I: The role of infection},
+  author = {Alberto Ascherio},
+  year = {2007},
+  journal = {Annals of Neurology},
+  doi = {10.1002/ana.21117},
+  url = {https://doi.org/10.1002/ana.21117},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Risk Alleles for Multiple Sclerosis Identified by a Genomewide Study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2007</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (64%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Alleles of IL2RA and IL7RA and those in the HLA locus are identified as heritable risk factors for multiple sclerosis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates risk alleles for multiple sclerosis identified by a genomewide study. Alleles of IL2RA and IL7RA and those in the HLA locus are identified as heritable risk factors for multiple sclerosis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Alleles of IL2RA and IL7RA and those in the HLA locus are identified as heritable risk factors for multiple sclerosis.</li>
+<li>Challenge: This paper investigates risk alleles for multiple sclerosis identified by a genomewide study.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1056/nejmoa073493" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> The International Multiple Sclerosis Genetics Consortium. (2007). Risk Alleles for Multiple Sclerosis Identified by a Genomewide Study. New England Journal of Medicine. https://doi.org/10.1056/nejmoa073493</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_2b252b02bdc9_2007,
+  title = {Risk Alleles for Multiple Sclerosis Identified by a Genomewide Study},
+  author = {The International Multiple Sclerosis Genetics Consortium},
+  year = {2007},
+  journal = {New England Journal of Medicine},
+  doi = {10.1056/nejmoa073493},
+  url = {https://doi.org/10.1056/nejmoa073493},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Clonally expanded B cells in multiple sclerosis bind EBV EBNA1 and GlialCAM</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a heterogenous autoimmune disease in which autoreactive lymphocytes attack the myelin sheath of the central nervous system. B lymphocytes in the cerebrospinal fluid (CSF) of patients with MS contribute to inflammation and secrete oligoclonal immunoglobulins1,2. Epstein-Barr virus (EBV) infection has been epidemiologically linked to MS, but its pathological role remains unclear3. Here we demonstrate high-affinity molecular mimicry between the EBV transcription factor EBV nuclear antigen 1 (EBNA1) and the central nervous system protein glial cell adhesion molecule (GlialCAM) and provide structural and in vivo functional evidence for its relevance. A cross-reactive CSF-derived antibody was initially identified by single-cell sequencing of the paired-chain B cell repertoire of MS blood and CSF, followed by protein microarray-based testing of recombinantly expressed CSF-derived antibodies against MS-associated viruses. Sequence analysis, affinity measurements and the crystal structure of the EBNA1-peptide epitope in complex with the autoreactive Fab fragment enabled tracking of the development of the naive EBNA1-restricted antibody to a mature EBNA1-GlialCAM cross-reactive antibody. Molecular mimicry is facilitated by a post-translational modification of GlialCAM. EBNA1 immunization exacerbates disease in a mouse model of MS, and anti-EBNA1 and anti-GlialCAM antibodies are prevalent in patients with MS. Our results provide a mechanistic link for the association between MS and EBV and could guide the development of new MS therapies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates clonally expanded b cells in multiple sclerosis bind ebv ebna1 and glialcam. Here we demonstrate high-affinity molecular mimicry between the EBV transcription factor EBV nuclear antigen 1 (EBNA1) and the central nervous system protein glial cell adhesion molecule (GlialCAM) and provide structural and in vivo functional evidence for its relevance.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Here we demonstrate high-affinity molecular mimicry between the EBV transcription factor EBV nuclear antigen 1 (EBNA1) and the central nervous system protein glial cell adhesion molecule (GlialCAM) and provide structural and in vivo functional evidence for its relevance.</li>
+<li>Challenge: Our results provide a mechanistic link for the association between MS and EBV and could guide the development of new MS therapies.</li>
+<li>Action: This paper investigates clonally expanded b cells in multiple sclerosis bind ebv ebna1 and glialcam.</li>
+<li>Resolution: Multiple sclerosis (MS) is a heterogenous autoimmune disease in which autoreactive lymphocytes attack the myelin sheath of the central nervous system.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-022-04432-7" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Tobias V. Lanz. (2022). Clonally expanded B cells in multiple sclerosis bind EBV EBNA1 and GlialCAM. Nature. https://doi.org/10.1038/s41586-022-04432-7</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_1a6420577881_2022,
+  title = {Clonally expanded B cells in multiple sclerosis bind EBV EBNA1 and GlialCAM},
+  author = {Tobias V. Lanz},
+  year = {2022},
+  journal = {Nature},
+  doi = {10.1038/s41586-022-04432-7},
+  url = {https://doi.org/10.1038/s41586-022-04432-7},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Sex ratio of multiple sclerosis in Canada: a longitudinal study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2006</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Incidence of multiple sclerosis is thought to be increasing, but this notion has been difficult to substantiate. In a longitudinal population-based dataset of patients with multiple sclerosis obtained over more than three decades, we did not show a difference in time to diagnosis by sex. We reasoned that if a sex-specific change in incidence was occurring, the female to male sex ratio would serve as a surrogate of incidence change. Since environmental risk factors seem to act early in life, we calculated sex ratios by birth year in 27 074 Canadian patients with multiple sclerosis identified as part of a longitudinal population-based dataset. The female to male sex ratio by year of birth has been increasing for at least 50 years and now exceeds 3.2:1 in Canada. Year of birth was a significant predictor for sex ratio (p&lt;0.0001, chi(2)=124.4; rank correlation r=0.84). The substantial increase in the female to male sex ratio in Canada seems to result from a disproportional increase in incidence of multiple sclerosis in women. This rapid change must have environmental origins even if it is associated with a gene-environment interaction, and implies that a large proportion of multiple sclerosis cases may be preventable in situ. Although the reasons why incidence of the disease is increasing are unknown, there are major implications for health-care provision because lifetime costs of multiple sclerosis exceed pound1 million per case in the UK.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates sex ratio of multiple sclerosis in canada: a longitudinal study. Although the reasons why incidence of the disease is increasing are unknown, there are major implications for health-care provision because lifetime costs of multiple sclerosis exceed pound1 million per case in the UK.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Incidence of multiple sclerosis is thought to be increasing, but this notion has been difficult to substantiate.</li>
+<li>Challenge: In a longitudinal population-based dataset of patients with multiple sclerosis obtained over more than three decades, we did not show a difference in time to diagnosis by sex.</li>
+<li>Action: We reasoned that if a sex-specific change in incidence was occurring, the female to male sex ratio would serve as a surrogate of incidence change.</li>
+<li>Resolution: Since environmental risk factors seem to act early in life, we calculated sex ratios by birth year in 27 074 Canadian patients with multiple sclerosis identified as part of a longitudinal population-based dataset.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/s1474-4422(06)70581-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Sarah Orton. (2006). Sex ratio of multiple sclerosis in Canada: a longitudinal study. The Lancet Neurology. https://doi.org/10.1016/s1474-4422(06)70581-6</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_259143a9a2b4_2006,
+  title = {Sex ratio of multiple sclerosis in Canada: a longitudinal study},
+  author = {Sarah Orton},
+  year = {2006},
+  journal = {The Lancet Neurology},
+  doi = {10.1016/s1474-4422(06)70581-6},
+  url = {https://doi.org/10.1016/s1474-4422(06)70581-6},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Epstein-Barr virus and multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (67%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Infection with Epstein-Barr virus is the trigger for the development of multiple sclerosis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates epstein-barr virus and multiple sclerosis. Infection with Epstein-Barr virus is the trigger for the development of multiple sclerosis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Infection with Epstein-Barr virus is the trigger for the development of multiple sclerosis.</li>
+<li>Challenge: This paper investigates epstein-barr virus and multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/science.abm7930" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> William H. Robinson. (2022). Epstein-Barr virus and multiple sclerosis. Science. https://doi.org/10.1126/science.abm7930</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e4aa647d82fd_2022,
+  title = {Epstein-Barr virus and multiple sclerosis},
+  author = {William H. Robinson},
+  year = {2022},
+  journal = {Science},
+  doi = {10.1126/science.abm7930},
+  url = {https://doi.org/10.1126/science.abm7930},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetics of Multiple Sclerosis: An Overview and New Directions</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2018</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (78%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The contribution of genetic inheritance in multiple sclerosis was established early on. Although multiple sclerosis is not a Mendelian disease, its incidence and prevalence is higher in family members of affected individuals compared with the general population. Throughout the last decade, several small studies failed to identify any robust genetic associations besides the classic associations in the major histocompatibility complex region. During the past few years, genome-wide association studies (GWAS) have revolutionized the genetics of multiple sclerosis, uncovering more than 200 implicated genetic loci. Here, we describe these main findings and discuss the new avenues that these discoveries lay open.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetics of multiple sclerosis: an overview and new directions. Here, we describe these main findings and discuss the new avenues that these discoveries lay open.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The contribution of genetic inheritance in multiple sclerosis was established early on.</li>
+<li>Challenge: Although multiple sclerosis is not a Mendelian disease, its incidence and prevalence is higher in family members of affected individuals compared with the general population.</li>
+<li>Action: Throughout the last decade, several small studies failed to identify any robust genetic associations besides the classic associations in the major histocompatibility complex region.</li>
+<li>Resolution: During the past few years, genome-wide association studies (GWAS) have revolutionized the genetics of multiple sclerosis, uncovering more than 200 implicated genetic loci.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1101/cshperspect.a028951" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Nikolaos A. Patsopoulos. (2018). Genetics of Multiple Sclerosis: An Overview and New Directions. Cold Spring Harbor Perspectives in Medicine. https://doi.org/10.1101/cshperspect.a028951</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_81a4314212e6_2018,
+  title = {Genetics of Multiple Sclerosis: An Overview and New Directions},
+  author = {Nikolaos A. Patsopoulos},
+  year = {2018},
+  journal = {Cold Spring Harbor Perspectives in Medicine},
+  doi = {10.1101/cshperspect.a028951},
+  url = {https://doi.org/10.1101/cshperspect.a028951},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Epstein–Barr virus and multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Epstein-Barr virus (EBV) is a ubiquitous human lymphotropic herpesvirus with a well-established causal role in several cancers. Recent studies have provided compelling epidemiological and mechanistic evidence for a causal role of EBV in multiple sclerosis (MS). MS is the most prevalent chronic inflammatory and neurodegenerative disease of the central nervous system and is thought to be triggered in genetically predisposed individuals by an infectious agent, with EBV as the lead candidate. How a ubiquitous virus that typically leads to benign latent infections can promote cancer and autoimmune disease in at-risk populations is not fully understood. Here we review the evidence that EBV is a causal agent for MS and how various risk factors may affect EBV infection and immune control. We focus on EBV contributing to MS through reprogramming of latently infected B lymphocytes and the chronic presentation of viral antigens as a potential source of autoreactivity through molecular mimicry. We consider how knowledge of EBV-associated cancers may be instructive for understanding the role of EBV in MS and discuss the potential for therapies that target EBV to treat MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates epstein–barr virus and multiple sclerosis. We consider how knowledge of EBV-associated cancers may be instructive for understanding the role of EBV in MS and discuss the potential for therapies that target EBV to treat MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Epstein-Barr virus (EBV) is a ubiquitous human lymphotropic herpesvirus with a well-established causal role in several cancers.</li>
+<li>Challenge: Recent studies have provided compelling epidemiological and mechanistic evidence for a causal role of EBV in multiple sclerosis (MS).</li>
+<li>Action: MS is the most prevalent chronic inflammatory and neurodegenerative disease of the central nervous system and is thought to be triggered in genetically predisposed individuals by an infectious agent, with EBV as the lead candidate.</li>
+<li>Resolution: How a ubiquitous virus that typically leads to benign latent infections can promote cancer and autoimmune disease in at-risk populations is not fully understood.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41579-022-00770-5" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Samantha S. Soldan. (2022). Epstein–Barr virus and multiple sclerosis. Nature Reviews Microbiology. https://doi.org/10.1038/s41579-022-00770-5</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a1dd62c23bbc_2022,
+  title = {Epstein–Barr virus and multiple sclerosis},
+  author = {Samantha S. Soldan},
+  year = {2022},
+  journal = {Nature Reviews Microbiology},
+  doi = {10.1038/s41579-022-00770-5},
+  url = {https://doi.org/10.1038/s41579-022-00770-5},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Cross-reactive EBNA1 immunity targets alpha-crystallin B and is associated with multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is an inflammatory disease of the central nervous system, for which and Epstein-Barr virus (EBV) infection is a likely prerequisite. Due to the homology between Epstein-Barr nuclear antigen 1 (EBNA1) and alpha-crystallin B (CRYAB), we examined antibody reactivity to EBNA1 and CRYAB peptide libraries in 713 persons with MS (pwMS) and 722 matched controls (Con). Antibody response to CRYAB amino acids 7 to 16 was associated with MS (OR = 2.0), and combination of high EBNA1 responses with CRYAB positivity markedly increased disease risk (OR = 9.0). Blocking experiments revealed antibody cross-reactivity between the homologous EBNA1 and CRYAB epitopes. Evidence for T cell cross-reactivity was obtained in mice between EBNA1 and CRYAB, and increased CRYAB and EBNA1 CD4&lt;sup&gt;+&lt;/sup&gt; T cell responses were detected in natalizumab-treated pwMS. This study provides evidence for antibody cross-reactivity between EBNA1 and CRYAB and points to a similar cross-reactivity in T cells, further demonstrating the role of EBV adaptive immune responses in MS development.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates cross-reactive ebna1 immunity targets alpha-crystallin b and is associated with multiple sclerosis. This study provides evidence for antibody cross-reactivity between EBNA1 and CRYAB and points to a similar cross-reactivity in T cells, further demonstrating the role of EBV adaptive immune responses in MS development.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study provides evidence for antibody cross-reactivity between EBNA1 and CRYAB and points to a similar cross-reactivity in T cells, further demonstrating the role of EBV adaptive immune responses in MS development.</li>
+<li>Challenge: This paper investigates cross-reactive ebna1 immunity targets alpha-crystallin b and is associated with multiple sclerosis.</li>
+<li>Action: Multiple sclerosis (MS) is an inflammatory disease of the central nervous system, for which and Epstein-Barr virus (EBV) infection is a likely prerequisite.</li>
+<li>Resolution: Due to the homology between Epstein-Barr nuclear antigen 1 (EBNA1) and alpha-crystallin B (CRYAB), we examined antibody reactivity to EBNA1 and CRYAB peptide libraries in 713 persons with MS (pwMS) and 722 matched controls (Con).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/sciadv.adg3032" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Olivia Thomas. (2023). Cross-reactive EBNA1 immunity targets alpha-crystallin B and is associated with multiple sclerosis. Science Advances. https://doi.org/10.1126/sciadv.adg3032</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_b05e73235761_2023,
+  title = {Cross-reactive EBNA1 immunity targets alpha-crystallin B and is associated with multiple sclerosis},
+  author = {Olivia Thomas},
+  year = {2023},
+  journal = {Science Advances},
+  doi = {10.1126/sciadv.adg3032},
+  url = {https://doi.org/10.1126/sciadv.adg3032},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Ineffective control of Epstein-Barr-virus-induced autoimmunity increases the risk for multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a demyelinating disease of the CNS. Epstein-Barr virus (EBV) contributes to the MS pathogenesis because high levels of EBV EBNA&lt;sub&gt;386-405&lt;/sub&gt;-specific antibodies cross react with the CNS-derived GlialCAM&lt;sub&gt;370-389&lt;/sub&gt;. However, it is unclear why only some individuals with such high autoreactive antibody titers develop MS. Here, we show that autoreactive cells are eliminated by distinct immune responses, which are determined by genetic variations of the host, as well as of the infecting EBV and human cytomegalovirus (HCMV). We demonstrate that potent cytotoxic NKG2C&lt;sup&gt;+&lt;/sup&gt; and NKG2D&lt;sup&gt;+&lt;/sup&gt; natural killer (NK) cells and distinct EBV-specific T cell responses kill autoreactive GlialCAM&lt;sub&gt;370-389&lt;/sub&gt;-specific cells. Furthermore, immune evasion of these autoreactive cells was induced by EBV-variant-specific upregulation of the immunomodulatory HLA-E. These defined virus and host genetic pre-dispositions are associated with an up to 260-fold increased risk of MS. Our findings thus allow the early identification of patients at risk for MS and suggest additional therapeutic options against MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates ineffective control of epstein-barr-virus-induced autoimmunity increases the risk for multiple sclerosis. Here, we show that autoreactive cells are eliminated by distinct immune responses, which are determined by genetic variations of the host, as well as of the infecting EBV and human cytomegalovirus (HCMV).</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Here, we show that autoreactive cells are eliminated by distinct immune responses, which are determined by genetic variations of the host, as well as of the infecting EBV and human cytomegalovirus (HCMV).</li>
+<li>Challenge: We demonstrate that potent cytotoxic NKG2C&lt;sup&gt;+&lt;/sup&gt; and NKG2D&lt;sup&gt;+&lt;/sup&gt; natural killer (NK) cells and distinct EBV-specific T cell responses kill autoreactive GlialCAM&lt;sub&gt;370-389&lt;/sub&gt;-specific cells.</li>
+<li>Action: Our findings thus allow the early identification of patients at risk for MS and suggest additional therapeutic options against MS.</li>
+<li>Resolution: This paper investigates ineffective control of epstein-barr-virus-induced autoimmunity increases the risk for multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.cell.2023.11.015" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Hannes Vietzen. (2023). Ineffective control of Epstein-Barr-virus-induced autoimmunity increases the risk for multiple sclerosis. Cell. https://doi.org/10.1016/j.cell.2023.11.015</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_8c1e8c8fcc21_2023,
+  title = {Ineffective control of Epstein-Barr-virus-induced autoimmunity increases the risk for multiple sclerosis},
+  author = {Hannes Vietzen},
+  year = {2023},
+  journal = {Cell},
+  doi = {10.1016/j.cell.2023.11.015},
+  url = {https://doi.org/10.1016/j.cell.2023.11.015},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple Sclerosis Epidemiology in East Asia, South East Asia and South Asia: A Systematic Review</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2016</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (63%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Advances in MS registries around the globe allow nationwide population-based studies and will allow worldly comparisons between the prevalence and incidence in different regions that are provided to monitor estimation.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis epidemiology in east asia, south east asia and south asia: a systematic review. Advances in MS registries around the globe allow nationwide population-based studies and will allow worldly comparisons between the prevalence and incidence in different regions that are provided to monitor estimation.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Advances in MS registries around the globe allow nationwide population-based studies and will allow worldly comparisons between the prevalence and incidence in different regions that are provided to monitor estimation.</li>
+<li>Challenge: This paper investigates multiple sclerosis epidemiology in east asia, south east asia and south asia: a systematic review.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1159/000444019" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Sharareh Eskandarieh. (2016). Multiple Sclerosis Epidemiology in East Asia, South East Asia and South Asia: A Systematic Review. Neuroepidemiology. https://doi.org/10.1159/000444019</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_06290946670a_2016,
+  title = {Multiple Sclerosis Epidemiology in East Asia, South East Asia and South Asia: A Systematic Review},
+  author = {Sharareh Eskandarieh},
+  year = {2016},
+  journal = {Neuroepidemiology},
+  doi = {10.1159/000444019},
+  url = {https://doi.org/10.1159/000444019},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Broader Epstein–Barr virus–specific T cell receptor repertoire in patients with multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Epstein-Barr virus (EBV) infection precedes multiple sclerosis (MS) pathology and cross-reactive antibodies might link EBV infection to CNS autoimmunity. As an altered anti-EBV T cell reaction was suggested in MS, we queried peripheral blood T cell receptor β chain (TCRβ) repertoires of 1,395 MS patients, 887 controls, and 35 monozygotic, MS-discordant twin pairs for multimer-confirmed, viral antigen-specific TCRβ sequences. We detected more MHC-I-restricted EBV-specific TCRβ sequences in MS patients. Differences in genetics or upbringing could be excluded by validation in monozygotic twin pairs discordant for MS. Anti-VLA-4 treatment amplified this observation, while interferon β- or anti-CD20 treatment did not modulate EBV-specific T cell occurrence. In healthy individuals, EBV-specific CD8+ T cells were of an effector-memory phenotype in peripheral blood and cerebrospinal fluid. In MS patients, cerebrospinal fluid also contained EBV-specific central-memory CD8+ T cells, suggesting recent priming. Therefore, MS is not only preceded by EBV infection, but also associated with broader EBV-specific TCR repertoires, consistent with an ongoing anti-EBV immune reaction in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates broader epstein–barr virus–specific t cell receptor repertoire in patients with multiple sclerosis. Therefore, MS is not only preceded by EBV infection, but also associated with broader EBV-specific TCR repertoires, consistent with an ongoing anti-EBV immune reaction in MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Epstein-Barr virus (EBV) infection precedes multiple sclerosis (MS) pathology and cross-reactive antibodies might link EBV infection to CNS autoimmunity.</li>
+<li>Challenge: As an altered anti-EBV T cell reaction was suggested in MS, we queried peripheral blood T cell receptor β chain (TCRβ) repertoires of 1,395 MS patients, 887 controls, and 35 monozygotic, MS-discordant twin pairs for multimer-confirmed, viral antigen-specific TCRβ sequences.</li>
+<li>Action: We detected more MHC-I-restricted EBV-specific TCRβ sequences in MS patients.</li>
+<li>Resolution: Differences in genetics or upbringing could be excluded by validation in monozygotic twin pairs discordant for MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1084/jem.20220650" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Tilman Schneider‐Hohendorf. (2022). Broader Epstein–Barr virus–specific T cell receptor repertoire in patients with multiple sclerosis. The Journal of Experimental Medicine. https://doi.org/10.1084/jem.20220650</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_71e99ab3a5aa_2022,
+  title = {Broader Epstein–Barr virus–specific T cell receptor repertoire in patients with multiple sclerosis},
+  author = {Tilman Schneider‐Hohendorf},
+  year = {2022},
+  journal = {The Journal of Experimental Medicine},
+  doi = {10.1084/jem.20220650},
+  url = {https://doi.org/10.1084/jem.20220650},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a neuro-inflammatory and neurodegenerative disease that is most prevalent in Northern Europe. Although it is known that inherited risk for MS is located within or in close proximity to immune-related genes, it is unknown when, where and how this genetic risk originated&lt;sup&gt;1&lt;/sup&gt;. Here, by using a large ancient genome dataset from the Mesolithic period to the Bronze Age&lt;sup&gt;2&lt;/sup&gt;, along with new Medieval and post-Medieval genomes, we show that the genetic risk for MS rose among pastoralists from the Pontic steppe and was brought into Europe by the Yamnaya-related migration approximately 5,000 years ago. We further show that these MS-associated immunogenetic variants underwent positive selection both within the steppe population and later in Europe, probably driven by pathogenic challenges coinciding with changes in diet, lifestyle and population density. This study highlights the critical importance of the Neolithic period and Bronze Age as determinants of modern immune responses and their subsequent effect on the risk of developing MS in a changing environment.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations. Here, by using a large ancient genome dataset from the Mesolithic period to the Bronze Age&lt;sup&gt;2&lt;/sup&gt;, along with new Medieval and post-Medieval genomes, we show that the genetic risk for MS rose among pastoralists from the Pontic steppe and was brought into Europe by the Yamnaya-related migration approximately 5,000 years ago.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Here, by using a large ancient genome dataset from the Mesolithic period to the Bronze Age&lt;sup&gt;2&lt;/sup&gt;, along with new Medieval and post-Medieval genomes, we show that the genetic risk for MS rose among pastoralists from the Pontic steppe and was brought into Europe by the Yamnaya-related migration approximately 5,000 years ago.</li>
+<li>Challenge: This study highlights the critical importance of the Neolithic period and Bronze Age as determinants of modern immune responses and their subsequent effect on the risk of developing MS in a changing environment.</li>
+<li>Action: This paper investigates elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations.</li>
+<li>Resolution: Multiple sclerosis (MS) is a neuro-inflammatory and neurodegenerative disease that is most prevalent in Northern Europe.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-023-06618-z" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> William Barrie. (2024). Elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations. Nature. https://doi.org/10.1038/s41586-023-06618-z</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_4e2e4c96b116_2024,
+  title = {Elevated genetic risk for multiple sclerosis emerged in steppe pastoralist populations},
+  author = {William Barrie},
+  year = {2024},
+  journal = {Nature},
+  doi = {10.1038/s41586-023-06618-z},
+  url = {https://doi.org/10.1038/s41586-023-06618-z},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple Sclerosis Epidemiology in Middle East and North Africa: A Systematic Review and Meta-Analysis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2015</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (59%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Recent advances in MS registries will allow nation-wide studies and temporal comparisons between countries, provided that age- and sex-standardized estimates are available.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis epidemiology in middle east and north africa: a systematic review and meta-analysis. Recent advances in MS registries will allow nation-wide studies and temporal comparisons between countries, provided that age- and sex-standardized estimates are available.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Recent advances in MS registries will allow nation-wide studies and temporal comparisons between countries, provided that age- and sex-standardized estimates are available.</li>
+<li>Challenge: This paper investigates multiple sclerosis epidemiology in middle east and north africa: a systematic review and meta-analysis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1159/000431042" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Pouria Heydarpour. (2015). Multiple Sclerosis Epidemiology in Middle East and North Africa: A Systematic Review and Meta-Analysis. Neuroepidemiology. https://doi.org/10.1159/000431042</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f84ec7df120a_2015,
+  title = {Multiple Sclerosis Epidemiology in Middle East and North Africa: A Systematic Review and Meta-Analysis},
+  author = {Pouria Heydarpour},
+  year = {2015},
+  journal = {Neuroepidemiology},
+  doi = {10.1159/000431042},
+  url = {https://doi.org/10.1159/000431042},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genes and Environment in Multiple Sclerosis project: A platform to investigate multiple sclerosis risk</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2015</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The Genes and Environment in Multiple Sclerosis project establishes a platform to investigate the events leading to multiple sclerosis (MS) in at-risk individuals. It has recruited 2,632 first-degree relatives from across the USA. Using an integrated genetic and environmental risk score, we identified subjects with twice the MS risk when compared to the average family member, and we report an initial incidence rate in these subjects that is 30 times greater than that of sporadic MS. We discuss the feasibility of large-scale studies of asymptomatic at-risk subjects that leverage modern tools of subject recruitment to execute collaborative projects.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genes and environment in multiple sclerosis project: a platform to investigate multiple sclerosis risk. Using an integrated genetic and environmental risk score, we identified subjects with twice the MS risk when compared to the average family member, and we report an initial incidence rate in these subjects that is 30 times greater than that of sporadic MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Using an integrated genetic and environmental risk score, we identified subjects with twice the MS risk when compared to the average family member, and we report an initial incidence rate in these subjects that is 30 times greater than that of sporadic MS.</li>
+<li>Challenge: This paper investigates genes and environment in multiple sclerosis project: a platform to investigate multiple sclerosis risk.</li>
+<li>Action: The Genes and Environment in Multiple Sclerosis project establishes a platform to investigate the events leading to multiple sclerosis (MS) in at-risk individuals.</li>
+<li>Resolution: It has recruited 2,632 first-degree relatives from across the USA.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/ana.24560" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Zongqi Xia. (2015). Genes and Environment in Multiple Sclerosis project: A platform to investigate multiple sclerosis risk. Annals of Neurology. https://doi.org/10.1002/ana.24560</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_5b2331f41c20_2015,
+  title = {Genes and Environment in Multiple Sclerosis project: A platform to investigate multiple sclerosis risk},
+  author = {Zongqi Xia},
+  year = {2015},
+  journal = {Annals of Neurology},
+  doi = {10.1002/ana.24560},
+  url = {https://doi.org/10.1002/ana.24560},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The CD8 T Cell-Epstein-Barr Virus-B Cell Trialogue: A Central Issue in Multiple Sclerosis Pathogenesis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2021</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (86%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The cause and the pathogenic mechanisms leading to multiple sclerosis (MS), a chronic inflammatory disease of the central nervous system (CNS), are still under scrutiny. During the last decade, awareness has increased that multiple genetic and environmental factors act in concert to modulate MS risk. Likewise, the landscape of cells of the adaptive immune system that are believed to play a role in MS immunopathogenesis has expanded by including not only CD4 T helper cells but also cytotoxic CD8 T cells and B cells. Once the key cellular players are identified, the main challenge is to define precisely how they act and interact to induce neuroinflammation and the neurodegenerative cascade in MS. CD8 T cells have been implicated in MS pathogenesis since the 80&#x27;s when it was shown that CD8 T cells predominate in MS brain lesions. Interest in the role of CD8 T cells in MS was revived in 2000 and the years thereafter by studies showing that CNS-recruited CD8 T cells are clonally expanded and have a memory effector phenotype indicating &lt;i&gt;in situ&lt;/i&gt; antigen-driven reactivation. The association of certain MHC class I alleles with MS genetic risk implicates CD8 T cells in disease pathogenesis. Moreover, experimental studies have highlighted the detrimental effects of CD8 T cell activation on neural cells. While the antigens responsible for T cell recruitment and activation in the CNS remain elusive, the high efficacy of B-cell depleting drugs in MS and a growing number of studies implicate B cells and Epstein-Barr virus (EBV), a B-lymphotropic herpesvirus that is strongly associated with MS, in the activation of pathogenic T cells. This article reviews the results of human studies that have contributed to elucidate the role of CD8 T cells in MS immunopathogenesis, and discusses them in light of current understanding of autoreactivity, B-cell and EBV involvement in MS, and mechanism of action of different MS treatments. Based on the available evidences, an immunopathological model of MS is proposed that entails a persistent EBV infection of CNS-infiltrating B cells as the target of a dysregulated cytotoxic CD8 T cell response causing CNS tissue damage.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the cd8 t cell-epstein-barr virus-b cell trialogue: a central issue in multiple sclerosis pathogenesis. Based on the available evidences, an immunopathological model of MS is proposed that entails a persistent EBV infection of CNS-infiltrating B cells as the target of a dysregulated cytotoxic CD8 T cell response causing CNS tissue damage.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The cause and the pathogenic mechanisms leading to multiple sclerosis (MS), a chronic inflammatory disease of the central nervous system (CNS), are still under scrutiny.</li>
+<li>Challenge: During the last decade, awareness has increased that multiple genetic and environmental factors act in concert to modulate MS risk.</li>
+<li>Action: Likewise, the landscape of cells of the adaptive immune system that are believed to play a role in MS immunopathogenesis has expanded by including not only CD4 T helper cells but also cytotoxic CD8 T cells and B cells.</li>
+<li>Resolution: Once the key cellular players are identified, the main challenge is to define precisely how they act and interact to induce neuroinflammation and the neurodegenerative cascade in MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2021.665718" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Caterina Veroni. (2021). The CD8 T Cell-Epstein-Barr Virus-B Cell Trialogue: A Central Issue in Multiple Sclerosis Pathogenesis. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2021.665718</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_be08eb2f34ea_2021,
+  title = {The CD8 T Cell-Epstein-Barr Virus-B Cell Trialogue: A Central Issue in Multiple Sclerosis Pathogenesis},
+  author = {Caterina Veroni},
+  year = {2021},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2021.665718},
+  url = {https://doi.org/10.3389/fimmu.2021.665718},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>An autoantibody signature predictive for multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Although B cells are implicated in multiple sclerosis (MS) pathophysiology, a predictive or diagnostic autoantibody remains elusive. Here, the Department of Defense Serum Repository (DoDSR), a cohort of over 10 million individuals, was used to generate whole-proteome autoantibody profiles of hundreds of patients with MS (PwMS) years before and subsequently after MS onset. This analysis defines a unique cluster of PwMS that share an autoantibody signature against a common motif that has similarity with many human pathogens. These patients exhibit antibody reactivity years before developing MS symptoms and have higher levels of serum neurofilament light (sNfL) compared to other PwMS. Furthermore, this profile is preserved over time, providing molecular evidence for an immunologically active prodromal period years before clinical onset. This autoantibody reactivity was validated in samples from a separate incident MS cohort in both cerebrospinal fluid (CSF) and serum, where it is highly specific for patients eventually diagnosed with MS. This signature is a starting point for further immunological characterization of this MS patient subset and may be clinically useful as an antigen-specific biomarker for high-risk patients with clinically- or radiologically-isolated neuroinflammatory syndromes.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates an autoantibody signature predictive for multiple sclerosis. This signature is a starting point for further immunological characterization of this MS patient subset and may be clinically useful as an antigen-specific biomarker for high-risk patients with clinically- or radiologically-isolated neuroinflammatory syndromes.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Although B cells are implicated in multiple sclerosis (MS) pathophysiology, a predictive or diagnostic autoantibody remains elusive.</li>
+<li>Challenge: Here, the Department of Defense Serum Repository (DoDSR), a cohort of over 10 million individuals, was used to generate whole-proteome autoantibody profiles of hundreds of patients with MS (PwMS) years before and subsequently after MS onset.</li>
+<li>Action: This analysis defines a unique cluster of PwMS that share an autoantibody signature against a common motif that has similarity with many human pathogens.</li>
+<li>Resolution: These patients exhibit antibody reactivity years before developing MS symptoms and have higher levels of serum neurofilament light (sNfL) compared to other PwMS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41591-024-02938-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Colin R. Zamecnik. (2024). An autoantibody signature predictive for multiple sclerosis. Nature Medicine. https://doi.org/10.1038/s41591-024-02938-3</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_84c7dda1dab6_2024,
+  title = {An autoantibody signature predictive for multiple sclerosis},
+  author = {Colin R. Zamecnik},
+  year = {2024},
+  journal = {Nature Medicine},
+  doi = {10.1038/s41591-024-02938-3},
+  url = {https://doi.org/10.1038/s41591-024-02938-3},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The Role of Diet and Interventions on Multiple Sclerosis: A Review</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic autoimmune disease of the central nervous system (CNS) characterized by inflammation and neurodegeneration. The most prominent clinical features include visual loss and sensorimotor symptoms and mainly affects those of young age. Some of the factors affecting its pathogenesis are genetic and/or environmental including viruses, smoking, obesity, and nutrition. Current research provides evidence that diet may influence MS onset, course, and quality of life of the patients. In this review, we address the role of nutrition on MS pathogenesis as well as dietary interventions that show promising beneficial results with respect to MS activity and progression. Investigation with large prospective clinical studies is required in order to thoroughly evaluate the role of diet in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the role of diet and interventions on multiple sclerosis: a review. Investigation with large prospective clinical studies is required in order to thoroughly evaluate the role of diet in MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a chronic autoimmune disease of the central nervous system (CNS) characterized by inflammation and neurodegeneration.</li>
+<li>Challenge: The most prominent clinical features include visual loss and sensorimotor symptoms and mainly affects those of young age.</li>
+<li>Action: Some of the factors affecting its pathogenesis are genetic and/or environmental including viruses, smoking, obesity, and nutrition.</li>
+<li>Resolution: Current research provides evidence that diet may influence MS onset, course, and quality of life of the patients.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/nu14061150" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Panagiotis Stoiloudis. (2022). The Role of Diet and Interventions on Multiple Sclerosis: A Review. Nutrients. https://doi.org/10.3390/nu14061150</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f82448912626_2022,
+  title = {The Role of Diet and Interventions on Multiple Sclerosis: A Review},
+  author = {Panagiotis Stoiloudis},
+  year = {2022},
+  journal = {Nutrients},
+  doi = {10.3390/nu14061150},
+  url = {https://doi.org/10.3390/nu14061150},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Twin study reveals non-heritable immune perturbations in multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic inflammatory disorder of the central nervous system underpinned by partially understood genetic risk factors and environmental triggers and their undefined interactions&lt;sup&gt;1,2&lt;/sup&gt;. Here we investigated the peripheral immune signatures of 61 monozygotic twin pairs discordant for MS to dissect the influence of genetic predisposition and environmental factors. Using complementary multimodal high-throughput and high-dimensional single-cell technologies in conjunction with data-driven computational tools, we identified an inflammatory shift in a monocyte cluster of twins with MS, coupled with the emergence of a population of IL-2 hyper-responsive transitional naive helper T cells as MS-related immune alterations. By integrating data on the immune profiles of healthy monozygotic and dizygotic twin pairs, we estimated the variance in CD25 expression by helper T cells displaying a naive phenotype to be largely driven by genetic and shared early environmental influences. Nonetheless, the expanding helper T cells of twins with MS, which were also elevated in non-twin patients with MS, emerged independent of the individual genetic makeup. These cells expressed central nervous system-homing receptors, exhibited a dysregulated CD25-IL-2 axis, and their proliferative capacity positively correlated with MS severity. Together, our matched-pair analysis of the extended twin approach allowed us to discern genetically and environmentally determined features of an MS-associated immune signature.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates twin study reveals non-heritable immune perturbations in multiple sclerosis. Using complementary multimodal high-throughput and high-dimensional single-cell technologies in conjunction with data-driven computational tools, we identified an inflammatory shift in a monocyte cluster of twins with MS, coupled with the emergence of a population of IL-2 hyper-responsive transitional naive helper T cells as MS-related immune alterations.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Using complementary multimodal high-throughput and high-dimensional single-cell technologies in conjunction with data-driven computational tools, we identified an inflammatory shift in a monocyte cluster of twins with MS, coupled with the emergence of a population of IL-2 hyper-responsive transitional naive helper T cells as MS-related immune alterations.</li>
+<li>Challenge: This paper investigates twin study reveals non-heritable immune perturbations in multiple sclerosis.</li>
+<li>Action: Multiple sclerosis (MS) is a chronic inflammatory disorder of the central nervous system underpinned by partially understood genetic risk factors and environmental triggers and their undefined interactions&lt;sup&gt;1,2&lt;/sup&gt;.</li>
+<li>Resolution: Here we investigated the peripheral immune signatures of 61 monozygotic twin pairs discordant for MS to dissect the influence of genetic predisposition and environmental factors.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-022-04419-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Florian Ingelfinger. (2022). Twin study reveals non-heritable immune perturbations in multiple sclerosis. Nature. https://doi.org/10.1038/s41586-022-04419-4</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_7c1b4bce7393_2022,
+  title = {Twin study reveals non-heritable immune perturbations in multiple sclerosis},
+  author = {Florian Ingelfinger},
+  year = {2022},
+  journal = {Nature},
+  doi = {10.1038/s41586-022-04419-4},
+  url = {https://doi.org/10.1038/s41586-022-04419-4},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>SARS-CoV-2 is associated with changes in brain structure in UK Biobank</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>There is strong evidence of brain-related abnormalities in COVID-19&lt;sup&gt;1-13&lt;/sup&gt;. However, it remains unknown whether the impact of SARS-CoV-2 infection can be detected in milder cases, and whether this can reveal possible mechanisms contributing to brain pathology. Here we investigated brain changes in 785 participants of UK Biobank (aged 51-81 years) who were imaged twice using magnetic resonance imaging, including 401 cases who tested positive for infection with SARS-CoV-2 between their two scans-with 141 days on average separating their diagnosis and the second scan-as well as 384 controls. The availability of pre-infection imaging data reduces the likelihood of pre-existing risk factors being misinterpreted as disease effects. We identified significant longitudinal effects when comparing the two groups, including (1) a greater reduction in grey matter thickness and tissue contrast in the orbitofrontal cortex and parahippocampal gyrus; (2) greater changes in markers of tissue damage in regions that are functionally connected to the primary olfactory cortex; and (3) a greater reduction in global brain size in the SARS-CoV-2 cases. The participants who were infected with SARS-CoV-2 also showed on average a greater cognitive decline between the two time points. Importantly, these imaging and cognitive longitudinal effects were still observed after excluding the 15 patients who had been hospitalised. These mainly limbic brain imaging results may be the in vivo hallmarks of a degenerative spread of the disease through olfactory pathways, of neuroinflammatory events, or of the loss of sensory input due to anosmia. Whether this deleterious effect can be partially reversed, or whether these effects will persist in the long term, remains to be investigated with additional follow-up.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates sars-cov-2 is associated with changes in brain structure in uk biobank. We identified significant longitudinal effects when comparing the two groups, including (1) a greater reduction in grey matter thickness and tissue contrast in the orbitofrontal cortex and parahippocampal gyrus; (2) greater changes in markers of tissue damage in regions that are functionally connected to the primary olfactory cortex; and (3) a greater reduction in global brain size in the SARS-CoV-2 cases.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We identified significant longitudinal effects when comparing the two groups, including (1) a greater reduction in grey matter thickness and tissue contrast in the orbitofrontal cortex and parahippocampal gyrus; (2) greater changes in markers of tissue damage in regions that are functionally connected to the primary olfactory cortex; and (3) a greater reduction in global brain size in the SARS-CoV-2 cases.</li>
+<li>Challenge: This paper investigates sars-cov-2 is associated with changes in brain structure in uk biobank.</li>
+<li>Action: There is strong evidence of brain-related abnormalities in COVID-19&lt;sup&gt;1-13&lt;/sup&gt;.</li>
+<li>Resolution: However, it remains unknown whether the impact of SARS-CoV-2 infection can be detected in milder cases, and whether this can reveal possible mechanisms contributing to brain pathology.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-022-04569-5" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Gwenaëlle Douaud. (2022). SARS-CoV-2 is associated with changes in brain structure in UK Biobank. Nature. https://doi.org/10.1038/s41586-022-04569-5</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_d322a17e57cf_2022,
+  title = {SARS-CoV-2 is associated with changes in brain structure in UK Biobank},
+  author = {Gwenaëlle Douaud},
+  year = {2022},
+  journal = {Nature},
+  doi = {10.1038/s41586-022-04569-5},
+  url = {https://doi.org/10.1038/s41586-022-04569-5},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Virus exposure and neurodegenerative disease risk across national biobanks</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>With recent findings connecting the Epstein-Barr virus to an increased risk of multiple sclerosis and growing concerns regarding the neurological impact of the coronavirus pandemic, we examined potential links between viral exposures and neurodegenerative disease risk. Using time series data from FinnGen for discovery and cross-sectional data from the UK Biobank for replication, we identified 45 viral exposures significantly associated with increased risk of neurodegenerative disease and replicated 22 of these associations. The largest effect association was between viral encephalitis exposure and Alzheimer&#x27;s disease. Influenza with pneumonia was significantly associated with five of the six neurodegenerative diseases studied. We also replicated the Epstein-Barr/multiple sclerosis association. Some of these exposures were associated with an increased risk of neurodegeneration up to 15 years after infection. As vaccines are currently available for some of the associated viruses, vaccination may be a way to reduce some risk of neurodegenerative disease.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates virus exposure and neurodegenerative disease risk across national biobanks. Using time series data from FinnGen for discovery and cross-sectional data from the UK Biobank for replication, we identified 45 viral exposures significantly associated with increased risk of neurodegenerative disease and replicated 22 of these associations.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Using time series data from FinnGen for discovery and cross-sectional data from the UK Biobank for replication, we identified 45 viral exposures significantly associated with increased risk of neurodegenerative disease and replicated 22 of these associations.</li>
+<li>Challenge: This paper investigates virus exposure and neurodegenerative disease risk across national biobanks.</li>
+<li>Action: With recent findings connecting the Epstein-Barr virus to an increased risk of multiple sclerosis and growing concerns regarding the neurological impact of the coronavirus pandemic, we examined potential links between viral exposures and neurodegenerative disease risk.</li>
+<li>Resolution: The largest effect association was between viral encephalitis exposure and Alzheimer&#x27;s disease.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.neuron.2022.12.029" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Kristin Levine. (2023). Virus exposure and neurodegenerative disease risk across national biobanks. Neuron. https://doi.org/10.1016/j.neuron.2022.12.029</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_af8af4099b65_2023,
+  title = {Virus exposure and neurodegenerative disease risk across national biobanks},
+  author = {Kristin Levine},
+  year = {2023},
+  journal = {Neuron},
+  doi = {10.1016/j.neuron.2022.12.029},
+  url = {https://doi.org/10.1016/j.neuron.2022.12.029},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Epidemiology of Multiple Sclerosis: Global, Regional, National and Sub-National-Level Estimates and Future Projections</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (68%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The burden of MS is rising worldwide, especially in developed countries. To reduce this burden, it is essential to understand the distribution and risk factors of MS, and to address healthcare disparities in early diagnosis, access to treatment and social services.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates epidemiology of multiple sclerosis: global, regional, national and sub-national-level estimates and future projections. To reduce this burden, it is essential to understand the distribution and risk factors of MS, and to address healthcare disparities in early diagnosis, access to treatment and social services.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The burden of MS is rising worldwide, especially in developed countries.</li>
+<li>Challenge: To reduce this burden, it is essential to understand the distribution and risk factors of MS, and to address healthcare disparities in early diagnosis, access to treatment and social services.</li>
+<li>Action: This paper investigates epidemiology of multiple sclerosis: global, regional, national and sub-national-level estimates and future projections.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1007/s44197-025-00353-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Gulfaraz Khan. (2025). Epidemiology of Multiple Sclerosis: Global, Regional, National and Sub-National-Level Estimates and Future Projections. Journal of Epidemiology and Global Health. https://doi.org/10.1007/s44197-025-00353-6</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a42aa062a9b9_2025,
+  title = {Epidemiology of Multiple Sclerosis: Global, Regional, National and Sub-National-Level Estimates and Future Projections},
+  author = {Gulfaraz Khan},
+  year = {2025},
+  journal = {Journal of Epidemiology and Global Health},
+  doi = {10.1007/s44197-025-00353-6},
+  url = {https://doi.org/10.1007/s44197-025-00353-6},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Full spectrum of vitamin D immunomodulation in multiple sclerosis: mechanisms and therapeutic implications</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Vitamin D deficiency has been associated with the risk of multiple sclerosis, disease activity and progression. Results from &lt;i&gt;in vitro&lt;/i&gt; experiments, animal models and analysis of human samples from randomized controlled trials provide comprehensive data illustrating the pleiotropic actions of Vitamin D on the immune system. They globally result in immunomodulation by decreasing differentiation of effector T and B cells while promoting regulatory subsets. Vitamin D also modulates innate immune cells such as macrophages, monocytes and dendritic cells, and acts at the level of the blood-brain barrier reducing immune cell trafficking. Vitamin D exerts additional activity within the central nervous system reducing microglial and astrocytic activation. The immunomodulatory role of Vitamin D detected in animal models of multiple sclerosis has suggested its potential therapeutic use for treating multiple sclerosis. In this review, we focus on recent published data describing the biological effects of Vitamin D in animal models of multiple sclerosis on immune cells, blood-brain barrier function, activation of glial cells and its potential neuroprotective effects. Based on the current knowledge, we also discuss optimization of therapeutic interventions with Vitamin D in patients with multiple sclerosis, as well as new technologies allowing in-depth analysis of immune cell regulations by vitamin D.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates full spectrum of vitamin d immunomodulation in multiple sclerosis: mechanisms and therapeutic implications. Based on the current knowledge, we also discuss optimization of therapeutic interventions with Vitamin D in patients with multiple sclerosis, as well as new technologies allowing in-depth analysis of immune cell regulations by vitamin D.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Vitamin D deficiency has been associated with the risk of multiple sclerosis, disease activity and progression.</li>
+<li>Challenge: Results from &lt;i&gt;in vitro&lt;/i&gt; experiments, animal models and analysis of human samples from randomized controlled trials provide comprehensive data illustrating the pleiotropic actions of Vitamin D on the immune system.</li>
+<li>Action: They globally result in immunomodulation by decreasing differentiation of effector T and B cells while promoting regulatory subsets.</li>
+<li>Resolution: Vitamin D also modulates innate immune cells such as macrophages, monocytes and dendritic cells, and acts at the level of the blood-brain barrier reducing immune cell trafficking.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1093/braincomms/fcac171" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Manon Galoppin. (2022). Full spectrum of vitamin D immunomodulation in multiple sclerosis: mechanisms and therapeutic implications. Brain Communications. https://doi.org/10.1093/braincomms/fcac171</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_bc9d2e9b1e0d_2022,
+  title = {Full spectrum of vitamin D immunomodulation in multiple sclerosis: mechanisms and therapeutic implications},
+  author = {Manon Galoppin},
+  year = {2022},
+  journal = {Brain Communications},
+  doi = {10.1093/braincomms/fcac171},
+  url = {https://doi.org/10.1093/braincomms/fcac171},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Changes in Gut Microbiota and Multiple Sclerosis: A Systematic Review</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (76%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Gut microbiota dysbiosis was found in multiple sclerosis patients compared to controls. Most of the altered bacteria are short-chain fatty acid (SCFA)-producing, which could explain the chronic inflammation that characterises this disease. Therefore, future studies should consider the characterisation and manipulation of the multiple sclerosis-associated microbiome as a focus of both diagnostic and therapeutic strategies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates changes in gut microbiota and multiple sclerosis: a systematic review. Therefore, future studies should consider the characterisation and manipulation of the multiple sclerosis-associated microbiome as a focus of both diagnostic and therapeutic strategies.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Gut microbiota dysbiosis was found in multiple sclerosis patients compared to controls.</li>
+<li>Challenge: Most of the altered bacteria are short-chain fatty acid (SCFA)-producing, which could explain the chronic inflammation that characterises this disease.</li>
+<li>Action: Therefore, future studies should consider the characterisation and manipulation of the multiple sclerosis-associated microbiome as a focus of both diagnostic and therapeutic strategies.</li>
+<li>Resolution: This paper investigates changes in gut microbiota and multiple sclerosis: a systematic review.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/ijerph20054624" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Alba Ordoñez-Rodriguez. (2023). Changes in Gut Microbiota and Multiple Sclerosis: A Systematic Review. International Journal of Environmental Research and Public Health. https://doi.org/10.3390/ijerph20054624</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_6de881958e7a_2023,
+  title = {Changes in Gut Microbiota and Multiple Sclerosis: A Systematic Review},
+  author = {Alba Ordoñez-Rodriguez},
+  year = {2023},
+  journal = {International Journal of Environmental Research and Public Health},
+  doi = {10.3390/ijerph20054624},
+  url = {https://doi.org/10.3390/ijerph20054624},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The gut microbiota in multiple sclerosis varies with disease activity</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (78%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Considerable aberrations are present in the gut microbiota of patients with multiple sclerosis that are directly associated with blood biomarkers of inflammation, and in treatment-naïve cases bacterial richness is positively associated with disease activity. Yet, the finding of two symbiotic bacterial species in non-disease-active cases that produce favorable immune-modulating compounds provides a rationale for testing these bacteria as adjunct therapeutics in future clinical trials.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the gut microbiota in multiple sclerosis varies with disease activity. Yet, the finding of two symbiotic bacterial species in non-disease-active cases that produce favorable immune-modulating compounds provides a rationale for testing these bacteria as adjunct therapeutics in future clinical trials.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Considerable aberrations are present in the gut microbiota of patients with multiple sclerosis that are directly associated with blood biomarkers of inflammation, and in treatment-naïve cases bacterial richness is positively associated with disease activity.</li>
+<li>Challenge: Yet, the finding of two symbiotic bacterial species in non-disease-active cases that produce favorable immune-modulating compounds provides a rationale for testing these bacteria as adjunct therapeutics in future clinical trials.</li>
+<li>Action: This paper investigates the gut microbiota in multiple sclerosis varies with disease activity.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s13073-022-01148-1" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Florence Thirion. (2023). The gut microbiota in multiple sclerosis varies with disease activity. Genome Medicine. https://doi.org/10.1186/s13073-022-01148-1</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_092f5e42116f_2023,
+  title = {The gut microbiota in multiple sclerosis varies with disease activity},
+  author = {Florence Thirion},
+  year = {2023},
+  journal = {Genome Medicine},
+  doi = {10.1186/s13073-022-01148-1},
+  url = {https://doi.org/10.1186/s13073-022-01148-1},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Expanded T lymphocytes in the cerebrospinal fluid of multiple sclerosis patients are specific for Epstein-Barr-virus-infected B cells</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Epstein-Barr virus (EBV) infection has long been associated with multiple sclerosis (MS), but the role of EBV in the pathogenesis of MS is not clear. Our hypothesis is that a major fraction of the expanded clones of T lymphocytes in the cerebrospinal fluid (CSF) are specific for autologous EBV-infected B cells. We obtained blood and CSF samples from eight relapsing-remitting patients in the process of diagnosis. We stimulated cells from the blood with autologous EBV-infected lymphoblastoid cell lines (LCL), EBV, varicella zoster virus, influenza, and candida and sorted the responding cells with flow cytometry after 6 d. We sequenced the RNA for T cell receptors (TCR) from CSF, unselected blood cells, and the antigen-specific cells. We used the TCR Vβ CDR3 sequences from the antigen-specific cells to assign antigen specificity to the sequences from the CSF and blood. LCL-specific cells comprised 13.0 ± 4.3% (mean ± SD) of the total reads present in CSF and 13.3 ± 7.5% of the reads present in blood. The next most abundant antigen specificity was flu, which was 4.7 ± 1.7% of the reads in the CSF and 9.3 ± 6.6% in the blood. The prominence of LCL-specific reads was even more marked in the top 1% most abundant CSF clones with statistically significant 47% mean overlap with LCL. We conclude that LCL-specific sequences form a major portion of the TCR repertoire in both CSF and blood and that expanded clones specific for LCL are present in MS CSF. This has important implications for the pathogenesis of MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates expanded t lymphocytes in the cerebrospinal fluid of multiple sclerosis patients are specific for epstein-barr-virus-infected b cells. This has important implications for the pathogenesis of MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Epstein-Barr virus (EBV) infection has long been associated with multiple sclerosis (MS), but the role of EBV in the pathogenesis of MS is not clear.</li>
+<li>Challenge: Our hypothesis is that a major fraction of the expanded clones of T lymphocytes in the cerebrospinal fluid (CSF) are specific for autologous EBV-infected B cells.</li>
+<li>Action: We obtained blood and CSF samples from eight relapsing-remitting patients in the process of diagnosis.</li>
+<li>Resolution: We stimulated cells from the blood with autologous EBV-infected lymphoblastoid cell lines (LCL), EBV, varicella zoster virus, influenza, and candida and sorted the responding cells with flow cytometry after 6 d.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1073/pnas.2315857121" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Assaf Gottlieb. (2024). Expanded T lymphocytes in the cerebrospinal fluid of multiple sclerosis patients are specific for Epstein-Barr-virus-infected B cells. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.2315857121</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_65502df547fe_2024,
+  title = {Expanded T lymphocytes in the cerebrospinal fluid of multiple sclerosis patients are specific for Epstein-Barr-virus-infected B cells},
+  author = {Assaf Gottlieb},
+  year = {2024},
+  journal = {Proceedings of the National Academy of Sciences},
+  doi = {10.1073/pnas.2315857121},
+  url = {https://doi.org/10.1073/pnas.2315857121},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The Role of Viral Infections in the Onset of Autoimmune Diseases</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Autoimmune diseases (AIDs) are the consequence of a breach in immune tolerance, leading to the inability to sufficiently differentiate between self and non-self. Immune reactions that are targeted towards self-antigens can ultimately lead to the destruction of the host&#x27;s cells and the development of autoimmune diseases. Although autoimmune disorders are comparatively rare, the worldwide incidence and prevalence is increasing, and they have major adverse implications for mortality and morbidity. Genetic and environmental factors are thought to be the major factors contributing to the development of autoimmunity. Viral infections are one of the environmental triggers that can lead to autoimmunity. Current research suggests that several mechanisms, such as molecular mimicry, epitope spreading, and bystander activation, can cause viral-induced autoimmunity. Here we describe the latest insights into the pathomechanisms of viral-induced autoimmune diseases and discuss recent findings on COVID-19 infections and the development of AIDs.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the role of viral infections in the onset of autoimmune diseases. Here we describe the latest insights into the pathomechanisms of viral-induced autoimmune diseases and discuss recent findings on COVID-19 infections and the development of AIDs.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Autoimmune diseases (AIDs) are the consequence of a breach in immune tolerance, leading to the inability to sufficiently differentiate between self and non-self.</li>
+<li>Challenge: Immune reactions that are targeted towards self-antigens can ultimately lead to the destruction of the host&#x27;s cells and the development of autoimmune diseases.</li>
+<li>Action: Although autoimmune disorders are comparatively rare, the worldwide incidence and prevalence is increasing, and they have major adverse implications for mortality and morbidity.</li>
+<li>Resolution: Genetic and environmental factors are thought to be the major factors contributing to the development of autoimmunity.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/v15030782" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Bhargavi Sundaresan. (2023). The Role of Viral Infections in the Onset of Autoimmune Diseases. Viruses. https://doi.org/10.3390/v15030782</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e6f57310b584_2023,
+  title = {The Role of Viral Infections in the Onset of Autoimmune Diseases},
+  author = {Bhargavi Sundaresan},
+  year = {2023},
+  journal = {Viruses},
+  doi = {10.3390/v15030782},
+  url = {https://doi.org/10.3390/v15030782},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Potential drug targets for multiple sclerosis identified through Mendelian randomization analysis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (87%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis is a complex autoimmune disease, and several therapies for multiple sclerosis have been developed and widely used. However, existing medications for multiple sclerosis were far from satisfactory due to their failure to suppress relapses and alleviate disease progression. Novel drug targets for multiple sclerosis prevention are still needed. We performed Mendelian randomization to explore potential drug targets for multiple sclerosis using summary statistics from the International Multiple Sclerosis Genetics Consortium (nCase = 47 429, nControl = 68 374) and further replicated in UK Biobank (nCase = 1356, nControl = 395 209) and FinnGen cohorts (nCase = 1326, nControl = 359 815). Genetic instruments for 734 plasma and 154 CSF proteins were obtained from recently published genome-wide association studies. The reverse causality detection using bidirectional Mendelian randomization analysis and Steiger filtering, Bayesian co-localization, and phenotype scanning that searched previously reported genetic variant-trait associations were implemented to consolidate the Mendelian randomization findings further. In addition, the protein-protein interaction network was performed to reveal potential associations among proteins and/or present multiple sclerosis medications. At Bonferroni significance (P &lt; 5.63 × 10-5), Mendelian randomization analysis revealed six protein-multiple sclerosis pairs. In plasma, per standard deviation increase in FCRL3, TYMP and AHSG had a protective effect. Odds ratios for the proteins above were 0.83 (95% CI, 0.79-0.89), 0.59 (95% CI, 0.48-0.71) and 0.88 (95% CI, 0.83-0.94), respectively. In CSF, per 10-fold increase in MMEL1 (OR, 5.03; 95% CI, 3.42-7.41) increased the risk of multiple sclerosis, while SLAMF7 (OR, 0.42; 95% CI, 0.29-0.60) and CD5L (OR, 0.30; 95%CI, 0.18-0.52) decreased the risk. None of the six proteins had reverse causality. Bayesian co-localization suggested that FCRL3 [coloc.abf-posterior probability of hypothesis 4 (PPH4) = 0.889], TYMP (coloc.susie-PPH4 = 0.896), AHSG (coloc.abf-PPH4 = 0.957, coloc.susie-PPH4 = 0.973), MMEL1 (coloc.abf-PPH4 = 0.930) and SLAMF7 (coloc.abf-PPH4 = 0.947) shared the same variant with multiple sclerosis. FCRL3, TYMP and SLAMF7 interacted with target proteins of current multiple sclerosis medications. MMEL1 was replicated in both UK Biobank and FinnGen cohorts. Our integrative analysis suggested that genetically determined levels of circulating FCRL3, TYMP, AHSG, CSF MMEL1 and SLAMF7 had causal effects on multiple sclerosis risk. These findings suggested those five proteins might be promising drug targets for multiple sclerosis and warrant further clinical investigation, especially FCRL3 and SLAMF7.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates potential drug targets for multiple sclerosis identified through mendelian randomization analysis. These findings suggested those five proteins might be promising drug targets for multiple sclerosis and warrant further clinical investigation, especially FCRL3 and SLAMF7.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis is a complex autoimmune disease, and several therapies for multiple sclerosis have been developed and widely used.</li>
+<li>Challenge: However, existing medications for multiple sclerosis were far from satisfactory due to their failure to suppress relapses and alleviate disease progression.</li>
+<li>Action: Novel drug targets for multiple sclerosis prevention are still needed.</li>
+<li>Resolution: We performed Mendelian randomization to explore potential drug targets for multiple sclerosis using summary statistics from the International Multiple Sclerosis Genetics Consortium (nCase = 47 429, nControl = 68 374) and further replicated in UK Biobank (nCase = 1356, nControl = 395 209) and FinnGen cohorts (nCase = 1326, nControl = 359 815).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1093/brain/awad070" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Jianfeng Lin. (2023). Potential drug targets for multiple sclerosis identified through Mendelian randomization analysis. Brain. https://doi.org/10.1093/brain/awad070</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_936e4eaff6e1_2023,
+  title = {Potential drug targets for multiple sclerosis identified through Mendelian randomization analysis},
+  author = {Jianfeng Lin},
+  year = {2023},
+  journal = {Brain},
+  doi = {10.1093/brain/awad070},
+  url = {https://doi.org/10.1093/brain/awad070},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Prevalence of multiple sclerosis in Korea</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2010</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (70%)</span>
+</div>
+<h4>Abstract</h4>
+<p>This study is the first nationwide survey for the prevalence of MS in Korea utilizing a national database in complementary way. We found an increase in the prevalence of MS that is consistent with reports from neighboring Asian countries.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates prevalence of multiple sclerosis in korea. This study is the first nationwide survey for the prevalence of MS in Korea utilizing a national database in complementary way.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study is the first nationwide survey for the prevalence of MS in Korea utilizing a national database in complementary way.</li>
+<li>Challenge: We found an increase in the prevalence of MS that is consistent with reports from neighboring Asian countries.</li>
+<li>Action: This paper investigates prevalence of multiple sclerosis in korea.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1212/wnl.0b013e3181f88191" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> N.-H. Kim. (2010). Prevalence of multiple sclerosis in Korea. Neurology. https://doi.org/10.1212/wnl.0b013e3181f88191</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_6b91fa90aeca_2010,
+  title = {Prevalence of multiple sclerosis in Korea},
+  author = {N.-H. Kim},
+  year = {2010},
+  journal = {Neurology},
+  doi = {10.1212/wnl.0b013e3181f88191},
+  url = {https://doi.org/10.1212/wnl.0b013e3181f88191},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>&lt;scp&gt;Epstein–Barr&lt;/scp&gt; Virus Strongly Associates With Pediatric Multiple Sclerosis, But Not Myelin Oligodendrocyte Glycoprotein‐Antibody‐Associated Disease</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Reported rates of Epstein-Barr virus (EBV) seropositivity in children meeting multiple sclerosis (MS) diagnostic criteria are considerably lower than those reported in adult-onset MS, putting in question a requisite role for EBV in MS development. As prior work preceded recognition of myelin oligodendrocyte glycoprotein-associated disease (MOGAD), we assessed viral serologies in 251 children with incident demyelination and prospectively ascertained diagnoses. When MOGAD was serologically accounted for, the prevalence of EBV infection among MS children exceeded 90%, whereas remote EBV infection was not associated with MOGAD risk. Together, these findings substantiate EBV&#x27;s role across the MS spectrum, and support distinct pathobiological mechanisms in MS versus MOGAD. ANN NEUROL 2024;95:700-705.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates &lt;scp&gt;epstein–barr&lt;/scp&gt; virus strongly associates with pediatric multiple sclerosis, but not myelin oligodendrocyte glycoprotein‐antibody‐associated disease. ANN NEUROL 2024;95:700-705.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Reported rates of Epstein-Barr virus (EBV) seropositivity in children meeting multiple sclerosis (MS) diagnostic criteria are considerably lower than those reported in adult-onset MS, putting in question a requisite role for EBV in MS development.</li>
+<li>Challenge: As prior work preceded recognition of myelin oligodendrocyte glycoprotein-associated disease (MOGAD), we assessed viral serologies in 251 children with incident demyelination and prospectively ascertained diagnoses.</li>
+<li>Action: When MOGAD was serologically accounted for, the prevalence of EBV infection among MS children exceeded 90%, whereas remote EBV infection was not associated with MOGAD risk.</li>
+<li>Resolution: Together, these findings substantiate EBV&#x27;s role across the MS spectrum, and support distinct pathobiological mechanisms in MS versus MOGAD.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/ana.26890" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Giulia Fadda. (2024). &lt;scp&gt;Epstein–Barr&lt;/scp&gt; Virus Strongly Associates With Pediatric Multiple Sclerosis, But Not Myelin Oligodendrocyte Glycoprotein‐Antibody‐Associated Disease. Annals of Neurology. https://doi.org/10.1002/ana.26890</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_73b0307bc9df_2024,
+  title = {&lt;scp&gt;Epstein–Barr&lt;/scp&gt; Virus Strongly Associates With Pediatric Multiple Sclerosis, But Not Myelin Oligodendrocyte Glycoprotein‐Antibody‐Associated Disease},
+  author = {Giulia Fadda},
+  year = {2024},
+  journal = {Annals of Neurology},
+  doi = {10.1002/ana.26890},
+  url = {https://doi.org/10.1002/ana.26890},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetics of circulating inflammatory proteins identifies drivers of immune-mediated disease risk and therapeutic targets</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Circulating proteins have important functions in inflammation and a broad range of diseases. To identify genetic influences on inflammation-related proteins, we conducted a genome-wide protein quantitative trait locus (pQTL) study of 91 plasma proteins measured using the Olink Target platform in 14,824 participants. We identified 180 pQTLs (59 cis, 121 trans). Integration of pQTL data with eQTL and disease genome-wide association studies provided insight into pathogenesis, implicating lymphotoxin-α in multiple sclerosis. Using Mendelian randomization (MR) to assess causality in disease etiology, we identified both shared and distinct effects of specific proteins across immune-mediated diseases, including directionally discordant effects of CD40 on risk of rheumatoid arthritis versus multiple sclerosis and inflammatory bowel disease. MR implicated CXCL5 in the etiology of ulcerative colitis (UC) and we show elevated gut CXCL5 transcript expression in patients with UC. These results identify targets of existing drugs and provide a powerful resource to facilitate future drug target prioritization.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetics of circulating inflammatory proteins identifies drivers of immune-mediated disease risk and therapeutic targets. We identified 180 pQTLs (59 cis, 121 trans).</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We identified 180 pQTLs (59 cis, 121 trans).</li>
+<li>Challenge: Using Mendelian randomization (MR) to assess causality in disease etiology, we identified both shared and distinct effects of specific proteins across immune-mediated diseases, including directionally discordant effects of CD40 on risk of rheumatoid arthritis versus multiple sclerosis and inflammatory bowel disease.</li>
+<li>Action: MR implicated CXCL5 in the etiology of ulcerative colitis (UC) and we show elevated gut CXCL5 transcript expression in patients with UC.</li>
+<li>Resolution: This paper investigates genetics of circulating inflammatory proteins identifies drivers of immune-mediated disease risk and therapeutic targets.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41590-023-01588-w" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Jing Hua Zhao. (2023). Genetics of circulating inflammatory proteins identifies drivers of immune-mediated disease risk and therapeutic targets. Nature Immunology. https://doi.org/10.1038/s41590-023-01588-w</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_9c8d414669fa_2023,
+  title = {Genetics of circulating inflammatory proteins identifies drivers of immune-mediated disease risk and therapeutic targets},
+  author = {Jing Hua Zhao},
+  year = {2023},
+  journal = {Nature Immunology},
+  doi = {10.1038/s41590-023-01588-w},
+  url = {https://doi.org/10.1038/s41590-023-01588-w},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Efficacy of Diet on Fatigue and Quality of Life in Multiple Sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (75%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Several dietary interventions may reduce MS-related fatigue and improve physical and mental QoL; however, because of the limitations of this NMA, which are driven by the low quality of the included trials, these findings must be confirmed in high-quality, randomized, controlled trials.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates efficacy of diet on fatigue and quality of life in multiple sclerosis. Several dietary interventions may reduce MS-related fatigue and improve physical and mental QoL; however, because of the limitations of this NMA, which are driven by the low quality of the included trials, these findings must be confirmed in high-quality, randomized, controlled trials.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Several dietary interventions may reduce MS-related fatigue and improve physical and mental QoL; however, because of the limitations of this NMA, which are driven by the low quality of the included trials, these findings must be confirmed in high-quality, randomized, controlled trials.</li>
+<li>Challenge: This paper investigates efficacy of diet on fatigue and quality of life in multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1212/wnl.0000000000201371" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Linda Snetselaar. (2022). Efficacy of Diet on Fatigue and Quality of Life in Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000201371</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_d0141af223a8_2022,
+  title = {Efficacy of Diet on Fatigue and Quality of Life in Multiple Sclerosis},
+  author = {Linda Snetselaar},
+  year = {2022},
+  journal = {Neurology},
+  doi = {10.1212/wnl.0000000000201371},
+  url = {https://doi.org/10.1212/wnl.0000000000201371},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Brain expression quantitative trait locus and network analyses reveal downstream effects and putative drivers for brain-related diseases</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Identification of therapeutic targets from genome-wide association studies (GWAS) requires insights into downstream functional consequences. We harmonized 8,613 RNA-sequencing samples from 14 brain datasets to create the MetaBrain resource and performed cis- and trans-expression quantitative trait locus (eQTL) meta-analyses in multiple brain region- and ancestry-specific datasets (n ≤ 2,759). Many of the 16,169 cortex cis-eQTLs were tissue-dependent when compared with blood cis-eQTLs. We inferred brain cell types for 3,549 cis-eQTLs by interaction analysis. We prioritized 186 cis-eQTLs for 31 brain-related traits using Mendelian randomization and co-localization including 40 cis-eQTLs with an inferred cell type, such as a neuron-specific cis-eQTL (CYP24A1) for multiple sclerosis. We further describe 737 trans-eQTLs for 526 unique variants and 108 unique genes. We used brain-specific gene-co-regulation networks to link GWAS loci and prioritize additional genes for five central nervous system diseases. This study represents a valuable resource for post-GWAS research on central nervous system diseases.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates brain expression quantitative trait locus and network analyses reveal downstream effects and putative drivers for brain-related diseases. This study represents a valuable resource for post-GWAS research on central nervous system diseases.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study represents a valuable resource for post-GWAS research on central nervous system diseases.</li>
+<li>Challenge: This paper investigates brain expression quantitative trait locus and network analyses reveal downstream effects and putative drivers for brain-related diseases.</li>
+<li>Action: Identification of therapeutic targets from genome-wide association studies (GWAS) requires insights into downstream functional consequences.</li>
+<li>Resolution: We harmonized 8,613 RNA-sequencing samples from 14 brain datasets to create the MetaBrain resource and performed cis- and trans-expression quantitative trait locus (eQTL) meta-analyses in multiple brain region- and ancestry-specific datasets (n ≤ 2,759).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41588-023-01300-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Niek de Klein. (2023). Brain expression quantitative trait locus and network analyses reveal downstream effects and putative drivers for brain-related diseases. Nature Genetics. https://doi.org/10.1038/s41588-023-01300-6</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f6ff4fc97634_2023,
+  title = {Brain expression quantitative trait locus and network analyses reveal downstream effects and putative drivers for brain-related diseases},
+  author = {Niek de Klein},
+  year = {2023},
+  journal = {Nature Genetics},
+  doi = {10.1038/s41588-023-01300-6},
+  url = {https://doi.org/10.1038/s41588-023-01300-6},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Chronic viral coinfections differentially affect the likelihood of developing long COVID</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (87%)</span>
+</div>
+<h4>Abstract</h4>
+<p>BACKGROUNDThe presence and reactivation of chronic viral infections, such as EBV, CMV, and HIV, have been proposed as potential contributors to long COVID (LC), but studies in well-characterized postacute cohorts of individuals with COVID-19 over a longer time course consistent with current case definitions of LC are limited.METHODSIn a cohort of 280 adults with prior SARS-CoV-2 infection, we assessed the presence and types of LC symptoms and prior medical history (including COVID-19 history and HIV status) and performed serological testing for EBV and CMV using a commercial laboratory. We used covariate-adjusted binary logistic regression models to identify independent associations between variables and LC symptoms.RESULTSWe observed that LC symptoms, such as fatigue and neurocognitive dysfunction, at a median of 4 months following initial diagnosis were independently associated with serological evidence suggesting recent EBV reactivation (early antigen-diffuse IgG positivity) or high nuclear antigen (EBNA) IgG levels but not with ongoing EBV viremia. Serological evidence suggesting recent EBV reactivation (early antigen-diffuse IgG positivity) was most strongly associated with fatigue (OR = 2.12). Underlying HIV infection was also independently associated with neurocognitive LC (OR = 2.5). Interestingly, participants who had serologic evidence of prior CMV infection were less likely to develop neurocognitive LC (OR = 0.52).CONCLUSIONOverall, these findings suggest differential effects of chronic viral coinfections on the likelihood of developing LC and association with distinct syndromic patterns. Further assessment during the acute phase of COVID-19 is warranted.TRIAL REGISTRATIONLong-term Impact of Infection with Novel Coronavirus; ClinicalTrials.gov NCT04362150.FUNDINGThis work was supported by NIH/National Institute of Allergy and Infectious Diseases grants (3R01AI141003-03S1, R01AI158013, and K24AI145806); the Zuckerberg San Francisco General Hospital Department of Medicine and Division of HIV, Infectious Diseases, and Global Medicine; and the UCSF-Bay Area Center for AIDS Research (P30-AI027763).</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates chronic viral coinfections differentially affect the likelihood of developing long covid. We used covariate-adjusted binary logistic regression models to identify independent associations between variables and LC symptoms.RESULTSWe observed that LC symptoms, such as fatigue and neurocognitive dysfunction, at a median of 4 months following initial diagnosis were independently associated with serological evidence suggesting recent EBV reactivation (early antigen-diffuse IgG positivity) or high nuclear antigen (EBNA) IgG levels but not with ongoing EBV viremia.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We used covariate-adjusted binary logistic regression models to identify independent associations between variables and LC symptoms.RESULTSWe observed that LC symptoms, such as fatigue and neurocognitive dysfunction, at a median of 4 months following initial diagnosis were independently associated with serological evidence suggesting recent EBV reactivation (early antigen-diffuse IgG positivity) or high nuclear antigen (EBNA) IgG levels but not with ongoing EBV viremia.</li>
+<li>Challenge: This paper investigates chronic viral coinfections differentially affect the likelihood of developing long covid.</li>
+<li>Action: BACKGROUNDThe presence and reactivation of chronic viral infections, such as EBV, CMV, and HIV, have been proposed as potential contributors to long COVID (LC), but studies in well-characterized postacute cohorts of individuals with COVID-19 over a longer time course consistent with current case definitions of LC are limited.METHODSIn a cohort of 280 adults with prior SARS-CoV-2 infection, we assessed the presence and types of LC symptoms and prior medical history (including COVID-19 history and HIV status) and performed serological testing for EBV and CMV using a commercial laboratory.</li>
+<li>Resolution: Serological evidence suggesting recent EBV reactivation (early antigen-diffuse IgG positivity) was most strongly associated with fatigue (OR = 2.12).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1172/jci163669" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Michael J. Peluso. (2022). Chronic viral coinfections differentially affect the likelihood of developing long COVID. Journal of Clinical Investigation. https://doi.org/10.1172/jci163669</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_863bfa969076_2022,
+  title = {Chronic viral coinfections differentially affect the likelihood of developing long COVID},
+  author = {Michael J. Peluso},
+  year = {2022},
+  journal = {Journal of Clinical Investigation},
+  doi = {10.1172/jci163669},
+  url = {https://doi.org/10.1172/jci163669},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Cellular and Molecular Evidence of Multiple Sclerosis Diagnosis and Treatment Challenges</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic autoimmune disease that impacts the central nervous system and can result in disability. Although the prevalence of MS has increased in India, diagnosis and treatment continue to be difficult due to several factors. The present study examines the difficulties in detecting and treating multiple sclerosis in India. A lack of MS knowledge among healthcare professionals and the general public, which delays diagnosis and treatment, is one of the significant issues. Inadequate numbers of neurologists and professionals with knowledge of MS management also exacerbate the situation. In addition, MS medications are expensive and not covered by insurance, making them inaccessible to most patients. Due to the absence of established treatment protocols and standards for MS care, India&#x27;s treatment techniques vary. In addition, India&#x27;s population diversity poses unique challenges regarding genetic variations, cellular and molecular abnormalities, and the potential for differing treatment responses. MS is more difficult to accurately diagnose and monitor due to a lack of specialized medical supplies and diagnostic instruments. Improved awareness and education among healthcare professionals and the general public, as well as the development of standardized treatment regimens and increased investment in MS research and infrastructure, are required to address these issues. By addressing these issues, it is anticipated that MS diagnosis and treatment in India will improve, leading to better outcomes for those affected by this chronic condition.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates cellular and molecular evidence of multiple sclerosis diagnosis and treatment challenges. By addressing these issues, it is anticipated that MS diagnosis and treatment in India will improve, leading to better outcomes for those affected by this chronic condition.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a chronic autoimmune disease that impacts the central nervous system and can result in disability.</li>
+<li>Challenge: Although the prevalence of MS has increased in India, diagnosis and treatment continue to be difficult due to several factors.</li>
+<li>Action: The present study examines the difficulties in detecting and treating multiple sclerosis in India.</li>
+<li>Resolution: A lack of MS knowledge among healthcare professionals and the general public, which delays diagnosis and treatment, is one of the significant issues.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/jcm12134274" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Zuber Khan. (2023). Cellular and Molecular Evidence of Multiple Sclerosis Diagnosis and Treatment Challenges. Journal of Clinical Medicine. https://doi.org/10.3390/jcm12134274</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_4c996146e408_2023,
+  title = {Cellular and Molecular Evidence of Multiple Sclerosis Diagnosis and Treatment Challenges},
+  author = {Zuber Khan},
+  year = {2023},
+  journal = {Journal of Clinical Medicine},
+  doi = {10.3390/jcm12134274},
+  url = {https://doi.org/10.3390/jcm12134274},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetic, Environmental and Lifestyle Determinants of Accelerated Telomere Attrition as Contributors to Risk and Severity of Multiple Sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2021</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Telomeres are protective structures at the ends of linear chromosomes. Shortened telomere lengths (TL) are an indicator of premature biological aging and have been associated with a wide spectrum of disorders, including multiple sclerosis (MS). MS is a chronic inflammatory, demyelinating and neurodegenerative disease of the central nervous system. The exact cause of MS is still unclear. Here, we provide an overview of genetic, environmental and lifestyle factors that have been described to influence TL and to contribute to susceptibility to MS and possibly disease severity. We show that several early-life factors are linked to both reduced TL and higher risk of MS, e.g., adolescent obesity, lack of physical activity, smoking and vitamin D deficiency. This suggests that the mechanisms underlying the disease are connected to cellular aging and senescence promoted by increased inflammation and oxidative stress. Additional prospective research is needed to clearly define the extent to which lifestyle changes can slow down disease progression and prevent accelerated telomere loss in individual patients. It is also important to further elucidate the interactions between shared determinants of TL and MS. In future, cell type-specific studies and advanced TL measurement methods could help to better understand how telomeres may be causally involved in disease processes and to uncover novel opportunities for improved biomarkers and therapeutic interventions in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetic, environmental and lifestyle determinants of accelerated telomere attrition as contributors to risk and severity of multiple sclerosis. We show that several early-life factors are linked to both reduced TL and higher risk of MS, e.g., adolescent obesity, lack of physical activity, smoking and vitamin D deficiency.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We show that several early-life factors are linked to both reduced TL and higher risk of MS, e.g., adolescent obesity, lack of physical activity, smoking and vitamin D deficiency.</li>
+<li>Challenge: This paper investigates genetic, environmental and lifestyle determinants of accelerated telomere attrition as contributors to risk and severity of multiple sclerosis.</li>
+<li>Action: Telomeres are protective structures at the ends of linear chromosomes.</li>
+<li>Resolution: Shortened telomere lengths (TL) are an indicator of premature biological aging and have been associated with a wide spectrum of disorders, including multiple sclerosis (MS).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/biom11101510" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Michael Hecker. (2021). Genetic, Environmental and Lifestyle Determinants of Accelerated Telomere Attrition as Contributors to Risk and Severity of Multiple Sclerosis. Biomolecules. https://doi.org/10.3390/biom11101510</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_eda70d694a57_2021,
+  title = {Genetic, Environmental and Lifestyle Determinants of Accelerated Telomere Attrition as Contributors to Risk and Severity of Multiple Sclerosis},
+  author = {Michael Hecker},
+  year = {2021},
+  journal = {Biomolecules},
+  doi = {10.3390/biom11101510},
+  url = {https://doi.org/10.3390/biom11101510},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Identification of host–pathogen-disease relationships using a scalable multiplex serology platform in UK Biobank</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Certain infectious agents are recognised causes of cancer and other chronic diseases. To understand the pathological mechanisms underlying such relationships, here we design a Multiplex Serology platform to measure quantitative antibody responses against 45 antigens from 20 infectious agents including human herpes, hepatitis, polyoma, papilloma, and retroviruses, as well as Chlamydia trachomatis, Helicobacter pylori and Toxoplasma gondii, then assayed a random subset of 9695 UK Biobank participants. We find seroprevalence estimates consistent with those expected from prior literature and confirm multiple associations of antibody responses with sociodemographic characteristics (e.g., lifetime sexual partners with C. trachomatis), HLA genetic variants (rs6927022 with Epstein-Barr virus (EBV) EBNA1 antibodies) and disease outcomes (human papillomavirus-16 seropositivity with cervical intraepithelial neoplasia, and EBV responses with multiple sclerosis). Our accessible dataset is one of the largest incorporating diverse infectious agents in a prospective UK cohort offering opportunities to improve our understanding of host-pathogen-disease relationships with significant clinical and public health implications.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates identification of host–pathogen-disease relationships using a scalable multiplex serology platform in uk biobank. Our accessible dataset is one of the largest incorporating diverse infectious agents in a prospective UK cohort offering opportunities to improve our understanding of host-pathogen-disease relationships with significant clinical and public health implications.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Certain infectious agents are recognised causes of cancer and other chronic diseases.</li>
+<li>Challenge: To understand the pathological mechanisms underlying such relationships, here we design a Multiplex Serology platform to measure quantitative antibody responses against 45 antigens from 20 infectious agents including human herpes, hepatitis, polyoma, papilloma, and retroviruses, as well as Chlamydia trachomatis, Helicobacter pylori and Toxoplasma gondii, then assayed a random subset of 9695 UK Biobank participants.</li>
+<li>Action: We find seroprevalence estimates consistent with those expected from prior literature and confirm multiple associations of antibody responses with sociodemographic characteristics (e.g., lifetime sexual partners with C.</li>
+<li>Resolution: trachomatis), HLA genetic variants (rs6927022 with Epstein-Barr virus (EBV) EBNA1 antibodies) and disease outcomes (human papillomavirus-16 seropositivity with cervical intraepithelial neoplasia, and EBV responses with multiple sclerosis).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41467-022-29307-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Alexander J. Mentzer. (2022). Identification of host–pathogen-disease relationships using a scalable multiplex serology platform in UK Biobank. Nature Communications. https://doi.org/10.1038/s41467-022-29307-3</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_53505a6b5504_2022,
+  title = {Identification of host–pathogen-disease relationships using a scalable multiplex serology platform in UK Biobank},
+  author = {Alexander J. Mentzer},
+  year = {2022},
+  journal = {Nature Communications},
+  doi = {10.1038/s41467-022-29307-3},
+  url = {https://doi.org/10.1038/s41467-022-29307-3},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Lactobacillus reuteri tryptophan metabolism promotes host susceptibility to CNS autoimmunity</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (64%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Our data suggests that tryptophan metabolism by gut commensals, such as the putative probiotic species L. reuteri, can unexpectedly enhance autoimmunity, inducing broad shifts in the metabolome and immunological repertoire. Video Abstract.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates lactobacillus reuteri tryptophan metabolism promotes host susceptibility to cns autoimmunity. Video Abstract.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Our data suggests that tryptophan metabolism by gut commensals, such as the putative probiotic species L.</li>
+<li>Challenge: reuteri, can unexpectedly enhance autoimmunity, inducing broad shifts in the metabolome and immunological repertoire.</li>
+<li>Action: Video Abstract.</li>
+<li>Resolution: This paper investigates lactobacillus reuteri tryptophan metabolism promotes host susceptibility to cns autoimmunity.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s40168-022-01408-7" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Theresa L. Montgomery. (2022). Lactobacillus reuteri tryptophan metabolism promotes host susceptibility to CNS autoimmunity. Microbiome. https://doi.org/10.1186/s40168-022-01408-7</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_06fd10214d53_2022,
+  title = {Lactobacillus reuteri tryptophan metabolism promotes host susceptibility to CNS autoimmunity},
+  author = {Theresa L. Montgomery},
+  year = {2022},
+  journal = {Microbiome},
+  doi = {10.1186/s40168-022-01408-7},
+  url = {https://doi.org/10.1186/s40168-022-01408-7},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple Sclerosis: An Overview of Epidemiology, Risk Factors, and Serological Biomarkers</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a demyelinating disease of the central nervous system, which is a primary cause of neurological disability in young and middle‐aged individuals in economically developed nations. Although MS is more prevalent and of ever‐increasing incidence in developed countries, patients with MS in developing nations confront unique challenges marked by significant economic and social burdens due to their limited access to the advanced diagnostic and treatment resources that are available in developed regions. Timely diagnosis is paramount for effective intervention in MS cases. Regrettably, there is limited availability of neuroimaging evaluations in low‐ and middle‐income nations, prompting the need to obtain alternative diagnostic approaches. In this article, we provide an overview of the worldwide epidemiology of MS, delving into associated risk factors, and examining serological biomarkers as alternatives to imaging. It is, therefore, imperative that strategies for the early diagnosis and treatment of MS are implemented in low‐ and middle‐income countries. This will lead to improved prognoses and quality of life, with a particular focus on enhancing outcomes.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis: an overview of epidemiology, risk factors, and serological biomarkers. This will lead to improved prognoses and quality of life, with a particular focus on enhancing outcomes.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a demyelinating disease of the central nervous system, which is a primary cause of neurological disability in young and middle‐aged individuals in economically developed nations.</li>
+<li>Challenge: Although MS is more prevalent and of ever‐increasing incidence in developed countries, patients with MS in developing nations confront unique challenges marked by significant economic and social burdens due to their limited access to the advanced diagnostic and treatment resources that are available in developed regions.</li>
+<li>Action: Timely diagnosis is paramount for effective intervention in MS cases.</li>
+<li>Resolution: Regrettably, there is limited availability of neuroimaging evaluations in low‐ and middle‐income nations, prompting the need to obtain alternative diagnostic approaches.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1155/2024/7372789" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ming-Cheng Shi. (2024). Multiple Sclerosis: An Overview of Epidemiology, Risk Factors, and Serological Biomarkers. Acta Neurologica Scandinavica. https://doi.org/10.1155/2024/7372789</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f98519ff07b5_2024,
+  title = {Multiple Sclerosis: An Overview of Epidemiology, Risk Factors, and Serological Biomarkers},
+  author = {Ming-Cheng Shi},
+  year = {2024},
+  journal = {Acta Neurologica Scandinavica},
+  doi = {10.1155/2024/7372789},
+  url = {https://doi.org/10.1155/2024/7372789},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Identification of genetic risk loci and prioritization of genes and pathways for myasthenia gravis: a genome-wide association study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Myasthenia gravis is a chronic autoimmune disease characterized by autoantibody-mediated interference of signal transmission across the neuromuscular junction. We performed a genome-wide association study (GWAS) involving 1,873 patients diagnosed with acetylcholine receptor antibody-positive myasthenia gravis and 36,370 healthy individuals to identify disease-associated genetic risk loci. Replication of the discovered loci was attempted in an independent cohort from the UK Biobank. We also performed a transcriptome-wide association study (TWAS) using expression data from skeletal muscle, whole blood, and tibial nerve to test the effects of disease-associated polymorphisms on gene expression. We discovered two signals in the genes encoding acetylcholine receptor subunits that are the most common antigenic target of the autoantibodies: a GWAS signal within the cholinergic receptor nicotinic alpha 1 subunit (&lt;i&gt;CHRNA1&lt;/i&gt;) gene and a TWAS association with the cholinergic receptor nicotinic beta 1 subunit (&lt;i&gt;CHRNB1&lt;/i&gt;) gene in normal skeletal muscle. Two other loci were discovered on 10p14 and 11q21, and the previous association signals at &lt;i&gt;PTPN22&lt;/i&gt;, &lt;i&gt;HLA-DQA1/HLA-B&lt;/i&gt;, and &lt;i&gt;TNFRSF11A&lt;/i&gt; were confirmed. Subgroup analyses demonstrate that early- and late-onset cases have different genetic risk factors. Genetic correlation analysis confirmed a genetic link between myasthenia gravis and other autoimmune diseases, such as hypothyroidism, rheumatoid arthritis, multiple sclerosis, and type 1 diabetes. Finally, we applied Priority Index analysis to identify potentially druggable genes/proteins and pathways. This study provides insight into the genetic architecture underlying myasthenia gravis and demonstrates that genetic factors within the loci encoding acetylcholine receptor subunits contribute to its pathogenesis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates identification of genetic risk loci and prioritization of genes and pathways for myasthenia gravis: a genome-wide association study. This study provides insight into the genetic architecture underlying myasthenia gravis and demonstrates that genetic factors within the loci encoding acetylcholine receptor subunits contribute to its pathogenesis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study provides insight into the genetic architecture underlying myasthenia gravis and demonstrates that genetic factors within the loci encoding acetylcholine receptor subunits contribute to its pathogenesis.</li>
+<li>Challenge: This paper investigates identification of genetic risk loci and prioritization of genes and pathways for myasthenia gravis: a genome-wide association study.</li>
+<li>Action: Myasthenia gravis is a chronic autoimmune disease characterized by autoantibody-mediated interference of signal transmission across the neuromuscular junction.</li>
+<li>Resolution: We performed a genome-wide association study (GWAS) involving 1,873 patients diagnosed with acetylcholine receptor antibody-positive myasthenia gravis and 36,370 healthy individuals to identify disease-associated genetic risk loci.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1073/pnas.2108672119" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ruth Chia. (2022). Identification of genetic risk loci and prioritization of genes and pathways for myasthenia gravis: a genome-wide association study. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.2108672119</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_1b49018a4f30_2022,
+  title = {Identification of genetic risk loci and prioritization of genes and pathways for myasthenia gravis: a genome-wide association study},
+  author = {Ruth Chia},
+  year = {2022},
+  journal = {Proceedings of the National Academy of Sciences},
+  doi = {10.1073/pnas.2108672119},
+  url = {https://doi.org/10.1073/pnas.2108672119},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetic risk variants for multiple sclerosis are linked to differences in alternative pre-mRNA splicing</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (76%)</span>
+</div>
+<h4>Abstract</h4>
+<p>In summary, we found that genetic variants from MS risk loci affect pre-mRNA splicing. Our findings substantiate the role of ASEs with respect to the genetics of MS. Further studies on how disease-causing genetic variants may modify the interactions between splicing regulatory sequence elements and RNA-binding proteins can help to deepen our understanding of the genetic susceptibility to MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetic risk variants for multiple sclerosis are linked to differences in alternative pre-mrna splicing. In summary, we found that genetic variants from MS risk loci affect pre-mRNA splicing.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: In summary, we found that genetic variants from MS risk loci affect pre-mRNA splicing.</li>
+<li>Challenge: Our findings substantiate the role of ASEs with respect to the genetics of MS.</li>
+<li>Action: This paper investigates genetic risk variants for multiple sclerosis are linked to differences in alternative pre-mrna splicing.</li>
+<li>Resolution: Further studies on how disease-causing genetic variants may modify the interactions between splicing regulatory sequence elements and RNA-binding proteins can help to deepen our understanding of the genetic susceptibility to MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2022.931831" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Elena Putscher. (2022). Genetic risk variants for multiple sclerosis are linked to differences in alternative pre-mRNA splicing. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2022.931831</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_b9b1c6017b08_2022,
+  title = {Genetic risk variants for multiple sclerosis are linked to differences in alternative pre-mRNA splicing},
+  author = {Elena Putscher},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2022.931831},
+  url = {https://doi.org/10.3389/fimmu.2022.931831},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multimodal biomedical AI</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The increasing availability of biomedical data from large biobanks, electronic health records, medical imaging, wearable and ambient biosensors, and the lower cost of genome and microbiome sequencing have set the stage for the development of multimodal artificial intelligence solutions that capture the complexity of human health and disease. In this Review, we outline the key applications enabled, along with the technical and analytical challenges. We explore opportunities in personalized medicine, digital clinical trials, remote monitoring and care, pandemic surveillance, digital twin technology and virtual health assistants. Further, we survey the data, modeling and privacy challenges that must be overcome to realize the full potential of multimodal artificial intelligence in health.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multimodal biomedical ai. Further, we survey the data, modeling and privacy challenges that must be overcome to realize the full potential of multimodal artificial intelligence in health.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The increasing availability of biomedical data from large biobanks, electronic health records, medical imaging, wearable and ambient biosensors, and the lower cost of genome and microbiome sequencing have set the stage for the development of multimodal artificial intelligence solutions that capture the complexity of human health and disease.</li>
+<li>Challenge: In this Review, we outline the key applications enabled, along with the technical and analytical challenges.</li>
+<li>Action: We explore opportunities in personalized medicine, digital clinical trials, remote monitoring and care, pandemic surveillance, digital twin technology and virtual health assistants.</li>
+<li>Resolution: Further, we survey the data, modeling and privacy challenges that must be overcome to realize the full potential of multimodal artificial intelligence in health.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41591-022-01981-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Julián Acosta. (2022). Multimodal biomedical AI. Nature Medicine. https://doi.org/10.1038/s41591-022-01981-2</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_b0b5d9e1fb50_2022,
+  title = {Multimodal biomedical AI},
+  author = {Julián Acosta},
+  year = {2022},
+  journal = {Nature Medicine},
+  doi = {10.1038/s41591-022-01981-2},
+  url = {https://doi.org/10.1038/s41591-022-01981-2},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Causal Relationship Between Gut Microbiota and Autoimmune Diseases: A Two-Sample Mendelian Randomization Study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (62%)</span>
+</div>
+<h4>Abstract</h4>
+<p>This study implied a causal relationship between the &lt;i&gt;Bifidobacterium&lt;/i&gt; genus and T1D and CeD, thus providing novel insights into the gut microbiota-mediated development mechanism of ADs.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates causal relationship between gut microbiota and autoimmune diseases: a two-sample mendelian randomization study. This study implied a causal relationship between the &lt;i&gt;Bifidobacterium&lt;/i&gt; genus and T1D and CeD, thus providing novel insights into the gut microbiota-mediated development mechanism of ADs.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study implied a causal relationship between the &lt;i&gt;Bifidobacterium&lt;/i&gt; genus and T1D and CeD, thus providing novel insights into the gut microbiota-mediated development mechanism of ADs.</li>
+<li>Challenge: This paper investigates causal relationship between gut microbiota and autoimmune diseases: a two-sample mendelian randomization study.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2021.746998" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Qian Xu. (2022). Causal Relationship Between Gut Microbiota and Autoimmune Diseases: A Two-Sample Mendelian Randomization Study. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2021.746998</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_ca4d8e867d98_2022,
+  title = {Causal Relationship Between Gut Microbiota and Autoimmune Diseases: A Two-Sample Mendelian Randomization Study},
+  author = {Qian Xu},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2021.746998},
+  url = {https://doi.org/10.3389/fimmu.2021.746998},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The gut microbiome molecular mimicry piece in the multiple sclerosis puzzle</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The etiological complexity of multiple sclerosis, an immune-mediated, neurodegenerative disease with multifactorial etiology is still elusive because of an incomplete understanding of the complex synergy between contributing factors such as genetic susceptibility and aberrant immune response. Recently, the disease phenotypes have also been shown to be associated with dysbiosis of the gut microbiome, a dynamic reservoir of billions of microbes, their proteins and metabolites capable of mimicring the autoantigens. Microbial factors could potentially trigger the neuroinflammation and symptoms of MS. In this perspective article, we discussed how microbial molecules resulting from a leaky gut might mimic a host&#x27;s autoantigen, potentially contributing to the disease disequilibrium. It further highlights the importance of targeting the gut microbiome for alternate therapeutic options for the treatment of MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the gut microbiome molecular mimicry piece in the multiple sclerosis puzzle. It further highlights the importance of targeting the gut microbiome for alternate therapeutic options for the treatment of MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The etiological complexity of multiple sclerosis, an immune-mediated, neurodegenerative disease with multifactorial etiology is still elusive because of an incomplete understanding of the complex synergy between contributing factors such as genetic susceptibility and aberrant immune response.</li>
+<li>Challenge: Recently, the disease phenotypes have also been shown to be associated with dysbiosis of the gut microbiome, a dynamic reservoir of billions of microbes, their proteins and metabolites capable of mimicring the autoantigens.</li>
+<li>Action: Microbial factors could potentially trigger the neuroinflammation and symptoms of MS.</li>
+<li>Resolution: In this perspective article, we discussed how microbial molecules resulting from a leaky gut might mimic a host&#x27;s autoantigen, potentially contributing to the disease disequilibrium.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2022.972160" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Noha S. Elsayed. (2022). The gut microbiome molecular mimicry piece in the multiple sclerosis puzzle. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2022.972160</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_4870aa53827c_2022,
+  title = {The gut microbiome molecular mimicry piece in the multiple sclerosis puzzle},
+  author = {Noha S. Elsayed},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2022.972160},
+  url = {https://doi.org/10.3389/fimmu.2022.972160},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Epstein-Barr virus, interleukin-10 and multiple sclerosis: A ménage à trois</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple Sclerosis (MS) is an autoimmune disease that is characterized by inflammation and demyelination of nerve cells. There is strong evidence that Epstein-Barr virus (EBV), a human herpesvirus infecting B cells, greatly increases the risk of subsequent MS. Intriguingly, EBV not only induces human interleukin-10 but also encodes a homologue of this molecule, which is a key anti-inflammatory cytokine of the immune system. Although EBV-encoded IL-10 (ebvIL-10) has a high amino acid identity with its cellular counterpart (cIL-10), it shows more restricted and partially weaker functionality. We propose that both EBV-induced cIL-10 and ebvIL-10 act in a temporally and functionally coordinated manner helping the pathogen to establish latency in B cells and, at the same time, to balance the function of antiviral T cells. As a result, the EBV load persisting in the immune system is kept at a constant but individually different level (set point). During this immunological tug of war between virus and host, however, MS can be induced as collateral damage if the set point is too high. Here, we discuss a possible role of ebvIL-10 and EBV-induced cIL-10 in EBV-driven pathogenesis of MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates epstein-barr virus, interleukin-10 and multiple sclerosis: a ménage à trois. Here, we discuss a possible role of ebvIL-10 and EBV-induced cIL-10 in EBV-driven pathogenesis of MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple Sclerosis (MS) is an autoimmune disease that is characterized by inflammation and demyelination of nerve cells.</li>
+<li>Challenge: There is strong evidence that Epstein-Barr virus (EBV), a human herpesvirus infecting B cells, greatly increases the risk of subsequent MS.</li>
+<li>Action: Intriguingly, EBV not only induces human interleukin-10 but also encodes a homologue of this molecule, which is a key anti-inflammatory cytokine of the immune system.</li>
+<li>Resolution: Although EBV-encoded IL-10 (ebvIL-10) has a high amino acid identity with its cellular counterpart (cIL-10), it shows more restricted and partially weaker functionality.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2022.1028972" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Günther Schönrich. (2022). Epstein-Barr virus, interleukin-10 and multiple sclerosis: A ménage à trois. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2022.1028972</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_3f8fb0fc8e8f_2022,
+  title = {Epstein-Barr virus, interleukin-10 and multiple sclerosis: A ménage à trois},
+  author = {Günther Schönrich},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2022.1028972},
+  url = {https://doi.org/10.3389/fimmu.2022.1028972},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Epilepsy is a highly heritable disorder affecting over 50 million people worldwide, of which about one-third are resistant to current treatments. Here we report a multi-ancestry genome-wide association study including 29,944 cases, stratified into three broad categories and seven subtypes of epilepsy, and 52,538 controls. We identify 26 genome-wide significant loci, 19 of which are specific to genetic generalized epilepsy (GGE). We implicate 29 likely causal genes underlying these 26 loci. SNP-based heritability analyses show that common variants explain between 39.6% and 90% of genetic risk for GGE and its subtypes. Subtype analysis revealed markedly different genetic architectures between focal and generalized epilepsies. Gene-set analyses of GGE signals implicate synaptic processes in both excitatory and inhibitory neurons in the brain. Prioritized candidate genes overlap with monogenic epilepsy genes and with targets of current antiseizure medications. Finally, we leverage our results to identify alternate drugs with predicted efficacy if repurposed for epilepsy treatment.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates gwas meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture. Here we report a multi-ancestry genome-wide association study including 29,944 cases, stratified into three broad categories and seven subtypes of epilepsy, and 52,538 controls.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Here we report a multi-ancestry genome-wide association study including 29,944 cases, stratified into three broad categories and seven subtypes of epilepsy, and 52,538 controls.</li>
+<li>Challenge: Finally, we leverage our results to identify alternate drugs with predicted efficacy if repurposed for epilepsy treatment.</li>
+<li>Action: This paper investigates gwas meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture.</li>
+<li>Resolution: Epilepsy is a highly heritable disorder affecting over 50 million people worldwide, of which about one-third are resistant to current treatments.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41588-023-01485-w" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Remi Stevelink. (2023). GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture. Nature Genetics. https://doi.org/10.1038/s41588-023-01485-w</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f685d91e60e4_2023,
+  title = {GWAS meta-analysis of over 29,000 people with epilepsy identifies 26 risk loci and subtype-specific genetic architecture},
+  author = {Remi Stevelink},
+  year = {2023},
+  journal = {Nature Genetics},
+  doi = {10.1038/s41588-023-01485-w},
+  url = {https://doi.org/10.1038/s41588-023-01485-w},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The interaction between Epstein–Barr virus and multiple sclerosis genetic risk loci: insights into disease pathogenesis and therapeutic opportunities</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic neurodegenerative autoimmune disease, characterised by the demyelination of neurons in the central nervous system. Whilst it is unclear what precisely leads to MS, it is believed that genetic predisposition combined with environmental factors plays a pivotal role. It is estimated that close to half the disease risk is determined by genetic factors. However, the risk of developing MS cannot be attributed to genetic factors alone, and environmental factors are likely to play a significant role by themselves or in concert with host genetics. Epstein-Barr virus (EBV) infection is the strongest known environmental risk factor for MS. There has been increasing evidence that leaves little doubt that EBV is necessary, but not sufficient, for developing MS. One plausible explanation is EBV may alter the host immune response in the presence of MS risk alleles and this contributes to the pathogenesis of MS. In this review, we discuss recent findings regarding how EBV infection may contribute to MS pathogenesis via interactions with genetic risk loci and discuss possible therapeutic interventions.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the interaction between epstein–barr virus and multiple sclerosis genetic risk loci: insights into disease pathogenesis and therapeutic opportunities. In this review, we discuss recent findings regarding how EBV infection may contribute to MS pathogenesis via interactions with genetic risk loci and discuss possible therapeutic interventions.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a chronic neurodegenerative autoimmune disease, characterised by the demyelination of neurons in the central nervous system.</li>
+<li>Challenge: Whilst it is unclear what precisely leads to MS, it is believed that genetic predisposition combined with environmental factors plays a pivotal role.</li>
+<li>Action: It is estimated that close to half the disease risk is determined by genetic factors.</li>
+<li>Resolution: However, the risk of developing MS cannot be attributed to genetic factors alone, and environmental factors are likely to play a significant role by themselves or in concert with host genetics.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/cti2.1454" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ali Afrasiabi. (2023). The interaction between Epstein–Barr virus and multiple sclerosis genetic risk loci: insights into disease pathogenesis and therapeutic opportunities. Clinical &amp; Translational Immunology. https://doi.org/10.1002/cti2.1454</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_01b7b519da9e_2023,
+  title = {The interaction between Epstein–Barr virus and multiple sclerosis genetic risk loci: insights into disease pathogenesis and therapeutic opportunities},
+  author = {Ali Afrasiabi},
+  year = {2023},
+  journal = {Clinical &amp; Translational Immunology},
+  doi = {10.1002/cti2.1454},
+  url = {https://doi.org/10.1002/cti2.1454},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple sclerosis in Caucasians and Latino Americans</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2011</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Epidemiological and genetic studies suggest that the prevalence, median age of onset, and specific phenotypes of multiple sclerosis (MS) are different in Caucasians and Latino Americans. Recent epidemiological studies indicate an increase in MS prevalence in Latin America (LA), where the south-north gradient of latitude described for Nordic countries does not exist. Analysis of MS epidemiological and specific aspects in LA suggests that susceptibility and clinical behavior of the disease are related to mixtures and admixtures of genes in the population. MS is not present in Amerindians with Mongoloid genes, such as occurs in other pure ethnic groups. Surely, future studies will be carried out to obtain more reliable information. In this review, we contrast and analyze the available data of MS in LA and endemic countries.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis in caucasians and latino americans. In this review, we contrast and analyze the available data of MS in LA and endemic countries.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Epidemiological and genetic studies suggest that the prevalence, median age of onset, and specific phenotypes of multiple sclerosis (MS) are different in Caucasians and Latino Americans.</li>
+<li>Challenge: Recent epidemiological studies indicate an increase in MS prevalence in Latin America (LA), where the south-north gradient of latitude described for Nordic countries does not exist.</li>
+<li>Action: Analysis of MS epidemiological and specific aspects in LA suggests that susceptibility and clinical behavior of the disease are related to mixtures and admixtures of genes in the population.</li>
+<li>Resolution: MS is not present in Amerindians with Mongoloid genes, such as occurs in other pure ethnic groups.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3109/08916934.2011.592887" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Lucinda Aguirre‐Cruz. (2011). Multiple sclerosis in Caucasians and Latino Americans. Autoimmunity. https://doi.org/10.3109/08916934.2011.592887</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_69437280a3e2_2011,
+  title = {Multiple sclerosis in Caucasians and Latino Americans},
+  author = {Lucinda Aguirre‐Cruz},
+  year = {2011},
+  journal = {Autoimmunity},
+  doi = {10.3109/08916934.2011.592887},
+  url = {https://doi.org/10.3109/08916934.2011.592887},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Guidelines for performing Mendelian randomization investigations: update for summer 2023</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (78%)</span>
+</div>
+<h4>Abstract</h4>
+<p>&lt;ns3:p&gt;This paper provides guidelines for performing Mendelian randomization investigations. It is aimed at practitioners seeking to undertake analyses and write up their findings, and at journal editors and reviewers seeking to assess Mendelian randomization manuscripts. The guidelines are divided into ten sections: motivation and scope, data sources, choice of genetic variants, variant harmonization, primary analysis, supplementary and sensitivity analyses (one section on robust statistical methods and one on other approaches), extensions and additional analyses, data presentation, and interpretation. These guidelines will be updated based on feedback from the community and advances in the field. Updates will be made periodically as needed, and at least every 24 months.&lt;/ns3:p&gt;</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates guidelines for performing mendelian randomization investigations: update for summer 2023. Updates will be made periodically as needed, and at least every 24 months.&lt;/ns3:p&gt;</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: &lt;ns3:p&gt;This paper provides guidelines for performing Mendelian randomization investigations.</li>
+<li>Challenge: It is aimed at practitioners seeking to undertake analyses and write up their findings, and at journal editors and reviewers seeking to assess Mendelian randomization manuscripts.</li>
+<li>Action: The guidelines are divided into ten sections: motivation and scope, data sources, choice of genetic variants, variant harmonization, primary analysis, supplementary and sensitivity analyses (one section on robust statistical methods and one on other approaches), extensions and additional analyses, data presentation, and interpretation.</li>
+<li>Resolution: These guidelines will be updated based on feedback from the community and advances in the field.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.12688/wellcomeopenres.15555.3" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Stephen Burgess. (2023). Guidelines for performing Mendelian randomization investigations: update for summer 2023. Wellcome Open Research. https://doi.org/10.12688/wellcomeopenres.15555.3</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_cb6351a5b5f1_2023,
+  title = {Guidelines for performing Mendelian randomization investigations: update for summer 2023},
+  author = {Stephen Burgess},
+  year = {2023},
+  journal = {Wellcome Open Research},
+  doi = {10.12688/wellcomeopenres.15555.3},
+  url = {https://doi.org/10.12688/wellcomeopenres.15555.3},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>COVID-19 and risk of neurodegenerative disorders: A Mendelian randomization study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Abstract Emerging evidence has suggested a close correlation between COVID-19 and neurodegenerative disorders. However, whether there exists a causal association and the effect direction remains unknown. To examine the causative role of COVID-19 in the risk of neurodegenerative disorders, we estimated their genetic correlation, and then conducted a two-sample Mendelian randomization analysis using summary statistics from genome-wide association studies of susceptibility, hospitalization, and severity of COVID-19, as well as six major neurodegenerative disorders including Alzheimer’s disease (AD), amyotrophic lateral sclerosis, frontotemporal dementia, Lewy body dementia, multiple sclerosis, and Parkinson’s disease. We identified a significant and positive genetic correlation between hospitalization of COVID-19 and AD (genetic correlation: 0.23, P = 8.36E–07). Meanwhile, hospitalization of COVID-19 was significantly associated with a higher risk of AD (OR: 1.02, 95% CI: 1.01–1.03, P : 1.19E–03). Consistently, susceptibility (OR: 1.05, 95% CI: 1.01–1.09, P : 9.30E–03) and severity (OR: 1.01, 95% CI: 1.00–1.02, P : 0.012) of COVID-19 were nominally associated with higher risk of AD. The results were robust under all sensitivity analyses. These results demonstrated that COVID-19 could increase the risk of AD. Future development of preventive or therapeutic interventions could attach importance to this to alleviate the complications of COVID-19.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates covid-19 and risk of neurodegenerative disorders: a mendelian randomization study. We identified a significant and positive genetic correlation between hospitalization of COVID-19 and AD (genetic correlation: 0.23, P = 8.36E–07).</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We identified a significant and positive genetic correlation between hospitalization of COVID-19 and AD (genetic correlation: 0.23, P = 8.36E–07).</li>
+<li>Challenge: These results demonstrated that COVID-19 could increase the risk of AD.</li>
+<li>Action: This paper investigates covid-19 and risk of neurodegenerative disorders: a mendelian randomization study.</li>
+<li>Resolution: Abstract Emerging evidence has suggested a close correlation between COVID-19 and neurodegenerative disorders.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41398-022-02052-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Chunyu Li. (2022). COVID-19 and risk of neurodegenerative disorders: A Mendelian randomization study. Translational Psychiatry. https://doi.org/10.1038/s41398-022-02052-3</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_35a5ce0d6539_2022,
+  title = {COVID-19 and risk of neurodegenerative disorders: A Mendelian randomization study},
+  author = {Chunyu Li},
+  year = {2022},
+  journal = {Translational Psychiatry},
+  doi = {10.1038/s41398-022-02052-3},
+  url = {https://doi.org/10.1038/s41398-022-02052-3},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Single-cell RNA-sequencing of peripheral blood mononuclear cells reveals widespread, context-specific gene expression regulation upon pathogenic exposure</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The host&#x27;s gene expression and gene regulatory response to pathogen exposure can be influenced by a combination of the host&#x27;s genetic background, the type of and exposure time to pathogens. Here we provide a detailed dissection of this using single-cell RNA-sequencing of 1.3M peripheral blood mononuclear cells from 120 individuals, longitudinally exposed to three different pathogens. These analyses indicate that cell-type-specificity is a more prominent factor than pathogen-specificity regarding contexts that affect how genetics influences gene expression (i.e., eQTL) and co-expression (i.e., co-expression QTL). In monocytes, the strongest responder to pathogen stimulations, 71.4% of the genetic variants whose effect on gene expression is influenced by pathogen exposure (i.e., response QTL) also affect the co-expression between genes. This indicates widespread, context-specific changes in gene expression level and its regulation that are driven by genetics. Pathway analysis on the CLEC12A gene that exemplifies cell-type-, exposure-time- and genetic-background-dependent co-expression interactions, shows enrichment of the interferon (IFN) pathway specifically at 3-h post-exposure in monocytes. Similar genetic background-dependent association between IFN activity and CLEC12A co-expression patterns is confirmed in systemic lupus erythematosus by in silico analysis, which implies that CLEC12A might be an IFN-regulated gene. Altogether, this study highlights the importance of context for gaining a better understanding of the mechanisms of gene regulation in health and disease.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates single-cell rna-sequencing of peripheral blood mononuclear cells reveals widespread, context-specific gene expression regulation upon pathogenic exposure. Altogether, this study highlights the importance of context for gaining a better understanding of the mechanisms of gene regulation in health and disease.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Altogether, this study highlights the importance of context for gaining a better understanding of the mechanisms of gene regulation in health and disease.</li>
+<li>Challenge: This paper investigates single-cell rna-sequencing of peripheral blood mononuclear cells reveals widespread, context-specific gene expression regulation upon pathogenic exposure.</li>
+<li>Action: The host&#x27;s gene expression and gene regulatory response to pathogen exposure can be influenced by a combination of the host&#x27;s genetic background, the type of and exposure time to pathogens.</li>
+<li>Resolution: Here we provide a detailed dissection of this using single-cell RNA-sequencing of 1.3M peripheral blood mononuclear cells from 120 individuals, longitudinally exposed to three different pathogens.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41467-022-30893-5" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Roy Oelen. (2022). Single-cell RNA-sequencing of peripheral blood mononuclear cells reveals widespread, context-specific gene expression regulation upon pathogenic exposure. Nature Communications. https://doi.org/10.1038/s41467-022-30893-5</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f3d426841da3_2022,
+  title = {Single-cell RNA-sequencing of peripheral blood mononuclear cells reveals widespread, context-specific gene expression regulation upon pathogenic exposure},
+  author = {Roy Oelen},
+  year = {2022},
+  journal = {Nature Communications},
+  doi = {10.1038/s41467-022-30893-5},
+  url = {https://doi.org/10.1038/s41467-022-30893-5},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The Immunobiology and Pathogenesis of Celiac Disease</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Among human leukocyte antigen (HLA)-associated disorders, celiac disease has an immunopathogenesis that is particularly well understood. The condition is characterized by hypersensitivity to cereal gluten proteins, and the disease lesion is localized in the gut. Still, the diagnosis can be made by detection of highly disease-specific autoantibodies to transglutaminase 2 in the blood. We now have mechanistic insights into how the disease-predisposing HLA-DQ molecules, via presentation of posttranslationally modified gluten peptides, are connected to the generation of these autoantibodies. This review presents our current understanding of the immunobiology of this common disorder that is positioned in the border zone between food hypersensitivity and autoimmunity.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the immunobiology and pathogenesis of celiac disease. This review presents our current understanding of the immunobiology of this common disorder that is positioned in the border zone between food hypersensitivity and autoimmunity.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Among human leukocyte antigen (HLA)-associated disorders, celiac disease has an immunopathogenesis that is particularly well understood.</li>
+<li>Challenge: The condition is characterized by hypersensitivity to cereal gluten proteins, and the disease lesion is localized in the gut.</li>
+<li>Action: Still, the diagnosis can be made by detection of highly disease-specific autoantibodies to transglutaminase 2 in the blood.</li>
+<li>Resolution: We now have mechanistic insights into how the disease-predisposing HLA-DQ molecules, via presentation of posttranslationally modified gluten peptides, are connected to the generation of these autoantibodies.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1146/annurev-pathmechdis-031521-032634" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Rasmus Iversen. (2022). The Immunobiology and Pathogenesis of Celiac Disease. Annual Review of Pathology Mechanisms of Disease. https://doi.org/10.1146/annurev-pathmechdis-031521-032634</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_614095448c79_2022,
+  title = {The Immunobiology and Pathogenesis of Celiac Disease},
+  author = {Rasmus Iversen},
+  year = {2022},
+  journal = {Annual Review of Pathology Mechanisms of Disease},
+  doi = {10.1146/annurev-pathmechdis-031521-032634},
+  url = {https://doi.org/10.1146/annurev-pathmechdis-031521-032634},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Heart-brain connections: Phenotypic and genetic insights from magnetic resonance images</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Cardiovascular health interacts with cognitive and mental health in complex ways, yet little is known about the phenotypic and genetic links of heart-brain systems. We quantified heart-brain connections using multiorgan magnetic resonance imaging (MRI) data from more than 40,000 subjects. Heart MRI traits displayed numerous association patterns with brain gray matter morphometry, white matter microstructure, and functional networks. We identified 80 associated genomic loci (&lt;i&gt;P&lt;/i&gt; &lt; 6.09 × 10&lt;sup&gt;-10&lt;/sup&gt;) for heart MRI traits, which shared genetic influences with cardiovascular and brain diseases. Genetic correlations were observed between heart MRI traits and brain-related traits and disorders. Mendelian randomization suggests that heart conditions may causally contribute to brain disorders. Our results advance a multiorgan perspective on human health by revealing heart-brain connections and shared genetic influences.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates heart-brain connections: phenotypic and genetic insights from magnetic resonance images. We identified 80 associated genomic loci (&lt;i&gt;P&lt;/i&gt; &lt; 6.09 × 10&lt;sup&gt;-10&lt;/sup&gt;) for heart MRI traits, which shared genetic influences with cardiovascular and brain diseases.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We identified 80 associated genomic loci (&lt;i&gt;P&lt;/i&gt; &lt; 6.09 × 10&lt;sup&gt;-10&lt;/sup&gt;) for heart MRI traits, which shared genetic influences with cardiovascular and brain diseases.</li>
+<li>Challenge: Our results advance a multiorgan perspective on human health by revealing heart-brain connections and shared genetic influences.</li>
+<li>Action: This paper investigates heart-brain connections: phenotypic and genetic insights from magnetic resonance images.</li>
+<li>Resolution: Cardiovascular health interacts with cognitive and mental health in complex ways, yet little is known about the phenotypic and genetic links of heart-brain systems.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/science.abn6598" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Bingxin Zhao. (2023). Heart-brain connections: Phenotypic and genetic insights from magnetic resonance images. Science. https://doi.org/10.1126/science.abn6598</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_406afdec95e7_2023,
+  title = {Heart-brain connections: Phenotypic and genetic insights from magnetic resonance images},
+  author = {Bingxin Zhao},
+  year = {2023},
+  journal = {Science},
+  doi = {10.1126/science.abn6598},
+  url = {https://doi.org/10.1126/science.abn6598},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Analysis of herpesvirus infection and genome single nucleotide polymorphism risk factors in multiple sclerosis, Volga federal district, Russia</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a heterogeneous disease where herpesvirus infection and genetic predisposition are identified as the most consistent risk factors. Serum and blood samples were collected from 151 MS and 70 controls and used to analyze circulating antibodies for, and DNA of, Epstein Barr virus (EBV), human cytomegalovirus (HCMV), human herpes virus 6 (HHV6), and varicella zoster virus (VZV). The frequency of selected single nucleotide polymorphisms (SNPs) in MS and controls were studied. Herpesvirus DNA in blood samples were analyzed using qPCR. Anti-herpesvirus antibodies were detected by ELISA. SNPs were analyzed by the allele-specific PCR. For statistical analysis, Fisher exact test, odds ratio and Kruskall-Wallis test were used; p&lt;0.05 values were considered as significant. We have found an association between circulating anti-HHV6 antibodies and MS diagnosis. We also confirmed higher frequency of A and C alleles in rs2300747 and rs12044852 of &lt;i&gt;CD58&lt;/i&gt; gene and G allele in rs929230 of &lt;i&gt;CD6&lt;/i&gt; gene in MS as compared to controls. Fatigue symptom was linked to AC and AA genotype in rs12044852 of CD58 gene. An interesting observation was finding higher frequency of GG genotype in rs12722489 of IL2RA and T allele in rs1535045 of CD40 genes in patient having anti-HHV6 antibodies. A link was found between having anti-VZV antibodies in MS and CC genotype in rs1883832 of CD40 gene.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates analysis of herpesvirus infection and genome single nucleotide polymorphism risk factors in multiple sclerosis, volga federal district, russia. A link was found between having anti-VZV antibodies in MS and CC genotype in rs1883832 of CD40 gene.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a heterogeneous disease where herpesvirus infection and genetic predisposition are identified as the most consistent risk factors.</li>
+<li>Challenge: Serum and blood samples were collected from 151 MS and 70 controls and used to analyze circulating antibodies for, and DNA of, Epstein Barr virus (EBV), human cytomegalovirus (HCMV), human herpes virus 6 (HHV6), and varicella zoster virus (VZV).</li>
+<li>Action: The frequency of selected single nucleotide polymorphisms (SNPs) in MS and controls were studied.</li>
+<li>Resolution: Herpesvirus DNA in blood samples were analyzed using qPCR.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2022.1010605" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Vera Lezhnyova. (2022). Analysis of herpesvirus infection and genome single nucleotide polymorphism risk factors in multiple sclerosis, Volga federal district, Russia. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2022.1010605</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_925d6e93a00c_2022,
+  title = {Analysis of herpesvirus infection and genome single nucleotide polymorphism risk factors in multiple sclerosis, Volga federal district, Russia},
+  author = {Vera Lezhnyova},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2022.1010605},
+  url = {https://doi.org/10.3389/fimmu.2022.1010605},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Large-scale plasma proteomics comparisons through genetics and disease associations</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>High-throughput proteomics platforms measuring thousands of proteins in plasma combined with genomic and phenotypic information have the power to bridge the gap between the genome and diseases. Here we performed association studies of Olink Explore 3072 data generated by the UK Biobank Pharma Proteomics Project&lt;sup&gt;1&lt;/sup&gt; on plasma samples from more than 50,000 UK Biobank participants with phenotypic and genotypic data, stratifying on British or Irish, African and South Asian ancestries. We compared the results with those of a SomaScan v4 study on plasma from 36,000 Icelandic people&lt;sup&gt;2&lt;/sup&gt;, for 1,514 of whom Olink data were also available. We found modest correlation between the two platforms. Although cis protein quantitative trait loci were detected for a similar absolute number of assays on the two platforms (2,101 on Olink versus 2,120 on SomaScan), the proportion of assays with such supporting evidence for assay performance was higher on the Olink platform (72% versus 43%). A considerable number of proteins had genomic associations that differed between the platforms. We provide examples where differences between platforms may influence conclusions drawn from the integration of protein levels with the study of diseases. We demonstrate how leveraging the diverse ancestries of participants in the UK Biobank helps to detect novel associations and refine genomic location. Our results show the value of the information provided by the two most commonly used high-throughput proteomics platforms and demonstrate the differences between them that at times provides useful complementarity.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates large-scale plasma proteomics comparisons through genetics and disease associations. We found modest correlation between the two platforms.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We found modest correlation between the two platforms.</li>
+<li>Challenge: We demonstrate how leveraging the diverse ancestries of participants in the UK Biobank helps to detect novel associations and refine genomic location.</li>
+<li>Action: Our results show the value of the information provided by the two most commonly used high-throughput proteomics platforms and demonstrate the differences between them that at times provides useful complementarity.</li>
+<li>Resolution: This paper investigates large-scale plasma proteomics comparisons through genetics and disease associations.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-023-06563-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Grímur Hjörleifsson Eldjárn. (2023). Large-scale plasma proteomics comparisons through genetics and disease associations. Nature. https://doi.org/10.1038/s41586-023-06563-x</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_318f7171139f_2023,
+  title = {Large-scale plasma proteomics comparisons through genetics and disease associations},
+  author = {Grímur Hjörleifsson Eldjárn},
+  year = {2023},
+  journal = {Nature},
+  doi = {10.1038/s41586-023-06563-x},
+  url = {https://doi.org/10.1038/s41586-023-06563-x},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>SARS-CoV-2 infection in hamsters and humans results in lasting and unique systemic perturbations after recovery</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The host response to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection can result in prolonged pathologies collectively referred to as post-acute sequalae of COVID-19 (PASC) or long COVID. To better understand the mechanism underlying long COVID biology, we compared the short- and long-term systemic responses in the golden hamster after either SARS-CoV-2 or influenza A virus (IAV) infection. Results demonstrated that SARS-CoV-2 exceeded IAV in its capacity to cause permanent injury to the lung and kidney and uniquely affected the olfactory bulb (OB) and olfactory epithelium (OE). Despite a lack of detectable infectious virus, the OB and OE demonstrated myeloid and T cell activation, proinflammatory cytokine production, and an interferon response that correlated with behavioral changes extending a month after viral clearance. These sustained transcriptional changes could also be corroborated from tissue isolated from individuals who recovered from COVID-19. These data highlight a molecular mechanism for persistent COVID-19 symptomology and provide a small animal model to explore future therapeutics.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates sars-cov-2 infection in hamsters and humans results in lasting and unique systemic perturbations after recovery. Results demonstrated that SARS-CoV-2 exceeded IAV in its capacity to cause permanent injury to the lung and kidney and uniquely affected the olfactory bulb (OB) and olfactory epithelium (OE).</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Results demonstrated that SARS-CoV-2 exceeded IAV in its capacity to cause permanent injury to the lung and kidney and uniquely affected the olfactory bulb (OB) and olfactory epithelium (OE).</li>
+<li>Challenge: These data highlight a molecular mechanism for persistent COVID-19 symptomology and provide a small animal model to explore future therapeutics.</li>
+<li>Action: This paper investigates sars-cov-2 infection in hamsters and humans results in lasting and unique systemic perturbations after recovery.</li>
+<li>Resolution: The host response to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection can result in prolonged pathologies collectively referred to as post-acute sequalae of COVID-19 (PASC) or long COVID.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/scitranslmed.abq3059" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Justin J. Frere. (2022). SARS-CoV-2 infection in hamsters and humans results in lasting and unique systemic perturbations after recovery. Science Translational Medicine. https://doi.org/10.1126/scitranslmed.abq3059</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a2e34f77063b_2022,
+  title = {SARS-CoV-2 infection in hamsters and humans results in lasting and unique systemic perturbations after recovery},
+  author = {Justin J. Frere},
+  year = {2022},
+  journal = {Science Translational Medicine},
+  doi = {10.1126/scitranslmed.abq3059},
+  url = {https://doi.org/10.1126/scitranslmed.abq3059},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>New views on the complex interplay between degeneration and autoimmunity in multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a frequently disabling neurological disorder characterized by symptoms, clinical signs and imaging abnormalities that typically fluctuate over time, affecting any level of the CNS. Prominent lymphocytic inflammation, many genetic susceptibility variants involving immune pathways, as well as potent responses of the neuroinflammatory component to immunomodulating drugs, have led to the natural conclusion that this disease is driven by a primary autoimmune process. In this Hypothesis and Theory article, we discuss emerging data that cast doubt on this assumption. After three decades of therapeutic experience, what has become clear is that potent immune modulators are highly effective at suppressing inflammatory relapses, yet exhibit very limited effects on the later progressive phase of MS. Moreover, neuropathological examination of MS tissue indicates that degeneration, CNS atrophy, and myelin loss are most prominent in the progressive stage, when lymphocytic inflammation paradoxically wanes. Finally, emerging clinical observations such as &quot;progression independent of relapse activity&quot; and &quot;silent progression,&quot; now thought to take hold very early in the course, together argue that an underlying &quot;cytodegenerative&quot; process, likely targeting the myelinating unit, may in fact represent the most proximal step in a complex pathophysiological cascade exacerbated by an autoimmune inflammatory overlay. Parallels are drawn with more traditional neurodegenerative disorders, where a progressive proteopathy with prion-like propagation of toxic misfolded species is now known to play a key role. A potentially pivotal contribution of the Epstein-Barr virus and B cells in this process is also discussed.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates new views on the complex interplay between degeneration and autoimmunity in multiple sclerosis. A potentially pivotal contribution of the Epstein-Barr virus and B cells in this process is also discussed.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a frequently disabling neurological disorder characterized by symptoms, clinical signs and imaging abnormalities that typically fluctuate over time, affecting any level of the CNS.</li>
+<li>Challenge: Prominent lymphocytic inflammation, many genetic susceptibility variants involving immune pathways, as well as potent responses of the neuroinflammatory component to immunomodulating drugs, have led to the natural conclusion that this disease is driven by a primary autoimmune process.</li>
+<li>Action: In this Hypothesis and Theory article, we discuss emerging data that cast doubt on this assumption.</li>
+<li>Resolution: After three decades of therapeutic experience, what has become clear is that potent immune modulators are highly effective at suppressing inflammatory relapses, yet exhibit very limited effects on the later progressive phase of MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fncel.2024.1426231" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Peter K. Stys. (2024). New views on the complex interplay between degeneration and autoimmunity in multiple sclerosis. Frontiers in Cellular Neuroscience. https://doi.org/10.3389/fncel.2024.1426231</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a6b23c3b37d5_2024,
+  title = {New views on the complex interplay between degeneration and autoimmunity in multiple sclerosis},
+  author = {Peter K. Stys},
+  year = {2024},
+  journal = {Frontiers in Cellular Neuroscience},
+  doi = {10.3389/fncel.2024.1426231},
+  url = {https://doi.org/10.3389/fncel.2024.1426231},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Differential impact of environmental factors on systemic and localized autoimmunity</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (86%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The influence of environmental factors on the development of autoimmune disease is being broadly investigated to better understand the multifactorial nature of autoimmune pathogenesis and to identify potential areas of intervention. Areas of particular interest include the influence of lifestyle, nutrition, and vitamin deficiencies on autoimmunity and chronic inflammation. In this review, we discuss how particular lifestyles and dietary patterns may contribute to or modulate autoimmunity. We explored this concept through a spectrum of several autoimmune diseases including Multiple Sclerosis (MS), Systemic Lupus Erythematosus (SLE) and Alopecia Areata (AA) affecting the central nervous system, whole body, and the hair follicles, respectively. A clear commonality between the autoimmune conditions of interest here is low Vitamin D, a well-researched hormone in the context of autoimmunity with pleiotropic immunomodulatory and anti-inflammatory effects. While low levels are often correlated with disease activity and progression in MS and AA, the relationship is less clear in SLE. Despite strong associations with autoimmunity, we lack conclusive evidence which elucidates its role in contributing to pathogenesis or simply as a result of chronic inflammation. In a similar vein, other vitamins impacting the development and course of these diseases are explored in this review, and overall diet and lifestyle. Recent work exploring the effects of dietary interventions on MS showed that a balanced diet was linked to improvement in clinical parameters, comorbid conditions, and overall quality of life for patients. In patients with MS, SLE and AA, certain diets and supplements are linked to lower incidence and improved symptoms. Conversely, obesity during adolescence was linked with higher incidence of MS while in SLE it was associated with organ damage. Autoimmunity is thought to emerge from the complex interplay between environmental factors and genetic background. Although the scope of this review focuses on environmental factors, it is imperative to elaborate the interaction between genetic susceptibility and environment due to the multifactorial origin of these disease. Here, we offer a comprehensive review about the influence of recent environmental and lifestyle factors on these autoimmune diseases and potential translation into therapeutic interventions.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates differential impact of environmental factors on systemic and localized autoimmunity. Here, we offer a comprehensive review about the influence of recent environmental and lifestyle factors on these autoimmune diseases and potential translation into therapeutic interventions.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The influence of environmental factors on the development of autoimmune disease is being broadly investigated to better understand the multifactorial nature of autoimmune pathogenesis and to identify potential areas of intervention.</li>
+<li>Challenge: Areas of particular interest include the influence of lifestyle, nutrition, and vitamin deficiencies on autoimmunity and chronic inflammation.</li>
+<li>Action: In this review, we discuss how particular lifestyles and dietary patterns may contribute to or modulate autoimmunity.</li>
+<li>Resolution: We explored this concept through a spectrum of several autoimmune diseases including Multiple Sclerosis (MS), Systemic Lupus Erythematosus (SLE) and Alopecia Areata (AA) affecting the central nervous system, whole body, and the hair follicles, respectively.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2023.1147447" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Hanane Touil. (2023). Differential impact of environmental factors on systemic and localized autoimmunity. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2023.1147447</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e958d52f4f59_2023,
+  title = {Differential impact of environmental factors on systemic and localized autoimmunity},
+  author = {Hanane Touil},
+  year = {2023},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2023.1147447},
+  url = {https://doi.org/10.3389/fimmu.2023.1147447},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Artificial Intelligence and Machine Learning in Clinical Medicine, 2023</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (65%)</span>
+</div>
+<h4>Abstract</h4>
+<p>This first article in a series describes the history of artificial intelligence in medicine; the use of AI in image analysis, identification of disease outbreaks, and diagnosis; and the use of chatbots.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates artificial intelligence and machine learning in clinical medicine, 2023. This first article in a series describes the history of artificial intelligence in medicine; the use of AI in image analysis, identification of disease outbreaks, and diagnosis; and the use of chatbots.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This first article in a series describes the history of artificial intelligence in medicine; the use of AI in image analysis, identification of disease outbreaks, and diagnosis; and the use of chatbots.</li>
+<li>Challenge: This paper investigates artificial intelligence and machine learning in clinical medicine, 2023.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1056/nejmra2302038" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Charlotte Haug. (2023). Artificial Intelligence and Machine Learning in Clinical Medicine, 2023. New England Journal of Medicine. https://doi.org/10.1056/nejmra2302038</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_65e085b97bb5_2023,
+  title = {Artificial Intelligence and Machine Learning in Clinical Medicine, 2023},
+  author = {Charlotte Haug},
+  year = {2023},
+  journal = {New England Journal of Medicine},
+  doi = {10.1056/nejmra2302038},
+  url = {https://doi.org/10.1056/nejmra2302038},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The selection landscape and genetic legacy of ancient Eurasians</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The Holocene (beginning around 12,000 years ago) encompassed some of the most significant changes in human evolution, with far-reaching consequences for the dietary, physical and mental health of present-day populations. Using a dataset of more than 1,600 imputed ancient genomes&lt;sup&gt;1&lt;/sup&gt;, we modelled the selection landscape during the transition from hunting and gathering, to farming and pastoralism across West Eurasia. We identify key selection signals related to metabolism, including that selection at the FADS cluster began earlier than previously reported and that selection near the LCT locus predates the emergence of the lactase persistence allele by thousands of years. We also find strong selection in the HLA region, possibly due to increased exposure to pathogens during the Bronze Age. Using ancient individuals to infer local ancestry tracts in over 400,000 samples from the UK Biobank, we identify widespread differences in the distribution of Mesolithic, Neolithic and Bronze Age ancestries across Eurasia. By calculating ancestry-specific polygenic risk scores, we show that height differences between Northern and Southern Europe are associated with differential Steppe ancestry, rather than selection, and that risk alleles for mood-related phenotypes are enriched for Neolithic farmer ancestry, whereas risk alleles for diabetes and Alzheimer&#x27;s disease are enriched for Western hunter-gatherer ancestry. Our results indicate that ancient selection and migration were large contributors to the distribution of phenotypic diversity in present-day Europeans.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the selection landscape and genetic legacy of ancient eurasians. By calculating ancestry-specific polygenic risk scores, we show that height differences between Northern and Southern Europe are associated with differential Steppe ancestry, rather than selection, and that risk alleles for mood-related phenotypes are enriched for Neolithic farmer ancestry, whereas risk alleles for diabetes and Alzheimer&#x27;s disease are enriched for Western hunter-gatherer ancestry.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: By calculating ancestry-specific polygenic risk scores, we show that height differences between Northern and Southern Europe are associated with differential Steppe ancestry, rather than selection, and that risk alleles for mood-related phenotypes are enriched for Neolithic farmer ancestry, whereas risk alleles for diabetes and Alzheimer&#x27;s disease are enriched for Western hunter-gatherer ancestry.</li>
+<li>Challenge: Our results indicate that ancient selection and migration were large contributors to the distribution of phenotypic diversity in present-day Europeans.</li>
+<li>Action: This paper investigates the selection landscape and genetic legacy of ancient eurasians.</li>
+<li>Resolution: The Holocene (beginning around 12,000 years ago) encompassed some of the most significant changes in human evolution, with far-reaching consequences for the dietary, physical and mental health of present-day populations.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-023-06705-1" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Evan K. Irving-Pease. (2024). The selection landscape and genetic legacy of ancient Eurasians. Nature. https://doi.org/10.1038/s41586-023-06705-1</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_4f1f3544d85e_2024,
+  title = {The selection landscape and genetic legacy of ancient Eurasians},
+  author = {Evan K. Irving-Pease},
+  year = {2024},
+  journal = {Nature},
+  doi = {10.1038/s41586-023-06705-1},
+  url = {https://doi.org/10.1038/s41586-023-06705-1},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Three-year outcomes of post-acute sequelae of COVID-19</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection causes post-acute sequelae of coronavirus disease 2019 (COVID-19) (PASC) in many organ systems. Risks of these sequelae have been characterized up to 2 years after infection, but longer-term follow-up is limited. Here we built a cohort of 135,161 people with SARS-CoV-2 infection and 5,206,835 controls from the US Department of Veterans Affairs who were followed for 3 years to estimate risks of death and PASC. Among non-hospitalized individuals, the increased risk of death was no longer present after the first year of infection, and risk of incident PASC declined over the 3 years but still contributed 9.6 (95% confidence interval (CI): 0.4-18.7) disability-adjusted life years (DALYs) per 1,000 persons in the third year. Among hospitalized individuals, risk of death declined but remained significantly elevated in the third year after infection (incidence rate ratio: 1.29 (95% CI: 1.19-1.40)). Risk of incident PASC declined over the 3 years, but substantial residual risk remained in the third year, leading to 90.0 (95% CI: 55.2-124.8) DALYs per 1,000 persons. Altogether, our findings show reduction of risks over time, but the burden of mortality and health loss remains in the third year among hospitalized individuals.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates three-year outcomes of post-acute sequelae of covid-19. Altogether, our findings show reduction of risks over time, but the burden of mortality and health loss remains in the third year among hospitalized individuals.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Altogether, our findings show reduction of risks over time, but the burden of mortality and health loss remains in the third year among hospitalized individuals.</li>
+<li>Challenge: This paper investigates three-year outcomes of post-acute sequelae of covid-19.</li>
+<li>Action: Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection causes post-acute sequelae of coronavirus disease 2019 (COVID-19) (PASC) in many organ systems.</li>
+<li>Resolution: Risks of these sequelae have been characterized up to 2 years after infection, but longer-term follow-up is limited.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41591-024-02987-8" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Miao Cai. (2024). Three-year outcomes of post-acute sequelae of COVID-19. Nature Medicine. https://doi.org/10.1038/s41591-024-02987-8</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e4bb176eae5a_2024,
+  title = {Three-year outcomes of post-acute sequelae of COVID-19},
+  author = {Miao Cai},
+  year = {2024},
+  journal = {Nature Medicine},
+  doi = {10.1038/s41591-024-02987-8},
+  url = {https://doi.org/10.1038/s41591-024-02987-8},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Guts Imbalance Imbalances the Brain: A Review of Gut Microbiota Association With Neurological and Psychiatric Disorders</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Over the last 10 years, there has been a growing interest in the relationship between gut microbiota, the brain, and neurologic-associated affections. As multiple preclinical and clinical research studies highlight gut microbiota&#x27;s potential to modulate the general state of health state, it goes without saying that gut microbiota plays a significant role in neurogenesis, mental and cognitive development, emotions, and behaviors, and in the progression of neuropsychiatric illnesses. Gut microbiota produces important biologic products that, through the gut-brain axis, are directly connected with the appearance and evolution of neurological and psychiatric disorders such as depression, anxiety, bipolar disorder, autism, schizophrenia, Parkinson&#x27;s disease, Alzheimer&#x27;s disease, dementia, multiple sclerosis, and epilepsy. This study reviews recent research on the link between gut microbiota and the brain, and microbiome&#x27;s role in shaping the development of the most common neurological and psychiatric illnesses. Moreover, special attention is paid to the use of probiotic formulations as a potential non-invasive therapeutic opportunity for prevention and management of neuropsychiatric-associated affections.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates guts imbalance imbalances the brain: a review of gut microbiota association with neurological and psychiatric disorders. This study reviews recent research on the link between gut microbiota and the brain, and microbiome&#x27;s role in shaping the development of the most common neurological and psychiatric illnesses.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This study reviews recent research on the link between gut microbiota and the brain, and microbiome&#x27;s role in shaping the development of the most common neurological and psychiatric illnesses.</li>
+<li>Challenge: This paper investigates guts imbalance imbalances the brain: a review of gut microbiota association with neurological and psychiatric disorders.</li>
+<li>Action: Over the last 10 years, there has been a growing interest in the relationship between gut microbiota, the brain, and neurologic-associated affections.</li>
+<li>Resolution: As multiple preclinical and clinical research studies highlight gut microbiota&#x27;s potential to modulate the general state of health state, it goes without saying that gut microbiota plays a significant role in neurogenesis, mental and cognitive development, emotions, and behaviors, and in the progression of neuropsychiatric illnesses.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fmed.2022.813204" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Laura Mitrea. (2022). Guts Imbalance Imbalances the Brain: A Review of Gut Microbiota Association With Neurological and Psychiatric Disorders. Frontiers in Medicine. https://doi.org/10.3389/fmed.2022.813204</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_182655ec2515_2022,
+  title = {Guts Imbalance Imbalances the Brain: A Review of Gut Microbiota Association With Neurological and Psychiatric Disorders},
+  author = {Laura Mitrea},
+  year = {2022},
+  journal = {Frontiers in Medicine},
+  doi = {10.3389/fmed.2022.813204},
+  url = {https://doi.org/10.3389/fmed.2022.813204},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple Sclerosis: Shall We Target CD33?</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2020</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (64%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Our preliminary results suggest a possible contribution of CD33 rs3865444 to MS. Therefore, larger multiethnic studies should be conducted, investigating the role of CD33 rs3865444 in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis: shall we target cd33?. Therefore, larger multiethnic studies should be conducted, investigating the role of CD33 rs3865444 in MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Our preliminary results suggest a possible contribution of CD33 rs3865444 to MS.</li>
+<li>Challenge: Therefore, larger multiethnic studies should be conducted, investigating the role of CD33 rs3865444 in MS.</li>
+<li>Action: This paper investigates multiple sclerosis: shall we target cd33?.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/genes11111334" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Vasileios Siokas. (2020). Multiple Sclerosis: Shall We Target CD33?. Genes. https://doi.org/10.3390/genes11111334</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_418be4bb9109_2020,
+  title = {Multiple Sclerosis: Shall We Target CD33?},
+  author = {Vasileios Siokas},
+  year = {2020},
+  journal = {Genes},
+  doi = {10.3390/genes11111334},
+  url = {https://doi.org/10.3390/genes11111334},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The epidemiology, pathology and pathogenesis of MS: Therapeutic implications</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a chronic, and potentially disabling, inflammatory disease of the central nervous system (CNS). MS is generally characterized by recurrent, and self-limited, episodes of neurological dysfunction, which occur unpredictably and often result in multifocal tissue injury within the CNS. Currently, women are affected two to three times as often as men although this may not have been the case during earlier Time-Periods. The pathogenesis of MS is known to involve both critical genetic and environmental mechanisms. Nevertheless, in addition to these two mechanisms, disease-pathogenesis also involves a &quot;truly&quot; random event. Indeed, it is this random mechanism, which is responsible for the currently-observed (and increasing) excess of women among patients with MS. This review summarizes the current state of knowledge regarding the pathogenesis of MS (includong its epidemiology, pathology, and genetics) and considers the therapeutic implications that these pathogenetic mechanisms have both for our currently available therapies as well as for the possible therapeutic approaches to the management of this potentially disabling condition in the future.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the epidemiology, pathology and pathogenesis of ms: therapeutic implications. This review summarizes the current state of knowledge regarding the pathogenesis of MS (includong its epidemiology, pathology, and genetics) and considers the therapeutic implications that these pathogenetic mechanisms have both for our currently available therapies as well as for the possible therapeutic approaches to the management of this potentially disabling condition in the future.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a chronic, and potentially disabling, inflammatory disease of the central nervous system (CNS).</li>
+<li>Challenge: MS is generally characterized by recurrent, and self-limited, episodes of neurological dysfunction, which occur unpredictably and often result in multifocal tissue injury within the CNS.</li>
+<li>Action: Currently, women are affected two to three times as often as men although this may not have been the case during earlier Time-Periods.</li>
+<li>Resolution: The pathogenesis of MS is known to involve both critical genetic and environmental mechanisms.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.neurot.2025.e00539" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Douglas S. Goodin. (2025). The epidemiology, pathology and pathogenesis of MS: Therapeutic implications. Neurotherapeutics. https://doi.org/10.1016/j.neurot.2025.e00539</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_08fd7dffefdb_2025,
+  title = {The epidemiology, pathology and pathogenesis of MS: Therapeutic implications},
+  author = {Douglas S. Goodin},
+  year = {2025},
+  journal = {Neurotherapeutics},
+  doi = {10.1016/j.neurot.2025.e00539},
+  url = {https://doi.org/10.1016/j.neurot.2025.e00539},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Solving the puzzle of Long Covid</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (64%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Long Covid provides an opportunity to understand how acute infections cause chronic disease.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates solving the puzzle of long covid. Long Covid provides an opportunity to understand how acute infections cause chronic disease.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Long Covid provides an opportunity to understand how acute infections cause chronic disease.</li>
+<li>Challenge: This paper investigates solving the puzzle of long covid.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1126/science.adl0867" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ziyad Al‐Aly. (2024). Solving the puzzle of Long Covid. Science. https://doi.org/10.1126/science.adl0867</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_4627963b16ee_2024,
+  title = {Solving the puzzle of Long Covid},
+  author = {Ziyad Al‐Aly},
+  year = {2024},
+  journal = {Science},
+  doi = {10.1126/science.adl0867},
+  url = {https://doi.org/10.1126/science.adl0867},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Genetic risk score in multiple sclerosis is associated with unique gut microbiome</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a complex autoimmune disease in which both the roles of genetic susceptibility and environmental/microbial factors have been investigated. More than 200 genetic susceptibility variants have been identified along with the dysbiosis of gut microbiota, both independently have been shown to be associated with MS. We hypothesize that MS patients harboring genetic susceptibility variants along with gut microbiome dysbiosis are at a greater risk of exhibiting the disease. We investigated the genetic risk score for MS in conjunction with gut microbiota in the same cohort of 117 relapsing remitting MS (RRMS) and 26 healthy controls. DNA samples were genotyped using Illumina&#x27;s Infinium Immuno array-24 v2 chip followed by calculating genetic risk score and the microbiota was determined by sequencing the V4 hypervariable region of the 16S rRNA gene. We identified two clusters of MS patients, Cluster A and B, both having a higher genetic risk score than the control group. However, the MS cases in cluster B not only had a higher genetic risk score but also showed a distinct gut microbiome than that of cluster A. Interestingly, cluster A which included both healthy control and MS cases had similar gut microbiome composition. This could be due to (i) the non-active state of the disease in that group of MS patients at the time of fecal sample collection and/or (ii) the restoration of the gut microbiome post disease modifying therapy to treat the MS. Our study showed that there seems to be an association between genetic risk score and gut microbiome dysbiosis in triggering the disease in a small cohort of MS patients. The MS Cluster A who have a higher genetic risk score but microbiome profile similar to that of healthy controls could be due to the remitting phase of the disease or due to the effect of disease modifying therapies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates genetic risk score in multiple sclerosis is associated with unique gut microbiome. We identified two clusters of MS patients, Cluster A and B, both having a higher genetic risk score than the control group.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We identified two clusters of MS patients, Cluster A and B, both having a higher genetic risk score than the control group.</li>
+<li>Challenge: This paper investigates genetic risk score in multiple sclerosis is associated with unique gut microbiome.</li>
+<li>Action: Multiple sclerosis (MS) is a complex autoimmune disease in which both the roles of genetic susceptibility and environmental/microbial factors have been investigated.</li>
+<li>Resolution: More than 200 genetic susceptibility variants have been identified along with the dysbiosis of gut microbiota, both independently have been shown to be associated with MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41598-023-43217-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Noha S. Elsayed. (2023). Genetic risk score in multiple sclerosis is associated with unique gut microbiome. Scientific Reports. https://doi.org/10.1038/s41598-023-43217-4</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_68686815f9f9_2023,
+  title = {Genetic risk score in multiple sclerosis is associated with unique gut microbiome},
+  author = {Noha S. Elsayed},
+  year = {2023},
+  journal = {Scientific Reports},
+  doi = {10.1038/s41598-023-43217-4},
+  url = {https://doi.org/10.1038/s41598-023-43217-4},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Therapeutic Role of Vitamin D in Multiple Sclerosis: An Essentially Contested Concept</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is an immune-mediated demyelinating disease of the nervous system with incredibly intricate etiopathogenesis involving numerous genetic, epigenetic, and environmental risk factors. Major environmental risk factors include ultraviolet (UV) radiation, vitamin D, Epstein-Barr virus (EBV) infection, smoking, and high body mass index (BMI). Vitamin D, in particular, can be viewed as one piece of this puzzle, with various tabs and pockets, occupying a sequential site. In this article, we have briefly discussed the neuroimmunology of MS and the role of vitamin D in regulating immune responses. Various observational studies and clinical trials were reviewed and discussed according to stages of disease activity and course of the disease. The data reviewed in this article implied that serum vitamin D levels greatly influence the risk of developing MS and disease activity. Long-term follow-up studies indicated that low serum vitamin D levels correlate with worse disability outcomes. Since clinical trials did not provide significant evidence, the role of vitamin D in controlling disease activity remains unresolved. Larger clinical trials are needed to support the findings of observational studies and provide significant evidence in favour of vitamin D.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates therapeutic role of vitamin d in multiple sclerosis: an essentially contested concept. Larger clinical trials are needed to support the findings of observational studies and provide significant evidence in favour of vitamin D.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is an immune-mediated demyelinating disease of the nervous system with incredibly intricate etiopathogenesis involving numerous genetic, epigenetic, and environmental risk factors.</li>
+<li>Challenge: Major environmental risk factors include ultraviolet (UV) radiation, vitamin D, Epstein-Barr virus (EBV) infection, smoking, and high body mass index (BMI).</li>
+<li>Action: Vitamin D, in particular, can be viewed as one piece of this puzzle, with various tabs and pockets, occupying a sequential site.</li>
+<li>Resolution: In this article, we have briefly discussed the neuroimmunology of MS and the role of vitamin D in regulating immune responses.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.7759/cureus.26186" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Mahejabeen Fatima. (2022). Therapeutic Role of Vitamin D in Multiple Sclerosis: An Essentially Contested Concept. Cureus. https://doi.org/10.7759/cureus.26186</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_bdfb43498fdd_2022,
+  title = {Therapeutic Role of Vitamin D in Multiple Sclerosis: An Essentially Contested Concept},
+  author = {Mahejabeen Fatima},
+  year = {2022},
+  journal = {Cureus},
+  doi = {10.7759/cureus.26186},
+  url = {https://doi.org/10.7759/cureus.26186},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Endogenous retroviruses in multiple sclerosis: A network-based etiopathogenic model</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The present perspective article proposes an etiopathological model for multiple sclerosis pathogenesis and progression associated with the activation of human endogenous retroviruses. We reviewed preclinical, clinical, epidemiological, and evolutionary evidence indicating how the complex, multi-level interplay of genetic traits and environmental factors contributes to multiple sclerosis. We propose that endogenous retroviruses transactivation acts as a critical node in disease development. We also discuss the rationale for combined anti-retroviral therapy in multiple sclerosis as a disease-modifying therapeutic strategy. Finally, we propose that the immuno-pathogenic process triggered by endogenous retrovirus activation can be extended to aging and aging-related neurodegeneration. In this regard, endogenous retroviruses can be envisioned to act as epigenetic noise, favoring the proliferation of disorganized cellular subpopulations and accelerating system-specific &quot;aging&quot;. Since inflammation and aging are two sides of the same coin (plastic dis-adaptation to external stimuli with system-specific degree of freedom), the two conditions may be epiphenomenal products of increased epigenomic entropy. Inflammation accelerates organ-specific aging, disrupting communication throughout critical systems of the body and producing symptoms. Overlapping neurological symptoms and syndromes may emerge from the activity of shared molecular networks that respond to endogenous retroviruses&#x27; reactivation.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates endogenous retroviruses in multiple sclerosis: a network-based etiopathogenic model. Overlapping neurological symptoms and syndromes may emerge from the activity of shared molecular networks that respond to endogenous retroviruses&#x27; reactivation.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The present perspective article proposes an etiopathological model for multiple sclerosis pathogenesis and progression associated with the activation of human endogenous retroviruses.</li>
+<li>Challenge: We reviewed preclinical, clinical, epidemiological, and evolutionary evidence indicating how the complex, multi-level interplay of genetic traits and environmental factors contributes to multiple sclerosis.</li>
+<li>Action: We propose that endogenous retroviruses transactivation acts as a critical node in disease development.</li>
+<li>Resolution: We also discuss the rationale for combined anti-retroviral therapy in multiple sclerosis as a disease-modifying therapeutic strategy.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.arr.2024.102392" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Stefano Censi. (2024). Endogenous retroviruses in multiple sclerosis: A network-based etiopathogenic model. Ageing Research Reviews. https://doi.org/10.1016/j.arr.2024.102392</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_6c89dec60c50_2024,
+  title = {Endogenous retroviruses in multiple sclerosis: A network-based etiopathogenic model},
+  author = {Stefano Censi},
+  year = {2024},
+  journal = {Ageing Research Reviews},
+  doi = {10.1016/j.arr.2024.102392},
+  url = {https://doi.org/10.1016/j.arr.2024.102392},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple sclerosis and infection: history, EBV, and the search for mechanism</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>SUMMARYInfection has long been hypothesized as the cause of multiple sclerosis (MS), and recent evidence for Epstein-Barr virus (EBV) as the trigger of MS is clear and compelling. This clarity contrasts with yet uncertain viral mechanisms and their relation to MS neuroinflammation and demyelination. As long as this disparity persists, it will invigorate virologists, molecular biologists, immunologists, and clinicians to ascertain how EBV potentiates MS onset, and possibly the disease&#x27;s chronic activity and progression. Such efforts should take advantage of the diverse body of basic and clinical research conducted over nearly two centuries since the first clinical descriptions of MS plaques. Defining the contribution of EBV to the complex and multifactorial pathology of MS will also require suitable experimental models and techniques. Such efforts will broaden our understanding of virus-driven neuroinflammation and specifically inform the development of EBV-targeted therapies for MS management and, ultimately, prevention.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis and infection: history, ebv, and the search for mechanism. Such efforts will broaden our understanding of virus-driven neuroinflammation and specifically inform the development of EBV-targeted therapies for MS management and, ultimately, prevention.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: SUMMARYInfection has long been hypothesized as the cause of multiple sclerosis (MS), and recent evidence for Epstein-Barr virus (EBV) as the trigger of MS is clear and compelling.</li>
+<li>Challenge: This clarity contrasts with yet uncertain viral mechanisms and their relation to MS neuroinflammation and demyelination.</li>
+<li>Action: As long as this disparity persists, it will invigorate virologists, molecular biologists, immunologists, and clinicians to ascertain how EBV potentiates MS onset, and possibly the disease&#x27;s chronic activity and progression.</li>
+<li>Resolution: Such efforts should take advantage of the diverse body of basic and clinical research conducted over nearly two centuries since the first clinical descriptions of MS plaques.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1128/mmbr.00119-23" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Elliott D. SoRelle. (2025). Multiple sclerosis and infection: history, EBV, and the search for mechanism. Microbiology and Molecular Biology Reviews. https://doi.org/10.1128/mmbr.00119-23</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_b09a57195cda_2025,
+  title = {Multiple sclerosis and infection: history, EBV, and the search for mechanism},
+  author = {Elliott D. SoRelle},
+  year = {2025},
+  journal = {Microbiology and Molecular Biology Reviews},
+  doi = {10.1128/mmbr.00119-23},
+  url = {https://doi.org/10.1128/mmbr.00119-23},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The Impact of Microbiota–Immunity–Hormone Interactions on Autoimmune Diseases and Infection</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Autoimmune diseases are complex multifactorial disorders, and a mixture of genetic and environmental factors play a role in their onset. In recent years, the microbiota has gained attention as it helps to maintain host health and immune homeostasis and is a relevant player in the interaction between our body and the outside world. Alterations (dysbiosis) in its composition or function have been linked to different pathologies, including autoimmune diseases. Among the different microbiota functions, there is the activation/modulation of immune cells that can protect against infections. However, if dysbiosis occurs, it can compromise the host’s ability to protect against pathogens, contributing to the development and progression of autoimmune diseases. In some cases, infections can trigger autoimmune diseases by several mechanisms, including the alteration of gut permeability and the activation of innate immune cells to produce pro-inflammatory cytokines that recruit autoreactive T and B cells. In this complex scenario, we cannot neglect critical hormones’ roles in regulating immune responses. Different hormones, especially estrogens, have been shown to influence the development and progression of autoimmune diseases by modulating the activity and function of the immune system in different ways. In this review, we summarized the main mechanisms of connection between infections, microbiota, immunity, and hormones in autoimmune diseases’ onset and progression given the influence of some infections and hormone levels on their pathogenesis. In detail, we focused on rheumatoid arthritis, multiple sclerosis, and systemic lupus erythematosus.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the impact of microbiota–immunity–hormone interactions on autoimmune diseases and infection. In detail, we focused on rheumatoid arthritis, multiple sclerosis, and systemic lupus erythematosus.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Autoimmune diseases are complex multifactorial disorders, and a mixture of genetic and environmental factors play a role in their onset.</li>
+<li>Challenge: In recent years, the microbiota has gained attention as it helps to maintain host health and immune homeostasis and is a relevant player in the interaction between our body and the outside world.</li>
+<li>Action: Alterations (dysbiosis) in its composition or function have been linked to different pathologies, including autoimmune diseases.</li>
+<li>Resolution: Among the different microbiota functions, there is the activation/modulation of immune cells that can protect against infections.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/biomedicines12030616" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Serena Martinelli. (2024). The Impact of Microbiota–Immunity–Hormone Interactions on Autoimmune Diseases and Infection. Biomedicines. https://doi.org/10.3390/biomedicines12030616</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_c35e07055ec2_2024,
+  title = {The Impact of Microbiota–Immunity–Hormone Interactions on Autoimmune Diseases and Infection},
+  author = {Serena Martinelli},
+  year = {2024},
+  journal = {Biomedicines},
+  doi = {10.3390/biomedicines12030616},
+  url = {https://doi.org/10.3390/biomedicines12030616},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Comparison of recent updates in genetics, immunology, biomarkers, and neuroimaging of primary‐progressive and relapsing‐remitting multiple sclerosis and the role of ocrelizumab in the management of their refractory cases</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (68%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Early detection, timely intervention, and the adoption of lifestyle modifications play pivotal roles in enhancing treatment outcomes. Notably, ocrelizumab has demonstrated potential in symptom control and mitigating the rate of disease advancement, further underscoring its clinical significance in the management of MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates comparison of recent updates in genetics, immunology, biomarkers, and neuroimaging of primary‐progressive and relapsing‐remitting multiple sclerosis and the role of ocrelizumab in the management of their refractory cases. Notably, ocrelizumab has demonstrated potential in symptom control and mitigating the rate of disease advancement, further underscoring its clinical significance in the management of MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Early detection, timely intervention, and the adoption of lifestyle modifications play pivotal roles in enhancing treatment outcomes.</li>
+<li>Challenge: Notably, ocrelizumab has demonstrated potential in symptom control and mitigating the rate of disease advancement, further underscoring its clinical significance in the management of MS.</li>
+<li>Action: This paper investigates comparison of recent updates in genetics, immunology, biomarkers, and neuroimaging of primary‐progressive and relapsing‐remitting multiple sclerosis and the role of ocrelizumab in the management of their refractory cases.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/hsr2.1422" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Priyadarshi Prajjwal. (2023). Comparison of recent updates in genetics, immunology, biomarkers, and neuroimaging of primary‐progressive and relapsing‐remitting multiple sclerosis and the role of ocrelizumab in the management of their refractory cases. Health Science Reports. https://doi.org/10.1002/hsr2.1422</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_f774cbdf5263_2023,
+  title = {Comparison of recent updates in genetics, immunology, biomarkers, and neuroimaging of primary‐progressive and relapsing‐remitting multiple sclerosis and the role of ocrelizumab in the management of their refractory cases},
+  author = {Priyadarshi Prajjwal},
+  year = {2023},
+  journal = {Health Science Reports},
+  doi = {10.1002/hsr2.1422},
+  url = {https://doi.org/10.1002/hsr2.1422},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Gene–environment interactions and their impact on human health</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (79%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The molecular processes underlying human health and disease are highly complex. Often, genetic and environmental factors contribute to a given disease or phenotype in a non-additive manner, yielding a gene-environment (G × E) interaction. In this work, we broadly review current knowledge on the impact of gene-environment interactions on human health. We first explain the independent impact of genetic variation and the environment. We next detail well-established G × E interactions that impact human health involving environmental toxicants, pollution, viruses, and sex chromosome composition. We conclude with possibilities and challenges for studying G × E interactions.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates gene–environment interactions and their impact on human health. We conclude with possibilities and challenges for studying G × E interactions.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The molecular processes underlying human health and disease are highly complex.</li>
+<li>Challenge: Often, genetic and environmental factors contribute to a given disease or phenotype in a non-additive manner, yielding a gene-environment (G × E) interaction.</li>
+<li>Action: In this work, we broadly review current knowledge on the impact of gene-environment interactions on human health.</li>
+<li>Resolution: We first explain the independent impact of genetic variation and the environment.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41435-022-00192-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Samuel J. Virolainen. (2022). Gene–environment interactions and their impact on human health. Genes and Immunity. https://doi.org/10.1038/s41435-022-00192-6</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_99931a2d2f53_2022,
+  title = {Gene–environment interactions and their impact on human health},
+  author = {Samuel J. Virolainen},
+  year = {2022},
+  journal = {Genes and Immunity},
+  doi = {10.1038/s41435-022-00192-6},
+  url = {https://doi.org/10.1038/s41435-022-00192-6},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Breastfeeding and Risk of Multiple Sclerosis: A Systematic Review and Meta-Analysis of Observational Studies</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (75%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The meta-analysis showed a small protective effect of having been breastfed on MS risk. This adds to the knowledge that breastfeeding is beneficial for the immunological health of a child. Future studies on the influence of having been breastfed on MS risk should apply a uniform definition of breastfeeding and investigate possible sex-specific aspects.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates breastfeeding and risk of multiple sclerosis: a systematic review and meta-analysis of observational studies. Future studies on the influence of having been breastfed on MS risk should apply a uniform definition of breastfeeding and investigate possible sex-specific aspects.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The meta-analysis showed a small protective effect of having been breastfed on MS risk.</li>
+<li>Challenge: This adds to the knowledge that breastfeeding is beneficial for the immunological health of a child.</li>
+<li>Action: Future studies on the influence of having been breastfed on MS risk should apply a uniform definition of breastfeeding and investigate possible sex-specific aspects.</li>
+<li>Resolution: This paper investigates breastfeeding and risk of multiple sclerosis: a systematic review and meta-analysis of observational studies.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1159/000526895" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Anja Holz. (2022). Breastfeeding and Risk of Multiple Sclerosis: A Systematic Review and Meta-Analysis of Observational Studies. Neuroepidemiology. https://doi.org/10.1159/000526895</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_8b1ccf588f64_2022,
+  title = {Breastfeeding and Risk of Multiple Sclerosis: A Systematic Review and Meta-Analysis of Observational Studies},
+  author = {Anja Holz},
+  year = {2022},
+  journal = {Neuroepidemiology},
+  doi = {10.1159/000526895},
+  url = {https://doi.org/10.1159/000526895},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Decoding the molecular and cellular aspects of multiple sclerosis: From diagnosis to therapeutic strategies</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis (MS) is a multifaceted, chronic neuroinflammatory condition of the central nervous system (CNS) marked by demyelination, gliosis, and axonal degradation. Despite the comprehensive investigation, the exact etiology remains unclear, requiring complex interactions among genetic, epigenetic, and environmental variables. This review highlights the pressing necessity to integrate emerging evidence connecting genetic predisposition, specifically HLA-DRB1*15:01 and over 200 non-HLA variants, with alterable environmental factors, including Epstein-Barr virus (EBV) infection, vitamin D deficiency, smoking, obesity, and heavy metal exposure. The study underscores the distinct gender-specific and geographical patterns of disease frequency and elucidates the immunological changes during pregnancy and adolescence that influence disease progression. The article methodologically synthesizes data from genome-wide association studies, experimental autoimmune encephalomyelitis models, and epidemiological cohorts, integrating these with technological advancements including neuroimaging, biosensor development, and AI-driven analytics. It examines the pathophysiological consequences of heavy metals, highlighting their involvement in mitochondrial dysfunction, oxidative stress, and neuroinflammation. The paper delineates the transformational potential of nanotherapeutics, extracellular vesicles, and artificial intelligence in improving early diagnostics, medication administration, and tailored treatment approaches. The review presents MS as a disease continuum, advocating for a paradigm shift in its classification and management. Additionally, this review offers a comprehensive viewpoint by integrating immunogenetics with digital medicine and novel medicines, potentially informing future diagnostic and therapeutic advancements. The study emphasizes the imperative of amalgamating genetic, environmental, and computational knowledge to enhance precision therapy in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates decoding the molecular and cellular aspects of multiple sclerosis: from diagnosis to therapeutic strategies. The study emphasizes the imperative of amalgamating genetic, environmental, and computational knowledge to enhance precision therapy in MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis (MS) is a multifaceted, chronic neuroinflammatory condition of the central nervous system (CNS) marked by demyelination, gliosis, and axonal degradation.</li>
+<li>Challenge: Despite the comprehensive investigation, the exact etiology remains unclear, requiring complex interactions among genetic, epigenetic, and environmental variables.</li>
+<li>Action: This review highlights the pressing necessity to integrate emerging evidence connecting genetic predisposition, specifically HLA-DRB1*15:01 and over 200 non-HLA variants, with alterable environmental factors, including Epstein-Barr virus (EBV) infection, vitamin D deficiency, smoking, obesity, and heavy metal exposure.</li>
+<li>Resolution: The study underscores the distinct gender-specific and geographical patterns of disease frequency and elucidates the immunological changes during pregnancy and adolescence that influence disease progression.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.brainres.2025.149844" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Neelam Gupta. (2025). Decoding the molecular and cellular aspects of multiple sclerosis: From diagnosis to therapeutic strategies. Brain Research. https://doi.org/10.1016/j.brainres.2025.149844</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_78b561b3986d_2025,
+  title = {Decoding the molecular and cellular aspects of multiple sclerosis: From diagnosis to therapeutic strategies},
+  author = {Neelam Gupta},
+  year = {2025},
+  journal = {Brain Research},
+  doi = {10.1016/j.brainres.2025.149844},
+  url = {https://doi.org/10.1016/j.brainres.2025.149844},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Microbial dysbiosis in the gut drives systemic autoimmune diseases</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Trillions of microbes survive and thrive inside the human body. These tiny creatures are crucial to the development and maturation of our immune system and to maintain gut immune homeostasis. Microbial dysbiosis is the main driver of local inflammatory and autoimmune diseases such as colitis and inflammatory bowel diseases. Dysbiosis in the gut can also drive systemic autoimmune diseases such as type 1 diabetes, rheumatic arthritis, and multiple sclerosis. Gut microbes directly interact with the immune system by multiple mechanisms including modulation of the host microRNAs affecting gene expression at the post-transcriptional level or production of microbial metabolites that interact with cellular receptors such as TLRs and GPCRs. This interaction modulates crucial immune functions such as differentiation of lymphocytes, production of interleukins, or controlling the leakage of inflammatory molecules from the gut to the systemic circulation. In this review, we compile and analyze data to gain insights into the underpinning mechanisms mediating systemic autoimmune diseases. Understanding how gut microbes can trigger or protect from systemic autoimmune diseases is crucial to (1) tackle these diseases through diet or lifestyle modification, (2) develop new microbiome-based therapeutics such as prebiotics or probiotics, (3) identify diagnostic biomarkers to predict disease risk, and (4) observe and intervene with microbial population change with the flare-up of autoimmune responses. Considering the microbiome signature as a crucial player in systemic autoimmune diseases might hold a promise to turn these untreatable diseases into manageable or preventable ones.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates microbial dysbiosis in the gut drives systemic autoimmune diseases. Considering the microbiome signature as a crucial player in systemic autoimmune diseases might hold a promise to turn these untreatable diseases into manageable or preventable ones.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Trillions of microbes survive and thrive inside the human body.</li>
+<li>Challenge: These tiny creatures are crucial to the development and maturation of our immune system and to maintain gut immune homeostasis.</li>
+<li>Action: Microbial dysbiosis is the main driver of local inflammatory and autoimmune diseases such as colitis and inflammatory bowel diseases.</li>
+<li>Resolution: Dysbiosis in the gut can also drive systemic autoimmune diseases such as type 1 diabetes, rheumatic arthritis, and multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2022.906258" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Walaa K. Mousa. (2022). Microbial dysbiosis in the gut drives systemic autoimmune diseases. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2022.906258</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_5d8205f2356b_2022,
+  title = {Microbial dysbiosis in the gut drives systemic autoimmune diseases},
+  author = {Walaa K. Mousa},
+  year = {2022},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2022.906258},
+  url = {https://doi.org/10.3389/fimmu.2022.906258},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Monoclonal Antibodies as Therapeutic Agents in Autoimmune and Neurodegenerative Diseases of the Central Nervous System: Current Evidence on Molecular Mechanisms and Future Directions</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Monoclonal antibodies (mAbs) have revolutionized the treatment landscape for neurological diseases, providing targeted, mechanism-based therapies for conditions ranging from autoimmune demyelinating disorders to neurodegenerative diseases. In multiple sclerosis (MS), mAbs against CD20, CD52, and α4-integrins offer disease-modifying efficacy by altering immune responses, depleting B cells, or blocking leukocyte migration into the central nervous system (CNS). Similarly, novel agents under investigation, such as frexalimab and foralumab, modulate T and B cell interactions and regulatory immunity. In neuromyelitis optica spectrum disorder (NMOSD), mAbs targeting IL-6, the complement cascade, and B cell lineage have demonstrated significant clinical benefit in preventing relapses and disability. In Alzheimer&#x27;s disease (AD), several anti-amyloid mAbs have gained regulatory approval. Anti-tau and anti-α-synuclein antibodies, though promising, have shown limited efficacy to date in AD and parkinson&#x27;s disease (PD), respectively. The evolving armamentarium of mAbs reflects a paradigm shift toward personalized neuroimmunology and neurodegeneration-targeted treatments, based on ongoing clarification of molecular and neuroinflammatory mechanisms. In this context, the present review summarizes current evidence on mAbs used in CNS disorders, with an emphasis on their pathophysiological targets, molecular mechanisms, clinical efficacy, and safety.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates monoclonal antibodies as therapeutic agents in autoimmune and neurodegenerative diseases of the central nervous system: current evidence on molecular mechanisms and future directions. In this context, the present review summarizes current evidence on mAbs used in CNS disorders, with an emphasis on their pathophysiological targets, molecular mechanisms, clinical efficacy, and safety.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Monoclonal antibodies (mAbs) have revolutionized the treatment landscape for neurological diseases, providing targeted, mechanism-based therapies for conditions ranging from autoimmune demyelinating disorders to neurodegenerative diseases.</li>
+<li>Challenge: In multiple sclerosis (MS), mAbs against CD20, CD52, and α4-integrins offer disease-modifying efficacy by altering immune responses, depleting B cells, or blocking leukocyte migration into the central nervous system (CNS).</li>
+<li>Action: Similarly, novel agents under investigation, such as frexalimab and foralumab, modulate T and B cell interactions and regulatory immunity.</li>
+<li>Resolution: In neuromyelitis optica spectrum disorder (NMOSD), mAbs targeting IL-6, the complement cascade, and B cell lineage have demonstrated significant clinical benefit in preventing relapses and disability.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/ijms26199398" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Charalampos Skarlis. (2025). Monoclonal Antibodies as Therapeutic Agents in Autoimmune and Neurodegenerative Diseases of the Central Nervous System: Current Evidence on Molecular Mechanisms and Future Directions. International Journal of Molecular Sciences. https://doi.org/10.3390/ijms26199398</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_93db374ee0c0_2025,
+  title = {Monoclonal Antibodies as Therapeutic Agents in Autoimmune and Neurodegenerative Diseases of the Central Nervous System: Current Evidence on Molecular Mechanisms and Future Directions},
+  author = {Charalampos Skarlis},
+  year = {2025},
+  journal = {International Journal of Molecular Sciences},
+  doi = {10.3390/ijms26199398},
+  url = {https://doi.org/10.3390/ijms26199398},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Mechanisms of long COVID and the path toward therapeutics</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Long COVID, a type of post-acute sequelae of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (PASC) defined by medically unexplained symptoms following infection with SARS-CoV-2, is a newly recognized infection-associated chronic condition that causes disability in some people. Substantial progress has been made in defining its epidemiology, biology, and pathophysiology. However, there is no cure for the tens of millions of people believed to be experiencing long COVID, and industry engagement in developing therapeutics has been limited. Here, we review the current state of knowledge regarding the biology and pathophysiology of long COVID, focusing on how the proposed mechanisms explain the physiology of the syndrome and how they provide a rationale for the implementation of a broad experimental medicine and clinical trials agenda. Progress toward preventing and curing long COVID and other infection-associated chronic conditions will require deep and sustained investment by funders and industry.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates mechanisms of long covid and the path toward therapeutics. Progress toward preventing and curing long COVID and other infection-associated chronic conditions will require deep and sustained investment by funders and industry.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Long COVID, a type of post-acute sequelae of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (PASC) defined by medically unexplained symptoms following infection with SARS-CoV-2, is a newly recognized infection-associated chronic condition that causes disability in some people.</li>
+<li>Challenge: Substantial progress has been made in defining its epidemiology, biology, and pathophysiology.</li>
+<li>Action: However, there is no cure for the tens of millions of people believed to be experiencing long COVID, and industry engagement in developing therapeutics has been limited.</li>
+<li>Resolution: Here, we review the current state of knowledge regarding the biology and pathophysiology of long COVID, focusing on how the proposed mechanisms explain the physiology of the syndrome and how they provide a rationale for the implementation of a broad experimental medicine and clinical trials agenda.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.cell.2024.07.054" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Michael J. Peluso. (2024). Mechanisms of long COVID and the path toward therapeutics. Cell. https://doi.org/10.1016/j.cell.2024.07.054</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_2834daad3cb6_2024,
+  title = {Mechanisms of long COVID and the path toward therapeutics},
+  author = {Michael J. Peluso},
+  year = {2024},
+  journal = {Cell},
+  doi = {10.1016/j.cell.2024.07.054},
+  url = {https://doi.org/10.1016/j.cell.2024.07.054},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The RING finger protein family in health and disease</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Ubiquitination is a highly conserved and fundamental posttranslational modification (PTM) in all eukaryotes regulating thousands of proteins. The RING (really interesting new gene) finger (RNF) protein, containing the RING domain, exerts E3 ubiquitin ligase that mediates the covalent attachment of ubiquitin (Ub) to target proteins. Multiple reviews have summarized the critical roles of the tripartite-motif (TRIM) protein family, a subgroup of RNF proteins, in various diseases, including cancer, inflammatory, infectious, and neuropsychiatric disorders. Except for TRIMs, since numerous studies over the past decades have delineated that other RNF proteins also exert widespread involvement in several diseases, their importance should not be underestimated. This review summarizes the potential contribution of dysregulated RNF proteins, except for TRIMs, to the pathogenesis of some diseases, including cancer, autoimmune diseases, and neurodegenerative disorder. Since viral infection is broadly involved in the induction and development of those diseases, this manuscript also highlights the regulatory roles of RNF proteins, excluding TRIMs, in the antiviral immune responses. In addition, we further discuss the potential intervention strategies targeting other RNF proteins for the prevention and therapeutics of those human diseases.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the ring finger protein family in health and disease. In addition, we further discuss the potential intervention strategies targeting other RNF proteins for the prevention and therapeutics of those human diseases.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Ubiquitination is a highly conserved and fundamental posttranslational modification (PTM) in all eukaryotes regulating thousands of proteins.</li>
+<li>Challenge: The RING (really interesting new gene) finger (RNF) protein, containing the RING domain, exerts E3 ubiquitin ligase that mediates the covalent attachment of ubiquitin (Ub) to target proteins.</li>
+<li>Action: Multiple reviews have summarized the critical roles of the tripartite-motif (TRIM) protein family, a subgroup of RNF proteins, in various diseases, including cancer, inflammatory, infectious, and neuropsychiatric disorders.</li>
+<li>Resolution: Except for TRIMs, since numerous studies over the past decades have delineated that other RNF proteins also exert widespread involvement in several diseases, their importance should not be underestimated.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41392-022-01152-2" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Chunmei Cai. (2022). The RING finger protein family in health and disease. Signal Transduction and Targeted Therapy. https://doi.org/10.1038/s41392-022-01152-2</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_69e3f61a751f_2022,
+  title = {The RING finger protein family in health and disease},
+  author = {Chunmei Cai},
+  year = {2022},
+  journal = {Signal Transduction and Targeted Therapy},
+  doi = {10.1038/s41392-022-01152-2},
+  url = {https://doi.org/10.1038/s41392-022-01152-2},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Toward a global research agenda for preventing multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (59%)</span>
+</div>
+<h4>Abstract</h4>
+<p>This workshop sets the stage for developing a global prevention agenda for MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates toward a global research agenda for preventing multiple sclerosis. This workshop sets the stage for developing a global prevention agenda for MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: This workshop sets the stage for developing a global prevention agenda for MS.</li>
+<li>Challenge: This paper investigates toward a global research agenda for preventing multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1177/13524585251398381" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ruth Ann Marrie. (2025). Toward a global research agenda for preventing multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/13524585251398381</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e38a6a60450a_2025,
+  title = {Toward a global research agenda for preventing multiple sclerosis},
+  author = {Ruth Ann Marrie},
+  year = {2025},
+  journal = {Multiple Sclerosis Journal},
+  doi = {10.1177/13524585251398381},
+  url = {https://doi.org/10.1177/13524585251398381},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Global impact of unproductive splicing on human gene expression</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Alternative splicing (AS) in human genes is widely viewed as a mechanism for enhancing proteomic diversity. AS can also impact gene expression levels without increasing protein diversity by producing &#x27;unproductive&#x27; transcripts that are targeted for rapid degradation by nonsense-mediated decay (NMD). However, the relative importance of this regulatory mechanism remains underexplored. To better understand the impact of AS-NMD relative to other regulatory mechanisms, we analyzed population-scale genomic data across eight molecular assays, covering various stages from transcription to cytoplasmic decay. We report threefold more unproductive splicing compared with prior estimates using steady-state RNA. This unproductive splicing compounds across multi-intronic genes, resulting in 15% of transcript molecules from protein-coding genes being unproductive. Leveraging genetic variation across cell lines, we find that GWAS trait-associated loci explained by AS are as often associated with NMD-induced expression level differences as with differences in protein isoform usage. Our findings suggest that much of the impact of AS is mediated by NMD-induced changes in gene expression rather than diversification of the proteome.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates global impact of unproductive splicing on human gene expression. We report threefold more unproductive splicing compared with prior estimates using steady-state RNA.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: We report threefold more unproductive splicing compared with prior estimates using steady-state RNA.</li>
+<li>Challenge: Our findings suggest that much of the impact of AS is mediated by NMD-induced changes in gene expression rather than diversification of the proteome.</li>
+<li>Action: This paper investigates global impact of unproductive splicing on human gene expression.</li>
+<li>Resolution: Alternative splicing (AS) in human genes is widely viewed as a mechanism for enhancing proteomic diversity.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41588-024-01872-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Benjamin Fair. (2024). Global impact of unproductive splicing on human gene expression. Nature Genetics. https://doi.org/10.1038/s41588-024-01872-x</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_2661fef8d0c6_2024,
+  title = {Global impact of unproductive splicing on human gene expression},
+  author = {Benjamin Fair},
+  year = {2024},
+  journal = {Nature Genetics},
+  doi = {10.1038/s41588-024-01872-x},
+  url = {https://doi.org/10.1038/s41588-024-01872-x},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Review of evidence linking exposure to environmental stressors and associated alterations in the dynamics of immunosenescence (ISC) with the global increase in multiple sclerosis (MS)</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (87%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Historical survey confirms that, over the latter part of the 20&lt;sup&gt;th&lt;/sup&gt; century, autoimmune-based diseases, including multiple sclerosis (MS), have shown a worldwide increase in incidence and prevalence. Analytical population studies have established that the exponential rise in MS is not solely due to improvements in diagnosis and healthcare but relates to an increase in autoimmune risk factors. Harmful environmental exposures, including non-communicable social determinants of health, anthropogens and indigenous or transmissible microbes, constitute a group of causal determinants that have been closely linked with the global rise in MS cases. Exposure to environmental stressors has profound effects on the adaptive arm of the immune system and, in particular, the associated intrinsic process of immune ageing or immunosenescence (ISC). Stressor-related disturbances to the dynamics of ISC include immune cell-linked untimely or premature (p) alterations and an accelerated replicative (ar) change. A recognised immune-associated feature of MS is pISC and current evidence supports the presence of an arISC during the disease. Moreover, collated data illustrates the immune-associated alterations that characterise pISC and arISC are inducible by environmental stressors strongly implicated in causing duplicate changes in adaptive immune cells during MS. The close relationship between exposure to environmental risk factors and the induction of pISC and arISC during MS offers a valid mechanism through which pro-immunosenescent stressors may act and contribute to the recorded increase in the global rate and number of new cases of the disease. Confirmation of alterations to the dynamics of ISC during MS provides a rational and valuable therapeutic target for the use of senolytic drugs to either prevent accumulation and enhance ablation of less efficient untimely senescent adaptive immune cells or decelerate the dysregulated process of replicative proliferation. A range of senotherapeutics are available including kinase and transcriptase inhibitors, rapalogs, flavanols and genetically-engineered T cells and the use of selective treatments to control emerging and unspecified aspects of pISC and arISC are discussed.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates review of evidence linking exposure to environmental stressors and associated alterations in the dynamics of immunosenescence (isc) with the global increase in multiple sclerosis (ms). A range of senotherapeutics are available including kinase and transcriptase inhibitors, rapalogs, flavanols and genetically-engineered T cells and the use of selective treatments to control emerging and unspecified aspects of pISC and arISC are discussed.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Historical survey confirms that, over the latter part of the 20&lt;sup&gt;th&lt;/sup&gt; century, autoimmune-based diseases, including multiple sclerosis (MS), have shown a worldwide increase in incidence and prevalence.</li>
+<li>Challenge: Analytical population studies have established that the exponential rise in MS is not solely due to improvements in diagnosis and healthcare but relates to an increase in autoimmune risk factors.</li>
+<li>Action: Harmful environmental exposures, including non-communicable social determinants of health, anthropogens and indigenous or transmissible microbes, constitute a group of causal determinants that have been closely linked with the global rise in MS cases.</li>
+<li>Resolution: Exposure to environmental stressors has profound effects on the adaptive arm of the immune system and, in particular, the associated intrinsic process of immune ageing or immunosenescence (ISC).</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s12979-024-00473-w" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> C. Bolton. (2024). Review of evidence linking exposure to environmental stressors and associated alterations in the dynamics of immunosenescence (ISC) with the global increase in multiple sclerosis (MS). Immunity &amp; Ageing. https://doi.org/10.1186/s12979-024-00473-w</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_e918344a09e2_2024,
+  title = {Review of evidence linking exposure to environmental stressors and associated alterations in the dynamics of immunosenescence (ISC) with the global increase in multiple sclerosis (MS)},
+  author = {C. Bolton},
+  year = {2024},
+  journal = {Immunity &amp; Ageing},
+  doi = {10.1186/s12979-024-00473-w},
+  url = {https://doi.org/10.1186/s12979-024-00473-w},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Association Between Polygenic Risk Score And Gut Microbiome Of Multiple Sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Abstract Background Multiple sclerosis (MS) is a complex autoimmune disease in which both the roles of genetic susceptibility and environmental/microbial factors have been investigated. More than 200 genetic susceptibility variants have been identified along with the dysbiosis of gut microbiota, both independently have been shown to be associated with MS. We hypothesize that MS patients harboring genetic susceptibility variants along with gut microbiome dysbiosis are at a greater risk of exhibiting the disease. We investigated the polygenic risk score for MS in conjunction with gut microbiota in the same cohort of 117 relapsing remitting MS (RRMS) and 26 healthy controls. DNA samples were genotyped using Illumina’s Infinium Immuno array-24 v2 chip followed by calculating polygenic risk score and the microbiota was determined by sequencing the V4 hypervariable region of the 16S rRNA gene. Results We identified two clusters of MS patients, Cluster A and B both having a higher polygenic risk score than the control group. The Cluster B with the higher polygenic risk score had a distinct gut microbiota, different than the Cluster A. MS group whose microbiome was similar to that of the control group despite a higher genetic risk score than the control group. This could be due to i) the non-active state of the disease in that group of MS patients at the time of fecal sample collection and/or ii) the restoration of the gut microbiome post disease modifying therapy to treat the MS. Conclusion Our study showed that there seems to be association between polygenic risk score and gut microbiome dysbiosis in triggering the disease in a small cohort of MS patients. The MS Cluster A who have a higher polygenic risk score but microbiome profile similar to that of healthy controls could be due to the remitting phase of the disease or due to the effect of disease modifying therapies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates association between polygenic risk score and gut microbiome of multiple sclerosis. Results We identified two clusters of MS patients, Cluster A and B both having a higher polygenic risk score than the control group.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Results We identified two clusters of MS patients, Cluster A and B both having a higher polygenic risk score than the control group.</li>
+<li>Challenge: This paper investigates association between polygenic risk score and gut microbiome of multiple sclerosis.</li>
+<li>Action: Abstract Background Multiple sclerosis (MS) is a complex autoimmune disease in which both the roles of genetic susceptibility and environmental/microbial factors have been investigated.</li>
+<li>Resolution: More than 200 genetic susceptibility variants have been identified along with the dysbiosis of gut microbiota, both independently have been shown to be associated with MS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1101/2022.11.07.515482" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Noha S. Elsayed. (2022). Association Between Polygenic Risk Score And Gut Microbiome Of Multiple Sclerosis. bioRxiv (Cold Spring Harbor Laboratory). https://doi.org/10.1101/2022.11.07.515482</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_d432d0f48273_2022,
+  title = {Association Between Polygenic Risk Score And Gut Microbiome Of Multiple Sclerosis},
+  author = {Noha S. Elsayed},
+  year = {2022},
+  journal = {bioRxiv (Cold Spring Harbor Laboratory)},
+  doi = {10.1101/2022.11.07.515482},
+  url = {https://doi.org/10.1101/2022.11.07.515482},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Childhood and adolescence factors and multiple sclerosis: results from the German National Cohort (NAKO)</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (75%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Apart from overweight and obesity at the age of 18 years, we did not observe considerable associations with MS risk. The proportion of cases that can be explained by childhood and adolescence factors examined in this study was low. Further investigations of the association between the onset of overweight and obesity in childhood and adolescence and its interaction with physical activity and MS risk seem worthwhile.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates childhood and adolescence factors and multiple sclerosis: results from the german national cohort (nako). The proportion of cases that can be explained by childhood and adolescence factors examined in this study was low.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The proportion of cases that can be explained by childhood and adolescence factors examined in this study was low.</li>
+<li>Challenge: This paper investigates childhood and adolescence factors and multiple sclerosis: results from the german national cohort (nako).</li>
+<li>Action: Apart from overweight and obesity at the age of 18 years, we did not observe considerable associations with MS risk.</li>
+<li>Resolution: Further investigations of the association between the onset of overweight and obesity in childhood and adolescence and its interaction with physical activity and MS risk seem worthwhile.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s12883-024-03620-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Anja Holz. (2024). Childhood and adolescence factors and multiple sclerosis: results from the German National Cohort (NAKO). BMC Neurology. https://doi.org/10.1186/s12883-024-03620-4</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_9d7db75a6def_2024,
+  title = {Childhood and adolescence factors and multiple sclerosis: results from the German National Cohort (NAKO)},
+  author = {Anja Holz},
+  year = {2024},
+  journal = {BMC Neurology},
+  doi = {10.1186/s12883-024-03620-4},
+  url = {https://doi.org/10.1186/s12883-024-03620-4},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Applications of single-cell RNA sequencing in drug discovery and development</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Single-cell technologies, particularly single-cell RNA sequencing (scRNA-seq) methods, together with associated computational tools and the growing availability of public data resources, are transforming drug discovery and development. New opportunities are emerging in target identification owing to improved disease understanding through cell subtyping, and highly multiplexed functional genomics screens incorporating scRNA-seq are enhancing target credentialling and prioritization. ScRNA-seq is also aiding the selection of relevant preclinical disease models and providing new insights into drug mechanisms of action. In clinical development, scRNA-seq can inform decision-making via improved biomarker identification for patient stratification and more precise monitoring of drug response and disease progression. Here, we illustrate how scRNA-seq methods are being applied in key steps in drug discovery and development, and discuss ongoing challenges for their implementation in the pharmaceutical industry.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates applications of single-cell rna sequencing in drug discovery and development. Here, we illustrate how scRNA-seq methods are being applied in key steps in drug discovery and development, and discuss ongoing challenges for their implementation in the pharmaceutical industry.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Single-cell technologies, particularly single-cell RNA sequencing (scRNA-seq) methods, together with associated computational tools and the growing availability of public data resources, are transforming drug discovery and development.</li>
+<li>Challenge: New opportunities are emerging in target identification owing to improved disease understanding through cell subtyping, and highly multiplexed functional genomics screens incorporating scRNA-seq are enhancing target credentialling and prioritization.</li>
+<li>Action: ScRNA-seq is also aiding the selection of relevant preclinical disease models and providing new insights into drug mechanisms of action.</li>
+<li>Resolution: In clinical development, scRNA-seq can inform decision-making via improved biomarker identification for patient stratification and more precise monitoring of drug response and disease progression.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41573-023-00688-4" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Bram Van de Sande. (2023). Applications of single-cell RNA sequencing in drug discovery and development. Nature Reviews Drug Discovery. https://doi.org/10.1038/s41573-023-00688-4</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_340bb10347ba_2023,
+  title = {Applications of single-cell RNA sequencing in drug discovery and development},
+  author = {Bram Van de Sande},
+  year = {2023},
+  journal = {Nature Reviews Drug Discovery},
+  doi = {10.1038/s41573-023-00688-4},
+  url = {https://doi.org/10.1038/s41573-023-00688-4},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Advancements and challenges in the epidemiology, diagnosis, treatment, and management of multiple sclerosis: a comprehensive review</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis is a chronic autoimmune disease that damages the central nervous system through inflammation, loss of myelin, and progressive neurodegeneration. Its prevalence has been increasing worldwide, with variations that reflect genetic predisposition, environmental influences, and immune system dysregulation. Advances in high-resolution magnetic resonance imaging and the use of cerebrospinal fluid biomarkers have enhanced the ability to detect early disease activity, monitor progression, and evaluate therapeutic response. Despite these improvements, challenges remain in understanding the mechanisms driving disease progression, particularly in progressive forms of multiple sclerosis where treatment options are limited. Barriers such as unequal access to therapies, variable long-term efficacy, and incomplete knowledge of disease pathways continue to hinder effective management. Current research emphasizes the need for personalized approaches that incorporate genetic, immunological, and environmental factors. Efforts are also being directed toward identifying neuroprotective and remyelinating agents, alongside integrating biomarkers into treatment strategies, in order to better tailor therapies and improve monitoring of disease activity. Future directions in multiple sclerosis research should focus on precision medicine, the discovery of novel therapeutic targets, and the integration of biomarkers into clinical care. These strategies hold the potential to improve long-term outcomes, reduce disease burden, and enhance the quality of life for affected individuals. This review explores global epidemiological patterns, recent diagnostic innovations, and the effectiveness of emerging treatment strategies in multiple sclerosis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates advancements and challenges in the epidemiology, diagnosis, treatment, and management of multiple sclerosis: a comprehensive review. This review explores global epidemiological patterns, recent diagnostic innovations, and the effectiveness of emerging treatment strategies in multiple sclerosis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis is a chronic autoimmune disease that damages the central nervous system through inflammation, loss of myelin, and progressive neurodegeneration.</li>
+<li>Challenge: Its prevalence has been increasing worldwide, with variations that reflect genetic predisposition, environmental influences, and immune system dysregulation.</li>
+<li>Action: Advances in high-resolution magnetic resonance imaging and the use of cerebrospinal fluid biomarkers have enhanced the ability to detect early disease activity, monitor progression, and evaluate therapeutic response.</li>
+<li>Resolution: Despite these improvements, challenges remain in understanding the mechanisms driving disease progression, particularly in progressive forms of multiple sclerosis where treatment options are limited.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s43088-025-00702-1" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> T. Saeed. (2025). Advancements and challenges in the epidemiology, diagnosis, treatment, and management of multiple sclerosis: a comprehensive review. Beni-Suef University Journal of Basic and Applied Sciences. https://doi.org/10.1186/s43088-025-00702-1</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_8f2d9a0a29ae_2025,
+  title = {Advancements and challenges in the epidemiology, diagnosis, treatment, and management of multiple sclerosis: a comprehensive review},
+  author = {T. Saeed},
+  year = {2025},
+  journal = {Beni-Suef University Journal of Basic and Applied Sciences},
+  doi = {10.1186/s43088-025-00702-1},
+  url = {https://doi.org/10.1186/s43088-025-00702-1},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>ACSL4-Mediated Ferroptosis and Its Potential Role in Central Nervous System Diseases and Injuries</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>As an iron-dependent regulated form of cell death, ferroptosis is characterized by iron-dependent lipid peroxidation and has been implicated in the occurrence and development of various diseases, including nervous system diseases and injuries. Ferroptosis has become a potential target for intervention in these diseases or injuries in relevant preclinical models. As a member of the Acyl-CoA synthetase long-chain family (ACSLs) that can convert saturated and unsaturated fatty acids, Acyl-CoA synthetase long-chain familymember4 (ACSL4) is involved in the regulation of arachidonic acid and eicosapentaenoic acid, thus leading to ferroptosis. The underlying molecular mechanisms of ACSL4-mediated ferroptosis will promote additional treatment strategies for these diseases or injury conditions. Our review article provides a current view of ACSL4-mediated ferroptosis, mainly including the structure and function of ACSL4, as well as the role of ACSL4 in ferroptosis. We also summarize the latest research progress of ACSL4-mediated ferroptosis in central nervous system injuries and diseases, further proving that ACSL4-medicated ferroptosis is an important target for intervention in these diseases or injuries.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates acsl4-mediated ferroptosis and its potential role in central nervous system diseases and injuries. We also summarize the latest research progress of ACSL4-mediated ferroptosis in central nervous system injuries and diseases, further proving that ACSL4-medicated ferroptosis is an important target for intervention in these diseases or injuries.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: As an iron-dependent regulated form of cell death, ferroptosis is characterized by iron-dependent lipid peroxidation and has been implicated in the occurrence and development of various diseases, including nervous system diseases and injuries.</li>
+<li>Challenge: Ferroptosis has become a potential target for intervention in these diseases or injuries in relevant preclinical models.</li>
+<li>Action: As a member of the Acyl-CoA synthetase long-chain family (ACSLs) that can convert saturated and unsaturated fatty acids, Acyl-CoA synthetase long-chain familymember4 (ACSL4) is involved in the regulation of arachidonic acid and eicosapentaenoic acid, thus leading to ferroptosis.</li>
+<li>Resolution: The underlying molecular mechanisms of ACSL4-mediated ferroptosis will promote additional treatment strategies for these diseases or injury conditions.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3390/ijms241210021" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Bowen Jia. (2023). ACSL4-Mediated Ferroptosis and Its Potential Role in Central Nervous System Diseases and Injuries. International Journal of Molecular Sciences. https://doi.org/10.3390/ijms241210021</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_cbbc5dbaf266_2023,
+  title = {ACSL4-Mediated Ferroptosis and Its Potential Role in Central Nervous System Diseases and Injuries},
+  author = {Bowen Jia},
+  year = {2023},
+  journal = {International Journal of Molecular Sciences},
+  doi = {10.3390/ijms241210021},
+  url = {https://doi.org/10.3390/ijms241210021},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (76%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The panel suggests empiric vitamin D for those aged 1 to 18 years and adults over 75 years of age, those who are pregnant, and those with high-risk prediabetes. Due to the scarcity of natural food sources rich in vitamin D, empiric supplementation can be achieved through a combination of fortified foods and supplements that contain vitamin D. Based on the absence of supportive clinical trial evidence, the panel suggests against routine 25(OH)D testing in the absence of established indications. These recommendations are not meant to replace the current DRIs for vitamin D, nor do they apply to people with established indications for vitamin D treatment or 25(OH)D testing. Further research is needed to determine optimal 25(OH)D levels for specific health benefits.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates vitamin d for the prevention of disease: an endocrine society clinical practice guideline. Further research is needed to determine optimal 25(OH)D levels for specific health benefits.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The panel suggests empiric vitamin D for those aged 1 to 18 years and adults over 75 years of age, those who are pregnant, and those with high-risk prediabetes.</li>
+<li>Challenge: Due to the scarcity of natural food sources rich in vitamin D, empiric supplementation can be achieved through a combination of fortified foods and supplements that contain vitamin D.</li>
+<li>Action: Based on the absence of supportive clinical trial evidence, the panel suggests against routine 25(OH)D testing in the absence of established indications.</li>
+<li>Resolution: These recommendations are not meant to replace the current DRIs for vitamin D, nor do they apply to people with established indications for vitamin D treatment or 25(OH)D testing.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1210/clinem/dgae290" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Marie B. Demay. (2024). Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline. The Journal of Clinical Endocrinology &amp; Metabolism. https://doi.org/10.1210/clinem/dgae290</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a6ca0f09697b_2024,
+  title = {Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline},
+  author = {Marie B. Demay},
+  year = {2024},
+  journal = {The Journal of Clinical Endocrinology &amp; Metabolism},
+  doi = {10.1210/clinem/dgae290},
+  url = {https://doi.org/10.1210/clinem/dgae290},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>New insights from the last decade of research in psychiatric genetics: discoveries, challenges and clinical implications</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (85%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Psychiatric genetics has made substantial progress in the last decade, providing new insights into the genetic etiology of psychiatric disorders, and paving the way for precision psychiatry, in which individual genetic profiles may be used to personalize risk assessment and inform clinical decision-making. Long recognized to be heritable, recent evidence shows that psychiatric disorders are influenced by thousands of genetic variants acting together. Most of these variants are commonly occurring, meaning that every individual has a genetic risk to each psychiatric disorder, from low to high. A series of large-scale genetic studies have discovered an increasing number of common and rare genetic variants robustly associated with major psychiatric disorders. The most convincing biological interpretation of the genetic findings implicates altered synaptic function in autism spectrum disorder and schizophrenia. However, the mechanistic understanding is still incomplete. In line with their extensive clinical and epidemiological overlap, psychiatric disorders appear to exist on genetic continua and share a large degree of genetic risk with one another. This provides further support to the notion that current psychiatric diagnoses do not represent distinct pathogenic entities, which may inform ongoing attempts to reconceptualize psychiatric nosology. Psychiatric disorders also share genetic influences with a range of behavioral and somatic traits and diseases, including brain structures, cognitive function, immunological phenotypes and cardiovascular disease, suggesting shared genetic etiology of potential clinical importance. Current polygenic risk score tools, which predict individual genetic susceptibility to illness, do not yet provide clinically actionable information. However, their precision is likely to improve in the coming years, and they may eventually become part of clinical practice, stressing the need to educate clinicians and patients about their potential use and misuse. This review discusses key recent insights from psychiatric genetics and their possible clinical applications, and suggests future directions.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates new insights from the last decade of research in psychiatric genetics: discoveries, challenges and clinical implications. This review discusses key recent insights from psychiatric genetics and their possible clinical applications, and suggests future directions.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Psychiatric genetics has made substantial progress in the last decade, providing new insights into the genetic etiology of psychiatric disorders, and paving the way for precision psychiatry, in which individual genetic profiles may be used to personalize risk assessment and inform clinical decision-making.</li>
+<li>Challenge: Long recognized to be heritable, recent evidence shows that psychiatric disorders are influenced by thousands of genetic variants acting together.</li>
+<li>Action: Most of these variants are commonly occurring, meaning that every individual has a genetic risk to each psychiatric disorder, from low to high.</li>
+<li>Resolution: A series of large-scale genetic studies have discovered an increasing number of common and rare genetic variants robustly associated with major psychiatric disorders.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1002/wps.21034" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ole A. Andreassen. (2023). New insights from the last decade of research in psychiatric genetics: discoveries, challenges and clinical implications. World Psychiatry. https://doi.org/10.1002/wps.21034</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_d302ddd37886_2023,
+  title = {New insights from the last decade of research in psychiatric genetics: discoveries, challenges and clinical implications},
+  author = {Ole A. Andreassen},
+  year = {2023},
+  journal = {World Psychiatry},
+  doi = {10.1002/wps.21034},
+  url = {https://doi.org/10.1002/wps.21034},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>The genetic architecture of multiple sclerosis in 2026: From susceptibility to disease progression</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2026</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The genetics of multiple sclerosis (MS) has advanced dramatically through the combined impact of high-throughput genotyping, large biobank resources, worldwide collaborations, and powerful computational analyses. Over the past two decades, genome-wide association studies (GWAS) have significantly reshaped our understanding of the genetic architecture of complex multifactorial diseases such as MS. The number of MS susceptibility-associated genomic regions is now more than 200, underscoring its highly polygenic nature. Within the major histocompatibility complex (MHC), the HLA-DRB1*15:01 allele and its extended haplotypes remain the most robust and reproducible risk factors. This historical association reflects a long-standing link between antigen presentation, immune regulation, and central nervous system autoimmunity. Beyond the MHC, common non-HLA loci implicate a wide network of immune pathways involving T-cell and B-cell activation, cytokine signaling, and antigen presentation. Moreover, rare variant analyses and family-based designs, although limited in power, have uncovered additional susceptibility genes, such as PRF1, CYP27B1, and NLRP1, shedding light on distinct mechanisms of immune modulation and metabolic regulation. The step forward will be now to explore diverse genetic ancestry populations, bearing differences in risk allele frequencies; multi-ethnic and family-based designs are needed to disentangle true genetic effects from environmental confounders. In parallel, progress has been made toward MS progression, as variants potentially influencing disability accumulation and neurodegeneration were identified. These findings have deepened our understanding of MS pathophysiology. They now provide a foundation for future integrative models that combine genetics, environment, and multi-omics data to elucidate disease heterogeneity and guide personalized therapeutic strategies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates the genetic architecture of multiple sclerosis in 2026: from susceptibility to disease progression. They now provide a foundation for future integrative models that combine genetics, environment, and multi-omics data to elucidate disease heterogeneity and guide personalized therapeutic strategies.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The genetics of multiple sclerosis (MS) has advanced dramatically through the combined impact of high-throughput genotyping, large biobank resources, worldwide collaborations, and powerful computational analyses.</li>
+<li>Challenge: Over the past two decades, genome-wide association studies (GWAS) have significantly reshaped our understanding of the genetic architecture of complex multifactorial diseases such as MS.</li>
+<li>Action: The number of MS susceptibility-associated genomic regions is now more than 200, underscoring its highly polygenic nature.</li>
+<li>Resolution: Within the major histocompatibility complex (MHC), the HLA-DRB1*15:01 allele and its extended haplotypes remain the most robust and reproducible risk factors.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1016/j.neurol.2026.03.006" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> S. Bourguiba-Hachemi. (2026). The genetic architecture of multiple sclerosis in 2026: From susceptibility to disease progression. Revue Neurologique. https://doi.org/10.1016/j.neurol.2026.03.006</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_26b3fc988138_2026,
+  title = {The genetic architecture of multiple sclerosis in 2026: From susceptibility to disease progression},
+  author = {S. Bourguiba-Hachemi},
+  year = {2026},
+  journal = {Revue Neurologique},
+  doi = {10.1016/j.neurol.2026.03.006},
+  url = {https://doi.org/10.1016/j.neurol.2026.03.006},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (78%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Multiple sclerosis is a demyelinating disease of the central nervous system. It contributes to a variety of symptoms affecting different areas of the body. The primary care NP must be familiar with the disease, therapies, and social impact to provide proper care to affected patients.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates multiple sclerosis. The primary care NP must be familiar with the disease, therapies, and social impact to provide proper care to affected patients.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Multiple sclerosis is a demyelinating disease of the central nervous system.</li>
+<li>Challenge: It contributes to a variety of symptoms affecting different areas of the body.</li>
+<li>Action: The primary care NP must be familiar with the disease, therapies, and social impact to provide proper care to affected patients.</li>
+<li>Resolution: This paper investigates multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1097/01.npr.0000000000000083" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Jocelyn McGuire. (2023). Multiple sclerosis. The Nurse Practitioner. https://doi.org/10.1097/01.npr.0000000000000083</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_3dd1e69b1edc_2023,
+  title = {Multiple sclerosis},
+  author = {Jocelyn McGuire},
+  year = {2023},
+  journal = {The Nurse Practitioner},
+  doi = {10.1097/01.npr.0000000000000083},
+  url = {https://doi.org/10.1097/01.npr.0000000000000083},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Artificial intelligence in clinical medicine: catalyzing a sustainable global healthcare paradigm</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>As the demand for quality healthcare increases, healthcare systems worldwide are grappling with time constraints and excessive workloads, which can compromise the quality of patient care. Artificial intelligence (AI) has emerged as a powerful tool in clinical medicine, revolutionizing various aspects of patient care and medical research. The integration of AI in clinical medicine has not only improved diagnostic accuracy and treatment outcomes, but also contributed to more efficient healthcare delivery, reduced costs, and facilitated better patient experiences. This review article provides an extensive overview of AI applications in history taking, clinical examination, imaging, therapeutics, prognosis and research. Furthermore, it highlights the critical role AI has played in transforming healthcare in developing nations.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates artificial intelligence in clinical medicine: catalyzing a sustainable global healthcare paradigm. Furthermore, it highlights the critical role AI has played in transforming healthcare in developing nations.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: As the demand for quality healthcare increases, healthcare systems worldwide are grappling with time constraints and excessive workloads, which can compromise the quality of patient care.</li>
+<li>Challenge: Artificial intelligence (AI) has emerged as a powerful tool in clinical medicine, revolutionizing various aspects of patient care and medical research.</li>
+<li>Action: The integration of AI in clinical medicine has not only improved diagnostic accuracy and treatment outcomes, but also contributed to more efficient healthcare delivery, reduced costs, and facilitated better patient experiences.</li>
+<li>Resolution: This review article provides an extensive overview of AI applications in history taking, clinical examination, imaging, therapeutics, prognosis and research.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/frai.2023.1227091" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Gokul Krishnan. (2023). Artificial intelligence in clinical medicine: catalyzing a sustainable global healthcare paradigm. Frontiers in Artificial Intelligence. https://doi.org/10.3389/frai.2023.1227091</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a1e2c5f4d18a_2023,
+  title = {Artificial intelligence in clinical medicine: catalyzing a sustainable global healthcare paradigm},
+  author = {Gokul Krishnan},
+  year = {2023},
+  journal = {Frontiers in Artificial Intelligence},
+  doi = {10.3389/frai.2023.1227091},
+  url = {https://doi.org/10.3389/frai.2023.1227091},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>From real-world electronic health record data to real-world results using artificial intelligence</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2022</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (80%)</span>
+</div>
+<h4>Abstract</h4>
+<p>With the worldwide digitalisation of medical records, electronic health records (EHRs) have become an increasingly important source of real-world data (RWD). RWD can complement traditional study designs because it captures almost the complete variety of patients, leading to more generalisable results. For rheumatology, these data are particularly interesting as our diseases are uncommon and often take years to develop. In this review, we discuss the following concepts related to the use of EHR for research and considerations for translation into clinical care: EHR data contain a broad collection of healthcare data covering the multitude of real-life patients and the healthcare processes related to their care. Machine learning (ML) is a powerful method that allows us to leverage a large amount of heterogeneous clinical data for clinical algorithms, but requires extensive training, testing, and validation. Patterns discovered in EHR data using ML are applicable to real life settings, however, are also prone to capturing the local EHR structure and limiting generalisability outside the EHR(s) from which they were developed. Population studies on EHR necessitates knowledge on the factors influencing the data available in the EHR to circumvent biases, for example, access to medical care, insurance status. In summary, EHR data represent a rapidly growing and key resource for real-world studies. However, transforming RWD EHR data for research and for real-world evidence using ML requires knowledge of the EHR system and their differences from existing observational data to ensure that studies incorporate rigorous methods that acknowledge or address factors such as access to care, noise in the data, missingness and indication bias.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates from real-world electronic health record data to real-world results using artificial intelligence. For rheumatology, these data are particularly interesting as our diseases are uncommon and often take years to develop.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: For rheumatology, these data are particularly interesting as our diseases are uncommon and often take years to develop.</li>
+<li>Challenge: This paper investigates from real-world electronic health record data to real-world results using artificial intelligence.</li>
+<li>Action: With the worldwide digitalisation of medical records, electronic health records (EHRs) have become an increasingly important source of real-world data (RWD).</li>
+<li>Resolution: RWD can complement traditional study designs because it captures almost the complete variety of patients, leading to more generalisable results.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1136/ard-2022-222626" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Rachel Knevel. (2022). From real-world electronic health record data to real-world results using artificial intelligence. Annals of the Rheumatic Diseases. https://doi.org/10.1136/ard-2022-222626</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_a5f26834ad2f_2022,
+  title = {From real-world electronic health record data to real-world results using artificial intelligence},
+  author = {Rachel Knevel},
+  year = {2022},
+  journal = {Annals of the Rheumatic Diseases},
+  doi = {10.1136/ard-2022-222626},
+  url = {https://doi.org/10.1136/ard-2022-222626},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Therapeutic trials for long COVID-19: A call to action from the interventions taskforce of the RECOVER initiative</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Although most individuals recover from acute SARS-CoV-2 infection, a significant number continue to suffer from Post-Acute Sequelae of SARS-CoV-2 (PASC), including the unexplained symptoms that are frequently referred to as long COVID, which could last for weeks, months, or even years after the acute phase of illness. The National Institutes of Health is currently funding large multi-center research programs as part of its Researching COVID to Enhance Recover (RECOVER) initiative to understand why some individuals do not recover fully from COVID-19. Several ongoing pathobiology studies have provided clues to potential mechanisms contributing to this condition. These include persistence of SARS-CoV-2 antigen and/or genetic material, immune dysregulation, reactivation of other latent viral infections, microvascular dysfunction, and gut dysbiosis, among others. Although our understanding of the causes of long COVID remains incomplete, these early pathophysiologic studies suggest biological pathways that could be targeted in therapeutic trials that aim to ameliorate symptoms. Repurposed medicines and novel therapeutics deserve formal testing in clinical trial settings prior to adoption. While we endorse clinical trials, especially those that prioritize inclusion of the diverse populations most affected by COVID-19 and long COVID, we discourage off-label experimentation in uncontrolled and/or unsupervised settings. Here, we review ongoing, planned, and potential future therapeutic interventions for long COVID based on the current understanding of the pathobiological processes underlying this condition. We focus on clinical, pharmacological, and feasibility data, with the goal of informing future interventional research studies.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates therapeutic trials for long covid-19: a call to action from the interventions taskforce of the recover initiative. We focus on clinical, pharmacological, and feasibility data, with the goal of informing future interventional research studies.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Although most individuals recover from acute SARS-CoV-2 infection, a significant number continue to suffer from Post-Acute Sequelae of SARS-CoV-2 (PASC), including the unexplained symptoms that are frequently referred to as long COVID, which could last for weeks, months, or even years after the acute phase of illness.</li>
+<li>Challenge: The National Institutes of Health is currently funding large multi-center research programs as part of its Researching COVID to Enhance Recover (RECOVER) initiative to understand why some individuals do not recover fully from COVID-19.</li>
+<li>Action: Several ongoing pathobiology studies have provided clues to potential mechanisms contributing to this condition.</li>
+<li>Resolution: These include persistence of SARS-CoV-2 antigen and/or genetic material, immune dysregulation, reactivation of other latent viral infections, microvascular dysfunction, and gut dysbiosis, among others.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2023.1129459" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Hector Bonilla. (2023). Therapeutic trials for long COVID-19: A call to action from the interventions taskforce of the RECOVER initiative. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2023.1129459</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_35a69b733d34_2023,
+  title = {Therapeutic trials for long COVID-19: A call to action from the interventions taskforce of the RECOVER initiative},
+  author = {Hector Bonilla},
+  year = {2023},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2023.1129459},
+  url = {https://doi.org/10.3389/fimmu.2023.1129459},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Study protocol for a multicentre, randomised, double-blinded, placebo-controlled, multi-arm, multi-stage, trial of SpironolacTone and famciclOovir in the treatment of Progressive Multiple Sclerosis to prevent disability progression: the STOP-MS trial</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2025</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (54%)</span>
+</div>
+<h4>Abstract</h4>
+<p>The STOP-MS trial has been acknowledged by the Therapeutics Goods Administration under the Clinical Trial Notification scheme (CT-2023-CTN-03 505-1) and is registered with the Australian and New Zealand Clinical Trial Registry (ACTRN12623000849695).</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates study protocol for a multicentre, randomised, double-blinded, placebo-controlled, multi-arm, multi-stage, trial of spironolactone and famcicloovir in the treatment of progressive multiple sclerosis to prevent disability progression: the stop-ms trial. The STOP-MS trial has been acknowledged by the Therapeutics Goods Administration under the Clinical Trial Notification scheme (CT-2023-CTN-03 505-1) and is registered with the Australian and New Zealand Clinical Trial Registry (ACTRN12623000849695).</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: The STOP-MS trial has been acknowledged by the Therapeutics Goods Administration under the Clinical Trial Notification scheme (CT-2023-CTN-03 505-1) and is registered with the Australian and New Zealand Clinical Trial Registry (ACTRN12623000849695).</li>
+<li>Challenge: This paper investigates study protocol for a multicentre, randomised, double-blinded, placebo-controlled, multi-arm, multi-stage, trial of spironolactone and famcicloovir in the treatment of progressive multiple sclerosis to prevent disability progression: the stop-ms trial.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1136/bmjno-2025-001313" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Kayla Ward. (2025). Study protocol for a multicentre, randomised, double-blinded, placebo-controlled, multi-arm, multi-stage, trial of SpironolacTone and famciclOovir in the treatment of Progressive Multiple Sclerosis to prevent disability progression: the STOP-MS trial. BMJ Neurology Open. https://doi.org/10.1136/bmjno-2025-001313</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_57f3fef3d196_2025,
+  title = {Study protocol for a multicentre, randomised, double-blinded, placebo-controlled, multi-arm, multi-stage, trial of SpironolacTone and famciclOovir in the treatment of Progressive Multiple Sclerosis to prevent disability progression: the STOP-MS trial},
+  author = {Kayla Ward},
+  year = {2025},
+  journal = {BMJ Neurology Open},
+  doi = {10.1136/bmjno-2025-001313},
+  url = {https://doi.org/10.1136/bmjno-2025-001313},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Large-scale multitrait genome-wide association analyses identify hundreds of glaucoma risk loci</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Glaucoma, a leading cause of irreversible blindness, is a highly heritable human disease. Previous genome-wide association studies have identified over 100 loci for the most common form, primary open-angle glaucoma. Two key glaucoma-associated traits also show high heritability: intraocular pressure and optic nerve head excavation damage quantified as the vertical cup-to-disc ratio. Here, since much of glaucoma heritability remains unexplained, we conducted a large-scale multitrait genome-wide association study in participants of European ancestry combining primary open-angle glaucoma and its two associated traits (total sample size over 600,000) to substantially improve genetic discovery power (263 loci). We further increased our power by then employing a multiancestry approach, which increased the number of independent risk loci to 312, with the vast majority replicating in a large independent cohort from 23andMe, Inc. (total sample size over 2.8 million; 296 loci replicated at P &lt; 0.05, 240 after Bonferroni correction). Leveraging multiomics datasets, we identified many potential druggable genes, including neuro-protection targets likely to act via the optic nerve, a key advance for glaucoma because all existing drugs only target intraocular pressure. We further used Mendelian randomization and genetic correlation-based approaches to identify novel links to other complex traits, including immune-related diseases such as multiple sclerosis and systemic lupus erythematosus.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates large-scale multitrait genome-wide association analyses identify hundreds of glaucoma risk loci. Leveraging multiomics datasets, we identified many potential druggable genes, including neuro-protection targets likely to act via the optic nerve, a key advance for glaucoma because all existing drugs only target intraocular pressure.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Leveraging multiomics datasets, we identified many potential druggable genes, including neuro-protection targets likely to act via the optic nerve, a key advance for glaucoma because all existing drugs only target intraocular pressure.</li>
+<li>Challenge: This paper investigates large-scale multitrait genome-wide association analyses identify hundreds of glaucoma risk loci.</li>
+<li>Action: Glaucoma, a leading cause of irreversible blindness, is a highly heritable human disease.</li>
+<li>Resolution: Previous genome-wide association studies have identified over 100 loci for the most common form, primary open-angle glaucoma.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41588-023-01428-5" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Xikun Han. (2023). Large-scale multitrait genome-wide association analyses identify hundreds of glaucoma risk loci. Nature Genetics. https://doi.org/10.1038/s41588-023-01428-5</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_1c57c6b80240_2023,
+  title = {Large-scale multitrait genome-wide association analyses identify hundreds of glaucoma risk loci},
+  author = {Xikun Han},
+  year = {2023},
+  journal = {Nature Genetics},
+  doi = {10.1038/s41588-023-01428-5},
+  url = {https://doi.org/10.1038/s41588-023-01428-5},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Immune mechanisms underlying COVID-19 pathology and post-acute sequelae of SARS-CoV-2 infection (PASC)</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (83%)</span>
+</div>
+<h4>Abstract</h4>
+<p>With a global tally of more than 500 million cases of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infections to date, there are growing concerns about the post-acute sequelae of SARS-CoV-2 infection (PASC), also known as long COVID. Recent studies suggest that exaggerated immune responses are key determinants of the severity and outcomes of the initial SARS-CoV-2 infection as well as subsequent PASC. The complexity of the innate and adaptive immune responses in the acute and post-acute period requires in-depth mechanistic analyses to identify specific molecular signals as well as specific immune cell populations which promote PASC pathogenesis. In this review, we examine the current literature on mechanisms of immune dysregulation in severe COVID-19 and the limited emerging data on the immunopathology of PASC. While the acute and post-acute phases may share some parallel mechanisms of immunopathology, it is likely that PASC immunopathology is quite distinct and heterogeneous, thus requiring large-scale longitudinal analyses in patients with and without PASC after an acute SARS-CoV-2 infection. By outlining the knowledge gaps in the immunopathology of PASC, we hope to provide avenues for novel research directions that will ultimately lead to precision therapies which restore healthy immune function in PASC patients.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates immune mechanisms underlying covid-19 pathology and post-acute sequelae of sars-cov-2 infection (pasc). By outlining the knowledge gaps in the immunopathology of PASC, we hope to provide avenues for novel research directions that will ultimately lead to precision therapies which restore healthy immune function in PASC patients.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: With a global tally of more than 500 million cases of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infections to date, there are growing concerns about the post-acute sequelae of SARS-CoV-2 infection (PASC), also known as long COVID.</li>
+<li>Challenge: Recent studies suggest that exaggerated immune responses are key determinants of the severity and outcomes of the initial SARS-CoV-2 infection as well as subsequent PASC.</li>
+<li>Action: The complexity of the innate and adaptive immune responses in the acute and post-acute period requires in-depth mechanistic analyses to identify specific molecular signals as well as specific immune cell populations which promote PASC pathogenesis.</li>
+<li>Resolution: In this review, we examine the current literature on mechanisms of immune dysregulation in severe COVID-19 and the limited emerging data on the immunopathology of PASC.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.7554/elife.86014" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Sindhu Mohandas. (2023). Immune mechanisms underlying COVID-19 pathology and post-acute sequelae of SARS-CoV-2 infection (PASC). eLife. https://doi.org/10.7554/elife.86014</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_891854be8e25_2023,
+  title = {Immune mechanisms underlying COVID-19 pathology and post-acute sequelae of SARS-CoV-2 infection (PASC)},
+  author = {Sindhu Mohandas},
+  year = {2023},
+  journal = {eLife},
+  doi = {10.7554/elife.86014},
+  url = {https://doi.org/10.7554/elife.86014},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Circulating levels of micronutrients and risk of infections: a Mendelian randomization study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty low (54%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Our results strongly support a role of copper in the susceptibility to gastrointestinal infections.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates circulating levels of micronutrients and risk of infections: a mendelian randomization study. Our results strongly support a role of copper in the susceptibility to gastrointestinal infections.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Our results strongly support a role of copper in the susceptibility to gastrointestinal infections.</li>
+<li>Challenge: This paper investigates circulating levels of micronutrients and risk of infections: a mendelian randomization study.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1186/s12916-023-02780-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Helene M. Flatby. (2023). Circulating levels of micronutrients and risk of infections: a Mendelian randomization study. BMC Medicine. https://doi.org/10.1186/s12916-023-02780-3</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_7440963c8de9_2023,
+  title = {Circulating levels of micronutrients and risk of infections: a Mendelian randomization study},
+  author = {Helene M. Flatby},
+  year = {2023},
+  journal = {BMC Medicine},
+  doi = {10.1186/s12916-023-02780-3},
+  url = {https://doi.org/10.1186/s12916-023-02780-3},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Aberrant long-chain fatty acids metabolism and its interplay with immuno-inflammatory responses in relapsing-remitting multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2026</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (74%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Our results uncover the aberrant metabolic features of LCFAs and potential biomarkers in RRMS patients, and the interactive network and key molecular nodes between LCFAs and peripheral immune-inflammatory responses. The interplay between LCFAs and immuno-inflammation may drive the migration of inflammatory events from the periphery to the CNS, reigniting CNS neuroinflammation and causing RRMS relapses. These findings offer valuable insights for RRMS diagnosis and novel therapeutic development.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates aberrant long-chain fatty acids metabolism and its interplay with immuno-inflammatory responses in relapsing-remitting multiple sclerosis. Our results uncover the aberrant metabolic features of LCFAs and potential biomarkers in RRMS patients, and the interactive network and key molecular nodes between LCFAs and peripheral immune-inflammatory responses.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Our results uncover the aberrant metabolic features of LCFAs and potential biomarkers in RRMS patients, and the interactive network and key molecular nodes between LCFAs and peripheral immune-inflammatory responses.</li>
+<li>Challenge: This paper investigates aberrant long-chain fatty acids metabolism and its interplay with immuno-inflammatory responses in relapsing-remitting multiple sclerosis.</li>
+<li>Action: The interplay between LCFAs and immuno-inflammation may drive the migration of inflammatory events from the periphery to the CNS, reigniting CNS neuroinflammation and causing RRMS relapses.</li>
+<li>Resolution: These findings offer valuable insights for RRMS diagnosis and novel therapeutic development.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.3389/fimmu.2026.1766322" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Xiao-xi Zhu. (2026). Aberrant long-chain fatty acids metabolism and its interplay with immuno-inflammatory responses in relapsing-remitting multiple sclerosis. Frontiers in Immunology. https://doi.org/10.3389/fimmu.2026.1766322</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_bd60c68e61f4_2026,
+  title = {Aberrant long-chain fatty acids metabolism and its interplay with immuno-inflammatory responses in relapsing-remitting multiple sclerosis},
+  author = {Xiao-xi Zhu},
+  year = {2026},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2026.1766322},
+  url = {https://doi.org/10.3389/fimmu.2026.1766322},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Conserved and divergent gene regulatory programs of the mammalian neocortex</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Divergence of cis-regulatory elements drives species-specific traits&lt;sup&gt;1&lt;/sup&gt;, but how this manifests in the evolution of the neocortex at the molecular and cellular level remains unclear. Here we investigated the gene regulatory programs in the primary motor cortex of human, macaque, marmoset and mouse using single-cell multiomics assays, generating gene expression, chromatin accessibility, DNA methylome and chromosomal conformation profiles from a total of over 200,000 cells. From these data, we show evidence that divergence of transcription factor expression corresponds to species-specific epigenome landscapes. We find that conserved and divergent gene regulatory features are reflected in the evolution of the three-dimensional genome. Transposable elements contribute to nearly 80% of the human-specific candidate cis-regulatory elements in cortical cells. Through machine learning, we develop sequence-based predictors of candidate cis-regulatory elements in different species and demonstrate that the genomic regulatory syntax is highly preserved from rodents to primates. Finally, we show that epigenetic conservation combined with sequence similarity helps to uncover functional cis-regulatory elements and enhances our ability to interpret genetic variants contributing to neurological disease and traits.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates conserved and divergent gene regulatory programs of the mammalian neocortex. From these data, we show evidence that divergence of transcription factor expression corresponds to species-specific epigenome landscapes.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: From these data, we show evidence that divergence of transcription factor expression corresponds to species-specific epigenome landscapes.</li>
+<li>Challenge: Finally, we show that epigenetic conservation combined with sequence similarity helps to uncover functional cis-regulatory elements and enhances our ability to interpret genetic variants contributing to neurological disease and traits.</li>
+<li>Action: This paper investigates conserved and divergent gene regulatory programs of the mammalian neocortex.</li>
+<li>Resolution: Divergence of cis-regulatory elements drives species-specific traits&lt;sup&gt;1&lt;/sup&gt;, but how this manifests in the evolution of the neocortex at the molecular and cellular level remains unclear.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1038/s41586-023-06819-6" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Nathan R. Zemke. (2023). Conserved and divergent gene regulatory programs of the mammalian neocortex. Nature. https://doi.org/10.1038/s41586-023-06819-6</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_b1e0d08ec3fd_2023,
+  title = {Conserved and divergent gene regulatory programs of the mammalian neocortex},
+  author = {Nathan R. Zemke},
+  year = {2023},
+  journal = {Nature},
+  doi = {10.1038/s41586-023-06819-6},
+  url = {https://doi.org/10.1038/s41586-023-06819-6},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Recent Advances in Intranasal Administration for Brain-Targeting Delivery: A Comprehensive Review of Lipid-Based Nanoparticles and Stimuli-Responsive Gel Formulations</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (81%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Addressing disorders related to the central nervous system (CNS) remains a complex challenge because of the presence of the blood-brain barrier (BBB), which restricts the entry of external substances into the brain tissue. Consequently, finding ways to overcome the limited therapeutic effect imposed by the BBB has become a central goal in advancing delivery systems targeted to the brain. In this context, the intranasal route has emerged as a promising solution for delivering treatments directly from the nose to the brain through the olfactory and trigeminal nerve pathways and thus, bypassing the BBB. The use of lipid-based nanoparticles, including nano/microemulsions, liposomes, solid lipid nanoparticles, and nanostructured lipid carriers, has shown promise in enhancing the efficiency of nose-to-brain delivery. These nanoparticles facilitate drug absorption from the nasal membrane. Additionally, the in situ gel (ISG) system has gained attention owing to its ability to extend the retention time of administered formulations within the nasal cavity. When combined with lipid-based nanoparticles, the ISG system creates a synergistic effect, further enhancing the overall effectiveness of brain-targeted delivery strategies. This comprehensive review provides a thorough investigation of intranasal administration. It delves into the strengths and limitations of this specific delivery route by considering the anatomical complexities and influential factors that play a role during dosing. Furthermore, this study introduces strategic approaches for incorporating nanoparticles and ISG delivery within the framework of intranasal applications. Finally, the review provides recent information on approved products and the clinical trial status of products related to intranasal administration, along with the inclusion of quality-by-design-related insights.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates recent advances in intranasal administration for brain-targeting delivery: a comprehensive review of lipid-based nanoparticles and stimuli-responsive gel formulations. Furthermore, this study introduces strategic approaches for incorporating nanoparticles and ISG delivery within the framework of intranasal applications.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Furthermore, this study introduces strategic approaches for incorporating nanoparticles and ISG delivery within the framework of intranasal applications.</li>
+<li>Challenge: This paper investigates recent advances in intranasal administration for brain-targeting delivery: a comprehensive review of lipid-based nanoparticles and stimuli-responsive gel formulations.</li>
+<li>Action: Addressing disorders related to the central nervous system (CNS) remains a complex challenge because of the presence of the blood-brain barrier (BBB), which restricts the entry of external substances into the brain tissue.</li>
+<li>Resolution: Consequently, finding ways to overcome the limited therapeutic effect imposed by the BBB has become a central goal in advancing delivery systems targeted to the brain.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.2147/ijn.s439181" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Jain Koo. (2024). Recent Advances in Intranasal Administration for Brain-Targeting Delivery: A Comprehensive Review of Lipid-Based Nanoparticles and Stimuli-Responsive Gel Formulations. International Journal of Nanomedicine. https://doi.org/10.2147/ijn.s439181</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_39ed4b0b1246_2024,
+  title = {Recent Advances in Intranasal Administration for Brain-Targeting Delivery: A Comprehensive Review of Lipid-Based Nanoparticles and Stimuli-Responsive Gel Formulations},
+  author = {Jain Koo},
+  year = {2024},
+  journal = {International Journal of Nanomedicine},
+  doi = {10.2147/ijn.s439181},
+  url = {https://doi.org/10.2147/ijn.s439181},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Epidemiology and genetics of multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (82%)</span>
+</div>
+<h4>Abstract</h4>
+<p>RoztrouĹĄenĂĄ sklerĂłza (RS) je autoimunitnĂ­ onemocnÄnĂ­, na jehoĹž rozvoji se podĂ­lĂ­ vĂ­ce faktorĹŻ. V souÄasnĂŠ dobÄ se stĂĄle vĂ­ce studiĂ­ vÄnuje podĂ­lu genetiky na rozvoji RS. Studie, kterĂŠ mapovaly rozsĂĄhlĂŠ soubory pacientĹŻ s RS a kontrol, identifikovaly 236 nezĂĄvislĂ˝ch genetickĂ˝ch variant asociovanĂ˝ch se zvĂ˝ĹĄenĂ˝m rizikem rozvoje RS. Ĺ˝ĂĄdnĂĄ z tÄchto variant se nenachĂĄzĂ­ vĂ˝hradnÄ u pacientĹŻ s RS. Riziko RS je primĂĄrnÄ zprostĹedkovĂĄno mĂ­rnĂ˝mi zmÄnami genovĂŠ regulace, kterĂŠ majĂ­ za nĂĄsledek zmÄny funkcĂ­ perifernĂ­ch a tkĂĄĹovÄ vĂĄzanĂ˝ch bunÄk imunitnĂ­ho systĂŠmu. KaĹždĂ˝ genetickĂ˝ rizikovĂ˝ faktor sĂĄm o sobÄ pĹedstavuje malĂŠ riziko, jejich kombinacĂ­ vznikĂĄ individuĂĄlnĂ­ genetickĂŠ riziko rozvoje RS. Tato polygenicita tedy urÄuje riziko vzniku RS u kaĹždĂŠho jedince. JakĂ˝m zpĹŻsobem se spolupodĂ­lĂ­ environmentĂĄlnĂ­ faktory a kterĂŠ, zĹŻstĂĄvĂĄ otĂĄzkou. Studium genetickĂŠho pozadĂ­ spolu s epidemiologickĂ˝mi studiemi s vyuĹžitĂ­m metody mendelovskĂŠ randomizace nabĂ­zĂ­ moĹžnosti k prokĂĄzĂĄnĂ­ kauzality tÄchto vlivĹŻ. SouÄasnĂ˝ vĂ˝zkum se zamÄĹuje na rozĹĄĂ­ĹenĂ­ kohort, jejich rozmanitost, jejich podrobnÄjĹĄĂ­ studium a pĹevedenĂ­ zjiĹĄtÄnĂ˝ch asociacĂ­ pro pochopenĂ­ patofyziologie RS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates epidemiology and genetics of multiple sclerosis. SouÄasnĂ˝ vĂ˝zkum se zamÄĹuje na rozĹĄĂ­ĹenĂ­ kohort, jejich rozmanitost, jejich podrobnÄjĹĄĂ­ studium a pĹevedenĂ­ zjiĹĄtÄnĂ˝ch asociacĂ­ pro pochopenĂ­ patofyziologie RS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: RoztrouĹĄenĂĄ sklerĂłza (RS) je autoimunitnĂ­ onemocnÄnĂ­, na jehoĹž rozvoji se podĂ­lĂ­ vĂ­ce faktorĹŻ.</li>
+<li>Challenge: V souÄasnĂŠ dobÄ se stĂĄle vĂ­ce studiĂ­ vÄnuje podĂ­lu genetiky na rozvoji RS.</li>
+<li>Action: Studie, kterĂŠ mapovaly rozsĂĄhlĂŠ soubory pacientĹŻ s RS a kontrol, identifikovaly 236 nezĂĄvislĂ˝ch genetickĂ˝ch variant asociovanĂ˝ch se zvĂ˝ĹĄenĂ˝m rizikem rozvoje RS.</li>
+<li>Resolution: Ĺ˝ĂĄdnĂĄ z tÄchto variant se nenachĂĄzĂ­ vĂ˝hradnÄ u pacientĹŻ s RS.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.36290/neu.2023.055" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Matouš Rous. (2023). Epidemiology and genetics of multiple sclerosis. Neurologie pro praxi. https://doi.org/10.36290/neu.2023.055</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_ff04228250be_2023,
+  title = {Epidemiology and genetics of multiple sclerosis},
+  author = {Matouš Rous},
+  year = {2023},
+  journal = {Neurologie pro praxi},
+  doi = {10.36290/neu.2023.055},
+  url = {https://doi.org/10.36290/neu.2023.055},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+</div>
+
+## Turn this topic into a learning journey
+
+<p><a href="/mskb/journey/?seed=4"><strong>Turn this topic into a learning journey →</strong></a></p>
+
+## Related concepts
+
+<ul>
+<li><a href="/mskb/journey/?concept=ebv_ms">Epstein-Barr Virus and MS</a></li>
+<li><a href="/mskb/journey/?concept=environmental_risk_factors">Environmental Risk Factors in MS</a></li>
+<li><a href="/mskb/journey/?concept=genetic_susceptibility">Genetic Susceptibility in MS</a></li>
+<li><a href="/mskb/journey/?concept=ms_epidemiology">MS Epidemiology and Natural History</a></li>
+<li><a href="/mskb/journey/?concept=immune_system_basics">Immune System Basics for MS</a></li>
+<li><a href="/mskb/journey/?concept=neuroinflammation">Neuroinflammation Pathways in MS</a></li>
+</ul>

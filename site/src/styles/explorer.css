@@ -378,6 +378,30 @@
   background: color-mix(in srgb, var(--sl-color-accent) 88%, black);
 }
 
+/* Flag link lets a reader report a paper as incorrect. Styled as a muted
+   outline so it reads as a secondary utility next to primary actions. */
+.btn-flag {
+  display: inline-block;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  min-height: 32px;
+  line-height: 1.4;
+  border: 1px solid var(--sl-color-gray-4, #808b98);
+  color: var(--sl-color-gray-2, #5a6472);
+  background: transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-flag:hover {
+  color: #b94a48;
+  border-color: #b94a48;
+  background: color-mix(in srgb, #b94a48 8%, transparent);
+}
+
 @media (pointer: coarse) {
   .explorer-shell .btn-add,
   .explorer-shell .btn-in-list {

@@ -18,6 +18,20 @@ def _coerce_text(value: Any) -> str:
     return str(value)
 
 
+# Query params that commonly carry secrets in URLs (Gemini embeds the API
+# key as ?key=..., which surfaces in urllib3 error messages and leaks into logs).
+_SECRET_QUERY_PARAM_RE = re.compile(
+    r"(?i)\b(key|api[_-]?key|access[_-]?token|token|secret)=([^\s&'\"]+)"
+)
+
+
+def redact_secrets(text: str) -> str:
+    """Strip secret-looking query params (key=, api_key=, access_token=, etc.) from a string."""
+    if not text:
+        return text
+    return _SECRET_QUERY_PARAM_RE.sub(r"\1=<redacted>", text)
+
+
 def load_config(path: str) -> Dict[str, Any]:
     """Load a YAML config file and return its contents as a dict."""
     with open(path, "r", encoding="utf-8") as f:

@@ -63,7 +63,7 @@ from src.distill_papers import (
     LLM_MAX_TOKENS,
     PROMPT_SOURCE_TEXT_MAX_CHARS,
 )
-from src.utils import ensure_dir, load_config
+from src.utils import ensure_dir, load_config, redact_secrets
 
 
 KID_LEVEL = "kid"
@@ -354,7 +354,7 @@ def _update_topic_overviews(
                     kid_overview = resp.content[0].text
                     updated += 1
                 except Exception as exc:
-                    print(f"  [warn] Topic {tid} kid overview failed: {exc}")
+                    print(f"  [warn] Topic {tid} kid overview failed: {redact_secrets(str(exc))}")
 
         row["overview_kid"] = kid_overview
         rows_out.append(row)

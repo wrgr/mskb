@@ -1,0 +1,74 @@
+=== RERUN distill+concepts+kid 1.3.2 2026-04-16T20:48:51Z ===
+[11/13] Distilling papers (AI summaries)
+[distill] provider=gemini model=gemini-2.5-flash (configured='gemini-2.5-flash')
+  Distilled 50/650 papers (levels: kid, basic, advanced)
+  Distilled 100/650 papers (levels: kid, basic, advanced)
+  Distilled 150/650 papers (levels: kid, basic, advanced)
+  Distilled 200/650 papers (levels: kid, basic, advanced)
+  Distilled 250/650 papers (levels: kid, basic, advanced)
+  Distilled 300/650 papers (levels: kid, basic, advanced)
+  Distilled 350/650 papers (levels: kid, basic, advanced)
+  Distilled 400/650 papers (levels: kid, basic, advanced)
+  Distilled 450/650 papers (levels: kid, basic, advanced)
+  Distilled 500/650 papers (levels: kid, basic, advanced)
+  Distilled 550/650 papers (levels: kid, basic, advanced)
+  Distilled 600/650 papers (levels: kid, basic, advanced)
+  Distilled 650/650 papers (levels: kid, basic, advanced)
+Distilled 650 papers. Outputs in /Users/wgray13/projects/mskb/outputs/distilled
+[11/13] done in 124s
+[12/13] Refreshing concept-paper links
+Using provider=gemini, model=gemini-2.5-flash
+  [1/30] b_cell_therapies: 5 foundational, 5 advanced
+  [2/30] bladder_bowel_dysfunction: 4 foundational, 2 advanced
+  [3/30] blood_brain_barrier: 3 foundational, 4 advanced
+  [4/30] btk_inhibitors: 5 foundational, 6 advanced
+  [5/30] cognition_ms: 6 foundational, 8 advanced
+  [6/30] csf_biomarkers: 5 foundational, 4 advanced
+  [7/30] demyelination_remyelination: 8 foundational, 8 advanced
+  [8/30] depression_anxiety_ms: 6 foundational, 3 advanced
+  [9/30] disease_course: 8 foundational, 8 advanced
+  [10/30] dmt_overview: 7 foundational, 8 advanced
+  [11/30] ebv_ms: 5 foundational, 3 advanced
+  [12/30] environmental_risk_factors: 5 foundational, 4 advanced
+  [13/30] equity_sdoh: 8 foundational, 5 advanced
+  [14/30] fatigue_ms: 4 foundational, 2 advanced
+  [15/30] genetic_susceptibility: 6 foundational, 6 advanced
+  [16/30] immune_system_basics: 5 foundational, 8 advanced
+  [17/30] mcdonald_criteria: 4 foundational, 7 advanced
+  [18/30] mri_patterns: 8 foundational, 8 advanced
+  [19/30] ms_epidemiology: 8 foundational, 7 advanced
+  [20/30] ms_phenotypes: 6 foundational, 8 advanced
+  [21/30] neuroinflammation: 6 foundational, 7 advanced
+  [22/30] paramagnetic_rim_lesions: 5 foundational, 4 advanced
+  [23/30] pediatric_ms: 4 foundational, 6 advanced
+  [24/30] pira_smoldering_ms: 6 foundational, 7 advanced
+  [25/30] pregnancy_ms: 4 foundational, 4 advanced
+  [26/30] rehabilitation_exercise: 7 foundational, 7 advanced
+  [27/30] sex_gender_ms: 5 foundational, 7 advanced
+  [28/30] shared_decision_making: 3 foundational, 6 advanced
+  [29/30] treatment_monitoring: 6 foundational, 7 advanced
+  [30/30] what_is_ms: 8 foundational, 8 advanced
+Wrote /Users/wgray13/projects/mskb/data/concept_papers.json with 30 concepts.
+[12/13] rc=0 done in 852s
+[13/13] Updating kid-friendly summaries and topic overviews
+Updating kid-friendly summaries (force=False) ...
+  Restricting kid summaries to core corpus papers: 1188 candidates from core_corpus_tracked_with_t4.csv
+  Processed 50/915 papers  (updated=36, reused_cached=14)
+  Processed 250/915 papers  (updated=155, reused_cached=95)
+  Processed 300/915 papers  (updated=198, reused_cached=102)
+  Processed 350/915 papers  (updated=239, reused_cached=111)
+  Processed 550/915 papers  (updated=378, reused_cached=172)
+  Processed 650/915 papers  (updated=461, reused_cached=189)
+  Processed 700/915 papers  (updated=507, reused_cached=193)
+  Processed 750/915 papers  (updated=553, reused_cached=197)
+  Processed 800/915 papers  (updated=594, reused_cached=206)
+  Processed 850/915 papers  (updated=622, reused_cached=228)
+Wrote 1293 rows to /Users/wgray13/projects/mskb/outputs/distilled/paper_summaries.csv  (kid summaries updated=643, reused_cached=272)
+Updating kid-friendly topic overviews ...
+Updated topic_overviews.csv with kid overviews (regenerated=2)
+
+Done. Re-run site generation to publish the updated kid journey:
+  cd site && python gen_site.py --config ../config.yaml && npm run build
+[13/13] done in 14s
+RERUN complete in 990s
+=== END RERUN rc=0 2026-04-16T21:08:03Z ===

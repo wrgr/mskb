@@ -49,12 +49,7 @@ Björnevik et al. (2022, *Science*) followed 10 million US military personnel wi
 
 <p><a href="/mskb/topics/?concept=ebv_ms"><strong>Open this concept in the research map →</strong></a></p>
 <ul>
-<li><a href="/mskb/topics/immunology-1/">Immunology</a> · <a href="/mskb/journey/?seed=1">Start journey from this topic</a> (8 linked papers).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-3/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=3">Start journey from this topic</a> (2 linked papers).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-6/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=6">Start journey from this topic</a> (2 linked papers).</li>
-<li><a href="/mskb/topics/neuroscience-0/">Neuroscience</a> · <a href="/mskb/journey/?seed=0">Start journey from this topic</a> (1 linked paper).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-2/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=2">Start journey from this topic</a> (1 linked paper).</li>
-<li><a href="/mskb/topics/multiple-sclerosis-research-studies-7/">Multiple Sclerosis Research Studies</a> · <a href="/mskb/journey/?seed=7">Start journey from this topic</a> (1 linked paper).</li>
+<li><a href="/mskb/topics/multiple-sclerosis-4/">Multiple sclerosis</a> · <a href="/mskb/journey/?seed=4">Start journey from this topic</a> (8 linked papers).</li>
 </ul>
 
 [//]: # (mskb:topic-links:end)

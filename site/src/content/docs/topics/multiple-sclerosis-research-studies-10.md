@@ -1,6 +1,6 @@
 ---
 title: Multiple Sclerosis Research Studies
-description: "Epidemiology & Population Health · 444 papers"
+description: "Epidemiology & Population Health · 419 papers"
 sidebar:
   label: Multiple Sclerosis Research Studies
 topic_taxonomy:
@@ -11,22 +11,21 @@ topic_taxonomy:
 
 ## Overview
 
-# Multiple Sclerosis Across Racial and Ethnic Groups: Understanding Health Disparities
+This research cluster focuses on the **epidemiology and population health** of Multiple Sclerosis (MS), which means it investigates how MS affects different groups of people within a population. Specifically, these studies examine the **incidence** (how many new cases appear over time) and **prevalence** (the total number of people living with the disease at a given time) of MS across various racial, ethnic, age, sex, and geographic groups. Researchers in this area are trying to understand if certain populations are more or less likely to develop MS, how the disease might present differently in these groups, and if there are disparities in care or outcomes.
 
-This research cluster focuses on how multiple sclerosis (MS) affects people differently depending on their race and ethnicity in the United States. Traditionally, MS has been viewed as a disease that primarily affects White populations, but these studies challenge that assumption by systematically examining MS prevalence—the total number of people living with the disease—across diverse racial and ethnic groups including Black, Hispanic, and Asian Americans. By analyzing large population data and comparing disease patterns across regions, researchers are documenting the true burden of MS in communities that have been historically overlooked in medical research.
-
-Understanding racial and ethnic differences in MS is crucial for both patients and healthcare providers. The research reveals that Black Americans with MS often experience more severe disease and worse long-term outcomes compared to White Americans, even after accounting for socioeconomic factors like income and education. Additionally, Black Americans have historically been underdiagnosed and undertreated for MS, meaning many people with the disease didn&#x27;t receive proper care. These disparities matter because they affect quality of life, disability progression, and treatment effectiveness—and identifying these patterns is the first step toward addressing them.
-
-The key findings show that MS prevalence is highest in White and Black populations, with lower rates among Hispanic and Asian Americans, though rates vary significantly by geographic region. However, important questions remain unanswered: Why do these racial and ethnic differences exist? Is it genetic, environmental (like vitamin D levels or sun exposure), related to healthcare access, or a combination of factors? Critically, most MS clinical trials have included very few Black participants, making it difficult for researchers to determine whether current treatments work equally well across all groups. Future research must address these gaps to develop truly equitable treatment strategies.
+Understanding these patterns is crucial
 
 <p><em>Raw cluster label:</em> Medicine / Multiple Sclerosis Research Studies / Multiple sclerosis</p>
 
 ## Concepts this topic supports
 
 <ul>
-<li><a href="/mskb/journey/?concept=equity_sdoh">Equity and Social Determinants of Health in MS</a> (4 linked papers) · <a href="/mskb/concepts/populations/equity-sdoh/">open concept page</a></li>
-<li><a href="/mskb/journey/?concept=pediatric_ms">Pediatric-Onset Multiple Sclerosis</a> (1 linked paper) · <a href="/mskb/concepts/populations/pediatric-ms/">open concept page</a></li>
-<li><a href="/mskb/journey/?concept=rehabilitation_exercise">Exercise and Rehabilitation in MS</a> (1 linked paper) · <a href="/mskb/concepts/clinical/rehabilitation-exercise/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=equity_sdoh">Equity and Social Determinants of Health in MS</a> (7 linked papers) · <a href="/mskb/concepts/populations/equity-sdoh/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=genetic_susceptibility">Genetic Susceptibility in MS</a> (3 linked papers) · <a href="/mskb/concepts/mechanisms/genetic-susceptibility/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=ms_epidemiology">MS Epidemiology and Natural History</a> (3 linked papers) · <a href="/mskb/concepts/foundations/ms-epidemiology/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=cognition_ms">Cognition in MS</a> (1 linked paper) · <a href="/mskb/concepts/clinical/cognition-ms/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=environmental_risk_factors">Environmental Risk Factors in MS</a> (1 linked paper) · <a href="/mskb/concepts/mechanisms/environmental-risk-factors/">open concept page</a></li>
+<li><a href="/mskb/journey/?concept=sex_gender_ms">Sex and Gender Differences in MS</a> (1 linked paper) · <a href="/mskb/concepts/populations/sex-gender-ms/">open concept page</a></li>
 </ul>
 
 ## Reading Path
@@ -338,40 +337,6 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 <article class="paper-card">
-<h3>Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study</h3>
-<div class="paper-meta">
-<span class="kpi-pill">2018</span>
-<span class="kpi-pill">Evidence other (2/5)</span>
-<span class="kpi-pill">Summary certainty high (87%)</span>
-</div>
-<h4>Abstract</h4>
-<p>On average, African Americans with multiple sclerosis demonstrate higher inflammatory disease activity, faster disability accumulation, greater visual dysfunction, more pronounced brain tissue damage and higher lesion volume loads compared to Caucasian Americans with multiple sclerosis. Neurodegeneration is an important component of multiple sclerosis, which in part accounts for the clinical heterogeneity of the disease. Brain atrophy appears to be widespread, although it is becoming increasingly recognized that regional substructure atrophy may be of greater clinical relevance. Patient race (within the limitations of self-identified ancestry) is regarded as an important contributing factor. However, there is a paucity of studies examining differences in neurodegeneration and brain substructure volumes over time in African Americans relative to Caucasian American patients. Optical coherence tomography is a non-invasive and reliable tool for measuring structural retinal changes. Recent studies support its utility for tracking neurodegeneration and disease progression in vivo in multiple sclerosis. Relative to Caucasian Americans, African American patients have been found to have greater retinal structural injury in the inner retinal layers. Increased thickness of the inner nuclear layer and the presence of microcystoid macular pathology at baseline predict clinical and radiological inflammatory activity, although whether race plays a role in these changes has not been investigated. Similarly, assessment of outer retinal changes according to race in multiple sclerosis remains incompletely characterized. Twenty-two African Americans and 60 matched Caucasian Americans with multiple sclerosis were evaluated with brain MRI, and 116 African Americans and 116 matched Caucasian Americans with multiple sclerosis were monitored with optical coherence tomography over a mean duration of 4.5 years. Mixed-effects linear regression models were used in statistical analyses. Grey matter (-0.9%/year versus -0.5%: P =0.02), white matter (-0.7%/year versus -0.3%: P =0.04) and nuclear thalamic (-1.5%/year versus -0.7%/year: P =0.02) atrophy rates were approximately twice as fast in African Americans. African Americans also exhibited higher proportions of microcystoid macular pathology (12.1% versus 0.9%, P =0.001). Retinal nerve fibre layer (-1.1% versus -0.8%: P =0.02) and ganglion cell+ inner plexiform layer (-0.7%/year versus -0.4%/year: P =0.01) atrophy rates were faster in African versus Caucasian Americans. African Americans on average exhibited more rapid neurodegeneration than Caucasian Americans and had significantly faster brain and retinal tissue loss. These results corroborate the more rapid clinical progression reported to occur, in general, in African Americans with multiple sclerosis and support the need for future studies involving African Americans in order to identify individual differences in treatment responses in multiple sclerosis.</p>
-<h4>Plain-English Summary</h4>
-<p class="paper-summary">This paper investigates brain and retinal atrophy in african-americans versus caucasian-americans with multiple sclerosis: a longitudinal study. These results corroborate the more rapid clinical progression reported to occur, in general, in African Americans with multiple sclerosis and support the need for future studies involving African Americans in order to identify individual differences in treatment responses in multiple sclerosis.</p>
-<h4>Key Takeaways</h4>
-<ul>
-<li>Opportunity: On average, African Americans with multiple sclerosis demonstrate higher inflammatory disease activity, faster disability accumulation, greater visual dysfunction, more pronounced brain tissue damage and higher lesion volume loads compared to Caucasian Americans with multiple sclerosis.</li>
-<li>Challenge: Neurodegeneration is an important component of multiple sclerosis, which in part accounts for the clinical heterogeneity of the disease.</li>
-<li>Action: Brain atrophy appears to be widespread, although it is becoming increasingly recognized that regional substructure atrophy may be of greater clinical relevance.</li>
-<li>Resolution: Patient race (within the limitations of self-identified ancestry) is regarded as an important contributing factor.</li>
-</ul>
-<p><strong><a href="https://doi.org/10.1093/brain/awy245" target="_blank" rel="noopener">Open source paper</a></strong></p>
-<p><strong>Bibliography (plain text):</strong> Natalia Gonzalez Caldito. (2018). Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study. Brain. https://doi.org/10.1093/brain/awy245</p>
-<details>
-<summary><strong>View BibTeX</strong></summary>
-<pre><code class="language-bibtex">@article{mskb_fd63a90fcc73_2018,
-  title = {Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study},
-  author = {Natalia Gonzalez Caldito},
-  year = {2018},
-  journal = {Brain},
-  doi = {10.1093/brain/awy245},
-  url = {https://doi.org/10.1093/brain/awy245},
-}</code></pre>
-</details>
-<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
-</article>
-
-<article class="paper-card">
 <h3>Epidemiology and Pathophysiology of Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
@@ -403,6 +368,40 @@ Papers ordered by importance and pedagogic progression.
 }</code></pre>
 </details>
 <p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2018</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty high (87%)</span>
+</div>
+<h4>Abstract</h4>
+<p>On average, African Americans with multiple sclerosis demonstrate higher inflammatory disease activity, faster disability accumulation, greater visual dysfunction, more pronounced brain tissue damage and higher lesion volume loads compared to Caucasian Americans with multiple sclerosis. Neurodegeneration is an important component of multiple sclerosis, which in part accounts for the clinical heterogeneity of the disease. Brain atrophy appears to be widespread, although it is becoming increasingly recognized that regional substructure atrophy may be of greater clinical relevance. Patient race (within the limitations of self-identified ancestry) is regarded as an important contributing factor. However, there is a paucity of studies examining differences in neurodegeneration and brain substructure volumes over time in African Americans relative to Caucasian American patients. Optical coherence tomography is a non-invasive and reliable tool for measuring structural retinal changes. Recent studies support its utility for tracking neurodegeneration and disease progression in vivo in multiple sclerosis. Relative to Caucasian Americans, African American patients have been found to have greater retinal structural injury in the inner retinal layers. Increased thickness of the inner nuclear layer and the presence of microcystoid macular pathology at baseline predict clinical and radiological inflammatory activity, although whether race plays a role in these changes has not been investigated. Similarly, assessment of outer retinal changes according to race in multiple sclerosis remains incompletely characterized. Twenty-two African Americans and 60 matched Caucasian Americans with multiple sclerosis were evaluated with brain MRI, and 116 African Americans and 116 matched Caucasian Americans with multiple sclerosis were monitored with optical coherence tomography over a mean duration of 4.5 years. Mixed-effects linear regression models were used in statistical analyses. Grey matter (-0.9%/year versus -0.5%: P =0.02), white matter (-0.7%/year versus -0.3%: P =0.04) and nuclear thalamic (-1.5%/year versus -0.7%/year: P =0.02) atrophy rates were approximately twice as fast in African Americans. African Americans also exhibited higher proportions of microcystoid macular pathology (12.1% versus 0.9%, P =0.001). Retinal nerve fibre layer (-1.1% versus -0.8%: P =0.02) and ganglion cell+ inner plexiform layer (-0.7%/year versus -0.4%/year: P =0.01) atrophy rates were faster in African versus Caucasian Americans. African Americans on average exhibited more rapid neurodegeneration than Caucasian Americans and had significantly faster brain and retinal tissue loss. These results corroborate the more rapid clinical progression reported to occur, in general, in African Americans with multiple sclerosis and support the need for future studies involving African Americans in order to identify individual differences in treatment responses in multiple sclerosis.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates brain and retinal atrophy in african-americans versus caucasian-americans with multiple sclerosis: a longitudinal study. These results corroborate the more rapid clinical progression reported to occur, in general, in African Americans with multiple sclerosis and support the need for future studies involving African Americans in order to identify individual differences in treatment responses in multiple sclerosis.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: On average, African Americans with multiple sclerosis demonstrate higher inflammatory disease activity, faster disability accumulation, greater visual dysfunction, more pronounced brain tissue damage and higher lesion volume loads compared to Caucasian Americans with multiple sclerosis.</li>
+<li>Challenge: Neurodegeneration is an important component of multiple sclerosis, which in part accounts for the clinical heterogeneity of the disease.</li>
+<li>Action: Brain atrophy appears to be widespread, although it is becoming increasingly recognized that regional substructure atrophy may be of greater clinical relevance.</li>
+<li>Resolution: Patient race (within the limitations of self-identified ancestry) is regarded as an important contributing factor.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1093/brain/awy245" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Natalia Gonzalez Caldito. (2018). Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study. Brain. https://doi.org/10.1093/brain/awy245</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_fd63a90fcc73_2018,
+  title = {Brain and retinal atrophy in African-Americans versus Caucasian-Americans with multiple sclerosis: a longitudinal study},
+  author = {Natalia Gonzalez Caldito},
+  year = {2018},
+  journal = {Brain},
+  doi = {10.1093/brain/awy245},
+  url = {https://doi.org/10.1093/brain/awy245},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
 </article>
 
 <article class="paper-card">
@@ -507,38 +506,6 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 <article class="paper-card">
-<h3>Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021</h3>
-<div class="paper-meta">
-<span class="kpi-pill">2024</span>
-<span class="kpi-pill">Evidence other (2/5)</span>
-<span class="kpi-pill">Summary certainty low (46%)</span>
-</div>
-<h4>Abstract</h4>
-<p>Bill &amp; Melinda Gates Foundation.</p>
-<h4>Plain-English Summary</h4>
-<p class="paper-summary">This paper investigates global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the global burden of disease study 2021. Bill &amp; Melinda Gates Foundation.</p>
-<h4>Key Takeaways</h4>
-<ul>
-<li>Opportunity: Bill &amp; Melinda Gates Foundation.</li>
-<li>Challenge: This paper investigates global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the global burden of disease study 2021.</li>
-</ul>
-<p><strong><a href="https://doi.org/10.1016/s1474-4422(24)00038-3" target="_blank" rel="noopener">Open source paper</a></strong></p>
-<p><strong>Bibliography (plain text):</strong> Jaimie D Steinmetz. (2024). Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet Neurology. https://doi.org/10.1016/s1474-4422(24)00038-3</p>
-<details>
-<summary><strong>View BibTeX</strong></summary>
-<pre><code class="language-bibtex">@article{mskb_a24f7620ce41_2024,
-  title = {Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021},
-  author = {Jaimie D Steinmetz},
-  year = {2024},
-  journal = {The Lancet Neurology},
-  doi = {10.1016/s1474-4422(24)00038-3},
-  url = {https://doi.org/10.1016/s1474-4422(24)00038-3},
-}</code></pre>
-</details>
-<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
-</article>
-
-<article class="paper-card">
 <h3>Advancing Care and Outcomes for African American Patients With Multiple Sclerosis</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2022</span>
@@ -567,6 +534,38 @@ Papers ordered by importance and pedagogic progression.
   journal = {Neurology},
   doi = {10.1212/wnl.0000000000200791},
   url = {https://doi.org/10.1212/wnl.0000000000200791},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Enhancing diversity of clinical trial populations in multiple sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2023</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (66%)</span>
+</div>
+<h4>Abstract</h4>
+<p>These recommendations provide sponsors and investigators with methods of improving diversity and inclusivity of clinical trial populations in MS.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates enhancing diversity of clinical trial populations in multiple sclerosis. These recommendations provide sponsors and investigators with methods of improving diversity and inclusivity of clinical trial populations in MS.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: These recommendations provide sponsors and investigators with methods of improving diversity and inclusivity of clinical trial populations in MS.</li>
+<li>Challenge: This paper investigates enhancing diversity of clinical trial populations in multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1177/13524585231189677" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ruth Ann Marrie. (2023). Enhancing diversity of clinical trial populations in multiple sclerosis. Multiple Sclerosis Journal. https://doi.org/10.1177/13524585231189677</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_c998aa2f1e29_2023,
+  title = {Enhancing diversity of clinical trial populations in multiple sclerosis},
+  author = {Ruth Ann Marrie},
+  year = {2023},
+  journal = {Multiple Sclerosis Journal},
+  doi = {10.1177/13524585231189677},
+  url = {https://doi.org/10.1177/13524585231189677},
 }</code></pre>
 </details>
 <p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
@@ -705,38 +704,6 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 <article class="paper-card">
-<h3>Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study</h3>
-<div class="paper-meta">
-<span class="kpi-pill">2023</span>
-<span class="kpi-pill">Evidence other (2/5)</span>
-<span class="kpi-pill">Summary certainty low (46%)</span>
-</div>
-<h4>Abstract</h4>
-<p>Priscilla Chan and Mark Zuckerberg.</p>
-<h4>Plain-English Summary</h4>
-<p class="paper-summary">This paper investigates assessing the potential of gpt-4 to perpetuate racial and gender biases in health care: a model evaluation study. Priscilla Chan and Mark Zuckerberg.</p>
-<h4>Key Takeaways</h4>
-<ul>
-<li>Opportunity: Priscilla Chan and Mark Zuckerberg.</li>
-<li>Challenge: This paper investigates assessing the potential of gpt-4 to perpetuate racial and gender biases in health care: a model evaluation study.</li>
-</ul>
-<p><strong><a href="https://doi.org/10.1016/s2589-7500(23)00225-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
-<p><strong>Bibliography (plain text):</strong> Travis Zack. (2023). Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study. The Lancet Digital Health. https://doi.org/10.1016/s2589-7500(23)00225-x</p>
-<details>
-<summary><strong>View BibTeX</strong></summary>
-<pre><code class="language-bibtex">@article{mskb_e9e3217624a5_2023,
-  title = {Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study},
-  author = {Travis Zack},
-  year = {2023},
-  journal = {The Lancet Digital Health},
-  doi = {10.1016/s2589-7500(23)00225-x},
-  url = {https://doi.org/10.1016/s2589-7500(23)00225-x},
-}</code></pre>
-</details>
-<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
-</article>
-
-<article class="paper-card">
 <h3>The relationship between ethnicity and multiple sclerosis characteristics in the United Kingdom: A UK MS Register study</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2024</span>
@@ -770,36 +737,35 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 <article class="paper-card">
-<h3>Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis</h3>
+<h3>Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study</h3>
 <div class="paper-meta">
-<span class="kpi-pill">2024</span>
+<span class="kpi-pill">2023</span>
 <span class="kpi-pill">Evidence other (2/5)</span>
-<span class="kpi-pill">Summary certainty medium (73%)</span>
+<span class="kpi-pill">Summary certainty low (46%)</span>
 </div>
 <h4>Abstract</h4>
-<p>Individual-level and neighborhood-level indicators of social disadvantage are associated with worse brain MRI outcomes in POMS. Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</p>
+<p>Priscilla Chan and Mark Zuckerberg.</p>
 <h4>Plain-English Summary</h4>
-<p class="paper-summary">This paper investigates association of social determinants of health with brain mri outcomes in individuals with pediatric onset multiple sclerosis. Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</p>
+<p class="paper-summary">This paper investigates assessing the potential of gpt-4 to perpetuate racial and gender biases in health care: a model evaluation study. Priscilla Chan and Mark Zuckerberg.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Individual-level and neighborhood-level indicators of social disadvantage are associated with worse brain MRI outcomes in POMS.</li>
-<li>Challenge: Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</li>
-<li>Action: This paper investigates association of social determinants of health with brain mri outcomes in individuals with pediatric onset multiple sclerosis.</li>
+<li>Opportunity: Priscilla Chan and Mark Zuckerberg.</li>
+<li>Challenge: This paper investigates assessing the potential of gpt-4 to perpetuate racial and gender biases in health care: a model evaluation study.</li>
 </ul>
-<p><strong><a href="https://doi.org/10.1212/wnl.0000000000210140" target="_blank" rel="noopener">Open source paper</a></strong></p>
-<p><strong>Bibliography (plain text):</strong> Ruby Ross. (2024). Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000210140</p>
+<p><strong><a href="https://doi.org/10.1016/s2589-7500(23)00225-x" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Travis Zack. (2023). Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study. The Lancet Digital Health. https://doi.org/10.1016/s2589-7500(23)00225-x</p>
 <details>
 <summary><strong>View BibTeX</strong></summary>
-<pre><code class="language-bibtex">@article{mskb_980ae0003cb6_2024,
-  title = {Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis},
-  author = {Ruby Ross},
-  year = {2024},
-  journal = {Neurology},
-  doi = {10.1212/wnl.0000000000210140},
-  url = {https://doi.org/10.1212/wnl.0000000000210140},
+<pre><code class="language-bibtex">@article{mskb_e9e3217624a5_2023,
+  title = {Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study},
+  author = {Travis Zack},
+  year = {2023},
+  journal = {The Lancet Digital Health},
+  doi = {10.1016/s2589-7500(23)00225-x},
+  url = {https://doi.org/10.1016/s2589-7500(23)00225-x},
 }</code></pre>
 </details>
-<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
 </article>
 
 <article class="paper-card">
@@ -832,6 +798,39 @@ Papers ordered by importance and pedagogic progression.
 }</code></pre>
 </details>
 <p><em>This summary is generated from abstract-level text and may omit study details; certainty is low. Verify critical claims against the original paper before reuse.</em></p>
+</article>
+
+<article class="paper-card">
+<h3>Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis</h3>
+<div class="paper-meta">
+<span class="kpi-pill">2024</span>
+<span class="kpi-pill">Evidence other (2/5)</span>
+<span class="kpi-pill">Summary certainty medium (73%)</span>
+</div>
+<h4>Abstract</h4>
+<p>Individual-level and neighborhood-level indicators of social disadvantage are associated with worse brain MRI outcomes in POMS. Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</p>
+<h4>Plain-English Summary</h4>
+<p class="paper-summary">This paper investigates association of social determinants of health with brain mri outcomes in individuals with pediatric onset multiple sclerosis. Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</p>
+<h4>Key Takeaways</h4>
+<ul>
+<li>Opportunity: Individual-level and neighborhood-level indicators of social disadvantage are associated with worse brain MRI outcomes in POMS.</li>
+<li>Challenge: Further investigation of race, ethnicity, and childhood disadvantage as risk factors of MS susceptibility and severity is needed to reduce MS health disparities.</li>
+<li>Action: This paper investigates association of social determinants of health with brain mri outcomes in individuals with pediatric onset multiple sclerosis.</li>
+</ul>
+<p><strong><a href="https://doi.org/10.1212/wnl.0000000000210140" target="_blank" rel="noopener">Open source paper</a></strong></p>
+<p><strong>Bibliography (plain text):</strong> Ruby Ross. (2024). Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis. Neurology. https://doi.org/10.1212/wnl.0000000000210140</p>
+<details>
+<summary><strong>View BibTeX</strong></summary>
+<pre><code class="language-bibtex">@article{mskb_980ae0003cb6_2024,
+  title = {Association of Social Determinants of Health With Brain MRI Outcomes in Individuals With Pediatric Onset Multiple Sclerosis},
+  author = {Ruby Ross},
+  year = {2024},
+  journal = {Neurology},
+  doi = {10.1212/wnl.0000000000210140},
+  url = {https://doi.org/10.1212/wnl.0000000000210140},
+}</code></pre>
+</details>
+<p><em>This summary is generated from abstract-level text and may omit study details; certainty is medium. Verify critical claims against the original paper before reuse.</em></p>
 </article>
 
 <article class="paper-card">
@@ -901,40 +900,6 @@ Papers ordered by importance and pedagogic progression.
 </article>
 
 <article class="paper-card">
-<h3>Multiple Sclerosis Diagnosis Pathways: An Intersectional Feminist Disability Life Course Perspective</h3>
-<div class="paper-meta">
-<span class="kpi-pill">2023</span>
-<span class="kpi-pill">Evidence other (2/5)</span>
-<span class="kpi-pill">Summary certainty high (83%)</span>
-</div>
-<h4>Abstract</h4>
-<p>Multiple sclerosis (MS) is a chronic condition with variable physical, cognitive, and quality of life impacts. Little research has investigated how MS outcomes vary by social identity (race, gender, disability, age, sexual orientation, and nationality) and social location (place within systems of power and privilege). However, emerging evidence points to racial and ethnic group disparities in MS outcomes. This chapter integrates core concepts from the life course perspective and an intersectional feminist disability framework to interrogate the role of diagnosis pathways in determining differential MS outcomes. MS diagnosis pathways (the time from symptom onset to the point of diagnosis) are a logical place to begin this work given the varying nature of symptom onset and the importance of a quick diagnosis for optimal MS outcomes. Whereas the life course perspective provides a framework for understanding disability transitions and pathways across the life span, an intersectional feminist disability framework centers disability within an axis of overlapping social identities and locations. The combination of both frameworks provides an approach capable of examining how MS disparities and inequities emerge in different contexts over time. The chapter begins with an overview of MS and current knowledge on disparities (mainly racial) in MS prevalence, diagnosis, and outcomes. The chapter proceeds to describe the utility of key concepts of both the life course perspective and intersectional frameworks when researching health disparities. Finally, the chapter ends with a theoretical application of an intersectional feminist disability life course perspective to investigate disparities in MS diagnosis pathways.</p>
-<h4>Plain-English Summary</h4>
-<p class="paper-summary">This paper investigates multiple sclerosis diagnosis pathways: an intersectional feminist disability life course perspective. Finally, the chapter ends with a theoretical application of an intersectional feminist disability life course perspective to investigate disparities in MS diagnosis pathways.</p>
-<h4>Key Takeaways</h4>
-<ul>
-<li>Opportunity: Multiple sclerosis (MS) is a chronic condition with variable physical, cognitive, and quality of life impacts.</li>
-<li>Challenge: Little research has investigated how MS outcomes vary by social identity (race, gender, disability, age, sexual orientation, and nationality) and social location (place within systems of power and privilege).</li>
-<li>Action: However, emerging evidence points to racial and ethnic group disparities in MS outcomes.</li>
-<li>Resolution: This chapter integrates core concepts from the life course perspective and an intersectional feminist disability framework to interrogate the role of diagnosis pathways in determining differential MS outcomes.</li>
-</ul>
-<p><strong><a href="https://doi.org/10.1108/s1479-354720230000014003" target="_blank" rel="noopener">Open source paper</a></strong></p>
-<p><strong>Bibliography (plain text):</strong> Louise Palmer. (2023). Multiple Sclerosis Diagnosis Pathways: An Intersectional Feminist Disability Life Course Perspective. Research in social science and disability. https://doi.org/10.1108/s1479-354720230000014003</p>
-<details>
-<summary><strong>View BibTeX</strong></summary>
-<pre><code class="language-bibtex">@article{mskb_ebe75b1e8206_2023,
-  title = {Multiple Sclerosis Diagnosis Pathways: An Intersectional Feminist Disability Life Course Perspective},
-  author = {Louise Palmer},
-  year = {2023},
-  journal = {Research in social science and disability},
-  doi = {10.1108/s1479-354720230000014003},
-  url = {https://doi.org/10.1108/s1479-354720230000014003},
-}</code></pre>
-</details>
-<p><em>This summary is generated from abstract-level text and may omit study details; certainty is high. Verify critical claims against the original paper before reuse.</em></p>
-</article>
-
-<article class="paper-card">
 <h3>Disparities in imaging and management of multiple sclerosis: a review</h3>
 <div class="paper-meta">
 <span class="kpi-pill">2025</span>
@@ -942,12 +907,12 @@ Papers ordered by importance and pedagogic progression.
 <span class="kpi-pill">Summary certainty high (83%)</span>
 </div>
 <h4>Abstract</h4>
-<p>Despite advancements in multiple sclerosis (MS) imaging and treatment, there are sex-specific differences and disparities across sociodemographic factors (e.g., race, ethnicity, socioeconomic status, health literacy, and geography) that can result in disparate clinical presentation, diagnosis, management, and outcomes. These social determinants of health often intersect, limiting access to MRI or disease-modifying therapies. Financial and geographic barriers can delay diagnosis and treatment, particularly in rural or underserved areas. Patients with low health literacy may have difficulty navigating care, while provider-related factors, like implicit biases and varying practices in low-resource settings, contribute to unequal imaging and treatment utilization. Radiologists are uniquely positioned to help reduce these inequities. By collaborating with clinical teams, standardizing imaging protocols, and expanding access through extended service hours and patient navigation programs, radiology practices can address many barriers. Subspecialized neuroradiology expertise, delivered through teleradiology, can help mitigate diagnostic disparities in underserved regions. Radiologists can support health equity by engaging in community outreach to improve health literacy and by working to increase workforce diversity. This review examines the intersection of clinical and radiologic disparities in MS, identifies key barriers to imaging access and utilization, and highlights how radiology can promote equitable MS care to improve outcomes across all populations.</p>
+<p>Despite advancements in multiple sclerosis (MS) imaging and treatment, there are sex-specific differences and disparities across sociodemographic factors (eg, race, ethnicity, socioeconomic status, health literacy, and geography) that can result in disparate clinical presentation, diagnosis, management, and outcomes. These social determinants of health often intersect, limiting access to MRI or disease-modifying therapies. Financial and geographic barriers can delay diagnosis and treatment, particularly in rural or underserved areas. Patients with low health literacy may have difficulty navigating care, while provider-related factors, like implicit biases and varying practices in low-resource settings, contribute to unequal imaging and treatment utilization. Radiologists are uniquely positioned to help reduce these inequities. By collaborating with clinical teams, standardizing imaging protocols, and expanding access through extended service hours and patient navigation programs, radiology practices can address many barriers. Subspecialized neuroradiology expertise, delivered through teleradiology, can help mitigate diagnostic disparities in underserved regions. Radiologists can support health equity by engaging in community outreach to improve health literacy and by working to increase workforce diversity. This review examines the intersection of clinical and radiologic disparities in MS, identifies key barriers to imaging access and utilization, and highlights how radiology can promote equitable MS care to improve outcomes across all populations.</p>
 <h4>Plain-English Summary</h4>
 <p class="paper-summary">This paper investigates disparities in imaging and management of multiple sclerosis: a review. This review examines the intersection of clinical and radiologic disparities in MS, identifies key barriers to imaging access and utilization, and highlights how radiology can promote equitable MS care to improve outcomes across all populations.</p>
 <h4>Key Takeaways</h4>
 <ul>
-<li>Opportunity: Despite advancements in multiple sclerosis (MS) imaging and treatment, there are sex-specific differences and disparities across sociodemographic factors (e.g., race, ethnicity, socioeconomic status, health literacy, and geography) that can result in disparate clinical presentation, diagnosis, management, and outcomes.</li>
+<li>Opportunity: Despite advancements in multiple sclerosis (MS) imaging and treatment, there are sex-specific differences and disparities across sociodemographic factors (eg, race, ethnicity, socioeconomic status, health literacy, and geography) that can result in disparate clinical presentation, diagnosis, management, and outcomes.</li>
 <li>Challenge: These social determinants of health often intersect, limiting access to MRI or disease-modifying therapies.</li>
 <li>Action: Financial and geographic barriers can delay diagnosis and treatment, particularly in rural or underserved areas.</li>
 <li>Resolution: Patients with low health literacy may have difficulty navigating care, while provider-related factors, like implicit biases and varying practices in low-resource settings, contribute to unequal imaging and treatment utilization.</li>
@@ -972,12 +937,15 @@ Papers ordered by importance and pedagogic progression.
 
 ## Turn this topic into a learning journey
 
-<p><a href="/mskb/journey/?seed=9"><strong>Turn this topic into a learning journey →</strong></a></p>
+<p><a href="/mskb/journey/?seed=10"><strong>Turn this topic into a learning journey →</strong></a></p>
 
 ## Related concepts
 
 <ul>
 <li><a href="/mskb/journey/?concept=equity_sdoh">Equity and Social Determinants of Health in MS</a></li>
-<li><a href="/mskb/journey/?concept=pediatric_ms">Pediatric-Onset Multiple Sclerosis</a></li>
-<li><a href="/mskb/journey/?concept=rehabilitation_exercise">Exercise and Rehabilitation in MS</a></li>
+<li><a href="/mskb/journey/?concept=genetic_susceptibility">Genetic Susceptibility in MS</a></li>
+<li><a href="/mskb/journey/?concept=ms_epidemiology">MS Epidemiology and Natural History</a></li>
+<li><a href="/mskb/journey/?concept=cognition_ms">Cognition in MS</a></li>
+<li><a href="/mskb/journey/?concept=environmental_risk_factors">Environmental Risk Factors in MS</a></li>
+<li><a href="/mskb/journey/?concept=sex_gender_ms">Sex and Gender Differences in MS</a></li>
 </ul>

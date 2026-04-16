@@ -1,0 +1,168 @@
+=== SITE BUILD 1.3.2 retry2 2026-04-16T21:10:20Z ===
+Topic filter: dropped 2 off-topic cluster(s) with no selected-corpus papers.
+[warn] Concept cache contains unknown/invalid paper ids for rehabilitation_exercise; using empty links
+[warn] Concept cache contains unknown/invalid paper ids for shared_decision_making; using empty links
+Explorer source CSV: /Users/wgray13/projects/mskb/outputs/graph/core_corpus_tracked_with_t4.csv
+Explorer nodes: 1196 (lite payload: 1196, mobile payload: 1196), missing source links: 0
+Viz asset: /Users/wgray13/projects/mskb/site/public/assets/lineage_data.json
+Viz asset: /Users/wgray13/projects/mskb/site/public/assets/field_development.json
+Viz asset: /Users/wgray13/projects/mskb/site/public/assets/corpus_stats.json
+Site stats: /Users/wgray13/projects/mskb/site/src/data/site_stats.json
+Kid journey page written to /Users/wgray13/projects/mskb/site/src/content/docs/kid-journey.md
+Taxonomy derivation: 30 concepts, 34 pathway steps, 110 concept-topic links
+Generated 10 topic pages in /Users/wgray13/projects/mskb/site/src/content/docs/topics
+Learning spine asset: /Users/wgray13/projects/mskb/site/public/assets/learning_spine_graph.json
+Research map asset: /Users/wgray13/projects/mskb/site/public/assets/research_map_graph.json
+
+> mskb-site@0.1.0 build
+> astro build
+
+17:10:24 [content] Syncing content
+17:10:24 [content] Synced content
+17:10:24 [types] Generated 275ms
+17:10:24 [build] output: "static"
+17:10:24 [build] mode: "static"
+17:10:24 [build] directory: /Users/wgray13/projects/mskb/site/dist/
+17:10:24 [build] Collecting build info...
+17:10:24 [build] ✓ Completed in 461ms.
+17:10:24 [build] Building static entrypoints...
+17:10:25 [WARN] [vite] [esbuild css minify]
+▲ [WARNING] Unexpected "}" [css-syntax-error]
+
+    <stdin>:1020:0:
+      1020 │ }
+           ╵ ^
+
+
+▲ [WARNING] Expected identifier but found whitespace [css-syntax-error]
+
+    <stdin>:2655:10:
+      2655 │ }  margin: 1rem 0 1.2rem;
+           ╵           ^
+
+
+▲ [WARNING] Unexpected "1rem" [css-syntax-error]
+
+    <stdin>:2655:11:
+      2655 │ }  margin: 1rem 0 1.2rem;
+           ╵            ~~~~
+
+
+17:10:25 [vite] ✓ built in 1.04s
+17:10:25 [build] ✓ Completed in 1.06s.
+
+ building client (vite) 
+17:10:25 [vite] transforming...
+17:10:25 [vite] ✓ 18 modules transformed.
+17:10:25 [vite] rendering chunks...
+17:10:25 [vite] computing gzip size...
+17:10:25 [vite] dist/_astro/ec.0vx5m.js                                                              2.52 kB
+17:10:25 [vite] dist/_astro/ec.v4551.css                                                            18.22 kB │ gzip:  3.94 kB
+17:10:25 [vite] dist/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C181hMzK.js   0.67 kB │ gzip:  0.40 kB
+17:10:25 [vite] dist/_astro/TableOfContents.astro_astro_type_script_index_0_lang.CKWWgpjV.js         1.67 kB │ gzip:  0.87 kB
+17:10:25 [vite] dist/_astro/page.B1D-nYk3.js                                                         2.24 kB │ gzip:  1.01 kB
+17:10:25 [vite] dist/_astro/Search.astro_astro_type_script_index_0_lang.V92cmHvn.js                  2.71 kB │ gzip:  1.39 kB
+17:10:25 [vite] dist/_astro/ui-core.Clq8wBL_.js                                                     97.51 kB │ gzip: 28.11 kB
+17:10:25 [vite] ✓ built in 80ms
+
+ generating static routes 
+17:10:25 ▶ @astrojs/starlight/routes/static/404.astro
+17:10:25   └─ /404.html (+8ms) 
+17:10:25 ▶ @astrojs/starlight/routes/static/index.astro
+17:10:25 [WARN] [build] Could not render `/404` from route `/[...slug]` as it conflicts with higher priority route `/404`.
+17:10:25   ├─ /getting-started/index.html (+13ms) 
+17:10:25   ├─ /explorer/index.html (+3ms) 
+17:10:25   ├─ /index.html (+3ms) 
+17:10:25   ├─ /journey/index.html (+2ms) 
+17:10:25   ├─ /glossary/index.html (+2ms) 
+17:10:25   ├─ /kid-journey/index.html (+2ms) 
+17:10:25   ├─ /concepts/index.html (+3ms) 
+17:10:25   ├─ /pathways/clinical/index.html (+5ms) 
+17:10:25   ├─ /pathways/emerging/index.html (+5ms) 
+17:10:25   ├─ /topics/index.html (+2ms) 
+17:10:25   ├─ /pathways/index.html (+3ms) 
+17:10:25   ├─ /pathways/mechanistic/index.html (+3ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-3/index.html (+3ms) 
+17:10:25   ├─ /corpus/design-decisions/index.html (+4ms) 
+17:10:25   ├─ /corpus/seeds/index.html (+4ms) 
+17:10:25   ├─ /corpus/gaps/index.html (+3ms) 
+17:10:25   ├─ /corpus/index.html (+4ms) 
+17:10:25   ├─ /corpus/topics/index.html (+4ms) 
+17:10:25   ├─ /concepts/clinical/bladder-bowel-dysfunction/index.html (+3ms) 
+17:10:25   ├─ /concepts/clinical/cognition-ms/index.html (+2ms) 
+17:10:25   ├─ /corpus/methodology/index.html (+6ms) 
+17:10:25   ├─ /concepts/clinical/fatigue-ms/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/pregnancy-ms/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/disease-course/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/rehabilitation-exercise/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/depression-anxiety-ms/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/pira-smoldering-ms/index.html (+2ms) 
+17:10:25   ├─ /concepts/diagnosis/csf-biomarkers/index.html (+2ms) 
+17:10:25   ├─ /concepts/clinical/shared-decision-making/index.html (+2ms) 
+17:10:25   ├─ /concepts/diagnosis/mri-patterns/index.html (+1ms) 
+17:10:25   ├─ /concepts/diagnosis/mcdonald-criteria/index.html (+5ms) 
+17:10:25   ├─ /concepts/diagnosis/ms-phenotypes/index.html (+2ms) 
+17:10:25   ├─ /concepts/diagnosis/paramagnetic-rim-lesions/index.html (+2ms) 
+17:10:25   ├─ /concepts/mechanisms/blood-brain-barrier/index.html (+1ms) 
+17:10:25   ├─ /concepts/mechanisms/demyelination-remyelination/index.html (+1ms) 
+17:10:25   ├─ /concepts/mechanisms/ebv-ms/index.html (+2ms) 
+17:10:25   ├─ /concepts/mechanisms/environmental-risk-factors/index.html (+2ms) 
+17:10:25   ├─ /concepts/mechanisms/genetic-susceptibility/index.html (+2ms) 
+17:10:25   ├─ /concepts/mechanisms/neuroinflammation/index.html (+2ms) 
+17:10:25   ├─ /concepts/foundations/immune-system-basics/index.html (+1ms) 
+17:10:25   ├─ /concepts/foundations/ms-epidemiology/index.html (+1ms) 
+17:10:25   ├─ /concepts/foundations/what-is-ms/index.html (+1ms) 
+17:10:25   ├─ /concepts/populations/sex-gender-ms/index.html (+1ms) 
+17:10:25   ├─ /concepts/populations/pediatric-ms/index.html (+1ms) 
+17:10:25   ├─ /concepts/therapeutics/b-cell-therapies/index.html (+1ms) 
+17:10:25   ├─ /concepts/therapeutics/btk-inhibitors/index.html (+1ms) 
+17:10:25   ├─ /concepts/therapeutics/dmt-overview/index.html (+2ms) 
+17:10:25   ├─ /concepts/populations/equity-sdoh/index.html (+2ms) 
+17:10:25   ├─ /concepts/therapeutics/treatment-monitoring/index.html (+2ms) 
+17:10:25   ├─ /field-development/index.html (+2ms) 
+17:10:25   ├─ /lineage/index.html (+2ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-2/index.html (+3ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-6/index.html (+2ms) 
+17:10:25   ├─ /corpus/stats/index.html (+2ms) 
+17:10:25   ├─ /citation-tree/index.html (+1ms) 
+17:10:25   ├─ /whitepaper/index.html (+2ms) 
+17:10:25   ├─ /topics/immunology-0/index.html (+5ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-10/index.html (+2ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-4/index.html (+3ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-5/index.html (+2ms) 
+17:10:25   ├─ /topics/multiple-sclerosis-research-studies-8/index.html (+2ms) 
+17:10:25   ├─ /topics/neurogenesis-and-neuroplasticity-mechanisms-neuroscience-1/index.html (+2ms) 
+17:10:25   └─ /topics/pathology-7/index.html (+2ms) 
+17:10:25 ✓ Completed in 205ms.
+
+(node:91102) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Running Pagefind v1.5.0 (Extended)
+Running from: "/Users/wgray13/projects/mskb/site/node_modules/@astrojs/starlight"
+Source:       "../../../dist"
+Output:       "../../../dist/pagefind"
+
+[Walking source directory]
+Found 64 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+
+[Reading languages]
+Discovered 1 language: en
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 63 pages
+  Indexed 14183 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+Finished in 0.316 seconds
+17:10:26 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+17:10:26 [build] 64 page(s) built in 2.63s
+17:10:26 [build] Complete!
+=== END SITE BUILD rc=0 2026-04-16T21:10:26Z ===

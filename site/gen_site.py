@@ -2012,8 +2012,6 @@ def generate(config_path: str) -> None:
         "  order: 0",
         "---",
         "",
-        "import '../../../styles/custom.css';",
-        "",
         '<div class="topic-landing-hero">',
         "<h2>Research map by topic, concept, and domain.</h2>",
         "<p>Use the graph to jump between citation topics and the learning concepts they support. "
