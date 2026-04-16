@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 from collections import defaultdict, deque
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -269,6 +270,24 @@ def _load_scored_papers(graph_dir: Path) -> pd.DataFrame | None:
     return df
 
 
+def _build_site_stats_json(included: pd.DataFrame, as_of: str | None = None) -> dict[str, Any]:
+    """Build the compact site-facing stats file consumed by MDX pages.
+
+    Derives the curated-vs-neighborhood split from `corpus_role`: `core` and
+    `expert_signal` are curated; `context` papers are citation-graph neighbors
+    included to keep the graph coherent.
+    """
+    curated_roles = {"core", "expert_signal"}
+    curated = int(included["corpus_role"].isin(curated_roles).sum())
+    total = int(len(included))
+    return {
+        "curatedPapers": curated,
+        "neighborhoodPapers": total - curated,
+        "totalArtifacts": total,
+        "asOf": as_of or datetime.now().strftime("%B %Y"),
+    }
+
+
 def _build_corpus_stats_json(
     papers: pd.DataFrame,
     graph: nx.DiGraph,
@@ -430,4 +449,17 @@ def run(config_path: str) -> None:
         corpus_stats["metadata"]["total_papers"],
         len(corpus_stats["top_authors"]),
         corpus_stats["metadata"]["n_venues"],
+    )
+
+    site_stats = _build_site_stats_json(included)
+    (web_dir / "site_stats.json").write_text(
+        json.dumps(site_stats, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    LOG.info(
+        "site_stats.json: %d curated, %d neighborhood, %d total (as of %s)",
+        site_stats["curatedPapers"],
+        site_stats["neighborhoodPapers"],
+        site_stats["totalArtifacts"],
+        site_stats["asOf"],
     )

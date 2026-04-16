@@ -1782,8 +1782,13 @@ def _generate_kid_journey_page(
     print(f"Kid journey page written to {out_path}")
 
 
-def _build_viz_assets(*, outputs_dir: Path, assets_dir: Path) -> None:
-    """Copy lineage and field-development JSON from pipeline outputs to site assets."""
+def _build_viz_assets(*, outputs_dir: Path, assets_dir: Path, data_dir: Path) -> None:
+    """Copy pipeline-generated viz JSON into the site tree.
+
+    Large visualization payloads go to `site/public/assets/` (served as-is).
+    The compact `site_stats.json` is imported at build time by MDX pages, so
+    it lands in `site/src/data/` instead.
+    """
     web_dir = outputs_dir / "website"
     for name in ("lineage_data.json", "field_development.json", "corpus_stats.json"):
         src = web_dir / name
@@ -1793,6 +1798,15 @@ def _build_viz_assets(*, outputs_dir: Path, assets_dir: Path) -> None:
         dst = assets_dir / name
         dst.write_bytes(src.read_bytes())
         print(f"Viz asset: {dst}")
+
+    site_stats_src = web_dir / "site_stats.json"
+    if site_stats_src.exists():
+        data_dir.mkdir(parents=True, exist_ok=True)
+        dst = data_dir / "site_stats.json"
+        dst.write_bytes(site_stats_src.read_bytes())
+        print(f"Site stats: {dst}")
+    else:
+        print(f"[warn] site_stats.json not found in {web_dir}; run compute_viz_metrics first.")
 
 
 def generate(config_path: str) -> None:
@@ -2171,7 +2185,11 @@ def generate(config_path: str) -> None:
     # site/src/content/docs/explorer.mdx is hand-maintained; the vendor JS and
     # explorer.js live in site/public/javascripts/. The pipeline only refreshes
     # the explorer JSON payloads in site/public/assets/.
-    _build_viz_assets(outputs_dir=root / cfg["output_dir"], assets_dir=assets_dir)
+    _build_viz_assets(
+        outputs_dir=root / cfg["output_dir"],
+        assets_dir=assets_dir,
+        data_dir=public_dir.parent / "src" / "data",
+    )
 
     # Starlight auto-generates the sidebar from directory contents (configured
     # in astro.config.mjs), so there is no nav file to rewrite.

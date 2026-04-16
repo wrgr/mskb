@@ -77,3 +77,4 @@ dmypy.json
 # Ruff
 .ruff_cache/
 /site/.npm-cache
+/outputs2

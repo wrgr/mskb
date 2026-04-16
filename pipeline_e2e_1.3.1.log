@@ -1,0 +1,93 @@
+[stage 1/18] Paper acquisition: seed governance checks  (elapsed 0:00)
+Seed governance checklist: PASS (0 errors, 3 warnings)
+[stage 1/18] done  stage=0:05  total=0:05
+[stage 2/18] Paper acquisition: retrieve corpora  (elapsed 0:05)
+[stage 2/18] done  stage=7:17  total=7:22
+[stage 3/18] Paper acquisition: deduplicate and merge  (elapsed 7:22)
+[stage 3/18] done  stage=0:29  total=7:51
+[stage 4/18] Paper acquisition: build graphs  (elapsed 7:51)
+[stage 4/18] done  stage=0:45  total=8:36
+[stage 5/18] Paper acquisition: compute scores  (elapsed 8:36)
+[stage 5/18] done  stage=0:11  total=8:47
+[stage 6/18] Paper acquisition: discover topics (Leiden clusters)  (elapsed 8:47)
+/Users/wgray13/projects/mskb/src/discover_topics.py:126: DtypeWarning: Columns (0: query) have mixed types. Specify dtype option on import or set low_memory=False.
+  scored = pd.read_csv(graph_dir / "scored_papers.csv")
+Discovered 15 topic clusters from 23545 paper assignments.
+[stage 6/18] done  stage=0:11  total=8:58
+[stage 7/18] Paper acquisition: assign topic evidence (T-codes)  (elapsed 8:58)
+paper_topic_evidence.csv: /Users/wgray13/projects/mskb/outputs/topics/paper_topic_evidence.csv
+paper_topic_evidence_summary.json: /Users/wgray13/projects/mskb/outputs/topics/paper_topic_evidence_summary.json
+[stage 7/18] done  stage=0:18  total=9:17
+[stage 8/18] Paper acquisition: select core corpus (T1+T2+T3+T4)  (elapsed 9:17)
+core_corpus_selected.csv: /Users/wgray13/projects/mskb/outputs/graph/core_corpus_selected.csv
+core_corpus_selection_summary.json: /Users/wgray13/projects/mskb/outputs/graph/core_corpus_selection_summary.json
+core_corpus_missing_abstracts.csv: /Users/wgray13/projects/mskb/outputs/graph/core_corpus_missing_abstracts.csv
+[stage 8/18] done  stage=0:03  total=9:20
+[stage 9/18] Paper acquisition: backfill abstracts for selected corpus  (elapsed 9:20)
+/Users/wgray13/projects/mskb/src/backfill_abstracts.py:1211: DtypeWarning: Columns (0: query) have mixed types. Specify dtype option on import or set low_memory=False.
+  scored = pd.read_csv(scored_path)
+trace_jsonl: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_trace.jsonl
+trace_summary_csv: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_trace_summary.csv
+trace_selected_not_in_canonical_csv: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_selected_not_in_canonical.csv
+{
+  "total_canonical_papers": 24119,
+  "missing_before_all": 6353,
+  "missing_before_scope": 318,
+  "selected_scope_enabled": true,
+  "selected_scope_size": 1184,
+  "selected_scope_ids_not_in_canonical": 8,
+  "manual_decisions_loaded": 8,
+  "manual_decisions_applied": 7,
+  "manual_decisions_skipped_missing_text": 0,
+  "manual_decisions_skipped_outside_scope": 1,
+  "manual_decisions_not_in_canonical": 0,
+  "manual_decisions_skipped_existing_abstract": 0,
+  "filled_from_candidate_versions": 2,
+  "attempted_openalex_queries": 500,
+  "attempted_secondary_queries": 500,
+  "successful_secondary_backfills": 245,
+  "attempted_html_fallbacks": 4,
+  "successful_html_backfills": 1,
+  "successful_openalex_backfills": 245,
+  "openalex_errors": 0,
+  "missing_after_all": 6099,
+  "missing_after_scope": 64,
+  "filled_total_scope": 254
+}
+[stage 9/18] done  stage=4:27  total=13:47
+[stage 10/18] Building learner journey  (elapsed 13:47)
+/Users/wgray13/projects/mskb/src/build_learner_journey.py:96: DtypeWarning: Columns (0: query, 1: abstract_backfill_source) have mixed types. Specify dtype option on import or set low_memory=False.
+  papers = pd.read_csv(papers_path)
+Stage LJ: Learner journey complete.
+  learner_journey_papers.csv: /Users/wgray13/projects/mskb/outputs/graph/learner_journey_papers.csv
+  learner_journey_topics.csv: /Users/wgray13/projects/mskb/outputs/graph/learner_journey_topics.csv
+  learner_journey.json: /Users/wgray13/projects/mskb/outputs/website/learner_journey.json
+[stage 10/18] done  stage=0:53  total=14:40
+[stage 11/18] Distilling papers (AI summaries)  (elapsed 14:40)
+Traceback (most recent call last):
+  File "/Users/wgray13/projects/mskb/run_pipeline.py", line 180, in <module>
+    main(args.config)
+    ~~~~^^^^^^^^^^^^^
+  File "/Users/wgray13/projects/mskb/run_pipeline.py", line 164, in main
+    _run_stage(idx, total, label, fn, config_path, pipeline_start)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wgray13/projects/mskb/run_pipeline.py", line 83, in _run_stage
+    fn(config_path)
+    ~~^^^^^^^^^^^^^
+  File "/Users/wgray13/projects/mskb/src/distill_papers.py", line 1204, in run
+    api_client, resolved_provider = _init_api_client(dist_cfg)
+                                    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/wgray13/projects/mskb/src/distill_papers.py", line 872, in _init_api_client
+    return _fail_or_none("GEMINI_API_KEY / GOOGLE_API_KEY not set"), "gemini"
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wgray13/projects/mskb/src/distill_papers.py", line 849, in _fail_or_none
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: Distillation provider='gemini' requested but GEMINI_API_KEY / GOOGLE_API_KEY not set. Set distillation.strict_provider=false in config.yaml to allow silent rules-based fallback.
+
+=== RESUME 1.3.1 2026-04-13T04:35:46Z — stages 11–18 with .env loaded ===
+API key env present (not printing values)
+[distill] provider=gemini model=gemini-2.5-flash (configured='gemini-2.5-flash')
+zsh: command not found: run_pipeline.py
+zsh: command not found: run_pipeline.py

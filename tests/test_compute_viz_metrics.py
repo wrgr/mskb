@@ -12,6 +12,7 @@ from src.compute_viz_metrics import (
     _build_citation_graph,
     _build_field_development_json,
     _build_lineage_json,
+    _build_site_stats_json,
     _build_topic_map,
     _compute_generations,
 )
@@ -143,6 +144,33 @@ def test_build_field_development_json_year_bounds() -> None:
     payload = _build_field_development_json(nodes)
     years = [e["year"] for e in payload["timeline"]]
     assert 1800 not in years
+
+
+# ── site stats JSON structure ────────────────────────────────────────────────
+
+def test_build_site_stats_splits_curated_and_neighborhood() -> None:
+    """curatedPapers counts core + expert_signal; neighborhoodPapers counts context; total is their sum."""
+    included = pd.DataFrame({
+        "canonical_paper_id": ["A", "B", "C", "D", "E"],
+        "corpus_role": ["core", "core", "expert_signal", "context", "context"],
+    })
+    stats = _build_site_stats_json(included, as_of="April 2026")
+    assert stats == {
+        "curatedPapers": 3,
+        "neighborhoodPapers": 2,
+        "totalArtifacts": 5,
+        "asOf": "April 2026",
+    }
+
+
+def test_build_site_stats_empty_frame() -> None:
+    """Empty input yields zero counts and preserves the provided as_of string."""
+    included = pd.DataFrame({"canonical_paper_id": [], "corpus_role": []})
+    stats = _build_site_stats_json(included, as_of="January 2026")
+    assert stats["curatedPapers"] == 0
+    assert stats["neighborhoodPapers"] == 0
+    assert stats["totalArtifacts"] == 0
+    assert stats["asOf"] == "January 2026"
 
 
 # ── file existence checks ─────────────────────────────────────────────────────

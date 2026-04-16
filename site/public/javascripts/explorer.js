@@ -1276,6 +1276,19 @@
     return `<button class="${cls}" data-journey-toggle="${id}" aria-pressed="${pressed}">${label}</button>`;
   }
 
+  // Build a mailto: link that lets a user flag a paper as incorrect. The
+  // email carries the paper id (subject) plus title and current page URL
+  // (body) so the recipient can locate the source of the complaint.
+  function renderFlagLink(id, title) {
+    const safeId = String(id || "");
+    const safeTitle = String(title || "Untitled");
+    const pageUrl = (typeof window !== "undefined" && window.location) ? window.location.href : "";
+    const subject = `[MSKB Flag] ${safeId}`;
+    const body = `Paper: ${safeTitle}\nID: ${safeId}\nURL: ${pageUrl}\n\nWhat's wrong:\n`;
+    const href = `mailto:willgray@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `<a class="btn-flag" href="${href}" title="Flag this paper as incorrect or problematic">⚑ Flag</a>`;
+  }
+
   function refreshJourneyButtons() {
     const nodes = document.querySelectorAll("[data-journey-toggle]");
     nodes.forEach((btn) => {
@@ -1784,6 +1797,7 @@
     const cpyPill = `<span class="pill">Citations/year: ${Number(node.citations_per_year || 0).toFixed(2)}</span>`;
     const provenance = `<strong>Summary provenance:</strong> source=${escapeHtml(node.summary_source || "unknown")}; method=${escapeHtml(node.distill_method || "unknown")}; generated=${escapeHtml(node.summary_generated_at_utc || "unknown")}; hash=${escapeHtml(String(node.source_text_hash || "").slice(0, 12) || "n/a")}; overlap=${Number(node.faithfulness_overlap || 0).toFixed(2)}`;
     const journeyToggle = renderJourneyButton(node.id);
+    const flagLink = renderFlagLink(node.id, node.title);
     const takeaways = Array.isArray(takeawaysVariant) ? takeawaysVariant : [];
     const strippedTakeaways = takeaways
       .map(t => String(t || "").replace(/^(opportunity|challenge|action|resolution)\s*:\s*/i, "").trim())
@@ -1804,7 +1818,7 @@
       <div><strong>Bibliography (plain text):</strong> ${escapeHtml(citationPlaintext)}</div>
       <div>${bibLink}</div>
       <div><em>${escapeHtml(String(node.summary_disclaimer || ""))}</em></div>
-      <div class="explorer-actions">${journeyToggle}</div>
+      <div class="explorer-actions">${journeyToggle}${flagLink}</div>
     `;
     renderRelationshipNavigator(id);
   }
@@ -1885,6 +1899,7 @@
           <div class="selection-actions">
             <button data-focus="${node.id}">Focus</button>
             <button data-journey-toggle="${node.id}">Remove</button>
+            ${renderFlagLink(node.id, node.title)}
           </div>
         </li>
       `;

@@ -7,21 +7,31 @@ sidebar:
 ---
 
 import { Aside, Badge } from '@astrojs/starlight/components';
+import siteStats from '../../../data/site_stats.json';
+
+export const conceptCount = Object.keys(
+  import.meta.glob('../concepts/**/*.md*')
+).filter((p) => !/\/concepts\/index\.mdx?$/.test(p)).length;
 
 <Aside type="caution" title="Plain-language disclaimer">
 MSKB is a **learning engineering experiment**, not a clinical reference or systematic review. The corpus was assembled semi-automatically; summaries are AI-generated. Verify critical clinical claims against primary sources and current guidelines before applying them.
 </Aside>
 
-## Corpus statistics (April 2026 build)
+## Corpus statistics
+
+*{siteStats.asOf} build.*
 
 <div class="corpus-stats">
-  <div class="stat-card"><span class="stat-value">649</span><span class="stat-label">papers (T1–T4 corpus)</span></div>
+  <div class="stat-card"><span class="stat-value">{siteStats.curatedPapers}</span><span class="stat-label">core papers (T1–T4)</span></div>
+  <div class="stat-card"><span class="stat-value">{siteStats.totalArtifacts.toLocaleString()}</span><span class="stat-label">total artifacts (core + neighborhood)</span></div>
   <div class="stat-card"><span class="stat-value">5,103</span><span class="stat-label">citation edges</span></div>
   <div class="stat-card"><span class="stat-value">9</span><span class="stat-label">citation topic clusters</span></div>
-  <div class="stat-card"><span class="stat-value">30</span><span class="stat-label">concept pages</span></div>
+  <div class="stat-card"><span class="stat-value">{conceptCount}</span><span class="stat-label">concept pages</span></div>
   <div class="stat-card"><span class="stat-value">1961–2026</span><span class="stat-label">publication span</span></div>
-  <div class="stat-card"><span class="stat-value">649/649</span><span class="stat-label">with AI summaries (both levels)</span></div>
+  <div class="stat-card"><span class="stat-value">{siteStats.curatedPapers}/{siteStats.curatedPapers}</span><span class="stat-label">with AI summaries (both levels)</span></div>
 </div>
+
+*Core papers pass the T1–T4 selection gate; neighborhood artifacts are citation-graph anchors (papers that cite or are cited by core), included to keep the graph coherent.*
 
 **Evidence-type breakdown:**
 

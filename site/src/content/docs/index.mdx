@@ -12,6 +12,15 @@ head:
 ---
 
 import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+import siteStats from '../../data/site_stats.json';
+
+export const topicCount = Object.keys(
+  import.meta.glob('./topics/*.md*')
+).filter((p) => !/\/topics\/index\.mdx?$/.test(p)).length;
+
+export const conceptCount = Object.keys(
+  import.meta.glob('./concepts/**/*.md*')
+).filter((p) => !/\/concepts\/index\.mdx?$/.test(p)).length;
 
 <div class="home-banner-wrap">
   <img
@@ -27,17 +36,17 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 <div class="home-hero">
   <h1>Learn multiple sclerosis by concept, not by pile.</h1>
   <p>
-    Multiple sclerosis affects nearly 3 million people worldwide and is the leading
-    cause of non-traumatic neurological disability in young adults. Despite major
-    advances — NfL biomarkers clinical-grade, BTK inhibitors entering trials, disease
-    mechanisms increasingly understood — the research literature can be overwhelming to enter.
+    MS research spans immunology, neurology, imaging, and therapeutics — and the literature
+    grows faster than any student can read it. Starting a thesis, a rotation, or just a deep
+    curiosity usually means drowning in citations before you know which ones matter.
   </p>
   <p>
     MSKB is a free, openly-licensed learning map for undergraduate and early-graduate
-    researchers. It structures <strong>649 peer-reviewed papers</strong> (T1–T4 corpus, April 2026)
-    into 18 research topics, links them to 30 learner-centered concept pages,
-    and curates reading paths from foundations to frontier.
-    Start with a concept, follow its prerequisites, and trace your way into the literature.
+    researchers. It links foundational concepts to the papers that established them, and
+    every concept to what you need to learn first. Start at a question that pulls you.
+    Follow the threads. Every connection you make strengthens the knowledge network
+    you're building — and in a field as interconnected as this one, understanding compounds.
+    The deeper you go, the clearer the signal becomes.
   </p>
   <div class="home-cta">
     <a class="primary" href="/mskb/pathways/">Start with a pathway</a>
@@ -104,7 +113,7 @@ Concepts, citations, and resources are kept **separate** on purpose: the citatio
 
 ## About the corpus
 
-MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across 18 MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity, within-subdomain citation scores, and expert-signal curation. Every design decision is documented.
+MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across {topicCount} MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity, within-subdomain citation scores, and expert-signal curation. The current release ({siteStats.asOf}) includes **{siteStats.curatedPapers} core papers** and their citation neighborhoods — **{siteStats.totalArtifacts.toLocaleString()} total artifacts** in the network — linked to **{conceptCount} learner-centered concept pages**. Every design decision is documented.
 
 <CardGrid>
   <LinkCard
