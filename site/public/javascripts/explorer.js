@@ -209,7 +209,7 @@
   let paperAgeRankMap = new Map();
   let authorStatsMap = new Map();
   let searchIndexCache = { signature: "", index: null };
-  let spreadMultiplier = clusterSpreadEl ? (Number(clusterSpreadEl.value || 120) / 100) : 1.2;
+  let spreadMultiplier = clusterSpreadEl ? (Number(clusterSpreadEl.value || 180) / 100) : 1.8;
 
   function setGraphStatus(text, strong = false) {
     if (!graphStatusEl) return;
@@ -971,7 +971,7 @@
       const cx = (col - (cols - 1) / 2) * spacingX;
       const cy = (row - (rows - 1) / 2) * spacingY;
       members.sort((a, b) => ((b.citation_count || 0) - (a.citation_count || 0)) || String(a.id).localeCompare(String(b.id)));
-      const radialStep = Math.max(20, Math.min(48, 18 + Math.sqrt(members.length))) * mult;
+      const radialStep = Math.max(28, Math.min(56, 22 + Math.sqrt(members.length))) * mult;
       members.forEach((node, i) => {
         if (i === 0) {
           positions.set(node.id, { x: cx, y: cy });
@@ -1253,7 +1253,7 @@
         if (drainIdx < elements.length) {
           scheduleIdle(pumpElements);
         } else {
-          try { cy.fit(undefined, 30); } catch (_) {}
+          try { cy.fit(undefined, 50); } catch (_) {}
           if (typeof onReady === "function") {
             try { onReady(); } catch (_) { /* swallow */ }
           }
@@ -2657,7 +2657,7 @@
       spreadRaf = requestAnimationFrame(() => {
         spreadRaf = 0;
         stabilizeThenSettle(0);
-        try { cy.fit(undefined, 30); } catch (_) {}
+        try { cy.fit(undefined, 50); } catch (_) {}
       });
     });
   }

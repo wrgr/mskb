@@ -1,0 +1,39 @@
+=== RERUN backfill+audit 1.3.2 2026-04-16T21:39:46Z ===
+[1/2] Backfill abstracts
+/Users/wgray13/projects/mskb/src/backfill_abstracts.py:1211: DtypeWarning: Columns (0: query) have mixed types. Specify dtype option on import or set low_memory=False.
+  scored = pd.read_csv(scored_path)
+trace_jsonl: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_trace.jsonl
+trace_summary_csv: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_trace_summary.csv
+trace_selected_not_in_canonical_csv: /Users/wgray13/projects/mskb/outputs/raw/abstract_backfill_selected_not_in_canonical.csv
+{
+  "total_canonical_papers": 24133,
+  "missing_before_all": 6309,
+  "missing_before_scope": 273,
+  "selected_scope_enabled": true,
+  "selected_scope_size": 1188,
+  "selected_scope_ids_not_in_canonical": 8,
+  "manual_decisions_loaded": 8,
+  "manual_decisions_applied": 0,
+  "manual_decisions_skipped_missing_text": 0,
+  "manual_decisions_skipped_outside_scope": 1,
+  "manual_decisions_not_in_canonical": 0,
+  "manual_decisions_skipped_existing_abstract": 7,
+  "filled_from_candidate_versions": 0,
+  "attempted_openalex_queries": 500,
+  "attempted_secondary_queries": 500,
+  "successful_secondary_backfills": 242,
+  "attempted_html_fallbacks": 6,
+  "successful_html_backfills": 1,
+  "successful_openalex_backfills": 242,
+  "openalex_errors": 6,
+  "missing_after_all": 6067,
+  "missing_after_scope": 31,
+  "filled_total_scope": 242
+}
+[1/2] done in 966s
+[2/2] KB audit gates
+KB audit gates: PASS (0 errors, 2 warnings, 27 held for manual review)
+  REVIEW REQUIRED: 27 paper(s) in /Users/wgray13/projects/mskb/outputs/audit/held_papers.csv
+[2/2] done in 0s
+RERUN complete in 966s
+=== END RERUN rc=0 2026-04-16T23:00:42Z ===
