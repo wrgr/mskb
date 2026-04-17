@@ -600,12 +600,9 @@
     });
 
     fitButton.addEventListener("click", () => {
-      const camera = renderer.getCamera();
-      if (camera && typeof camera.animatedReset === "function") {
-        camera.animatedReset({ duration: 300 });
-      } else if (camera && typeof camera.setState === "function") {
-        camera.setState({ x: 0, y: 0, ratio: 1, angle: 0 });
-      }
+      // Zoom out to ratio 1.4 so the full graph plus a margin is visible,
+      // not cropped to the tightest bbox (which clips node halos at edges).
+      fitWholeGraph(true);
     });
 
     resetButton.addEventListener("click", () => {
@@ -615,11 +612,21 @@
       neighborMode = false;
       setActivePill("All");
       applyVisualState();
-      const camera = renderer.getCamera();
-      if (camera && typeof camera.animatedReset === "function") {
-        camera.animatedReset({ duration: 300 });
-      }
+      fitWholeGraph(true);
     });
+
+    // Center on the graph's centroid and zoom out so every node is visible
+    // with a comfortable margin. ratio > 1 = zoomed OUT in Sigma.
+    function fitWholeGraph(animated) {
+      const camera = renderer.getCamera();
+      if (!camera) return;
+      const state = { x: 0.5, y: 0.5, ratio: 1.4, angle: 0 };
+      if (animated && typeof camera.animate === "function") {
+        camera.animate(state, { duration: 300 });
+      } else if (typeof camera.setState === "function") {
+        camera.setState(state);
+      }
+    }
 
     renderer.on("clickNode", ({ node }) => {
       selectedId = node;
@@ -670,7 +677,9 @@
 
     renderDetails(selectedId);
     applyVisualState();
-    centerOnNode(renderer, selectedId, 0.5);
+    // Initial view: show the whole graph, centered, slightly zoomed out,
+    // rather than zooming in on the first selected node.
+    fitWholeGraph(false);
 
     return {
       destroy() {
