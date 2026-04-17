@@ -37,9 +37,11 @@ export default defineConfig({
           label: 'Pathways',
           items: [
             { label: 'Overview', link: '/pathways/' },
+            { label: 'Intro to MS research', link: '/pathways/intro-to-ms-research/' },
             { label: 'Clinical', link: '/pathways/clinical/' },
             { label: 'Mechanistic', link: '/pathways/mechanistic/' },
             { label: 'Emerging frontiers', link: '/pathways/emerging/' },
+            { label: 'Journal club (undergrad)', link: '/pathways/journal-club/' },
           ],
         },
         {

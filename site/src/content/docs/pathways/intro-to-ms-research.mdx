@@ -1,0 +1,239 @@
+---
+title: Intro to MS Research
+description: A methods-first orientation to multiple sclerosis research — what MS research actually is, the study designs you will encounter, the shared toolbox, and how to read an MS paper.
+sidebar:
+  label: Intro to MS research
+  order: 0.5
+---
+
+import { Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+This pathway is for someone who has **never done MS research before**. It does not teach you MS biology in depth — the other pathways do that. It teaches you **the shape of the field**: what kinds of studies are done, what tools are used, how to read a paper, and where to look for problems.
+
+<Aside type="tip" title="How this differs from the other pathways">
+The Clinical, Mechanistic, and Emerging pathways teach you *what we know about MS*. This pathway teaches you *how MS researchers know what they know* — the designs, the instruments, the vocabulary, the common mistakes. Use it before or alongside the [Journal Club track](/mskb/pathways/journal-club/).
+</Aside>
+
+## Welcome — you are already in the room
+
+**If you are reading this, you are already considered part of the MS research community.** Not a future member. A current one. The field is small, it is open, and it needs more people — especially students willing to learn, make mistakes in public, and stay curious long enough to become useful.
+
+Multiple sclerosis affects roughly **2.9 million people worldwide** (per the [MS International Federation Atlas of MS](https://www.atlasofms.org/)), most diagnosed between 20 and 40. Modern disease-modifying therapies are a real success — anti-CD20 drugs suppress relapses by more than half. But the **hardest problems remain open**, and the gap between what we know and what patients need is large enough that a well-posed undergraduate question can move the conversation.
+
+<Aside type="caution" title="The acute need — Pathways to Cures">
+The National MS Society's [Pathways to Cures roadmap](https://doi.org/10.1177/13524585241266483) (Bebo et al. 2022 & 2024) was built with input from 300+ people living with MS and 30+ MS societies. Three pillars organise the most important open problems, and each one is explicit that **more investigators are needed**:
+
+- **Stop MS.** *Smoldering neuroinflammation* — the slow, chronic CNS-resident disease process that drives disability after relapses stop — is still poorly understood. Progressive MS lags relapsing MS in both mechanism and therapy.
+- **Restore function.** **No remyelinating therapy is approved.** Multiple Phase 2 trials over the past decade failed. The biology is clearer than ever; the next round of trials needs better endpoints and better-designed cohorts.
+- **End MS forever.** The EBV causality finding (Björnevik et al. 2022, *Science*) opened a prevention path that did not exist five years ago. An EBV vaccine trial with MS as an endpoint needs registry, biobank, and long-follow-up infrastructure that does not yet exist at scale.
+
+Cutting across all three: **equity**. MS affects Black Americans at higher rates and with more aggressive disease than earlier literature reported, and trials have historically under-enrolled Black and Hispanic patients. The next cohort of investigators needs to reflect the population affected by the disease. See the [Emerging topics pathway](/mskb/pathways/emerging/) for the full picture.
+</Aside>
+
+### Why your work is vital
+
+"Vital" is not a figure of speech. An undergraduate who stays in MS research for two or three years can do any of the following — each is something the field needs more of:
+
+- **Replicate a finding.** Pick a recent paper with open data; reproduce the main figure. Replication is undervalued, undersupplied, and publishable even when it fails.
+- **Clean a cohort.** Real-world registries (MSBase, UK MS Register, institutional cohorts) are rich, messy, and chronically under-curated. Careful data-quality work turns into authorship.
+- **Fill a gap.** The [MSKB gap tracker](/mskb/corpus/gaps/) lists corpus-level blind spots — Global South epidemiology, Hispanic and Asian cohorts, lived-experience studies, digital biomarkers, non-English literature. These are under-studied because there have not been enough people, not because the questions are uninteresting.
+- **Be the patient-facing person in a methods lab.** Computational and imaging groups want more input from people who have talked to patients. This is a real contribution, not a consolation role.
+- **Ask the obvious question.** The most useful questions in MS research are usually simple — *why was PPMS excluded?*, *what fraction of the cohort was Black?*, *what does this look like after ten years?* Students notice these because they have not yet learned to stop asking.
+
+The field is welcoming, the open problems are real, and you can start contributing today with the tools in this pathway and the papers in the [Journal Club track](/mskb/pathways/journal-club/). Most people who try MS research drift away before they have read thirty papers carefully. Thirty is not many. We would like you to stay longer than that.
+
+---
+
+## Step 1 — What counts as "MS research"
+
+MS research is not one thing. It is five loosely connected communities, each with its own journals, conferences, and vocabulary. A productive researcher usually lives in one and visits the others.
+
+| Arm | Core question | Typical output |
+|-----|---------------|----------------|
+| **Basic / mechanistic** | Why does MS happen? What molecules, cells, and pathways drive it? | Mouse models, single-cell sequencing, pathology, immunology papers |
+| **Imaging & biomarkers** | Can we measure MS better — earlier, cheaper, more specifically? | MRI methods, OCT, serum/CSF assays, validation cohorts |
+| **Clinical trials & therapeutics** | Does a drug or device help patients? | Phase 1/2/3 trials, real-world effectiveness, registries |
+| **Epidemiology & genetics** | Who gets MS, and why? | GWAS, cohort studies, ecological studies, disparities work |
+| **Lived-experience & implementation** | What do patients need, and does care deliver it? | PROs, qualitative studies, health-services research |
+
+The [MSKB research spectrum](/mskb/getting-started/#research-spectrum) maps these arms onto the site. The [NMSS Pathways to Cures](https://doi.org/10.1177/13524585241266483) roadmap maps them onto open problems.
+
+## Step 2 — Study designs you will actually read
+
+You do not need to memorise epidemiology. You need to recognise what kind of study is in front of you within the first 30 seconds, because that tells you which questions to ask.
+
+### Randomised controlled trial (RCT)
+
+**What it is.** Patients randomly assigned to treatment vs. control; outcomes compared. The strongest design for "does this drug work?"
+
+**MS-specific patterns.** Primary endpoints are almost always **annualized relapse rate (ARR)** for relapsing MS and **confirmed disability progression (CDP)** for progressive MS. MRI activity is a common secondary. Trials run 1–3 years — longer for progressive MS.
+
+**Questions to ask.** Was the control arm placebo or an active comparator? Who was excluded (PPMS? high EDSS? prior high-efficacy DMT?)? What was the attrition rate, and why?
+
+**Reporting standard.** [CONSORT](https://www.equator-network.org/reporting-guidelines/consort/).
+
+### Observational cohort study
+
+**What it is.** Patients followed over time without random assignment. Answers "what happens in typical care?" and can detect long-term signals RCTs miss.
+
+**MS-specific patterns.** The big registries — **MSBase**, the **UK MS Register**, **Swedish MS Registry**, **BCMS** — are the workhorses. Propensity-score matching is standard for DMT comparisons.
+
+**Questions to ask.** How did patients end up on their treatment? What are the confounders? Is there **immortal time bias** (counting follow-up time before a patient could possibly experience the outcome)?
+
+**Reporting standard.** [STROBE](https://www.equator-network.org/reporting-guidelines/strobe/).
+
+### Case-control study
+
+**What it is.** Compares people with MS to people without, looking backward for exposures or risk factors. Efficient for rare diseases.
+
+**MS-specific patterns.** How nearly every environmental risk factor — EBV, vitamin D, smoking, adolescent obesity — was first identified before longitudinal studies confirmed.
+
+**Questions to ask.** Recall bias? How were controls selected? Is the exposure measured before or after diagnosis?
+
+### Genome-wide association study (GWAS)
+
+**What it is.** Scans the genome of thousands of cases vs. controls for single-nucleotide polymorphisms (SNPs) associated with disease.
+
+**MS-specific patterns.** The [IMSGC](https://imsgc.net/) has driven this; the 2019 *Science* paper identified 233 loci. MS GWAS is now at the fine-mapping and cell-type-enrichment stage.
+
+**Questions to ask.** What is the effect size of each locus (hint: mostly tiny)? Is ancestry represented beyond European? What fraction of heritability is explained?
+
+### Animal models
+
+**What it is.** Mouse and rat systems that mimic aspects of MS biology.
+
+**MS-specific patterns.**
+- **EAE (experimental autoimmune encephalomyelitis)** — immunisation-driven; models peripheral-immune-driven relapsing disease. Most DMTs worked in EAE before reaching humans. Some that worked in EAE failed in humans — learn the list.
+- **Cuprizone** — a copper chelator fed to mice; causes oligodendrocyte death and reversible demyelination. Used to study remyelination.
+- **Theiler's virus** — a viral model producing chronic demyelination in susceptible mouse strains.
+
+**Questions to ask.** Which *aspect* of MS does this model target — inflammation, demyelination, repair? What does it explicitly not model (e.g. cortical pathology, human immune repertoire)?
+
+**Reporting standard.** [ARRIVE](https://arriveguidelines.org/) for preclinical work.
+
+### Imaging and biomarker studies
+
+**What it is.** Methods papers validating an assay or MRI sequence, or applied papers using it as a readout.
+
+**Questions to ask.** Analytical validation (does it measure what it claims?) vs. clinical validation (does it predict outcomes?) — these are different studies. A biomarker paper that skips one is incomplete.
+
+## Step 3 — The shared MS toolbox
+
+The same five or six instruments appear across almost every MS paper. Know what each one measures and what it misses.
+
+**Clinical scales.**
+- **EDSS (Expanded Disability Status Scale).** 0–10, heavily weighted to ambulation. Ordinal, not linear. A change from 6 to 6.5 is not the same as 1 to 1.5.
+- **MSFC (MS Functional Composite).** Z-scored combination of walking, arm function (9HPT), and cognitive processing (SDMT or PASAT). More sensitive than EDSS to cognitive and upper-limb change.
+- **SDMT (Symbol Digit Modalities Test).** A 90-second processing-speed test that has become the default MS cognitive screen.
+
+**Imaging.**
+- **T2 FLAIR** — shows total lesion burden. Sensitive but non-specific.
+- **T1 gadolinium-enhanced** — shows active (roughly the last 4 weeks) lesions with breakdown of the BBB.
+- **T1 hypointensities ("black holes")** — chronic tissue loss.
+- **Paramagnetic rim lesions (PRLs)** — chronic active inflammation; see the [PRL concept page](/mskb/concepts/diagnosis/paramagnetic-rim-lesions/).
+- **Brain volume / atrophy** — requires careful pipelines (SIENA, FreeSurfer); watch for pseudoatrophy in the first year of treatment.
+- **OCT (optical coherence tomography)** — retinal nerve fibre layer and ganglion cell layer thickness as a window on neurodegeneration.
+
+**Fluid biomarkers.**
+- **CSF oligoclonal bands (OCBs)** — intrathecal immunoglobulin; part of McDonald criteria.
+- **Serum / CSF neurofilament light (NfL)** — released on axonal injury. Rises with disease activity, age, and other neuro conditions.
+- **Serum GFAP** — astrocytic injury; promising for progressive MS.
+
+**Endpoint composites.**
+- **NEDA (No Evidence of Disease Activity).** NEDA-3 = no relapses + no MRI activity + no EDSS progression. NEDA-4 adds brain atrophy.
+- **PIRA / RAW.** Progression Independent of Relapse Activity vs. Relapse-Associated Worsening. See [PIRA concept page](/mskb/concepts/clinical/pira-smoldering-ms/).
+
+[MSKB concept link — MRI patterns](/mskb/concepts/diagnosis/mri-patterns/) · [CSF & blood biomarkers](/mskb/concepts/diagnosis/csf-biomarkers/)
+
+## Step 4 — How to read an MS paper
+
+Use this checklist every time. It takes ~15 minutes on a second read.
+
+1. **Design.** One sentence: *"This is a [design] in [population] testing [intervention/exposure] against [comparator], measured by [endpoint] over [duration]."* If you cannot write this sentence, read again.
+2. **Population.** Who exactly was enrolled? What was excluded? Find the flow diagram (CONSORT / STROBE). Count the patients who did not finish and ask why.
+3. **Outcome.** Is the primary outcome clinically meaningful or a surrogate? If a surrogate, is it validated (NfL yes, some MRI metrics less so)?
+4. **Effect size.** A hazard ratio of 0.8 and an absolute risk reduction of 0.3%/year are the same thing said two ways. Always compute the absolute difference yourself.
+5. **Subgroup findings.** Treat with extreme suspicion unless prespecified and the trial was powered for them.
+6. **Threats to inference.** Dropout, crossover, unblinding, era effects, selection into treatment. For MS specifically: watch for **treatment-era confounding** (older DMTs compared to newer ones across eras) and **ceiling/floor effects on EDSS**.
+7. **What changes tomorrow?** If the paper is right, what does a neurologist do differently on Monday? If you cannot answer, neither can they.
+
+## Step 5 — Statistical concepts that recur
+
+Enough to read, not enough to run analyses. Build from here.
+
+- **Annualized relapse rate (ARR).** A count outcome modelled with negative binomial regression. Reported as **rate ratio** vs. the comparator.
+- **Hazard ratio (HR).** From Cox regression on time-to-event data (e.g., time to confirmed disability progression). HR = 0.75 means 25% lower hazard at any given time — not a 25% reduction in lifetime risk.
+- **Kaplan-Meier curves.** Read them as: *how much separation, how fast, and is the separation sustained?*
+- **Intention-to-treat (ITT) vs. per-protocol.** ITT preserves randomisation; per-protocol inflates effect sizes by removing non-compliers. The primary analysis should be ITT.
+- **Multiple testing.** MS trials often report a hierarchy of secondary endpoints. If the primary is missed, downstream positives are hypothesis-generating only.
+- **Confidence intervals vs. p-values.** Always read the CI. A p-value below 0.05 paired with a CI that crosses 1 is already a warning.
+
+## Step 6 — Common MS-specific pitfalls
+
+- **The MRI-clinical paradox.** Lesion load on MRI correlates only modestly with disability. A drug that reduces new lesions may not reduce long-term disability.
+- **Treatment-era confounding.** Real-world comparisons of drugs approved 10 years apart mix drug effect with era effects (better MRI, earlier diagnosis, healthier survivors).
+- **Progression vs. relapse conflation.** Pre-2020 papers often called anything worse "progression." PIRA/RAW disaggregation is now the standard. Translate older papers into modern terms in your head.
+- **Cortical vs. white-matter pathology.** Conventional MRI undercounts cortical lesions. Many papers implicitly treat "lesions on FLAIR" as "all MS pathology" — it is not.
+- **EAE is not MS.** Some EAE-validated drugs failed in humans. Demand mechanistic honesty, not "this drug worked in mice."
+- **Representation.** Most MS trials overrepresent white, European-ancestry, ambulatory, relapsing-remitting patients on first- or second-line therapy. Generalisation outside that box is an assumption, not a fact.
+- **Survivorship in long cohorts.** Natural-history cohorts (Lyon, London/Ontario, UBC) overrepresent patients who stayed in follow-up. Rapid progressors may drop out; slow progressors are oversampled.
+
+## Step 7 — Where MS research happens
+
+Useful bookmarks. Start here when you want to find a lab, a dataset, or a conference.
+
+**Major societies and funders.**
+- [National MS Society (US)](https://www.nationalmssociety.org/) — research funding, Pathways to Cures roadmap, patient resources.
+- [MS International Federation](https://www.msif.org/) — global perspective, Atlas of MS.
+- [MS Society (UK)](https://www.mssociety.org.uk/) — funding and the *MS Register*.
+
+**Conferences.**
+- [ECTRIMS](https://www.ectrims.eu/) — the largest MS meeting, held annually in Europe.
+- [ACTRIMS](https://actrims.org/) — the Americas counterpart.
+- [AAN Annual Meeting](https://www.aan.com/) — broader neurology with a strong MS track.
+
+**Consortia and datasets.**
+- [International MS Genetics Consortium (IMSGC)](https://imsgc.net/).
+- [MSBase](https://www.msbase.org/) — largest international MS registry.
+- [UK MS Register](https://ukmsregister.org/).
+- [ClinicalTrials.gov](https://clinicaltrials.gov/) — every interventional trial.
+
+**Literature tools.**
+- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) and [OpenAlex](https://openalex.org/) — two different views of the literature; OpenAlex is richer for citation-graph work and is what MSKB is built on.
+- The [MSKB Citation Explorer](/mskb/explorer/) and [Citation Tree](/mskb/citation-tree/) for navigating forward/backward citations within this corpus.
+
+## Step 8 — Getting started as an undergraduate
+
+Practical advice that does not need a PhD. If you skipped the opening, scroll back to [Welcome — you are already in the room](#welcome--you-are-already-in-the-room) — the field wants you, and the ask is real.
+
+1. **Pick one arm from Step 1.** You will not become useful in all five in one semester. Mechanistic and imaging work tends to need wet-lab or scanner access; epidemiology, biomarker validation, and implementation work tend to be more accessible to undergraduates because data is often already collected.
+2. **Find a lab that publishes regularly.** Look for first-author undergraduates on recent papers. Email the PI with a specific paragraph on *which paper of theirs* you read and *what question it raised*.
+3. **Do the [Journal Club track](/mskb/pathways/journal-club/) in parallel.** Nothing calibrates your taste faster than arguing about twelve papers in twelve weeks.
+4. **Reproduce a figure.** Pick an open-data MS paper (GWAS summary stats, a public MRI dataset) and reproduce one figure from scratch. This is more persuasive on an application than a letter of recommendation.
+5. **Keep a paper log.** For every paper you read, write two sentences: *What did they do? What did I not understand?* After 30 papers the second sentence gets shorter.
+
+<Aside type="note" title="Where to go next">
+Once you can read an MS paper without getting lost in the first page, pick the arm that fits your question:
+- **"How does MS work?"** → [Mechanistic pathway](/mskb/pathways/mechanistic/)
+- **"What does MS look like in patients?"** → [Clinical pathway](/mskb/pathways/clinical/)
+- **"Where is the field going?"** → [Emerging topics](/mskb/pathways/emerging/)
+- **"Let's read papers together."** → [Journal club track](/mskb/pathways/journal-club/)
+</Aside>
+
+<CardGrid>
+  <LinkCard
+    title="Journal club track"
+    href="/mskb/pathways/journal-club/"
+    description="12 sessions of anchor papers with discussion prompts — practical calibration for the skills taught here."
+  />
+  <LinkCard
+    title="Getting started with MSKB"
+    href="/mskb/getting-started/"
+    description="How the site is organised: concepts, topics, pathways, and the citation explorer."
+  />
+  <LinkCard
+    title="Corpus methodology"
+    href="/mskb/corpus/methodology/"
+    description="How this knowledge base was built — seed selection, retrieval, scoring, and known limitations."
+  />
+</CardGrid>
