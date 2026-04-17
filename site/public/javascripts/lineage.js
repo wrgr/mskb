@@ -87,9 +87,12 @@
 
     const positions = {};
     for (const [yr, bucket] of Object.entries(byYear)) {
-      const x = ((Number(yr) - yrMin) / span) * 20 - 10;
+      // x range widened from 20 → 60 so adjacent years sit further apart.
+      const x = ((Number(yr) - yrMin) / span) * 60 - 30;
       const count = bucket.length;
-      const spread = Math.min(count * 0.55, 10);
+      // y spread per node bumped from 0.55 → 1.6 with a larger ceiling so
+      // crowded years no longer pile up on top of each other.
+      const spread = Math.min(count * 1.6, 36);
       bucket.forEach((n, i) => {
         const y = count === 1 ? 0 : -spread / 2 + (i / (count - 1)) * spread;
         positions[n.paper_id] = { x, y };

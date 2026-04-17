@@ -14,7 +14,17 @@
     clinical_trials_and_therapeutics: "#d62728",
     clinical_care_and_management: "#2ca02c",
     epidemiology_and_population_health: "#9467bd",
-    unknown: "#aaaaaa",
+    unknown: "#888888",
+  };
+
+  // Human-readable category labels for the tooltip domain chip.
+  const CAT_LABELS = {
+    pathogenesis_and_immunology: "Pathogenesis & Immunology",
+    imaging_and_biomarkers: "Imaging & Biomarkers",
+    clinical_trials_and_therapeutics: "Therapeutics",
+    clinical_care_and_management: "Clinical Care",
+    epidemiology_and_population_health: "Epidemiology",
+    unknown: "Other",
   };
 
   // ── DOM refs ──────────────────────────────────────────────────────────────
@@ -236,7 +246,8 @@
         "stroke-width": 1,
       });
       circle.style.cursor = "default";
-      circle.addEventListener("mouseenter", evt => showTooltip(evt, n, r));
+      circle.addEventListener("mouseenter", evt => showTooltip(evt, n));
+      circle.addEventListener("mousemove", evt => positionTooltip(evt.clientX, evt.clientY));
       circle.addEventListener("mouseleave", hideTooltip);
       nodeG.appendChild(circle);
     }
@@ -248,29 +259,40 @@
   // ── tooltip ───────────────────────────────────────────────────────────────
   // Position fixed so it works correctly in a scrollable container.
 
-  function showTooltip(evt, n, r) {
+  function showTooltip(evt, n) {
     if (!tooltipEl) return;
     const gen = n.generation;
     const genLabel = gen === 0 ? "Generation 0 — foundational" : `Generation ${gen}`;
+    const catColor = CAT_COLORS[n.category] ?? "#888888";
+    const catLabel = CAT_LABELS[n.category] ?? "Other";
+    const byline = [n.year, n.first_author ? esc(n.first_author) : null]
+      .filter(Boolean)
+      .join(" · ");
     tooltipEl.innerHTML =
-      `<strong>${esc(n.title)}</strong><br/>` +
-      `${n.year}` +
-      (n.first_author ? ` · ${esc(n.first_author)}` : "") +
-      `<br/>${n.cited_by_count.toLocaleString()} citations` +
-      ` · importance ${n.importance_score.toFixed(2)}` +
-      `<br/><em>${genLabel}</em>`;
+      `<span class="ct-tt-cat" style="background:${catColor}">${esc(catLabel)}</span>` +
+      `<strong>${esc(n.title)}</strong>` +
+      `<div class="ct-tt-meta">${byline}</div>` +
+      `<div class="ct-tt-meta">${n.cited_by_count.toLocaleString()} citations · importance ${n.importance_score.toFixed(2)}</div>` +
+      `<em>${genLabel}</em>`;
     tooltipEl.hidden = false;
     positionTooltip(evt.clientX, evt.clientY);
   }
 
+  // Anchor tooltip to cursor; flip left/up if it would overflow the viewport.
   function positionTooltip(cx, cy) {
-    if (!tooltipEl) return;
-    tooltipEl.style.left = `${cx + 14}px`;
-    tooltipEl.style.top = `${cy - 10}px`;
-    // Nudge left if tooltip would overflow viewport right edge.
+    if (!tooltipEl || tooltipEl.hidden) return;
+    const MARGIN = 8;
+    const OFFSET = 14;
+    // Start at the default bottom-right-of-cursor position so we can measure
+    // actual rendered size, then flip as needed.
+    tooltipEl.style.left = `${cx + OFFSET}px`;
+    tooltipEl.style.top = `${cy + OFFSET}px`;
     const rect = tooltipEl.getBoundingClientRect();
-    if (rect.right > window.innerWidth - 8) {
-      tooltipEl.style.left = `${cx - rect.width - 10}px`;
+    if (rect.right > window.innerWidth - MARGIN) {
+      tooltipEl.style.left = `${Math.max(MARGIN, cx - rect.width - OFFSET)}px`;
+    }
+    if (rect.bottom > window.innerHeight - MARGIN) {
+      tooltipEl.style.top = `${Math.max(MARGIN, cy - rect.height - OFFSET)}px`;
     }
   }
 
