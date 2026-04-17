@@ -34,25 +34,23 @@ export const conceptCount = Object.keys(
 </div>
 
 <div class="home-hero">
-  <h1>Learn multiple sclerosis by concept, not by pile.</h1>
-  <p>
-    MS research spans immunology, neurology, imaging, and therapeutics — and the literature
-    grows faster than any student can read it. Starting a thesis, a rotation, or just a deep
-    curiosity usually means drowning in citations before you know which ones matter.
-  </p>
-  <p>
-    MSKB is a free, openly-licensed learning map for undergraduate and early-graduate
-    researchers. It links foundational concepts to the papers that established them, and
-    every concept to what you need to learn first. Start at a question that pulls you.
-    Follow the threads. Every connection you make strengthens the knowledge network
-    you're building — and in a field as interconnected as this one, understanding compounds.
-    The deeper you go, the clearer the signal becomes.
-  </p>
-  <div class="home-cta">
-    <a class="primary" href="/mskb/pathways/">Start with a pathway</a>
-    <a href="/mskb/concepts/">Browse concepts</a>
-    <a href="/mskb/explorer/">Open explorer</a>
-  </div>
+<h1>Find the signal in multiple sclerosis research.</h1>
+
+MS research spans immunology, neurology, imaging, and therapeutics — thousands of papers
+across dozens of sub-fields, with more published every week. The signal is there, but
+without a map, it's buried under sheer volume.
+
+MSKB is a free, openly-licensed learning map that surfaces that signal for undergraduate
+and early-graduate researchers. Every concept links to the papers that established it and
+to the concepts you need to understand first. Start at a question that pulls you. Follow
+the threads. Each connection you make amplifies the signal — and in a field this
+interconnected, clarity compounds fast.
+
+<div class="home-cta">
+<a class="primary" href="/mskb/pathways/">Start with a pathway</a>
+<a href="/mskb/concepts/">Browse concepts</a>
+<a href="/mskb/explorer/">Open explorer</a>
+</div>
 </div>
 
 ## Pick a starting pathway
@@ -77,39 +75,39 @@ New to MS? Start here. Each pathway is a scaffolded sequence from foundational c
   />
 </CardGrid>
 
-## Three layers, one learner journey
+## Enter from any layer
 
-MSKB is built from three coordinated layers. You can enter from any of them and move between them as you learn.
+MSKB has three coordinated layers. Pick whichever matches how you think and move between them as you learn.
 
 <CardGrid>
   <LinkCard
-    title="Layer A · Concept map"
+    title="Concept map"
     href="/mskb/concepts/"
-    description="~80 MS concepts with prerequisites, learning objectives, and curated resources. Pick a concept and follow the prerequisite chain."
+    description={`${conceptCount} MS concepts with prerequisites, learning objectives, and curated resources. Pick a concept and follow the prerequisite chain.`}
   />
   <LinkCard
-    title="Layer B · Learning journey"
+    title="Learning journey"
     href="/mskb/journey/"
     description="Build a paper list from pathways, concepts, and topics, then export a guided foundations → bridges → deep-dives reading sequence."
   />
   <LinkCard
-    title="Layer C · Citation explorer"
+    title="Citation explorer"
     href="/mskb/explorer/"
-    description="Browse the canonical 649-paper citation graph, filtering by topic, centrality, reading level, or citation depth."
+    description={`Browse the ${siteStats.curatedPapers.toLocaleString()}-paper citation graph, filtering by topic, centrality, reading level, or citation depth.`}
   />
 </CardGrid>
 
-## What every concept page shows you
+## Inside a concept page
 
-Every concept page has the same structure:
+Every concept page has the same structure — designed so you always know where you are and what to read next:
 
-- **Learning objectives** — what you should be able to do, tagged with Bloom's taxonomy level (Remember → Understand → Apply → Analyze)
+- **Learning objectives** — what you should be able to do, tagged by Bloom's level
 - **Prerequisites** — concepts you should understand first
 - **Key questions** — self-check questions to test your understanding
 - **Papers** — 3–7 foundational references drawn from the citation graph
 - **Resources** — videos, tools, and datasets curated against a quality rubric
 
-Concepts, citations, and resources are kept **separate** on purpose: the citation graph answers *"what's the research landscape?"*; the concept map answers *"what should I learn next?"*; resources answer *"how do I learn it?"*
+The citation graph answers *"what's the research landscape?"*; the concept map answers *"what should I learn next?"*; resources answer *"how do I learn it?"* They're separate on purpose.
 
 ## About the corpus
 
