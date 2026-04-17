@@ -223,7 +223,10 @@
     return 8 + conceptBoost;
   }
 
-  function centerOnNode(renderer, nodeId, ratio = 0.35) {
+  // Pan the camera to a node. By default preserves the caller's current
+  // zoom level — previously defaulted to 0.35 which snapped the camera
+  // back to heavily-zoomed-in on every click, making zoom feel "reset".
+  function centerOnNode(renderer, nodeId, ratio) {
     if (!renderer || !nodeId) return;
     const graph = renderer.getGraph();
     if (!graph || !graph.hasNode(nodeId)) return;
@@ -233,10 +236,13 @@
     const camera = renderer.getCamera();
     if (!camera || !Number.isFinite(x) || !Number.isFinite(y)) return;
 
+    const currentRatio = Number.isFinite(camera.ratio) ? camera.ratio : 1;
+    const targetRatio = Number.isFinite(ratio) ? ratio : currentRatio;
+
     if (typeof camera.animate === "function") {
-      camera.animate({ x, y, ratio }, { duration: 350 });
+      camera.animate({ x, y, ratio: targetRatio }, { duration: 350 });
     } else if (typeof camera.setState === "function") {
-      camera.setState({ x, y, ratio });
+      camera.setState({ x, y, ratio: targetRatio });
     }
   }
 
@@ -616,11 +622,12 @@
     });
 
     // Center on the graph's centroid and zoom out so every node is visible
-    // with a comfortable margin. ratio > 1 = zoomed OUT in Sigma.
+    // with a comfortable margin. ratio > 1 = zoomed OUT in Sigma;
+    // 2.0 gives the full graph plus generous whitespace on all sides.
     function fitWholeGraph(animated) {
       const camera = renderer.getCamera();
       if (!camera) return;
-      const state = { x: 0.5, y: 0.5, ratio: 1.4, angle: 0 };
+      const state = { x: 0.5, y: 0.5, ratio: 2.0, angle: 0 };
       if (animated && typeof camera.animate === "function") {
         camera.animate(state, { duration: 300 });
       } else if (typeof camera.setState === "function") {
