@@ -1,15 +1,17 @@
 ---
 title: Learning Journey Studio
 description: Build a targeted MS reading plan from concepts, citation topics, or seed papers.
-template: splash
-hero:
-  tagline: Curate papers with the graph, stage them into a sequence, and export a study-ready reading packet.
+template: doc
+tableOfContents: false
 sidebar:
   label: Learning Journey
   order: 4
 ---
 
-<div class="journey-shell">
+<div class="journey-shell mskb-viz-wide">
+
+<p class="mskb-viz-tagline">Curate papers with the graph, stage them into a sequence, and export a study-ready reading packet.</p>
+
   <section class="journey-hero" aria-labelledby="journey-studio-title">
     <p class="journey-kicker">Learning Journey Studio</p>
     <h2 id="journey-studio-title">Turn scattered papers into a deliberate study path.</h2>
@@ -20,15 +22,15 @@ sidebar:
     <div class="journey-hero-grid" role="list" aria-label="Learning Journey workflow">
       <article class="journey-mini-card" role="listitem">
         <h3>1. Scout the map</h3>
-        <p>Explore linked concepts and topic clusters to find useful entry papers quickly.</p>
+        <p>Browse the graph below — pathways, categories, concepts, and topic clusters. Use the <em>search box</em> or the <em>category pills</em> above the graph to narrow it down.</p>
       </article>
       <article class="journey-mini-card" role="listitem">
         <h3>2. Build your set</h3>
-        <p>Add papers into one shared working list that powers every tool on this page.</p>
+        <p>Click any node to open its detail panel on the right of the graph, then press <em>Add papers to list</em>. Selections appear in <em>Relevant Papers</em> below and are shared with the Explorer.</p>
       </article>
       <article class="journey-mini-card" role="listitem">
         <h3>3. Export and teach</h3>
-        <p>Generate a phased reading plan and export markdown, JSON, or BibTeX outputs.</p>
+        <p>Once your list has a few papers, generate a phased reading plan or export markdown, JSON, or BibTeX from the tools at the bottom of the page.</p>
       </article>
     </div>
   </section>
@@ -37,8 +39,11 @@ sidebar:
     <header class="journey-map-head">
       <h3>Concept + Topic Graph</h3>
       <p>
-        Click nodes to inspect details and add papers. Use search and filters to tighten the map around your
-        current learning question.
+        Each node is a pathway, category, concept, or topic cluster. <strong>Click a node</strong> to open its
+        details on the right, then press <strong>Add papers to list</strong> to drop its papers into your
+        Relevant Papers set below. Use the <strong>search box</strong> and the <strong>category pills</strong>
+        (All / Pathway / Category / Concept / Neighbors) above the graph to focus the view; <em>Reset camera</em>
+        re-fits the whole graph and <em>Clear filters</em> restores the default view.
       </p>
     </header>
     <div id="mskb-graph-spine" class="mskb-graph-root"></div>

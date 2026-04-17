@@ -65,6 +65,53 @@ details summary:focus-visible {
   max-width: 72ch;
 }
 
+/* ===================================================================== */
+/* Wide visualization pages                                                */
+/* ===================================================================== */
+/* Pages whose body wraps content in `.mskb-viz-wide` need the full main
+   column (no 72ch reading cap and no Starlight container narrowing) so
+   the embedded graphs can actually breathe. The standard left navigation
+   sidebar still appears via `template: doc`. */
+
+.sl-markdown-content:has(.mskb-viz-wide) {
+  max-width: none;
+}
+
+.sl-container:has(.mskb-viz-wide) {
+  max-width: none;
+}
+
+/* Replacement for the old splash-template hero tagline: a single muted
+   intro sentence below the page H1. */
+.sl-markdown-content .mskb-viz-tagline {
+  font-size: 1.05rem;
+  color: var(--mskb-muted);
+  margin: 0.2rem 0 1.2rem;
+}
+
+/* Give Sigma-rendered graphs (lineage, journey concept map, research map)
+   a much taller stage on wide-viz pages — the 70vh / 680px default left
+   them feeling cramped. */
+.mskb-viz-wide .mskb-sigma-stage {
+  height: min(82vh, 880px);
+  min-height: 36rem;
+}
+
+.mskb-viz-wide .mskb-graph-canvas {
+  min-height: 36rem;
+}
+
+/* Lineage page: bump the stage further now that the column is unconstrained. */
+.mskb-viz-wide .lineage-stage {
+  height: min(85vh, 960px);
+  min-height: 40rem;
+}
+
+/* Citation tree dendrogram viewport: same treatment. */
+.mskb-viz-wide .ct-viewport {
+  max-height: 85vh;
+}
+
 /* The banner image needs to escape the 72ch prose cap. */
 .sl-markdown-content .home-banner-wrap {
   max-width: none;

@@ -1806,19 +1806,55 @@
       ? `<ul>${strippedTakeaways.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
       : "<p>No key takeaways available.</p>";
     const abstractText = cleanNarrativeText(node.abstract || "");
+    const why = cleanNarrativeText(whyVariant || "");
+    const disclaimer = String(node.summary_disclaimer || "").trim();
+    const metricsPills = [diff, kTierPill, evidencePill, certaintyPill, ageNormScorePill, cpyPill, linkCounts, paperRankPill, paperAgeRankPill, authorRankPill]
+      .filter(Boolean)
+      .join("");
+
     detailsEl.innerHTML = `
-      <strong>${escapeHtml(node.title || "Untitled")}</strong>${year}<br />
-      ${topic}${diff}${kTierPill}${evidencePill}${certaintyPill}${ageNormScorePill}${cpyPill}${linkCounts}${paperRankPill}${paperAgeRankPill}${authorRankPill}<br />
-      <div><strong>Lead author:</strong> ${escapeHtml(authorName || "Unknown")}</div><br />
-      <div><strong>Abstract</strong><br />${escapeHtml(abstractText || "No abstract available.")}</div><br />
-      <div>${escapeHtml(summary || "No summary available.")}</div><br />
-      <div>${provenance}</div>
-      <div><strong>Key takeaways</strong>${takeawayHtml}</div>
-      <div><strong>Paper link:</strong> ${sourceLink}</div>
-      <div><strong>Bibliography (plain text):</strong> ${escapeHtml(citationPlaintext)}</div>
-      <div>${bibLink}</div>
-      <div><em>${escapeHtml(String(node.summary_disclaimer || ""))}</em></div>
-      <div class="explorer-actions">${journeyToggle}${flagLink}</div>
+      <article class="paper-card-detail">
+        <header class="pcd-header">
+          <h4 class="pcd-title">${escapeHtml(node.title || "Untitled")}<span class="pcd-year">${year}</span></h4>
+          ${authorName ? `<p class="pcd-byline">${escapeHtml(authorName)}</p>` : ""}
+        </header>
+
+        ${topic ? `<div class="pcd-taxonomy">${topic}</div>` : ""}
+        ${metricsPills ? `<div class="pcd-pills">${metricsPills}</div>` : ""}
+
+        ${why ? `
+          <section class="pcd-section">
+            <h5>Why it matters</h5>
+            <p>${escapeHtml(why)}</p>
+          </section>` : ""}
+
+        <section class="pcd-section">
+          <h5>Plain-language summary</h5>
+          <p>${escapeHtml(summary || "No summary available.")}</p>
+        </section>
+
+        ${strippedTakeaways.length ? `
+          <section class="pcd-section">
+            <h5>Key takeaways</h5>
+            ${takeawayHtml}
+          </section>` : ""}
+
+        <section class="pcd-section">
+          <h5>Abstract</h5>
+          <p>${escapeHtml(abstractText || "No abstract available.")}</p>
+        </section>
+
+        <footer class="pcd-footer">
+          <div class="pcd-actions">${journeyToggle}${flagLink}</div>
+          <div class="pcd-links">${sourceLink} · ${bibLink}</div>
+          <p class="pcd-bibtext">${escapeHtml(citationPlaintext)}</p>
+          <details class="pcd-provenance">
+            <summary>Summary provenance &amp; disclaimer</summary>
+            <p class="pcd-prov-body">${provenance}</p>
+            ${disclaimer ? `<p class="pcd-disclaimer"><em>${escapeHtml(disclaimer)}</em></p>` : ""}
+          </details>
+        </footer>
+      </article>
     `;
     renderRelationshipNavigator(id);
   }
