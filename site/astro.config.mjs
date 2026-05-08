@@ -21,6 +21,7 @@ export default defineConfig({
       social: [],
       customCss: [
         './src/styles/utilities.css',
+        './src/styles/site-banner.css',
         './src/styles/concept-pages.css',
         './src/styles/explorer.css',
         './src/styles/citation-graph.css',
@@ -29,10 +30,10 @@ export default defineConfig({
       ],
       components: {
         Footer: './src/components/SiteFooter.astro',
-        // Explorer-only page header: render the project banner edge-to-edge
-        // instead of the default Starlight H1. Falls through to the default
-        // on every other route.
-        PageTitle: './src/components/PageTitle.astro',
+        // Site-wide top header: render the project banner full-width above
+        // Starlight's default header bar (title + search + theme + social)
+        // on every route, so the search and sidebar sit below the banner.
+        Header: './src/components/Header.astro',
         // Explorer-only sidebar augmentation: prepend a Direct-Search card
         // so it sits with the site nav instead of being buried below the
         // graph. Falls through to the default on every other route.

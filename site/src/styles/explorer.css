@@ -287,68 +287,6 @@
   text-transform: uppercase;
 }
 
-/* Full-width banner on the Citation Explorer page.
- *
- * The banner is rendered by the PageTitle override
- * (site/src/components/PageTitle.astro), which lands inside the first
- * .content-panel > .sl-container of the Starlight doc layout. To make it
- * span edge-to-edge of the main frame (i.e. from the right edge of the
- * fixed sidebar on desktop out to the viewport's right edge), we:
- *
- *   1. Widen .main-pane to 100% — Starlight's default caps it on screens
- *      >=72rem at content-width + half the remaining slack, which leaves
- *      a large empty gutter on the right when there is no right-hand TOC.
- *   2. Drop the .content-panel padding on the first panel only, so the
- *      banner is not inset by --sl-content-pad-x.
- *   3. Remove the .sl-container max-width cap on that first panel only,
- *      so the banner can fill the .main-pane instead of being clipped to
- *      the reading column.
- *
- * Selectors are scoped via :has(.explorer-banner-wrap) so they only
- * apply on the explorer route — every other page keeps Starlight's
- * default content-width container. */
-.main-pane:has(.explorer-banner-wrap) {
-  width: 100% !important;
-}
-.content-panel:has(> .sl-container > .explorer-banner-wrap) {
-  padding: 0;
-}
-
-.content-panel:has(> .sl-container > .explorer-banner-wrap) > .sl-container {
-  max-width: none;
-  margin-inline: 0;
-}
-
-.explorer-banner-wrap {
-  display: block;
-  margin: 0;
-}
-
-.explorer-banner-wrap .explorer-banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  min-height: 160px;
-  object-fit: cover;
-}
-
-/* The H1 is rendered by PageTitle alongside the banner so SEO and screen
- * readers still see one top-level heading per page, but visually hidden
- * because the banner image already carries the title. */
-.explorer-h1-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
-}
-
 .explorer-shell {
   margin: 1rem 0 2rem;
 }

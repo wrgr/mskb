@@ -1,0 +1,35 @@
+---
+/**
+ * Header override.
+ *
+ * Renders the project banner above Starlight's default header content on
+ * every route. The output of this component lands inside Starlight's
+ * `<header class="header">` wrapper (see PageFrame.astro), which is
+ * position:fixed and spans the full viewport width — so the banner sits
+ * across the top of the page above both the sidebar and the main pane.
+ *
+ * The accompanying CSS in src/styles/site-banner.css grows
+ * `--sl-nav-height` so the fixed header is tall enough to contain the
+ * banner, and the sidebar / main-frame compensate automatically.
+ */
+import Default from '@astrojs/starlight/components/Header.astro';
+
+// Resolve the banner asset under whatever site base path is in use
+// (typically /mskb/) so the same component works in dev and on Pages.
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
+const bannerSrc = `${base}/assets/banner.svg`;
+---
+
+<div class="site-banner-wrap">
+  <img
+    src={bannerSrc}
+    alt="Multiple Sclerosis Knowledge Base — making the science of MS accessible to support the next generation of researchers"
+    class="site-banner"
+    width="1600"
+    height="280"
+    loading="eager"
+  />
+</div>
+<div class="site-header-bar">
+  <Default />
+</div>
