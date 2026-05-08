@@ -1,6 +1,6 @@
 ---
 title: Multiple Sclerosis Knowledge Base
-description: A concept-first learning map for MS research, linked to the citation graph and curated resources.
+description: A guided learning map for multiple sclerosis research, built for students.
 template: doc
 tableOfContents: false
 pagefind: true
@@ -11,7 +11,7 @@ head:
       content: index, follow
 ---
 
-import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import siteStats from '../../data/site_stats.json';
 
 export const topicCount = Object.keys(
@@ -34,115 +34,61 @@ export const conceptCount = Object.keys(
 </div>
 
 <div class="home-hero">
-<h1>Find the signal in multiple sclerosis research.</h1>
+<h1>A learning map for MS research.</h1>
 
-MS research spans immunology, neurology, imaging, and therapeutics — thousands of papers
-across dozens of sub-fields, with more published every week. The signal is there, but
-without a map, it's buried under sheer volume.
-
-MSKB is a free, openly-licensed learning map built for undergraduate and early-graduate
-researchers. Every concept links to the papers that established it and to the concepts
-you need to understand first. Start at a question that pulls you, follow the threads, and
-let each connection sharpen the next.
+<p class="home-lede">
+MSKB is a free, openly-licensed guide for undergraduate and early-graduate
+researchers entering multiple sclerosis. Concepts are linked to the papers
+that established them and to the prerequisites you need first — so you can
+start anywhere and still know what to read next.
+</p>
 
 <div class="home-cta">
-<a class="primary" href="/mskb/pathways/">Start with a pathway</a>
-<a href="/mskb/concepts/">Browse concepts</a>
-<a href="/mskb/explorer/">Open the explorer</a>
+<a class="primary" href="/mskb/pathways/intro-to-ms-research/">New here? Start the orientation →</a>
+<a class="ghost" href="#start">or pick where to start</a>
 </div>
 </div>
 
-## Pick a starting pathway
+<h2 id="start">Where do you want to start?</h2>
 
-New to MS? Start here. Each pathway is a scaffolded sequence from foundational concepts to advanced topics.
+<div class="home-intent-cards">
 
-<CardGrid>
-  <LinkCard
-    title="Clinical pathway"
-    href="/mskb/pathways/clinical/"
-    description="Symptom → diagnosis → classification → treatment. Best if your starting question is 'what does MS look like in the clinic?'"
-  />
-  <LinkCard
-    title="Mechanistic pathway"
-    href="/mskb/pathways/mechanistic/"
-    description="Immune basics → inflammation → demyelination → therapeutic targets. Best if your starting question is 'why does MS happen?'"
-  />
-  <LinkCard
-    title="Emerging topics"
-    href="/mskb/pathways/emerging/"
-    description="The NMSS Pathways to Cures framework — smoldering MS, remyelination, EBV prevention, and the open questions that need the next generation of investigators."
-  />
-</CardGrid>
+<a class="home-intent" href="/mskb/pathways/">
+<span class="home-intent-kicker">I'm new to MS</span>
+<span class="home-intent-title">Take a guided pathway</span>
+<span class="home-intent-body">Curated reading sequences from foundations to the research frontier — clinical, mechanistic, or emerging-topics tracks.</span>
+</a>
 
-## Enter from any layer
+<a class="home-intent" href="/mskb/concepts/">
+<span class="home-intent-kicker">I have a topic in mind</span>
+<span class="home-intent-title">Browse {conceptCount} concepts</span>
+<span class="home-intent-body">Each concept page lists prerequisites, learning objectives, key questions, and the foundational papers that anchor it.</span>
+</a>
 
-MSKB has three coordinated layers. Pick whichever matches how you think and move between them as you learn.
+<a class="home-intent" href="/mskb/explorer/">
+<span class="home-intent-kicker">I want to explore</span>
+<span class="home-intent-title">Open the citation graph</span>
+<span class="home-intent-body">Filter the {siteStats.curatedPapers.toLocaleString()}-paper corpus by topic, centrality, reading level, or citation depth.</span>
+</a>
 
-<CardGrid>
-  <LinkCard
-    title="Concept map"
-    href="/mskb/concepts/"
-    description={`${conceptCount} MS concepts with prerequisites, learning objectives, and curated resources. Pick a concept and follow the prerequisite chain.`}
-  />
-  <LinkCard
-    title="Learning journey"
-    href="/mskb/journey/"
-    description="Build a paper list from pathways, concepts, and topics, then export a guided foundations → bridges → deep-dives reading sequence."
-  />
-  <LinkCard
-    title="Citation explorer"
-    href="/mskb/explorer/"
-    description={`Browse the ${siteStats.curatedPapers.toLocaleString()}-paper citation graph, filtering by topic, centrality, reading level, or citation depth.`}
-  />
-</CardGrid>
+</div>
 
-## Inside a concept page
+<dl class="home-stats" aria-label="Knowledge base at a glance">
+<div><dt>Concepts</dt><dd>{conceptCount}</dd></div>
+<div><dt>Curated papers</dt><dd>{siteStats.curatedPapers.toLocaleString()}</dd></div>
+<div><dt>Research topics</dt><dd>{topicCount}</dd></div>
+<div><dt>As of</dt><dd>{siteStats.asOf}</dd></div>
+</dl>
 
-Every concept page has the same structure — designed so you always know where you are and what to read next:
+<div class="home-learn-more">
+<strong>How it's built:</strong>
+<a href="/mskb/corpus/">Corpus overview</a>
+<a href="/mskb/corpus/methodology/">Methodology</a>
+<a href="/mskb/corpus/gaps/">Known gaps</a>
+<a href="/mskb/whitepaper/">Whitepaper</a>
+<a href="/mskb/journey/">Build a reading list</a>
+</div>
 
-- **Learning objectives** — what you should be able to do, tagged by Bloom's level
-- **Prerequisites** — concepts you should understand first
-- **Key questions** — self-check questions to test your understanding
-- **Papers** — 3–7 foundational references drawn from the citation graph
-- **Resources** — videos, tools, and datasets curated against a quality rubric
-
-The citation graph answers *"what's the research landscape?"*; the concept map answers *"what should I learn next?"*; resources answer *"how do I learn it?"* They're separate on purpose.
-
-## About the corpus
-
-MSKB is built from an OpenAlex-derived bibliometric pipeline (retrieve → score → cluster → distill) layered with a hand-curated concept ontology. The corpus starts from **40 hand-curated seed papers** across {topicCount} MS research topics, expanded via one-hop citation networks and filtered by cross-seed connectivity, within-subdomain citation scores, and expert-signal curation. The current release ({siteStats.asOf}) includes **{siteStats.curatedPapers} core papers** and their citation neighborhoods — **{siteStats.totalArtifacts.toLocaleString()} total artifacts** in the network — linked to **{conceptCount} learner-centered concept pages**. Every design decision is documented.
-
-<CardGrid>
-  <LinkCard
-    title="Corpus overview"
-    href="/mskb/corpus/"
-    description="Target size, four-tier architecture, expansion sources, and quality gates."
-  />
-  <LinkCard
-    title="Methodology &amp; limitations"
-    href="/mskb/corpus/methodology/"
-    description="Full pipeline description, corpus statistics, known limitations, and transparency notes."
-  />
-  <LinkCard
-    title="Design decisions"
-    href="/mskb/corpus/design-decisions/"
-    description="Audit trail — every significant design decision with explicit rationale."
-  />
-  <LinkCard
-    title="Gap tracker"
-    href="/mskb/corpus/gaps/"
-    description="10 known coverage gaps tracked publicly — Global South, equity, digital biomarkers, and more."
-  />
-  <LinkCard
-    title="Whitepaper"
-    href="/mskb/whitepaper/"
-    description="Full technical whitepaper: concept, pipeline methodology, novel contributions, and limitations. PDF available for download."
-  />
-</CardGrid>
-
-<Aside type="note" title="AI-assisted curation — read this first">
-MSKB is a **learning engineering experiment** built to support student access to MS research. The corpus was assembled and annotated with AI assistance (bibliometric pipeline + Claude API distillation). Plain-language summaries are AI-generated from the primary literature. Verify critical clinical claims against primary sources and current guidelines before applying them.
-
-This resource is free to use and adapt for non-commercial purposes under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
-Questions, corrections, or comments: [willgray@jhu.edu](mailto:willgray@jhu.edu)
+<Aside type="note" title="AI-assisted curation">
+Plain-language summaries are AI-generated from the primary literature; the corpus was assembled with a bibliometric pipeline plus hand-curated seed papers. Verify critical clinical claims against primary sources before applying them. Free to use and adapt for non-commercial purposes under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Questions or corrections: [willgray@jhu.edu](mailto:willgray@jhu.edu).
 </Aside>
