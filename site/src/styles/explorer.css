@@ -287,25 +287,44 @@
   text-transform: uppercase;
 }
 
-/* Full-width banner across the top of the Citation Explorer page. The
-   homepage banner.svg is reused, but broken out to viewport width so it
-   reads as a true page banner rather than a centered logo bound by the
-   reading column. The 100vw trick neutralizes the .sl-markdown-content /
-   .sl-container width caps without having to restructure Starlight's
-   layout. */
-.sl-markdown-content .explorer-banner-wrap {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-top: -1.4rem;
-  margin-bottom: 1.4rem;
-  max-width: none;
+/* Full-width banner on the Citation Explorer page.
+ *
+ * The banner is rendered by the PageTitle override
+ * (site/src/components/PageTitle.astro), which lands inside the first
+ * .content-panel > .sl-container of the Starlight doc layout. To make it
+ * span edge-to-edge of the main frame (i.e. from the right edge of the
+ * fixed sidebar on desktop out to the viewport's right edge), we:
+ *
+ *   1. Widen .main-pane to 100% — Starlight's default caps it on screens
+ *      >=72rem at content-width + half the remaining slack, which leaves
+ *      a large empty gutter on the right when there is no right-hand TOC.
+ *   2. Drop the .content-panel padding on the first panel only, so the
+ *      banner is not inset by --sl-content-pad-x.
+ *   3. Remove the .sl-container max-width cap on that first panel only,
+ *      so the banner can fill the .main-pane instead of being clipped to
+ *      the reading column.
+ *
+ * Selectors are scoped via :has(.explorer-banner-wrap) so they only
+ * apply on the explorer route — every other page keeps Starlight's
+ * default content-width container. */
+.main-pane:has(.explorer-banner-wrap) {
+  width: 100% !important;
+}
+.content-panel:has(> .sl-container > .explorer-banner-wrap) {
+  padding: 0;
 }
 
-.sl-markdown-content .explorer-banner-wrap .explorer-banner {
+.content-panel:has(> .sl-container > .explorer-banner-wrap) > .sl-container {
+  max-width: none;
+  margin-inline: 0;
+}
+
+.explorer-banner-wrap {
+  display: block;
+  margin: 0;
+}
+
+.explorer-banner-wrap .explorer-banner {
   display: block;
   width: 100%;
   height: auto;
@@ -314,14 +333,10 @@
   object-fit: cover;
 }
 
-/* On the explorer page only, suppress Starlight's auto-rendered H1 — the
-   banner is the visual page header. The H1 is left in the DOM via the
-   visually-hidden pattern so SEO and screen readers still see one
-   top-level heading. Anchored to body:has(.explorer-banner-wrap) so the
-   rule fires only on the explorer route. */
-body:has(.explorer-banner-wrap) main h1#_top,
-body:has(.explorer-banner-wrap) .content-panel:first-of-type > h1,
-body:has(.explorer-banner-wrap) main > .content-panel:first-of-type header h1 {
+/* The H1 is rendered by PageTitle alongside the banner so SEO and screen
+ * readers still see one top-level heading per page, but visually hidden
+ * because the banner image already carries the title. */
+.explorer-h1-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;

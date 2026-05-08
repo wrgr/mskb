@@ -1,0 +1,48 @@
+---
+/**
+ * PageTitle override.
+ *
+ * On the Citation Explorer route, render the project banner image as the
+ * visual page header instead of the default Starlight H1. The H1 is kept
+ * in the DOM via the visually-hidden pattern (CSS in explorer.css) so SEO
+ * and screen readers still see exactly one top-level heading per page.
+ *
+ * On every other route, defer to Starlight's default PageTitle.
+ */
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+// Starlight uses `_top` as the page-title H1 id (see
+// node_modules/@astrojs/starlight/constants.ts). The constants module
+// isn't exported from the public package, so the value is mirrored here.
+const PAGE_TITLE_ID = '_top';
+
+const route = Astro.locals.starlightRoute;
+const entryId = route?.entry?.id ?? '';
+const isExplorer = entryId === 'explorer' || entryId === 'explorer.mdx';
+
+// Resolve the banner asset under whatever site base path is in use
+// (typically /mskb/) so the same component works in dev and on Pages.
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
+const bannerSrc = `${base}/assets/banner.svg`;
+const title = route?.entry?.data?.title ?? '';
+---
+
+{
+  isExplorer ? (
+    <>
+      <div class="explorer-banner-wrap">
+        <img
+          src={bannerSrc}
+          alt="Multiple Sclerosis Knowledge Base — making the science of MS accessible to support the next generation of researchers"
+          class="explorer-banner"
+          width="1600"
+          height="280"
+          loading="eager"
+        />
+      </div>
+      <h1 id={PAGE_TITLE_ID} class="explorer-h1-sr-only">{title}</h1>
+    </>
+  ) : (
+    <Default />
+  )
+}
