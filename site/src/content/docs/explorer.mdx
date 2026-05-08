@@ -8,6 +8,17 @@ sidebar:
   order: 5
 ---
 
+<div class="explorer-banner-wrap">
+  <img
+    src="/mskb/assets/banner.svg"
+    alt="Multiple Sclerosis Knowledge Base — making the science of MS accessible to support the next generation of researchers"
+    class="explorer-banner"
+    width="1600"
+    height="280"
+    loading="eager"
+  />
+</div>
+
 <div class="explorer-shell mskb-viz-wide">
 
 <p class="mskb-viz-tagline">Inspect papers, follow citation paths, and turn a short research note into parent/child/related paper choices.</p>
@@ -121,7 +132,7 @@ sidebar:
   <h3>Tools</h3>
   <p class="tools-intro">Each tool below operates on the <strong>Relevant papers</strong> list above (or, where applicable, on the visible graph corpus).</p>
   <div class="tool-grid">
-    <section class="tool-card">
+    <section class="tool-card" id="direct-search-card">
       <h4>Direct search</h4>
       <p>Find papers by author, title, or abstract text.</p>
       <div class="explorer-search">
@@ -155,3 +166,41 @@ sidebar:
 
 <script is:inline src="/mskb/javascripts/vendor/cytoscape.min.js"></script>
 <script is:inline src="/mskb/javascripts/explorer.js"></script>
+
+<script is:inline>
+  // Relocate the Direct-Search tool card into the Starlight left sidebar so
+  // it sits alongside the site menu instead of at the bottom of the page.
+  // Falls back to leaving the card in place if the sidebar isn't found.
+  (function moveDirectSearchToSidebar() {
+    function tryMove() {
+      var card = document.getElementById('direct-search-card');
+      if (!card) return false;
+      var selectors = [
+        '.sidebar-content',
+        'nav.sidebar .sidebar-content',
+        '.sidebar-pane .sidebar-content',
+        'starlight-menu-button + .sidebar-content',
+        'aside.sidebar .sidebar-content',
+        '.sidebar-pane',
+        'nav.sidebar',
+        'aside.sidebar',
+      ];
+      var host = null;
+      for (var i = 0; i < selectors.length; i++) {
+        host = document.querySelector(selectors[i]);
+        if (host) break;
+      }
+      if (!host) return false;
+      var slot = document.createElement('div');
+      slot.className = 'sidebar-explorer-search';
+      slot.appendChild(card);
+      host.insertBefore(slot, host.firstChild);
+      return true;
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', tryMove);
+    } else {
+      tryMove();
+    }
+  })();
+</script>

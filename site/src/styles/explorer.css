@@ -287,8 +287,94 @@
   text-transform: uppercase;
 }
 
+/* Full-width banner across the top of the Citation Explorer page. The
+   homepage banner.svg is reused, but stretched edge-to-edge of the wide
+   layout column so it reads as a true page banner rather than a centered
+   logo. .home-banner-wrap is overridden here (utilities.css caps it at
+   900px for the homepage). */
+.sl-markdown-content .explorer-banner-wrap {
+  max-width: none;
+  width: 100%;
+  margin: 0 0 1.4rem;
+}
+
+.sl-markdown-content .explorer-banner-wrap .explorer-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
+
 .explorer-shell {
   margin: 1rem 0 2rem;
+}
+
+/* When the Direct-Search card is moved into the Starlight sidebar, give it
+   tighter typography so it fits alongside nav links without dominating. */
+.sidebar-explorer-search {
+  padding: 0.75rem 0.85rem 0.5rem;
+  border-bottom: 1px solid var(--mskb-rule);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-explorer-search .tool-card h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mskb-muted);
+}
+
+.sidebar-explorer-search .tool-card > p {
+  font-size: 0.78rem;
+  color: var(--mskb-muted);
+  margin: 0 0 0.4rem;
+}
+
+.sidebar-explorer-search .explorer-search {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+}
+
+.sidebar-explorer-search .explorer-search label {
+  font-size: 0.72rem;
+  color: var(--mskb-muted);
+}
+
+.sidebar-explorer-search .explorer-search select,
+.sidebar-explorer-search .explorer-search input[type='text'] {
+  width: 100%;
+  border: 1px solid var(--mskb-rule);
+  background: transparent;
+  color: inherit;
+  padding: 0.3rem 0.45rem;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.sidebar-explorer-search .explorer-search button {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.7rem;
+  min-height: 34px;
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.sidebar-explorer-search .explorer-search button:hover {
+  background: var(--mskb-subtle-bg);
+}
+
+.sidebar-explorer-search #direct-search-results {
+  margin-top: 0.5rem;
+  max-height: 40vh;
+  overflow-y: auto;
+  font-size: 0.82rem;
 }
 
 .explorer-shell #paper-graph {
