@@ -288,22 +288,50 @@
 }
 
 /* Full-width banner across the top of the Citation Explorer page. The
-   homepage banner.svg is reused, but stretched edge-to-edge of the wide
-   layout column so it reads as a true page banner rather than a centered
-   logo. .home-banner-wrap is overridden here (utilities.css caps it at
-   900px for the homepage). */
+   homepage banner.svg is reused, but broken out to viewport width so it
+   reads as a true page banner rather than a centered logo bound by the
+   reading column. The 100vw trick neutralizes the .sl-markdown-content /
+   .sl-container width caps without having to restructure Starlight's
+   layout. */
 .sl-markdown-content .explorer-banner-wrap {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -1.4rem;
+  margin-bottom: 1.4rem;
   max-width: none;
-  width: 100%;
-  margin: 0 0 1.4rem;
 }
 
 .sl-markdown-content .explorer-banner-wrap .explorer-banner {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 320px;
+  max-height: 360px;
+  min-height: 160px;
   object-fit: cover;
+}
+
+/* On the explorer page only, suppress Starlight's auto-rendered H1 — the
+   banner is the visual page header. The H1 is left in the DOM via the
+   visually-hidden pattern so SEO and screen readers still see one
+   top-level heading. Anchored to body:has(.explorer-banner-wrap) so the
+   rule fires only on the explorer route. */
+body:has(.explorer-banner-wrap) main h1#_top,
+body:has(.explorer-banner-wrap) .content-panel:first-of-type > h1,
+body:has(.explorer-banner-wrap) main > .content-panel:first-of-type header h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 .explorer-shell {
@@ -316,6 +344,7 @@
   padding: 0.75rem 0.85rem 0.5rem;
   border-bottom: 1px solid var(--mskb-rule);
   margin-bottom: 0.5rem;
+  background: color-mix(in srgb, var(--sl-color-accent) 5%, transparent);
 }
 
 .sidebar-explorer-search .tool-card h4 {
