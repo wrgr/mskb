@@ -112,21 +112,15 @@ details summary:focus-visible {
   max-height: 85vh;
 }
 
-/* The banner image needs to escape the 72ch prose cap. */
-.sl-markdown-content .home-banner-wrap {
-  max-width: none;
-  width: min(100%, 900px);
-}
-
-/* Home page only: the banner SVG already contains the visible site title
-   ("Multiple Sclerosis Knowledge Base"), so suppress Starlight's auto-
-   rendered page title to avoid duplicating it. The H1 is kept in the DOM
-   via the visually-hidden pattern so SEO and screen readers still see one
-   top-level heading per page. We anchor to body:has(.home-banner-wrap) so
-   this only applies on the home route. */
-body:has(.home-banner-wrap) h1#_top,
-body:has(.home-banner-wrap) .content-panel:first-of-type > h1,
-body:has(.home-banner-wrap) main > .content-panel:first-of-type header h1 {
+/* Home page only: the site-wide banner in Header.astro already contains the
+   visible site title ("Multiple Sclerosis Knowledge Base"), so suppress
+   Starlight's auto-rendered page title to avoid duplicating it. The H1 is
+   kept in the DOM via the visually-hidden pattern so SEO and screen readers
+   still see one top-level heading per page. We anchor to body:has(.home-hero)
+   so this only applies on the home route. */
+body:has(.home-hero) h1#_top,
+body:has(.home-hero) .content-panel:first-of-type > h1,
+body:has(.home-hero) main > .content-panel:first-of-type header h1 {
   position: absolute;
   width: 1px;
   height: 1px;
