@@ -8,17 +8,6 @@ sidebar:
   order: 5
 ---
 
-<div class="explorer-banner-wrap">
-  <img
-    src="/mskb/assets/banner.svg"
-    alt="Multiple Sclerosis Knowledge Base — making the science of MS accessible to support the next generation of researchers"
-    class="explorer-banner"
-    width="1600"
-    height="280"
-    loading="eager"
-  />
-</div>
-
 <div class="explorer-shell mskb-viz-wide">
 
 <p class="mskb-viz-tagline">Inspect papers, follow citation paths, and turn a short research note into parent/child/related paper choices.</p>
@@ -132,24 +121,6 @@ sidebar:
   <h3>Tools</h3>
   <p class="tools-intro">Each tool below operates on the <strong>Relevant papers</strong> list above (or, where applicable, on the visible graph corpus).</p>
   <div class="tool-grid">
-    <section class="tool-card" id="direct-search-card">
-      <h4>Direct search</h4>
-      <p>Find papers by author, title, or abstract text.</p>
-      <div class="explorer-search">
-        <label for="direct-search-mode">Search in</label>
-        <select id="direct-search-mode">
-          <option value="all" selected>All fields</option>
-          <option value="author">Author</option>
-          <option value="title">Title</option>
-          <option value="abstract">Abstract</option>
-        </select>
-        <label for="direct-search-input">Query</label>
-        <input id="direct-search-input" type="text" placeholder="Example: Giovannoni OR neurofilament OR remyelination" />
-        <button id="direct-search-run" type="button">Run Search</button>
-      </div>
-      <div id="direct-search-results"></div>
-    </section>
-
     <section class="tool-card">
       <h4>Find research like&hellip;</h4>
       <p>Describe a research idea and retrieve relevant papers from the current filtered corpus.</p>
@@ -166,4 +137,3 @@ sidebar:
 
 <script is:inline src="/mskb/javascripts/vendor/cytoscape.min.js"></script>
 <script is:inline src="/mskb/javascripts/explorer.js"></script>
-<script is:inline src="/mskb/javascripts/explorer-sidebar-search.js"></script>

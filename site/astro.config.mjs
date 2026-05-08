@@ -29,6 +29,14 @@ export default defineConfig({
       ],
       components: {
         Footer: './src/components/SiteFooter.astro',
+        // Explorer-only page header: render the project banner edge-to-edge
+        // instead of the default Starlight H1. Falls through to the default
+        // on every other route.
+        PageTitle: './src/components/PageTitle.astro',
+        // Explorer-only sidebar augmentation: prepend a Direct-Search card
+        // so it sits with the site nav instead of being buried below the
+        // graph. Falls through to the default on every other route.
+        Sidebar: './src/components/Sidebar.astro',
       },
       sidebar: [
         { label: 'Home', link: '/' },
