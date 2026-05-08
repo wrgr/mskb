@@ -118,6 +118,27 @@ details summary:focus-visible {
   width: min(100%, 900px);
 }
 
+/* Home page only: the banner SVG already contains the visible site title
+   ("Multiple Sclerosis Knowledge Base"), so suppress Starlight's auto-
+   rendered page title to avoid duplicating it. The H1 is kept in the DOM
+   via the visually-hidden pattern so SEO and screen readers still see one
+   top-level heading per page. We anchor to body:has(.home-banner-wrap) so
+   this only applies on the home route. */
+body:has(.home-banner-wrap) h1#_top,
+body:has(.home-banner-wrap) .content-panel:first-of-type > h1,
+body:has(.home-banner-wrap) main > .content-panel:first-of-type header h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Home hero: the intro block that holds the H1, lede, and CTA row. */
 .sl-markdown-content .home-hero {
   margin-bottom: 1.4rem;
