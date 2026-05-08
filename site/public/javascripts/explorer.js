@@ -1255,10 +1255,17 @@
         if (drainIdx < elements.length) {
           scheduleIdle(pumpElements);
         } else {
-          // Initial paint: zoom out far enough to show the full corpus.
-          // Larger padding keeps cluster labels and outermost nodes off the
-          // viewport edge so the user gets a "whole-graph" overview shot.
-          try { cy.fit(undefined, 80); } catch (_) {}
+          // Initial paint: zoom out far enough to show the full corpus, then
+          // pull back further so the viewer lands on a wide overview rather
+          // than a tightly-fitted shot. cy.fit() is followed by an explicit
+          // 0.55x zoom so cluster labels and outermost nodes have breathing
+          // room on every viewport size.
+          try {
+            cy.fit(undefined, 80);
+            const fitZoom = Number(cy.zoom()) || 1;
+            cy.zoom({ level: fitZoom * 0.55, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } });
+            cy.center();
+          } catch (_) {}
           if (typeof onReady === "function") {
             try { onReady(); } catch (_) { /* swallow */ }
           }
