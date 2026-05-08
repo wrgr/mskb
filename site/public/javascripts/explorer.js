@@ -1132,8 +1132,10 @@
         motionBlur: false,
         autoungrabify: !dragEnabled || isMobileView,
         autounselectify: false,
-        // Tighter bounds avoid numerically unstable pinch-zoom on touch.
-        minZoom: 0.15,
+        // minZoom intentionally low so the initial cy.fit() can actually fit
+        // the whole corpus into view on the first paint — at 0.15 a ~1k-node
+        // graph gets clamped and part of it stays off-screen.
+        minZoom: 0.04,
         maxZoom: 3,
         tapThreshold: 8,
         touchTapThreshold: 12,
@@ -1253,7 +1255,10 @@
         if (drainIdx < elements.length) {
           scheduleIdle(pumpElements);
         } else {
-          try { cy.fit(undefined, 50); } catch (_) {}
+          // Initial paint: zoom out far enough to show the full corpus.
+          // Larger padding keeps cluster labels and outermost nodes off the
+          // viewport edge so the user gets a "whole-graph" overview shot.
+          try { cy.fit(undefined, 80); } catch (_) {}
           if (typeof onReady === "function") {
             try { onReady(); } catch (_) { /* swallow */ }
           }
