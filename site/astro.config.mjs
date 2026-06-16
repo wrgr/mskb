@@ -39,6 +39,13 @@ export default defineConfig({
         // graph. Falls through to the default on every other route.
         Sidebar: './src/components/Sidebar.astro',
       },
+      // The sidebar is intentionally trimmed to the learner spine so new
+      // undergraduate readers see one obvious path instead of the full site.
+      // Builder/methodology pages (corpus docs, whitepaper, citation-topic
+      // clusters) and the advanced citation visualizations (lineage, citation
+      // tree, field development, learning-journey studio) still build and stay
+      // reachable by direct link and site search — they are just kept out of
+      // the primary nav. Re-add an entry here to resurface a page in the nav.
       sidebar: [
         { label: 'Home', link: '/' },
         { label: 'Getting Started', link: '/getting-started/' },
@@ -84,30 +91,8 @@ export default defineConfig({
             },
           ],
         },
-        { label: 'Learning Journey', link: '/journey/' },
         { label: 'Citation Explorer', link: '/explorer/' },
-        { label: 'Citation Lineage', link: '/lineage/' },
-        { label: 'Citation Tree', link: '/citation-tree/' },
-        { label: 'Field Development', link: '/field-development/' },
         { label: 'Glossary', link: '/glossary/' },
-        {
-          label: 'Citation Topics',
-          collapsed: true,
-          autogenerate: { directory: 'topics' },
-        },
-        {
-          label: 'Corpus & Docs',
-          items: [
-            { label: 'Overview', link: '/corpus/' },
-            { label: 'Statistics', link: '/corpus/stats/' },
-            { label: 'Methodology & Limitations', link: '/corpus/methodology/' },
-            { label: 'Topic Map', link: '/corpus/topics/' },
-            { label: 'Seeds & Anchors', link: '/corpus/seeds/' },
-            { label: 'Design Decisions', link: '/corpus/design-decisions/' },
-            { label: 'Gap Tracker', link: '/corpus/gaps/' },
-          ],
-        },
-        { label: 'Whitepaper', link: '/whitepaper/' },
       ],
       pagination: false,
       lastUpdated: true,

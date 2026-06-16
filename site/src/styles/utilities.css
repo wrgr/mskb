@@ -254,40 +254,6 @@ body:has(.home-hero) main > .content-panel:first-of-type header h1 {
   margin: 0;
 }
 
-/* ===================================================================== */
-/* Home — "How it's built" inline link row                                 */
-/* ===================================================================== */
-/* Replaces the old 5-card corpus section. Plain text-links keep the page
-   light and signal that these are reference material, not entry points. */
-.sl-markdown-content .home-learn-more {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.4rem 1.1rem;
-  margin: 0 0 1.6rem;
-  font-size: 0.95rem;
-  color: var(--mskb-muted);
-}
-
-.sl-markdown-content .home-learn-more strong {
-  color: inherit;
-  font-weight: 600;
-  margin-right: 0.2rem;
-}
-
-.sl-markdown-content .home-learn-more a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: var(--mskb-rule);
-}
-
-.sl-markdown-content .home-learn-more a:hover,
-.sl-markdown-content .home-learn-more a:focus-visible {
-  color: var(--sl-color-accent);
-  text-decoration-color: currentColor;
-}
-
 /* Home CTA: three call-to-action links below the hero copy.
    Without flex layout these render as concatenated inline text. */
 .sl-markdown-content .home-cta {
