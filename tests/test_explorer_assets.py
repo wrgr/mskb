@@ -10,6 +10,7 @@ import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EXPLORER_MD = REPO_ROOT / "site" / "src" / "content" / "docs" / "explorer.mdx"
+SIDEBAR_ASTRO = REPO_ROOT / "site" / "src" / "components" / "Sidebar.astro"
 JOURNEY_MD = REPO_ROOT / "site" / "src" / "content" / "docs" / "journey.mdx"
 TOPICS_INDEX_MDX = REPO_ROOT / "site" / "src" / "content" / "docs" / "topics" / "index.mdx"
 EXPLORER_JS = REPO_ROOT / "site" / "public" / "javascripts" / "explorer.js"
@@ -17,16 +18,22 @@ GRAPH_RENDERER_JS = REPO_ROOT / "site" / "public" / "javascripts" / "mskb_graph_
 CYTOSCAPE_JS = REPO_ROOT / "site" / "public" / "javascripts" / "vendor" / "cytoscape.min.js"
 TOPIC_PAGES_DIR = REPO_ROOT / "site" / "src" / "content" / "docs" / "topics"
 
+# IDs that live in Sidebar.astro's explorer-only Direct Search card.
+# They were moved there so the widget appears in the sidebar nav rather than
+# the page body; see Sidebar.astro's module docstring for context.
+SIDEBAR_EXPLORER_IDS = [
+    "direct-search-mode",
+    "direct-search-input",
+    "direct-search-run",
+    "direct-search-results",
+]
+
 EXPLORER_REQUIRED_IDS = [
     "paper-graph",
     "paper-details",
     "parent-links",
     "child-links",
     "related-links",
-    "direct-search-mode",
-    "direct-search-input",
-    "direct-search-run",
-    "direct-search-results",
     "idea-input",
     "idea-results",
     "idea-run",
@@ -71,6 +78,13 @@ JOURNEY_REQUIRED_IDS = [
 def explorer_md_text() -> str:
     assert EXPLORER_MD.exists(), f"missing {EXPLORER_MD}"
     return EXPLORER_MD.read_text(encoding="utf-8")
+
+
+@pytest.fixture(scope="module")
+def sidebar_text() -> str:
+    """Return the source of the custom Sidebar.astro component."""
+    assert SIDEBAR_ASTRO.exists(), f"missing {SIDEBAR_ASTRO}"
+    return SIDEBAR_ASTRO.read_text(encoding="utf-8")
 
 
 @pytest.fixture(scope="module")
@@ -122,6 +136,12 @@ def test_explorer_loads_scripts_in_order(explorer_md_text: str) -> None:
 @pytest.mark.parametrize("dom_id", EXPLORER_REQUIRED_IDS)
 def test_explorer_contains_required_dom_ids(explorer_md_text: str, dom_id: str) -> None:
     assert f'id="{dom_id}"' in explorer_md_text
+
+
+@pytest.mark.parametrize("dom_id", SIDEBAR_EXPLORER_IDS)
+def test_sidebar_contains_direct_search_ids(sidebar_text: str, dom_id: str) -> None:
+    """Direct-search widget lives in Sidebar.astro on the Explorer route."""
+    assert f'id="{dom_id}"' in sidebar_text
 
 
 @pytest.mark.parametrize("dom_id", JOURNEY_REQUIRED_IDS)
