@@ -39,13 +39,16 @@ export default defineConfig({
         // graph. Falls through to the default on every other route.
         Sidebar: './src/components/Sidebar.astro',
       },
-      // The sidebar is intentionally trimmed to the learner spine so new
-      // undergraduate readers see one obvious path instead of the full site.
-      // Builder/methodology pages (corpus docs, whitepaper, citation-topic
-      // clusters) and the advanced citation visualizations (lineage, citation
-      // tree, field development, learning-journey studio) still build and stay
-      // reachable by direct link and site search — they are just kept out of
-      // the primary nav. Re-add an entry here to resurface a page in the nav.
+      // Sidebar is split into two tiers so a first-time undergraduate reader
+      // sees one obvious path instead of the whole site. Tier 1 (top level) is
+      // the learner spine — Home, Getting Started, Pathways, Concepts, the
+      // Citation Explorer, and the Glossary. Tier 2 is a single collapsed
+      // "Explore & methods" group holding the advanced bibliometric tools and
+      // the project/methodology docs, kept discoverable but out of the default
+      // view. Nothing is removed: every page still builds and stays reachable
+      // by direct link and site search. To resurface a page in the spine, move
+      // its entry up to the top level; to flatten entirely, lift the Tier 2
+      // children out of the group.
       sidebar: [
         { label: 'Home', link: '/' },
         { label: 'Getting Started', link: '/getting-started/' },
@@ -93,6 +96,39 @@ export default defineConfig({
         },
         { label: 'Citation Explorer', link: '/explorer/' },
         { label: 'Glossary', link: '/glossary/' },
+        {
+          // Advanced / behind-the-scenes material. Collapsed by default so it
+          // stays discoverable for curious students and researchers without
+          // crowding the learner spine above. The Citation Explorer is the one
+          // graph tool kept in the spine; the rest live here.
+          label: 'Explore & methods',
+          collapsed: true,
+          items: [
+            { label: 'Learning Journey', link: '/journey/' },
+            { label: 'Citation Lineage', link: '/lineage/' },
+            { label: 'Citation Tree', link: '/citation-tree/' },
+            { label: 'Field Development', link: '/field-development/' },
+            {
+              label: 'Citation Topics',
+              collapsed: true,
+              autogenerate: { directory: 'topics' },
+            },
+            {
+              label: 'Corpus & Docs',
+              collapsed: true,
+              items: [
+                { label: 'Overview', link: '/corpus/' },
+                { label: 'Statistics', link: '/corpus/stats/' },
+                { label: 'Methodology & Limitations', link: '/corpus/methodology/' },
+                { label: 'Topic Map', link: '/corpus/topics/' },
+                { label: 'Seeds & Anchors', link: '/corpus/seeds/' },
+                { label: 'Design Decisions', link: '/corpus/design-decisions/' },
+                { label: 'Gap Tracker', link: '/corpus/gaps/' },
+              ],
+            },
+            { label: 'Whitepaper', link: '/whitepaper/' },
+          ],
+        },
       ],
       pagination: false,
       lastUpdated: true,
